@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="<?= $root ?>lib/font-awesome/css/font-awesome.min.css">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="<?= $root ?>css/stylesheet.css<?php echo '?'.filemtime(BASEPATH.'/gh-pages/css/stylesheet.css') ?>">
-	<script src="<?= $root ?>js/main.js<?php //echo '?'.filemtime(BASEPATH.'/gh-pages/js/main.js') ?>"></script>
+	<script src="<?= $root ?>js/main.js<?php echo '?'.filemtime(BASEPATH.'/gh-pages/js/main.js') ?>"></script>
 	<?php if ($page_name == 'API-Test') {?><script type="text/javascript" src="<?= $root ?>js/api-test.js"></script><?php } ?>
 </head>
 
