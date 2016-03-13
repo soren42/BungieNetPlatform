@@ -129,3 +129,107 @@ $.fn.sortableTable = function(options) {
 		});
 	});
 };
+
+// Implement Wiki Search
+angular.module('wiki-search', [])
+	.directive('wikiSearch', function($location, RootPath) {
+		return {
+			templateUrl: RootPath+'/templates/wiki-search.html'
+		};
+	})
+	.controller('SearchCtrl', function($scope, $http, $timeout, SearchData, RootPath) {
+		//console.log('SearchCtrl');
+		$scope.searchResults = [];
+
+		var searchCache = [];
+		for (var i=0; i<SearchData.length; i++) {
+			var searchEntry = SearchData[i];
+			var path = searchEntry.path.replace('.html', '').replace('/index', '');
+			//console.log(searchEntry);
+			var url = RootPath+'/'+path;
+			var title = url.slice(url.lastIndexOf('/')+1).replace('-', ' ');
+			if (!title) title = 'Home';
+
+			var tags = [];
+			angular.forEach(path.replace('docs/', '').split('/'), function(value) {
+				tags.push(value.replace('-', ' '));
+			});
+			tags.reverse();
+			if (tags.length == 1) tags.push('Page');
+			tags.push(searchEntry.headers.join(' ').replace(/'s/ig, 's').replace(/[^a-z0-9]/ig, ' ').replace(/\s+/g, ' '));
+
+			searchCache.push({
+				url: url,
+				title: title,
+				tags: tags
+			});
+		}
+
+		$scope.searchVisible = false;
+		$scope.searchToggle = function(state) {
+			if (!state) {
+				$timeout(function() {
+					$scope.searchVisible = state;
+				}, 300);
+			} else {
+				$scope.searchVisible = state;
+			}
+		};
+
+		$scope.searchFilter = function() {
+			$scope.searchResults = [];
+
+			var matches = [];
+			var search = $scope.search.toLowerCase().replace(/'s/ig, 's').replace(/[^a-z0-9]/ig, ' ').replace(/\s+/ig, ' ');
+
+			if (search.length < 2) return;
+
+			for (var i=0; i<searchCache.length; i++) {
+				for(var j=0; j<searchCache[i].tags.length; j++) {
+					if (searchCache[i].tags[j].toLowerCase().indexOf(search) != -1) {
+						//console.log('Match('+j+')', searchCache[i]);
+						matches.push({
+							title: searchCache[i].title,
+							url: searchCache[i].url,
+							priority: j,
+							tags: searchCache[i].tags
+						});
+						break;
+					}
+				}
+			}
+
+			matches.sort(function(a, b) {
+				var result = a.priority-b.priority;
+				if (result == 0) {
+					result = a.tags[a.priority].toLowerCase().indexOf(search) - b.tags[b.priority].toLowerCase().indexOf(search);
+				}
+				if (result == 0) {
+					result = a.title.localeCompare(b.title);
+				}
+				return result;
+			});
+			$scope.searchResults = matches;
+		};
+	})
+;
+angular.bootstrap().invoke(function($http, $location) {
+	var rootPath = $location.absUrl().split('/docs')[0];
+	var jsonDatas = [
+		{url: rootPath+'/data/search.json', name: 'SearchData'}
+	];
+
+	angular.module('wiki-search').value('RootPath', rootPath);
+
+	var loaded = 0;
+	angular.forEach(jsonDatas, function (jsonData) {
+		$http.get(jsonData.url).then(function (response) {
+			//console.log('Loaded: ', jsonData.name, response.data);
+			angular.module('wiki-search').value(jsonData.name, response.data);
+			loaded++;
+			if (loaded == jsonDatas.length) {
+				angular.bootstrap(angular.element('#wiki-search'), ['wiki-search']);
+			}
+		});
+	});
+});

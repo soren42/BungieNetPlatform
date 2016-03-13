@@ -332,6 +332,46 @@ a[name] {
     margin-top: 10px;
   }
 }
+#wiki-search {
+  position: relative;
+  height: 0;
+  width: 300px;
+  max-width: 100%;
+  float: right;
+}
+#wiki-search .nav-results {
+  background: #1e242b;
+  max-height: 252px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+#wiki-search .nav-results li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#wiki-search label {
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  position: relative;
+  margin: 0;
+}
+#wiki-search label i {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  line-height: 34px;
+  font-size: 1.2em;
+}
+#wiki-search input {
+  background: none;
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  font-size: inherit;
+}
 #footer {
   padding-top: 50px;
   padding-bottom: 50px;

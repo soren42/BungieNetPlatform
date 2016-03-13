@@ -341,6 +341,50 @@ a {
 		}
 	}
 });
+#wiki-search {
+	position: relative;
+	height: 0;
+	width: 300px;
+	max-width: 100%;
+	float: right;
+
+	.nav-results {
+		//background: fade(#000, 50%);
+		//background: #2a333e;
+		background: rgba(30, 36, 43, 1);
+		//position: absolute;
+		max-height: 252px;
+		overflow: hidden;
+		overflow-y: auto;
+		li {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	label {
+		background: fade(#000, 50%);
+		display: block;
+		position: relative;
+		margin: 0;
+		i {
+			position: absolute;
+			right: 10px;
+			top: 0;
+			line-height: 34px;
+			font-size: 1.2em;
+		}
+	}
+	input {
+		background: none;
+		border: none;
+		color: #fff;
+		border-radius: 0;
+		outline: none;
+		box-shadow: none;
+		font-size: inherit;
+	}
+}
 #footer {
 	padding-top: 50px;
 	padding-bottom: 50px;
