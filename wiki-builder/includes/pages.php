@@ -92,7 +92,7 @@ function buildPage($markdownPath, $outputPath) {
 	$page_name = pathinfo($markdownPath, PATHINFO_FILENAME);
 	$page_url = $root.trim(str_replace('index.html', '', $outputUri), '/');
 
-	$title = $page_title;
+	$title = $site_title;
 
 	$segments = str_replace('docs/', '', $outputUri);
 	foreach(explode('/', $segments) as $segment) {
