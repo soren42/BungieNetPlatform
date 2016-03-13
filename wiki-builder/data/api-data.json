@@ -12,7 +12,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         }
     ],
     "UserService": [
@@ -46,7 +46,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetAvailableAvatarsAdmin",
@@ -69,7 +69,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetBungieAccount",
@@ -87,7 +87,7 @@
                     "link": "Enums#BungieMembershipType"
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetBungieNetUserById",
@@ -110,7 +110,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetCredentialTypesForAccount",
@@ -137,7 +137,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetMobileAppPairings",
@@ -242,7 +242,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "SearchUsersPaged",
@@ -566,7 +566,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetConversationThreadV2",
@@ -901,7 +901,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "ResetNotification",
@@ -1638,7 +1638,7 @@
                     "link": "Enums#ForumTopicsCategoryFilters"
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "MarkReplyAsAnswer",
@@ -1941,7 +1941,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetForumActivityForUser",
@@ -2000,7 +2000,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetFriendsAllNoPresence",
@@ -2032,7 +2032,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetGroupActivities",
@@ -2853,7 +2853,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAllGroupsForCurrentMember",
@@ -2871,7 +2871,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetAllGroupsForMember",
@@ -2894,7 +2894,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAlliedGroups",
@@ -2917,7 +2917,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAvailableAvatars-(Group)",
@@ -2981,7 +2981,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetClanAttributeDefinitions",
@@ -2990,7 +2990,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDeletedGroupsForCurrentMember",
@@ -3238,7 +3238,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetMembersOfClan",
@@ -3269,7 +3269,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetMembersOfGroup",
@@ -3378,7 +3378,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetPendingClanMemberships",
@@ -3400,7 +3400,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetPendingGroupsForCurrentMember",
@@ -3517,7 +3517,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetRecommendedGroups",
@@ -3586,7 +3586,7 @@
                 }
             },
             "path": [],
-            "access": "Private"
+            "access": "Public"
         },
         {
             "name": "InviteClanMember",
@@ -4564,7 +4564,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAccountSummary",
@@ -4640,7 +4640,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAdvisorsForCharacter",
@@ -4667,7 +4667,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAdvisorsForCurrentCharacter",
@@ -4690,7 +4690,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetAllItemsSummary",
@@ -4713,7 +4713,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetAllVendorsForCurrentCharacter",
@@ -4782,7 +4782,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetCharacterActivities",
@@ -4809,7 +4809,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetCharacterInventory",
@@ -4836,7 +4836,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetCharacterInventorySummary",
@@ -4890,7 +4890,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetCharacterSummary",
@@ -4917,7 +4917,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDestinyAggregateActivityStats",
@@ -4944,7 +4944,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDestinyExplorerItems",
@@ -5026,7 +5026,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDestinyExplorerTalentNodeSteps",
@@ -5076,7 +5076,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDestinyLiveTileContentItems",
@@ -5085,7 +5085,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDestinyManifest",
@@ -5094,7 +5094,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetDestinySingleDefinition",
@@ -5121,7 +5121,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetExcellenceBadges",
@@ -5144,7 +5144,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetGrimoireByMembership",
@@ -5175,7 +5175,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetGrimoireDefinition",
@@ -5184,7 +5184,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetHistoricalStats",
@@ -5235,7 +5235,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetHistoricalStatsDefinition",
@@ -5244,7 +5244,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetHistoricalStatsForAccount",
@@ -5267,7 +5267,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetItemDetail",
@@ -5298,7 +5298,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetLeaderboards",
@@ -5321,7 +5321,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetLeaderboardsForCharacter",
@@ -5348,7 +5348,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetLeaderboardsForPsn",
@@ -5366,7 +5366,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetMembershipIdByDisplayName",
@@ -5389,7 +5389,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetMyGrimoire",
@@ -5416,7 +5416,7 @@
                     "link": "Enums#BungieMembershipType"
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetPostGameCarnageReport",
@@ -5435,7 +5435,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetPublicAdvisors",
@@ -5449,7 +5449,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetPublicVendor",
@@ -5468,7 +5468,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetPublicVendorWithMetadata",
@@ -5487,7 +5487,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetPublicXurVendor",
@@ -5501,7 +5501,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetSpecialEventAdvisors",
@@ -5515,7 +5515,7 @@
             },
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetTriumphs",
@@ -5538,7 +5538,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetUniqueWeaponHistory",
@@ -5565,7 +5565,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetVault",
@@ -5588,7 +5588,7 @@
                     "link": "Enums#BungieMembershipType"
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetVaultSummary",
@@ -5638,7 +5638,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetVendorForCurrentCharacterWithMetadata",
@@ -5665,7 +5665,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetVendorItemDetailForCurrentCharacter",
@@ -5696,7 +5696,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetVendorItemDetailForCurrentCharacterWithMetadata",
@@ -5727,7 +5727,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "GetVendorSummariesForCurrentCharacter",
@@ -5750,7 +5750,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Private"
         },
         {
             "name": "RefundItem",
@@ -5782,7 +5782,7 @@
                     "link": ""
                 }
             },
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "SetItemLockState",
@@ -5984,7 +5984,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": ""
+            "access": "Public"
         },
         {
             "name": "GetSystemStatus",

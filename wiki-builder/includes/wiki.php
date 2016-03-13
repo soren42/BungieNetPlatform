@@ -173,6 +173,12 @@ foreach($endpoints as $service) {
 		// Manual Content
 		//$infoDesc = '';
 		$infoAccess = $endpoint->method == 'POST' ? 'Private' : '';
+		preg_match('/\* \*\*Accessibility:\*\*(.*)/', $endpointMarkdown, $accessMatch);
+		if (count($accessMatch) > 1 && trim($accessMatch[1])) {
+			//echo $service->name.'/'.$endpoint->name.' | '.var_export($accessMatch, true)."\n";
+			$infoAccess = trim($accessMatch[1]);
+		}
+
 		//if (strlen($infoDesc) > 0) $endpointMarkdown = preg_replace('/(## Info\n).*\n/m', '$1'.$infoDesc.LN, $endpointMarkdown);
 		if (strlen($infoAccess) > 0) $endpointMarkdown = preg_replace('/(\* \*\*Accessibility:\*\*).*/m', '$1 '.ucfirst($infoAccess), $endpointMarkdown);
 

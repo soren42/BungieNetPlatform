@@ -11,6 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 
 	<!-- Bootstrap 3.3.6 -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -22,17 +23,9 @@
 
 	<link rel="stylesheet" href="<?= $root ?>lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="<?= $root ?>css/stylesheet.css?<?= filemtime(BASEPATH.'/gh-pages/css/stylesheet.css') ?>">
-	<script src="<?= $root ?>js/main.js?<?= filemtime(BASEPATH.'/gh-pages/js/main.js') ?>"></script>
-	<?php if ($page_name == 'API-Test') {?>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-		<script type="text/javascript">
-			var apiEnums = JSON.parse('<?= file_exists('data/enums.json') ? addslashes(json_encode(json_decode(file_get_contents('data/enums.json')))) : '{}' ?>');
-			var apiData = JSON.parse('<?= file_exists('data/api-data.json') ? addslashes(json_encode(json_decode(file_get_contents('data/api-data.json')))) : '{}' ?>');
-		</script>
-		<script type="text/javascript" src="<?= $root ?>js/api-test.js"></script>
-	<?php } ?>
-
+	<link rel="stylesheet" type="text/css" media="screen" href="<?= $root ?>css/stylesheet.css<?php echo '?'.filemtime(BASEPATH.'/gh-pages/css/stylesheet.css') ?>">
+	<script src="<?= $root ?>js/main.js<?php //echo '?'.filemtime(BASEPATH.'/gh-pages/js/main.js') ?>"></script>
+	<?php if ($page_name == 'API-Test') {?><script type="text/javascript" src="<?= $root ?>js/api-test.js"></script><?php } ?>
 </head>
 
 <body>
@@ -66,6 +59,7 @@
 				</li>
 			</ul>
 		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
 	</div>
 </header>
 <div id="header">

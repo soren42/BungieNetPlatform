@@ -6,6 +6,8 @@ define('LN', "\n");
 
 $root = '';
 
+$searchData = array();
+
 function getMarkdownPages($path, $root='') {
 	if (!$root) $root = $path;
 	$pages = array();
@@ -45,6 +47,7 @@ function locatePage($url) {
 
 function parseMarkdown($markdownPath) {
 	$markdown = file_get_contents($markdownPath);
+
 	$markdown = preg_replace('/\[([^\]]+)\]\(([^\)]+)\)/', '[[$1|$2]]', $markdown);
 	$markdown = preg_replace('/\[\[([^\]\|]+)\|([^\]]+)\]\]/', '<a href="$2">$1</a>', $markdown);
 	$markdown = preg_replace('/\[\[([^\]]+)\]\]/', '<a href="$1">$1</a>', $markdown);
@@ -67,7 +70,7 @@ function parseMarkdown($markdownPath) {
 }
 
 function buildPage($markdownPath, $outputPath) {
-	global $root;
+	global $root, $searchData;
 
 	$outputUri = str_replace(BASEPATH.'/gh-pages/', '', $outputPath);
 
@@ -112,6 +115,15 @@ function buildPage($markdownPath, $outputPath) {
 	echo 'Built Page: '.str_replace(BASEPATH, '', $markdownPath).' -> '.str_replace(BASEPATH, '', $outputPath)."\n";
 	if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
 	file_put_contents($outputPath, $html);
+
+	// Generate Search Data
+	$markdown = file_get_contents($markdownPath);
+	$searchHeaders = array();
+	preg_match_all('/## (.+)/', $markdown, $headerMatches, PREG_SET_ORDER);
+	foreach($headerMatches as $headerMatch) {
+		$searchHeaders[] = $headerMatch[1];
+	}
+	$searchData[] = array('path' => $outputUri, 'headers' => $searchHeaders);
 }
 
 function emptyDocs($str) {
@@ -169,4 +181,18 @@ foreach($pages as $pageIndex => $page) {
 	file_put_contents($logPath, $log);
 }
 
+// Copy Data Files
+$dataPath = BASEPATH.'/gh-pages/data';
+if (!file_exists($dataPath)) mkdir($dataPath, 0777, true);
+
+@copy('data/enums.json', $dataPath.'/enums.json');
+@copy('data/endpoints.json', $dataPath.'/endpoints.json');
+@copy('data/api-data.json', $dataPath.'/api-data.json');
+
+// Build Search Data
+$searchDataPath = $dataPath.'/search.json';
+if (!file_exists(dirname($searchDataPath))) mkdir(dirname($searchDataPath), 0777, true);
+file_put_contents($searchDataPath, json_encode($searchData));
+
+// Output Log File
 echo file_get_contents($logPath);
