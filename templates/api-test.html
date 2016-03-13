@@ -55,8 +55,8 @@
 		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.path">
 			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
 			<div class="col-sm-9">
-				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="pathData[paramFieldName]" ng-required="true" placeholder="{{paramField.desc}}">
-				<select ng-if="paramField.link" class="form-control" ng-model="pathData[paramFieldName]" ng-required="true" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="params.path[paramFieldName]" ng-required="true" placeholder="{{paramField.desc}}">
+				<select ng-if="paramField.link" class="form-control" ng-model="params.path[paramFieldName]" ng-required="true" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
 			</div>
 		</div>
 	</fieldset>
@@ -66,8 +66,8 @@
 		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.params">
 			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
 			<div class="col-sm-9">
-				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="pathData[paramFieldName]" placeholder="{{paramField.desc}}">
-				<select ng-if="paramField.link" class="form-control" ng-model="queryData[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="params.query[paramFieldName]" placeholder="{{paramField.desc}}">
+				<select ng-if="paramField.link" class="form-control" ng-model="params.query[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
 			</div>
 		</div>
 	</fieldset>
@@ -77,8 +77,8 @@
 		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.post">
 			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
 			<div class="col-sm-9">
-				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="postData[paramFieldName]" placeholder="{{paramField.desc}}">
-				<select ng-if="paramField.link" class="form-control" ng-model="postData[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="params.json[paramFieldName]" placeholder="{{paramField.desc}}">
+				<select ng-if="paramField.link" class="form-control" ng-model="params.json[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
 			</div>
 		</div>
 	</fieldset>
@@ -88,11 +88,19 @@
 	<hr/>
 
 	<div ng-show="test">
+		<code>Share Link: <a href="{{test.share}}">{{test.share}}</a></code>
 		<h2>Request</h2>
-		<code>{{test.request.method}} {{test.request.url}}</code>
+		<h3>Headers</h3>
+		<code>
+			{{test.request.method}} {{test.request.url}}
+			<span class="request-header" ng-repeat="(headerKey, headerValue) in test.request.headers"><br/>{{headerKey}}: {{headerValue}}</span>
+		</code>
+
+		<h3 ng-show="test.request.data">Payload</h3>
 		<pre ng-show="test.request.data" syntax-highlight="test.request.data" language="javascript"></pre>
 
 		<h2>Response</h2>
-		<pre ng-show="test.response" syntax-highlight="test.response" language="javascript"></pre>
+		<code ng-show="test.response">Status Code: {{test.response.status}}</code>
+		<pre ng-show="test.response" syntax-highlight="test.response.data" language="javascript"></pre>
 	</div>
 </form>

@@ -30,11 +30,13 @@ angular.module('api-test', [])
 			}
 		};
 	})
-	.controller('ApiCtrl', function($scope, $http, $httpParamSerializer) {
+	.controller('ApiCtrl', function($scope, $http, $httpParamSerializer, $location) {
 		$scope.apiKey = '';
-		$scope.pathData = {};
-		$scope.queryData = {};
-		$scope.postData = {};
+		$scope.params = {
+			path: {},
+			query: {},
+			json: {}
+		};
 
 		$scope.isReauth = false;
 		$scope.isRequesting = false;
@@ -52,17 +54,68 @@ angular.module('api-test', [])
 		}
 		$scope.services.sort();
 
-		for (var serviceName in apiData) {
-			var service = apiData[serviceName];
-			for (var i=0; i<service.length; i++) {
-				var endpoint = service[i];
-				if (endpoint.name == 'GetDestinyManifest' && serviceName == 'DestinyService') {
-					$scope.service = serviceName;
-					$scope.endpoint = endpoint;
-					break;
+		var hasDefaults = false;
+		$scope.loadShare = function(share) {
+			if (!share) return;
+			//console.log('Share', share);
+
+			share = share.split('/').slice(1);
+
+			for (var serviceName in apiData) {
+				var service = apiData[serviceName];
+				for (var i = 0; i < service.length; i++) {
+					var endpoint = service[i];
+					if (endpoint.name == share[0]) {
+						$scope.service = serviceName;
+						$scope.endpoint = endpoint;
+
+						$scope.params.path = {};
+						$scope.params.query = {};
+						$scope.params.json = {};
+
+						hasDefaults = share.length > 1;
+
+						for (var j=1; j<share.length; j++) {
+							var type = share[j].slice(0, 1);
+							var paramData = false;
+							switch (type) {
+								case 'p':
+									paramData = $scope.params.path;
+									break;
+								case 'q':
+									paramData = $scope.params.query;
+									break;
+								case 'j':
+									paramData = $scope.params.json;
+									break;
+							}
+							if (!paramData) return;
+
+							var params = share[j].slice(2).split(',');
+							for (var k = 0; k < params.length; k++) {
+								var param = params[k].split('=');
+								var paramKey = param[0];
+								var paramValue = decodeURIComponent(param[1]);
+								if (!isNaN(paramValue)) paramValue = parseInt(paramValue);
+								paramData[paramKey] = paramValue;
+							}
+						}
+						//console.log('Share Params', $scope.params);
+						break;
+					}
 				}
 			}
-		}
+		};
+
+		$scope.$on('$locationChangeStart', function(event) {
+			$scope.loadShare($location.url());
+		});
+
+		if (!$location.url()) $scope.loadShare('/GetDestinyManifest');
+
+		$scope.$watchGroup(['proxy', 'apiKey'], function(proxy) {
+			$scope.buildRequest();
+		});
 
 		$scope.$watch('service', function(service) {
 			//console.log('Changed Service', service);
@@ -82,14 +135,25 @@ angular.module('api-test', [])
 			//console.log('Changed Endpoint', endpoint);
 			if (endpoint == undefined) return;
 
-			$scope.pathData = {};
-			$scope.queryData = {};
-			$scope.postData = {};
+			if (!hasDefaults) {
+				$scope.params.path = {};
+				$scope.params.query = {};
+				$scope.params.json = {};
+			}
+			hasDefaults = false;
+		});
 
-			/*if ($scope.service != endpoint.service) {
-				defaultEndpoint = endpoint;
-				$scope.service = endpoint.service;
-			}*/
+		$scope.$watchCollection('params.path', function() {
+			//console.log('Path Parameters Changed', $scope.params.path);
+			$scope.buildRequest();
+		});
+		$scope.$watchCollection('params.query', function() {
+			//console.log('Query Parameters Changed', $scope.params.query);
+			$scope.buildRequest();
+		});
+		$scope.$watchCollection('params.json', function() {
+			//console.log('JSON POST Parameters Changed', $scope.params.json);
+			$scope.buildRequest();
 		});
 
 		$scope.reauthPlatform = 'Psnid';
@@ -103,7 +167,7 @@ angular.module('api-test', [])
 		}
 
 		$scope.reauth = function() {
-			console.log('Reauth', $scope.proxy);
+			//console.log('Reauth', $scope.proxy);
 			var proxyUrl = $scope.proxy.url;
 			//proxyUrl = 'http://localhost:5000';
 			$scope.isReauth = true;
@@ -125,46 +189,16 @@ angular.module('api-test', [])
 		};
 
 		$scope.request = function() {
-			var proxyUrl = $scope.proxy.url;
-			var headers = {};
-			if ($scope.apiKey) headers['x-api-key'] = $scope.apiKey;
-
-			var params = {
-				path: $scope.pathData,
-				query: $scope.queryData,
-				post: $scope.postData
-			};
-
-			//console.log(params);
-
-			var url = proxyUrl+'/Platform'+$scope.endpoint.endpoint;
-			for (var key in params.path) {
-				url = url.replace('{'+key+'}', params.path[key]);
-			}
-			var query = $httpParamSerializer(params.query);
-			if (query) url += '?'+query;
-
-			var options = {
-				method: $scope.endpoint.method,
-				url: url,
-				withCredentials: true,
-				headers: headers
-			};
-
-			if (Object.keys($scope.postData).length > 0) options.data = $scope.postData;
+			var options = $scope.buildRequest();
 
 			console.log('Request', options);
 
-			$scope.test = {
-				request: options,
-				response: null
-			};
-
 			$scope.isRequesting = true;
 			$http(options).then(function(response) {
-				//console.log(response, response.headers());
+				response.status = response.headers('x-status');
+				console.log('Response', {status: response.status, headers: response.headers(), data: response.data});
 				$scope.isRequesting = false;
-				$scope.test.response = response.data;
+				$scope.test.response = response;
 			});
 		};
 
@@ -185,6 +219,58 @@ angular.module('api-test', [])
 		$scope.hasParams = function(params) {
 			if (params == null) return 0;
 			return Object.keys(params).length;
-		}
+		};
+
+		$scope.buildRequest = function() {
+			if ($scope.endpoint == undefined) return;
+
+			var proxyUrl = $scope.proxy.url;
+			var headers = {};
+			if ($scope.apiKey) headers['x-api-key'] = $scope.apiKey;
+
+			var params = $scope.params;
+
+			//console.log(params);
+
+			var url = proxyUrl+'/Platform'+$scope.endpoint.endpoint;
+			for (var key in params.path) {
+				url = url.replace('{'+key+'}', params.path[key]);
+			}
+			var query = $httpParamSerializer(params.query);
+			if (query) url += '?'+query;
+
+			var options = {
+				method: $scope.endpoint.method,
+				url: url,
+				withCredentials: true,
+				headers: headers
+			};
+
+			if (Object.keys(params.json).length > 0) options.data = params.json;
+
+			var shareLink = $location.absUrl().split('#')[0]+'#/'+$scope.endpoint.name;
+			for (var key in params) {
+				var paramsData = params[key];
+				if (Object.keys(paramsData).length == 0) continue;
+				switch(key) {
+					case 'path': shareLink += '/p:'; break;
+					case 'query': shareLink += '/q'; break;
+					case 'post': shareLink += '/j'; break;
+				}
+				var paramsShare = [];
+				for (var paramKey in paramsData) {
+					paramsShare.push(paramKey+'='+encodeURIComponent(paramsData[paramKey]));
+				}
+				shareLink += paramsShare.join(',');
+			}
+
+			$scope.test = {
+				share: shareLink,
+				request: options,
+				response: null
+			};
+
+			return options;
+		};
 	})
 ;
