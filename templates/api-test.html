@@ -98,6 +98,7 @@
 			{{test.request.method}} https://www.bungie.net{{test.request.path}}
 			<span class="request-header"><br/>x-api-key: {your-api-key}</span>
 			<span class="request-header" ng-show="endpoint.access == 'Private'"><br/>x-csrf: {bungled-cookie}</span>
+			<span class="request-header"><br/>cookie: {bungie-net-cookies}</span>
 		</code>
 
 		<h3 ng-show="test.request.data">Payload</h3>
