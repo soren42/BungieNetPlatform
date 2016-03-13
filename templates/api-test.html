@@ -88,8 +88,11 @@
 	<hr/>
 
 	<div ng-show="test">
-		<code>Share Link: <a href="{{test.share}}">{{test.share}}</a></code>
 		<h2>Request</h2>
+		
+		<h3>Share Link</h3>
+		<code><a href="{{test.share}}">{{test.share}}</a></code>
+
 		<h3>Headers</h3>
 		<code>
 			{{test.request.method}} {{test.request.url}}
