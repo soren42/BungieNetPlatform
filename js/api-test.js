@@ -141,6 +141,7 @@ angular.module('api-test', [])
 				$scope.params.json = {};
 			}
 			hasDefaults = false;
+			$scope.buildRequest();
 		});
 
 		$scope.$watchCollection('params.path', function() {
@@ -232,7 +233,7 @@ angular.module('api-test', [])
 
 			//console.log(params);
 
-			var url = proxyUrl+'/Platform'+$scope.endpoint.endpoint;
+			var url = '/Platform'+$scope.endpoint.endpoint;
 			for (var key in params.path) {
 				url = url.replace('{'+key+'}', params.path[key]);
 			}
@@ -241,7 +242,8 @@ angular.module('api-test', [])
 
 			var options = {
 				method: $scope.endpoint.method,
-				url: url,
+				url: proxyUrl+url,
+				path: url,
 				withCredentials: true,
 				headers: headers
 			};
@@ -253,9 +255,9 @@ angular.module('api-test', [])
 				var paramsData = params[key];
 				if (Object.keys(paramsData).length == 0) continue;
 				switch(key) {
-					case 'path': shareLink += '/p:'; break;
-					case 'query': shareLink += '/q'; break;
-					case 'post': shareLink += '/j'; break;
+					case 'path': shareLink += '/p::'; break;
+					case 'query': shareLink += '/q:'; break;
+					case 'json': shareLink += '/j:'; break;
 				}
 				var paramsShare = [];
 				for (var paramKey in paramsData) {

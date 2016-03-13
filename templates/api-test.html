@@ -89,14 +89,15 @@
 
 	<div ng-show="test">
 		<h2>Request</h2>
-		
+
 		<h3>Share Link</h3>
 		<code><a href="{{test.share}}">{{test.share}}</a></code>
 
 		<h3>Headers</h3>
 		<code>
-			{{test.request.method}} {{test.request.url}}
-			<span class="request-header" ng-repeat="(headerKey, headerValue) in test.request.headers"><br/>{{headerKey}}: {{headerValue}}</span>
+			{{test.request.method}} https://www.bungie.net{{test.request.path}}
+			<span class="request-header"><br/>x-api-key: {your-api-key}</span>
+			<span class="request-header" ng-show="endpoint.access == 'Private'"><br/>x-csrf: {bungled-cookie}</span>
 		</code>
 
 		<h3 ng-show="test.request.data">Payload</h3>
