@@ -307,6 +307,21 @@ a[name] {
   margin-top: 10px;
   width: 100%;
 }
+#api-test .read-more {
+  display: block;
+  float: right;
+  margin-top: 8px;
+}
+#api-test .read-more:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#api-test .endpoint-info {
+  clear: both;
+  margin-left: 20px;
+  padding-top: 10px;
+}
 @media (min-width: 768px) {
   #api-test .form-group * + * + * {
     padding-left: 0;
