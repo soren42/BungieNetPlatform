@@ -248,7 +248,21 @@ angular.module('api-test', [])
 				headers: headers
 			};
 
-			if (Object.keys(params.json).length > 0) options.data = params.json;
+			if (Object.keys(params.json).length > 0) {
+				options.data = {};
+				for (var paramKey in params.json) {
+					var paramKeyPath = paramKey.split('.');
+					var dataObj = options.data;
+					for (var i=0; i<paramKeyPath.length; i++) {
+						if (i+1 < paramKeyPath.length) {
+							dataObj[paramKeyPath[i]] = {};
+							dataObj = dataObj[paramKeyPath[i]];
+						} else {
+							dataObj[paramKeyPath[i]] = params.json[paramKey];
+						}
+					}
+				}
+			}
 
 			var shareLink = $location.absUrl().split('#')[0]+'#/'+$scope.endpoint.name;
 			for (var key in params) {
