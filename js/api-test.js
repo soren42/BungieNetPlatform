@@ -286,7 +286,7 @@ angular.module('api-test', [])
 				if (Object.keys(paramsData).length == 0) continue;
 				switch (key) {
 					case 'path':
-						shareLink += '/p::';
+						shareLink += '/p:';
 						break;
 					case 'query':
 						shareLink += '/q:';
