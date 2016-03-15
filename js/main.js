@@ -137,7 +137,7 @@ angular.module('wiki-search', [])
 			templateUrl: RootPath+'/templates/wiki-search.html'
 		};
 	})
-	.controller('SearchCtrl', function($scope, $http, $timeout, SearchData, RootPath) {
+	.controller('SearchCtrl', function($scope, $http, $timeout, $document, SearchData, RootPath) {
 		//console.log('SearchCtrl');
 		$scope.searchResults = [];
 
@@ -211,6 +211,12 @@ angular.module('wiki-search', [])
 			});
 			$scope.searchResults = matches;
 		};
+
+		$document.bind('keypress', function(event) {
+			var input = angular.element('#wiki-search input');
+			if ($scope.searchVisible) return;
+			input.focus();
+		});
 	})
 ;
 angular.bootstrap().invoke(function($http, $location) {
