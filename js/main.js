@@ -214,7 +214,7 @@ angular.module('wiki-search', [])
 	})
 ;
 angular.bootstrap().invoke(function($http, $location) {
-	var rootPath = $location.absUrl().split('/docs')[0];
+	var rootPath = $location.absUrl().split('/docs')[0].replace(/\/+$/, '');
 	var jsonDatas = [
 		{url: rootPath+'/data/search.json', name: 'SearchData'}
 	];
