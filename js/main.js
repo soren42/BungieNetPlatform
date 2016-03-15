@@ -214,9 +214,8 @@ angular.module('wiki-search', [])
 
 		$document.bind('keypress', function(event) {
 			var input = angular.element('#wiki-search input');
-			if ($scope.searchVisible) return;
-			console.log($scope.searchVisible, $document.activeElement);
-			//input.focus();
+			if ($scope.searchVisible || !angular.element($document[0].activeElement).is('body')) return;
+			input.focus();
 		});
 	})
 ;
