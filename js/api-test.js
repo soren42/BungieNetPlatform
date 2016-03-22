@@ -108,7 +108,9 @@ angular.module('api-test', [])
 								var param = params[k].split('=');
 								var paramKey = param[0];
 								var paramValue = decodeURIComponent(param[1]);
-								if (!isNaN(parseInt(paramValue))) paramValue = parseInt(paramValue);
+								if (paramValue.replace(/[0-9]+/g, '') == '' && !isNaN(parseInt(paramValue))) {
+									paramValue = parseInt(paramValue);
+								}
 								paramData[paramKey] = paramValue;
 							}
 						}
