@@ -303,7 +303,9 @@ angular.module('api-test', [])
 				}
 				var paramsShare = [];
 				for (var paramKey in paramsData) {
-					if (paramsData[paramKey]) paramsShare.push(paramKey + '=' + encodeURIComponent(paramsData[paramKey]));
+					if (paramsData[paramKey] && paramsData[paramKey] != '') {
+						paramsShare.push(paramKey + '=' + encodeURIComponent(paramsData[paramKey]));
+					}
 				}
 				shareLink += paramsShare.join(',');
 			}
