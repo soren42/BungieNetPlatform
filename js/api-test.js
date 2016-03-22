@@ -255,7 +255,7 @@ angular.module('api-test', [])
 			}
 			var filteredQuery = {};
 			for (var key in params.query) {
-				if (params.query[key]) filteredQuery[key] = params.query[key];
+				if (params.query[key] && params.query[key] != '') filteredQuery[key] = params.query[key];
 			}
 			var query = $httpParamSerializer(filteredQuery);
 			if (query) url += '?' + query;
