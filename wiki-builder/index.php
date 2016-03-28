@@ -40,12 +40,19 @@ else if (isset($_GET['wiki'])) {
 	include('includes/wiki.php');
 	echo '</pre>';
 }
+else if (isset($_GET['stats'])) {
+	echo '<h3>Historical Stats</h3>';
+	include('includes/historical-stats.php');
+}
 else {
 	echo '<h3>Manifest</h3>';
 	echo '<pre>';
 	include('includes/manifest.php');
 	echo '</pre>';
 	include('includes/platform-lib.php');
+
+	echo '<h3>Historical Stats</h3>';
+	include('includes/historical-stats.php');
 }
 ?>
 

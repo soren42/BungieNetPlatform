@@ -70,51 +70,61 @@ function parseMarkdown($markdownPath) {
 }
 
 function buildPage($markdownPath, $outputPath) {
-	global $root, $searchData;
+	global $root, $searchData, $buildCache;
 
 	$outputUri = str_replace(BASEPATH.'/gh-pages/', '', $outputPath);
 
-	//echo 'Root: '.$root."\n";
-	$root = ltrim(str_repeat('../', count(explode('/', $outputUri))-1), '/');
-	$content = parseMarkdown($markdownPath)."\n";
+	$buildId = pathinfo($markdownPath, PATHINFO_FILENAME);
+	$cachePath = str_replace('/docs', '/docs-old', $outputPath);
+	if (file_exists($cachePath) && isset($buildCache[$buildId]) && filemtime($markdownPath) == $buildCache[$buildId]) {
+		//echo 'Cache Page: '. str_replace(BASEPATH, '', $markdownPath) . ' -> ' . str_replace(BASEPATH, '', $outputPath) . "\n";
+		if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
+		copy($cachePath, $outputPath);
+	} else {
 
-	$site_title = 'BungieNetPlatform';
-	$site_desc = 'A community run wiki for the Bungie.net Platform APIs.';
+		//echo 'Root: '.$root."\n";
+		$root = ltrim(str_repeat('../', count(explode('/', $outputUri)) - 1), '/');
+		$content = parseMarkdown($markdownPath) . "\n";
 
-	$page_title = str_replace('-', ' ', str_replace('docs/', '', explode('.', $outputUri)[0]));
-	$page_title = str_replace('/index', '', $page_title);
-	$page_title = str_replace('/', ' / ', $page_title);
-	$page_desc = '';
-	if ($page_title == 'index') {
-		$page_title = $site_title;
-		$page_desc = $site_desc;
+		$site_title = 'BungieNetPlatform';
+		$site_desc = 'A community run wiki for the Bungie.net Platform APIs.';
+
+		$page_title = str_replace('-', ' ', str_replace('docs/', '', explode('.', $outputUri)[0]));
+		$page_title = str_replace('/index', '', $page_title);
+		$page_title = str_replace('/', ' / ', $page_title);
+		$page_desc = '';
+		if ($page_title == 'index') {
+			$page_title = $site_title;
+			$page_desc = $site_desc;
+		}
+		$page_name = pathinfo($markdownPath, PATHINFO_FILENAME);
+		$page_url = $root . trim(str_replace('index.html', '', $outputUri), '/');
+
+		$title = $site_title;
+
+		$segments = str_replace('docs/', '', $outputUri);
+		foreach (explode('/', $segments) as $segment) {
+			$segment = pathinfo($segment, PATHINFO_FILENAME);
+			$segment = str_replace('-', ' ', $segment);
+			if ($segment == 'index') continue;
+			$title = $segment . ' | ' . $title;
+		}
+
+		ob_start();
+		include(BUILDERPATH . '/templates/header.php');
+		$wikiPath = str_replace('/index.html', '', $outputPath);
+		$wikiPath = str_replace('/gh-pages', '/Home', $wikiPath);
+		echo '<a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/' . pathinfo($wikiPath, PATHINFO_FILENAME) . '/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a>';
+		echo $content;
+		include(BUILDERPATH . '/templates/footer.php');
+
+		$html = ob_get_clean();
+
+		echo 'Built Page: ' . str_replace(BASEPATH, '', $markdownPath) . ' -> ' . str_replace(BASEPATH, '', $outputPath) . "\n";
+		if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
+		file_put_contents($outputPath, $html);
 	}
-	$page_name = pathinfo($markdownPath, PATHINFO_FILENAME);
-	$page_url = $root.trim(str_replace('index.html', '', $outputUri), '/');
-
-	$title = $site_title;
-
-	$segments = str_replace('docs/', '', $outputUri);
-	foreach(explode('/', $segments) as $segment) {
-		$segment = pathinfo($segment, PATHINFO_FILENAME);
-		$segment = str_replace('-', ' ', $segment);
-		if ($segment == 'index') continue;
-		$title = $segment.' | '.$title;
-	}
-
-	ob_start();
-	include(BUILDERPATH.'/templates/header.php');
-	$wikiPath = str_replace('/index.html', '', $outputPath);
-	$wikiPath = str_replace('/gh-pages', '/Home', $wikiPath);
-	echo '<a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/'.pathinfo($wikiPath, PATHINFO_FILENAME).'/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a>';
-	echo $content;
-	include(BUILDERPATH.'/templates/footer.php');
-
-	$html = ob_get_clean();
-
-	echo 'Built Page: '.str_replace(BASEPATH, '', $markdownPath).' -> '.str_replace(BASEPATH, '', $outputPath)."\n";
-	if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
-	file_put_contents($outputPath, $html);
+	$buildCache[$buildId] = filemtime($markdownPath);
 
 	// Generate Search Data
 	$markdown = file_get_contents($markdownPath);
@@ -140,10 +150,13 @@ function emptyDocs($str) {
 }
 
 $pages = getMarkdownPages(BASEPATH.'/wiki');
+$buildCachePath = BUILDERPATH.'/cache/build-cache.json';
+$buildCache = file_exists($buildCachePath) ? json_decode(file_get_contents($buildCachePath), true) : array();
 
 $logPath = BUILDERPATH.'/log.txt';
 
-emptyDocs(BASEPATH.'/gh-pages/docs');
+//emptyDocs(BASEPATH.'/gh-pages/docs');
+rename(BASEPATH.'/gh-pages/docs', BASEPATH.'/gh-pages/docs-old');
 
 ob_start();
 
@@ -160,6 +173,7 @@ foreach($pages as $pageIndex => $page) {
 	//$pagePath = str_replace('/Enums.md', '/Enums/index.html', $pagePath);
 	//$pagePath = str_replace('/Endpoints.md', '/Endpoints/index.html', $pagePath);
 	$pagePath = str_replace('/Definitions.md', '/Definitions/index.html', $pagePath);
+	$pagePath = str_replace('/EnemyHistoricalStats.md', '/EnemyHistoricalStats/index.html', $pagePath);
 	$pagePath = str_replace('.md', '.html', $pagePath);
 	$pagePath = str_replace('Pages', '', $pagePath);
 
@@ -181,6 +195,9 @@ foreach($pages as $pageIndex => $page) {
 	file_put_contents($logPath, $log);
 }
 
+emptyDocs(BASEPATH.'/gh-pages/docs-old');
+file_put_contents($buildCachePath, json_encode($buildCache, JSON_PRETTY_PRINT));
+
 // Copy Data Files
 $dataPath = BASEPATH.'/gh-pages/data';
 if (!file_exists($dataPath)) mkdir($dataPath, 0777, true);
@@ -188,6 +205,7 @@ if (!file_exists($dataPath)) mkdir($dataPath, 0777, true);
 @copy('data/enums.json', $dataPath.'/enums.json');
 @copy('data/endpoints.json', $dataPath.'/endpoints.json');
 @copy('data/api-data.json', $dataPath.'/api-data.json');
+@copy('data/historical-stats.json', $dataPath.'/historical-stats.json');
 
 // Build Search Data
 $searchDataPath = $dataPath.'/search.json';

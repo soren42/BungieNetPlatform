@@ -1,0 +1,123 @@
+Fallen
+	FallenDreg // Dreg
+		FallenMajorDregAShockDagger // Dreg
+		FallenMajorDregAShrapnelLauncher // Dreg
+		FallenMajorDregA // Reaver Dreg
+	FallenVandal // Vandal
+		FallenVandalStealth // Stealth Vandal
+			FallenMajorStealthVandalA // Stealth Elder Vandal [Stealth Reaver Vandal]
+			FallenMajorStealthVandalAShockBlade // Stealth Elder Vandal
+			FallenMajorStealthVandalAWireRifle // Stealth Elder Vandal
+			MajorStealthValdalAShockBlade
+		FallenVandalElite // Noble Vandal
+		FallenVandalEliteShockBlade // Noble Vandal
+		FallenMajorVandalA // Reaver Vandal
+		FallenMajorVandalAShockBlade // Reaver Vandal [Stealth Elder Vandal]
+	FallenCaptain // Captain
+		FallenMajorCaptainAShockBlade // Elder Captain
+		FallenCaptainEliteShockBlade // Noble Captain
+		FallenMajorCaptainA // Reaver Captain
+		FallenUltraCaptainA // Ultra Captain
+	FallenServitor // Servitor
+		FallenServitorElite // Noble Servitor
+		FallenMajorServitorA // High Servitor
+		FallenUltraServitorA // Ultra Servitor
+	FallenShank // Shank
+		EliteShankA // Noble Shank
+		FallenMajorShankA // Reaver Shank
+		FallenSpiderShank
+		
+Hive
+	HiveThrall // Thrall
+		HiveThrallExploder // Cursed Thrall
+		HiveMajorThrallA // Hallowed Thrall
+	HiveAcolyte // Acolyte
+		HiveEliteAcolyte // Ascendant Acolyte
+		HiveMajorAcolyteA // Hallowed Acolyte
+	HiveKnight // Knight
+		HiveMajorKnightACleaver // Chosen Knight
+		HiveKnightElite // Ascendant Knight
+		HiveMajorKnightA // Hallowed Knight
+		HiveUltraKnightA // Ultra Knight
+	HiveWizard // Wizard
+		EliteWizardA // Ascendant Wizard
+		HiveMajorWizardA // Hallowed Wizard
+	HiveOgre // Ogre
+		EliteOgreA // Ascendant Ogre
+		HiveMajorOgreA // Hallowed Ogre
+		HiveUltraOgreA // Ultra Ogre
+Vex
+	VexGoblin // Goblin
+		VexMajorGoblinA // Axis Goblin
+	VexHobgoblin // Hobgoblin
+		EliteHobgoblinA // Hobgoblin Zealot
+		VexMajorHobgoblinA // Axis Hobgoblin
+	VexMinotaur // Minotaur
+		VexMinotaurElite / Minotaur Zealot
+		VexMajorMinotaurA // Axis Minotaur
+		VexUltraMinotaurA // Ultra Minotaur
+	VexHarpy // Harpy
+		EliteHarpyA // Harpy Zealot
+		VexMajorHarpyA // Axis Harpy
+	VexHydra // Hydra
+		VexHydraElite // Hydra Zealot
+		MajorHydraA // Axis Hydra
+		UltraHydraA // Ultra Hydra
+	VexCyclops // Cyclops
+	
+Cabal
+	CabalLegionary // Legionary
+		CabalMajorLegionaryA // Imperial Legionary
+	CabalPhalanx // Phalanx
+		CabalMajorPhalanxA // Imperial Phalanx
+	CabalCenturion // Centurion
+		CabalCenturionElite // Elite Centurion
+		CabalMajorCenturionA // Imperial Centurion
+		CabalUltraCenturionA // Ultra Centurion
+	CabalColossus // Colossus
+		CabalColossusElite // Elite Colossus
+		CabalMajorGladiatorA // Imperial Colossus
+		CabalUltraGladiatorA // Ultra Colossus
+	CabalPsion // Psion
+		CabalPsionElite // Elite Psion
+		CabalMajorPsionA // Psion Operant
+		
+Taken
+	TakenDreg // Taken Dreg
+	TakenVandal // Taken Vandal
+		TakenVandalElite // Devoured Vandal
+		TakenMajorVandalA // Tortured Vandal
+	TakenCaptain // Taken Captain
+		TakenCaptainElite // Devoured Captain
+		TakenMajorCaptainA // Tortured Captain
+		TakenUltraCaptainA // Taken Ultra Captain
+	TakenServitor // Taken Servitor
+	TakenShank // Taken Shank
+		
+	TakenThrall // Taken Thrall
+		TakenThrallExploder // Taken Cursed Thrall
+	TakenAcolyte // Taken Acolyte
+		TakenAcolyteElite // Devoured Acolyte
+		TakenMajorAcolyteA // Tortured Acolyte
+		TakenTurrent // Acolyte's Eye
+	TakenKnight // Taken Knight
+		TakenKnightElite // Devoured Knight
+		TakenMajorKnightA // Tortured Knight
+		TakenUltraKnightA // Taken Ultra Knight
+	TakenWizard // Taken Wizard
+	TakenOgre // Taken Ogre
+	
+	TakenGoblin // Taken Goblin
+	TakenHobgoblin // Taken Hobgoblin
+	TakenMinotaur // Taken Minotaur
+		TakenUltraMinotaurA // Taken Ultra Minotaur
+	TakenHarpy // Taken Harpy
+	TakenHydra // Taken Hydra
+	
+	TakenLegionary // Taken Legionary
+	TakenPhalanx // Taken Phalanx
+	TakenCenturion // Taken Centurion
+		TakenUltraCenturionA // Taken Ultra Centurion
+	TakenGladiator // Taken Colossus
+		TakenUltraGladiatorA // Taken Ultra Colossus
+	TakenPsion // Taken Psion

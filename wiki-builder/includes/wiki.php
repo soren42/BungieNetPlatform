@@ -307,3 +307,129 @@ foreach($defs as $defType) {
 updateSection('## Manifest', $manifestMarkdown, $defsMarkdown);
 
 update($defsPath, $defsMarkdown);
+
+// Build Historical Stats
+$statsPath = BUILDERPATH.'/data/historical-stats.json';
+$stats = file_exists($statsPath) ? json_decode(file_get_contents($statsPath)) : array();
+
+foreach($stats as $statGroupName => $statGroup) {
+	$statsMarkdown = '';
+	$statGroupTitle = $statGroupName;
+	switch($statGroupName) {
+		case 'Medals':
+			$statGroupTitle = 'Medal';
+			$statsMarkdown .= 'Icon | Name | Description'.LN;
+			$statsMarkdown .= '---- | ---- | -----------'.LN;
+			foreach($statGroup as $stat) {
+				if (!isset($stat->statId)) continue;
+				$statsMarkdown .= (isset($stat->icon) ? '![]('.$stat->icon.')' : '&nbsp;')
+					.' | '.$stat->statName.'<br/>'.$stat->statId
+					.' | '.(isset($stat->description) ? $stat->description : '&nbsp;')
+					.LN;
+			}
+			break;
+		case 'Weapons':
+			$statGroupTitle = 'Weapon';
+			foreach($statGroup as $weaponStat) {
+				$statsMarkdown .= '## ' . $weaponStat->weaponName . LN;
+				$statsMarkdown .= '* **weaponId:** ' . $weaponStat->weaponId . LN . LN;
+
+				$statsMarkdown .= 'statType | statId' . LN;
+				$statsMarkdown .= '-------- | ------' . LN;
+				foreach ($weaponStat->stats as $key => $stat) {
+					$statsMarkdown .= $key . ' | ' . $stat->statId . LN;
+				}
+				$statsMarkdown .= LN;
+			}
+			break;
+		case 'Enemies':
+			$statGroupTitle = 'Enemy';
+			$statsMarkdown .= '## Tracked'.LN;
+			$statsMarkdown .= 'Enemy ID | Name | Stats'.LN;
+			$statsMarkdown .= '-------- | ---- | -----'.LN;
+
+			$notTracked = 'Enemy ID | Name'.LN;
+			$notTracked .= '-------- | ----'.LN;
+
+			foreach($statGroup as $enemyStat) {
+				$enemyName = $enemyStat->enemyName;
+				if (isset($enemyStat->overrides) && isset($enemyStat->overrides->enemyName)) {
+					$enemyName = $enemyStat->overrides->enemyName;
+				}
+				$enemyMarkdown = '## '.$enemyName.LN;
+
+				$statCount = count((array)$enemyStat->stats);
+
+				if ($statCount > 0) {
+					$statsMarkdown .= '[['.$enemyStat->enemyId.']] | '.$enemyName.' | '.$statCount.LN;
+				} else {
+					$notTracked .= '[['.$enemyStat->enemyId.']] | '.$enemyName.LN;
+				}
+
+				$enemyMarkdown .= '### Info'.LN;
+				$attrs = array(
+					'enemyId',
+					'enemyName',
+					'cardId',
+					'enemyTier',
+					'raceName',
+					'raceClass',
+					'enemyWeapon',
+					'enemyShield',
+					'enemyOtherWeapons',
+					'activityType',
+					'activity',
+					'destination',
+					'location'
+					);
+				foreach($attrs as $attr) {
+					if (!isset($enemyStat->{$attr})) continue;
+					$value = $enemyStat->{$attr};
+					if (is_array($value)) $value = implode(', ', $value);
+					$enemyMarkdown .= '* **'.$attr.':** '.$value.LN;
+				}
+				$enemyMarkdown .= LN;
+
+				if (isset($enemyStat->overrides) && count((array)$enemyStat->overrides) > 0) {
+					$enemyMarkdown .= '### Overrides' . LN;
+					$enemyMarkdown .= 'key | value' . LN;
+					$enemyMarkdown .= '--- | -----' . LN;
+					foreach ($enemyStat->overrides as $key => $value) {
+						$enemyMarkdown .= $key . ' | ' . $value . LN;
+					}
+					$enemyMarkdown .= LN;
+				}
+
+				$enemyMarkdown .= '### Stats'.LN;
+				$enemyMarkdown .= 'statType | statId'.LN;
+				$enemyMarkdown .= '-------- | ------'.LN;
+				foreach($enemyStat->stats as $statType => $stat) {
+					$enemyMarkdown .= $statType.' | '.$stat->statId.LN;
+				}
+
+				$enemyMarkdown .= LN;
+
+				update(BASEPATH.'/wiki/EnemyHistoricalStatsPages/'.$enemyStat->enemyId.'.md', $enemyMarkdown);
+			}
+
+			$statsMarkdown .= LN;
+			$statsMarkdown .= '## Not Tracked'.LN;
+			$statsMarkdown .= 'These enemies do not yet have historical stats.'.LN.LN;
+			$statsMarkdown .= $notTracked;
+			break;
+		case 'UniqueWeapon':
+			$statGroupTitle = 'UniqueWeapon';
+			break;
+	}
+	if (!$statsMarkdown) {
+		$statsMarkdown .= 'statId | statName'.LN;
+		$statsMarkdown .= '------ | --------'.LN;
+		foreach($statGroup as $stat) {
+			if (!isset($stat->statId)) continue;
+			$statsMarkdown .= $stat->statId.' | '.$stat->statName.LN;
+		}
+	}
+	$statsPath = BASEPATH.'/wiki/'.$statGroupTitle.'HistoricalStats.md';
+
+	update($statsPath, $statsMarkdown);
+}
