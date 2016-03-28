@@ -345,11 +345,11 @@ foreach($stats as $statGroupName => $statGroup) {
 		case 'Enemies':
 			$statGroupTitle = 'Enemy';
 			$statsMarkdown .= '## Tracked'.LN;
-			$statsMarkdown .= 'Enemy ID | Name | Stats'.LN;
-			$statsMarkdown .= '-------- | ---- | -----'.LN;
+			$statsMarkdown .= 'Enemy ID | Name | Race | Class | Stats'.LN;
+			$statsMarkdown .= '-------- | ---- | ---- | ----- | -----'.LN;
 
-			$notTracked = 'Enemy ID | Name'.LN;
-			$notTracked .= '-------- | ----'.LN;
+			$notTracked = 'Enemy ID | Name | Race | Class'.LN;
+			$notTracked .= '-------- | ---- | ---- | -----'.LN;
 
 			foreach($statGroup as $enemyStat) {
 				$enemyName = $enemyStat->enemyName;
@@ -361,9 +361,16 @@ foreach($stats as $statGroupName => $statGroup) {
 				$statCount = count((array)$enemyStat->stats);
 
 				if ($statCount > 0) {
-					$statsMarkdown .= '[['.$enemyStat->enemyId.']] | '.$enemyName.' | '.$statCount.LN;
+					$statsMarkdown .= '[['.$enemyStat->enemyId.']]'
+						.' | '.($enemyStat->enemyName == $enemyName ? $enemyName : '['.$enemyName.']<br/>'.$enemyStat->enemyName)
+						.' | '.(isset($enemyStat->raceName) ? $enemyStat->raceName : '&nbsp;')
+						.' | '.(isset($enemyStat->raceClass) ? $enemyStat->raceClass : '&nbsp;')
+						.' | '.$statCount.LN;
 				} else {
-					$notTracked .= '[['.$enemyStat->enemyId.']] | '.$enemyName.LN;
+					$notTracked .= '[['.$enemyStat->enemyId.']] | '.$enemyName
+						.' | '.(isset($enemyStat->raceName) ? $enemyStat->raceName : '&nbsp;')
+						.' | '.(isset($enemyStat->raceClass) ? $enemyStat->raceClass : '&nbsp;')
+						.LN;
 				}
 
 				$enemyMarkdown .= '### Info'.LN;
