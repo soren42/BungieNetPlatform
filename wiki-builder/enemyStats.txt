@@ -1,3 +1,85 @@
+// Enemy Tiers
+Minor // Red HP / No damage resistance
+Major // Yellow HP
+Elite // Epic Skull / Shielded with damage resistance
+Ultra // Yellow HP with Skull / Large enemy class
+Champions // Generic Ultra counter
+
+// Activity Types / Code Names
+Story
+	StoryCosmo0 // A Guardian Rises / Restoration
+	StoryCosmo1 // The Dark Within
+	StoryCosmo2 // The Warmind?
+	StoryCosmo3 // The Last Array?
+	StoryCosmo5
+	StoryCosmo6
+	StoryCosmo7 // The Ruling House
+	StoryPersuit // The Silent Fang
+	StoryPact // 
+	StoryTraitor // Queen's Ransom
+	StoryMoon7 // The Wakening
+	StoryMoon1 // The Dark Beyond
+	StoryMoon3 // The World's Grave
+	StoryMoon4 // The Sword of Crota
+	StoryMoon5 // Chamber of Night
+	StoryMoon6 // Shrine of Oryx
+	StoryNightcrawler // The Archon-Slayer
+	StoryVenus2 // Ishtar Collective
+	StoryVenus5 // The Archive
+	StoryVenus6 // Scourge of Winter
+	StoryVenus7 // Eye of a Gate Lord
+	StoryMars1 // Exclusion Zone
+	StoryMars2
+	StoryMars3 // The Buried City
+	StoryMars5 // The Garden's Spire
+	StoryMars6 // A Rising Tide
+	StoryMars7 // The Black Garden
+	
+	StoryCosmoElevator // Cayde's Stash
+	StoryPhobosDarksnow // The Coming War
+	
+Strike
+	StrikeCosmo1 // The Devil's Lair
+	StrikeCosmo2 // The Will of Crota
+	StrikeMoon2 // The Summoning Pits
+	StrikeMoon // The Shadow Thief
+	StrikeVenus1 // The Nexus Mind
+	StrikeVenus2 // Winters Run
+	StrikeMars1 // Dust Palace
+	StrikeMars2 // Cerberus Vae III
+	StrikeMars3 // The Undying Mind
+	StrikeHiveship1
+	StrikeCosmoReliquary // Echo Chamber
+	StrikeHiveshipOverlord // Shield Brothers
+	StrikeHiveshipPandora // Sunless Cell
+	
+Raid
+	RaidVenus0 // Vault of Glass
+	RaidMoon0 // Crota's End
+	RaidHiveship0 // ??
+	RaidEpiphany // King's Fall
+	
+Arena // Prison of Elders
+	ArenaReef
+	
+Event // Public Events, Public Area encounters
+	EventCosmo // Earth Public Events
+	EventMoon // Moon Public Events
+	EventVenus // Venus Public Events
+	EventMars // Mars Public Events
+	WantedEvent // Wolf Packs
+	EventRobHiveship // Court of Oryx
+	BlightEvent // Placeholder for Taken Blight Events
+	EventHiveship // Unique enemy encounters on the Dreadnaught
+	TakenEvent // Taken Patrol mission
+	
+Bounty
+	BountyMoon2 // Thorn Bounty
+	BountyCosmo // Earth Quest VIPs
+	BountyMoon // Moon Quest VIPs
+VIP // This is a placeholder I made up, VIP Patrol missions
+
+// Enemies
 Fallen
 	FallenDreg // Dreg
 		FallenMajorDregAShockDagger // Dreg

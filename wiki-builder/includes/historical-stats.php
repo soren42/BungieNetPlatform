@@ -356,6 +356,7 @@ $enemyOverrides = array(
 
 	//'FallenSpiderShank' => '',
 
+	// The Ruling House
 	'R1S3StoryCosmo7Major0' => array('enemyName' => 'Vekis, King Baron', 'raceClass' => 'FallenCaptain', 'enemyWeapon' => 'ShockBlade', 'faction' => 'FallenKings'),
 	'R1S3StoryCosmo7Major1' => array('enemyName' => 'Yavek, Wolf Baron', 'raceClass' => 'FallenCaptain', 'enemyWeapon' => 'ShockRifle'),
 	'R1S3StoryCosmo7Major2' => array('enemyName' => 'Paskin, King Baron', 'raceClass' => 'FallenCaptain', 'enemyWeapon' => 'ShrapnelLauncher'),
@@ -367,6 +368,8 @@ $enemyOverrides = array(
 	'R1S3StoryPactMajor1' => array('enemyName' => 'Wolf High Servitor', 'raceClass' => 'FallenServitor', 'faction' => 'FallenWolves', 'cardId' => 688160),
 	'R1S3StoryTraitorMajor0' => array('enemyName' => 'Vechron, Spire Lord', 'raceClass' => 'VexMajorHarpyA', 'faction' => 'VexHezenProtective'),
 	'R1S3StoryTraitorMajor1' => array('enemyName' => 'Headless Praetorian', 'raceClass' => 'R1S1RaidVenus0Major4'),
+
+	// The Archon-Slayer
 	'R1S3StoryNightcrawlerUltra0' => array('enemyName' => 'Skoriks, Archon-Slayer', 'raceClass' => 'FallenUltraCaptainA', 'cardId' => 688030),
 
 	'R1S3StrikeMoonMajor0' => array('enemyName' => 'Wolf Captain', 'raceClass' => 'FallenCaptain', 'enemyWeapon' => 'ShrapnelLauncher', 'faction' => 'FallenWolves', 'cardId' => 688230),
@@ -553,18 +556,18 @@ $enemyNoStats = array(
 
 	'R1S1EventCosmoMajorKnight' => array('enemyName' => 'Hallowed Knight', 'raceClass' => 'HiveMajorKnightA', 'location' => 'Rocketyard', 'enemyWeapon' => 'Shredder'),
 	'R1S1EventCosmoMajorCaptain' => array('enemyName' => 'Reaver Captain', 'raceClass' => 'FallenMajorCaptainA', 'faction' => 'FallenDevils', 'location' => 'Rocketyard', 'enemyWeapon' => 'ShockRifle'),
-	'R1S1EventCosmoPitShank' => array('enemyName' => 'Pit Shank', 'raceClass' => 'FallenShank', 'faction' => 'FallenDevils', 'location' => 'TheDivide'),
-	'R1S1EventCosmoReaver' => array('enemyName' => 'Noble Devil Walker', 'raceClass' => 'FallenReaver', 'faction' => 'FallenDevils', 'location' => 'TheDivide'),
+	'R1S1EventCosmoMajorPitShank' => array('enemyName' => 'Pit Shank', 'raceClass' => 'FallenShank', 'faction' => 'FallenDevils', 'location' => 'TheDivide'),
+	'R1S1EventCosmoMajorReaver' => array('enemyName' => 'Noble Devil Walker', 'raceClass' => 'FallenReaver', 'faction' => 'FallenDevils', 'location' => 'TheDivide'),
 
 	'R1S1EventMoonMajorCaptain' => array('enemyName' => 'Reaver Captain', 'raceClass' => 'FallenMajorCaptainA', 'faction' => 'FallenExile', 'location' => 'Hellmouth', 'enemyWeapon' => 'ShockRifle'),
-	'R1S1EventMoonReaver' => array('enemyName' => 'Noble Iron Walker', 'raceClass' => 'FallenReaver', 'faction' => 'FallenExile', 'location' => 'AnchorOfLight'),
-	'R1S1EventMoonElyksis' => array('enemyName' => 'Elyksis, Wolf Rebel', 'raceClass' => 'FallenMajorVandalA', 'faction' => 'FallenExile', 'location' => 'Hellmouth'),
-	'R1S1EventMoonEtherRunner' => array('enemyName' => 'Ether Runner', 'raceClass' => 'FallenMajorServitorA', 'faction' => 'FallenExile', 'location' => 'AnchorOfLight'),
+	'R1S1EventMoonMajorReaver' => array('enemyName' => 'Noble Iron Walker', 'raceClass' => 'FallenReaver', 'faction' => 'FallenExile', 'location' => 'AnchorOfLight'),
+	'R1S1EventMoonMajorElyksis' => array('enemyName' => 'Elyksis, Wolf Rebel', 'raceClass' => 'FallenMajorVandalA', 'faction' => 'FallenExile', 'location' => 'Hellmouth'),
+	'R1S1EventMoonMajorEtherRunner' => array('enemyName' => 'Ether Runner', 'raceClass' => 'FallenMajorServitorA', 'faction' => 'FallenExile', 'location' => 'AnchorOfLight'),
 
-	'R1S1EventVenusReaver' => array('enemyName' => 'Noble Winter Walker', 'raceClass' => 'FallenReaver', 'faction' => 'FallenWinter', 'location' => 'EmberCaves'),
-	'R1S1EventVenusMinotaur' => array('enemyName' => 'Corrective Permutation', 'raceClass' => 'VexMajorMinotaurA', 'location' => 'TheCitadel'),
-	'R1S1EventVenusManiphage' => array('enemyName' => 'Maniphage', 'raceClass' => 'MajorHydraA', 'location' => 'TheCitadel'),
-	'R1S1EventVenusRadian' => array('enemyName' => 'Radian Clocker', 'raceClass' => 'MajorHydraA', 'location' => 'TheCitadel'),
+	'R1S1EventVenusMajorReaver' => array('enemyName' => 'Noble Winter Walker', 'raceClass' => 'FallenReaver', 'faction' => 'FallenWinter', 'location' => 'EmberCaves'),
+	'R1S1EventVenusMajorMinotaur' => array('enemyName' => 'Corrective Permutation', 'raceClass' => 'VexMajorMinotaurA', 'location' => 'TheCitadel'),
+	'R1S1EventVenusMajorManiphage' => array('enemyName' => 'Maniphage', 'raceClass' => 'MajorHydraA', 'location' => 'TheCitadel'),
+	'R1S1EventVenusMajorRadian' => array('enemyName' => 'Radian Clocker', 'raceClass' => 'MajorHydraA', 'location' => 'TheCitadel'),
 
 	'R1S1EventMarsMajorCenturion' => array('enemyName' => 'Imperial Centurion', 'raceClass' => 'CabalMajorCenturionA', 'location' => 'RubiconWastes'),
 	'R1S1EventMarsMajorGeologist' => array('enemyName' => 'Ordnance Geologist', 'raceClass' => 'CabalMajorCenturionA', 'location' => 'RubiconWastes'),
@@ -578,7 +581,7 @@ $enemyNoStats = array(
 
 	'R1S3ArenaReefMajorQodronsEye' => array('enemyName' => 'Qodron\'s Eye', 'raceClass' => 'VexMajorGoblinA'),
 	'R1S3ArenaReefMajorArchonServants' => array('enemyName' => 'Archon Servants', 'raceClass' => 'FallenMajorDregA'),
-	'R1S3ArenaReefMajorKaliksMinor' => array('enemyName' => 'Kaliks Minor', 'raceClass' => 'FallenMajorServitorA'),
+	'R1S3ArenaReefMajorKaliks' => array('enemyName' => 'Kaliks Minor', 'raceClass' => 'FallenMajorServitorA'),
 
 	'TakenMajorVandalA' => array('enemyName' => 'Tortured Vandal', 'raceClass' => 'TakenVandal'),
 	'TakenMajorCaptainA' => array('enemyName' => 'Tortured Captain', 'raceClass' => 'TakenCaptain'),
@@ -602,7 +605,7 @@ $enemyNoStats = array(
 	'TakenUltraCenturionA' => array('enemyName' => 'Taken Ultra Centurion', 'raceClass' => 'TakenCenturion'),
 	'TakenMajorPsionA' => array('enemyName' => 'Tortured Psion', 'raceClass' => 'TakenPsion'),
 
-	'R1S4EventHiveshipThrall' => array('enemyName' => 'Blind Thrall', 'raceClass' => 'HiveMajorThrallA', 'faction' => 'BloodOfOryx', 'location' => 'Mausoleum'),
+	'R1S4EventHiveshipMajorThrall' => array('enemyName' => 'Blind Thrall', 'raceClass' => 'HiveMajorThrallA', 'faction' => 'BloodOfOryx', 'location' => 'Mausoleum'),
 
 	// Blighted Coven
 	'R1S4StoryCosmoMajorZyrak' => array('enemyName' => 'Zyrak, Daughter of Oryx', 'raceClass' => 'TakenMajorWizardA', 'location' => 'TheSteppes'),

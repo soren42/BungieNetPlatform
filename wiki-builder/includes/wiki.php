@@ -312,6 +312,10 @@ update($defsPath, $defsMarkdown);
 $statsPath = BUILDERPATH.'/data/historical-stats.json';
 $stats = file_exists($statsPath) ? json_decode(file_get_contents($statsPath)) : array();
 
+$outputPath = BASEPATH.'/wiki/EnemyHistoricalStatsPages';
+$oldEnemyPages = array_diff(scandir($outputPath), array('.', '..'));
+$newEnemyPages = array();
+
 foreach($stats as $statGroupName => $statGroup) {
 	$statsMarkdown = '';
 	$statGroupTitle = $statGroupName;
@@ -416,6 +420,7 @@ foreach($stats as $statGroupName => $statGroup) {
 
 				$enemyMarkdown .= LN;
 
+				$newEnemyPages[] = $enemyStat->enemyId.'.md';
 				update(BASEPATH.'/wiki/EnemyHistoricalStatsPages/'.$enemyStat->enemyId.'.md', $enemyMarkdown);
 			}
 
@@ -439,4 +444,11 @@ foreach($stats as $statGroupName => $statGroup) {
 	$statsPath = BASEPATH.'/wiki/'.$statGroupTitle.'HistoricalStats.md';
 
 	update($statsPath, $statsMarkdown);
+}
+
+// Remove Unused Enemy Pages
+foreach(array_diff($oldEnemyPages, $newEnemyPages) as $enemyPage) {
+	$enemyPagePath = $outputPath.'/'.$enemyPage;
+	echo 'Removed: '.$enemyPagePath.LN;
+	@unlink($enemyPagePath);
 }
