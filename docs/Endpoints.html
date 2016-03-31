@@ -262,7 +262,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="MessageService"></a>MessageService (30 Endpoints)</h2>
+<h2><a name="MessageService"></a>MessageService (32 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -276,6 +276,11 @@
 <td>POST</td>
 <td><a href="../docs/MessageService/CreateConversation">CreateConversation</a></td>
 <td>/Message/CreateConversation/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/MessageService/CreateConversationV2">CreateConversationV2</a></td>
+<td>/Message/CreateConversationV2/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -376,6 +381,11 @@
 <td>GET</td>
 <td><a href="../docs/MessageService/LeaveConversation">LeaveConversation</a></td>
 <td>/Message/LeaveConversation/{e}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/MessageService/ModerateGroupWall">ModerateGroupWall</a></td>
+<td>/Message/ModerateGroupWall/{f}/{e}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -724,7 +734,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="ActivityService"></a>ActivityService (28 Endpoints)</h2>
+<h2><a name="ActivityService"></a>ActivityService (24 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -734,11 +744,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ActivityService/FollowGroup">FollowGroup</a></td>
-<td>/Activity/Group/{g}/Follow/</td>
-</tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ActivityService/FollowTag">FollowTag</a></td>
@@ -776,11 +781,6 @@
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ActivityService/GetFollowersOfGroup">GetFollowersOfGroup</a></td>
-<td>/Activity/Group/{i}/Followers/</td>
-</tr>
-<tr>
-<td>GET</td>
 <td><a href="../docs/ActivityService/GetFollowersOfTag">GetFollowersOfTag</a></td>
 <td>/Activity/Tag/Followers/</td>
 </tr>
@@ -813,11 +813,6 @@
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetFriendsPaged">GetFriendsPaged</a></td>
 <td>/Activity/Friends/Paged/{membershipType}/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetGroupActivities">GetGroupActivities</a></td>
-<td>/Activity/Group/{h}/Activities/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -858,11 +853,6 @@
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetUsersFollowedByCurrentUser">GetUsersFollowedByCurrentUser</a></td>
 <td>/Activity/Following/Users/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ActivityService/UnfollowGroup">UnfollowGroup</a></td>
-<td>/Activity/Group/{g}/Unfollow/</td>
 </tr>
 <tr>
 <td>POST</td>

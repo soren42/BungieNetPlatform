@@ -299,6 +299,13 @@
                 "params": [],
                 "post": []
             },
+            "CreateConversationV2": {
+                "name": "CreateConversationV2",
+                "method": "POST",
+                "endpoint": "\/Message\/CreateConversationV2\/",
+                "params": [],
+                "post": []
+            },
             "GetConversationsV5": {
                 "name": "GetConversationsV5",
                 "method": "GET",
@@ -398,6 +405,13 @@
                 "name": "UpdateConversationLastViewedTimestamp",
                 "method": "POST",
                 "endpoint": "\/Message\/Conversations\/UpdateLastViewedTimestamp\/",
+                "params": [],
+                "post": []
+            },
+            "ModerateGroupWall": {
+                "name": "ModerateGroupWall",
+                "method": "POST",
+                "endpoint": "\/Message\/ModerateGroupWall\/{f}\/{e}\/",
                 "params": [],
                 "post": []
             },
@@ -1029,39 +1043,6 @@
                 "endpoint": "\/Activity\/User\/{i}\/Activities\/LikeShareAndForum\/",
                 "params": [
                     "currentpage",
-                    "format"
-                ],
-                "post": []
-            },
-            "GetFollowersOfGroup": {
-                "name": "GetFollowersOfGroup",
-                "method": "GET",
-                "endpoint": "\/Activity\/Group\/{i}\/Followers\/",
-                "params": [
-                    "itemsperpage",
-                    "currentpage"
-                ],
-                "post": []
-            },
-            "FollowGroup": {
-                "name": "FollowGroup",
-                "method": "POST",
-                "endpoint": "\/Activity\/Group\/{g}\/Follow\/",
-                "params": [],
-                "post": []
-            },
-            "UnfollowGroup": {
-                "name": "UnfollowGroup",
-                "method": "POST",
-                "endpoint": "\/Activity\/Group\/{g}\/Unfollow\/",
-                "params": [],
-                "post": []
-            },
-            "GetGroupActivities": {
-                "name": "GetGroupActivities",
-                "method": "GET",
-                "endpoint": "\/Activity\/Group\/{h}\/Activities\/",
-                "params": [
                     "format"
                 ],
                 "post": []

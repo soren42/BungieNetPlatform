@@ -426,6 +426,15 @@
             "access": "Private"
         },
         {
+            "name": "CreateConversationV2",
+            "method": "POST",
+            "endpoint": "\/Message\/CreateConversationV2\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": "Private"
+        },
+        {
             "name": "GetAllianceInvitedToJoinInvitations",
             "method": "GET",
             "endpoint": "\/Message\/AllianceInvitations\/InvitationsToJoinAnotherGroup\/{e}\/{h}\/",
@@ -737,6 +746,24 @@
                 }
             },
             "access": ""
+        },
+        {
+            "name": "ModerateGroupWall",
+            "method": "POST",
+            "endpoint": "\/Message\/ModerateGroupWall\/{f}\/{e}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "f": {
+                    "desc": "",
+                    "link": ""
+                },
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
         },
         {
             "name": "ReviewAllInvitations",
@@ -1753,20 +1780,6 @@
     ],
     "ActivityService": [
         {
-            "name": "FollowGroup",
-            "method": "POST",
-            "endpoint": "\/Activity\/Group\/{g}\/Follow\/",
-            "params": [],
-            "post": [],
-            "path": {
-                "g": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "access": "Private"
-        },
-        {
             "name": "FollowTag",
             "method": "POST",
             "endpoint": "\/Activity\/Tag\/Follow\/",
@@ -1869,29 +1882,6 @@
                     "link": ""
                 },
                 "f": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "access": ""
-        },
-        {
-            "name": "GetFollowersOfGroup",
-            "method": "GET",
-            "endpoint": "\/Activity\/Group\/{i}\/Followers\/",
-            "params": {
-                "itemsperpage": {
-                    "desc": "",
-                    "link": ""
-                },
-                "currentpage": {
-                    "desc": "The current page to return. Starts at 1.",
-                    "link": ""
-                }
-            },
-            "post": [],
-            "path": {
-                "i": {
                     "desc": "",
                     "link": ""
                 }
@@ -2035,25 +2025,6 @@
             "access": "Private"
         },
         {
-            "name": "GetGroupActivities",
-            "method": "GET",
-            "endpoint": "\/Activity\/Group\/{h}\/Activities\/",
-            "params": {
-                "format": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "post": [],
-            "path": {
-                "h": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "access": ""
-        },
-        {
             "name": "GetGroupsFollowedByCurrentUser",
             "method": "GET",
             "endpoint": "\/Activity\/Following\/Groups\/",
@@ -2189,20 +2160,6 @@
             "post": [],
             "path": [],
             "access": ""
-        },
-        {
-            "name": "UnfollowGroup",
-            "method": "POST",
-            "endpoint": "\/Activity\/Group\/{g}\/Unfollow\/",
-            "params": [],
-            "post": [],
-            "path": {
-                "g": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "access": "Private"
         },
         {
             "name": "UnfollowTag",

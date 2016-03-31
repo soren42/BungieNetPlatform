@@ -3380,8 +3380,8 @@
             ],
             "cardId": 201110
         },
-        "R1S1EventCosmoPitShank": {
-            "enemyId": "R1S1EventCosmoPitShank",
+        "R1S1EventCosmoMajorPitShank": {
+            "enemyId": "R1S1EventCosmoMajorPitShank",
             "enemyName": "Pit Shank",
             "raceClass": "FallenShank",
             "faction": "FallenDevils",
@@ -3390,14 +3390,14 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Cosmo",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
             "raceName": "Fallen",
-            "activity": "EventCosmoPitShank",
-            "enemyTier": "Minor",
+            "activity": "EventCosmo",
             "cardId": 207150
         },
-        "R1S1EventCosmoReaver": {
-            "enemyId": "R1S1EventCosmoReaver",
+        "R1S1EventCosmoMajorReaver": {
+            "enemyId": "R1S1EventCosmoMajorReaver",
             "enemyName": "Noble Devil Walker",
             "raceClass": "FallenReaver",
             "faction": "FallenDevils",
@@ -3406,10 +3406,10 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Cosmo",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
-            "activity": "EventCosmoReaver",
+            "activity": "EventCosmo",
             "raceName": "Fallen",
-            "enemyTier": "Ultra",
             "cardId": 208130
         },
         "R1S1EventMarsMajor0": {
@@ -3711,43 +3711,6 @@
                 }
             }
         },
-        "R1S1EventMoonElyksis": {
-            "enemyId": "R1S1EventMoonElyksis",
-            "enemyName": "Elyksis, Wolf Rebel",
-            "raceClass": "FallenMajorVandalA",
-            "faction": "FallenExile",
-            "location": "Hellmouth",
-            "overrides": [],
-            "stats": [],
-            "activityType": "Event",
-            "destination": "Moon",
-            "expansionId": "R1S1",
-            "activity": "EventMoonElyksis",
-            "raceName": "Fallen",
-            "enemyTier": "Major",
-            "enemyWeapon": "ShockRifle",
-            "enemyOtherWeapons": [
-                "WireRifle",
-                "ShrapnelLauncher"
-            ],
-            "cardId": 207120
-        },
-        "R1S1EventMoonEtherRunner": {
-            "enemyId": "R1S1EventMoonEtherRunner",
-            "enemyName": "Ether Runner",
-            "raceClass": "FallenMajorServitorA",
-            "faction": "FallenExile",
-            "location": "AnchorOfLight",
-            "overrides": [],
-            "stats": [],
-            "activityType": "Event",
-            "destination": "Moon",
-            "expansionId": "R1S1",
-            "activity": "EventMoonEtherRunner",
-            "raceName": "Fallen",
-            "enemyTier": "Major",
-            "cardId": 207140
-        },
         "R1S1EventMoonMajorCaptain": {
             "enemyId": "R1S1EventMoonMajorCaptain",
             "enemyName": "Reaver Captain",
@@ -3769,8 +3732,45 @@
             ],
             "cardId": 207100
         },
-        "R1S1EventMoonReaver": {
-            "enemyId": "R1S1EventMoonReaver",
+        "R1S1EventMoonMajorElyksis": {
+            "enemyId": "R1S1EventMoonMajorElyksis",
+            "enemyName": "Elyksis, Wolf Rebel",
+            "raceClass": "FallenMajorVandalA",
+            "faction": "FallenExile",
+            "location": "Hellmouth",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Moon",
+            "enemyTier": "Minor",
+            "expansionId": "R1S1",
+            "activity": "EventMoon",
+            "raceName": "Fallen",
+            "enemyWeapon": "ShockRifle",
+            "enemyOtherWeapons": [
+                "WireRifle",
+                "ShrapnelLauncher"
+            ],
+            "cardId": 207120
+        },
+        "R1S1EventMoonMajorEtherRunner": {
+            "enemyId": "R1S1EventMoonMajorEtherRunner",
+            "enemyName": "Ether Runner",
+            "raceClass": "FallenMajorServitorA",
+            "faction": "FallenExile",
+            "location": "AnchorOfLight",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Moon",
+            "enemyTier": "Minor",
+            "expansionId": "R1S1",
+            "activity": "EventMoon",
+            "raceName": "Fallen",
+            "cardId": 207140
+        },
+        "R1S1EventMoonMajorReaver": {
+            "enemyId": "R1S1EventMoonMajorReaver",
             "enemyName": "Noble Iron Walker",
             "raceClass": "FallenReaver",
             "faction": "FallenExile",
@@ -3779,10 +3779,10 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Moon",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
-            "activity": "EventMoonReaver",
+            "activity": "EventMoon",
             "raceName": "Fallen",
-            "enemyTier": "Ultra",
             "cardId": 208130
         },
         "R1S1EventMoonUltra0": {
@@ -3920,8 +3920,8 @@
             ],
             "cardId": 207120
         },
-        "R1S1EventVenusManiphage": {
-            "enemyId": "R1S1EventVenusManiphage",
+        "R1S1EventVenusMajorManiphage": {
+            "enemyId": "R1S1EventVenusMajorManiphage",
             "enemyName": "Maniphage",
             "raceClass": "MajorHydraA",
             "location": "TheCitadel",
@@ -3929,14 +3929,14 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Venus",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
-            "activity": "EventVenusManiphage",
-            "enemyTier": "Major",
+            "activity": "EventVenus",
             "raceName": "Vex",
             "cardId": 203160
         },
-        "R1S1EventVenusMinotaur": {
-            "enemyId": "R1S1EventVenusMinotaur",
+        "R1S1EventVenusMajorMinotaur": {
+            "enemyId": "R1S1EventVenusMajorMinotaur",
             "enemyName": "Corrective Permutation",
             "raceClass": "VexMinotaur",
             "location": "TheCitadel",
@@ -3944,10 +3944,10 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Venus",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
             "raceName": "Vex",
-            "activity": "EventVenusMinotaur",
-            "enemyTier": "Minor",
+            "activity": "EventVenus",
             "enemyShield": "VoidShield",
             "enemyWeapon": "TorchHammer",
             "enemyOtherWeapons": [
@@ -3955,8 +3955,8 @@
             ],
             "cardId": 203140
         },
-        "R1S1EventVenusRadian": {
-            "enemyId": "R1S1EventVenusRadian",
+        "R1S1EventVenusMajorRadian": {
+            "enemyId": "R1S1EventVenusMajorRadian",
             "enemyName": "Radian Clocker",
             "raceClass": "MajorHydraA",
             "location": "TheCitadel",
@@ -3964,14 +3964,14 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Venus",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
-            "activity": "EventVenusRadian",
-            "enemyTier": "Major",
+            "activity": "EventVenus",
             "raceName": "Vex",
             "cardId": 203160
         },
-        "R1S1EventVenusReaver": {
-            "enemyId": "R1S1EventVenusReaver",
+        "R1S1EventVenusMajorReaver": {
+            "enemyId": "R1S1EventVenusMajorReaver",
             "enemyName": "Noble Winter Walker",
             "raceClass": "FallenReaver",
             "faction": "FallenWinter",
@@ -3980,10 +3980,10 @@
             "stats": [],
             "activityType": "Event",
             "destination": "Venus",
+            "enemyTier": "Minor",
             "expansionId": "R1S1",
-            "activity": "EventVenusReaver",
+            "activity": "EventVenus",
             "raceName": "Fallen",
-            "enemyTier": "Ultra",
             "cardId": 208130
         },
         "R1S1EventVenusUltra0": {
@@ -8344,8 +8344,8 @@
             "heroicPrefix": "",
             "cardId": 207130
         },
-        "R1S3ArenaReefMajorKaliksMinor": {
-            "enemyId": "R1S3ArenaReefMajorKaliksMinor",
+        "R1S3ArenaReefMajorKaliks": {
+            "enemyId": "R1S3ArenaReefMajorKaliks",
             "enemyName": "Kaliks Minor",
             "raceClass": "FallenMajorServitorA",
             "overrides": [],
@@ -8354,7 +8354,7 @@
             "destination": "Reef",
             "enemyTier": "Minor",
             "expansionId": "R1S3",
-            "activity": "ArenaReefMajorKaliks",
+            "activity": "ArenaReef",
             "raceName": "Fallen",
             "cardId": 207140
         },
@@ -10492,6 +10492,22 @@
             "enemyWeapon": "HeavySlugThrower",
             "cardId": 205140
         },
+        "R1S4EventHiveshipMajorThrall": {
+            "enemyId": "R1S4EventHiveshipMajorThrall",
+            "enemyName": "Blind Thrall",
+            "raceClass": "HiveThrall",
+            "faction": "BloodOfOryx",
+            "location": "Mausoleum",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "raceName": "Hive",
+            "activity": "EventHiveship",
+            "cardId": 201130
+        },
         "R1S4EventHiveshipMajorVeength": {
             "enemyId": "R1S4EventHiveshipMajorVeength",
             "enemyName": "Ve'ength",
@@ -10568,22 +10584,6 @@
                 "Shredder"
             ],
             "cardId": 201110
-        },
-        "R1S4EventHiveshipThrall": {
-            "enemyId": "R1S4EventHiveshipThrall",
-            "enemyName": "Blind Thrall",
-            "raceClass": "HiveThrall",
-            "faction": "BloodOfOryx",
-            "location": "Mausoleum",
-            "overrides": [],
-            "stats": [],
-            "activityType": "Event",
-            "destination": "Hiveship",
-            "expansionId": "R1S4",
-            "raceName": "Hive",
-            "activity": "EventHiveshipThrall",
-            "enemyTier": "Minor",
-            "cardId": 201130
         },
         "R1S4EventRobHiveshipMajor0": {
             "enemyId": "R1S4EventRobHiveshipMajor0",
