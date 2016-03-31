@@ -70,7 +70,7 @@ function parseMarkdown($markdownPath) {
 }
 
 function buildPage($markdownPath, $outputPath) {
-	global $root, $searchData, $buildCache;
+	global $root, $searchData, $buildCache, $sitemap;
 
 	$outputUri = str_replace(BASEPATH.'/gh-pages/', '', $outputPath);
 
@@ -126,6 +126,8 @@ function buildPage($markdownPath, $outputPath) {
 	}
 	$buildCache[$buildId] = filemtime($markdownPath);
 
+	$sitemap[] = array('uri' => '/'.str_replace('.html', '', str_replace('index', '', $outputUri)), 'modified' => $buildCache[$buildId]);
+
 	// Generate Search Data
 	$markdown = file_get_contents($markdownPath);
 	$searchHeaders = array();
@@ -159,6 +161,8 @@ $logPath = BUILDERPATH.'/log.txt';
 rename(BASEPATH.'/gh-pages/docs', BASEPATH.'/gh-pages/docs-old');
 
 ob_start();
+
+$sitemap = array();
 
 buildPage(BASEPATH.'/wiki/Home.md', BASEPATH.'/gh-pages/index.html');
 
@@ -211,6 +215,25 @@ if (!file_exists($dataPath)) mkdir($dataPath, 0777, true);
 $searchDataPath = $dataPath.'/search.json';
 if (!file_exists(dirname($searchDataPath))) mkdir(dirname($searchDataPath), 0777, true);
 file_put_contents($searchDataPath, json_encode($searchData));
+
+// Build Sitemap
+$sitemapXml = '<?xml version="1.0" encoding="utf-8"?>'.LN
+	.'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
+	.' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
+	.' xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">'.LN;
+
+foreach($sitemap as $entry) {
+	$sitemapXml .= '<url>'
+		.'<loc>http://destinydevs.github.io/BungieNetPlatform'.$entry['uri'].'</loc>'
+        .'<lastmod>'.date('Y-m-d\TH:i:sP', $entry['modified']).'</lastmod>'
+        //.'<changefreq>daily</changefreq>'
+        //.'<priority>0.8</priority>'
+    .'</url>'.LN;
+}
+$sitemapXml .= '</urlset>';
+$sitemapPath = BASEPATH.'/gh-pages/sitemap.xml';
+file_put_contents($sitemapPath, $sitemapXml);
+echo 'Built Sitemap: '.$sitemapPath.LN;
 
 // Output Log File
 echo file_get_contents($logPath);
