@@ -74,13 +74,26 @@ function buildPage($markdownPath, $outputPath) {
 
 	$outputUri = str_replace(BASEPATH.'/gh-pages/', '', $outputPath);
 
+	$headerTemplate = BUILDERPATH . '/templates/header.php';
+	$footerTemplate = BUILDERPATH . '/templates/footer.php';
+
+	$templateTime = filemtime($headerTemplate);
+	$footerTemplateTime = filemtime($footerTemplate);
+	if ($footerTemplate > $templateTime) $templateTime = $footerTemplateTime;
+
+	$markdownTime = filemtime($markdownPath);
+
 	$buildId = pathinfo($markdownPath, PATHINFO_FILENAME);
 	$cachePath = str_replace('/docs', '/docs-old', $outputPath);
-	if (file_exists($cachePath) && isset($buildCache[$buildId]) && filemtime($markdownPath) == $buildCache[$buildId]) {
+
+	$markdownNotUpdated = isset($buildCache[$buildId]) && $markdownTime <= $buildCache[$buildId];
+	$templatesNotUpdated = $markdownTime <= $templateTime;
+	if (file_exists($cachePath) && $markdownNotUpdated && $templatesNotUpdated) {
 		//echo 'Cache Page: '. str_replace(BASEPATH, '', $markdownPath) . ' -> ' . str_replace(BASEPATH, '', $outputPath) . "\n";
 		if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
 		copy($cachePath, $outputPath);
 	} else {
+		if ($templateTime > $markdownTime) $markdownTime = $templateTime;
 
 		//echo 'Root: '.$root."\n";
 		$root = ltrim(str_repeat('../', count(explode('/', $outputUri)) - 1), '/');
@@ -111,12 +124,12 @@ function buildPage($markdownPath, $outputPath) {
 		}
 
 		ob_start();
-		include(BUILDERPATH . '/templates/header.php');
+		include($headerTemplate);
 		$wikiPath = str_replace('/index.html', '', $outputPath);
 		$wikiPath = str_replace('/gh-pages', '/Home', $wikiPath);
 		echo '<a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/' . pathinfo($wikiPath, PATHINFO_FILENAME) . '/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a>';
 		echo $content;
-		include(BUILDERPATH . '/templates/footer.php');
+		include($footerTemplate);
 
 		$html = ob_get_clean();
 
@@ -124,7 +137,7 @@ function buildPage($markdownPath, $outputPath) {
 		if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
 		file_put_contents($outputPath, $html);
 	}
-	$buildCache[$buildId] = filemtime($markdownPath);
+	$buildCache[$buildId] = $markdownTime;
 
 	$sitemap[] = array('uri' => '/'.str_replace('.html', '', str_replace('index', '', $outputUri)), 'modified' => $buildCache[$buildId]);
 
