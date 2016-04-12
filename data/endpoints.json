@@ -892,6 +892,27 @@
                 "endpoint": "\/Forum\/ChangeLockState\/{g}\/{e}\/",
                 "params": [],
                 "post": []
+            },
+            "JoinFireteamThread": {
+                "name": "JoinFireteamThread",
+                "method": "POST",
+                "endpoint": "\/Forum\/Recruit\/Join\/{f}\/",
+                "params": [],
+                "post": []
+            },
+            "KickBanFireteamApplicant": {
+                "name": "KickBanFireteamApplicant",
+                "method": "POST",
+                "endpoint": "\/Forum\/Recruit\/KickBan\/{g}\/{e}\/",
+                "params": [],
+                "post": []
+            },
+            "ApproveFireteamThread": {
+                "name": "ApproveFireteamThread",
+                "method": "POST",
+                "endpoint": "\/Forum\/Recruit\/Approve\/{f}\/",
+                "params": [],
+                "post": []
             }
         }
     },
@@ -1667,6 +1688,13 @@
                 "params": [],
                 "post": []
             },
+            "Migrate": {
+                "name": "Migrate",
+                "method": "POST",
+                "endpoint": "\/Group\/{f}\/Migrate\/{e}\/",
+                "params": [],
+                "post": []
+            },
             "GetAdminsOfGroup": {
                 "name": "GetAdminsOfGroup",
                 "method": "GET",
@@ -2170,6 +2198,15 @@
                 "params": [],
                 "post": []
             },
+            "GetItemReferenceDetail": {
+                "name": "GetItemReferenceDetail",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{f}\/Account\/{d}\/Character\/{h}\/ItemReference\/{i}\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
             "GetAllItemsSummary": {
                 "name": "GetAllItemsSummary",
                 "method": "GET",
@@ -2554,7 +2591,20 @@
                 "method": "GET",
                 "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/",
                 "params": [
-                    "modes"
+                    "modes",
+                    "statid",
+                    "maxtop"
+                ],
+                "post": []
+            },
+            "GetClanLeaderboards": {
+                "name": "GetClanLeaderboards",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Stats\/ClanLeaderboards\/{e}\/",
+                "params": [
+                    "modes",
+                    "statid",
+                    "maxtop"
                 ],
                 "post": []
             },
@@ -2573,7 +2623,9 @@
                 "method": "GET",
                 "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
                 "params": [
-                    "modes"
+                    "modes",
+                    "statid",
+                    "maxtop"
                 ],
                 "post": []
             },

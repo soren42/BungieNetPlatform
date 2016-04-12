@@ -596,7 +596,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="ForumService"></a>ForumService (24 Endpoints)</h2>
+<h2><a name="ForumService"></a>ForumService (27 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -606,6 +606,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ForumService/ApproveFireteamThread">ApproveFireteamThread</a></td>
+<td>/Forum/Recruit/Approve/{f}/</td>
+</tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ChangeLockState">ChangeLockState</a></td>
@@ -690,6 +695,16 @@
 <td>GET</td>
 <td><a href="../docs/ForumService/GetTopicsPaged">GetTopicsPaged</a></td>
 <td>/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ForumService/JoinFireteamThread">JoinFireteamThread</a></td>
+<td>/Forum/Recruit/Join/{f}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ForumService/KickBanFireteamApplicant">KickBanFireteamApplicant</a></td>
+<td>/Forum/Recruit/KickBan/{g}/{e}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -860,7 +875,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="GroupService"></a>GroupService (78 Endpoints)</h2>
+<h2><a name="GroupService"></a>GroupService (79 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1197,6 +1212,11 @@
 </tr>
 <tr>
 <td>POST</td>
+<td><a href="../docs/GroupService/Migrate">Migrate</a></td>
+<td>/Group/{f}/Migrate/{e}/</td>
+</tr>
+<tr>
+<td>POST</td>
 <td><a href="../docs/GroupService/OverrideFounderAdmin">OverrideFounderAdmin</a></td>
 <td>/Group/{groupId}/Admin/FounderOverride/{membershipType}/</td>
 </tr>
@@ -1505,7 +1525,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="DestinyService"></a>DestinyService (56 Endpoints)</h2>
+<h2><a name="DestinyService"></a>DestinyService (58 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1607,6 +1627,11 @@
 </tr>
 <tr>
 <td>GET</td>
+<td><a href="../docs/DestinyService/GetClanLeaderboards">GetClanLeaderboards</a></td>
+<td>/Destiny/Stats/ClanLeaderboards/{e}/</td>
+</tr>
+<tr>
+<td>GET</td>
 <td><a href="../docs/DestinyService/GetDestinyAggregateActivityStats">GetDestinyAggregateActivityStats</a></td>
 <td>/Destiny/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/</td>
 </tr>
@@ -1669,6 +1694,11 @@
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetItemDetail">GetItemDetail</a></td>
 <td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/DestinyService/GetItemReferenceDetail">GetItemReferenceDetail</a></td>
+<td>/Destiny/{f}/Account/{d}/Character/{h}/ItemReference/{i}/</td>
 </tr>
 <tr>
 <td>GET</td>

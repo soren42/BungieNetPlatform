@@ -37,7 +37,8 @@
         "Announcement": 64,
         "ContentComment": 128,
         "BungieOfficial": 256,
-        "NinjaOfficial": 512
+        "NinjaOfficial": 512,
+        "Recruitment": 1024
     },
     "ForumTopicsQuickDate": {
         "All": 0,
@@ -80,7 +81,8 @@
         "USER_MESSAGE_BANNED": 30,
         "SUPPORT_FORM_RECEIVED": 31,
         "RAF_NEWBIE_NEEDS_TO_PLAY_TTK": 32,
-        "RAF_TTK_QUEST_READY": 33
+        "RAF_TTK_QUEST_READY": 33,
+        "RECRUIT_THREAD_READY": 34
     },
     "NotificationMethods": {
         "None": 0,
@@ -408,7 +410,8 @@
         "MayhemClash": 26,
         "MayhemRumble": 27,
         "ZoneControl": 28,
-        "Racing": 29
+        "Racing": 29,
+        "ArenaElderChallenge": 30
     },
     "StatFeedbackState": {
         "Good": 0,
@@ -682,5 +685,15 @@
         "SevenDayBan": 2,
         "ThirtyDayBan": 3,
         "PermanentBan": 255
+    },
+    "ForumRecruitmentToneLabel": {
+        "None": 0,
+        "FamilyFriendly": 1,
+        "Rowdy": 2
+    },
+    "ForumRecruitmentIntensityLabel": {
+        "None": 0,
+        "Casual": 1,
+        "Professional": 2
     }
 }
