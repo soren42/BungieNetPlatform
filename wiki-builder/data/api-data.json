@@ -1290,6 +1290,20 @@
     ],
     "ForumService": [
         {
+            "name": "ApproveFireteamThread",
+            "method": "POST",
+            "endpoint": "\/Forum\/Recruit\/Approve\/{f}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "f": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
             "name": "ChangeLockState",
             "method": "POST",
             "endpoint": "\/Forum\/ChangeLockState\/{g}\/{e}\/",
@@ -1666,6 +1680,38 @@
                 }
             },
             "access": "Public"
+        },
+        {
+            "name": "JoinFireteamThread",
+            "method": "POST",
+            "endpoint": "\/Forum\/Recruit\/Join\/{f}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "f": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
+            "name": "KickBanFireteamApplicant",
+            "method": "POST",
+            "endpoint": "\/Forum\/Recruit\/KickBan\/{g}\/{e}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "g": {
+                    "desc": "",
+                    "link": ""
+                },
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
         },
         {
             "name": "MarkReplyAsAnswer",
@@ -3709,6 +3755,24 @@
             "access": "Private"
         },
         {
+            "name": "Migrate",
+            "method": "POST",
+            "endpoint": "\/Group\/{f}\/Migrate\/{e}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "f": {
+                    "desc": "",
+                    "link": ""
+                },
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
             "name": "OverrideFounderAdmin",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Admin\/FounderOverride\/{membershipType}\/",
@@ -4877,6 +4941,33 @@
             "access": "Public"
         },
         {
+            "name": "GetClanLeaderboards",
+            "method": "GET",
+            "endpoint": "\/Destiny\/Stats\/ClanLeaderboards\/{e}\/",
+            "params": {
+                "modes": {
+                    "desc": "",
+                    "link": ""
+                },
+                "statid": {
+                    "desc": "",
+                    "link": ""
+                },
+                "maxtop": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": {
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetDestinyAggregateActivityStats",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/AggregateActivityStats\/{membershipType}\/{destinyMembershipId}\/{characterId}\/",
@@ -5258,6 +5349,37 @@
             "access": "Public"
         },
         {
+            "name": "GetItemReferenceDetail",
+            "method": "GET",
+            "endpoint": "\/Destiny\/{f}\/Account\/{d}\/Character\/{h}\/ItemReference\/{i}\/",
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": {
+                "f": {
+                    "desc": "",
+                    "link": ""
+                },
+                "d": {
+                    "desc": "",
+                    "link": ""
+                },
+                "h": {
+                    "desc": "",
+                    "link": ""
+                },
+                "i": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetLeaderboards",
             "method": "GET",
             "endpoint": "\/Destiny\/Stats\/Leaderboards\/{membershipType}\/{destinyMembershipId}\/",
@@ -5265,6 +5387,14 @@
                 "modes": {
                     "desc": "Game modes to return. Comma separated.",
                     "link": "Enums#DestinyActivityModeType"
+                },
+                "statid": {
+                    "desc": "",
+                    "link": ""
+                },
+                "maxtop": {
+                    "desc": "",
+                    "link": ""
                 }
             },
             "post": [],
@@ -5288,6 +5418,14 @@
                 "modes": {
                     "desc": "Game modes to return. Comma separated.",
                     "link": "Enums#DestinyActivityModeType"
+                },
+                "statid": {
+                    "desc": "",
+                    "link": ""
+                },
+                "maxtop": {
+                    "desc": "",
+                    "link": ""
                 }
             },
             "post": [],

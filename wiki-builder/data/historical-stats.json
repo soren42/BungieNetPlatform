@@ -194,7 +194,7 @@
         },
         "publicEventsCompleted": {
             "statId": "publicEventsCompleted",
-            "statName": "Public Events"
+            "statName": "Public Events Completed"
         },
         "publicEventsJoined": {
             "statId": "publicEventsJoined",
@@ -238,27 +238,27 @@
         },
         "courtOfOryxWinsTier1": {
             "statId": "courtOfOryxWinsTier1",
-            "statName": "###courtOfOryxWinsTier1###"
+            "statName": "Tier 1 Court of Oryx Wins"
         },
         "courtOfOryxWinsTier2": {
             "statId": "courtOfOryxWinsTier2",
-            "statName": "###courtOfOryxWinsTier2###"
+            "statName": "Tier 2 Court of Oryx Wins"
         },
         "courtOfOryxWinsTier3": {
             "statId": "courtOfOryxWinsTier3",
-            "statName": "###courtOfOryxWinsTier3###"
+            "statName": "Tier 3 Court of Oryx Wins"
         },
         "courtOfOryxAttempts": {
             "statId": "courtOfOryxAttempts",
-            "statName": "###courtOfOryxAttempts###"
+            "statName": "Court of Oryx Attempts"
         },
         "courtOfOryxCompletions": {
             "statId": "courtOfOryxCompletions",
-            "statName": "###courtOfOryxCompletions###"
+            "statName": "Court of Oryx Completions"
         },
         "longestKillDistance": {
             "statId": "longestKillDistance",
-            "statName": "###longestKillDistance###"
+            "statName": "Longest Kill Distance"
         },
         "highestCharacterLevel": {
             "statId": "highestCharacterLevel",
@@ -14255,7 +14255,7 @@
             "statId": "medalsEliminationWipeQuick",
             "statName": "Ace",
             "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mc6d31ef5e788b733b1b3326dc23cd250.png",
-            "description": "As a team, wipe the enemy team in the first 30 seconds of a round."
+            "description": "As a fireteam, defeat the enemy team in the first 30 seconds of a round."
         },
         "medalsEliminationWipeSolo": {
             "statId": "medalsEliminationWipeSolo",
@@ -14618,7 +14618,7 @@
         },
         "Relic": {
             "weaponId": "Relic",
-            "weaponName": "###Relic###",
+            "weaponName": "Relic Kills",
             "stats": {
                 "weaponPrecisionKills": {
                     "statId": "weaponPrecisionKillsRelic"
