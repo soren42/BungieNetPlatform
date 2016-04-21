@@ -6169,6 +6169,8 @@
             "enemyTier": "Major",
             "expansionId": "R1S1",
             "activity": "StrikeMars1",
+            "overrides": [],
+            "raceClass": "CabalMajorGladiatorA",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S1StrikeMars1Major7",
@@ -6186,7 +6188,10 @@
                     "statId": "killsOfR1S1StrikeMars1Major7",
                     "statName": "Flayer Guard"
                 }
-            }
+            },
+            "raceName": "Cabal",
+            "enemyWeapon": "HeavySlugThrower",
+            "cardId": 205140
         },
         "R1S1StrikeMars1Major8": {
             "enemyId": "R1S1StrikeMars1Major8",
@@ -6223,6 +6228,8 @@
             "enemyTier": "Major",
             "expansionId": "R1S1",
             "activity": "StrikeMars1",
+            "overrides": [],
+            "raceClass": "CabalMajorCenturionA",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S1StrikeMars1Major9",
@@ -6240,7 +6247,11 @@
                     "statId": "killsOfR1S1StrikeMars1Major9",
                     "statName": "Flayer Guard"
                 }
-            }
+            },
+            "raceName": "Cabal",
+            "enemyShield": "SolarShield",
+            "enemyWeapon": "ProjectionRifle",
+            "cardId": 205150
         },
         "R1S1StrikeMars2Major0": {
             "enemyId": "R1S1StrikeMars2Major0",
@@ -10206,6 +10217,20 @@
                 }
             }
         },
+        "R1S4ArenaReefSeditiousMind": {
+            "enemyId": "R1S4ArenaReefSeditiousMind",
+            "enemyName": "Seditious Mind",
+            "raceClass": "TakenUltraHydraA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Arena",
+            "destination": "Reef",
+            "expansionId": "R1S4",
+            "activity": "ArenaReefSeditiousMind",
+            "cardId": 790040,
+            "raceName": "Taken",
+            "enemyTier": "Ultra"
+        },
         "R1S4BlightEventCosmoUltraFalsek": {
             "enemyId": "R1S4BlightEventCosmoUltraFalsek",
             "enemyName": "Falsek, Lost to Oryx",
@@ -10280,6 +10305,26 @@
                 "Shredder"
             ],
             "cardId": 201110
+        },
+        "R1S4BlightEventVenusUltraChord": {
+            "enemyId": "R1S4BlightEventVenusUltraChord",
+            "enemyName": "Blighted Chord",
+            "raceClass": "TakenUltraMinotaurA",
+            "location": "EndlessSteps",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Venus",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S4",
+            "activity": "BlightEventVenus",
+            "raceName": "Taken",
+            "enemyShield": "VoidShield",
+            "enemyWeapon": "TorchHammer",
+            "enemyOtherWeapons": [
+                "SlapRifle"
+            ],
+            "cardId": 203140
         },
         "R1S4BlightEventVenusUltraLhoks": {
             "enemyId": "R1S4BlightEventVenusUltraLhoks",
@@ -10371,6 +10416,41 @@
             ],
             "cardId": 201110
         },
+        "R1S4EventHiveshipMajorDisrok": {
+            "enemyId": "R1S4EventHiveshipMajorDisrok",
+            "enemyName": "Disrok",
+            "raceClass": "TakenMajorWizardA",
+            "location": "HallOfSouls",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "EventHiveship",
+            "raceName": "Taken",
+            "enemyShield": "SolarShield",
+            "cardId": 201120
+        },
+        "R1S4EventHiveshipMajorDumuz-Nuna": {
+            "enemyId": "R1S4EventHiveshipMajorDumuz-Nuna",
+            "enemyName": "Dumuz-Nuna",
+            "raceClass": "TakenMajorKnightA",
+            "location": "HallOfSouls",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "EventHiveship",
+            "raceName": "Taken",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
         "R1S4EventHiveshipMajorEcthar": {
             "enemyId": "R1S4EventHiveshipMajorEcthar",
             "enemyName": "Ecthar, Sword of Oryx",
@@ -10413,6 +10493,44 @@
             "enemyId": "R1S4EventHiveshipMajorGurroth",
             "enemyName": "Gurroth",
             "raceClass": "TakenMajorKnightA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "EventHiveship",
+            "raceName": "Taken",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
+        "R1S4EventHiveshipMajorKilulu": {
+            "enemyId": "R1S4EventHiveshipMajorKilulu",
+            "enemyName": "Kilulu",
+            "raceClass": "TakenMajorKnightA",
+            "location": "HallOfSouls",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "EventHiveship",
+            "raceName": "Taken",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
+        "R1S4EventHiveshipMajorMishkara": {
+            "enemyId": "R1S4EventHiveshipMajorMishkara",
+            "enemyName": "Mishkara",
+            "raceClass": "TakenMajorKnightA",
+            "location": "HallOfSouls",
             "overrides": [],
             "stats": [],
             "activityType": "Event",
@@ -10584,6 +10702,21 @@
                 "Shredder"
             ],
             "cardId": 201110
+        },
+        "R1S4EventHiveshipMajorWizard": {
+            "enemyId": "R1S4EventHiveshipMajorWizard",
+            "enemyName": "Hallowed Wizard",
+            "raceClass": "HiveWizard",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Event",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "raceName": "Hive",
+            "activity": "EventHiveship",
+            "enemyShield": "SolarShield",
+            "cardId": 201120
         },
         "R1S4EventRobHiveshipMajor0": {
             "enemyId": "R1S4EventRobHiveshipMajor0",
@@ -11094,6 +11227,16 @@
             },
             "enemyShield": "SolarShield"
         },
+        "R1S4RaidEpiphanyAdept": {
+            "enemyId": "R1S4RaidEpiphanyAdept",
+            "enemyName": "Adept",
+            "raceClass": "HiveMajorAcoylteA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Raid",
+            "expansionId": "R1S4",
+            "activity": "RaidEpiphanyAdept"
+        },
         "R1S4RaidEpiphanyDeadKing": {
             "enemyId": "R1S4RaidEpiphanyDeadKing",
             "enemyName": "###R1S4RaidEpiphanyDeadKing###",
@@ -11163,6 +11306,37 @@
             "enemyOtherWeapons": [
                 "Shredder"
             ]
+        },
+        "R1S4RaidEpiphanyLightKnight": {
+            "enemyId": "R1S4RaidEpiphanyLightKnight",
+            "enemyName": "Light Eater Knight",
+            "raceClass": "HiveKnight",
+            "0": "HiveMajorKnightACleaver",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Raid",
+            "expansionId": "R1S4",
+            "raceName": "Hive",
+            "activity": "RaidEpiphanyLightKnight",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "enemyTier": "Minor",
+            "cardId": 201110
+        },
+        "R1S4RaidEpiphanyLightOgre": {
+            "enemyId": "R1S4RaidEpiphanyLightOgre",
+            "enemyName": "Light Eater Ogre",
+            "raceClass": "HiveOgre",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Raid",
+            "expansionId": "R1S4",
+            "raceName": "Hive",
+            "activity": "RaidEpiphanyLightOgre",
+            "enemyTier": "Minor",
+            "cardId": 201140
         },
         "R1S4RaidEpiphanyUltraOgre": {
             "enemyId": "R1S4RaidEpiphanyUltraOgre",
@@ -11270,6 +11444,23 @@
             },
             "enemyShield": "SolarShield"
         },
+        "R1S4RaidEpiphanyVessel": {
+            "enemyId": "R1S4RaidEpiphanyVessel",
+            "enemyName": "Vessel",
+            "raceClass": "TakenMajorKnightA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Raid",
+            "expansionId": "R1S4",
+            "activity": "RaidEpiphanyVessel",
+            "raceName": "Taken",
+            "enemyTier": "Major",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
         "R1S4StoryCosmoElevatorUltra0": {
             "enemyId": "R1S4StoryCosmoElevatorUltra0",
             "enemyName": "###R1S4StoryCosmoElevatorUltra0###",
@@ -11350,6 +11541,25 @@
             "enemyShield": "SolarShield",
             "cardId": 201120
         },
+        "R1S4StoryCosmoUltraTsugoth": {
+            "enemyId": "R1S4StoryCosmoUltraTsugoth",
+            "enemyName": "Tsugoth, Gauntlet of Oryx",
+            "raceClass": "TakenUltraKnightA",
+            "location": "Rocketyard",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Story",
+            "destination": "Cosmo",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S4",
+            "activity": "StoryCosmo",
+            "raceName": "Taken",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
         "R1S4StoryHiveshipUltraInfantine": {
             "enemyId": "R1S4StoryHiveshipUltraInfantine",
             "enemyName": "The Infantine",
@@ -11364,6 +11574,22 @@
             "activity": "StoryHiveship",
             "raceName": "Hive",
             "cardId": 201140
+        },
+        "R1S4StoryHiveshipUltraTaaun": {
+            "enemyId": "R1S4StoryHiveshipUltraTaaun",
+            "enemyName": "Primus Ta'aun",
+            "raceClass": "CabalUltraGladiatorA",
+            "location": "Mausoleum",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Story",
+            "destination": "Hiveship",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S4",
+            "activity": "StoryHiveship",
+            "cardId": 701310,
+            "raceName": "Cabal",
+            "enemyWeapon": "HeavySlugThrower"
         },
         "R1S4StoryHiveshipTopknotUltra0": {
             "enemyId": "R1S4StoryHiveshipTopknotUltra0",
@@ -11609,6 +11835,20 @@
             "raceName": "Hive",
             "cardId": 201140
         },
+        "R1S4StrikeCosmoReliquaryTurrentShank": {
+            "enemyId": "R1S4StrikeCosmoReliquaryTurrentShank",
+            "enemyName": "Turrent Shank",
+            "raceClass": "FallenShank",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Cosmo",
+            "expansionId": "R1S4",
+            "raceName": "Fallen",
+            "activity": "StrikeCosmoReliquaryTurrentShank",
+            "enemyTier": "Minor",
+            "cardId": 207150
+        },
         "R1S4StrikeCosmoReliquaryUltra0": {
             "enemyId": "R1S4StrikeCosmoReliquaryUltra0",
             "enemyName": "###R1S4StrikeCosmoReliquaryUltra0###",
@@ -11641,6 +11881,21 @@
                 }
             },
             "raceName": "Fallen"
+        },
+        "R1S4StrikeHiveshipOverlordMinorBurners": {
+            "enemyId": "R1S4StrikeHiveshipOverlordMinorBurners",
+            "enemyName": "Psion Burners",
+            "raceClass": "CabalPsion",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "raceName": "Cabal",
+            "activity": "StrikeHiveshipOverlord",
+            "enemyWeapon": "SlugRifle",
+            "cardId": 205110
         },
         "R1S4StrikeHiveshipOverlordMajorGhoourn": {
             "enemyId": "R1S4StrikeHiveshipOverlordMajorGhoourn",
@@ -11764,6 +12019,39 @@
             ],
             "cardId": 201110
         },
+        "R1S4StrikeHiveshipPandoraMajorAgrax": {
+            "enemyId": "R1S4StrikeHiveshipPandoraMajorAgrax",
+            "enemyName": "Agrax, the Rotted",
+            "raceClass": "TakenMajorKnightA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "StrikeHiveshipPandora",
+            "raceName": "Taken",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
+        "R1S4StrikeHiveshipPandoraMajorDrarok": {
+            "enemyId": "R1S4StrikeHiveshipPandoraMajorDrarok",
+            "enemyName": "Drarok, the Watching",
+            "raceClass": "TakenMajorWizardA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "StrikeHiveshipPandora",
+            "raceName": "Taken",
+            "enemyShield": "SolarShield",
+            "cardId": 201120
+        },
         "R1S4StrikeHiveshipPandoraMajorHeolstor": {
             "enemyId": "R1S4StrikeHiveshipPandoraMajorHeolstor",
             "enemyName": "Heolstor, Warden of Oryx",
@@ -11782,6 +12070,41 @@
                 "Shredder"
             ],
             "cardId": 201110
+        },
+        "R1S4StrikeHiveshipPandoraMajorKalboh": {
+            "enemyId": "R1S4StrikeHiveshipPandoraMajorKalboh",
+            "enemyName": "Kalboh, the Unclaimed",
+            "raceClass": "TakenMajorKnightA",
+            "location": "TheFounts",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "StrikeHiveshipPandora",
+            "raceName": "Taken",
+            "enemyWeapon": "Boomer",
+            "enemyOtherWeapons": [
+                "Shredder"
+            ],
+            "cardId": 201110
+        },
+        "R1S4StrikeHiveshipPandoraMajorNolthok": {
+            "enemyId": "R1S4StrikeHiveshipPandoraMajorNolthok",
+            "enemyName": "Nolthok, the Withering",
+            "raceClass": "TakenMajorWizardA",
+            "location": "TheFounts",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Hiveship",
+            "enemyTier": "Minor",
+            "expansionId": "R1S4",
+            "activity": "StrikeHiveshipPandora",
+            "raceName": "Taken",
+            "enemyShield": "SolarShield",
+            "cardId": 201120
         },
         "R1S4StrikeHiveshipPandoraMajorThracu": {
             "enemyId": "R1S4StrikeHiveshipPandoraMajorThracu",
@@ -11927,6 +12250,21 @@
                 "SlapRifle"
             ]
         },
+        "R1S4StrikeMars3Khendiss": {
+            "enemyId": "R1S4StrikeMars3Khendiss",
+            "enemyName": "Khendiss, Word Corrupter",
+            "raceClass": "TakenMajorWizardA",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Mars",
+            "expansionId": "R1S4",
+            "activity": "StrikeMars3",
+            "raceName": "Taken",
+            "enemyTier": "Major",
+            "enemyShield": "SolarShield",
+            "cardId": 201120
+        },
         "R1S4StrikeVenusTrackerUltra0": {
             "enemyId": "R1S4StrikeVenusTrackerUltra0",
             "enemyName": "###R1S4StrikeVenusTrackerUltra0###",
@@ -12064,6 +12402,26 @@
             "expansionId": "R1S4",
             "activity": "TakenEventVenus",
             "raceName": "Taken",
+            "enemyShield": "ArcShield",
+            "enemyWeapon": "ShrapnelLauncher",
+            "enemyOtherWeapons": [
+                "ShockRifle"
+            ],
+            "cardId": 207100
+        },
+        "R1S4VenusStrikeNixis": {
+            "enemyId": "R1S4VenusStrikeNixis",
+            "enemyName": "Nixis, Hunger of Oryx",
+            "raceClass": "TakenUltraCaptainA",
+            "location": "WintersRun",
+            "overrides": [],
+            "stats": [],
+            "activityType": "Strike",
+            "destination": "Venus",
+            "expansionId": "R1S4",
+            "activity": "VenusStrikeNixis",
+            "raceName": "Taken",
+            "enemyTier": "Ultra",
             "enemyShield": "ArcShield",
             "enemyWeapon": "ShrapnelLauncher",
             "enemyOtherWeapons": [
