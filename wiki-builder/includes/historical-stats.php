@@ -246,9 +246,9 @@ $enemyOverrides = array(
 	'R1S1StrikeMars1Major4' => array('raceClass' => 'CabalMajorPsionA', 'epic' => array('enemyShield' => 'SolarShield'), 'faction' => 'CabalIceReapers'),
 	'R1S1StrikeMars1Major5' => array('raceClass' => 'CabalMajorPsionA', 'epic' => array('enemyShield' => 'VoidShield'), 'faction' => 'CabalIceReapers'),
 	//'R1S1StrikeMars1Major6' => array(),
-	//'R1S1StrikeMars1Major7' => array(),
+	'R1S1StrikeMars1Major7' => array('raceClass' => 'CabalMajorGladiatorA'),
 	//'R1S1StrikeMars1Major8' => array(),
-	//'R1S1StrikeMars1Major9' => array(),
+	'R1S1StrikeMars1Major9' => array('raceClass' => 'CabalMajorCenturionA'),
 	//'R1S1StrikeMars1Major10' => array(),
 
 	// Cerberus Vae III
@@ -607,10 +607,20 @@ $enemyNoStats = array(
 
 	'R1S4EventHiveshipMajorThrall' => array('enemyName' => 'Blind Thrall', 'raceClass' => 'HiveMajorThrallA', 'faction' => 'BloodOfOryx', 'location' => 'Mausoleum'),
 
+	'R1S4EventHiveshipMajorDisrok' => array('enemyName' => 'Disrok', 'raceClass' => 'TakenMajorWizardA', 'location' => 'HallOfSouls'),
+	'R1S4EventHiveshipMajorKilulu' => array('enemyName' => 'Kilulu', 'raceClass' => 'TakenMajorKnightA', 'location' => 'HallOfSouls'),
+	'R1S4EventHiveshipMajorMishkara' => array('enemyName' => 'Mishkara', 'raceClass' => 'TakenMajorKnightA', 'location' => 'HallOfSouls'),
+	'R1S4EventHiveshipMajorDumuz-Nuna' => array('enemyName' => 'Dumuz-Nuna', 'raceClass' => 'TakenMajorKnightA', 'location' => 'HallOfSouls'),
+
+	'R1S4StoryHiveshipUltraTaaun' => array('enemyName' => 'Primus Ta\'aun', 'raceClass' => 'CabalUltraGladiatorA', 'location' => 'Mausoleum'),
+
 	// Blighted Coven
 	'R1S4StoryCosmoMajorZyrak' => array('enemyName' => 'Zyrak, Daughter of Oryx', 'raceClass' => 'TakenMajorWizardA', 'location' => 'TheSteppes'),
 	'R1S4StoryCosmoMajorMysik' => array('enemyName' => 'Mysik, Daughter of Oryx', 'raceClass' => 'TakenMajorWizardA', 'location' => 'TheSteppes'),
 	'R1S4StoryCosmoMajorThyshik' => array('enemyName' => 'Thyshik, Daughter of Oryx', 'raceClass' => 'TakenMajorWizardA', 'location' => 'TheSteppes'),
+
+	// King's Watch Story Mission
+	'R1S4StoryCosmoUltraTsugoth' => array('enemyName' => 'Tsugoth, Gauntlet of Oryx', 'raceClass' => 'TakenUltraKnightA', 'location' => 'Rocketyard'),
 
 	// Lost to Light
 	'R1S4StoryMoonMajorBaxx' => array('enemyName' => 'Baxx, The Gravekeeper', 'raceClass' => 'HiveMajorOgreA', 'location' => 'ChamberOfNight'),
@@ -636,7 +646,13 @@ $enemyNoStats = array(
 	'R1S4StoryHiveshipUltraInfantine' => array('enemyName' => 'The Infantine', 'raceClass' => 'HiveUltraOgreA', 'location' => 'TheFounts'),
 
 	// Sunless Cell
+	'R1S4StrikeHiveshipPandoraMajorKalboh' => array('enemyName' => 'Kalboh, the Unclaimed', 'raceClass' => 'TakenMajorKnightA', 'location' => 'TheFounts'),
+	'R1S4StrikeHiveshipPandoraMajorNolthok' => array('enemyName' => 'Nolthok, the Withering', 'raceClass' => 'TakenMajorWizardA', 'location' => 'TheFounts'),
 	'R1S4StrikeHiveshipPandoraMajorUrlot' => array('enemyName' => 'Urlot, the Trampler', 'raceClass' => 'TakenMajorKnightA'),
+
+	'R1S4StrikeHiveshipPandoraMajorDrarok' => array('enemyName' => 'Drarok, the Watching', 'raceClass' => 'TakenMajorWizardA'),
+	'R1S4StrikeHiveshipPandoraMajorAgrax' => array('enemyName' => 'Agrax, the Rotted', 'raceClass' => 'TakenMajorKnightA'),
+
 	'R1S4StrikeHiveshipPandoraMajorAdleg' => array('enemyName' => 'Adleg, Warden of Oryx', 'raceClass' => 'TakenMajorKnightA', 'enemyShield' => 'SolarShield'),
 	'R1S4StrikeHiveshipPandoraMajorThracu' => array('enemyName' => 'Thracu, Warden of Oryx', 'raceClass' => 'HiveMajorKnightACleaver', 'enemyShield' => 'ArcShield'),
 	'R1S4StrikeHiveshipPandoraMajorHeolstor' => array('enemyName' => 'Heolstor, Warden of Oryx', 'raceClass' => 'HiveMajorKnightA', 'enemyShield' => 'VoidShield'),
@@ -644,6 +660,7 @@ $enemyNoStats = array(
 	// Shield Brothers
 	'R1S4StrikeHiveshipOverlordMajorThraaurg' => array('enemyName' => 'Bracus Thra\'aurg', 'raceClass' => 'CabalMajorCenturionA'),
 	'R1S4StrikeHiveshipOverlordMajorGhoourn' => array('enemyName' => 'Valus Gho\'ourn', 'raceClass' => 'CabalMajorGladiatorA'),
+	'R1S4StrikeHiveshipOverlordMinorBurners' => array('enemyName' => 'Psion Burners', 'raceClass' => 'CabalPsion'),
 
 	// Dust Palace
 	'R1S4StrikeMars1MajorLharkiss' => array('enemyName' => 'Lharkiss, Wolf Bane', 'raceClass' => 'TakenMajorVandalA', 'Overwatch'),
@@ -654,8 +671,12 @@ $enemyNoStats = array(
 	'R1S4StrikeMars2UltraSolProgeny' => array('enemyName' => 'Sol Progeny', 'raceClass' => 'TakenUltraMinotaurA', 'location' => 'Trenchworks'),
 
 	// S.A.B.E.R.
+	'R1S4StrikeCosmoReliquaryTurrentShank' => array('enemyName' => 'Turrent Shank', 'raceClass' => 'AiShankShockTurret'),
 	'R1S4StrikeCosmoReliquaryMajorYathbor' => array('enemyName' => 'Yathbor', 'raceClass' => 'HiveMajorOgreA', 'location' => 'TheGrottos'),
 	'R1S4StrikeCosmoReliquaryMajorSepiks23' => array('enemyName' => 'Sepiks-23', 'raceClass' => 'FallenMajorServitorA'),
+
+	// Taken Undying Mind
+	'R1S4StrikeMars3Khendiss' => array('enemyName' => 'Khendiss, Word Corrupter', 'raceClass' => 'TakenMajorWizardA'),
 
 	'R1S4WantedEventUltraKeldar' => array('enemyName' => 'Keldar, Archon Priest', 'raceClass' => 'FallenUltraCaptainA', 'faction' => 'FallenWolves'),
 
@@ -670,6 +691,7 @@ $enemyNoStats = array(
 	'R1S4EventHiveshipMajorGurroth' => array('enemyName' => 'Gurroth', 'raceClass' => 'TakenMajorKnightA'),
 	'R1S4EventHiveshipMajorPurtra' => array('enemyName' => 'Purtra, the False Tongue', 'raceClass' => 'TakenMajorWizardA'),
 	'R1S4EventHiveshipMajorSurnon' => array('enemyName' => 'Surnon, Darksong', 'raceClass' => 'TakenMajorWizardA'),
+	'R1S4EventHiveshipMajorWizard' => array('enemyName' => 'Hallowed Wizard', 'raceClass' => 'TakenMajorWizardA'),
 
 	'R1S4EventHiveshipUltraDumuzod' => array('enemyName' => 'Dumuzod', 'raceClass' => 'TakenUltraKnightA', 'location' => 'TheFounts'),
 
@@ -690,8 +712,21 @@ $enemyNoStats = array(
 	'R1S4BlightEventCosmoUltraFalsek' => array('enemyName' => 'Falsek, Lost to Oryx', 'raceClass' => 'TakenUltraCaptainA', 'location' => 'Dock13'),
 	'R1S4BlightEventMoonUltraKrathoor' => array('enemyName' => 'Krathoor', 'raceClass' => 'TakenUltraKnightA', 'location' => 'ShrineOfOryx'),
 	'R1S4BlightEventVenusUltraLhoks' => array('enemyName' => 'Lhoks, Exile Baron', 'raceClass' => 'TakenUltraCaptainA', 'location' => 'TheCinders'),
+	'R1S4BlightEventVenusUltraChord' => array('enemyName' => 'Blighted Chord', 'raceClass' => 'TakenUltraMinotaurA', 'location' => 'EndlessSteps'),
 	'R1S4BlightEventMarsUltraDruurng' => array('enemyName' => 'Bracus Dru\'urng', 'raceClass' => 'TakenUltraCenturionA', 'location' => 'TheLegionsKeep'),
 	'R1S4BlightEventHiveshipUltraBalvog' => array('enemyName' => 'Balvog, Shield of Oryx', 'raceClass' => 'TakenUltraKnightA', 'location' => 'Trenchway'),
+
+	'R1S4RaidEpiphanyAdept' => array('enemyName' => 'Adept', 'raceClass' => 'HiveMajorAcoylteA'),
+	'R1S4RaidEpiphanyLightOgre' => array('enemyName' => 'Light Eater Ogre', 'raceClass' => 'TakenMajorOgreA'),
+	'R1S4RaidEpiphanyVessel' => array('enemyName' => 'Vessel', 'raceClass' => 'TakenMajorKnightA'),
+	'R1S4RaidEpiphanyLightKnight' => array('enemyName' => 'Light Eater Knight', 'raceClass' => 'TakenMajorKnightA', 'HiveMajorKnightACleaver'),
+
+	// New Prison of Elders
+	'R1S4ArenaReefSeditiousMind' => array('enemyName' => 'Seditious Mind', 'raceClass' => 'TakenUltraHydraA'),
+
+	// Taken Winters Run
+	'R1S4VenusStrikeNixis' => array('enemyName' => 'Nixis, Hunger of Oryx', 'raceClass' => 'TakenUltraCaptainA', 'location' => 'WintersRun')
+
 );
 
 function applyEnemyClass(&$enemy, $enemies, $enemyClass=false) {
