@@ -82,7 +82,9 @@
         "SUPPORT_FORM_RECEIVED": 31,
         "RAF_NEWBIE_NEEDS_TO_PLAY_TTK": 32,
         "RAF_TTK_QUEST_READY": 33,
-        "RECRUIT_THREAD_READY": 34
+        "RECRUIT_THREAD_READY": 34,
+        "RECRUIT_THREAD_KICKED": 35,
+        "RECRUIT_THREAD_CANCELED": 36
     },
     "NotificationMethods": {
         "None": 0,
@@ -671,7 +673,8 @@
         "NotificationsChanged": 3,
         "MessageCounts": 4,
         "FriendCounts": 5,
-        "Announcements": 6
+        "Announcements": 6,
+        "RecruitThreadUpdate": 7
     },
     "BNetAccountPrivacy": {
         "Default": 0,

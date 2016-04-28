@@ -324,7 +324,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationThreadV3">GetConversationThreadV3</a></td>
-<td>/Message/GetConversationThreadV3/{e}/{i}/</td>
+<td>/Message/GetConversationThreadV3/{e}/{k}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -596,7 +596,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="ForumService"></a>ForumService (27 Endpoints)</h2>
+<h2><a name="ForumService"></a>ForumService (29 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -687,6 +687,11 @@
 <td>/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/</td>
 </tr>
 <tr>
+<td>POST</td>
+<td><a href="../docs/ForumService/GetRecruitmentThreadSummaries">GetRecruitmentThreadSummaries</a></td>
+<td>/Forum/Recruit/Summaries/</td>
+</tr>
+<tr>
 <td>GET</td>
 <td><a href="../docs/ForumService/GetTopicForContent">GetTopicForContent</a></td>
 <td>/Forum/GetTopicForContent/{contentId}/</td>
@@ -705,6 +710,11 @@
 <td>POST</td>
 <td><a href="../docs/ForumService/KickBanFireteamApplicant">KickBanFireteamApplicant</a></td>
 <td>/Forum/Recruit/KickBan/{g}/{e}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ForumService/LeaveFireteamThread">LeaveFireteamThread</a></td>
+<td>/Forum/Recruit/Leave/{f}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1213,7 +1223,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/GroupService/Migrate">Migrate</a></td>
-<td>/Group/{f}/Migrate/{e}/</td>
+<td>/Group/{g}/Migrate/{e}/{f}/</td>
 </tr>
 <tr>
 <td>POST</td>

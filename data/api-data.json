@@ -602,9 +602,17 @@
         {
             "name": "GetConversationThreadV3",
             "method": "GET",
-            "endpoint": "\/Message\/GetConversationThreadV3\/{e}\/{i}\/",
+            "endpoint": "\/Message\/GetConversationThreadV3\/{e}\/{k}\/",
             "params": {
                 "format": {
+                    "desc": "",
+                    "link": ""
+                },
+                "before": {
+                    "desc": "",
+                    "link": ""
+                },
+                "after": {
                     "desc": "",
                     "link": ""
                 }
@@ -615,7 +623,7 @@
                     "desc": "",
                     "link": ""
                 },
-                "i": {
+                "k": {
                     "desc": "",
                     "link": ""
                 }
@@ -1629,6 +1637,15 @@
             "access": ""
         },
         {
+            "name": "GetRecruitmentThreadSummaries",
+            "method": "POST",
+            "endpoint": "\/Forum\/Recruit\/Summaries\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": "Private"
+        },
+        {
             "name": "GetTopicForContent",
             "method": "GET",
             "endpoint": "\/Forum\/GetTopicForContent\/{contentId}\/",
@@ -1707,6 +1724,20 @@
                     "link": ""
                 },
                 "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
+            "name": "LeaveFireteamThread",
+            "method": "POST",
+            "endpoint": "\/Forum\/Recruit\/Leave\/{f}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "f": {
                     "desc": "",
                     "link": ""
                 }
@@ -3757,15 +3788,19 @@
         {
             "name": "Migrate",
             "method": "POST",
-            "endpoint": "\/Group\/{f}\/Migrate\/{e}\/",
+            "endpoint": "\/Group\/{g}\/Migrate\/{e}\/{f}\/",
             "params": [],
             "post": [],
             "path": {
-                "f": {
+                "g": {
                     "desc": "",
                     "link": ""
                 },
                 "e": {
+                    "desc": "",
+                    "link": ""
+                },
+                "f": {
                     "desc": "",
                     "link": ""
                 }
