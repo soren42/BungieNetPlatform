@@ -4726,6 +4726,33 @@
             "access": "Public"
         },
         {
+            "name": "GetAdvisorsForCharacterV2",
+            "method": "GET",
+            "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/V2\/",
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": {
+                "membershipType": {
+                    "desc": "A valid Bungie.net membershipType.",
+                    "link": "Enums#BungieMembershipType"
+                },
+                "destinyMembershipId": {
+                    "desc": "A valid destinyMembershipId.",
+                    "link": ""
+                },
+                "characterId": {
+                    "desc": "A valid characterId that is associated with the given account.",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetAdvisorsForCurrentCharacter",
             "method": "GET",
             "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Advisors\/",
@@ -4747,6 +4774,29 @@
                 }
             },
             "access": "Private"
+        },
+        {
+            "name": "GetAdvisorsForCurrentCharacterV2",
+            "method": "GET",
+            "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Advisors\/V2\/",
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": {
+                "membershipType": {
+                    "desc": "A valid Bungie.net membershipType.",
+                    "link": "Enums#BungieMembershipType"
+                },
+                "characterId": {
+                    "desc": "A valid characterId that is associated with the given account.",
+                    "link": ""
+                }
+            },
+            "access": ""
         },
         {
             "name": "GetAllItemsSummary",
@@ -5580,6 +5630,20 @@
             "post": [],
             "path": [],
             "access": "Public"
+        },
+        {
+            "name": "GetPublicAdvisorsV2",
+            "method": "GET",
+            "endpoint": "\/Destiny\/Advisors\/V2\/",
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": [],
+            "access": ""
         },
         {
             "name": "GetPublicVendor",

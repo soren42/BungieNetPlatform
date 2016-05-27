@@ -2387,6 +2387,15 @@
                 ],
                 "post": []
             },
+            "GetPublicAdvisorsV2": {
+                "name": "GetPublicAdvisorsV2",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Advisors\/V2\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
             "GetPublicXurVendor": {
                 "name": "GetPublicXurVendor",
                 "method": "GET",
@@ -2414,10 +2423,28 @@
                 ],
                 "post": []
             },
+            "GetAdvisorsForCurrentCharacterV2": {
+                "name": "GetAdvisorsForCurrentCharacterV2",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Advisors\/V2\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
             "GetAdvisorsForCharacter": {
                 "name": "GetAdvisorsForCharacter",
                 "method": "GET",
                 "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAdvisorsForCharacterV2": {
+                "name": "GetAdvisorsForCharacterV2",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/V2\/",
                 "params": [
                     "definitions"
                 ],
