@@ -2599,28 +2599,6 @@
             "access": "Private"
         },
         {
-            "name": "DesignateClanFounderForMigration",
-            "method": "POST",
-            "endpoint": "\/Group\/{groupId}\/DesignateClanFounderForMigration\/{membershipId}\/{clanMembershipType}\/",
-            "params": [],
-            "post": [],
-            "path": {
-                "groupId": {
-                    "desc": "A valid groupId.",
-                    "link": ""
-                },
-                "membershipId": {
-                    "desc": "A valid Bungie.net membershipId that is in the group.",
-                    "link": ""
-                },
-                "clanMembershipType": {
-                    "desc": "A valid clan membership type. 1=Xbox, 2=PSN, 10=Demon",
-                    "link": "Enums#BungieMembershipType"
-                }
-            },
-            "access": "Private"
-        },
-        {
             "name": "DisableClanForGroup",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Clans\/Disable\/{clanMembershipType}\/",
@@ -4343,6 +4321,20 @@
             "access": "Private"
         },
         {
+            "name": "OverrideGroupWallBanOnUser",
+            "method": "POST",
+            "endpoint": "\/Admin\/Member\/{e}\/SetGroupWallBan\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
             "name": "OverrideMsgBanOnUser",
             "method": "POST",
             "endpoint": "\/Admin\/Member\/{e}\/SetMsgBan\/",
@@ -4774,29 +4766,6 @@
                 }
             },
             "access": "Private"
-        },
-        {
-            "name": "GetAdvisorsForCurrentCharacterV2",
-            "method": "GET",
-            "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/Character\/{characterId}\/Advisors\/V2\/",
-            "params": {
-                "definitions": {
-                    "desc": "Include definitions in the response. Use while testing.",
-                    "link": ""
-                }
-            },
-            "post": [],
-            "path": {
-                "membershipType": {
-                    "desc": "A valid Bungie.net membershipType.",
-                    "link": "Enums#BungieMembershipType"
-                },
-                "characterId": {
-                    "desc": "A valid characterId that is associated with the given account.",
-                    "link": ""
-                }
-            },
-            "access": ""
         },
         {
             "name": "GetAllItemsSummary",

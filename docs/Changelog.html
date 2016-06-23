@@ -83,6 +83,86 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>June 23, 2016</h2>
+<p>This update broke my code :'(</p>
+<p>Definitions:</p>
+<ul>
+<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: added &quot;rewardItems&quot; to &quot;steps&quot; property.</li>
+<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 0 &gt; 1 classified (Year Two triumphs are now hidden)</li>
+<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 0 &gt; 12 classified (Year Two triumphs are now hidden)</li>
+<li><a href="../docs/Definitions/SpecialEventDefinition">SpecialEventDefinition</a>: added &quot;unlockEventHash&quot; property.</li>
+<li><a href="../docs/Definitions/TriumphSetDefinition">TriumphSetDefinition</a>: added &quot;isRecordBook&quot; property.</li>
+</ul>
+<p>Endpoints (added):</p>
+<ul>
+<li>POST <a href="../docs/AdminService/OverrideGroupWallBanOnUser">AdminService/OverrideGroupWallBanOnUser</a></li>
+</ul>
+<p>Endpoints (removed):</p>
+<ul>
+<li>POST <a href="#DesignateClanFounderMigration">GroupService/DesignateClanFounderMigration</a></li>
+<li>GET <a href="../docs/DestinyService/GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
+</ul>
+<p>Enums (Holy crap!! Where do I start?):</p>
+<ul>
+<li>&quot;ActivityAggregationType&quot; removed</li>
+<li>&quot;ActivityItemOrigin&quot; removed</li>
+<li>&quot;ActivityQueryFilter&quot; removed</li>
+<li>&quot;ActivityStatus&quot; removed</li>
+<li>&quot;ActivityOutputFormat&quot; added</li>
+<li>&quot;AdminHistoryItemFlags&quot; added</li>
+<li>&quot;AdminHistoryMembershipFlags&quot; added</li>
+<li>&quot;AdminHistoryType&quot; added</li>
+<li>&quot;BucketScope&quot; added</li>
+<li>&quot;Capabilities&quot; added</li>
+<li>&quot;ChatSecuritySetting&quot; added</li>
+<li>&quot;ContentPropertyDataType&quot; added</li>
+<li>&quot;CredentialType&quot; added</li>
+<li>&quot;DestinyActivityDifficultyTier&quot; added</li>
+<li>&quot;DestinyCardRarity&quot; added</li>
+<li>&quot;DestinyExcellenceBadgeTier&quot; added</li>
+<li>&quot;DestinyExplorerOrderDirection&quot; added</li>
+<li>&quot;DestinyGameVersions&quot; added</li>
+<li>&quot;DestinyRecordBookPageDisplayStyle&quot; added</li>
+<li>&quot;DestinyRewardSourceCategory&quot; added</li>
+<li>&quot;DestinyStatsCategoryType&quot; added</li>
+<li>&quot;DestinyStatsMergeMethod&quot; added</li>
+<li>&quot;DestinyTalentNodeStepDamageTypes&quot; added</li>
+<li>&quot;DestinyTalentNodeStepGuardianAttributes&quot; added</li>
+<li>&quot;DestinyTalentNodeStepImpactEffects&quot; added</li>
+<li>&quot;DestinyTalentNodeStepLightAbilities&quot; added</li>
+<li>&quot;DestinyTalentNodeStepWeaponPerformances&quot; added</li>
+<li>&quot;DestinyUnlockFlagOperator&quot; added</li>
+<li>&quot;DestinyUnlockValueUIStyle&quot; added</li>
+<li>&quot;DestinyVendorItemRefundPolicy&quot; added</li>
+<li>&quot;DirectorNodeState&quot; added</li>
+<li>&quot;DirectorNodeUIModifier&quot; added</li>
+<li>&quot;DirectorTransitionType&quot; added</li>
+<li>&quot;EventConversationType&quot; added</li>
+<li>&quot;ForumPostCategory&quot; changed to &quot;ForumPostCategorys&quot;</li>
+<li>&quot;GameServiceStatus&quot; added</li>
+<li>&quot;GlobalAcknowledgementItem&quot; added</li>
+<li>&quot;GlobalAlertLevel&quot; added</li>
+<li>&quot;GroupAllianceStatus&quot; added</li>
+<li>&quot;GroupApplicationResolveState&quot; added</li>
+<li>&quot;GroupAttributeType&quot; added</li>
+<li>&quot;GroupMemberSortBy&quot; added</li>
+<li>&quot;GroupMemberType&quot; added</li>
+<li>&quot;GroupPostPublicity&quot; added</li>
+<li>&quot;GroupRelationshipResult&quot; added</li>
+<li>&quot;GroupTypeSearchFilter&quot; removed</li>
+<li>&quot;GroupType&quot; added</li>
+<li>&quot;GroupForMemberFilter&quot; added</li>
+<li>&quot;IgnoreLength&quot; added &quot;GroupWallPost&quot; (8) and &quot;PrivateMessage&quot; (9)</li>
+<li>&quot;InvitationType&quot; added</li>
+<li>&quot;ItemState&quot; added</li>
+<li>&quot;MigrationMode&quot; added</li>
+<li>&quot;NotificationType&quot; added &quot;GROUP_WALL_BANNED&quot; (37)</li>
+<li>&quot;PlatformErrorCodes&quot; added</li>
+<li>&quot;RAFEligibility&quot; added</li>
+<li>&quot;SpecialItemType&quot; added</li>
+<li>&quot;TemplateFormat&quot; added</li>
+<li>&quot;TransferStatuses&quot; added</li>
+</ul>
 <h2>June 16, 2016</h2>
 <p>Definitions:</p>
 <ul>

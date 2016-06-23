@@ -885,7 +885,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="GroupService"></a>GroupService (79 Endpoints)</h2>
+<h2><a name="GroupService"></a>GroupService (78 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -964,11 +964,6 @@
 <td>POST</td>
 <td><a href="../docs/GroupService/DenyPendingForList">DenyPendingForList</a></td>
 <td>/Group/{groupId}/Members/DenyList/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DesignateClanFounderForMigration">DesignateClanFounderForMigration</a></td>
-<td>/Group/{groupId}/DesignateClanFounderForMigration/{membershipId}/{clanMembershipType}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1361,7 +1356,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="AdminService"></a>AdminService (16 Endpoints)</h2>
+<h2><a name="AdminService"></a>AdminService (17 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1435,6 +1430,11 @@
 <td>POST</td>
 <td><a href="../docs/AdminService/OverrideGlobalIgnore">OverrideGlobalIgnore</a></td>
 <td>/Admin/Ignores/OverrideGlobalIgnore/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/AdminService/OverrideGroupWallBanOnUser">OverrideGroupWallBanOnUser</a></td>
+<td>/Admin/Member/{e}/SetGroupWallBan/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1535,7 +1535,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="DestinyService"></a>DestinyService (61 Endpoints)</h2>
+<h2><a name="DestinyService"></a>DestinyService (60 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1594,11 +1594,6 @@
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetAdvisorsForCurrentCharacter">GetAdvisorsForCurrentCharacter</a></td>
 <td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Advisors/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAdvisorsForCurrentCharacterV2">GetAdvisorsForCurrentCharacterV2</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Advisors/V2/</td>
 </tr>
 <tr>
 <td>GET</td>
