@@ -83,6 +83,43 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>July 8, 2016</h2>
+<p>The one after Bungie Day.</p>
+<p>Definitions:</p>
+<ul>
+<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 70 &gt; 60 classified</li>
+<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 2 &gt; 1 classified</li>
+<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 1 &gt; 0 classified</li>
+<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 12 &gt; 0 classified</li>
+</ul>
+<p>Endpoints (added):</p>
+<ul>
+<li>GET <a href="../docs/GroupService/GetAllFoundedGroupsForMember">GroupService/GetAllFoundedGroupsForMember</a></li>
+<li>GET <a href="../docs/GroupService/GetMyClanMemberships">GroupSerivce/GetMyClanMemberships</a></li>
+<li>GET <a href="../docs/IgnoreService/GetReportContext">IgnoreService/GetReportContext</a></li>
+<li>GET <a href="../docs/DestinyService/GetAdvisorsForAccount">DestinyService/GetAdvisorsForAccount</a></li>
+<li>GET <a href="../docs/DestinyService/GetRecordBookCompletionStatus">DestinyService/GetRecordBookCompletionStatus</a></li>
+</ul>
+<p>Enums:</p>
+<ul>
+<li>&quot;Acl&quot; added &quot;BNextDiscountSupport&quot;</li>
+<li>&quot;DestinyAccountTransferState&quot; added</li>
+<li>&quot;DestinyRecordCompletionStatus&quot; added</li>
+<li>&quot;NotificationType&quot; added
+<strong> &quot;BANNED_PERMANENT&quot;
+</strong> &quot;USER_PROFILE_BANNED_PERMANENT&quot;
+<strong> &quot;USER_MESSAGE_BANNED_PERMANENT&quot;
+</strong> &quot;GROUP_WALL_BANNED_PERMANENT&quot;</li>
+<li>&quot;PlatformErrorCodes&quot; added
+<strong> 593 &quot;ForumUserBannedFromThisTopic&quot;
+</strong> 594 &quot;ForumRecruitmentFireteamMembersOnly&quot;
+<strong> 2038 &quot;NoAvailableDiscountCode&quot;
+</strong> 2039 &quot;DiscountAlreadyClaimed&quot;
+<strong> 2040 &quot;DiscountClaimFailure&quot;
+</strong> 2041 &quot;DiscountConfigurationFailure&quot;
+<strong> 2042 &quot;DiscountGenerationFailure&quot;
+</strong> 2043 &quot;DiscountAlreadyExists&quot;</li>
+</ul>
 <h2>June 23, 2016</h2>
 <p>This update broke my code :'(</p>
 <p>Definitions:</p>

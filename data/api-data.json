@@ -2868,6 +2868,20 @@
             "access": "Public"
         },
         {
+            "name": "GetAllFoundedGroupsForMember",
+            "method": "GET",
+            "endpoint": "\/Group\/User\/{e}\/Founded\/All\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetAllGroupsForCurrentMember",
             "method": "GET",
             "endpoint": "\/Group\/MyGroups\/All\/",
@@ -3391,6 +3405,15 @@
                 }
             },
             "access": "Public"
+        },
+        {
+            "name": "GetMyClanMemberships",
+            "method": "GET",
+            "endpoint": "\/Group\/MyClans\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": ""
         },
         {
             "name": "GetPendingClanMemberships",
@@ -4051,6 +4074,20 @@
             "access": ""
         },
         {
+            "name": "GetReportContext",
+            "method": "GET",
+            "endpoint": "\/Ignore\/ReportContext\/{e}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "e": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "IgnoreItem",
             "method": "POST",
             "endpoint": "\/Ignore\/Ignore\/",
@@ -4689,6 +4726,29 @@
                 }
             },
             "access": "Public"
+        },
+        {
+            "name": "GetAdvisorsForAccount",
+            "method": "GET",
+            "endpoint": "\/Destiny\/{f}\/Account\/{d}\/Advisors\/",
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": {
+                "f": {
+                    "desc": "",
+                    "link": ""
+                },
+                "d": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
         },
         {
             "name": "GetAdvisorsForCharacter",
@@ -5665,6 +5725,29 @@
             "post": [],
             "path": [],
             "access": "Public"
+        },
+        {
+            "name": "GetRecordBookCompletionStatus",
+            "method": "GET",
+            "endpoint": "\/Destiny\/{e}\/MyAccount\/RecordBooks\/{f}\/Completion\/",
+            "params": {
+                "definitions": {
+                    "desc": "Include definitions in the response. Use while testing.",
+                    "link": ""
+                }
+            },
+            "post": [],
+            "path": {
+                "e": {
+                    "desc": "",
+                    "link": ""
+                },
+                "f": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
         },
         {
             "name": "GetSpecialEventAdvisors",

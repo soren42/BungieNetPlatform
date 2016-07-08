@@ -199,6 +199,10 @@
 <td>BNextOverrideLinkPrivacy</td>
 <td>26</td>
 </tr>
+<tr>
+<td>BNextDiscountSupport</td>
+<td>27</td>
+</tr>
 </tbody>
 </table>
 <h2><a name="ActivityOutputFormat"></a>ActivityOutputFormat</h2>
@@ -1128,6 +1132,37 @@
 </tr>
 </tbody>
 </table>
+<h2><a name="DestinyAccountTransferState"></a>DestinyAccountTransferState</h2>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unknown</td>
+<td>0</td>
+</tr>
+<tr>
+<td>NoTransfer</td>
+<td>1</td>
+</tr>
+<tr>
+<td>BackTransfer</td>
+<td>2</td>
+</tr>
+<tr>
+<td>V1Active</td>
+<td>3</td>
+</tr>
+<tr>
+<td>AccountsSplit</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 <h2><a name="DestinyActivityDifficultyTier"></a>DestinyActivityDifficultyTier</h2>
 <table class="table table-bordered">
 <thead>
@@ -1819,6 +1854,29 @@
 <tr>
 <td>SummaryPage</td>
 <td>1</td>
+</tr>
+</tbody>
+</table>
+<h2><a name="DestinyRecordCompletionStatus"></a>DestinyRecordCompletionStatus</h2>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incomplete</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Complete</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Redeemed</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
@@ -4069,6 +4127,22 @@
 <td>GROUP_WALL_BANNED</td>
 <td>37</td>
 </tr>
+<tr>
+<td>BANNED_PERMANENT</td>
+<td>38</td>
+</tr>
+<tr>
+<td>USER_PROFILE_BANNED_PERMANENT</td>
+<td>39</td>
+</tr>
+<tr>
+<td>USER_MESSAGE_BANNED_PERMANENT</td>
+<td>40</td>
+</tr>
+<tr>
+<td>GROUP_WALL_BANNED_PERMANENT</td>
+<td>41</td>
+</tr>
 </tbody>
 </table>
 <h2><a name="OfferRedeemMode"></a>OfferRedeemMode</h2>
@@ -5216,6 +5290,14 @@
 <tr>
 <td>ForumRecruitmentGlobalBan</td>
 <td>592</td>
+</tr>
+<tr>
+<td>ForumUserBannedFromThisTopic</td>
+<td>593</td>
+</tr>
+<tr>
+<td>ForumRecruitmentFireteamMembersOnly</td>
+<td>594</td>
 </tr>
 <tr>
 <td>GroupMembershipApplicationAlreadyResolved</td>
@@ -6396,6 +6478,30 @@
 <tr>
 <td>RAFRedeemThrottled</td>
 <td>2037</td>
+</tr>
+<tr>
+<td>NoAvailableDiscountCode</td>
+<td>2038</td>
+</tr>
+<tr>
+<td>DiscountAlreadyClaimed</td>
+<td>2039</td>
+</tr>
+<tr>
+<td>DiscountClaimFailure</td>
+<td>2040</td>
+</tr>
+<tr>
+<td>DiscountConfigurationFailure</td>
+<td>2041</td>
+</tr>
+<tr>
+<td>DiscountGenerationFailure</td>
+<td>2042</td>
+</tr>
+<tr>
+<td>DiscountAlreadyExists</td>
+<td>2043</td>
 </tr>
 <tr>
 <td>ApiExceededMaxKeys</td>

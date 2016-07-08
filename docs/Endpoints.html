@@ -885,7 +885,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="GroupService"></a>GroupService (78 Endpoints)</h2>
+<h2><a name="GroupService"></a>GroupService (80 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1017,6 +1017,11 @@
 </tr>
 <tr>
 <td>GET</td>
+<td><a href="../docs/GroupService/GetAllFoundedGroupsForMember">GetAllFoundedGroupsForMember</a></td>
+<td>/Group/User/{e}/Founded/All/</td>
+</tr>
+<tr>
+<td>GET</td>
 <td><a href="../docs/GroupService/GetAllGroupsForCurrentMember">GetAllGroupsForCurrentMember</a></td>
 <td>/Group/MyGroups/All/</td>
 </tr>
@@ -1134,6 +1139,11 @@
 <td>GET</td>
 <td><a href="../docs/GroupService/GetMembersOfGroupV3">GetMembersOfGroupV3</a></td>
 <td>/Group/{groupId}/MembersV3/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/GroupService/GetMyClanMemberships">GetMyClanMemberships</a></td>
+<td>/Group/MyClans/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1287,7 +1297,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="IgnoreService"></a>IgnoreService (7 Endpoints)</h2>
+<h2><a name="IgnoreService"></a>IgnoreService (8 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1316,6 +1326,11 @@
 <td>GET</td>
 <td><a href="../docs/IgnoreService/GetIgnoreStatusForUser">GetIgnoreStatusForUser</a></td>
 <td>/Ignore/MyIgnores/Users/{e}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/IgnoreService/GetReportContext">GetReportContext</a></td>
+<td>/Ignore/ReportContext/{e}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1535,7 +1550,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="DestinyService"></a>DestinyService (60 Endpoints)</h2>
+<h2><a name="DestinyService"></a>DestinyService (62 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1579,6 +1594,11 @@
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetActivityHistory">GetActivityHistory</a></td>
 <td>/Destiny/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/DestinyService/GetAdvisorsForAccount">GetAdvisorsForAccount</a></td>
+<td>/Destiny/{f}/Account/{d}/Advisors/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1769,6 +1789,11 @@
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetPublicXurVendor">GetPublicXurVendor</a></td>
 <td>/Destiny/Advisors/Xur/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/DestinyService/GetRecordBookCompletionStatus">GetRecordBookCompletionStatus</a></td>
+<td>/Destiny/{e}/MyAccount/RecordBooks/{f}/Completion/</td>
 </tr>
 <tr>
 <td>GET</td>

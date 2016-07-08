@@ -54,14 +54,6 @@
         "GuiltyAlias": 5,
         "ResolveNoAction": 6
     },
-    "BungieMembershipType": {
-        "None": 0,
-        "TigerXbox": 1,
-        "TigerPsn": 2,
-        "TigerDemon": 10,
-        "BungieNext": 254,
-        "All": -1
-    },
     "BungieCredentialType": {
         "None": 0,
         "Xuid": 1,
@@ -72,6 +64,14 @@
         "Google": 8,
         "Windows": 9,
         "DemonId": 10
+    },
+    "BungieMembershipType": {
+        "None": 0,
+        "TigerXbox": 1,
+        "TigerPsn": 2,
+        "TigerDemon": 10,
+        "BungieNext": 254,
+        "All": -1
     },
     "ClientDeviceType": {
         "Unknown": 0,
@@ -148,83 +148,6 @@
         "Europe": 2,
         "Japan": 3
     },
-    "GroupType": {
-        "General": 0
-    },
-    "ChatSecuritySetting": {
-        "Group": 0,
-        "Admins": 1
-    },
-    "GroupHomepage": {
-        "Wall": 0,
-        "Forum": 1,
-        "AllianceForum": 2
-    },
-    "MembershipOption": {
-        "Reviewed": 0,
-        "Open": 1,
-        "Closed": 2
-    },
-    "GroupPostPublicity": {
-        "Public": 0,
-        "Alliance": 1,
-        "Private": 2
-    },
-    "GroupMemberType": {
-        "Member": 0,
-        "Admin": 1,
-        "Founder": 2,
-        "None": -1
-    },
-    "GroupAllianceStatus": {
-        "Unallied": 0,
-        "Parent": 1,
-        "Child": 2
-    },
-    "GroupDateRange": {
-        "All": 0,
-        "PastDay": 1,
-        "PastWeek": 2,
-        "PastMonth": 3,
-        "PastYear": 4
-    },
-    "GroupSortBy": {
-        "Name": 0,
-        "Date": 1,
-        "Popularity": 2,
-        "Id": 3
-    },
-    "GroupRelationshipResult": {
-        "Approved": 0,
-        "Created": 1,
-        "Failed": 2
-    },
-    "GroupMemberCountFilter": {
-        "All": 0,
-        "OneToTen": 1,
-        "ElevenToOneHundred": 2,
-        "GreaterThanOneHundred": 3
-    },
-    "GroupClanEnableStatus": {
-        "NotApplicable": 0,
-        "ClanEnabledSuccess": 1,
-        "ClanEnabledFailure": 2
-    },
-    "GroupMemberSortBy": {
-        "TypeAndDuration": 0,
-        "Duration": 1,
-        "Name": 2,
-        "Activity": 3
-    },
-    "MigrationMode": {
-        "ConvertToClan": 0,
-        "SplitClan": 1
-    },
-    "FriendOnlineStatus": {
-        "Offline": 0,
-        "Online": 1,
-        "Idle": 2
-    },
     "Acl": {
         "None": 0,
         "BNextForumNinja": 1,
@@ -252,7 +175,8 @@
         "BNextAdminHistory": 23,
         "BNextPrivateUserDataReader": 24,
         "BNextDiagnosticsDataReader": 25,
-        "BNextOverrideLinkPrivacy": 26
+        "BNextOverrideLinkPrivacy": 26,
+        "BNextDiscountSupport": 27
     },
     "BNetAccountPrivacy": {
         "Default": 0,
@@ -319,7 +243,11 @@
         "RECRUIT_THREAD_READY": 34,
         "RECRUIT_THREAD_KICKED": 35,
         "RECRUIT_THREAD_CANCELED": 36,
-        "GROUP_WALL_BANNED": 37
+        "GROUP_WALL_BANNED": 37,
+        "BANNED_PERMANENT": 38,
+        "USER_PROFILE_BANNED_PERMANENT": 39,
+        "USER_MESSAGE_BANNED_PERMANENT": 40,
+        "GROUP_WALL_BANNED_PERMANENT": 41
     },
     "ActivityOutputFormat": {
         "BNet": 0,
@@ -594,6 +522,8 @@
         "ForumRecruitmentTopicNoPlayers": 590,
         "ForumRecruitmentApproveFailMessageBan": 591,
         "ForumRecruitmentGlobalBan": 592,
+        "ForumUserBannedFromThisTopic": 593,
+        "ForumRecruitmentFireteamMembersOnly": 594,
         "GroupMembershipApplicationAlreadyResolved": 601,
         "GroupMembershipAlreadyApplied": 602,
         "GroupMembershipInsufficientPrivileges": 603,
@@ -889,6 +819,12 @@
         "RAFUnableToCreateBondVersionMismatch": 2035,
         "RAFUnableToRemoveBondVersionMismatch": 2036,
         "RAFRedeemThrottled": 2037,
+        "NoAvailableDiscountCode": 2038,
+        "DiscountAlreadyClaimed": 2039,
+        "DiscountClaimFailure": 2040,
+        "DiscountConfigurationFailure": 2041,
+        "DiscountGenerationFailure": 2042,
+        "DiscountAlreadyExists": 2043,
         "ApiExceededMaxKeys": 2100,
         "ApiInvalidOrExpiredKey": 2101,
         "ApiKeyMissingFromRequest": 2102
@@ -916,6 +852,13 @@
         "TheDarkBelow": 2,
         "HouseOfWolves": 4,
         "Comet": 8
+    },
+    "DestinyAccountTransferState": {
+        "Unknown": 0,
+        "NoTransfer": 1,
+        "BackTransfer": 2,
+        "V1Active": 3,
+        "AccountsSplit": 4
     },
     "ItemBindStatus": {
         "NotBound": 0,
@@ -1125,6 +1068,11 @@
         "TransitionBook": 0,
         "TransitionSocial": 1
     },
+    "DestinyRecordCompletionStatus": {
+        "Incomplete": 0,
+        "Complete": 1,
+        "Redeemed": 2
+    },
     "DestinyRecordBookPageDisplayStyle": {
         "RecordPage": 0,
         "SummaryPage": 1
@@ -1329,6 +1277,78 @@
         "Silver": 2,
         "Gold": 3
     },
+    "GroupType": {
+        "General": 0
+    },
+    "ChatSecuritySetting": {
+        "Group": 0,
+        "Admins": 1
+    },
+    "GroupHomepage": {
+        "Wall": 0,
+        "Forum": 1,
+        "AllianceForum": 2
+    },
+    "MembershipOption": {
+        "Reviewed": 0,
+        "Open": 1,
+        "Closed": 2
+    },
+    "GroupPostPublicity": {
+        "Public": 0,
+        "Alliance": 1,
+        "Private": 2
+    },
+    "GroupMemberType": {
+        "Member": 0,
+        "Admin": 1,
+        "Founder": 2,
+        "None": -1
+    },
+    "GroupAllianceStatus": {
+        "Unallied": 0,
+        "Parent": 1,
+        "Child": 2
+    },
+    "GroupDateRange": {
+        "All": 0,
+        "PastDay": 1,
+        "PastWeek": 2,
+        "PastMonth": 3,
+        "PastYear": 4
+    },
+    "GroupSortBy": {
+        "Name": 0,
+        "Date": 1,
+        "Popularity": 2,
+        "Id": 3
+    },
+    "GroupRelationshipResult": {
+        "Approved": 0,
+        "Created": 1,
+        "Failed": 2
+    },
+    "GroupMemberCountFilter": {
+        "All": 0,
+        "OneToTen": 1,
+        "ElevenToOneHundred": 2,
+        "GreaterThanOneHundred": 3
+    },
+    "GroupClanEnableStatus": {
+        "NotApplicable": 0,
+        "ClanEnabledSuccess": 1,
+        "ClanEnabledFailure": 2
+    },
+    "GroupMemberSortBy": {
+        "TypeAndDuration": 0,
+        "Duration": 1,
+        "Name": 2,
+        "Activity": 3
+    },
+    "MigrationMode": {
+        "ConvertToClan": 0,
+        "SplitClan": 1
+    },
     "OfferRedeemMode": {
         "Off": 0,
         "Unlock": 1,
@@ -1489,6 +1509,11 @@
         "StartsWith": 2,
         "EndsWith": 3
     },
+    "FriendOnlineStatus": {
+        "Offline": 0,
+        "Online": 1,
+        "Idle": 2
+    },
     "ForumMediaType": {
         "None": 0,
         "Image": 1,
@@ -1538,6 +1563,17 @@
         "FamilyFriendly": 1,
         "Rowdy": 2
     },
+    "ForumTopicsCategoryFilters": {
+        "None": 0,
+        "Links": 1,
+        "Questions": 2,
+        "AnsweredQuestions": 4,
+        "Media": 8,
+        "TextOnly": 16,
+        "Announcement": 32,
+        "BungieOfficial": 64,
+        "Polls": 128
+    },
     "ForumTopicsSort": {
         "Default": 0,
         "LastReplied": 1,
@@ -1554,17 +1590,6 @@
         "LastMonth": 2,
         "LastWeek": 3,
         "LastDay": 4
-    },
-    "ForumTopicsCategoryFilters": {
-        "None": 0,
-        "Links": 1,
-        "Questions": 2,
-        "AnsweredQuestions": 4,
-        "Media": 8,
-        "TextOnly": 16,
-        "Announcement": 32,
-        "BungieOfficial": 64,
-        "Polls": 128
     },
     "ForumPostSort": {
         "Default": 0,
