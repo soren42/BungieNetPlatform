@@ -127,7 +127,7 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetAccountSummary</loc><lastmod>2016-03-13T14:43:15+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetActivityBlob</loc><lastmod>2016-03-13T14:43:15+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetActivityHistory</loc><lastmod>2016-03-06T18:03:13+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetAdvisorsForAccount</loc><lastmod>2016-07-08T11:39:13+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetAdvisorsForAccount</loc><lastmod>2016-07-08T12:21:11+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetAdvisorsForCharacter</loc><lastmod>2016-03-06T18:02:25+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetAdvisorsForCharacterV2</loc><lastmod>2016-06-23T11:21:16+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetAdvisorsForCurrentCharacter</loc><lastmod>2016-03-06T18:03:57+09:30</lastmod></url>
@@ -167,7 +167,7 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetPublicVendor</loc><lastmod>2016-03-06T18:34:10+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetPublicVendorWithMetadata</loc><lastmod>2016-03-06T18:34:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetPublicXurVendor</loc><lastmod>2016-03-06T18:35:00+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetRecordBookCompletionStatus</loc><lastmod>2016-07-08T11:39:13+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetRecordBookCompletionStatus</loc><lastmod>2016-07-08T12:21:48+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetSpecialEventAdvisors</loc><lastmod>2016-03-06T18:35:14+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetTriumphs</loc><lastmod>2016-03-06T18:35:39+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetUniqueWeaponHistory</loc><lastmod>2016-04-28T10:37:41+09:30</lastmod></url>
@@ -183,7 +183,7 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/SetItemLockState</loc><lastmod>2016-03-06T18:04:51+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/SetQuestTrackedState</loc><lastmod>2016-03-06T18:04:51+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/TransferItem</loc><lastmod>2016-03-06T18:04:51+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Endpoints</loc><lastmod>2016-07-08T11:39:13+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Endpoints</loc><lastmod>2016-07-08T12:21:11+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/</loc><lastmod>2016-06-23T11:06:30+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/AiMajorCaptainSpearLauncherHouseOfWolves</loc><lastmod>2016-06-23T11:06:30+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/AiMajorShankShockTurret</loc><lastmod>2016-06-23T11:06:30+09:30</lastmod></url>

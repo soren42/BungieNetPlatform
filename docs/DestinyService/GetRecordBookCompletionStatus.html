@@ -83,9 +83,9 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GetRecordBookCompletionStatus/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <ul>
-<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/{e}/MyAccount/RecordBooks/{f}/Completion/">/Destiny/{e}/MyAccount/RecordBooks/{f}/Completion/</a></li>
+<li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/">/Destiny/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/</a></li>
 <li><strong>Method:</strong> GET</li>
-<li><strong>Accessibility:</strong></li>
+<li><strong>Accessibility:</strong> Private</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#DestinyService">DestinyService</a></li>
 </ul>
 <h2>Parameters</h2>
@@ -99,11 +99,11 @@
 </thead>
 <tbody>
 <tr>
-<td>e</td>
-<td>&nbsp;</td>
+<td><a href="../../docs/Enums#BungieMembershipType">membershipType</a></td>
+<td>A valid Bungie.net membershipType.</td>
 </tr>
 <tr>
-<td>f</td>
+<td>recordBookHash</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
