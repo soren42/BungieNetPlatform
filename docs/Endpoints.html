@@ -81,7 +81,7 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Endpoints/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
-<p>This listing is based on <a href="https://www.bungie.net/Scripts/platform.lib.min.js">platform.lib.js</a> file used by <a href="https://www.bungie.net">Bungie.net</a>.</p>
+<p>This listing is based on <a href="https://www.bungie.net/sharedbundle/platformlib">platform library</a> file used by <a href="https://www.bungie.net">Bungie.net</a>.</p>
 <h2><a name="JSONPService"></a>JSONPService (1 Endpoint)</h2>
 <table class="table table-bordered">
 <thead>
@@ -99,7 +99,79 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="UserService"></a>UserService (29 Endpoints)</h2>
+<h2><a name="ApplicationService"></a>ApplicationService (12 Endpoints)</h2>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Method</th>
+<th>Name</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/ApplicationSearch">ApplicationSearch</a></td>
+<td>/App/Search/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/ChangeApiKeyStatus">ChangeApiKeyStatus</a></td>
+<td>/App/ChangeApiKeyState/{param1}/{param2}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/CreateApiKey">CreateApiKey</a></td>
+<td>/App/CreateApiKey/{param1}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/CreateApplication">CreateApplication</a></td>
+<td>/App/CreateApplication/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/EditApplication">EditApplication</a></td>
+<td>/App/EditApplication/{param1}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/GetAccessTokensFromCode">GetAccessTokensFromCode</a></td>
+<td>/App/GetAccessTokensFromCode/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/GetAccessTokensFromRefreshToken">GetAccessTokensFromRefreshToken</a></td>
+<td>/App/GetAccessTokensFromRefreshToken/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/ApplicationService/GetApplication">GetApplication</a></td>
+<td>/App/Application/{param1}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/ApplicationService/GetApplicationApiKeys">GetApplicationApiKeys</a></td>
+<td>/App/ApplicationApiKeys/{param1}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/ApplicationService/GetAuthorizations">GetAuthorizations</a></td>
+<td>/App/Authorizations/{param1}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/PrivateApplicationSearch">PrivateApplicationSearch</a></td>
+<td>/App/PrivateSearch/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/ApplicationService/RevokeAuthorization">RevokeAuthorization</a></td>
+<td>/App/RevokeAuthorization/{param1}/{param2}/</td>
+</tr>
+</tbody>
+</table>
+<h2><a name="UserService"></a>UserService (30 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -117,7 +189,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/UserService/EditSuccessMessageFlags">EditSuccessMessageFlags</a></td>
-<td>/User/MessageFlags/Success/Update/{g}/</td>
+<td>/User/MessageFlags/Success/Update/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -127,7 +199,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/UserService/GetAvailableAvatarsAdmin">GetAvailableAvatarsAdmin</a></td>
-<td>/User/GetAvailableAvatarsAdmin/{h}/</td>
+<td>/User/GetAvailableAvatarsAdmin/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -222,7 +294,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/UserService/SearchUsersPagedV2">SearchUsersPagedV2</a></td>
-<td>/User/SearchUsersPaged/{searchTerm}/{page}/{h}/</td>
+<td>/User/SearchUsersPaged/{searchTerm}/{page}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -232,7 +304,12 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/UserService/UnregisterMobileAppPair">UnregisterMobileAppPair</a></td>
-<td>/User/UnregisterMobileAppPair/{e}/</td>
+<td>/User/UnregisterMobileAppPair/{param1}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/UserService/UpdateDestinyEmblemAvatar">UpdateDestinyEmblemAvatar</a></td>
+<td>/User/UpdateDestinyEmblemAvatar/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -252,7 +329,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/UserService/UpdateUserAdmin">UpdateUserAdmin</a></td>
-<td>/User/UpdateUserAdmin/{e}/</td>
+<td>/User/UpdateUserAdmin/{param1}/</td>
 </tr>
 </tbody>
 </table>
@@ -279,12 +356,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetAllianceInvitedToJoinInvitations">GetAllianceInvitedToJoinInvitations</a></td>
-<td>/Message/AllianceInvitations/InvitationsToJoinAnotherGroup/{e}/{h}/</td>
+<td>/Message/AllianceInvitations/InvitationsToJoinAnotherGroup/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetAllianceJoinInvitations">GetAllianceJoinInvitations</a></td>
-<td>/Message/AllianceInvitations/RequestsToJoinYourGroup/{e}/{h}/</td>
+<td>/Message/AllianceInvitations/RequestsToJoinYourGroup/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -294,22 +371,22 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationByIdV2">GetConversationByIdV2</a></td>
-<td>/Message/GetConversationByIdV2/{e}/</td>
+<td>/Message/GetConversationByIdV2/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationsV2">GetConversationsV2</a></td>
-<td>/Message/GetConversationsV2/{h}/{e}/</td>
+<td>/Message/GetConversationsV2/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationsV3">GetConversationsV3</a></td>
-<td>/Message/GetConversationsV3/{h}/{e}/</td>
+<td>/Message/GetConversationsV3/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationsV4">GetConversationsV4</a></td>
-<td>/Message/GetConversationsV4/{h}/</td>
+<td>/Message/GetConversationsV4/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -319,12 +396,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationThreadV2">GetConversationThreadV2</a></td>
-<td>/Message/GetConversationThreadV2/{e}/{i}/{f}/</td>
+<td>/Message/GetConversationThreadV2/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationThreadV3">GetConversationThreadV3</a></td>
-<td>/Message/GetConversationThreadV3/{e}/{k}/</td>
+<td>/Message/GetConversationThreadV3/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -334,17 +411,17 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetConversationWithMemberIdV2">GetConversationWithMemberIdV2</a></td>
-<td>/Message/GetConversationWithMemberV2/{e}/</td>
+<td>/Message/GetConversationWithMemberV2/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetGroupConversations">GetGroupConversations</a></td>
-<td>/Message/GetGroupConversations/{h}/</td>
+<td>/Message/GetGroupConversations/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/GetInvitationDetails">GetInvitationDetails</a></td>
-<td>/Message/Invitations/{e}/Details/</td>
+<td>/Message/Invitations/{param1}/Details/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -374,22 +451,22 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/MessageService/LeaveConversation">LeaveConversation</a></td>
-<td>/Message/LeaveConversation/{e}/</td>
+<td>/Message/LeaveConversation/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/MessageService/ModerateGroupWall">ModerateGroupWall</a></td>
-<td>/Message/ModerateGroupWall/{f}/{e}/</td>
+<td>/Message/ModerateGroupWall/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/MessageService/ReviewAllInvitations">ReviewAllInvitations</a></td>
-<td>/Message/Invitations/ReviewAllDirect/{e}/{f}/</td>
+<td>/Message/Invitations/ReviewAllDirect/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/MessageService/ReviewInvitation">ReviewInvitation</a></td>
-<td>/Message/Invitations/{f}/{g}/{e}/</td>
+<td>/Message/Invitations/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -399,7 +476,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/MessageService/ReviewInvitations">ReviewInvitations</a></td>
-<td>/Message/Invitations/ReviewListDirect/{e}/</td>
+<td>/Message/Invitations/ReviewListDirect/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -441,7 +518,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/NotificationService/GetRealTimeEvents">GetRealTimeEvents</a></td>
-<td>/Notification/Events/{h}/{i}/</td>
+<td>/Notification/Events/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -473,7 +550,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetCareer">GetCareer</a></td>
-<td>/Content/Careers/{h}/</td>
+<td>/Content/Careers/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -483,27 +560,27 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetContentById">GetContentById</a></td>
-<td>/Content/GetContentById/{k}/{h}/</td>
+<td>/Content/GetContentById/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetContentByTagAndType">GetContentByTagAndType</a></td>
-<td>/Content/GetContentByTagAndType/{l}/{k}/{h}/</td>
+<td>/Content/GetContentByTagAndType/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetContentType">GetContentType</a></td>
-<td>/Content/GetContentType/{i}/</td>
+<td>/Content/GetContentType/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetDestinyContent">GetDestinyContent</a></td>
-<td>/Content/Site/Destiny/{h}/</td>
+<td>/Content/Site/Destiny/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetDestinyContentV2">GetDestinyContentV2</a></td>
-<td>/Content/Site/Destiny/V2/{h}/</td>
+<td>/Content/Site/Destiny/V2/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -513,7 +590,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetHomepageContent">GetHomepageContent</a></td>
-<td>/Content/Site/Homepage/{h}/</td>
+<td>/Content/Site/Homepage/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -523,12 +600,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetJobs">GetJobs</a></td>
-<td>/Content/Site/Jobs/{h}/</td>
+<td>/Content/Site/Jobs/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetNews">GetNews</a></td>
-<td>/Content/Site/News/{j}/{k}/</td>
+<td>/Content/Site/News/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -538,7 +615,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/GetPublications">GetPublications</a></td>
-<td>/Content/Site/Publications/{h}/</td>
+<td>/Content/Site/Publications/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -548,17 +625,17 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/SearchContentByTagAndType">SearchContentByTagAndType</a></td>
-<td>/Content/SearchContentByTagAndType/{n}/{m}/{j}/</td>
+<td>/Content/SearchContentByTagAndType/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ContentService/SearchContentEx">SearchContentEx</a></td>
-<td>/Content/SearchEx/{f}/</td>
+<td>/Content/SearchEx/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ContentService/SearchContentWithText">SearchContentWithText</a></td>
-<td>/Content/Search/{j}/</td>
+<td>/Content/Search/{param1}/</td>
 </tr>
 </tbody>
 </table>
@@ -575,7 +652,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ExternalSocialService/GetAggregatedSocialFeed">GetAggregatedSocialFeed</a></td>
-<td>/ExternalSocial/GetAggregatedSocialFeed/{j}/</td>
+<td>/ExternalSocial/GetAggregatedSocialFeed/{param1}/</td>
 </tr>
 </tbody>
 </table>
@@ -609,17 +686,17 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ApproveFireteamThread">ApproveFireteamThread</a></td>
-<td>/Forum/Recruit/Approve/{f}/</td>
+<td>/Forum/Recruit/Approve/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ChangeLockState">ChangeLockState</a></td>
-<td>/Forum/ChangeLockState/{g}/{e}/</td>
+<td>/Forum/ChangeLockState/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ChangePinState">ChangePinState</a></td>
-<td>/Forum/ChangePinState/{g}/{e}/</td>
+<td>/Forum/ChangePinState/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -634,22 +711,22 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/DeletePost">DeletePost</a></td>
-<td>/Forum/DeletePost/{f}/</td>
+<td>/Forum/DeletePost/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/EditPost">EditPost</a></td>
-<td>/Forum/EditPost/{f}/</td>
+<td>/Forum/EditPost/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ForumService/GetCoreTopicsPaged">GetCoreTopicsPaged</a></td>
-<td>/Forum/GetCoreTopicsPaged/{i}/{j}/{f}/{e}/</td>
+<td>/Forum/GetCoreTopicsPaged/{param1}/{param2}/{param3}/{param4}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ForumService/GetForumTagCountEstimate">GetForumTagCountEstimate</a></td>
-<td>/Forum/GetForumTagCountEstimate/{h}/</td>
+<td>/Forum/GetForumTagCountEstimate/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -659,7 +736,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ForumService/GetPoll">GetPoll</a></td>
-<td>/Forum/Poll/{f}/</td>
+<td>/Forum/Poll/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -704,52 +781,52 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/JoinFireteamThread">JoinFireteamThread</a></td>
-<td>/Forum/Recruit/Join/{f}/</td>
+<td>/Forum/Recruit/Join/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/KickBanFireteamApplicant">KickBanFireteamApplicant</a></td>
-<td>/Forum/Recruit/KickBan/{g}/{e}/</td>
+<td>/Forum/Recruit/KickBan/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/LeaveFireteamThread">LeaveFireteamThread</a></td>
-<td>/Forum/Recruit/Leave/{f}/</td>
+<td>/Forum/Recruit/Leave/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/MarkReplyAsAnswer">MarkReplyAsAnswer</a></td>
-<td>/Forum/MarkReplyAsAnswer/{e}/{f}/</td>
+<td>/Forum/MarkReplyAsAnswer/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ModerateGroupPost">ModerateGroupPost</a></td>
-<td>/Forum/Post/{f}/GroupModerate/</td>
+<td>/Forum/Post/{param1}/GroupModerate/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ModeratePost">ModeratePost</a></td>
-<td>/Forum/Post/{f}/Moderate/</td>
+<td>/Forum/Post/{param1}/Moderate/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/ModerateTag">ModerateTag</a></td>
-<td>/Forum/Tags/{f}/Moderate/</td>
+<td>/Forum/Tags/{param1}/Moderate/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/PollVote">PollVote</a></td>
-<td>/Forum/Poll/Vote/{g}/{e}/</td>
+<td>/Forum/Poll/Vote/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/RatePost">RatePost</a></td>
-<td>/Forum/RatePost/{f}/{g}/</td>
+<td>/Forum/RatePost/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/ForumService/UnmarkReplyAsAnswer">UnmarkReplyAsAnswer</a></td>
-<td>/Forum/UnmarkReplyAsAnswer/{e}/</td>
+<td>/Forum/UnmarkReplyAsAnswer/{param1}/</td>
 </tr>
 </tbody>
 </table>
@@ -771,7 +848,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/ActivityService/FollowUser">FollowUser</a></td>
-<td>/Activity/User/{g}/Follow/</td>
+<td>/Activity/User/{param1}/Follow/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -786,17 +863,17 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetEntitiesFollowedByCurrentUserV2">GetEntitiesFollowedByCurrentUserV2</a></td>
-<td>/Activity/Following/V2/{f}/{e}/</td>
+<td>/Activity/Following/V2/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetEntitiesFollowedByUser">GetEntitiesFollowedByUser</a></td>
-<td>/Activity/User/{g}/Following/</td>
+<td>/Activity/User/{param1}/Following/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetEntitiesFollowedByUserV2">GetEntitiesFollowedByUserV2</a></td>
-<td>/Activity/User/{e}/Following/V2/{g}/{f}/</td>
+<td>/Activity/User/{param1}/Following/V2/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -811,12 +888,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetForumActivityForUser">GetForumActivityForUser</a></td>
-<td>/Activity/User/{j}/Activities/Forums/</td>
+<td>/Activity/User/{param1}/Activities/Forums/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetForumActivityForUserV2">GetForumActivityForUserV2</a></td>
-<td>/Activity/User/{i}/Activities/ForumsV2/</td>
+<td>/Activity/User/{param1}/Activities/ForumsV2/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -826,7 +903,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetFriendsAllNoPresence">GetFriendsAllNoPresence</a></td>
-<td>/Activity/Friends/AllNoPresence/{e}/</td>
+<td>/Activity/Friends/AllNoPresence/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -841,32 +918,32 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetGroupsFollowedByUser">GetGroupsFollowedByUser</a></td>
-<td>/Activity/User/{g}/Following/Groups/</td>
+<td>/Activity/User/{param1}/Following/Groups/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetGroupsFollowedPagedByCurrentUser">GetGroupsFollowedPagedByCurrentUser</a></td>
-<td>/Activity/Following/Groups/{e}/</td>
+<td>/Activity/Following/Groups/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetGroupsFollowedPagedByUser">GetGroupsFollowedPagedByUser</a></td>
-<td>/Activity/User/{e}/Following/Groups/Paged/{f}/</td>
+<td>/Activity/User/{param1}/Following/Groups/Paged/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetLikeAndShareActivityForUser">GetLikeAndShareActivityForUser</a></td>
-<td>/Activity/User/{j}/Activities/LikesAndShares/</td>
+<td>/Activity/User/{param1}/Activities/LikesAndShares/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetLikeAndShareActivityForUserV2">GetLikeAndShareActivityForUserV2</a></td>
-<td>/Activity/User/{i}/Activities/LikesAndSharesV2/</td>
+<td>/Activity/User/{param1}/Activities/LikesAndSharesV2/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/ActivityService/GetLikeShareAndForumActivityForUser">GetLikeShareAndForumActivityForUser</a></td>
-<td>/Activity/User/{i}/Activities/LikeShareAndForum/</td>
+<td>/Activity/User/{param1}/Activities/LikeShareAndForum/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -881,7 +958,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/ActivityService/UnfollowUser">UnfollowUser</a></td>
-<td>/Activity/User/{g}/Unfollow/</td>
+<td>/Activity/User/{param1}/Unfollow/</td>
 </tr>
 </tbody>
 </table>
@@ -1018,7 +1095,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/GroupService/GetAllFoundedGroupsForMember">GetAllFoundedGroupsForMember</a></td>
-<td>/Group/User/{e}/Founded/All/</td>
+<td>/Group/User/{param1}/Founded/All/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1228,7 +1305,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/GroupService/Migrate">Migrate</a></td>
-<td>/Group/{g}/Migrate/{e}/{f}/</td>
+<td>/Group/{param1}/Migrate/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1268,7 +1345,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/GroupService/SetPrivacy">SetPrivacy</a></td>
-<td>/Group/{groupId}/Privacy/{e}/</td>
+<td>/Group/{groupId}/Privacy/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1320,17 +1397,17 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/IgnoreService/GetIgnoreStatusForPost">GetIgnoreStatusForPost</a></td>
-<td>/Ignore/MyIgnores/Posts/{f}/</td>
+<td>/Ignore/MyIgnores/Posts/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/IgnoreService/GetIgnoreStatusForUser">GetIgnoreStatusForUser</a></td>
-<td>/Ignore/MyIgnores/Users/{e}/</td>
+<td>/Ignore/MyIgnores/Users/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/IgnoreService/GetReportContext">GetReportContext</a></td>
-<td>/Ignore/ReportContext/{e}/</td>
+<td>/Ignore/ReportContext/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1362,12 +1439,12 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/GameService/GetPlayerGamesById">GetPlayerGamesById</a></td>
-<td>/Game/GetPlayerGamesById/{e}/</td>
+<td>/Game/GetPlayerGamesById/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/GameService/ReachModelSneakerNet">ReachModelSneakerNet</a></td>
-<td>/Game/ReachModelSneakerNet/{g}/</td>
+<td>/Game/ReachModelSneakerNet/{param1}/</td>
 </tr>
 </tbody>
 </table>
@@ -1394,7 +1471,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/AdminService/GetAdminHistory">GetAdminHistory</a></td>
-<td>/Admin/GlobalHistory/{f}/{k}/</td>
+<td>/Admin/GlobalHistory/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1404,12 +1481,12 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/AdminService/GetDisciplinedReportsForMember">GetDisciplinedReportsForMember</a></td>
-<td>/Admin/Member/{e}/Reports/</td>
+<td>/Admin/Member/{param1}/Reports/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/AdminService/GetRecentDisciplineAndFlagHistoryForMember">GetRecentDisciplineAndFlagHistoryForMember</a></td>
-<td>/Admin/Member/{f}/RecentIncludingFlags/{e}</td>
+<td>/Admin/Member/{param1}/RecentIncludingFlags/{param2}</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1419,17 +1496,17 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/AdminService/GetUserBanState">GetUserBanState</a></td>
-<td>/Admin/Member/{e}/GetBanState/</td>
+<td>/Admin/Member/{param1}/GetBanState/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/AdminService/GetUserPostHistory">GetUserPostHistory</a></td>
-<td>/Admin/Member/{e}/PostHistory/{h}/</td>
+<td>/Admin/Member/{param1}/PostHistory/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/AdminService/GetUserWebClientIpHistory">GetUserWebClientIpHistory</a></td>
-<td>/Admin/Member/{e}/GetWebClientIpHistory/</td>
+<td>/Admin/Member/{param1}/GetWebClientIpHistory/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1439,7 +1516,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/AdminService/OverrideBanOnUser">OverrideBanOnUser</a></td>
-<td>/Admin/Member/{e}/SetBan/</td>
+<td>/Admin/Member/{param1}/SetBan/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1449,12 +1526,12 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/AdminService/OverrideGroupWallBanOnUser">OverrideGroupWallBanOnUser</a></td>
-<td>/Admin/Member/{e}/SetGroupWallBan/</td>
+<td>/Admin/Member/{param1}/SetGroupWallBan/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/AdminService/OverrideMsgBanOnUser">OverrideMsgBanOnUser</a></td>
-<td>/Admin/Member/{e}/SetMsgBan/</td>
+<td>/Admin/Member/{param1}/SetMsgBan/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1481,7 +1558,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/TokensService/ApplyOfferToCurrentDestinyMembership">ApplyOfferToCurrentDestinyMembership</a></td>
-<td>/Tokens/ApplyOfferToCurrentDestinyMembership/{e}/{h}/</td>
+<td>/Tokens/ApplyOfferToCurrentDestinyMembership/{param1}/{param2}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1501,7 +1578,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/TokensService/ConsumeMarketplacePlatformCodeOffer">ConsumeMarketplacePlatformCodeOffer</a></td>
-<td>/Tokens/ConsumeMarketplacePlatformCodeOffer/{f}/{e}/{g}/</td>
+<td>/Tokens/ConsumeMarketplacePlatformCodeOffer/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1531,7 +1608,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/TokensService/RAFGenerateReferralCode">RAFGenerateReferralCode</a></td>
-<td>/Tokens/RAF/GenerateReferralCode/{e}/</td>
+<td>/Tokens/RAF/GenerateReferralCode/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1663,7 +1740,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetClanLeaderboards">GetClanLeaderboards</a></td>
-<td>/Destiny/Stats/ClanLeaderboards/{e}/</td>
+<td>/Destiny/Stats/ClanLeaderboards/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1733,7 +1810,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/DestinyService/GetItemReferenceDetail">GetItemReferenceDetail</a></td>
-<td>/Destiny/{f}/Account/{d}/Character/{h}/ItemReference/{i}/</td>
+<td>/Destiny/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1848,7 +1925,7 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/DestinyService/RefundItem">RefundItem</a></td>
-<td>/Destiny/{e}/RefundItem/</td>
+<td>/Destiny/{param1}/RefundItem/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1885,22 +1962,22 @@
 <tr>
 <td>POST</td>
 <td><a href="../docs/CommunitycontentService/AlterApprovalState">AlterApprovalState</a></td>
-<td>/CommunityContent/AlterApprovalState/{e}/</td>
+<td>/CommunityContent/AlterApprovalState/{param1}/</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/CommunitycontentService/EditContent">EditContent</a></td>
-<td>/CommunityContent/Edit/{f}/</td>
+<td>/CommunityContent/Edit/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/CommunitycontentService/GetApprovalQueue">GetApprovalQueue</a></td>
-<td>/CommunityContent/Queue/{i}/{e}/{h}/</td>
+<td>/CommunityContent/Queue/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><a href="../docs/CommunitycontentService/GetCommunityContent">GetCommunityContent</a></td>
-<td>/CommunityContent/Get/{k}/{h}/{j}/</td>
+<td>/CommunityContent/Get/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1937,7 +2014,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/CoreService/GetSystemStatus">GetSystemStatus</a></td>
-<td>//Status/{h}/</td>
+<td>//Status/{param1}/</td>
 </tr>
 <tr>
 <td>GET</td>

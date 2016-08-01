@@ -1,9 +1,5 @@
 {
     "GlobalAcknowledgementItem": {
-        "Triumphs": 0,
-        "GearManager": 1
-    },
-    "IgnoreStatus": {
         "NotIgnored": 0,
         "IgnoredUser": 1,
         "IgnoredGroup": 2,
@@ -12,7 +8,7 @@
         "IgnoredTag": 16,
         "IgnoredGlobal": 32
     },
-    "IgnoredItemType": {
+    "IgnoreStatus": {
         "All": 0,
         "Post": 1,
         "Group": 2,
@@ -24,14 +20,14 @@
         "GroupWallPost": 8,
         "PrivateMessage": 9
     },
-    "ModeratorRequestedPunishment": {
+    "IgnoredItemType": {
         "Unknown": 0,
         "Warning": 1,
         "SevenDayBan": 2,
         "ThirtyDayBan": 3,
         "PermanentBan": 255
     },
-    "IgnoreLength": {
+    "ModeratorRequestedPunishment": {
         "None": 0,
         "Week": 1,
         "TwoWeeks": 2,
@@ -45,7 +41,7 @@
         "Hour": 10,
         "ThirtyDays": 11
     },
-    "ReportResolutionStatus": {
+    "IgnoreLength": {
         "Unresolved": 0,
         "Innocent": 1,
         "GuiltyBan": 2,
@@ -54,7 +50,50 @@
         "GuiltyAlias": 5,
         "ResolveNoAction": 6
     },
-    "BungieCredentialType": {
+    "ReportResolutionStatus": {
+        "ReadGroups": 1,
+        "WriteGroups": 2,
+        "AdminGroups": 4,
+        "BnetWrite": 8,
+        "MoveEquipDestinyItems": 16,
+        "ReadPrivateDestinyData": 32,
+        "SendReceivePrivateMessages": 64,
+        "ReadUserData": 128,
+        "EditUserData": 256,
+        "MuteUnmuteUsers": 512
+    },
+    "ApplicationScopes": {
+        "None": 0,
+        "Private": 1,
+        "Public": 2,
+        "Disabled": 3,
+        "Blocked": 4
+    },
+    "ApplicationStatus": {
+        "None": 0,
+        "Owner": 1,
+        "TeamMember": 2
+    },
+    "DeveloperRole": {
+        "None": 0,
+        "Active": 1,
+        "Disabled": 2,
+        "Deleted": 3
+    },
+    "ApiKeyStatus": {
+        "None": 0,
+        "Active": 1,
+        "Revoked": 2
+    },
+    "AuthorizationStatus": {
+        "None": 0,
+        "TigerXbox": 1,
+        "TigerPsn": 2,
+        "TigerDemon": 10,
+        "BungieNext": 254,
+        "All": -1
+    },
+    "BungieMembershipType": {
         "None": 0,
         "Xuid": 1,
         "Psnid": 2,
@@ -65,15 +104,7 @@
         "Windows": 9,
         "DemonId": 10
     },
-    "BungieMembershipType": {
-        "None": 0,
-        "TigerXbox": 1,
-        "TigerPsn": 2,
-        "TigerDemon": 10,
-        "BungieNext": 254,
-        "All": -1
-    },
-    "ClientDeviceType": {
+    "BungieCredentialType": {
         "Unknown": 0,
         "Xbox360": 1,
         "Playstation3": 2,
@@ -90,13 +121,13 @@
         "Playstation4": 13,
         "Fake": 255
     },
-    "ExternalService": {
+    "ClientDeviceType": {
         "None": 0,
         "Twitter": 1,
         "Facebook": 2,
         "TwitterHelp": 4
     },
-    "AdminHistoryMembershipFlags": {
+    "ExternalService": {
         "None": 0,
         "Bungie": 1,
         "PlayerSupport": 2,
@@ -106,7 +137,7 @@
         "GroupFounder": 32,
         "FounderInAllGroups": 64
     },
-    "AdminHistoryType": {
+    "AdminHistoryMembershipFlags": {
         "None": 0,
         "ForumPostBan": 1,
         "UserBan": 2,
@@ -139,16 +170,16 @@
         "GroupWallModerate": 29,
         "GroupWallBan": 30
     },
-    "AdminHistoryItemFlags": {
+    "AdminHistoryType": {
         "None": 0
     },
-    "MarketplaceCodeRegion": {
+    "AdminHistoryItemFlags": {
         "Global": 0,
         "USA": 1,
         "Europe": 2,
         "Japan": 3
     },
-    "Acl": {
+    "MarketplaceCodeRegion": {
         "None": 0,
         "BNextForumNinja": 1,
         "BNextUnlimitedGroups": 2,
@@ -178,19 +209,19 @@
         "BNextOverrideLinkPrivacy": 26,
         "BNextDiscountSupport": 27
     },
-    "BNetAccountPrivacy": {
+    "AclEnum": {
         "Default": 0,
         "ShowDestinyInventory": 1,
         "HideDestinyActivityHistoryFeed": 2,
         "HideDestinyAdvisors": 4
     },
-    "NotificationMethods": {
+    "BNetAccountPrivacy": {
         "None": 0,
         "EMAIL": 1,
         "MOBILE_PUSH": 2,
         "WEB_ONLY": 4
     },
-    "RealTimeEventType": {
+    "NotificationMethods": {
         "None": 0,
         "ConversationChanged": 1,
         "Typing": 2,
@@ -200,12 +231,12 @@
         "Announcements": 6,
         "RecruitThreadUpdate": 7
     },
-    "EventConversationType": {
+    "RealTimeEventType": {
         "None": 0,
         "Private": 1,
         "Group": 2
     },
-    "NotificationType": {
+    "EventConversationType": {
         "None": 0,
         "MESSAGE": 1,
         "FORUM_REPLY": 2,
@@ -249,18 +280,18 @@
         "USER_MESSAGE_BANNED_PERMANENT": 40,
         "GROUP_WALL_BANNED_PERMANENT": 41
     },
-    "ActivityOutputFormat": {
+    "NotificationType": {
         "BNet": 0,
         "Plain": 1,
         "Custom": 2
     },
-    "StatFeedbackState": {
+    "ActivityOutputFormat": {
         "Good": 0,
         "TooHigh": 1,
         "TooLow": 2,
         "WrongName": 4
     },
-    "PlatformErrorCodes": {
+    "StatFeedbackState": {
         "None": 0,
         "Success": 1,
         "TransportException": 2,
@@ -398,6 +429,7 @@
         "ContentIllegalBNetMembershipId": 171,
         "ContentLocaleDidNotMatchExpected": 172,
         "ContentBabelCallFailed": 173,
+        "ContentEnglishPostLiveForbidden": 174,
         "UserNonUniqueName": 200,
         "UserManualLinkingStepRequired": 201,
         "UserCreateUnknownSqlResult": 202,
@@ -689,6 +721,7 @@
         "ReportNotFound": 1402,
         "ReportAlreadyReported": 1403,
         "ReportInvalidResolution": 1404,
+        "ReportNotAssignedToYou": 1405,
         "LegacyGameStatsSystemDisabled": 1500,
         "LegacyGameStatsUnknownError": 1501,
         "LegacyGameStatsMalformedSneakerNetCode": 1502,
@@ -760,6 +793,9 @@
         "DestinyPrivacyRestriction": 1665,
         "DestinyActionInsufficientPrivileges": 1666,
         "DestinyInvalidClaimException": 1667,
+        "DestinyLegacyPlatformRestricted": 1668,
+        "DestinyLegacyPlatformInUse": 1669,
+        "DestinyLegacyPlatformInaccessible": 1670,
         "FbInvalidRequest": 1800,
         "FbRedirectMismatch": 1801,
         "FbAccessDenied": 1802,
@@ -827,46 +863,51 @@
         "DiscountAlreadyExists": 2043,
         "ApiExceededMaxKeys": 2100,
         "ApiInvalidOrExpiredKey": 2101,
-        "ApiKeyMissingFromRequest": 2102
+        "ApiKeyMissingFromRequest": 2102,
+        "ApplicationDisabled": 2103,
+        "ApplicationExceededMax": 2104,
+        "ApplicationDisallowedByScope": 2105,
+        "AuthorizationCodeInvalid": 2106,
+        "OriginHeaderDoesNotMatchKey": 2107
     },
-    "DestinyRace": {
+    "PlatformErrorCodes": {
         "Human": 0,
         "Awoken": 1,
         "Exo": 2,
         "Unknown": 3
     },
-    "DestinyGender": {
+    "DestinyRace": {
         "Male": 0,
         "Female": 1,
         "Unknown": 2
     },
-    "DestinyClass": {
+    "DestinyGender": {
         "Titan": 0,
         "Hunter": 1,
         "Warlock": 2,
         "Unknown": 3
     },
-    "DestinyGameVersions": {
+    "DestinyClass": {
         "None": 0,
         "Destiny1": 1,
         "TheDarkBelow": 2,
         "HouseOfWolves": 4,
         "Comet": 8
     },
-    "DestinyAccountTransferState": {
+    "DestinyGameVersions": {
         "Unknown": 0,
         "NoTransfer": 1,
         "BackTransfer": 2,
         "V1Active": 3,
         "AccountsSplit": 4
     },
-    "ItemBindStatus": {
+    "DestinyAccountTransferState": {
         "NotBound": 0,
         "BoundToCharacter": 1,
         "BoundToAccount": 2,
         "BoundToGuild": 3
     },
-    "EquipFailureReason": {
+    "ItemBindStatus": {
         "None": 0,
         "ItemUnequippable": 1,
         "ItemUniqueEquipRestricted": 2,
@@ -874,7 +915,7 @@
         "ItemFailedLevelCheck": 8,
         "ItemNotOnCharacter": 16
     },
-    "DamageType": {
+    "EquipFailureReason": {
         "None": 0,
         "Kinetic": 1,
         "Arc": 2,
@@ -882,7 +923,7 @@
         "Void": 4,
         "Raid": 5
     },
-    "DestinyTalentNodeState": {
+    "DamageType": {
         "Invalid": 0,
         "CanUpgrade": 1,
         "NoPoints": 2,
@@ -898,25 +939,25 @@
         "CreationOnly": 12,
         "Hidden": 13
     },
-    "ItemLocation": {
+    "DestinyTalentNodeState": {
         "Unknown": 0,
         "Inventory": 1,
         "Vault": 2,
         "Vendor": 3,
         "Postmaster": 4
     },
-    "TransferStatuses": {
+    "ItemLocation": {
         "CanTransfer": 0,
         "ItemIsEquipped": 1,
         "NotTransferrable": 2,
         "NoRoomInDestination": 4
     },
-    "ItemState": {
+    "TransferStatuses": {
         "None": 0,
         "Locked": 1,
         "Tracked": 2
     },
-    "VendorItemStatus": {
+    "ItemState": {
         "Success": 0,
         "NoInventorySpace": 1,
         "NoFunds": 2,
@@ -932,7 +973,7 @@
         "SellingInhibited": 2048,
         "AlreadyOwned": 4096
     },
-    "DestinyActivityDifficultyTier": {
+    "VendorItemStatus": {
         "Trivial": 0,
         "Easy": 1,
         "Normal": 2,
@@ -942,7 +983,7 @@
         "AlmostImpossible": 6,
         "Impossible": 7
     },
-    "TierType": {
+    "DestinyActivityDifficultyTier": {
         "Unknown": 0,
         "Currency": 1,
         "Basic": 2,
@@ -951,7 +992,7 @@
         "Superior": 5,
         "Exotic": 6
     },
-    "SpecialItemType": {
+    "TierType": {
         "None": 0,
         "SpecialCurrency": 1,
         "CompletedBounty": 2,
@@ -970,7 +1011,7 @@
         "BountyReward": 28,
         "Currency": 29
     },
-    "DestinyUnlockFlagOperator": {
+    "SpecialItemType": {
         "Invalid": 0,
         "Flag": 1,
         "Not": 2,
@@ -994,7 +1035,7 @@
         "Modulus": 20,
         "Negate": 21
     },
-    "DestinyItemType": {
+    "DestinyUnlockFlagOperator": {
         "None": 0,
         "Currency": 1,
         "Armor": 2,
@@ -1012,7 +1053,7 @@
         "Emblem": 14,
         "Quest": 15
     },
-    "DestinyItemSubType": {
+    "DestinyItemType": {
         "None": 0,
         "Crucible": 1,
         "Vanguard": 2,
@@ -1034,60 +1075,60 @@
         "Sword": 18,
         "Mask": 19
     },
-    "BucketScope": {
+    "DestinyItemSubType": {
         "Character": 0,
         "Account": 1
     },
-    "BucketCategory": {
+    "BucketScope": {
         "Invisible": 0,
         "Item": 1,
         "Currency": 2,
         "Equippable": 3,
         "Ignored": 4
     },
-    "DestinyUnlockValueUIStyle": {
+    "BucketCategory": {
         "Automatic": 0,
         "Fraction": 1,
         "Checkbox": 2,
         "Percentage": 3
     },
-    "DirectorNodeState": {
+    "DestinyUnlockValueUIStyle": {
         "Hidden": 0,
         "Visible": 1,
         "Teaser": 2,
         "Incomplete": 3,
         "Completed": 4
     },
-    "DirectorNodeUIModifier": {
+    "DirectorNodeState": {
         "None": 0,
         "Enlarge": 1,
         "Tower": 2,
         "Unexpected": 3
     },
-    "DirectorTransitionType": {
+    "DirectorNodeUIModifier": {
         "TransitionBook": 0,
         "TransitionSocial": 1
     },
-    "DestinyRecordCompletionStatus": {
+    "DirectorTransitionType": {
         "Incomplete": 0,
         "Complete": 1,
         "Redeemed": 2
     },
-    "DestinyRecordBookPageDisplayStyle": {
+    "DestinyRecordCompletionStatus": {
         "RecordPage": 0,
         "SummaryPage": 1
     },
-    "DestinyVendorItemRefundPolicy": {
+    "DestinyRecordBookPageDisplayStyle": {
         "NotRefundable": 0,
         "DeletesItem": 1,
         "RevokesLicense": 2
     },
-    "GroupAttributeType": {
+    "DestinyVendorItemRefundPolicy": {
         "Computed": 0,
         "Point": 1,
         "Range": 2
     },
-    "DestinyTalentNodeStepWeaponPerformances": {
+    "GroupAttributeType": {
         "None": 0,
         "RateOfFire": 1,
         "Damage": 2,
@@ -1104,7 +1145,7 @@
         "ChargeTime": 4096,
         "All": 8191
     },
-    "DestinyTalentNodeStepImpactEffects": {
+    "DestinyTalentNodeStepWeaponPerformances": {
         "None": 0,
         "ArmorPiercing": 1,
         "Ricochet": 2,
@@ -1114,7 +1155,7 @@
         "HighlightTarget": 32,
         "All": 63
     },
-    "DestinyTalentNodeStepGuardianAttributes": {
+    "DestinyTalentNodeStepImpactEffects": {
         "None": 0,
         "Stats": 1,
         "Shields": 2,
@@ -1126,7 +1167,7 @@
         "Reputations": 128,
         "All": 255
     },
-    "DestinyTalentNodeStepLightAbilities": {
+    "DestinyTalentNodeStepGuardianAttributes": {
         "None": 0,
         "Grenades": 1,
         "Melee": 2,
@@ -1136,7 +1177,7 @@
         "SuperMods": 32,
         "All": 63
     },
-    "DestinyTalentNodeStepDamageTypes": {
+    "DestinyTalentNodeStepLightAbilities": {
         "None": 0,
         "Kinetic": 1,
         "Arc": 2,
@@ -1144,13 +1185,13 @@
         "Void": 8,
         "All": 15
     },
-    "DestinyRewardSourceCategory": {
+    "DestinyTalentNodeStepDamageTypes": {
         "None": 0,
         "Activity": 1,
         "Vendor": 2,
         "Aggregate": 3
     },
-    "DestinyDefinitionType": {
+    "DestinyRewardSourceCategory": {
         "None": 0,
         "Activity": 1,
         "ActivityType": 2,
@@ -1176,13 +1217,13 @@
         "GearAsset": 22,
         "GrimoireCard": 23
     },
-    "DestinyCardRarity": {
+    "DestinyDefinitionType": {
         "None": 0,
         "Common": 1,
         "Superior": 2,
         "Exotic": 3
     },
-    "DestinyStatsGroupType": {
+    "DestinyCardRarity": {
         "None": 0,
         "General": 1,
         "Weapons": 2,
@@ -1194,14 +1235,19 @@
         "UniqueWeapon": 103,
         "Internal": 104
     },
-    "PeriodType": {
+    "DestinyStatsGroupType": {
         "None": 0,
         "Daily": 1,
         "Monthly": 2,
         "AllTime": 3,
-        "Activity": 4
+        "Activity": 102,
+        "Enemies": 4,
+        "ReservedGroups": 100,
+        "Leaderboard": 101,
+        "UniqueWeapon": 103,
+        "Internal": 104
     },
-    "DestinyActivityModeType": {
+    "PeriodType": {
         "None": 0,
         "Story": 2,
         "Strike": 3,
@@ -1233,7 +1279,7 @@
         "Racing": 29,
         "ArenaElderChallenge": 30
     },
-    "DestinyStatsCategoryType": {
+    "DestinyActivityModeType": {
         "None": 0,
         "Kills": 1,
         "Assists": 2,
@@ -1251,7 +1297,7 @@
         "MedalMultiKills": 14,
         "MedalAbilities": 15
     },
-    "UnitType": {
+    "DestinyStatsCategoryType": {
         "None": 0,
         "Count": 1,
         "PerGame": 2,
@@ -1266,124 +1312,109 @@
         "Standing": 11,
         "Milliseconds": 12
     },
-    "DestinyStatsMergeMethod": {
+    "UnitType": {
         "Add": 0,
         "Min": 1,
         "Max": 2
     },
-    "DestinyExcellenceBadgeTier": {
+    "DestinyStatsMergeMethod": {
         "None": 0,
         "Bronze": 1,
         "Silver": 2,
         "Gold": 3
     },
-    "GroupType": {
+    "DestinyExcellenceBadgeTier": {
         "General": 0
     },
-    "ChatSecuritySetting": {
+    "GroupType": {
         "Group": 0,
         "Admins": 1
     },
-    "GroupHomepage": {
+    "ChatSecuritySetting": {
         "Wall": 0,
         "Forum": 1,
         "AllianceForum": 2
     },
-    "MembershipOption": {
+    "GroupHomepage": {
         "Reviewed": 0,
         "Open": 1,
         "Closed": 2
     },
-    "GroupPostPublicity": {
+    "MembershipOption": {
         "Public": 0,
         "Alliance": 1,
         "Private": 2
     },
-    "GroupMemberType": {
+    "GroupPostPublicity": {
         "Member": 0,
         "Admin": 1,
         "Founder": 2,
         "None": -1
     },
-    "GroupAllianceStatus": {
+    "GroupMemberType": {
         "Unallied": 0,
         "Parent": 1,
         "Child": 2
     },
-    "GroupDateRange": {
+    "GroupAllianceStatus": {
         "All": 0,
         "PastDay": 1,
         "PastWeek": 2,
         "PastMonth": 3,
         "PastYear": 4
     },
-    "GroupSortBy": {
+    "GroupDateRange": {
         "Name": 0,
         "Date": 1,
         "Popularity": 2,
         "Id": 3
     },
-    "GroupRelationshipResult": {
+    "GroupSortBy": {
         "Approved": 0,
         "Created": 1,
         "Failed": 2
     },
-    "GroupMemberCountFilter": {
+    "GroupRelationshipResult": {
         "All": 0,
         "OneToTen": 1,
         "ElevenToOneHundred": 2,
         "GreaterThanOneHundred": 3
     },
-    "GroupClanEnableStatus": {
+    "GroupMemberCountFilter": {
         "NotApplicable": 0,
         "ClanEnabledSuccess": 1,
         "ClanEnabledFailure": 2
     },
-    "GroupMemberSortBy": {
+    "GroupClanEnableStatus": {
         "TypeAndDuration": 0,
         "Duration": 1,
         "Name": 2,
         "Activity": 3
     },
-    "MigrationMode": {
+    "GroupMemberSortBy": {
         "ConvertToClan": 0,
         "SplitClan": 1
     },
-    "OfferRedeemMode": {
+    "MigrationMode": {
         "Off": 0,
         "Unlock": 1,
         "Platform": 2,
         "Expired": 3,
         "Consumable": 4
     },
-    "CredentialType": {
-        "None": 0,
-        "Xuid": 1,
-        "Psnid": 2,
-        "Wlid": 3,
-        "Fake": 4,
-        "Facebook": 5,
-        "XboxGamertag": 6,
-        "PlaystationOnlineId": 7,
-        "Google": 8,
-        "Windows": 9,
-        "DemonId": 10,
-        "DemonDisplayName": 11,
-        "BungieMembershipId": 255
-    },
-    "GlobalAlertLevel": {
+    "OfferRedeemMode": {
         "Unknown": 0,
         "Blue": 1,
         "Yellow": 2,
         "Red": 3
     },
-    "TemplateFormat": {
+    "GlobalAlertLevel": {
         "BNet": 0,
         "Plain": 1,
         "EMail": 2,
         "Push": 3
     },
-    "ContentPropertyDataType": {
+    "TemplateFormat": {
         "None": 0,
         "Plaintext": 1,
         "Html": 2,
@@ -1399,12 +1430,12 @@
         "MultilinePlaintext": 12,
         "DestinyContent": 13
     },
-    "ContentSortBy": {
+    "ContentPropertyDataTypeEnum": {
         "CreationDate": 0,
         "CmsPath": 1,
         "ModifiedDate": 2
     },
-    "ContentDateRange": {
+    "ContentSortBy": {
         "All": 0,
         "Today": 1,
         "Yesterday": 2,
@@ -1413,7 +1444,7 @@
         "LastYear": 5,
         "EarlierThanLastYear": 6
     },
-    "ActivityType": {
+    "ContentDateRange": {
         "Create": 0,
         "Edit": 1,
         "Delete": 2,
@@ -1444,7 +1475,7 @@
         "GroupAllianceBroken": 28,
         "None": -1
     },
-    "AffectedItemType": {
+    "ActivityType": {
         "User": 0,
         "Post": 1,
         "Topic": 2,
@@ -1453,37 +1484,37 @@
         "CommunityContent": 5,
         "None": -1
     },
-    "GroupApplicationResolveState": {
+    "AffectedItemType": {
         "Unresolved": 0,
         "Accepted": 1,
         "Denied": 2,
         "Rescinded": 3
     },
-    "SuccessMessages": {
+    "GroupApplicationResolveState": {
         "Following": 1,
         "Unfollowing": 2,
         "ManagingGroupMembers": 8,
         "UpdatingSettings": 16,
         "ManagingGroups": 32
     },
-    "OptInFlags": {
+    "SuccessMessages": {
         "Newsletter": 1,
         "System": 2,
         "Marketing": 4,
         "UserResearch": 8,
         "CustomerService": 16
     },
-    "ContentDateType": {
+    "OptInFlags": {
         "Specific": 0,
         "MonthOnly": 1,
         "Custom": 2
     },
-    "InvitationResponseState": {
+    "ContentDateType": {
         "Unreviewed": 0,
         "Approved": 1,
         "Rejected": 2
     },
-    "InvitationType": {
+    "InvitationResponseState": {
         "None": 0,
         "GroupAllianceJoinFromChild": 1,
         "ClanJoinInvite": 2,
@@ -1492,7 +1523,7 @@
         "ClanJoinRequest": 5,
         "GroupJoinRequest": 6
     },
-    "EntityType": {
+    "InvitationType": {
         "None": 0,
         "User": 1,
         "Group": 2,
@@ -1503,24 +1534,24 @@
         "Conversation": 7,
         "Tag": 8
     },
-    "TextParameterSearchType": {
+    "EntityType": {
         "Contains": 0,
         "Exact": 1,
         "StartsWith": 2,
         "EndsWith": 3
     },
-    "FriendOnlineStatus": {
+    "TextParameterSearchType": {
         "Offline": 0,
         "Online": 1,
         "Idle": 2
     },
-    "ForumMediaType": {
+    "FriendOnlineStatus": {
         "None": 0,
         "Image": 1,
         "Video": 2,
         "Youtube": 3
     },
-    "ForumPostPopularity": {
+    "ForumMediaType": {
         "Empty": 0,
         "Default": 1,
         "Discussed": 2,
@@ -1528,7 +1559,7 @@
         "HeatingUp": 4,
         "Hot": 5
     },
-    "ForumPostCategorys": {
+    "ForumPostPopularity": {
         "None": 0,
         "TextOnly": 1,
         "Media": 2,
@@ -1542,7 +1573,7 @@
         "NinjaOfficial": 512,
         "Recruitment": 1024
     },
-    "ForumFlags": {
+    "ForumPostCategoryEnums": {
         "None": 0,
         "BungieStaffPost": 1,
         "ForumNinjaPost": 2,
@@ -1553,17 +1584,17 @@
         "QuestionAnsweredByNinja": 64,
         "CommunityContent": 128
     },
-    "ForumRecruitmentIntensityLabel": {
+    "ForumFlagsEnum": {
         "None": 0,
         "Casual": 1,
         "Professional": 2
     },
-    "ForumRecruitmentToneLabel": {
+    "ForumRecruitmentIntensityLabel": {
         "None": 0,
         "FamilyFriendly": 1,
         "Rowdy": 2
     },
-    "ForumTopicsCategoryFilters": {
+    "ForumRecruitmentToneLabel": {
         "None": 0,
         "Links": 1,
         "Questions": 2,
@@ -1574,7 +1605,7 @@
         "BungieOfficial": 64,
         "Polls": 128
     },
-    "ForumTopicsSort": {
+    "ForumTopicsCategoryFiltersEnum": {
         "Default": 0,
         "LastReplied": 1,
         "MostReplied": 2,
@@ -1584,46 +1615,46 @@
         "HighestRated": 6,
         "MostUpvoted": 7
     },
-    "ForumTopicsQuickDate": {
+    "ForumTopicsSortEnum": {
         "All": 0,
         "LastYear": 1,
         "LastMonth": 2,
         "LastWeek": 3,
         "LastDay": 4
     },
-    "ForumPostSort": {
+    "ForumTopicsQuickDateEnum": {
         "Default": 0,
         "OldestFirst": 1
     },
-    "CommunityContentSortMode": {
+    "ForumPostSortEnum": {
         "Trending": 0,
         "Latest": 1,
         "HighestRated": 2
     },
-    "ForumType": {
+    "CommunityContentSortMode": {
         "Public": 0,
         "News": 1,
         "Group": 2,
         "Alliance": 3,
         "RelatedPosts": 4
     },
-    "Capabilities": {
+    "ForumTypeEnum": {
         "None": 0,
         "Leaderboards": 1,
         "Callsign": 2
     },
-    "GroupsForMemberFilter": {
+    "Capabilities": {
         "All": 0,
         "Founded": 1,
         "NonFounded": 2
     },
-    "GameServiceStatus": {
+    "GroupsForMemberFilter": {
         "Error": 0,
         "NotFound": 1,
         "Success": 2,
         "Unknown": 3
     },
-    "RAFBondState": {
+    "GameServiceStatus": {
         "None": 0,
         "AwaitingNewPlayerDestinyMembership": 1,
         "AwaitingNewPlayerVerification": 2,
@@ -1634,13 +1665,13 @@
         "FailedNewPlayerIsVeteranPlayer": -2,
         "FailedNewPlayerIsNotNew": -1
     },
-    "RAFEligibility": {
+    "RAFBondState": {
         "Unknown": 0,
         "PurchaseRequired": 1,
         "NewPlayerEligible": 2,
         "NotEligible": -1
     },
-    "DestinyExplorerOrderBy": {
+    "RAFEligibility": {
         "None": 0,
         "Name": 1,
         "ItemType": 2,
@@ -1650,12 +1681,12 @@
         "MinimumRequiredLevel": 6,
         "MaximumRequiredLevel": 7
     },
-    "DestinyExplorerOrderDirection": {
+    "DestinyExplorerOrderBy": {
         "None": 0,
         "Ascending": 1,
         "Descending": 2
     },
-    "SurveyCompletionFlags": {
+    "DestinyExplorerOrderDirection": {
         "None": 0,
         "UserResearchWebPageOne": 1,
         "UserResearchWebPageTwo": 2

@@ -83,6 +83,39 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>July 27, 2017</h2>
+<p>The one that broke my code (again).</p>
+<p>Definitions:</p>
+<ul>
+<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6028 &gt; 6029</li>
+</ul>
+<p>Endpoints (changed):</p>
+<ul>
+<li>GET <a href="../docs/DestinyService/GetDestinyExplorerItems">DestinyService/GetDestinyExplorerItems</a> &quot;page&quot; query parameter changed to &quot;tpage&quot;</li>
+</ul>
+<p>Endpoints (added):</p>
+<ul>
+<li>POST <a href="../docs/UserService/UpdateDestinyEmblemAvatar">UserService/UpdateDestinyEmblemAvatar</a></li>
+<li>New &quot;ApplicationService&quot; (likely still in development)</li>
+<li>POST <a href="../docs/ApplicationService/ApplicationSearch">ApplicationService/ApplicationSearch</a></li>
+<li>POST <a href="../docs/ApplicationService/ChangeApiKeyStatus">ApplicationService/ChangeApiKeyStatus</a></li>
+<li>POST <a href="../docs/ApplicationService/CreateApiKey">ApplicationService/CreateApiKey</a></li>
+<li>POST <a href="../docs/ApplicationService/CreateApplication">ApplicationService/CreateApplication</a></li>
+<li>POST <a href="../docs/ApplicationService/EditApplication">ApplicationService/EditApplication</a></li>
+<li>POST <a href="../docs/ApplicationService/GetAccessTokensFromCode">ApplicationService/GetAccessTokensFromCode</a></li>
+<li>POST <a href="../docs/ApplicationService/GetAccessTokensFromRefreshToken">ApplicationService/GetAccessTokensFromRefreshToken</a></li>
+<li>GET <a href="../docs/ApplicationService/GetApplication">ApplicationService/GetApplication</a></li>
+<li>GET <a href="../docs/ApplicationService/GetApplicationApiKeys">ApplicationService/GetApplicationApiKeys</a></li>
+<li>GET <a href="../docs/ApplicationService/GetAuthorizations">ApplicationService/GetAuthorizations</a></li>
+<li>POST <a href="../docs/ApplicationService/PrivateApplicationSearch">ApplicationService/PrivateApplicationSearch</a></li>
+<li>POST <a href="../docs/ApplicationService/RevokeAuthorization">ApplicationService/RevokeAuthorization</a></li>
+</ul>
+<p>Note: Converted undocumented url parameters to output as &quot;param1&quot;, &quot;param2&quot; instead of using the minified names which change frequently.</p>
+<p>Enums:
+A lot of enums seemed to have changed to the point where simply checking the repo changelog is not practical.
+From what I could see at a glance, multiple enums have been significantly simplified or changed entirely as I'm guessing the new system aims to cut away a lot of the clutter that has piled up over the months/years.
+Some enums that are still being used by Destiny (such as more than half of the DestinyStatGroupType enums) are gone, which totally broke my Historical Stats section for the Wiki.</p>
+<p>Apparently there are also some Error Codes missing as well such as &quot;DestinyPGCRNotFound&quot;.</p>
 <h2>July 8, 2016</h2>
 <p>The one after Bungie Day.</p>
 <p>Definitions:</p>
