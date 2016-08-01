@@ -4,7 +4,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 3515,
+                "entries": 3519,
                 "classified": 0
             }
         ]
@@ -14,7 +14,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 3515,
+                "entries": 3519,
                 "classified": 0
             }
         ]
@@ -28,8 +28,13 @@
                 "classified": 0
             },
             {
+                "name": "DestinyActivityCategoryDefinition",
+                "entries": 6,
+                "classified": 0
+            },
+            {
                 "name": "DestinyActivityDefinition",
-                "entries": 337,
+                "entries": 338,
                 "classified": 2
             },
             {
@@ -94,7 +99,7 @@
             },
             {
                 "name": "DestinyHistoricalStatsDefinition",
-                "entries": 1733,
+                "entries": 1731,
                 "classified": 0
             },
             {
@@ -104,8 +109,8 @@
             },
             {
                 "name": "DestinyInventoryItemDefinition",
-                "entries": 6548,
-                "classified": 64
+                "entries": 6557,
+                "classified": 60
             },
             {
                 "name": "DestinyItemCategoryDefinition",
@@ -119,7 +124,7 @@
             },
             {
                 "name": "DestinyObjectiveDefinition",
-                "entries": 971,
+                "entries": 976,
                 "classified": 0
             },
             {
@@ -129,7 +134,7 @@
             },
             {
                 "name": "DestinyProgressionDefinition",
-                "entries": 245,
+                "entries": 246,
                 "classified": 1
             },
             {
@@ -139,22 +144,22 @@
             },
             {
                 "name": "DestinyRecordBookDefinition",
-                "entries": 1,
+                "entries": 2,
                 "classified": 0
             },
             {
                 "name": "DestinyRecordDefinition",
-                "entries": 16,
+                "entries": 28,
                 "classified": 0
             },
             {
                 "name": "DestinyRewardSourceDefinition",
-                "entries": 48,
+                "entries": 49,
                 "classified": 0
             },
             {
                 "name": "DestinySandboxPerkDefinition",
-                "entries": 973,
+                "entries": 977,
                 "classified": 0
             },
             {
@@ -164,7 +169,7 @@
             },
             {
                 "name": "DestinySpecialEventDefinition",
-                "entries": 7,
+                "entries": 6,
                 "classified": 0
             },
             {
@@ -179,7 +184,7 @@
             },
             {
                 "name": "DestinyTalentGridDefinition",
-                "entries": 1134,
+                "entries": 1135,
                 "classified": 0
             },
             {
@@ -189,7 +194,7 @@
             },
             {
                 "name": "DestinyUnlockFlagDefinition",
-                "entries": 5990,
+                "entries": 6029,
                 "classified": 0
             },
             {

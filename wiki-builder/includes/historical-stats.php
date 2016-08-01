@@ -1,5 +1,5 @@
 <?php
-define('BUNGIE_URL', 'https://www.bungie.net');
+if (!defined('BUNGIE_URL')) define('BUNGIE_URL', 'https://www.bungie.net');
 $cachePath = BUILDERPATH.'/cache/cache.json';
 
 $enumsPath = BUILDERPATH.'/data/enums.json';
@@ -853,6 +853,7 @@ if (file_exists($cachePath) && file_exists($enumsPath)) {
 	$dbfile = $cache['world'];
 
 	$groupTypes = array();
+	if (!isset($enums['DestinyStatsGroupType'])) return;
 	foreach($enums['DestinyStatsGroupType'] as $key => $value) {
 		$groupTypes[$value] = $key;
 	}
@@ -871,9 +872,13 @@ if (file_exists($cachePath) && file_exists($enumsPath)) {
 		$result = $db->query('SELECT * FROM DestinyHistoricalStatsDefinition');
 		while ($entry = $result->fetchArray(true)) {
 			$data = json_decode($entry['json']);
-			//echo '<pre>'.var_export($data, true).'</pre>';
 
-			$group = $groupTypes[$data->group];
+			$group = $data->group;
+			if (isset($groupTypes[$data->group])) {
+				$group = $groupTypes[$data->group];
+			} else {
+				echo '<pre>Missing DestinyStatsGroupType: '.$group.'</pre>';
+			}
 			//echo '<pre>'.$data->statId.' | '.$group.'</pre>';
 
 			if (!isset($statGroups[$group])) $statGroups[$group] = array();

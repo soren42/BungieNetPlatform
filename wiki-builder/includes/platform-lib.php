@@ -30,15 +30,15 @@ $api_params = array(
 		'uniqueName'
 	)),
 
-	'GetBungieNetUserById' => array('query' => array('g' => MEMBERSHIP_ID), 'post' => array()),
+	'GetBungieNetUserById' => array('query' => array('n' => MEMBERSHIP_ID), 'post' => array()),
 	'GetUserAliases' => array('query' => array('i' => MEMBERSHIP_ID), 'post' => array()),
 	'SearchUsers' => array('query' => array('i' => 'query'), 'post' => array()),
-	'SearchUsersPaged' => array('query' => array('h' => 'searchTerm', 'i' => 'page'), 'post' => array()),
-	'SearchUsersPagedV2' => array('query' => array('i' => 'searchTerm', 'j' => 'page', 'h' => 'h'), 'post' => array()),
+	'SearchUsersPaged' => array('query' => array('i' => 'searchTerm', 'r' => 'page'), 'post' => array()),
+	'SearchUsersPagedV2' => array('query' => array('i' => 'searchTerm', 'r' => 'page'), 'post' => array()),
 	'GetConversationById' => array('query' => array('e' => 'conversationId'), 'post' => array()),
 	'GetConversationWithMemberId' => array('query' => array('e' => 'memberId'), 'post' => array()),
 	'GetRecentNotifications' => array('query' => array('e' => 'format'), 'post' => array()),
-	'GetBungieAccount' => array('query' => array('f' => MEMBERSHIP_ID, 'e' => MEMBERSHIP_TYPE), 'post' => array()),
+	'GetBungieAccount' => array('query' => array('n' => MEMBERSHIP_ID, 'i' => MEMBERSHIP_TYPE), 'post' => array()),
 	'SetAcknowledged' => array('query' => array('f' => 'ackId'), 'post' => array()),
 
 	// Message Service
@@ -78,8 +78,8 @@ $api_params = array(
 	'GetTopicsPagedSimple' => array('query' => array('j' => 'page', 'i' => 'group', 'k' => 'sort', 'e' => 'categoryFilter'), 'post' => array()),
 
 	// Activity Service
-	'GetFriendsPaged' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'currentPage'), 'post' => array()),
-	'GetFollowersOfUser' => array('query' => array('i' => 'profileId'), 'post' => array()),
+	'GetFriendsPaged' => array('query' => array('t' => MEMBERSHIP_TYPE, 'i' => 'currentPage'), 'post' => array()),
+	'GetFollowersOfUser' => array('query' => array('t' => 'profileId'), 'post' => array()),
 
 	// Group Service
 	'ApproveAllPending' => array('query' => array('e' => GROUP_ID), 'post' => array('message')),
@@ -288,7 +288,7 @@ $api_params = array(
 	'GetCharacterSummary' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
 	'GetCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
 	'GetCharacterInventory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetItemDetail' => array('query' => array('g' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'i' => CHARACTER_ID, 'h' => DEFINITIONS, 'f' => 'itemInstanceId'), 'post' => array()),
+	'GetItemDetail' => array('query' => array('g' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'i' => CHARACTER_ID, 'f' => 'itemInstanceId', 'h' => DEFINITIONS), 'post' => array()),
 	'GetCharacterActivities' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
 	'GetCharacterProgression' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
 	'GetAllVendorsForCurrentCharacter' => array('query' => array('e' => MEMBERSHIP_TYPE, 'g' => CHARACTER_ID, 'f' => DEFINITIONS), 'post' => array()),
@@ -305,13 +305,15 @@ $api_params = array(
 	'GetHistoricalStats' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => CHARACTER_ID, 'i' => 'periodType', 'o' => 'modes', 'm' => 'groups', 'h' => 'monthstart', 'k' => 'monthend', 'j' => 'daystart', 'l' => 'dayend'), 'post' => array()),
 	'GetHistoricalStatsForAccount' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => 'groups'), 'post' => array()),
 	'GetActivityHistory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'l' => 'mode', 'j' => 'count', 'm' => 'page', 'g' => DEFINITIONS), 'post' => array()),
-	'GetUniqueWeaponHistory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
+	//'GetUniqueWeaponHistory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
+	'GetUniqueWeaponHistory' => array('query' => array('i' => MEMBERSHIP_TYPE, 'g' => DESTINY_MEMBERSHIP_ID, 'k' => CHARACTER_ID, 'h' => DEFINITIONS), 'post' => array()),
 	'GetLeaderboards' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => 'modes'), 'post' => array()),
 	'GetLeaderboardsForPsn' => array('query' => array('f' => 'modes', 'h' => 'code'), 'post' => array()),
 	'GetLeaderboardsForCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => CHARACTER_ID, 'i' => 'modes'), 'post' => array()),
 	'GetPostGameCarnageReport' => array('query' => array('f' => 'activityInstanceId', 'e' => DEFINITIONS), 'post' => array()),
 	'GetActivityBlob' => array('query' => array('e' => 'e'), 'post' => array()),
-	'GetDestinyAggregateActivityStats' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
+	//'GetDestinyAggregateActivityStats' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
+	'GetDestinyAggregateActivityStats' => array('query' => array('i' => MEMBERSHIP_TYPE, 'g' => DESTINY_MEMBERSHIP_ID, 'k' => CHARACTER_ID, 'h' => DEFINITIONS), 'post' => array()),
 	'GetMembershipIdByDisplayName' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'displayName', 'g' => DEFINITIONS), 'post' => array()),
 	'GetExcellenceBadges' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => DEFINITIONS), 'post' => array()),
 	'GetMyGrimoire' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => DEFINITIONS, 'g' => 'flavour', 'h' => 'single'), 'post' => array()),
@@ -336,12 +338,17 @@ $api_params = array(
 
 	'GetAdvisorsForCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID), 'post' => array()),
 
+	'GetAdvisorsForCharacterV2' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID), 'post' => array()),
+
+	'GetAdvisorsForAccount' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
+	'GetRecordBookCompletionStatus' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'recordBookHash'), 'post' => array())
+
 	// Core Service
 );
 
 
 // Download platform.lib.min.js
-$lib_url = 'https://www.bungie.net/Scripts/platform.lib.min.js';
+$lib_url = 'https://www.bungie.net/sharedbundle/platformlib';//'https://www.bungie.net/Scripts/platform.lib.min.js';
 $ch = curl_init($lib_url);
 curl_setopt_array($ch, array(
 	CURLOPT_RETURNTRANSFER => true
@@ -351,7 +358,23 @@ curl_close($ch);
 
 
 // Parse Services
-preg_match_all('/a\.([a-zA-Z]+Service)=\{dataStore:\[\],(.*?)\}\)\(jQuery\);/im', $lib_data, $service_matches, PREG_SET_ORDER);
+//preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore:\[\],(.*?)\}\)\(jQuery\);/im', $lib_data, $service_matches, PREG_SET_ORDER);
+//preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore:\[\],(.*?)\}\)\(jQuery\)/im', $lib_data, $service_matches, PREG_SET_ORDER);
+preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore\:\[\],/im', $lib_data, $service_match_offs, PREG_SET_ORDER);
+$service_matches = array();
+foreach($service_match_offs as $match) {
+	//echo '<pre>'.var_export($match, true).'</pre>';
+	$start = strpos($lib_data, $match[0]);
+	$end = strpos($lib_data, '(jQuery)', $start);
+	//echo '<pre>'.$start.' | '.$end.'</pre>';
+	$service_matches[] = array(
+		substr($lib_data, $start, $end-$start),
+		$match[1],
+		substr($lib_data, $start+strlen($match[0])-1, $end-($start+strlen($match[0])))
+	);
+}
+
+//echo '<pre>'.var_export($service_matches, true).'</pre>';
 
 $services = array();
 
@@ -362,7 +385,10 @@ foreach($service_matches as $service_index => $service) {
 
 	$services[$name] = array('name' => $name, 'endpoints' => array());
 
-	preg_match_all('/,([A-Z]+[a-zA-Z0-9]+):function\(([^\)]+)\)\{'.'(.*?)\.buildUrl\((.*?)\);.*?\.serviceLibrary\.([^\(]+)'./*'(.*)a\.buildUrl\((.*?)\);'.*/'/m', $data, $funcs, PREG_SET_ORDER);
+	preg_match_all('/,([A-Z]+[a-zA-Z0-9]+):function\(([^\)]+)\)\{'
+		.'(.*?)\.buildUrl\((.*?)\)[,;].*?\.serviceLibrary\.([^\(]+)'
+		//.'(.*)a\.buildUrl\((.*?)\);'
+		.'/m', $data, $funcs, PREG_SET_ORDER);
 	foreach($funcs as $func_index => $func) {
 		$key2 = $func[1];
 		$params = $func[2];
@@ -390,22 +416,54 @@ foreach($service_matches as $service_index => $service) {
 		if (isset($api_params[$key.'.'.$key2])) $api_param = $api_params[$key.'.'.$key2];
 		else if (isset($api_params[$key2])) $api_param = $api_params[$key2];
 
-		if ($api_param) {
-			foreach($api_param['query'] as $param_key => $param_value) {
+		//if ($api_param) {
+			//echo '<pre>Params: '.var_export(array_values($api_param['query']), true).'</pre>';
+			preg_match_all('/\{([^\}]+)\}/', $api_data, $param_matches, PREG_SET_ORDER);
+			//echo '<pre>'.var_export($param_matches, true).'</pre>';
+
+			$values = $api_param ? array_values($api_param['query']) : array();
+
+			$keys = array();
+			$params = array();
+			foreach($param_matches as $param_match) {
+				$key = $param_match[1];
+				if (!in_array($key, $keys)) {
+					$keyIndex = count($keys);
+					$params[$key] = $keyIndex < count($values) ? $values[$keyIndex] : 'param'.($keyIndex+1);
+					$keys[] = $key;
+				}
+			}
+			//echo '<pre>'.var_export($params, true).'</pre>';
+			//foreach($api_param['query'] as $param_key => $param_value) {
+			foreach($params as $param_key => $param_value) {
 				$api_data = str_replace('{'.$param_key.'}', '{'.$param_value.'}', $api_data);
 			}
-		}
+		//}
 
 		$api_data = explode('|', $api_data);
 
-		$services[$name]['endpoints'][$key2] = array(
+		$endpoint = array(
 			'name' => $key2,
 			'method' => strtoupper($method),
 			'endpoint' => $api_data[0],
 			'params' => $api_data[1] ? explode(',', $api_data[1]) : array(),
 			'post' => $api_param ? $api_param['post'] : array()
 		);
+
+		$services[$name]['endpoints'][$key2] = $endpoint;
+
+		/*switch($key2) {
+			case 'GetPublicAdvisors':
+			case 'GetAdvisorsForCharacter':
+			case 'GetAdvisorsForCurrentCharacter':
+				$services[$name]['endpoints'][$key2.'V2'] = array_merge($endpoint, array(
+					'name' => $key2.'V2',
+					'endpoint' => $endpoint['endpoint'].'V2/'
+				));
+				break;
+		}*/
 	}
+	$services[$name]['endpoints'] = (object)$services[$name]['endpoints'];
 }
 
 
@@ -422,14 +480,51 @@ echo '<textarea readonly>'.$encoded_services.'</textarea>';
 
 
 // Parse Enums
-preg_match_all('/var a=\bGlobals\b;([^\)]+)\}\)\(\);/i', $lib_data, $enums_match, PREG_SET_ORDER);
-$data = $enums_match[0][1];
-$data = preg_replace('/a\.([^=]+)=/i', '"$1":', $data);
-$data = preg_replace('/([A-Za-z0-9_]+)\:/i', '"$1":', $data);
-$data = preg_replace('/\};/i', '},', $data);
-$data = preg_replace('/Enums*/i', '', $data);
-$enums = json_decode('{'.$data.'}');
+//preg_match_all('/var a=\bGlobals\b;([^\)]+)\}\)\(\);/i', $lib_data, $enums_match, PREG_SET_ORDER);
+//$data = $enums_match[0][1];
+//$data = preg_replace('/a\.([^=]+)=/i', '"$1":', $data);
+//$data = preg_replace('/([A-Za-z0-9_]+)\:/i', '"$1":', $data);
+//$data = preg_replace('/\};/i', '},', $data);
+//$data = preg_replace('/Enums*/i', '', $data);
+//$enums = json_decode('{'.$data.'}');
+/*preg_match('/var Globals;\(function\(([^\)]+)\)\{(.+)\}\)\(Globals\|\|\(Globals=\{\}\)\);/i', $lib_data, $enums_match);
+$enums = array();
 
+if (count($enums_match) > 0) {
+	$enums_var = $enums_match[1]; // a
+	preg_match_all('/\(function\('.$enums_var.'\)\{([^\}]+)\}\)\('.$enums_match[1].'\.([^\|]+)[^;]+;/i', $enums_match[2], $enums_matches, PREG_SET_ORDER);
+	foreach($enums_matches as $enum_group) {
+		$key = str_replace('Enum', '', $enum_group[2]);
+		$enums[$key] = array();
+		foreach (explode(';', $enum_group[1]) as $enum_entry) {
+			preg_match('/'.$enums_var.'\['.$enums_var.'\.([^\=]+)=([^\]]+).+/i', $enum_entry, $entry_match);
+			$enums[$key][$entry_match[1]] = intval($entry_match[2]);
+		}
+	}
+}*/
+$enums = array();
+
+preg_match_all('/[a-z]+=[a-z]+\.([^,]+),function\([^\)]+\)\{([^\}]+)\}/i', $lib_data, $enums_matches, PREG_SET_ORDER);
+foreach($enums_matches as $match) {
+	$key = $match[1];
+	//echo '<pre>'.var_export($match, true).'</pre>';
+	foreach(explode(';', $match[2]) as $enum_entry) {
+		preg_match('/\[[^\.]+\.([^=]+)=([^\]]+)/i', $enum_entry, $enum_match);
+		if (!isset($enum_match[2])) {
+			//echo '<pre>'.$enum_entry.'</pre>';
+			//echo '<pre>' . var_export($enum_match, true) . '</pre>';
+			continue;
+		}
+		$enums[$key][$enum_match[1]] = intval($enum_match[2]);
+	}
+}
+
+$enums['DestinyStatsGroupType']['Enemies'] = 4;
+$enums['DestinyStatsGroupType']['ReservedGroups'] = 100;
+$enums['DestinyStatsGroupType']['Leaderboard'] = 101;
+$enums['DestinyStatsGroupType']['Activity'] = 102;
+$enums['DestinyStatsGroupType']['UniqueWeapon'] = 103;
+$enums['DestinyStatsGroupType']['Internal'] = 104;
 
 // Output Enums
 $encoded_enums = json_encode($enums, JSON_PRETTY_PRINT);

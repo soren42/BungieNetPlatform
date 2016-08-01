@@ -13,6 +13,97 @@
             }
         }
     },
+    "ApplicationService": {
+        "name": "ApplicationService",
+        "endpoints": {
+            "GetAccessTokensFromCode": {
+                "name": "GetAccessTokensFromCode",
+                "method": "POST",
+                "endpoint": "\/App\/GetAccessTokensFromCode\/",
+                "params": [],
+                "post": []
+            },
+            "GetAccessTokensFromRefreshToken": {
+                "name": "GetAccessTokensFromRefreshToken",
+                "method": "POST",
+                "endpoint": "\/App\/GetAccessTokensFromRefreshToken\/",
+                "params": [],
+                "post": []
+            },
+            "CreateApplication": {
+                "name": "CreateApplication",
+                "method": "POST",
+                "endpoint": "\/App\/CreateApplication\/",
+                "params": [],
+                "post": []
+            },
+            "GetApplication": {
+                "name": "GetApplication",
+                "method": "GET",
+                "endpoint": "\/App\/Application\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "EditApplication": {
+                "name": "EditApplication",
+                "method": "POST",
+                "endpoint": "\/App\/EditApplication\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "GetApplicationApiKeys": {
+                "name": "GetApplicationApiKeys",
+                "method": "GET",
+                "endpoint": "\/App\/ApplicationApiKeys\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "ChangeApiKeyStatus": {
+                "name": "ChangeApiKeyStatus",
+                "method": "POST",
+                "endpoint": "\/App\/ChangeApiKeyState\/{param1}\/{param2}\/",
+                "params": [],
+                "post": []
+            },
+            "CreateApiKey": {
+                "name": "CreateApiKey",
+                "method": "POST",
+                "endpoint": "\/App\/CreateApiKey\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAuthorizations": {
+                "name": "GetAuthorizations",
+                "method": "GET",
+                "endpoint": "\/App\/Authorizations\/{param1}\/",
+                "params": [
+                    "currentPage"
+                ],
+                "post": []
+            },
+            "RevokeAuthorization": {
+                "name": "RevokeAuthorization",
+                "method": "POST",
+                "endpoint": "\/App\/RevokeAuthorization\/{param1}\/{param2}\/",
+                "params": [],
+                "post": []
+            },
+            "ApplicationSearch": {
+                "name": "ApplicationSearch",
+                "method": "POST",
+                "endpoint": "\/App\/Search\/",
+                "params": [],
+                "post": []
+            },
+            "PrivateApplicationSearch": {
+                "name": "PrivateApplicationSearch",
+                "method": "POST",
+                "endpoint": "\/App\/PrivateSearch\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
     "UserService": {
         "name": "UserService",
         "endpoints": {
@@ -46,10 +137,17 @@
                     "uniqueName"
                 ]
             },
+            "UpdateDestinyEmblemAvatar": {
+                "name": "UpdateDestinyEmblemAvatar",
+                "method": "POST",
+                "endpoint": "\/User\/UpdateDestinyEmblemAvatar\/",
+                "params": [],
+                "post": []
+            },
             "UpdateUserAdmin": {
                 "name": "UpdateUserAdmin",
                 "method": "POST",
-                "endpoint": "\/User\/UpdateUserAdmin\/{e}\/",
+                "endpoint": "\/User\/UpdateUserAdmin\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -63,7 +161,7 @@
             "EditSuccessMessageFlags": {
                 "name": "EditSuccessMessageFlags",
                 "method": "POST",
-                "endpoint": "\/User\/MessageFlags\/Success\/Update\/{g}\/",
+                "endpoint": "\/User\/MessageFlags\/Success\/Update\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -128,7 +226,7 @@
             "SearchUsersPagedV2": {
                 "name": "SearchUsersPagedV2",
                 "method": "GET",
-                "endpoint": "\/User\/SearchUsersPaged\/{searchTerm}\/{page}\/{h}\/",
+                "endpoint": "\/User\/SearchUsersPaged\/{searchTerm}\/{page}\/{param3}\/",
                 "params": [],
                 "post": []
             },
@@ -156,7 +254,7 @@
             "GetAvailableAvatarsAdmin": {
                 "name": "GetAvailableAvatarsAdmin",
                 "method": "GET",
-                "endpoint": "\/User\/GetAvailableAvatarsAdmin\/{h}\/",
+                "endpoint": "\/User\/GetAvailableAvatarsAdmin\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -177,7 +275,7 @@
             "UnregisterMobileAppPair": {
                 "name": "UnregisterMobileAppPair",
                 "method": "POST",
-                "endpoint": "\/User\/UnregisterMobileAppPair\/{e}\/",
+                "endpoint": "\/User\/UnregisterMobileAppPair\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -247,7 +345,7 @@
             "GetConversationByIdV2": {
                 "name": "GetConversationByIdV2",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationByIdV2\/{e}\/",
+                "endpoint": "\/Message\/GetConversationByIdV2\/{param1}\/",
                 "params": [
                     "format"
                 ],
@@ -256,7 +354,7 @@
             "GetConversationWithMemberIdV2": {
                 "name": "GetConversationWithMemberIdV2",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationWithMemberV2\/{e}\/",
+                "endpoint": "\/Message\/GetConversationWithMemberV2\/{param1}\/",
                 "params": [
                     "format"
                 ],
@@ -265,9 +363,11 @@
             "GetConversationThreadV3": {
                 "name": "GetConversationThreadV3",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationThreadV3\/{e}\/{i}\/",
+                "endpoint": "\/Message\/GetConversationThreadV3\/{param1}\/{param2}\/",
                 "params": [
-                    "format"
+                    "format",
+                    "before",
+                    "after"
                 ],
                 "post": []
             },
@@ -318,7 +418,7 @@
             "GetGroupConversations": {
                 "name": "GetGroupConversations",
                 "method": "GET",
-                "endpoint": "\/Message\/GetGroupConversations\/{h}\/",
+                "endpoint": "\/Message\/GetGroupConversations\/{param1}\/",
                 "params": [
                     "format"
                 ],
@@ -348,21 +448,21 @@
             "LeaveConversation": {
                 "name": "LeaveConversation",
                 "method": "GET",
-                "endpoint": "\/Message\/LeaveConversation\/{e}\/",
+                "endpoint": "\/Message\/LeaveConversation\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "ReviewInvitations": {
                 "name": "ReviewInvitations",
                 "method": "POST",
-                "endpoint": "\/Message\/Invitations\/ReviewListDirect\/{e}\/",
+                "endpoint": "\/Message\/Invitations\/ReviewListDirect\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "ReviewAllInvitations": {
                 "name": "ReviewAllInvitations",
                 "method": "POST",
-                "endpoint": "\/Message\/Invitations\/ReviewAllDirect\/{e}\/{f}\/",
+                "endpoint": "\/Message\/Invitations\/ReviewAllDirect\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
@@ -376,28 +476,28 @@
             "ReviewInvitation": {
                 "name": "ReviewInvitation",
                 "method": "POST",
-                "endpoint": "\/Message\/Invitations\/{f}\/{g}\/{e}\/",
+                "endpoint": "\/Message\/Invitations\/{param1}\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
             "GetAllianceJoinInvitations": {
                 "name": "GetAllianceJoinInvitations",
                 "method": "GET",
-                "endpoint": "\/Message\/AllianceInvitations\/RequestsToJoinYourGroup\/{e}\/{h}\/",
+                "endpoint": "\/Message\/AllianceInvitations\/RequestsToJoinYourGroup\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetAllianceInvitedToJoinInvitations": {
                 "name": "GetAllianceInvitedToJoinInvitations",
                 "method": "GET",
-                "endpoint": "\/Message\/AllianceInvitations\/InvitationsToJoinAnotherGroup\/{e}\/{h}\/",
+                "endpoint": "\/Message\/AllianceInvitations\/InvitationsToJoinAnotherGroup\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetInvitationDetails": {
                 "name": "GetInvitationDetails",
                 "method": "GET",
-                "endpoint": "\/Message\/Invitations\/{e}\/Details\/",
+                "endpoint": "\/Message\/Invitations\/{param1}\/Details\/",
                 "params": [],
                 "post": []
             },
@@ -411,14 +511,14 @@
             "ModerateGroupWall": {
                 "name": "ModerateGroupWall",
                 "method": "POST",
-                "endpoint": "\/Message\/ModerateGroupWall\/{f}\/{e}\/",
+                "endpoint": "\/Message\/ModerateGroupWall\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetConversationsV4": {
                 "name": "GetConversationsV4",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationsV4\/{h}\/",
+                "endpoint": "\/Message\/GetConversationsV4\/{param1}\/",
                 "params": [
                     "format"
                 ],
@@ -462,21 +562,21 @@
             "GetConversationsV2": {
                 "name": "GetConversationsV2",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationsV2\/{h}\/{e}\/",
+                "endpoint": "\/Message\/GetConversationsV2\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetConversationsV3": {
                 "name": "GetConversationsV3",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationsV3\/{h}\/{e}\/",
+                "endpoint": "\/Message\/GetConversationsV3\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetConversationThreadV2": {
                 "name": "GetConversationThreadV2",
                 "method": "GET",
-                "endpoint": "\/Message\/GetConversationThreadV2\/{e}\/{i}\/{f}\/",
+                "endpoint": "\/Message\/GetConversationThreadV2\/{param1}\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             }
@@ -511,7 +611,7 @@
             "GetRealTimeEvents": {
                 "name": "GetRealTimeEvents",
                 "method": "GET",
-                "endpoint": "\/Notification\/Events\/{h}\/{i}\/",
+                "endpoint": "\/Notification\/Events\/{param1}\/{param2}\/",
                 "params": [
                     "timeout"
                 ],
@@ -525,14 +625,14 @@
             "GetContentType": {
                 "name": "GetContentType",
                 "method": "GET",
-                "endpoint": "\/Content\/GetContentType\/{i}\/",
+                "endpoint": "\/Content\/GetContentType\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "GetContentById": {
                 "name": "GetContentById",
                 "method": "GET",
-                "endpoint": "\/Content\/GetContentById\/{k}\/{h}\/",
+                "endpoint": "\/Content\/GetContentById\/{param1}\/{param2}\/",
                 "params": [
                     "head"
                 ],
@@ -541,7 +641,7 @@
             "GetContentByTagAndType": {
                 "name": "GetContentByTagAndType",
                 "method": "GET",
-                "endpoint": "\/Content\/GetContentByTagAndType\/{l}\/{k}\/{h}\/",
+                "endpoint": "\/Content\/GetContentByTagAndType\/{param1}\/{param2}\/{param3}\/",
                 "params": [
                     "head"
                 ],
@@ -550,7 +650,7 @@
             "SearchContentEx": {
                 "name": "SearchContentEx",
                 "method": "POST",
-                "endpoint": "\/Content\/SearchEx\/{f}\/",
+                "endpoint": "\/Content\/SearchEx\/{param1}\/",
                 "params": [
                     "head"
                 ],
@@ -559,7 +659,7 @@
             "SearchContentWithText": {
                 "name": "SearchContentWithText",
                 "method": "GET",
-                "endpoint": "\/Content\/Search\/{j}\/",
+                "endpoint": "\/Content\/Search\/{param1}\/",
                 "params": [
                     "head",
                     "ctype",
@@ -572,7 +672,7 @@
             "SearchContentByTagAndType": {
                 "name": "SearchContentByTagAndType",
                 "method": "GET",
-                "endpoint": "\/Content\/SearchContentByTagAndType\/{n}\/{m}\/{j}\/",
+                "endpoint": "\/Content\/SearchContentByTagAndType\/{param1}\/{param2}\/{param3}\/",
                 "params": [
                     "head",
                     "currentpage",
@@ -583,7 +683,7 @@
             "GetHomepageContent": {
                 "name": "GetHomepageContent",
                 "method": "GET",
-                "endpoint": "\/Content\/Site\/Homepage\/{h}\/",
+                "endpoint": "\/Content\/Site\/Homepage\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -597,21 +697,21 @@
             "GetJobs": {
                 "name": "GetJobs",
                 "method": "GET",
-                "endpoint": "\/Content\/Site\/Jobs\/{h}\/",
+                "endpoint": "\/Content\/Site\/Jobs\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "GetPublications": {
                 "name": "GetPublications",
                 "method": "GET",
-                "endpoint": "\/Content\/Site\/Publications\/{h}\/",
+                "endpoint": "\/Content\/Site\/Publications\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "GetNews": {
                 "name": "GetNews",
                 "method": "GET",
-                "endpoint": "\/Content\/Site\/News\/{j}\/{k}\/",
+                "endpoint": "\/Content\/Site\/News\/{param1}\/{param2}\/",
                 "params": [
                     "itemsperpage",
                     "currentpage"
@@ -621,14 +721,14 @@
             "GetDestinyContent": {
                 "name": "GetDestinyContent",
                 "method": "GET",
-                "endpoint": "\/Content\/Site\/Destiny\/{h}\/",
+                "endpoint": "\/Content\/Site\/Destiny\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "GetDestinyContentV2": {
                 "name": "GetDestinyContentV2",
                 "method": "GET",
-                "endpoint": "\/Content\/Site\/Destiny\/V2\/{h}\/",
+                "endpoint": "\/Content\/Site\/Destiny\/V2\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -656,7 +756,7 @@
             "GetCareer": {
                 "name": "GetCareer",
                 "method": "GET",
-                "endpoint": "\/Content\/Careers\/{h}\/",
+                "endpoint": "\/Content\/Careers\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -677,7 +777,7 @@
             "GetAggregatedSocialFeed": {
                 "name": "GetAggregatedSocialFeed",
                 "method": "GET",
-                "endpoint": "\/ExternalSocial\/GetAggregatedSocialFeed\/{j}\/",
+                "endpoint": "\/ExternalSocial\/GetAggregatedSocialFeed\/{param1}\/",
                 "params": [
                     "types"
                 ],
@@ -727,42 +827,42 @@
             "EditPost": {
                 "name": "EditPost",
                 "method": "POST",
-                "endpoint": "\/Forum\/EditPost\/{f}\/",
+                "endpoint": "\/Forum\/EditPost\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "DeletePost": {
                 "name": "DeletePost",
                 "method": "POST",
-                "endpoint": "\/Forum\/DeletePost\/{f}\/",
+                "endpoint": "\/Forum\/DeletePost\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "RatePost": {
                 "name": "RatePost",
                 "method": "POST",
-                "endpoint": "\/Forum\/RatePost\/{f}\/{g}\/",
+                "endpoint": "\/Forum\/RatePost\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "ModeratePost": {
                 "name": "ModeratePost",
                 "method": "POST",
-                "endpoint": "\/Forum\/Post\/{f}\/Moderate\/",
+                "endpoint": "\/Forum\/Post\/{param1}\/Moderate\/",
                 "params": [],
                 "post": []
             },
             "ModerateTag": {
                 "name": "ModerateTag",
                 "method": "POST",
-                "endpoint": "\/Forum\/Tags\/{f}\/Moderate\/",
+                "endpoint": "\/Forum\/Tags\/{param1}\/Moderate\/",
                 "params": [],
                 "post": []
             },
             "ModerateGroupPost": {
                 "name": "ModerateGroupPost",
                 "method": "POST",
-                "endpoint": "\/Forum\/Post\/{f}\/GroupModerate\/",
+                "endpoint": "\/Forum\/Post\/{param1}\/GroupModerate\/",
                 "params": [],
                 "post": []
             },
@@ -778,7 +878,7 @@
             "GetCoreTopicsPaged": {
                 "name": "GetCoreTopicsPaged",
                 "method": "GET",
-                "endpoint": "\/Forum\/GetCoreTopicsPaged\/{i}\/{j}\/{f}\/{e}\/",
+                "endpoint": "\/Forum\/GetCoreTopicsPaged\/{param1}\/{param2}\/{param3}\/{param4}\/",
                 "params": [],
                 "post": []
             },
@@ -831,7 +931,7 @@
             "GetForumTagCountEstimate": {
                 "name": "GetForumTagCountEstimate",
                 "method": "GET",
-                "endpoint": "\/Forum\/GetForumTagCountEstimate\/{h}\/",
+                "endpoint": "\/Forum\/GetForumTagCountEstimate\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -854,63 +954,77 @@
             "MarkReplyAsAnswer": {
                 "name": "MarkReplyAsAnswer",
                 "method": "POST",
-                "endpoint": "\/Forum\/MarkReplyAsAnswer\/{e}\/{f}\/",
+                "endpoint": "\/Forum\/MarkReplyAsAnswer\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "UnmarkReplyAsAnswer": {
                 "name": "UnmarkReplyAsAnswer",
                 "method": "POST",
-                "endpoint": "\/Forum\/UnmarkReplyAsAnswer\/{e}\/",
+                "endpoint": "\/Forum\/UnmarkReplyAsAnswer\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "PollVote": {
                 "name": "PollVote",
                 "method": "POST",
-                "endpoint": "\/Forum\/Poll\/Vote\/{g}\/{e}\/",
+                "endpoint": "\/Forum\/Poll\/Vote\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetPoll": {
                 "name": "GetPoll",
                 "method": "GET",
-                "endpoint": "\/Forum\/Poll\/{f}\/",
+                "endpoint": "\/Forum\/Poll\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "ChangePinState": {
                 "name": "ChangePinState",
                 "method": "POST",
-                "endpoint": "\/Forum\/ChangePinState\/{g}\/{e}\/",
+                "endpoint": "\/Forum\/ChangePinState\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "ChangeLockState": {
                 "name": "ChangeLockState",
                 "method": "POST",
-                "endpoint": "\/Forum\/ChangeLockState\/{g}\/{e}\/",
+                "endpoint": "\/Forum\/ChangeLockState\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "JoinFireteamThread": {
                 "name": "JoinFireteamThread",
                 "method": "POST",
-                "endpoint": "\/Forum\/Recruit\/Join\/{f}\/",
+                "endpoint": "\/Forum\/Recruit\/Join\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "LeaveFireteamThread": {
+                "name": "LeaveFireteamThread",
+                "method": "POST",
+                "endpoint": "\/Forum\/Recruit\/Leave\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "KickBanFireteamApplicant": {
                 "name": "KickBanFireteamApplicant",
                 "method": "POST",
-                "endpoint": "\/Forum\/Recruit\/KickBan\/{g}\/{e}\/",
+                "endpoint": "\/Forum\/Recruit\/KickBan\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "ApproveFireteamThread": {
                 "name": "ApproveFireteamThread",
                 "method": "POST",
-                "endpoint": "\/Forum\/Recruit\/Approve\/{f}\/",
+                "endpoint": "\/Forum\/Recruit\/Approve\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "GetRecruitmentThreadSummaries": {
+                "name": "GetRecruitmentThreadSummaries",
+                "method": "POST",
+                "endpoint": "\/Forum\/Recruit\/Summaries\/",
                 "params": [],
                 "post": []
             }
@@ -946,42 +1060,42 @@
             "GetGroupsFollowedByUser": {
                 "name": "GetGroupsFollowedByUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{g}\/Following\/Groups\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Following\/Groups\/",
                 "params": [],
                 "post": []
             },
             "GetEntitiesFollowedByUser": {
                 "name": "GetEntitiesFollowedByUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{g}\/Following\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Following\/",
                 "params": [],
                 "post": []
             },
             "GetEntitiesFollowedByCurrentUserV2": {
                 "name": "GetEntitiesFollowedByCurrentUserV2",
                 "method": "GET",
-                "endpoint": "\/Activity\/Following\/V2\/{f}\/{e}\/",
+                "endpoint": "\/Activity\/Following\/V2\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetEntitiesFollowedByUserV2": {
                 "name": "GetEntitiesFollowedByUserV2",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{e}\/Following\/V2\/{g}\/{f}\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Following\/V2\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
             "GetGroupsFollowedPagedByCurrentUser": {
                 "name": "GetGroupsFollowedPagedByCurrentUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/Following\/Groups\/{e}\/",
+                "endpoint": "\/Activity\/Following\/Groups\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "GetGroupsFollowedPagedByUser": {
                 "name": "GetGroupsFollowedPagedByUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{e}\/Following\/Groups\/Paged\/{f}\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Following\/Groups\/Paged\/{param2}\/",
                 "params": [],
                 "post": []
             },
@@ -1005,21 +1119,21 @@
             "FollowUser": {
                 "name": "FollowUser",
                 "method": "POST",
-                "endpoint": "\/Activity\/User\/{g}\/Follow\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Follow\/",
                 "params": [],
                 "post": []
             },
             "UnfollowUser": {
                 "name": "UnfollowUser",
                 "method": "POST",
-                "endpoint": "\/Activity\/User\/{g}\/Unfollow\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Unfollow\/",
                 "params": [],
                 "post": []
             },
             "GetLikeAndShareActivityForUser": {
                 "name": "GetLikeAndShareActivityForUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{j}\/Activities\/LikesAndShares\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikesAndShares\/",
                 "params": [
                     "itemsperpage",
                     "currentpage",
@@ -1030,7 +1144,7 @@
             "GetLikeAndShareActivityForUserV2": {
                 "name": "GetLikeAndShareActivityForUserV2",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{i}\/Activities\/LikesAndSharesV2\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikesAndSharesV2\/",
                 "params": [
                     "currentpage",
                     "format"
@@ -1040,7 +1154,7 @@
             "GetForumActivityForUser": {
                 "name": "GetForumActivityForUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{j}\/Activities\/Forums\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Activities\/Forums\/",
                 "params": [
                     "itemsperpage",
                     "currentpage",
@@ -1051,7 +1165,7 @@
             "GetForumActivityForUserV2": {
                 "name": "GetForumActivityForUserV2",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{i}\/Activities\/ForumsV2\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Activities\/ForumsV2\/",
                 "params": [
                     "currentpage",
                     "format"
@@ -1061,7 +1175,7 @@
             "GetLikeShareAndForumActivityForUser": {
                 "name": "GetLikeShareAndForumActivityForUser",
                 "method": "GET",
-                "endpoint": "\/Activity\/User\/{i}\/Activities\/LikeShareAndForum\/",
+                "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikeShareAndForum\/",
                 "params": [
                     "currentpage",
                     "format"
@@ -1107,7 +1221,7 @@
             "GetFriendsAllNoPresence": {
                 "name": "GetFriendsAllNoPresence",
                 "method": "GET",
-                "endpoint": "\/Activity\/Friends\/AllNoPresence\/{e}\/",
+                "endpoint": "\/Activity\/Friends\/AllNoPresence\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -1388,7 +1502,7 @@
             "SetPrivacy": {
                 "name": "SetPrivacy",
                 "method": "POST",
-                "endpoint": "\/Group\/{groupId}\/Privacy\/{e}\/",
+                "endpoint": "\/Group\/{groupId}\/Privacy\/{param2}\/",
                 "params": [],
                 "post": []
             },
@@ -1519,6 +1633,13 @@
                 ],
                 "post": []
             },
+            "GetAllFoundedGroupsForMember": {
+                "name": "GetAllFoundedGroupsForMember",
+                "method": "GET",
+                "endpoint": "\/Group\/User\/{param1}\/Founded\/All\/",
+                "params": [],
+                "post": []
+            },
             "GetJoinedGroupsForMemberV3": {
                 "name": "GetJoinedGroupsForMemberV3",
                 "method": "GET",
@@ -1595,10 +1716,10 @@
                 ],
                 "post": []
             },
-            "DesignateClanFounderForMigration": {
-                "name": "DesignateClanFounderForMigration",
-                "method": "POST",
-                "endpoint": "\/Group\/{groupId}\/DesignateClanFounderForMigration\/{membershipId}\/{clanMembershipType}\/",
+            "GetMyClanMemberships": {
+                "name": "GetMyClanMemberships",
+                "method": "GET",
+                "endpoint": "\/Group\/MyClans\/",
                 "params": [],
                 "post": []
             },
@@ -1691,7 +1812,7 @@
             "Migrate": {
                 "name": "Migrate",
                 "method": "POST",
-                "endpoint": "\/Group\/{f}\/Migrate\/{e}\/",
+                "endpoint": "\/Group\/{param1}\/Migrate\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
@@ -1866,14 +1987,14 @@
             "GetIgnoreStatusForPost": {
                 "name": "GetIgnoreStatusForPost",
                 "method": "GET",
-                "endpoint": "\/Ignore\/MyIgnores\/Posts\/{f}\/",
+                "endpoint": "\/Ignore\/MyIgnores\/Posts\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "GetIgnoreStatusForUser": {
                 "name": "GetIgnoreStatusForUser",
                 "method": "GET",
-                "endpoint": "\/Ignore\/MyIgnores\/Users\/{e}\/",
+                "endpoint": "\/Ignore\/MyIgnores\/Users\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -1919,6 +2040,13 @@
                 "endpoint": "\/Ignore\/Flag\/",
                 "params": [],
                 "post": []
+            },
+            "GetReportContext": {
+                "name": "GetReportContext",
+                "method": "GET",
+                "endpoint": "\/Ignore\/ReportContext\/{param1}\/",
+                "params": [],
+                "post": []
             }
         }
     },
@@ -1928,14 +2056,14 @@
             "GetPlayerGamesById": {
                 "name": "GetPlayerGamesById",
                 "method": "GET",
-                "endpoint": "\/Game\/GetPlayerGamesById\/{e}\/",
+                "endpoint": "\/Game\/GetPlayerGamesById\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "ReachModelSneakerNet": {
                 "name": "ReachModelSneakerNet",
                 "method": "POST",
-                "endpoint": "\/Game\/ReachModelSneakerNet\/{g}\/",
+                "endpoint": "\/Game\/ReachModelSneakerNet\/{param1}\/",
                 "params": [],
                 "post": []
             }
@@ -1968,14 +2096,14 @@
             "GetDisciplinedReportsForMember": {
                 "name": "GetDisciplinedReportsForMember",
                 "method": "POST",
-                "endpoint": "\/Admin\/Member\/{e}\/Reports\/",
+                "endpoint": "\/Admin\/Member\/{param1}\/Reports\/",
                 "params": [],
                 "post": []
             },
             "GetRecentDisciplineAndFlagHistoryForMember": {
                 "name": "GetRecentDisciplineAndFlagHistoryForMember",
                 "method": "GET",
-                "endpoint": "\/Admin\/Member\/{f}\/RecentIncludingFlags\/{e}",
+                "endpoint": "\/Admin\/Member\/{param1}\/RecentIncludingFlags\/{param2}",
                 "params": [],
                 "post": []
             },
@@ -1996,14 +2124,21 @@
             "OverrideBanOnUser": {
                 "name": "OverrideBanOnUser",
                 "method": "POST",
-                "endpoint": "\/Admin\/Member\/{e}\/SetBan\/",
+                "endpoint": "\/Admin\/Member\/{param1}\/SetBan\/",
                 "params": [],
                 "post": []
             },
             "OverrideMsgBanOnUser": {
                 "name": "OverrideMsgBanOnUser",
                 "method": "POST",
-                "endpoint": "\/Admin\/Member\/{e}\/SetMsgBan\/",
+                "endpoint": "\/Admin\/Member\/{param1}\/SetMsgBan\/",
+                "params": [],
+                "post": []
+            },
+            "OverrideGroupWallBanOnUser": {
+                "name": "OverrideGroupWallBanOnUser",
+                "method": "POST",
+                "endpoint": "\/Admin\/Member\/{param1}\/SetGroupWallBan\/",
                 "params": [],
                 "post": []
             },
@@ -2026,28 +2161,28 @@
             "GetUserBanState": {
                 "name": "GetUserBanState",
                 "method": "GET",
-                "endpoint": "\/Admin\/Member\/{e}\/GetBanState\/",
+                "endpoint": "\/Admin\/Member\/{param1}\/GetBanState\/",
                 "params": [],
                 "post": []
             },
             "GetUserWebClientIpHistory": {
                 "name": "GetUserWebClientIpHistory",
                 "method": "GET",
-                "endpoint": "\/Admin\/Member\/{e}\/GetWebClientIpHistory\/",
+                "endpoint": "\/Admin\/Member\/{param1}\/GetWebClientIpHistory\/",
                 "params": [],
                 "post": []
             },
             "GetUserPostHistory": {
                 "name": "GetUserPostHistory",
                 "method": "GET",
-                "endpoint": "\/Admin\/Member\/{e}\/PostHistory\/{h}\/",
+                "endpoint": "\/Admin\/Member\/{param1}\/PostHistory\/{param2}\/",
                 "params": [],
                 "post": []
             },
             "GetAdminHistory": {
                 "name": "GetAdminHistory",
                 "method": "GET",
-                "endpoint": "\/Admin\/GlobalHistory\/{f}\/{k}\/",
+                "endpoint": "\/Admin\/GlobalHistory\/{param1}\/{param2}\/",
                 "params": [
                     "membershipFilter",
                     "startdate",
@@ -2093,7 +2228,7 @@
             "ApplyOfferToCurrentDestinyMembership": {
                 "name": "ApplyOfferToCurrentDestinyMembership",
                 "method": "POST",
-                "endpoint": "\/Tokens\/ApplyOfferToCurrentDestinyMembership\/{e}\/{h}\/",
+                "endpoint": "\/Tokens\/ApplyOfferToCurrentDestinyMembership\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             },
@@ -2116,7 +2251,7 @@
             "ConsumeMarketplacePlatformCodeOffer": {
                 "name": "ConsumeMarketplacePlatformCodeOffer",
                 "method": "POST",
-                "endpoint": "\/Tokens\/ConsumeMarketplacePlatformCodeOffer\/{f}\/{e}\/{g}\/",
+                "endpoint": "\/Tokens\/ConsumeMarketplacePlatformCodeOffer\/{param1}\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
@@ -2130,7 +2265,7 @@
             "RAFGenerateReferralCode": {
                 "name": "RAFGenerateReferralCode",
                 "method": "POST",
-                "endpoint": "\/Tokens\/RAF\/GenerateReferralCode\/{e}\/",
+                "endpoint": "\/Tokens\/RAF\/GenerateReferralCode\/{param1}\/",
                 "params": [],
                 "post": []
             },
@@ -2174,6 +2309,33 @@
     "DestinyService": {
         "name": "DestinyService",
         "endpoints": {
+            "GetPublicAdvisorsV2": {
+                "name": "GetPublicAdvisorsV2",
+                "method": "GET",
+                "endpoint": "\/Destiny\/Advisors\/V2\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAdvisorsForAccount": {
+                "name": "GetAdvisorsForAccount",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Advisors\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetAdvisorsForCharacterV2": {
+                "name": "GetAdvisorsForCharacterV2",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Character\/{characterId}\/Advisors\/V2\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
             "GetDestinyManifest": {
                 "name": "GetDestinyManifest",
                 "method": "GET",
@@ -2201,7 +2363,7 @@
             "GetItemReferenceDetail": {
                 "name": "GetItemReferenceDetail",
                 "method": "GET",
-                "endpoint": "\/Destiny\/{f}\/Account\/{d}\/Character\/{h}\/ItemReference\/{i}\/",
+                "endpoint": "\/Destiny\/{param1}\/Account\/{param2}\/Character\/{param3}\/ItemReference\/{param4}\/",
                 "params": [
                     "definitions"
                 ],
@@ -2321,6 +2483,15 @@
                 "name": "GetTriumphs",
                 "method": "GET",
                 "endpoint": "\/Destiny\/{membershipType}\/Account\/{destinyMembershipId}\/Triumphs\/",
+                "params": [
+                    "definitions"
+                ],
+                "post": []
+            },
+            "GetRecordBookCompletionStatus": {
+                "name": "GetRecordBookCompletionStatus",
+                "method": "GET",
+                "endpoint": "\/Destiny\/{membershipType}\/MyAccount\/RecordBooks\/{recordBookHash}\/Completion\/",
                 "params": [
                     "definitions"
                 ],
@@ -2517,7 +2688,7 @@
             "RefundItem": {
                 "name": "RefundItem",
                 "method": "POST",
-                "endpoint": "\/Destiny\/{e}\/RefundItem\/",
+                "endpoint": "\/Destiny\/{param1}\/RefundItem\/",
                 "params": [],
                 "post": []
             },
@@ -2600,7 +2771,7 @@
             "GetClanLeaderboards": {
                 "name": "GetClanLeaderboards",
                 "method": "GET",
-                "endpoint": "\/Destiny\/Stats\/ClanLeaderboards\/{e}\/",
+                "endpoint": "\/Destiny\/Stats\/ClanLeaderboards\/{param1}\/",
                 "params": [
                     "modes",
                     "statid",
@@ -2706,7 +2877,7 @@
                 "method": "GET",
                 "endpoint": "\/Destiny\/Explorer\/Items\/",
                 "params": [
-                    "page",
+                    "tpage",
                     "count",
                     "name",
                     "order",
@@ -2753,14 +2924,14 @@
             "GetCommunityContent": {
                 "name": "GetCommunityContent",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Get\/{k}\/{h}\/{j}\/",
+                "endpoint": "\/CommunityContent\/Get\/{param1}\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
             "GetApprovalQueue": {
                 "name": "GetApprovalQueue",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Queue\/{i}\/{e}\/{h}\/",
+                "endpoint": "\/CommunityContent\/Queue\/{param1}\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
@@ -2774,14 +2945,14 @@
             "EditContent": {
                 "name": "EditContent",
                 "method": "POST",
-                "endpoint": "\/CommunityContent\/Edit\/{f}\/",
+                "endpoint": "\/CommunityContent\/Edit\/{param1}\/",
                 "params": [],
                 "post": []
             },
             "AlterApprovalState": {
                 "name": "AlterApprovalState",
                 "method": "POST",
-                "endpoint": "\/CommunityContent\/AlterApprovalState\/{e}\/",
+                "endpoint": "\/CommunityContent\/AlterApprovalState\/{param1}\/",
                 "params": [],
                 "post": []
             }
@@ -2814,7 +2985,7 @@
             "GetSystemStatus": {
                 "name": "GetSystemStatus",
                 "method": "GET",
-                "endpoint": "\/\/Status\/{h}\/",
+                "endpoint": "\/\/Status\/{param1}\/",
                 "params": [],
                 "post": []
             },
