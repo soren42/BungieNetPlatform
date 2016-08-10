@@ -519,12 +519,21 @@ foreach($enums_matches as $match) {
 	}
 }
 
-$enums['DestinyStatsGroupType']['Enemies'] = 4;
-$enums['DestinyStatsGroupType']['ReservedGroups'] = 100;
-$enums['DestinyStatsGroupType']['Leaderboard'] = 101;
-$enums['DestinyStatsGroupType']['Activity'] = 102;
-$enums['DestinyStatsGroupType']['UniqueWeapon'] = 103;
-$enums['DestinyStatsGroupType']['Internal'] = 104;
+// Overwrite the enum with the proper one
+// Because the lib is pulling the wrong information.
+// This is needed so we can generate a correct historical-data.json file.
+$enums['DestinyStatsGroupType'] = array(
+	'General' => 1,
+	'Weapons' => 2,
+	'Medals' => 3,
+	'Enemies' => 4,
+	'ReservedGroups' => 100,
+	'Leaderboard' => 101,
+	'Activity' => 102,
+	'UniqueWeapon' => 103,
+	'Internal' => 104,
+	'Unknown' => 105
+);
 
 // Output Enums
 $encoded_enums = json_encode($enums, JSON_PRETTY_PRINT);
