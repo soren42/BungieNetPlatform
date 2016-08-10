@@ -15,13 +15,16 @@ function getUrl($url, $options=array()) {
 		CURLOPT_RETURNTRANSFER => true,
 		CURLOPT_FOLLOWLOCATION => true,
 		CURLOPT_HTTPHEADER => $http_header,
-		CURLOPT_SSL_VERIFYHOST => 2,
+		CURLOPT_SSL_VERIFYHOST => 0,
+		CURLOPT_SSL_VERIFYPEER => 0,
 		CURLOPT_USERAGENT => $user_agent
 	));
 	if (isset($options[CURLOPT_HTTPHEADER])) $options[CURLOPT_HTTPHEADER] = array_merge($http_header, $options[CURLOPT_HTTPHEADER]);
 	curl_setopt_array($ch, $options);
 
 	$result = curl_exec($ch);
+	if(curl_errno($ch))
+    	echo 'Curl error: '.curl_error($ch).LN;
 	curl_close($ch);
 	return $result;
 }
