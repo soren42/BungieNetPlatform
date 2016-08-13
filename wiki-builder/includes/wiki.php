@@ -101,6 +101,8 @@ function buildParam($name, $params) {
 	return $paramName. ' | '.$paramDesc.LN;
 }
 
+$platformlibDesc = 'This listing is based on [platform library](https://www.bungie.net/sharedbundle/platformlib) file used by [Bungie.net](https://www.bungie.net).';
+
 
 // Build Enums
 $enumsPath = BUILDERPATH.'/data/enums.json';
@@ -120,7 +122,7 @@ foreach($enums as $name => $keys) {
 }
 sort($enumsMarkdownList);
 $enumsMarkdown = '';
-$enumsMarkdown .= 'This listing is based on [platform.lib.js](https://www.bungie.net/Scripts/platform.lib.min.js) file used by [Bungie.net](https://www.bungie.net).'.LN.LN;
+$enumsMarkdown .= $platformlibDesc.LN.LN;
 $enumsMarkdown .= implode(LN, $enumsMarkdownList).LN;
 
 update($enumsPath, $enumsMarkdown);
@@ -132,7 +134,7 @@ $endpoints = file_exists($endpointsPath) ? json_decode(file_get_contents($endpoi
 
 $endpointsPath = BASEPATH.'/wiki/Endpoints.md';
 $endpointsMarkdown = '';
-$endpointsMarkdown = 'This listing is based on [platform.lib.js](https://www.bungie.net/Scripts/platform.lib.min.js) file used by [Bungie.net](https://www.bungie.net).'.LN.LN;
+$endpointsMarkdown = $platformlibDesc.LN.LN;
 
 $namespaces = array();
 $apis = array();

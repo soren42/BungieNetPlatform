@@ -1,5 +1,5 @@
 {
-    "Daily": {
+    "General": {
         "activitiesCleared": {
             "statId": "activitiesCleared",
             "statName": "Activities Cleared"
@@ -14152,122 +14152,180 @@
             "statName": "Longest Single Life"
         }
     },
-    "AllTime": {
+    "Medals": {
         "medalsAbilityGhostGunKillMulti": {
             "statId": "medalsAbilityGhostGunKillMulti",
-            "statName": "Way of the Gun"
+            "statName": "Way of the Gun",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m127ecce38e366af72054570a6fdbecd9.png",
+            "description": "Kill 3 enemies with a single Golden Gun charge."
         },
         "medalsAbilityHavocKillMulti": {
             "statId": "medalsAbilityHavocKillMulti",
-            "statName": "Cry Havoc"
+            "statName": "Cry Havoc",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m3ec59d88f90dc142b29208f5079ebe60.png",
+            "description": "Kill 3 enemies with a single Fist of Havoc."
         },
         "medalsAbilityNovaBombKillMulti": {
             "statId": "medalsAbilityNovaBombKillMulti",
-            "statName": "Space Magic"
+            "statName": "Space Magic",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m24e361d76b433ef6c55848a54256d50c.png",
+            "description": "Kill 3 enemies with a single Nova Bomb."
         },
         "medalsAbilityShadowStrikeKillMulti": {
             "statId": "medalsAbilityShadowStrikeKillMulti",
-            "statName": "Gutted"
+            "statName": "Gutted",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m5ef54943e06cb079510494981d7908a2.png",
+            "description": "Kill 3 enemies in a single Arc Blade charge."
         },
         "medalsAbilityWardDeflect": {
             "statId": "medalsAbilityWardDeflect",
-            "statName": "Blast Shield"
+            "statName": "Blast Shield",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8fee8c2bd6fed4a5154fea2fedf9035d.png",
+            "description": "Block fatal damage within 2 seconds of casting Ward of Dawn."
         },
         "medalsActivityCompleteControlMostCaptures": {
             "statId": "medalsActivityCompleteControlMostCaptures",
-            "statName": "Objectively Correct"
+            "statName": "Objectively Correct",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8e5824ad369404c2562e408a414cd8d4.png",
+            "description": "In a Control match, capture the most zones."
         },
         "medalsActivityCompleteDeathless": {
             "statId": "medalsActivityCompleteDeathless",
-            "statName": "Mark of the Unbroken"
+            "statName": "Mark of the Unbroken",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mb092f95c5860abf29bcb6548b9e44056.png",
+            "description": "Complete a match with a minimum of 15 kills without dying or being downed."
         },
         "medalsActivityCompleteHighestScoreLosing": {
             "statId": "medalsActivityCompleteHighestScoreLosing",
-            "statName": "On The Bright Side..."
+            "statName": "On The Bright Side...",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m6fcd36765e6c7b5b4278dd4996ab7629.png",
+            "description": "Achieve the highest score in a match despite your team's loss."
         },
         "medalsActivityCompleteHighestScoreWinning": {
             "statId": "medalsActivityCompleteHighestScoreWinning",
-            "statName": "The Best\u2026Around"
+            "statName": "The Best\u2026Around",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m1ac4982244fdb59cfd334e731503aced.png",
+            "description": "Achieve the highest score in a match while leading your team to victory."
         },
         "medalsActivityCompleteLonewolf": {
             "statId": "medalsActivityCompleteLonewolf",
-            "statName": "Lone Wolf"
+            "statName": "Lone Wolf",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m4d51c2cb6c2159034432dc7cee6d914c.png",
+            "description": "In a team game, finish first on your team with no assists."
         },
         "medalsActivityCompleteSalvageMostCancels": {
             "statId": "medalsActivityCompleteSalvageMostCancels",
-            "statName": "Saboteur"
+            "statName": "Saboteur",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mbe326a50424ee5aee06450127aa1a0e6.png",
+            "description": "In a Salvage match, neutralize the most probes."
         },
         "medalsActivityCompleteSalvageShutout": {
             "statId": "medalsActivityCompleteSalvageShutout",
-            "statName": "Shutout"
+            "statName": "Shutout",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m96f384f962754a1a4120b4b81429ed23.png",
+            "description": "As a team, stop your opponents from salvaging any Relics."
         },
         "medalsActivityCompleteVictory": {
             "statId": "medalsActivityCompleteVictory",
-            "statName": "Victory"
+            "statName": "Victory",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m60c77b0b755b2959e3004e72fdfc764b.png",
+            "description": "Win a match."
         },
         "medalsActivityCompleteVictoryBlowout": {
             "statId": "medalsActivityCompleteVictoryBlowout",
-            "statName": "Decisive Victory"
+            "statName": "Decisive Victory",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mcb93d453dae2cc6c6e920f1988086817.png",
+            "description": "In a match that reaches the score limit, double the opposing team's score."
         },
         "medalsActivityCompleteVictoryExtraLastSecond": {
             "statId": "medalsActivityCompleteVictoryExtraLastSecond",
-            "statName": "Clutch"
+            "statName": "Clutch",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mba267dba797e3f56541e157e7733668c.png",
+            "description": "Win a match after trailing with 2 seconds remaining."
         },
         "medalsActivityCompleteVictoryLastSecond": {
             "statId": "medalsActivityCompleteVictoryLastSecond",
-            "statName": "Comeback"
+            "statName": "Comeback",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m12da5c4739b4add3caec0e00e92ab5b3.png",
+            "description": "Win a match after trailing by 500 with 30 seconds remaining OR when the enemy was nearing victory."
         },
         "medalsActivityCompleteVictoryRumble": {
             "statId": "medalsActivityCompleteVictoryRumble",
-            "statName": "Alone at the Top"
+            "statName": "Alone at the Top",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma618cd8fa6a6127fced04a5ec55765a2.png",
+            "description": "Win a Rumble match."
         },
         "medalsActivityCompleteVictoryRumbleBlowout": {
             "statId": "medalsActivityCompleteVictoryRumbleBlowout",
-            "statName": "Sum of All Tears"
+            "statName": "Sum of All Tears",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mdb6b21059de311d2fb29edf659b3435d.png",
+            "description": "Win a Rumble match with a score greater than the sum of your enemies."
         },
         "medalsActivityCompleteVictoryRumbleLastSecond": {
             "statId": "medalsActivityCompleteVictoryRumbleLastSecond",
-            "statName": "Won't Be Beat"
+            "statName": "Won't Be Beat",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mad16e092069664538c7a25ba955f3171.png",
+            "description": "Win a Rumble match after trailing by 500 with 30 seconds remaining OR when an opponent was near the score limit."
         },
         "medalsActivityCompleteVictoryRumbleSuddenDeath": {
             "statId": "medalsActivityCompleteVictoryRumbleSuddenDeath",
-            "statName": "Heartbreaker"
+            "statName": "Heartbreaker",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m04b7c6a751e5b944b769f7a236339efb.png",
+            "description": "Win a Rumble match in Overtime."
         },
         "medalsActivityCompleteVictorySuddenDeath": {
             "statId": "medalsActivityCompleteVictorySuddenDeath",
-            "statName": "Zero Hour"
+            "statName": "Zero Hour",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf1d8a2e3fa2628958f313ad0c6efd115.png",
+            "description": "Win a match in Overtime."
         },
         "medalsBuddyResurrectionMulti": {
             "statId": "medalsBuddyResurrectionMulti",
-            "statName": "Medic!"
+            "statName": "Medic!",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m80feb7e68d551509fdcde39af56c2af9.png",
+            "description": "Quickly revive 2 downed allies."
         },
         "medalsBuddyResurrectionSpree": {
             "statId": "medalsBuddyResurrectionSpree",
-            "statName": "Angel of Light"
+            "statName": "Angel of Light",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me64c76c9579f691ea1b8868de09d98ae.png",
+            "description": "In a single life, revive 5 downed allies."
         },
         "medalsCloseCallTalent": {
             "statId": "medalsCloseCallTalent",
-            "statName": "Narrow Escape"
+            "statName": "Narrow Escape",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m915391b17f5c469999f22d68a79d9beb.png",
+            "description": "Kill an enemy who nearly killed you."
         },
         "medalsComebackKill": {
             "statId": "medalsComebackKill",
-            "statName": "Back in Action"
+            "statName": "Back in Action",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mba301f76541953a63a1c53720ab05c33.png",
+            "description": "Kill an enemy after 5 consecutive lives with no kills."
         },
         "medalsDominationKill": {
             "statId": "medalsDominationKill",
-            "statName": "Domination"
+            "statName": "Domination",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma99ed31f1ed16011d8e212260fa6a078.png",
+            "description": "Kill an enemy while your team holds all 3 Control zones."
         },
         "medalsDominionZoneCapturedSpree": {
             "statId": "medalsDominionZoneCapturedSpree",
-            "statName": "Hat Trick"
+            "statName": "Hat Trick",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mfd3fb6025a8703cefaf9afcb996a8f48.png",
+            "description": "In a single life, capture 3 Control zones."
         },
         "medalsDominionZoneDefenseKillSpree": {
             "statId": "medalsDominionZoneDefenseKillSpree",
-            "statName": "Defender"
+            "statName": "Defender",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m955725c8ef6419b860cad57b4c8f9b38.png",
+            "description": "In a single life, score 5 Zone Defense kills."
         },
         "medalsDominionZoneOffenseKillSpree": {
             "statId": "medalsDominionZoneOffenseKillSpree",
-            "statName": "At Any Cost"
+            "statName": "At Any Cost",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma9bf61a3706747ed8c4596d7ae537943.png",
+            "description": "In a single life, kill 3 enemies while capturing a Control zone."
         },
         "allMedalsScore": {
             "statId": "allMedalsScore",
@@ -14279,115 +14337,171 @@
         },
         "medalsFirstBlood": {
             "statId": "medalsFirstBlood",
-            "statName": "First Blood"
+            "statName": "First Blood",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mbacd26f29970ada09f819d6e308285cb.png",
+            "description": "Score the first kill in a match."
         },
         "medalsFirstPlaceKillSpree": {
             "statId": "medalsFirstPlaceKillSpree",
-            "statName": "Uprising"
+            "statName": "Uprising",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf7552b8b42fe0cdce6baddafff91b2e4.png",
+            "description": "In a single match, kill the leader 3 times."
         },
         "medalsGrenadeKillStick": {
             "statId": "medalsGrenadeKillStick",
-            "statName": "Get it Off!"
+            "statName": "Get it Off!",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m521ab81bf41b7dfcbebad5626bb56fb8.png",
+            "description": "Kill an enemy by sticking them with a grenade."
         },
         "medalsHazardKill": {
             "statId": "medalsHazardKill",
-            "statName": "Hazard Pay"
+            "statName": "Hazard Pay",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m13a859c5047ecb0fc5388156398ed4be.png",
+            "description": "Kill an enemy with an exploding object."
         },
         "medalsHunterKillInvisible": {
             "statId": "medalsHunterKillInvisible",
-            "statName": "I See You"
+            "statName": "I See You",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m0b4e7db175edc2b7b0bfd95b6cfd3f08.png",
+            "description": "Kill an invisible enemy."
         },
         "medalsKillAssistSpree": {
             "statId": "medalsKillAssistSpree",
-            "statName": "Unsung Hero"
+            "statName": "Unsung Hero",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8dbf600866a4d744af7159f425e4178d.png",
+            "description": "In a single life, assist your allies on 3 kills."
         },
         "medalsKillAssistSpreeFfa": {
             "statId": "medalsKillAssistSpreeFfa",
-            "statName": "Enemy of My Enemy"
+            "statName": "Enemy of My Enemy",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_maf9b17453a2f6b457516e8027426faca.png",
+            "description": "In a single life, catch 3 enemies in crossfire."
         },
         "medalsKillHeadshot": {
             "statId": "medalsKillHeadshot",
-            "statName": "Bullseye"
+            "statName": "Bullseye",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m0f3d34a0e6cf3aa527172d899a7a97d2.png",
+            "description": "In a single life, kill 3 enemies with headshots."
         },
         "medalsKilljoy": {
             "statId": "medalsKilljoy",
-            "statName": "Enforcer"
+            "statName": "Enforcer",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m297f0d590aff33be59871d6c4a4673e1.png",
+            "description": "Shut down an enemy's kill streak."
         },
         "medalsKilljoyMega": {
             "statId": "medalsKilljoyMega",
-            "statName": "End of the Line"
+            "statName": "End of the Line",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mae5e8eebd9f38f37572694b26e970e66.png",
+            "description": "Stop an enemy on a 15+ kill streak."
         },
         "medalsKillMulti2": {
             "statId": "medalsKillMulti2",
-            "statName": "Double Down"
+            "statName": "Double Down",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m746baced6bbe4a4c6e7d98aa6345617d.png",
+            "description": "Rapidly kill 2 enemies."
         },
         "medalsKillMulti3": {
             "statId": "medalsKillMulti3",
-            "statName": "Triple Down"
+            "statName": "Triple Down",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m1f584310fb18bb5c0fa21e81e295fee5.png",
+            "description": "Rapidly kill 3 enemies."
         },
         "medalsKillMulti4": {
             "statId": "medalsKillMulti4",
-            "statName": "Breaker"
+            "statName": "Breaker",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m224c303fc865ede206b5830bd8ac2207.png",
+            "description": "Rapidly kill 4 enemies."
         },
         "medalsKillMulti5": {
             "statId": "medalsKillMulti5",
-            "statName": "Slayer"
+            "statName": "Slayer",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m4cf12012358cd4058062648baf40ae58.png",
+            "description": "Rapidly kill 5 enemies."
         },
         "medalsKillMulti6": {
             "statId": "medalsKillMulti6",
-            "statName": "Reaper"
+            "statName": "Reaper",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m6bf01b4e21668eab9d72f6d8faaee823.png",
+            "description": "Rapidly kill 6 enemies."
         },
         "medalsKillMulti7": {
             "statId": "medalsKillMulti7",
-            "statName": "Seventh Column"
+            "statName": "Seventh Column",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m453097fa911a14c180e8d4f88bfdcf76.png",
+            "description": "Defy probability by rapidly killing 7 enemies."
         },
         "medalsKillPostmortem": {
             "statId": "medalsKillPostmortem",
-            "statName": "Postmortem"
+            "statName": "Postmortem",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mdae6855231eb8bf695d6a97a519c9d43.png",
+            "description": "Kill one or more enemies after you have died."
         },
         "medalsKillSpree1": {
             "statId": "medalsKillSpree1",
-            "statName": "Merciless"
+            "statName": "Merciless",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me7019dac10f7230fb824c1dc389257a0.png",
+            "description": "In a single life, kill 5 enemies."
         },
         "medalsKillSpree2": {
             "statId": "medalsKillSpree2",
-            "statName": "Relentless"
+            "statName": "Relentless",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mb313be68b3fcf783cacb5a529e3e0f22.png",
+            "description": "In a single life, kill 10 enemies."
         },
         "medalsKillSpree3": {
             "statId": "medalsKillSpree3",
-            "statName": "Reign of Terror"
+            "statName": "Reign of Terror",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mc364a999ecb72c893f783e7b5b652f05.png",
+            "description": "In a single life, kill 15 enemies."
         },
         "medalsMeleeKillHunterThrowingKnifeHeadshot": {
             "statId": "medalsMeleeKillHunterThrowingKnifeHeadshot",
-            "statName": "Stick Around"
+            "statName": "Stick Around",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mda8430b7c74ea0485026a9f156ffc11f.png",
+            "description": "Fatally headshot an enemy with a Throwing Knife."
         },
         "medalsRescue": {
             "statId": "medalsRescue",
-            "statName": "Overwatch"
+            "statName": "Overwatch",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mfc8d74051a3ed141a66cbcc99d711158.png",
+            "description": "Defend an ally from enemy fire."
         },
         "medalsSalvageProbeCanceled": {
             "statId": "medalsSalvageProbeCanceled",
-            "statName": "Disruption"
+            "statName": "Disruption",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf90155e3e5a87f393d143dc979bcfa62.png",
+            "description": "In Salvage, neutralize the enemy probe."
         },
         "medalsSalvageProbeCompleteSpree": {
             "statId": "medalsSalvageProbeCompleteSpree",
-            "statName": "Salvage Crew"
+            "statName": "Salvage Crew",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mdc0055b80bd1adf62184360b3b43f524.png",
+            "description": "As a team, salvage 3 relics in a match."
         },
         "medalsSalvageProbeDefenseKill": {
             "statId": "medalsSalvageProbeDefenseKill",
-            "statName": "Im-probe-able"
+            "statName": "Im-probe-able",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8886beac6bc2a3761391f0f9ab5da602.png",
+            "description": "Kill an enemy near the allied probe."
         },
         "medalsSalvageZoneCapturedSpree": {
             "statId": "medalsSalvageZoneCapturedSpree",
-            "statName": "Relic Hunter"
+            "statName": "Relic Hunter",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8cc592ab584e146ed05ab24f92beace5.png",
+            "description": "Help capture 3 Relic zones in a Salvage match."
         },
         "medalsTeamDominationHold1m": {
             "statId": "medalsTeamDominationHold1m",
-            "statName": "Lockdown"
+            "statName": "Lockdown",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m25c806bb571d215e8ae2e43285f74186.png",
+            "description": "As a team, hold all 3 Control zones for 60 seconds."
         },
         "medalsTeamKillSpree": {
             "statId": "medalsTeamKillSpree",
-            "statName": "Strength of the Wolf"
+            "statName": "Strength of the Wolf",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m030491eb0af454a1321b9557ff5cfc69.png",
+            "description": "As a team, kill 10 enemies with no one on your team dying."
         },
         "medalsUnknown": {
             "statId": "medalsUnknown",
@@ -14395,361 +14509,497 @@
         },
         "medalsVehicleFotcTurretKillSpree": {
             "statId": "medalsVehicleFotcTurretKillSpree",
-            "statName": "Gunner"
+            "statName": "Gunner",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m2ef70c179989e54471aee1f294ef3295.png",
+            "description": "In a single life, kill 5 players with a Turret."
         },
         "medalsVehicleInterceptorKillSplatter": {
             "statId": "medalsVehicleInterceptorKillSplatter",
-            "statName": "Bulldozer"
+            "statName": "Bulldozer",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m07e9665cac61596efbaee79026ed7cf5.png",
+            "description": "Run over an enemy with an Interceptor."
         },
         "medalsVehicleInterceptorKillSpree": {
             "statId": "medalsVehicleInterceptorKillSpree",
-            "statName": "Chariot of Fire"
+            "statName": "Chariot of Fire",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mdb60638d8b5838cec06104204f87886b.png",
+            "description": "In a single life, kill 5 players while driving an Interceptor."
         },
         "medalsVehiclePikeKillSplatter": {
             "statId": "medalsVehiclePikeKillSplatter",
-            "statName": "Skewered"
+            "statName": "Skewered",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me2fc3f34a787ae6591eda449aeeaced2.png",
+            "description": "Run over an enemy with a Pike."
         },
         "medalsVehiclePikeKillSpree": {
             "statId": "medalsVehiclePikeKillSpree",
-            "statName": "Fallen Angel"
+            "statName": "Fallen Angel",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m0613e52c37406df725580fab83739fe0.png",
+            "description": "In a single life, kill 5 enemies while driving the Pike."
         },
         "medalsVehicleSparrowKillSplatter": {
             "statId": "medalsVehicleSparrowKillSplatter",
-            "statName": "Never Speak of This Again"
+            "statName": "Never Speak of This Again",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mc7e0cbb87f6b6d2e143a759844f9ca7a.png",
+            "description": "Run over an enemy with a Sparrow."
         },
         "medalsWeaponFusionRifleKillSpree": {
             "statId": "medalsWeaponFusionRifleKillSpree",
-            "statName": "Master Blaster"
+            "statName": "Master Blaster",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m2201e64d9f98ea2a8d22ed03ec389bd9.png",
+            "description": "Kill 3 opponents with a Fusion Rifle without switching weapons or reloading."
         },
         "medalsWeaponHandCannonHeadshotSpree": {
             "statId": "medalsWeaponHandCannonHeadshotSpree",
-            "statName": "Dead Man's Hand"
+            "statName": "Dead Man's Hand",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m7b75faac50066f7aed7c9c5c3357a6d0.png",
+            "description": "In a single life, kill 3 opponents with Hand Cannon headshots."
         },
         "medalsWeaponMachineGunKillSpree": {
             "statId": "medalsWeaponMachineGunKillSpree",
-            "statName": "Machine Lord"
+            "statName": "Machine Lord",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_md41b3cadbc4c6d3ec0a7d2aaf419fbe7.png",
+            "description": "Kill 3 enemies with a Machine Gun without switching weapons or reloading."
         },
         "medalsWeaponRocketLauncherKillSpree": {
             "statId": "medalsWeaponRocketLauncherKillSpree",
-            "statName": "Splash Damage"
+            "statName": "Splash Damage",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mde7d77b45e7c96be4b43a70b2370dead.png",
+            "description": "Kill 3 enemies with rockets in less than a second."
         },
         "medalsWeaponShotgunKillSpree": {
             "statId": "medalsWeaponShotgunKillSpree",
-            "statName": "Buckshot Bruiser"
+            "statName": "Buckshot Bruiser",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m12b0c60086f8ee07b9d92685e299ae4c.png",
+            "description": "Kill 3 enemies with a Shotgun without switching weapons or reloading."
         },
         "medalsWeaponSniperRifleHeadshotSpree": {
             "statId": "medalsWeaponSniperRifleHeadshotSpree",
-            "statName": "Marksman"
+            "statName": "Marksman",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mbdb0882056e3a6393e4bf6bea4b89061.png",
+            "description": "Kill 2 enemies with Sniper Rifle headshots without switching weapons or reloading."
         },
         "medalsWinningScore": {
             "statId": "medalsWinningScore",
-            "statName": "Nail in the Coffin"
+            "statName": "Nail in the Coffin",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m12dc39d05335f02111561718f0582144.png",
+            "description": "Score the winning points in a match."
         },
         "medalsActivityCompleteVictoryElimination": {
             "statId": "medalsActivityCompleteVictoryElimination",
-            "statName": "Trial By Fire"
+            "statName": "Trial By Fire",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m14dd24b9a3dc093bc91328228732bb50.png",
+            "description": "Win an Elimination match."
         },
         "medalsActivityCompleteVictoryEliminationShutout": {
             "statId": "medalsActivityCompleteVictoryEliminationShutout",
-            "statName": "Annihilation"
+            "statName": "Annihilation",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m9ecbbcf34149c6a1c8c845ac0d0b9091.png",
+            "description": "As a team, win an Elimination match without being wiped."
         },
         "medalsEliminationLastStandKill": {
             "statId": "medalsEliminationLastStandKill",
-            "statName": "Never Say Die"
+            "statName": "Never Say Die",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_meef309ddbf708b5a5901d9179548713f.png",
+            "description": "Kill an enemy as the last Guardian standing on your team."
         },
         "medalsEliminationLastStandRevive": {
             "statId": "medalsEliminationLastStandRevive",
-            "statName": "From the Brink"
+            "statName": "From the Brink",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m2e40fd761d2d76d6be501e8f3f07cb6c.png",
+            "description": "Revive an ally as the last Guardian standing on your team."
         },
         "medalsEliminationWipeQuick": {
             "statId": "medalsEliminationWipeQuick",
-            "statName": "Ace"
+            "statName": "Ace",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mc6d31ef5e788b733b1b3326dc23cd250.png",
+            "description": "As a fireteam, defeat the enemy team in the first 30 seconds of a round."
         },
         "medalsEliminationWipeSolo": {
             "statId": "medalsEliminationWipeSolo",
-            "statName": "Wrecking Ball"
+            "statName": "Wrecking Ball",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_md8545a9d8956c0ca2a700d75fa7a5f72.png",
+            "description": "Singlehandedly wipe the enemy team."
         },
         "medalsActivityCompleteVictoryEliminationPerfect": {
             "statId": "medalsActivityCompleteVictoryEliminationPerfect",
-            "statName": "Bulletproof"
+            "statName": "Bulletproof",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m7f5451453a58793961439b2c2ba9f3a9.png",
+            "description": "As a team, win an Elimination match where no one on your team dies."
         },
         "medalsAbilityRadianceGrenadeKillMulti": {
             "statId": "medalsAbilityRadianceGrenadeKillMulti",
-            "statName": "Scorched Earth"
+            "statName": "Scorched Earth",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma5e571c8b02316e43f2b304d04670c35.png",
+            "description": "Kill 3 enemies with grenades while Radiance is active."
         },
         "medalsSalvageProbeOffenseKillMulti": {
             "statId": "medalsSalvageProbeOffenseKillMulti",
-            "statName": "Clean Sweep"
+            "statName": "Clean Sweep",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8886beac6bc2a3761391f0f9ab5da602.png",
+            "description": "Rapidly kill 3 enemies near their own probe."
         },
         "medalsActivityCompleteVictoryMercy": {
             "statId": "medalsActivityCompleteVictoryMercy",
-            "statName": "No Mercy"
+            "statName": "No Mercy",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_maa4da5e99c58e51fc052997ca6e240cf.png",
+            "description": "Win a match by invoking the mercy rule."
         },
         "medalsKillSpreeAbsurd": {
             "statId": "medalsKillSpreeAbsurd",
-            "statName": "We Ran out of Medals"
+            "statName": "We Ran out of Medals",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m6f1b07d32eb09ae45b9a44da40d45a62.png",
+            "description": "Defeat 25 opposing Guardians without dying."
         },
         "medalsKillSpreeNoDamage": {
             "statId": "medalsKillSpreeNoDamage",
-            "statName": "Phantom"
+            "statName": "Phantom",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mab1a465b2c8fc80b5f867f2486db4f81.png",
+            "description": "Defeat 7 opposing Guardians while taking no damage."
         },
         "medalsActivityCompleteSingularityPerfectRunner": {
             "statId": "medalsActivityCompleteSingularityPerfectRunner",
-            "statName": "Perfect Runner"
+            "statName": "Perfect Runner",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf41a75c0811f5592673f77d1a888b3e8.png",
+            "description": "Complete a Rift match with 2 or more carries and a 100% capture rate."
         },
         "medalsSingularityFlagHolderKilledClose": {
             "statId": "medalsSingularityFlagHolderKilledClose",
-            "statName": "Denied"
+            "statName": "Denied",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m749cc44215ecc39fe3d0a5493d78e34a.png",
+            "description": "Defeat an enemy Spark Runner near the Rift."
         },
         "medalsActivityCompleteCycle": {
             "statId": "medalsActivityCompleteCycle",
-            "statName": "The Cycle"
+            "statName": "The Cycle",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mdb8d7a333bf5e55553107cfaa643c77e.png",
+            "description": "Complete a round with at least a Primary, Special, Heavy, Grenade, Melee, and Super kill."
         },
         "medalsAbilityVoidBowKillMulti": {
             "statId": "medalsAbilityVoidBowKillMulti",
-            "statName": "Wild Hunt"
+            "statName": "Wild Hunt",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf3d36ba306e3709cde0c33a241997412.png",
+            "description": "Rapidly defeat 3 opposing Guardians with Shadowshot."
         },
         "medalsAbilityThermalHammerKillMulti": {
             "statId": "medalsAbilityThermalHammerKillMulti",
-            "statName": "Hammer and Tongs"
+            "statName": "Hammer and Tongs",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m2f168c48897ba93ba070d440f7d2f701.png",
+            "description": "Defeat 3 opposing Guardians with a single Hammer of Sol activation."
         },
         "medalsAbilityArcLightningKillMulti": {
             "statId": "medalsAbilityArcLightningKillMulti",
-            "statName": "Storm Bringer"
+            "statName": "Storm Bringer",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf4406ecbf05f2e6263a856c900756a6d.png",
+            "description": "Defeat 3 opposing Guardians with a single Stormtrance activation."
         },
         "medalsSingularityFlagCaptureMulti": {
             "statId": "medalsSingularityFlagCaptureMulti",
-            "statName": "Unstoppable Force"
+            "statName": "Unstoppable Force",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m4c0c0424c25b86ccf80a73aec1fa5cd0.png",
+            "description": "Capture the Spark 3 times in a single match."
         },
         "medalsSingularityFlagHolderKilledMulti": {
             "statId": "medalsSingularityFlagHolderKilledMulti",
-            "statName": "Immovable Object"
+            "statName": "Immovable Object",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m02a734da81d66414c55e3f267658b47c.png",
+            "description": "Defeat an opposing Spark Runner 3 times in a single match."
         },
         "medalsWeaponSwordKillSpree": {
             "statId": "medalsWeaponSwordKillSpree",
-            "statName": "Sword at a Gun Fight"
+            "statName": "Sword at a Gun Fight",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m9f8ac92b23f11d46419cb82935682b79.png",
+            "description": "Rapidly defeat 3 enemies with a Heavy Sword."
         },
         "medalsRadianceShutdown": {
             "statId": "medalsRadianceShutdown",
-            "statName": "...And Stay Down!"
+            "statName": "...And Stay Down!",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m7a1ba4190b056693e497d1ac1e05d6b2.png",
+            "description": "Defeat a Warlock within 3 seconds of their self-reviving with Radiance."
         },
         "medalsSingularityRunnerDefenseMulti": {
             "statId": "medalsSingularityRunnerDefenseMulti",
-            "statName": "Clear a Path"
+            "statName": "Clear a Path",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m36ae16c5a210ed1a3d377f38f94540a1.png",
+            "description": "In a single Spark run, defeat 2 enemies who damage your team's Runner."
         },
         "medalsWeaponAutoRifleKillSpree": {
             "statId": "medalsWeaponAutoRifleKillSpree",
-            "statName": "Automatic"
+            "statName": "Automatic",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8f1fe9c611ec24e7a1c4f58cb840555d.png",
+            "description": "In a single life, defeat 5 opposing Guardians with an Auto Rifle."
         },
         "medalsWeaponPulseRifleKillSpree": {
             "statId": "medalsWeaponPulseRifleKillSpree",
-            "statName": "Finger on the Pulse"
+            "statName": "Finger on the Pulse",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mb1919d9fa1432844e7c0735855e8d5d9.png",
+            "description": "In a single life, defeat 5 opposing Guardians with a Pulse Rifle."
         },
         "medalsWeaponScoutRifleKillSpree": {
             "statId": "medalsWeaponScoutRifleKillSpree",
-            "statName": "Scout's Honor"
+            "statName": "Scout's Honor",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m19f521f962f4aed842251ca89c508196.png",
+            "description": "In a single life, defeat 5 opposing Guardians with a Scout Rifle."
         },
         "medalsWeaponSidearmKillSpree": {
             "statId": "medalsWeaponSidearmKillSpree",
-            "statName": "Sidekick"
+            "statName": "Sidekick",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me8f0611a5aba8cc115e2eb5485373b7d.png",
+            "description": "In a single life, defeat 3 opposing Guardians with a Sidearm."
         },
         "medalsZoneCapturedBInitial": {
             "statId": "medalsZoneCapturedBInitial",
-            "statName": "B-Line"
+            "statName": "B-Line",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me39f3c3f3ed3565184b9fb666b22f8b3.png",
+            "description": "In a Control match, capture Zone B first."
         },
         "medalsPaybackKill": {
             "statId": "medalsPaybackKill",
-            "statName": "Payback"
+            "statName": "Payback",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mbc31aa22e2fd55d1e79a77274f39eb65.png",
+            "description": "Defeat the opposing Guardian who killed you last."
         },
         "medalsAvenger": {
             "statId": "medalsAvenger",
-            "statName": "Avenger"
+            "statName": "Avenger",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m324a5681ecdd1ff57498932167c794b3.png",
+            "description": "Avenge a defeated teammate."
         }
     },
-    "Monthly": {
-        "weaponPrecisionKillsAutoRifle": {
-            "statId": "weaponPrecisionKillsAutoRifle",
-            "statName": "Auto Rifle"
+    "Weapons": {
+        "AutoRifle": {
+            "weaponId": "AutoRifle",
+            "weaponName": "Auto Rifle",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsAutoRifle"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsAutoRifle"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsAutoRifle"
+                }
+            }
         },
-        "weaponPrecisionKillsFusionRifle": {
-            "statId": "weaponPrecisionKillsFusionRifle",
-            "statName": "Fusion Rifle"
+        "FusionRifle": {
+            "weaponId": "FusionRifle",
+            "weaponName": "Fusion Rifle",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsFusionRifle"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsFusionRifle"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsFusionRifle"
+                }
+            }
         },
-        "weaponPrecisionKillsGrenade": {
-            "statId": "weaponPrecisionKillsGrenade",
-            "statName": "Grenade"
+        "Grenade": {
+            "weaponId": "Grenade",
+            "weaponName": "Grenade",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsGrenade"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsGrenade"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsGrenade"
+                }
+            }
         },
-        "weaponPrecisionKillsHandCannon": {
-            "statId": "weaponPrecisionKillsHandCannon",
-            "statName": "Hand Cannon"
+        "HandCannon": {
+            "weaponId": "HandCannon",
+            "weaponName": "Hand Cannon",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsHandCannon"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsHandCannon"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsHandCannon"
+                }
+            }
         },
-        "weaponPrecisionKillsMachinegun": {
-            "statId": "weaponPrecisionKillsMachinegun",
-            "statName": "Machine Gun"
+        "Machinegun": {
+            "weaponId": "Machinegun",
+            "weaponName": "Machine Gun",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsMachinegun"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsMachinegun"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsMachinegun"
+                }
+            }
         },
-        "weaponPrecisionKillsMelee": {
-            "statId": "weaponPrecisionKillsMelee",
-            "statName": "Melee"
+        "Melee": {
+            "weaponId": "Melee",
+            "weaponName": "Melee",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsMelee"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsMelee"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsMelee"
+                }
+            }
         },
-        "weaponPrecisionKillsPulseRifle": {
-            "statId": "weaponPrecisionKillsPulseRifle",
-            "statName": "Pulse Rifle"
+        "PulseRifle": {
+            "weaponId": "PulseRifle",
+            "weaponName": "Pulse Rifle",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsPulseRifle"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsPulseRifle"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsPulseRifle"
+                }
+            }
         },
-        "weaponPrecisionKillsRocketLauncher": {
-            "statId": "weaponPrecisionKillsRocketLauncher",
-            "statName": "Rocket Launcher"
+        "RocketLauncher": {
+            "weaponId": "RocketLauncher",
+            "weaponName": "Rocket Launcher",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsRocketLauncher"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsRocketLauncher"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsRocketLauncher"
+                }
+            }
         },
-        "weaponPrecisionKillsScoutRifle": {
-            "statId": "weaponPrecisionKillsScoutRifle",
-            "statName": "Scout Rifle"
+        "ScoutRifle": {
+            "weaponId": "ScoutRifle",
+            "weaponName": "Scout Rifle",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsScoutRifle"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsScoutRifle"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsScoutRifle"
+                }
+            }
         },
-        "weaponPrecisionKillsShotgun": {
-            "statId": "weaponPrecisionKillsShotgun",
-            "statName": "Shotgun"
+        "Shotgun": {
+            "weaponId": "Shotgun",
+            "weaponName": "Shotgun",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsShotgun"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsShotgun"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsShotgun"
+                }
+            }
         },
-        "weaponPrecisionKillsSniper": {
-            "statId": "weaponPrecisionKillsSniper",
-            "statName": "Sniper Rifle"
+        "Sniper": {
+            "weaponId": "Sniper",
+            "weaponName": "Sniper Rifle",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsSniper"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsSniper"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsSniper"
+                }
+            }
         },
-        "weaponPrecisionKillsSubmachinegun": {
-            "statId": "weaponPrecisionKillsSubmachinegun",
-            "statName": "Submachine Gun"
+        "Submachinegun": {
+            "weaponId": "Submachinegun",
+            "weaponName": "Submachine Gun",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsSubmachinegun"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsSubmachinegun"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsSubmachinegun"
+                }
+            }
         },
-        "weaponPrecisionKillsSuper": {
-            "statId": "weaponPrecisionKillsSuper",
-            "statName": "Super"
+        "Super": {
+            "weaponId": "Super",
+            "weaponName": "Super",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsSuper"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsSuper"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsSuper"
+                }
+            }
         },
-        "weaponPrecisionKillsRelic": {
-            "statId": "weaponPrecisionKillsRelic",
-            "statName": "Relic Kills"
+        "Relic": {
+            "weaponId": "Relic",
+            "weaponName": "Relic Kills",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsRelic"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsRelic"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsRelic"
+                }
+            }
         },
-        "weaponPrecisionKillsSideArm": {
-            "statId": "weaponPrecisionKillsSideArm",
-            "statName": "Sidearm"
+        "SideArm": {
+            "weaponId": "SideArm",
+            "weaponName": "Sidearm",
+            "stats": {
+                "weaponPrecisionKills": {
+                    "statId": "weaponPrecisionKillsSideArm"
+                },
+                "weaponKills": {
+                    "statId": "weaponKillsSideArm"
+                },
+                "weaponKillsPrecisionKills": {
+                    "statId": "weaponKillsPrecisionKillsSideArm"
+                }
+            }
         },
-        "weaponKillsAutoRifle": {
-            "statId": "weaponKillsAutoRifle",
-            "statName": "Auto Rifle"
-        },
-        "weaponKillsFusionRifle": {
-            "statId": "weaponKillsFusionRifle",
-            "statName": "Fusion Rifle"
-        },
-        "weaponKillsGrenade": {
-            "statId": "weaponKillsGrenade",
-            "statName": "Grenade"
-        },
-        "weaponKillsHandCannon": {
-            "statId": "weaponKillsHandCannon",
-            "statName": "Hand Cannon"
-        },
-        "weaponKillsMachinegun": {
-            "statId": "weaponKillsMachinegun",
-            "statName": "Machine Gun"
-        },
-        "weaponKillsMelee": {
-            "statId": "weaponKillsMelee",
-            "statName": "Melee"
-        },
-        "weaponKillsPulseRifle": {
-            "statId": "weaponKillsPulseRifle",
-            "statName": "Pulse Rifle"
-        },
-        "weaponKillsRocketLauncher": {
-            "statId": "weaponKillsRocketLauncher",
-            "statName": "Rocket Launcher"
-        },
-        "weaponKillsScoutRifle": {
-            "statId": "weaponKillsScoutRifle",
-            "statName": "Scout Rifle"
-        },
-        "weaponKillsShotgun": {
-            "statId": "weaponKillsShotgun",
-            "statName": "Shotgun"
-        },
-        "weaponKillsSniper": {
-            "statId": "weaponKillsSniper",
-            "statName": "Sniper Rifle"
-        },
-        "weaponKillsSubmachinegun": {
-            "statId": "weaponKillsSubmachinegun",
-            "statName": "Submachine Gun"
-        },
-        "weaponKillsSuper": {
-            "statId": "weaponKillsSuper",
-            "statName": "Super"
-        },
-        "weaponKillsRelic": {
-            "statId": "weaponKillsRelic",
-            "statName": "Relics"
-        },
-        "weaponKillsSideArm": {
-            "statId": "weaponKillsSideArm",
-            "statName": "Sidearm"
-        },
-        "weaponKillsSword": {
-            "statId": "weaponKillsSword",
-            "statName": "Sword"
-        },
-        "weaponKillsPrecisionKillsAutoRifle": {
-            "statId": "weaponKillsPrecisionKillsAutoRifle",
-            "statName": "Auto Rifle "
-        },
-        "weaponKillsPrecisionKillsFusionRifle": {
-            "statId": "weaponKillsPrecisionKillsFusionRifle",
-            "statName": "Fusion Rifle "
-        },
-        "weaponKillsPrecisionKillsGrenade": {
-            "statId": "weaponKillsPrecisionKillsGrenade",
-            "statName": "Grenade"
-        },
-        "weaponKillsPrecisionKillsHandCannon": {
-            "statId": "weaponKillsPrecisionKillsHandCannon",
-            "statName": "Hand Cannon"
-        },
-        "weaponKillsPrecisionKillsMachinegun": {
-            "statId": "weaponKillsPrecisionKillsMachinegun",
-            "statName": "Machine Gun"
-        },
-        "weaponKillsPrecisionKillsMelee": {
-            "statId": "weaponKillsPrecisionKillsMelee",
-            "statName": "Melee"
-        },
-        "weaponKillsPrecisionKillsPulseRifle": {
-            "statId": "weaponKillsPrecisionKillsPulseRifle",
-            "statName": "Pulse Rifle"
-        },
-        "weaponKillsPrecisionKillsRocketLauncher": {
-            "statId": "weaponKillsPrecisionKillsRocketLauncher",
-            "statName": "Rocket Launcher"
-        },
-        "weaponKillsPrecisionKillsScoutRifle": {
-            "statId": "weaponKillsPrecisionKillsScoutRifle",
-            "statName": "Scout Rifle "
-        },
-        "weaponKillsPrecisionKillsShotgun": {
-            "statId": "weaponKillsPrecisionKillsShotgun",
-            "statName": "Shotgun"
-        },
-        "weaponKillsPrecisionKillsSniper": {
-            "statId": "weaponKillsPrecisionKillsSniper",
-            "statName": "Sniper Rifle "
-        },
-        "weaponKillsPrecisionKillsSubmachinegun": {
-            "statId": "weaponKillsPrecisionKillsSubmachinegun",
-            "statName": "Submachine Gun"
-        },
-        "weaponKillsPrecisionKillsSuper": {
-            "statId": "weaponKillsPrecisionKillsSuper",
-            "statName": "Super"
-        },
-        "weaponKillsPrecisionKillsRelic": {
-            "statId": "weaponKillsPrecisionKillsRelic",
-            "statName": "###weaponKillsPrecisionKillsRelic###"
-        },
-        "weaponKillsPrecisionKillsSideArm": {
-            "statId": "weaponKillsPrecisionKillsSideArm",
-            "statName": "Sidearm"
+        "Sword": {
+            "weaponId": "Sword",
+            "weaponName": "Sword",
+            "stats": {
+                "weaponKills": {
+                    "statId": "weaponKillsSword"
+                }
+            }
         }
     },
     "UniqueWeapon": {
