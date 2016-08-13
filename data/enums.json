@@ -1236,16 +1236,16 @@
         "Internal": 104
     },
     "DestinyStatsGroupType": {
-        "None": 0,
-        "Daily": 1,
-        "Monthly": 2,
-        "AllTime": 3,
-        "Activity": 102,
+        "General": 1,
+        "Weapons": 2,
+        "Medals": 3,
         "Enemies": 4,
         "ReservedGroups": 100,
         "Leaderboard": 101,
+        "Activity": 102,
         "UniqueWeapon": 103,
-        "Internal": 104
+        "Internal": 104,
+        "Unknown": 105
     },
     "PeriodType": {
         "None": 0,
