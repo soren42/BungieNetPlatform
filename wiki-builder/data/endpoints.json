@@ -179,6 +179,13 @@
                 "params": [],
                 "post": []
             },
+            "GetCurrentBungieNetUser": {
+                "name": "GetCurrentBungieNetUser",
+                "method": "GET",
+                "endpoint": "\/User\/GetCurrentBungieNetUser\/",
+                "params": [],
+                "post": []
+            },
             "GetBungieNetUserById": {
                 "name": "GetBungieNetUserById",
                 "method": "GET",
@@ -2993,7 +3000,9 @@
                 "name": "GetGlobalAlerts",
                 "method": "GET",
                 "endpoint": "\/\/GlobalAlerts\/",
-                "params": [],
+                "params": [
+                    "includestreaming"
+                ],
                 "post": []
             }
         }

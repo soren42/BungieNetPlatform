@@ -504,11 +504,13 @@ if (count($enums_match) > 0) {
 }*/
 $enums = array();
 
-preg_match_all('/[a-z]+=[a-z]+\.([^,]+),function\([^\)]+\)\{([^\}]+)\}/i', $lib_data, $enums_matches, PREG_SET_ORDER);
+//preg_match_all('/[a-z]+=[a-z]+\.([^,]+),function\([^\)]+\)\{([^\}]+)\}/i', $lib_data, $enums_matches, PREG_SET_ORDER);
+preg_match_all('/function\([^\)]+\)\{([^\}]+)\}\([^\|]+\|\|\([a-z]+\.([^=]+)=/i', $lib_data, $enums_matches, PREG_SET_ORDER);
 foreach($enums_matches as $match) {
-	$key = $match[1];
+	$key = $match[2];
+	$enums_match = $match[1];
 	//echo '<pre>'.var_export($match, true).'</pre>';
-	foreach(explode(';', $match[2]) as $enum_entry) {
+	foreach(explode(';', $enums_match) as $enum_entry) {
 		preg_match('/\[[^\.]+\.([^=]+)=([^\]]+)/i', $enum_entry, $enum_match);
 		if (!isset($enum_match[2])) {
 			//echo '<pre>'.$enum_entry.'</pre>';
