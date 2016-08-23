@@ -289,6 +289,15 @@
             "access": ""
         },
         {
+            "name": "GetCurrentBungieNetUser",
+            "method": "GET",
+            "endpoint": "\/User\/GetCurrentBungieNetUser\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": ""
+        },
+        {
             "name": "GetCurrentUser-(User)",
             "method": "GET",
             "endpoint": "\/User\/GetBungieNetUser\/",
@@ -6394,7 +6403,12 @@
             "name": "GetGlobalAlerts",
             "method": "GET",
             "endpoint": "\/\/GlobalAlerts\/",
-            "params": [],
+            "params": {
+                "includestreaming": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": [],
             "access": "Public"
