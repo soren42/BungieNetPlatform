@@ -1,5 +1,5 @@
 {
-    "GlobalAcknowledgementItem": {
+    "IgnoreStatus": {
         "NotIgnored": 0,
         "IgnoredUser": 1,
         "IgnoredGroup": 2,
@@ -8,7 +8,7 @@
         "IgnoredTag": 16,
         "IgnoredGlobal": 32
     },
-    "IgnoreStatus": {
+    "IgnoredItemType": {
         "All": 0,
         "Post": 1,
         "Group": 2,
@@ -20,14 +20,14 @@
         "GroupWallPost": 8,
         "PrivateMessage": 9
     },
-    "IgnoredItemType": {
+    "ModeratorRequestedPunishment": {
         "Unknown": 0,
         "Warning": 1,
         "SevenDayBan": 2,
         "ThirtyDayBan": 3,
         "PermanentBan": 255
     },
-    "ModeratorRequestedPunishment": {
+    "IgnoreLength": {
         "None": 0,
         "Week": 1,
         "TwoWeeks": 2,
@@ -41,7 +41,7 @@
         "Hour": 10,
         "ThirtyDays": 11
     },
-    "IgnoreLength": {
+    "ReportResolutionStatus": {
         "Unresolved": 0,
         "Innocent": 1,
         "GuiltyBan": 2,
@@ -50,42 +50,41 @@
         "GuiltyAlias": 5,
         "ResolveNoAction": 6
     },
-    "ReportResolutionStatus": {
-        "ReadGroups": 1,
-        "WriteGroups": 2,
-        "AdminGroups": 4,
-        "BnetWrite": 8,
-        "MoveEquipDestinyItems": 16,
-        "ReadPrivateDestinyData": 32,
-        "SendReceivePrivateMessages": 64,
-        "ReadUserData": 128,
-        "EditUserData": 256,
-        "MuteUnmuteUsers": 512
-    },
     "ApplicationScopes": {
+        "ReadBasicUserProfile": 1,
+        "ReadGroups": 2,
+        "WriteGroups": 4,
+        "AdminGroups": 8,
+        "BnetWrite": 16,
+        "MoveEquipDestinyItems": 32,
+        "ReadPrivateDestinyData": 64,
+        "ReadUserData": 128,
+        "EditUserData": 256
+    },
+    "ApplicationStatus": {
         "None": 0,
         "Private": 1,
         "Public": 2,
         "Disabled": 3,
         "Blocked": 4
     },
-    "ApplicationStatus": {
+    "DeveloperRole": {
         "None": 0,
         "Owner": 1,
         "TeamMember": 2
     },
-    "DeveloperRole": {
+    "ApiKeyStatus": {
         "None": 0,
         "Active": 1,
         "Disabled": 2,
         "Deleted": 3
     },
-    "ApiKeyStatus": {
+    "AuthorizationStatus": {
         "None": 0,
         "Active": 1,
         "Revoked": 2
     },
-    "AuthorizationStatus": {
+    "BungieMembershipType": {
         "None": 0,
         "TigerXbox": 1,
         "TigerPsn": 2,
@@ -93,7 +92,7 @@
         "BungieNext": 254,
         "All": -1
     },
-    "BungieMembershipType": {
+    "BungieCredentialType": {
         "None": 0,
         "Xuid": 1,
         "Psnid": 2,
@@ -104,7 +103,7 @@
         "Windows": 9,
         "DemonId": 10
     },
-    "BungieCredentialType": {
+    "ClientDeviceType": {
         "Unknown": 0,
         "Xbox360": 1,
         "Playstation3": 2,
@@ -121,13 +120,13 @@
         "Playstation4": 13,
         "Fake": 255
     },
-    "ClientDeviceType": {
+    "ExternalService": {
         "None": 0,
         "Twitter": 1,
         "Facebook": 2,
         "TwitterHelp": 4
     },
-    "ExternalService": {
+    "AdminHistoryMembershipFlags": {
         "None": 0,
         "Bungie": 1,
         "PlayerSupport": 2,
@@ -137,7 +136,7 @@
         "GroupFounder": 32,
         "FounderInAllGroups": 64
     },
-    "AdminHistoryMembershipFlags": {
+    "AdminHistoryType": {
         "None": 0,
         "ForumPostBan": 1,
         "UserBan": 2,
@@ -170,16 +169,16 @@
         "GroupWallModerate": 29,
         "GroupWallBan": 30
     },
-    "AdminHistoryType": {
+    "AdminHistoryItemFlags": {
         "None": 0
     },
-    "AdminHistoryItemFlags": {
+    "MarketplaceCodeRegion": {
         "Global": 0,
         "USA": 1,
         "Europe": 2,
         "Japan": 3
     },
-    "MarketplaceCodeRegion": {
+    "AclEnum": {
         "None": 0,
         "BNextForumNinja": 1,
         "BNextUnlimitedGroups": 2,
@@ -209,19 +208,19 @@
         "BNextOverrideLinkPrivacy": 26,
         "BNextDiscountSupport": 27
     },
-    "AclEnum": {
+    "BNetAccountPrivacy": {
         "Default": 0,
         "ShowDestinyInventory": 1,
         "HideDestinyActivityHistoryFeed": 2,
         "HideDestinyAdvisors": 4
     },
-    "BNetAccountPrivacy": {
+    "NotificationMethods": {
         "None": 0,
         "EMAIL": 1,
         "MOBILE_PUSH": 2,
         "WEB_ONLY": 4
     },
-    "NotificationMethods": {
+    "RealTimeEventType": {
         "None": 0,
         "ConversationChanged": 1,
         "Typing": 2,
@@ -231,12 +230,12 @@
         "Announcements": 6,
         "RecruitThreadUpdate": 7
     },
-    "RealTimeEventType": {
+    "EventConversationType": {
         "None": 0,
         "Private": 1,
         "Group": 2
     },
-    "EventConversationType": {
+    "NotificationType": {
         "None": 0,
         "MESSAGE": 1,
         "FORUM_REPLY": 2,
@@ -280,18 +279,538 @@
         "USER_MESSAGE_BANNED_PERMANENT": 40,
         "GROUP_WALL_BANNED_PERMANENT": 41
     },
-    "NotificationType": {
+    "ActivityOutputFormat": {
         "BNet": 0,
         "Plain": 1,
         "Custom": 2
     },
-    "ActivityOutputFormat": {
+    "StatFeedbackState": {
         "Good": 0,
         "TooHigh": 1,
         "TooLow": 2,
         "WrongName": 4
     },
-    "StatFeedbackState": {
+    "DestinyRace": {
+        "Human": 0,
+        "Awoken": 1,
+        "Exo": 2,
+        "Unknown": 3
+    },
+    "DestinyGender": {
+        "Male": 0,
+        "Female": 1,
+        "Unknown": 2
+    },
+    "DestinyClass": {
+        "Titan": 0,
+        "Hunter": 1,
+        "Warlock": 2,
+        "Unknown": 3
+    },
+    "DestinyGameVersions": {
+        "None": 0,
+        "Destiny1": 1,
+        "TheDarkBelow": 2,
+        "HouseOfWolves": 4,
+        "Comet": 8
+    },
+    "DestinyAccountTransferState": {
+        "Unknown": 0,
+        "NoTransfer": 1,
+        "BackTransfer": 2,
+        "V1Active": 3,
+        "AccountsSplit": 4
+    },
+    "ItemBindStatus": {
+        "NotBound": 0,
+        "BoundToCharacter": 1,
+        "BoundToAccount": 2,
+        "BoundToGuild": 3
+    },
+    "EquipFailureReason": {
+        "None": 0,
+        "ItemUnequippable": 1,
+        "ItemUniqueEquipRestricted": 2,
+        "ItemFailedUnlockCheck": 4,
+        "ItemFailedLevelCheck": 8,
+        "ItemNotOnCharacter": 16
+    },
+    "DamageType": {
+        "None": 0,
+        "Kinetic": 1,
+        "Arc": 2,
+        "Thermal": 3,
+        "Void": 4,
+        "Raid": 5
+    },
+    "DestinyTalentNodeState": {
+        "Invalid": 0,
+        "CanUpgrade": 1,
+        "NoPoints": 2,
+        "NoPrerequisites": 3,
+        "NoSteps": 4,
+        "NoUnlock": 5,
+        "NoMaterial": 6,
+        "NoGridLevel": 7,
+        "SwappingLocked": 8,
+        "MustSwap": 9,
+        "Complete": 10,
+        "Unknown": 11,
+        "CreationOnly": 12,
+        "Hidden": 13
+    },
+    "ItemLocation": {
+        "Unknown": 0,
+        "Inventory": 1,
+        "Vault": 2,
+        "Vendor": 3,
+        "Postmaster": 4
+    },
+    "TransferStatuses": {
+        "CanTransfer": 0,
+        "ItemIsEquipped": 1,
+        "NotTransferrable": 2,
+        "NoRoomInDestination": 4
+    },
+    "ItemState": {
+        "None": 0,
+        "Locked": 1,
+        "Tracked": 2
+    },
+    "VendorItemStatus": {
+        "Success": 0,
+        "NoInventorySpace": 1,
+        "NoFunds": 2,
+        "NoProgression": 4,
+        "NoUnlock": 8,
+        "NoQuantity": 16,
+        "OutsidePurchaseWindow": 32,
+        "NotAvailable": 64,
+        "UniquenessViolation": 128,
+        "UnknownError": 256,
+        "AlreadySelling": 512,
+        "Unsellable": 1024,
+        "SellingInhibited": 2048,
+        "AlreadyOwned": 4096
+    },
+    "DestinyActivityDifficultyTier": {
+        "Trivial": 0,
+        "Easy": 1,
+        "Normal": 2,
+        "Challenging": 3,
+        "Hard": 4,
+        "Brave": 5,
+        "AlmostImpossible": 6,
+        "Impossible": 7
+    },
+    "TierType": {
+        "Unknown": 0,
+        "Currency": 1,
+        "Basic": 2,
+        "Common": 3,
+        "Rare": 4,
+        "Superior": 5,
+        "Exotic": 6
+    },
+    "SpecialItemType": {
+        "None": 0,
+        "SpecialCurrency": 1,
+        "CompletedBounty": 2,
+        "CrucibleBounty": 3,
+        "VanguardBounty": 4,
+        "IronBannerBounty": 5,
+        "QueenBounty": 6,
+        "ExoticBounty": 7,
+        "Armor": 8,
+        "Weapon": 9,
+        "Engram": 23,
+        "Consumable": 24,
+        "ExchangeMaterial": 25,
+        "PvpTicket": 26,
+        "MissionReward": 27,
+        "BountyReward": 28,
+        "Currency": 29
+    },
+    "DestinyUnlockFlagOperator": {
+        "Invalid": 0,
+        "Flag": 1,
+        "Not": 2,
+        "Or": 3,
+        "And": 4,
+        "Nor": 5,
+        "Xor": 6,
+        "Nand": 7,
+        "Equal": 8,
+        "NotEqual": 9,
+        "UnlockValue": 10,
+        "Constant": 11,
+        "GreaterThan": 12,
+        "GreaterThanOrEqual": 13,
+        "LessThan": 14,
+        "LessThanOrEqual": 15,
+        "Add": 16,
+        "Subtract": 17,
+        "Multiply": 18,
+        "Divide": 19,
+        "Modulus": 20,
+        "Negate": 21
+    },
+    "DestinyItemType": {
+        "None": 0,
+        "Currency": 1,
+        "Armor": 2,
+        "Weapon": 3,
+        "Bounty": 4,
+        "CompletedBounty": 5,
+        "BountyReward": 6,
+        "Message": 7,
+        "Engram": 8,
+        "Consumable": 9,
+        "ExchangeMaterial": 10,
+        "MissionReward": 11,
+        "QuestStep": 12,
+        "QuestStepComplete": 13,
+        "Emblem": 14,
+        "Quest": 15
+    },
+    "DestinyItemSubType": {
+        "None": 0,
+        "Crucible": 1,
+        "Vanguard": 2,
+        "IronBanner": 3,
+        "Queen": 4,
+        "Exotic": 5,
+        "AutoRifle": 6,
+        "Shotgun": 7,
+        "Machinegun": 8,
+        "HandCannon": 9,
+        "RocketLauncher": 10,
+        "FusionRifle": 11,
+        "SniperRifle": 12,
+        "PulseRifle": 13,
+        "ScoutRifle": 14,
+        "Camera": 15,
+        "Crm": 16,
+        "Sidearm": 17,
+        "Sword": 18,
+        "Mask": 19
+    },
+    "BucketScope": {
+        "Character": 0,
+        "Account": 1
+    },
+    "BucketCategory": {
+        "Invisible": 0,
+        "Item": 1,
+        "Currency": 2,
+        "Equippable": 3,
+        "Ignored": 4
+    },
+    "DestinyUnlockValueUIStyle": {
+        "Automatic": 0,
+        "Fraction": 1,
+        "Checkbox": 2,
+        "Percentage": 3
+    },
+    "DestinyVendorItemRefundPolicy": {
+        "NotRefundable": 0,
+        "DeletesItem": 1,
+        "RevokesLicense": 2
+    },
+    "DirectorNodeState": {
+        "Hidden": 0,
+        "Visible": 1,
+        "Teaser": 2,
+        "Incomplete": 3,
+        "Completed": 4
+    },
+    "DirectorNodeUIModifier": {
+        "None": 0,
+        "Enlarge": 1,
+        "Tower": 2,
+        "Unexpected": 3
+    },
+    "DirectorTransitionType": {
+        "TransitionBook": 0,
+        "TransitionSocial": 1
+    },
+    "DestinyRecordCompletionStatus": {
+        "Incomplete": 0,
+        "Complete": 1,
+        "Redeemed": 2
+    },
+    "DestinyRecordBookPageDisplayStyle": {
+        "RecordPage": 0,
+        "SummaryPage": 1
+    },
+    "GroupAttributeType": {
+        "Computed": 0,
+        "Point": 1,
+        "Range": 2
+    },
+    "DestinyTalentNodeStepWeaponPerformances": {
+        "None": 0,
+        "RateOfFire": 1,
+        "Damage": 2,
+        "Accuracy": 4,
+        "Range": 8,
+        "Zoom": 16,
+        "Recoil": 32,
+        "Ready": 64,
+        "Reload": 128,
+        "HairTrigger": 256,
+        "AmmoAndMagazine": 512,
+        "TrackingAndDetonation": 1024,
+        "ShotgunSpread": 2048,
+        "ChargeTime": 4096,
+        "All": 8191
+    },
+    "DestinyTalentNodeStepImpactEffects": {
+        "None": 0,
+        "ArmorPiercing": 1,
+        "Ricochet": 2,
+        "Flinch": 4,
+        "CollateralDamage": 8,
+        "Disorient": 16,
+        "HighlightTarget": 32,
+        "All": 63
+    },
+    "DestinyTalentNodeStepGuardianAttributes": {
+        "None": 0,
+        "Stats": 1,
+        "Shields": 2,
+        "Health": 4,
+        "Revive": 8,
+        "AimUnderFire": 16,
+        "Radar": 32,
+        "Invisibility": 64,
+        "Reputations": 128,
+        "All": 255
+    },
+    "DestinyTalentNodeStepLightAbilities": {
+        "None": 0,
+        "Grenades": 1,
+        "Melee": 2,
+        "MovementModes": 4,
+        "Orbs": 8,
+        "SuperEnergy": 16,
+        "SuperMods": 32,
+        "All": 63
+    },
+    "DestinyTalentNodeStepDamageTypes": {
+        "None": 0,
+        "Kinetic": 1,
+        "Arc": 2,
+        "Solar": 4,
+        "Void": 8,
+        "All": 15
+    },
+    "DestinyRewardSourceCategory": {
+        "None": 0,
+        "Activity": 1,
+        "Vendor": 2,
+        "Aggregate": 3
+    },
+    "DestinyDefinitionType": {
+        "None": 0,
+        "Activity": 1,
+        "ActivityType": 2,
+        "Class": 3,
+        "Gender": 4,
+        "InventoryBucket": 5,
+        "InventoryItem": 6,
+        "Progression": 7,
+        "Race": 8,
+        "Stat": 9,
+        "TalentGrid": 10,
+        "StatGroup": 11,
+        "UnlockFlag": 12,
+        "Vendor": 13,
+        "Destination": 14,
+        "Place": 15,
+        "DirectorBook": 16,
+        "MaterialRequirement": 17,
+        "SandboxPerk": 18,
+        "ArtDye": 19,
+        "ArtDyeChannel": 20,
+        "ActivityBundle": 21,
+        "GearAsset": 22,
+        "GrimoireCard": 23
+    },
+    "DestinyCardRarity": {
+        "None": 0,
+        "Common": 1,
+        "Superior": 2,
+        "Exotic": 3
+    },
+    "DestinyStatsGroupType": {
+        "General": 1,
+        "Weapons": 2,
+        "Medals": 3,
+        "Enemies": 4,
+        "ReservedGroups": 100,
+        "Leaderboard": 101,
+        "Activity": 102,
+        "UniqueWeapon": 103,
+        "Internal": 104,
+        "Unknown": 105
+    },
+    "PeriodType": {
+        "None": 0,
+        "Daily": 1,
+        "Monthly": 2,
+        "AllTime": 3,
+        "Activity": 4
+    },
+    "DestinyActivityModeType": {
+        "None": 0,
+        "Story": 2,
+        "Strike": 3,
+        "Raid": 4,
+        "AllPvP": 5,
+        "Patrol": 6,
+        "AllPvE": 7,
+        "PvPIntroduction": 8,
+        "ThreeVsThree": 9,
+        "Control": 10,
+        "Lockdown": 11,
+        "Team": 12,
+        "FreeForAll": 13,
+        "TrialsOfOsiris": 14,
+        "Doubles": 15,
+        "Nightfall": 16,
+        "Heroic": 17,
+        "AllStrikes": 18,
+        "IronBanner": 19,
+        "AllArena": 20,
+        "Arena": 21,
+        "ArenaChallenge": 22,
+        "Elimination": 23,
+        "Rift": 24,
+        "AllMayhem": 25,
+        "MayhemClash": 26,
+        "MayhemRumble": 27,
+        "ZoneControl": 28,
+        "Racing": 29,
+        "ArenaElderChallenge": 30
+    },
+    "DestinyStatsCategoryType": {
+        "None": 0,
+        "Kills": 1,
+        "Assists": 2,
+        "Deaths": 3,
+        "Criticals": 4,
+        "KDa": 5,
+        "KD": 6,
+        "Score": 7,
+        "Entered": 8,
+        "TimePlayed": 9,
+        "MedalWins": 10,
+        "MedalGame": 11,
+        "MedalSpecialKills": 12,
+        "MedalSprees": 13,
+        "MedalMultiKills": 14,
+        "MedalAbilities": 15
+    },
+    "UnitType": {
+        "None": 0,
+        "Count": 1,
+        "PerGame": 2,
+        "Seconds": 3,
+        "Points": 4,
+        "Team": 5,
+        "Distance": 6,
+        "Percent": 7,
+        "Ratio": 8,
+        "Boolean": 9,
+        "WeaponType": 10,
+        "Standing": 11,
+        "Milliseconds": 12
+    },
+    "DestinyStatsMergeMethod": {
+        "Add": 0,
+        "Min": 1,
+        "Max": 2
+    },
+    "DestinyExcellenceBadgeTier": {
+        "None": 0,
+        "Bronze": 1,
+        "Silver": 2,
+        "Gold": 3
+    },
+    "GroupType": {
+        "General": 0
+    },
+    "ChatSecuritySetting": {
+        "Group": 0,
+        "Admins": 1
+    },
+    "GroupHomepage": {
+        "Wall": 0,
+        "Forum": 1,
+        "AllianceForum": 2
+    },
+    "MembershipOption": {
+        "Reviewed": 0,
+        "Open": 1,
+        "Closed": 2
+    },
+    "GroupPostPublicity": {
+        "Public": 0,
+        "Alliance": 1,
+        "Private": 2
+    },
+    "GroupMemberType": {
+        "Member": 0,
+        "Admin": 1,
+        "Founder": 2,
+        "None": -1
+    },
+    "GroupAllianceStatus": {
+        "Unallied": 0,
+        "Parent": 1,
+        "Child": 2
+    },
+    "GroupDateRange": {
+        "All": 0,
+        "PastDay": 1,
+        "PastWeek": 2,
+        "PastMonth": 3,
+        "PastYear": 4
+    },
+    "GroupSortBy": {
+        "Name": 0,
+        "Date": 1,
+        "Popularity": 2,
+        "Id": 3
+    },
+    "GroupRelationshipResult": {
+        "Approved": 0,
+        "Created": 1,
+        "Failed": 2
+    },
+    "GroupMemberCountFilter": {
+        "All": 0,
+        "OneToTen": 1,
+        "ElevenToOneHundred": 2,
+        "GreaterThanOneHundred": 3
+    },
+    "GroupClanEnableStatus": {
+        "NotApplicable": 0,
+        "ClanEnabledSuccess": 1,
+        "ClanEnabledFailure": 2
+    },
+    "GroupMemberSortBy": {
+        "TypeAndDuration": 0,
+        "Duration": 1,
+        "Name": 2,
+        "Activity": 3
+    },
+    "MigrationMode": {
+        "ConvertToClan": 0,
+        "SplitClan": 1
+    },
+    "PlatformErrorCodes": {
         "None": 0,
         "Success": 1,
         "TransportException": 2,
@@ -669,6 +1188,7 @@
         "TagInvalid": 906,
         "TagNotFound": 907,
         "SingleTagExpected": 908,
+        "TagsExceededMaximumPerItem": 909,
         "IgnoreInvalidParameters": 1,
         "IgnoreSqlException": 1001,
         "IgnoreErrorRetrievingGroupPermissions": 1002,
@@ -868,553 +1388,35 @@
         "ApplicationExceededMax": 2104,
         "ApplicationDisallowedByScope": 2105,
         "AuthorizationCodeInvalid": 2106,
-        "OriginHeaderDoesNotMatchKey": 2107
+        "OriginHeaderDoesNotMatchKey": 2107,
+        "AccessNotPermittedByApplicationScope": 2108,
+        "ApplicationNameIsTaken": 2109,
+        "RefreshTokenNotYetValid": 2110
     },
-    "PlatformErrorCodes": {
-        "Human": 0,
-        "Awoken": 1,
-        "Exo": 2,
-        "Unknown": 3
-    },
-    "DestinyRace": {
-        "Male": 0,
-        "Female": 1,
-        "Unknown": 2
-    },
-    "DestinyGender": {
-        "Titan": 0,
-        "Hunter": 1,
-        "Warlock": 2,
-        "Unknown": 3
-    },
-    "DestinyClass": {
-        "None": 0,
-        "Destiny1": 1,
-        "TheDarkBelow": 2,
-        "HouseOfWolves": 4,
-        "Comet": 8
-    },
-    "DestinyGameVersions": {
-        "Unknown": 0,
-        "NoTransfer": 1,
-        "BackTransfer": 2,
-        "V1Active": 3,
-        "AccountsSplit": 4
-    },
-    "DestinyAccountTransferState": {
-        "NotBound": 0,
-        "BoundToCharacter": 1,
-        "BoundToAccount": 2,
-        "BoundToGuild": 3
-    },
-    "ItemBindStatus": {
-        "None": 0,
-        "ItemUnequippable": 1,
-        "ItemUniqueEquipRestricted": 2,
-        "ItemFailedUnlockCheck": 4,
-        "ItemFailedLevelCheck": 8,
-        "ItemNotOnCharacter": 16
-    },
-    "EquipFailureReason": {
-        "None": 0,
-        "Kinetic": 1,
-        "Arc": 2,
-        "Thermal": 3,
-        "Void": 4,
-        "Raid": 5
-    },
-    "DamageType": {
-        "Invalid": 0,
-        "CanUpgrade": 1,
-        "NoPoints": 2,
-        "NoPrerequisites": 3,
-        "NoSteps": 4,
-        "NoUnlock": 5,
-        "NoMaterial": 6,
-        "NoGridLevel": 7,
-        "SwappingLocked": 8,
-        "MustSwap": 9,
-        "Complete": 10,
-        "Unknown": 11,
-        "CreationOnly": 12,
-        "Hidden": 13
-    },
-    "DestinyTalentNodeState": {
-        "Unknown": 0,
-        "Inventory": 1,
-        "Vault": 2,
-        "Vendor": 3,
-        "Postmaster": 4
-    },
-    "ItemLocation": {
-        "CanTransfer": 0,
-        "ItemIsEquipped": 1,
-        "NotTransferrable": 2,
-        "NoRoomInDestination": 4
-    },
-    "TransferStatuses": {
-        "None": 0,
-        "Locked": 1,
-        "Tracked": 2
-    },
-    "ItemState": {
-        "Success": 0,
-        "NoInventorySpace": 1,
-        "NoFunds": 2,
-        "NoProgression": 4,
-        "NoUnlock": 8,
-        "NoQuantity": 16,
-        "OutsidePurchaseWindow": 32,
-        "NotAvailable": 64,
-        "UniquenessViolation": 128,
-        "UnknownError": 256,
-        "AlreadySelling": 512,
-        "Unsellable": 1024,
-        "SellingInhibited": 2048,
-        "AlreadyOwned": 4096
-    },
-    "VendorItemStatus": {
-        "Trivial": 0,
-        "Easy": 1,
-        "Normal": 2,
-        "Challenging": 3,
-        "Hard": 4,
-        "Brave": 5,
-        "AlmostImpossible": 6,
-        "Impossible": 7
-    },
-    "DestinyActivityDifficultyTier": {
-        "Unknown": 0,
-        "Currency": 1,
-        "Basic": 2,
-        "Common": 3,
-        "Rare": 4,
-        "Superior": 5,
-        "Exotic": 6
-    },
-    "TierType": {
-        "None": 0,
-        "SpecialCurrency": 1,
-        "CompletedBounty": 2,
-        "CrucibleBounty": 3,
-        "VanguardBounty": 4,
-        "IronBannerBounty": 5,
-        "QueenBounty": 6,
-        "ExoticBounty": 7,
-        "Armor": 8,
-        "Weapon": 9,
-        "Engram": 23,
-        "Consumable": 24,
-        "ExchangeMaterial": 25,
-        "PvpTicket": 26,
-        "MissionReward": 27,
-        "BountyReward": 28,
-        "Currency": 29
-    },
-    "SpecialItemType": {
-        "Invalid": 0,
-        "Flag": 1,
-        "Not": 2,
-        "Or": 3,
-        "And": 4,
-        "Nor": 5,
-        "Xor": 6,
-        "Nand": 7,
-        "Equal": 8,
-        "NotEqual": 9,
-        "UnlockValue": 10,
-        "Constant": 11,
-        "GreaterThan": 12,
-        "GreaterThanOrEqual": 13,
-        "LessThan": 14,
-        "LessThanOrEqual": 15,
-        "Add": 16,
-        "Subtract": 17,
-        "Multiply": 18,
-        "Divide": 19,
-        "Modulus": 20,
-        "Negate": 21
-    },
-    "DestinyUnlockFlagOperator": {
-        "None": 0,
-        "Currency": 1,
-        "Armor": 2,
-        "Weapon": 3,
-        "Bounty": 4,
-        "CompletedBounty": 5,
-        "BountyReward": 6,
-        "Message": 7,
-        "Engram": 8,
-        "Consumable": 9,
-        "ExchangeMaterial": 10,
-        "MissionReward": 11,
-        "QuestStep": 12,
-        "QuestStepComplete": 13,
-        "Emblem": 14,
-        "Quest": 15
-    },
-    "DestinyItemType": {
-        "None": 0,
-        "Crucible": 1,
-        "Vanguard": 2,
-        "IronBanner": 3,
-        "Queen": 4,
-        "Exotic": 5,
-        "AutoRifle": 6,
-        "Shotgun": 7,
-        "Machinegun": 8,
-        "HandCannon": 9,
-        "RocketLauncher": 10,
-        "FusionRifle": 11,
-        "SniperRifle": 12,
-        "PulseRifle": 13,
-        "ScoutRifle": 14,
-        "Camera": 15,
-        "Crm": 16,
-        "Sidearm": 17,
-        "Sword": 18,
-        "Mask": 19
-    },
-    "DestinyItemSubType": {
-        "Character": 0,
-        "Account": 1
-    },
-    "BucketScope": {
-        "Invisible": 0,
-        "Item": 1,
-        "Currency": 2,
-        "Equippable": 3,
-        "Ignored": 4
-    },
-    "BucketCategory": {
-        "Automatic": 0,
-        "Fraction": 1,
-        "Checkbox": 2,
-        "Percentage": 3
-    },
-    "DestinyUnlockValueUIStyle": {
-        "Hidden": 0,
-        "Visible": 1,
-        "Teaser": 2,
-        "Incomplete": 3,
-        "Completed": 4
-    },
-    "DirectorNodeState": {
-        "None": 0,
-        "Enlarge": 1,
-        "Tower": 2,
-        "Unexpected": 3
-    },
-    "DirectorNodeUIModifier": {
-        "TransitionBook": 0,
-        "TransitionSocial": 1
-    },
-    "DirectorTransitionType": {
-        "Incomplete": 0,
-        "Complete": 1,
-        "Redeemed": 2
-    },
-    "DestinyRecordCompletionStatus": {
-        "RecordPage": 0,
-        "SummaryPage": 1
-    },
-    "DestinyRecordBookPageDisplayStyle": {
-        "NotRefundable": 0,
-        "DeletesItem": 1,
-        "RevokesLicense": 2
-    },
-    "DestinyVendorItemRefundPolicy": {
-        "Computed": 0,
-        "Point": 1,
-        "Range": 2
-    },
-    "GroupAttributeType": {
-        "None": 0,
-        "RateOfFire": 1,
-        "Damage": 2,
-        "Accuracy": 4,
-        "Range": 8,
-        "Zoom": 16,
-        "Recoil": 32,
-        "Ready": 64,
-        "Reload": 128,
-        "HairTrigger": 256,
-        "AmmoAndMagazine": 512,
-        "TrackingAndDetonation": 1024,
-        "ShotgunSpread": 2048,
-        "ChargeTime": 4096,
-        "All": 8191
-    },
-    "DestinyTalentNodeStepWeaponPerformances": {
-        "None": 0,
-        "ArmorPiercing": 1,
-        "Ricochet": 2,
-        "Flinch": 4,
-        "CollateralDamage": 8,
-        "Disorient": 16,
-        "HighlightTarget": 32,
-        "All": 63
-    },
-    "DestinyTalentNodeStepImpactEffects": {
-        "None": 0,
-        "Stats": 1,
-        "Shields": 2,
-        "Health": 4,
-        "Revive": 8,
-        "AimUnderFire": 16,
-        "Radar": 32,
-        "Invisibility": 64,
-        "Reputations": 128,
-        "All": 255
-    },
-    "DestinyTalentNodeStepGuardianAttributes": {
-        "None": 0,
-        "Grenades": 1,
-        "Melee": 2,
-        "MovementModes": 4,
-        "Orbs": 8,
-        "SuperEnergy": 16,
-        "SuperMods": 32,
-        "All": 63
-    },
-    "DestinyTalentNodeStepLightAbilities": {
-        "None": 0,
-        "Kinetic": 1,
-        "Arc": 2,
-        "Solar": 4,
-        "Void": 8,
-        "All": 15
-    },
-    "DestinyTalentNodeStepDamageTypes": {
-        "None": 0,
-        "Activity": 1,
-        "Vendor": 2,
-        "Aggregate": 3
-    },
-    "DestinyRewardSourceCategory": {
-        "None": 0,
-        "Activity": 1,
-        "ActivityType": 2,
-        "Class": 3,
-        "Gender": 4,
-        "InventoryBucket": 5,
-        "InventoryItem": 6,
-        "Progression": 7,
-        "Race": 8,
-        "Stat": 9,
-        "TalentGrid": 10,
-        "StatGroup": 11,
-        "UnlockFlag": 12,
-        "Vendor": 13,
-        "Destination": 14,
-        "Place": 15,
-        "DirectorBook": 16,
-        "MaterialRequirement": 17,
-        "SandboxPerk": 18,
-        "ArtDye": 19,
-        "ArtDyeChannel": 20,
-        "ActivityBundle": 21,
-        "GearAsset": 22,
-        "GrimoireCard": 23
-    },
-    "DestinyDefinitionType": {
-        "None": 0,
-        "Common": 1,
-        "Superior": 2,
-        "Exotic": 3
-    },
-    "DestinyCardRarity": {
-        "None": 0,
-        "General": 1,
-        "Weapons": 2,
-        "Medals": 3,
-        "Enemies": 4,
-        "ReservedGroups": 100,
-        "Leaderboard": 101,
-        "Activity": 102,
-        "UniqueWeapon": 103,
-        "Internal": 104
-    },
-    "DestinyStatsGroupType": {
-        "General": 1,
-        "Weapons": 2,
-        "Medals": 3,
-        "Enemies": 4,
-        "ReservedGroups": 100,
-        "Leaderboard": 101,
-        "Activity": 102,
-        "UniqueWeapon": 103,
-        "Internal": 104,
-        "Unknown": 105
-    },
-    "PeriodType": {
-        "None": 0,
-        "Story": 2,
-        "Strike": 3,
-        "Raid": 4,
-        "AllPvP": 5,
-        "Patrol": 6,
-        "AllPvE": 7,
-        "PvPIntroduction": 8,
-        "ThreeVsThree": 9,
-        "Control": 10,
-        "Lockdown": 11,
-        "Team": 12,
-        "FreeForAll": 13,
-        "TrialsOfOsiris": 14,
-        "Doubles": 15,
-        "Nightfall": 16,
-        "Heroic": 17,
-        "AllStrikes": 18,
-        "IronBanner": 19,
-        "AllArena": 20,
-        "Arena": 21,
-        "ArenaChallenge": 22,
-        "Elimination": 23,
-        "Rift": 24,
-        "AllMayhem": 25,
-        "MayhemClash": 26,
-        "MayhemRumble": 27,
-        "ZoneControl": 28,
-        "Racing": 29,
-        "ArenaElderChallenge": 30
-    },
-    "DestinyActivityModeType": {
-        "None": 0,
-        "Kills": 1,
-        "Assists": 2,
-        "Deaths": 3,
-        "Criticals": 4,
-        "KDa": 5,
-        "KD": 6,
-        "Score": 7,
-        "Entered": 8,
-        "TimePlayed": 9,
-        "MedalWins": 10,
-        "MedalGame": 11,
-        "MedalSpecialKills": 12,
-        "MedalSprees": 13,
-        "MedalMultiKills": 14,
-        "MedalAbilities": 15
-    },
-    "DestinyStatsCategoryType": {
-        "None": 0,
-        "Count": 1,
-        "PerGame": 2,
-        "Seconds": 3,
-        "Points": 4,
-        "Team": 5,
-        "Distance": 6,
-        "Percent": 7,
-        "Ratio": 8,
-        "Boolean": 9,
-        "WeaponType": 10,
-        "Standing": 11,
-        "Milliseconds": 12
-    },
-    "UnitType": {
-        "Add": 0,
-        "Min": 1,
-        "Max": 2
-    },
-    "DestinyStatsMergeMethod": {
-        "None": 0,
-        "Bronze": 1,
-        "Silver": 2,
-        "Gold": 3
-    },
-    "DestinyExcellenceBadgeTier": {
-        "General": 0
-    },
-    "GroupType": {
-        "Group": 0,
-        "Admins": 1
-    },
-    "ChatSecuritySetting": {
-        "Wall": 0,
-        "Forum": 1,
-        "AllianceForum": 2
-    },
-    "GroupHomepage": {
-        "Reviewed": 0,
-        "Open": 1,
-        "Closed": 2
-    },
-    "MembershipOption": {
-        "Public": 0,
-        "Alliance": 1,
-        "Private": 2
-    },
-    "GroupPostPublicity": {
-        "Member": 0,
-        "Admin": 1,
-        "Founder": 2,
-        "None": -1
-    },
-    "GroupMemberType": {
-        "Unallied": 0,
-        "Parent": 1,
-        "Child": 2
-    },
-    "GroupAllianceStatus": {
-        "All": 0,
-        "PastDay": 1,
-        "PastWeek": 2,
-        "PastMonth": 3,
-        "PastYear": 4
-    },
-    "GroupDateRange": {
-        "Name": 0,
-        "Date": 1,
-        "Popularity": 2,
-        "Id": 3
-    },
-    "GroupSortBy": {
-        "Approved": 0,
-        "Created": 1,
-        "Failed": 2
-    },
-    "GroupRelationshipResult": {
-        "All": 0,
-        "OneToTen": 1,
-        "ElevenToOneHundred": 2,
-        "GreaterThanOneHundred": 3
-    },
-    "GroupMemberCountFilter": {
-        "NotApplicable": 0,
-        "ClanEnabledSuccess": 1,
-        "ClanEnabledFailure": 2
-    },
-    "GroupClanEnableStatus": {
-        "TypeAndDuration": 0,
-        "Duration": 1,
-        "Name": 2,
-        "Activity": 3
-    },
-    "GroupMemberSortBy": {
-        "ConvertToClan": 0,
-        "SplitClan": 1
-    },
-    "MigrationMode": {
+    "OfferRedeemMode": {
         "Off": 0,
         "Unlock": 1,
         "Platform": 2,
         "Expired": 3,
         "Consumable": 4
     },
-    "OfferRedeemMode": {
+    "GlobalAlertLevel": {
         "Unknown": 0,
         "Blue": 1,
         "Yellow": 2,
         "Red": 3
     },
-    "GlobalAlertLevel": {
+    "GlobalAlertType": {
+        "GlobalAlert": 0,
+        "StreamingAlert": 1
+    },
+    "TemplateFormat": {
         "BNet": 0,
         "Plain": 1,
         "EMail": 2,
         "Push": 3
     },
-    "TemplateFormat": {
+    "ContentPropertyDataTypeEnum": {
         "None": 0,
         "Plaintext": 1,
         "Html": 2,
@@ -1430,12 +1432,12 @@
         "MultilinePlaintext": 12,
         "DestinyContent": 13
     },
-    "ContentPropertyDataTypeEnum": {
+    "ContentSortBy": {
         "CreationDate": 0,
         "CmsPath": 1,
         "ModifiedDate": 2
     },
-    "ContentSortBy": {
+    "ContentDateRange": {
         "All": 0,
         "Today": 1,
         "Yesterday": 2,
@@ -1444,7 +1446,7 @@
         "LastYear": 5,
         "EarlierThanLastYear": 6
     },
-    "ContentDateRange": {
+    "ActivityType": {
         "Create": 0,
         "Edit": 1,
         "Delete": 2,
@@ -1475,7 +1477,7 @@
         "GroupAllianceBroken": 28,
         "None": -1
     },
-    "ActivityType": {
+    "AffectedItemType": {
         "User": 0,
         "Post": 1,
         "Topic": 2,
@@ -1484,37 +1486,37 @@
         "CommunityContent": 5,
         "None": -1
     },
-    "AffectedItemType": {
+    "GroupApplicationResolveState": {
         "Unresolved": 0,
         "Accepted": 1,
         "Denied": 2,
         "Rescinded": 3
     },
-    "GroupApplicationResolveState": {
+    "SuccessMessages": {
         "Following": 1,
         "Unfollowing": 2,
         "ManagingGroupMembers": 8,
         "UpdatingSettings": 16,
         "ManagingGroups": 32
     },
-    "SuccessMessages": {
+    "OptInFlags": {
         "Newsletter": 1,
         "System": 2,
         "Marketing": 4,
         "UserResearch": 8,
         "CustomerService": 16
     },
-    "OptInFlags": {
+    "ContentDateType": {
         "Specific": 0,
         "MonthOnly": 1,
         "Custom": 2
     },
-    "ContentDateType": {
+    "InvitationResponseState": {
         "Unreviewed": 0,
         "Approved": 1,
         "Rejected": 2
     },
-    "InvitationResponseState": {
+    "InvitationType": {
         "None": 0,
         "GroupAllianceJoinFromChild": 1,
         "ClanJoinInvite": 2,
@@ -1523,7 +1525,7 @@
         "ClanJoinRequest": 5,
         "GroupJoinRequest": 6
     },
-    "InvitationType": {
+    "EntityType": {
         "None": 0,
         "User": 1,
         "Group": 2,
@@ -1534,24 +1536,24 @@
         "Conversation": 7,
         "Tag": 8
     },
-    "EntityType": {
+    "TextParameterSearchType": {
         "Contains": 0,
         "Exact": 1,
         "StartsWith": 2,
         "EndsWith": 3
     },
-    "TextParameterSearchType": {
+    "FriendOnlineStatus": {
         "Offline": 0,
         "Online": 1,
         "Idle": 2
     },
-    "FriendOnlineStatus": {
+    "ForumMediaType": {
         "None": 0,
         "Image": 1,
         "Video": 2,
         "Youtube": 3
     },
-    "ForumMediaType": {
+    "ForumPostPopularity": {
         "Empty": 0,
         "Default": 1,
         "Discussed": 2,
@@ -1559,7 +1561,7 @@
         "HeatingUp": 4,
         "Hot": 5
     },
-    "ForumPostPopularity": {
+    "ForumPostCategoryEnums": {
         "None": 0,
         "TextOnly": 1,
         "Media": 2,
@@ -1573,7 +1575,7 @@
         "NinjaOfficial": 512,
         "Recruitment": 1024
     },
-    "ForumPostCategoryEnums": {
+    "ForumFlagsEnum": {
         "None": 0,
         "BungieStaffPost": 1,
         "ForumNinjaPost": 2,
@@ -1584,17 +1586,24 @@
         "QuestionAnsweredByNinja": 64,
         "CommunityContent": 128
     },
-    "ForumFlagsEnum": {
+    "ForumRecruitmentIntensityLabel": {
         "None": 0,
         "Casual": 1,
         "Professional": 2
     },
-    "ForumRecruitmentIntensityLabel": {
+    "ForumRecruitmentToneLabel": {
         "None": 0,
         "FamilyFriendly": 1,
         "Rowdy": 2
     },
-    "ForumRecruitmentToneLabel": {
+    "ForumTopicsQuickDateEnum": {
+        "All": 0,
+        "LastYear": 1,
+        "LastMonth": 2,
+        "LastWeek": 3,
+        "LastDay": 4
+    },
+    "ForumTopicsCategoryFiltersEnum": {
         "None": 0,
         "Links": 1,
         "Questions": 2,
@@ -1605,7 +1614,7 @@
         "BungieOfficial": 64,
         "Polls": 128
     },
-    "ForumTopicsCategoryFiltersEnum": {
+    "ForumTopicsSortEnum": {
         "Default": 0,
         "LastReplied": 1,
         "MostReplied": 2,
@@ -1615,46 +1624,39 @@
         "HighestRated": 6,
         "MostUpvoted": 7
     },
-    "ForumTopicsSortEnum": {
-        "All": 0,
-        "LastYear": 1,
-        "LastMonth": 2,
-        "LastWeek": 3,
-        "LastDay": 4
-    },
-    "ForumTopicsQuickDateEnum": {
+    "ForumPostSortEnum": {
         "Default": 0,
         "OldestFirst": 1
     },
-    "ForumPostSortEnum": {
+    "CommunityContentSortMode": {
         "Trending": 0,
         "Latest": 1,
         "HighestRated": 2
     },
-    "CommunityContentSortMode": {
+    "ForumTypeEnum": {
         "Public": 0,
         "News": 1,
         "Group": 2,
         "Alliance": 3,
         "RelatedPosts": 4
     },
-    "ForumTypeEnum": {
+    "Capabilities": {
         "None": 0,
         "Leaderboards": 1,
         "Callsign": 2
     },
-    "Capabilities": {
+    "GroupsForMemberFilter": {
         "All": 0,
         "Founded": 1,
         "NonFounded": 2
     },
-    "GroupsForMemberFilter": {
+    "GameServiceStatus": {
         "Error": 0,
         "NotFound": 1,
         "Success": 2,
         "Unknown": 3
     },
-    "GameServiceStatus": {
+    "RAFBondState": {
         "None": 0,
         "AwaitingNewPlayerDestinyMembership": 1,
         "AwaitingNewPlayerVerification": 2,
@@ -1665,13 +1667,18 @@
         "FailedNewPlayerIsVeteranPlayer": -2,
         "FailedNewPlayerIsNotNew": -1
     },
-    "RAFBondState": {
+    "RAFEligibility": {
         "Unknown": 0,
         "PurchaseRequired": 1,
         "NewPlayerEligible": 2,
         "NotEligible": -1
     },
-    "RAFEligibility": {
+    "DestinyExplorerOrderDirection": {
+        "None": 0,
+        "Ascending": 1,
+        "Descending": 2
+    },
+    "DestinyExplorerOrderBy": {
         "None": 0,
         "Name": 1,
         "ItemType": 2,
@@ -1681,12 +1688,7 @@
         "MinimumRequiredLevel": 6,
         "MaximumRequiredLevel": 7
     },
-    "DestinyExplorerOrderBy": {
-        "None": 0,
-        "Ascending": 1,
-        "Descending": 2
-    },
-    "DestinyExplorerOrderDirection": {
+    "SurveyCompletionFlags": {
         "None": 0,
         "UserResearchWebPageOne": 1,
         "UserResearchWebPageTwo": 2
