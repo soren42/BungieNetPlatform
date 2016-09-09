@@ -334,6 +334,20 @@
             "access": ""
         },
         {
+            "name": "GetPartnerships",
+            "method": "GET",
+            "endpoint": "\/User\/{param1}\/Partnerships\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetPlatformApiKeysForUser",
             "method": "GET",
             "endpoint": "\/User\/GetPlatformApiKeysForUser\/",
@@ -395,6 +409,20 @@
             "params": [],
             "post": [],
             "path": [],
+            "access": "Private"
+        },
+        {
+            "name": "RemovePartnership",
+            "method": "POST",
+            "endpoint": "\/User\/Partnerships\/{param1}\/Remove\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "access": "Private"
         },
         {
@@ -2061,12 +2089,12 @@
             "access": "Private"
         },
         {
-            "name": "GetAggregatedActivitiesForCurrentUser",
+            "name": "GetApplicationActivityForUser",
             "method": "GET",
-            "endpoint": "\/Activity\/Aggregation\/",
+            "endpoint": "\/Activity\/User\/{param1}\/Activities\/Application\/{param2}\/",
             "params": {
-                "typefilter": {
-                    "desc": "",
+                "currentpage": {
+                    "desc": "The current page to return. Starts at 1.",
                     "link": ""
                 },
                 "format": {
@@ -2075,7 +2103,16 @@
                 }
             },
             "post": [],
-            "path": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "access": ""
         },
         {

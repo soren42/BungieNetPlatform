@@ -4,7 +4,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 3519,
+                "entries": 3518,
                 "classified": 0
             }
         ]
@@ -14,7 +14,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 3519,
+                "entries": 3518,
                 "classified": 0
             }
         ]
@@ -24,7 +24,7 @@
         "definitions": [
             {
                 "name": "DestinyActivityBundleDefinition",
-                "entries": 225,
+                "entries": 224,
                 "classified": 0
             },
             {
@@ -34,7 +34,7 @@
             },
             {
                 "name": "DestinyActivityDefinition",
-                "entries": 338,
+                "entries": 337,
                 "classified": 2
             },
             {
@@ -64,7 +64,7 @@
             },
             {
                 "name": "DestinyDestinationDefinition",
-                "entries": 22,
+                "entries": 23,
                 "classified": 0
             },
             {
@@ -99,7 +99,7 @@
             },
             {
                 "name": "DestinyHistoricalStatsDefinition",
-                "entries": 1731,
+                "entries": 1737,
                 "classified": 0
             },
             {
@@ -109,8 +109,8 @@
             },
             {
                 "name": "DestinyInventoryItemDefinition",
-                "entries": 6557,
-                "classified": 60
+                "entries": 6643,
+                "classified": 176
             },
             {
                 "name": "DestinyItemCategoryDefinition",
@@ -119,12 +119,12 @@
             },
             {
                 "name": "DestinyLocationDefinition",
-                "entries": 133,
+                "entries": 134,
                 "classified": 0
             },
             {
                 "name": "DestinyObjectiveDefinition",
-                "entries": 976,
+                "entries": 929,
                 "classified": 0
             },
             {
@@ -149,7 +149,7 @@
             },
             {
                 "name": "DestinyRecordDefinition",
-                "entries": 28,
+                "entries": 24,
                 "classified": 0
             },
             {
@@ -184,7 +184,7 @@
             },
             {
                 "name": "DestinyTalentGridDefinition",
-                "entries": 1135,
+                "entries": 1145,
                 "classified": 0
             },
             {
@@ -194,8 +194,8 @@
             },
             {
                 "name": "DestinyUnlockFlagDefinition",
-                "entries": 6029,
-                "classified": 0
+                "entries": 6774,
+                "classified": 788
             },
             {
                 "name": "DestinyVendorCategoryDefinition",
