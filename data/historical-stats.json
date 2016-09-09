@@ -307,6 +307,30 @@
         "raceCompletionMilliseconds": {
             "statId": "raceCompletionMilliseconds",
             "statName": "Race Completion Time"
+        },
+        "tagCaptures": {
+            "statId": "tagCaptures",
+            "statName": "Crests Captured"
+        },
+        "capturedYourOwnKill": {
+            "statId": "capturedYourOwnKill",
+            "statName": "Captures From Your Own Kills"
+        },
+        "recoveredTeammateTags": {
+            "statId": "recoveredTeammateTags",
+            "statName": "Crests Denied"
+        },
+        "lostTagToOpponent": {
+            "statId": "lostTagToOpponent",
+            "statName": "Crest Losses"
+        },
+        "recoveredOwnDeadTag": {
+            "statId": "recoveredOwnDeadTag",
+            "statName": "Self Crest Recoveries"
+        },
+        "tagsCapturedPerTagLost": {
+            "statId": "tagsCapturedPerTagLost",
+            "statName": "Crests Captured Per Crest Lost"
         }
     },
     "Enemies": {
@@ -6424,7 +6448,7 @@
         },
         "R1S1StrikeMoon2Ultra0": {
             "enemyId": "R1S1StrikeMoon2Ultra0",
-            "enemyName": "Phogoth, the Untamed",
+            "enemyName": "Hive Abomination",
             "activityType": "Strike",
             "destination": "Moon",
             "enemyTier": "Ultra",
@@ -6434,26 +6458,26 @@
             "raceClass": "HiveUltraOgreA",
             "location": "TheSummoningPits",
             "faction": "HiveSpawnOfCrota",
-            "cardId": 601060,
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S1StrikeMoon2Ultra0",
-                    "statName": "Phogoth, the Untamed"
+                    "statName": "Hive Abomination"
                 },
                 "precisionKillsOf": {
                     "statId": "precisionKillOfR1S1StrikeMoon2Ultra0",
-                    "statName": "Phogoth, the Untamed"
+                    "statName": "Hive Abomination"
                 },
                 "deathsFrom": {
                     "statId": "deathsFromR1S1StrikeMoon2Ultra0",
-                    "statName": "Phogoth, the Untamed"
+                    "statName": "Hive Abomination"
                 },
                 "killsOf": {
                     "statId": "killsOfR1S1StrikeMoon2Ultra0",
-                    "statName": "Phogoth, the Untamed"
+                    "statName": "Hive Abomination"
                 }
             },
-            "raceName": "Hive"
+            "raceName": "Hive",
+            "cardId": 201140
         },
         "R1S1StrikeVenus1Ultra0": {
             "enemyId": "R1S1StrikeVenus1Ultra0",
@@ -7944,7 +7968,7 @@
         },
         "R1S2StrikeCosmo1Major0": {
             "enemyId": "R1S2StrikeCosmo1Major0",
-            "enemyName": "Omnigul, the Will of Crota",
+            "enemyName": "Omnigul, Will of Crota",
             "activityType": "Strike",
             "destination": "Cosmo",
             "enemyTier": "Major",
@@ -7959,19 +7983,19 @@
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S2StrikeCosmo1Major0",
-                    "statName": "Omnigul, the Will of Crota"
+                    "statName": "Omnigul, Will of Crota"
                 },
                 "precisionKillsOf": {
                     "statId": "precisionKillOfR1S2StrikeCosmo1Major0",
-                    "statName": "Omnigul, the Will of Crota"
+                    "statName": "Omnigul, Will of Crota"
                 },
                 "deathsFrom": {
                     "statId": "deathsFromR1S2StrikeCosmo1Major0",
-                    "statName": "Omnigul, the Will of Crota"
+                    "statName": "Omnigul, Will of Crota"
                 },
                 "killsOf": {
                     "statId": "killsOfR1S2StrikeCosmo1Major0",
-                    "statName": "Omnigul, the Will of Crota"
+                    "statName": "Omnigul, Will of Crota"
                 }
             },
             "raceName": "Hive"

@@ -83,6 +83,75 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>September 9, 2016</h2>
+<p>The &quot;pre-load&quot; before Rise of Iron.</p>
+<p>Endpoints (added):</p>
+<ul>
+<li>GET <a href="../docs/UserService/GetPartnerships">UserService/GetPartnerships</a></li>
+<li>POST <a href="../docs/UserService/RemovePartnership">UserService/RemovePartnership</a></li>
+<li>GET <a href="../docs/ActivityService/GetApplicationActivityForUser">ActivityService/GetApplicationActivityForUser</a></li>
+</ul>
+<p>Endpoints (removed):</p>
+<ul>
+<li>GET <a href="../docs/ActivityService/GetAggregatedActivitiesForCurrentUser">ActivityService/GetAggregatedActivitiesForCurrentUser</a> - replaced with GetApplicationActivityForUser?</li>
+</ul>
+<p>Enums:</p>
+<ul>
+<li>ActivityType
+<ul>
+<li>24 &quot;ChangeClanName&quot; renamed to &quot;ChangeGroupName&quot;</li>
+</ul></li>
+<li>DestinyAccountTransferState - removed</li>
+<li>DestinyActivityModeType
+<ul>
+<li>31 &quot;Supremacy&quot;</li>
+<li>32 &quot;PrivateMatchesAll&quot;</li>
+</ul></li>
+<li>DestinyGameVersions
+<ul>
+<li>16 &quot;RiseOfIron&quot;</li>
+</ul></li>
+<li>DestinyRecordUIStyle - added</li>
+<li>PartnershipType - added</li>
+<li>PlatformErrorCodes
+<ul>
+<li>2200 &quot;PartnershipInvalidType&quot;</li>
+<li>2201 &quot;PartnershipValidationError&quot;</li>
+<li>2202 &quot;PartnershipValidationTimeout&quot;</li>
+<li>2203 &quot;PartnershipAccessFailure&quot;</li>
+<li>2204 &quot;PartnershipAccountInvalid&quot;</li>
+<li>2205 &quot;PartnershipGetAccountInfoFailure&quot;</li>
+<li>2206 &quot;PartnershipDisabled&quot;</li>
+<li>2207 &quot;PartnershipAlreadyExists&quot;</li>
+</ul></li>
+</ul>
+<p>Definitions:</p>
+<ul>
+<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 224 &gt; 225 entries (-1)</li>
+<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 338 &gt; 337 entries (-1)</li>
+<li><a href="../docs/Definitions/DestinationDefinition">DestinationDefinition</a>: 22 &gt; 23 entries (+1)</li>
+<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1731 &gt; 1737 entries (+6)</li>
+<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6557 &gt; 6643 entries (+86) | 60 &gt; 176 classified (+116)</li>
+<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 133 &gt; 134 entries (+1)</li>
+<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 976 &gt; 929 entries (-47)</li>
+<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 28 &gt; 24 entries (-4)</li>
+<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1135 &gt; 1145 entries (+10)</li>
+<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6029 &gt; 6774 entries (+745) | 0 &gt; 788 classified (+788)</li>
+</ul>
+<p>EnemyHistoricalStats:</p>
+<ul>
+<li>R1S1StrikeMoon2Ultra0 - &quot;Phogoth, the Untamed&quot; renamed to &quot;Hive Abomination&quot; - RIP Phogoth...</li>
+<li>R1S2StrikeCosmo1Major0 - &quot;Omnigul, the Will of Crota&quot; renamed to &quot;Omnigul, Will of Crota&quot;</li>
+</ul>
+<p>GeneralHistoricalStats:</p>
+<ul>
+<li>tagCaptures - &quot;Crests Captured&quot;</li>
+<li>capturedYourOwnKill &quot;Captures From Your Own Kills&quot;</li>
+<li>recoveredTeammateTags &quot;Crests Denied&quot;</li>
+<li>lostTagToOpponent &quot;Crest Losses&quot;</li>
+<li>recoveredOwnDeadTag &quot;Self Crest Recoveries&quot;</li>
+<li>tagsCapturedPerTagLost &quot;Crests Captured Per Crest Lost&quot;</li>
+</ul>
 <h2>August 17, 2016</h2>
 <p>The one during Gamescom.</p>
 <p>Endpoints (added):</p>

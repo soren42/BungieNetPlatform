@@ -171,7 +171,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="UserService"></a>UserService (31 Endpoints)</h2>
+<h2><a name="UserService"></a>UserService (33 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -258,6 +258,11 @@
 </tr>
 <tr>
 <td>GET</td>
+<td><a href="../docs/UserService/GetPartnerships">GetPartnerships</a></td>
+<td>/User/{param1}/Partnerships/</td>
+</tr>
+<tr>
+<td>GET</td>
 <td><a href="../docs/UserService/GetPlatformApiKeysForUser">GetPlatformApiKeysForUser</a></td>
 <td>/User/GetPlatformApiKeysForUser/</td>
 </tr>
@@ -285,6 +290,11 @@
 <td>POST</td>
 <td><a href="../docs/UserService/RegisterMobileAppPair">RegisterMobileAppPair</a></td>
 <td>/User/RegisterMobileAppPair/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/UserService/RemovePartnership">RemovePartnership</a></td>
+<td>/User/Partnerships/{param1}/Remove/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -857,8 +867,8 @@
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ActivityService/GetAggregatedActivitiesForCurrentUser">GetAggregatedActivitiesForCurrentUser</a></td>
-<td>/Activity/Aggregation/</td>
+<td><a href="../docs/ActivityService/GetApplicationActivityForUser">GetApplicationActivityForUser</a></td>
+<td>/Activity/User/{param1}/Activities/Application/{param2}/</td>
 </tr>
 <tr>
 <td>GET</td>

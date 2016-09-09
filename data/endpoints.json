@@ -343,6 +343,20 @@
                 "endpoint": "\/User\/GetPlatformApiKeysForUser\/",
                 "params": [],
                 "post": []
+            },
+            "GetPartnerships": {
+                "name": "GetPartnerships",
+                "method": "GET",
+                "endpoint": "\/User\/{param1}\/Partnerships\/",
+                "params": [],
+                "post": []
+            },
+            "RemovePartnership": {
+                "name": "RemovePartnership",
+                "method": "POST",
+                "endpoint": "\/User\/Partnerships\/{param1}\/Remove\/",
+                "params": [],
+                "post": []
             }
         }
     },
@@ -1040,16 +1054,6 @@
     "ActivityService": {
         "name": "ActivityService",
         "endpoints": {
-            "GetAggregatedActivitiesForCurrentUser": {
-                "name": "GetAggregatedActivitiesForCurrentUser",
-                "method": "GET",
-                "endpoint": "\/Activity\/Aggregation\/",
-                "params": [
-                    "typefilter",
-                    "format"
-                ],
-                "post": []
-            },
             "GetEntitiesFollowedByCurrentUser": {
                 "name": "GetEntitiesFollowedByCurrentUser",
                 "method": "GET",
@@ -1183,6 +1187,16 @@
                 "name": "GetLikeShareAndForumActivityForUser",
                 "method": "GET",
                 "endpoint": "\/Activity\/User\/{param1}\/Activities\/LikeShareAndForum\/",
+                "params": [
+                    "currentpage",
+                    "format"
+                ],
+                "post": []
+            },
+            "GetApplicationActivityForUser": {
+                "name": "GetApplicationActivityForUser",
+                "method": "GET",
+                "endpoint": "\/Activity\/User\/{param1}\/Activities\/Application\/{param2}\/",
                 "params": [
                     "currentpage",
                     "format"

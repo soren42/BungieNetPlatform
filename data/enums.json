@@ -312,14 +312,8 @@
         "Destiny1": 1,
         "TheDarkBelow": 2,
         "HouseOfWolves": 4,
-        "Comet": 8
-    },
-    "DestinyAccountTransferState": {
-        "Unknown": 0,
-        "NoTransfer": 1,
-        "BackTransfer": 2,
-        "V1Active": 3,
-        "AccountsSplit": 4
+        "Comet": 8,
+        "RiseOfIron": 16
     },
     "ItemBindStatus": {
         "NotBound": 0,
@@ -543,6 +537,13 @@
         "RecordPage": 0,
         "SummaryPage": 1
     },
+    "DestinyRecordUIStyle": {
+        "Integer": 0,
+        "Percentage": 1,
+        "TimeInMilliseconds": 2,
+        "Boolean": 3,
+        "NumberWithTwoDecimalPlaces": 4
+    },
     "GroupAttributeType": {
         "Computed": 0,
         "Point": 1,
@@ -692,7 +693,9 @@
         "MayhemRumble": 27,
         "ZoneControl": 28,
         "Racing": 29,
-        "ArenaElderChallenge": 30
+        "ArenaElderChallenge": 30,
+        "Supremacy": 31,
+        "PrivateMatchesAll": 32
     },
     "DestinyStatsCategoryType": {
         "None": 0,
@@ -1391,7 +1394,15 @@
         "OriginHeaderDoesNotMatchKey": 2107,
         "AccessNotPermittedByApplicationScope": 2108,
         "ApplicationNameIsTaken": 2109,
-        "RefreshTokenNotYetValid": 2110
+        "RefreshTokenNotYetValid": 2110,
+        "PartnershipInvalidType": 2200,
+        "PartnershipValidationError": 2201,
+        "PartnershipValidationTimeout": 2202,
+        "PartnershipAccessFailure": 2203,
+        "PartnershipAccountInvalid": 2204,
+        "PartnershipGetAccountInfoFailure": 2205,
+        "PartnershipDisabled": 2206,
+        "PartnershipAlreadyExists": 2207
     },
     "OfferRedeemMode": {
         "Off": 0,
@@ -1409,6 +1420,10 @@
     "GlobalAlertType": {
         "GlobalAlert": 0,
         "StreamingAlert": 1
+    },
+    "PartnershipType": {
+        "None": 0,
+        "Twitch": 1
     },
     "TemplateFormat": {
         "BNet": 0,
@@ -1471,7 +1486,7 @@
         "GroupTopicCreate": 21,
         "GroupReplyCreate": 22,
         "Reply": 23,
-        "ChangeClanName": 24,
+        "ChangeGroupName": 24,
         "GroupAllianceRejected": 26,
         "GroupAllianceApproved": 27,
         "GroupAllianceBroken": 28,
@@ -1596,6 +1611,16 @@
         "FamilyFriendly": 1,
         "Rowdy": 2
     },
+    "ForumTopicsSortEnum": {
+        "Default": 0,
+        "LastReplied": 1,
+        "MostReplied": 2,
+        "Popularity": 3,
+        "Controversiality": 4,
+        "Liked": 5,
+        "HighestRated": 6,
+        "MostUpvoted": 7
+    },
     "ForumTopicsQuickDateEnum": {
         "All": 0,
         "LastYear": 1,
@@ -1613,16 +1638,6 @@
         "Announcement": 32,
         "BungieOfficial": 64,
         "Polls": 128
-    },
-    "ForumTopicsSortEnum": {
-        "Default": 0,
-        "LastReplied": 1,
-        "MostReplied": 2,
-        "Popularity": 3,
-        "Controversiality": 4,
-        "Liked": 5,
-        "HighestRated": 6,
-        "MostUpvoted": 7
     },
     "ForumPostSortEnum": {
         "Default": 0,
