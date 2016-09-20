@@ -1964,7 +1964,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="CommunitycontentService"></a>CommunitycontentService (5 Endpoints)</h2>
+<h2><a name="CommunitycontentService"></a>CommunitycontentService (12 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1974,6 +1974,16 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>POST</td>
+<td><a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberBanStatus">AdminSetCommunityLiveMemberBanStatus</a></td>
+<td>/CommunityContent/Live/Partnerships/{param1}/{param2}/Ban/{param3}/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus">AdminSetCommunityLiveMemberFeatureStatus</a></td>
+<td>/CommunityContent/Live/Partnerships/{param1}/{param2}/Feature/{param3}/</td>
+</tr>
 <tr>
 <td>POST</td>
 <td><a href="../docs/CommunitycontentService/AlterApprovalState">AlterApprovalState</a></td>
@@ -1986,6 +1996,11 @@
 </tr>
 <tr>
 <td>GET</td>
+<td><a href="../docs/CommunitycontentService/GetAdminCommunityLiveStatuses">GetAdminCommunityLiveStatuses</a></td>
+<td>/CommunityContent/Live/Admin/{param1}/{param2}/</td>
+</tr>
+<tr>
+<td>GET</td>
 <td><a href="../docs/CommunitycontentService/GetApprovalQueue">GetApprovalQueue</a></td>
 <td>/CommunityContent/Queue/{param1}/{param2}/{param3}/</td>
 </tr>
@@ -1993,6 +2008,26 @@
 <td>GET</td>
 <td><a href="../docs/CommunitycontentService/GetCommunityContent">GetCommunityContent</a></td>
 <td>/CommunityContent/Get/{param1}/{param2}/{param3}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/CommunitycontentService/GetCommunityLiveStatuses">GetCommunityLiveStatuses</a></td>
+<td>/CommunityContent/Live/All/{param1}/{param2}/{param3}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForClanmates">GetCommunityLiveStatusesForClanmates</a></td>
+<td>/CommunityContent/Live/Clan/{param1}/{param2}/{param3}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForFriends">GetCommunityLiveStatusesForFriends</a></td>
+<td>/CommunityContent/Live/Friends/{param1}/{param2}/{param3}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses">GetFeaturedCommunityLiveStatuses</a></td>
+<td>/CommunityContent/Live/Featured/{param1}/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>

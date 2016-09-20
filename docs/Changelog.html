@@ -83,6 +83,81 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>September 20, 2016</h2>
+<p>The last minute push before the world ends.</p>
+<p>Endpoints (added):</p>
+<ul>
+<li>POST <a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberBanStatus">CommunitycontentService/AdminSetCommunityLiveMemberBanStatus</a></li>
+<li>POST <a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus">CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus</a></li>
+<li>GET <a href="../docs/CommunitycontentService/GetAdminCommunityLiveStatuses">CommunitycontentService/GetAdminCommunityLiveStatuses</a></li>
+<li>GET <a href="../docs/CommunitycontentService/GetCommunityLiveStatuses">CommunitycontentService/GetCommunityLiveStatuses</a></li>
+<li>GET <a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForClanmates">CommunitycontentService/GetCommunityLiveStatusesForClanmates</a></li>
+<li>GET <a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForFriends">CommunitycontentService/GetCommunityLiveStatusesForFriends</a></li>
+<li>GET <a href="../docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses">CommunitycontentService/GetFeaturedCommunityLiveStatuses</a></li>
+</ul>
+<p>Enums</p>
+<ul>
+<li>ActivityType
+<ul>
+<li>1 &quot;TransferFromVault&quot;</li>
+<li>1001 &quot;TransferToVault&quot;</li>
+<li>1002 &quot;TrackQuest&quot;</li>
+<li>1003 &quot;UntrackQuest&quot;</li>
+<li>1004 &quot;EquipItem&quot;</li>
+<li>1005 &quot;BuyItem&quot;</li>
+<li>1008 &quot;LockItem&quot;</li>
+<li>1009 &quot;UnlockItem&quot;</li>
+<li>1010 &quot;RefundItem&quot;</li>
+</ul></li>
+<li>AffectedItemType
+<ul>
+<li>6 &quot;Destiny&quot;</li>
+</ul></li>
+<li>CommunityStatusSort (added)
+<ul>
+<li>0 &quot;Viewers&quot;</li>
+<li>1 &quot;Trending&quot;</li>
+<li>2 &quot;OverallViewers&quot;</li>
+<li>3 &quot;Followers&quot;</li>
+</ul></li>
+</ul>
+<p>Definitions:</p>
+<ul>
+<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 224 &gt; 300 entries (+6)</li>
+<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 337 &gt; 539 entries (+202)</li>
+<li><a href="#ActivityType">ActivityType</a>: 56 &gt; 61 entries (+5)</li>
+<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 675 &gt; 808 entries (+133)</li>
+<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1737 &gt; 1788 entries (+51)</li>
+<li><a href="../docs/Definitions/InventoryBucketDefinition">InventoryBucketDefinition</a>: 37 &gt; 40 entries (+3)</li>
+<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6643 &gt; 7485 entries (+842) | 176 &gt; 164 classified (-12)</li>
+<li><a href="../docs/Definitions/ItemCategoryDefinition">ItemCategoryDefinition</a>: 55 &gt; 56 entries (+1)</li>
+<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 134 &gt; 149 entries (+15)</li>
+<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 929 &gt; 1101 entries (+172)</li>
+<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 246 &gt; 247 entries (+1)</li>
+<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 2 &gt; 3 entries (+1)</li>
+<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 24 &gt; 48 entries (+24)</li>
+<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 49 &gt; 58 entries (+9)</li>
+<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 977 &gt; 1043 entries (+66)</li>
+<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1145 &gt; 1285 entries (+140)</li>
+<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6774 &gt; 6795 entries (+21) | 788 &gt; 0 classified (-788)</li>
+<li><a href="../docs/Definitions/VendorCategoryDefinition">VendorCategoryDefinition</a>: 12 &gt; 13 entries (+1)</li>
+<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 48 &gt; 77 entries (+29)</li>
+</ul>
+<p>EnemyHistoricalStats (added)</p>
+<ul>
+<li>AiExpUltraTakenTitanArenaChallengeReef - A Taken Titan in the Challenge of Elders...what??</li>
+<li>AiIronLord - An Iron Lord boss??</li>
+<li>R1S5RaidPromiseSeraphUltraCaptain</li>
+<li>R1S5RaidPromiseWelderUltraCaptain</li>
+<li>R1S5StrikeOathUltraCaptain</li>
+<li>R1S5StrikeStarfishUltraServitor</li>
+<li>Siva</li>
+<li>SivaCaptain</li>
+<li>SivaDreg</li>
+<li>SivaServitor</li>
+<li>SivaShank</li>
+<li>SivaVandal</li>
+</ul>
 <h2>September 9, 2016</h2>
 <p>The &quot;pre-load&quot; before Rise of Iron.</p>
 <p>Endpoints (added):</p>
