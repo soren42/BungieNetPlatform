@@ -81,6 +81,13 @@
                 ],
                 "post": []
             },
+            "GetAuthorizationForUserAndApplication": {
+                "name": "GetAuthorizationForUserAndApplication",
+                "method": "GET",
+                "endpoint": "\/App\/Authorization\/{param1}\/{param2}\/",
+                "params": [],
+                "post": []
+            },
             "RevokeAuthorization": {
                 "name": "RevokeAuthorization",
                 "method": "POST",
@@ -2977,12 +2984,20 @@
                 "params": [],
                 "post": []
             },
+            "GetCommunityFeaturedActivityModes": {
+                "name": "GetCommunityFeaturedActivityModes",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/ActivityModes\/Featured\/",
+                "params": [],
+                "post": []
+            },
             "GetCommunityLiveStatuses": {
                 "name": "GetCommunityLiveStatuses",
                 "method": "GET",
                 "endpoint": "\/CommunityContent\/Live\/All\/{param1}\/{param2}\/{param3}\/",
                 "params": [
-                    "modeHash"
+                    "modeHash",
+                    "streamLocale"
                 ],
                 "post": []
             },
@@ -3013,7 +3028,9 @@
                 "name": "GetFeaturedCommunityLiveStatuses",
                 "method": "GET",
                 "endpoint": "\/CommunityContent\/Live\/Featured\/{param1}\/{param2}\/{param3}\/",
-                "params": [],
+                "params": [
+                    "streamLocale"
+                ],
                 "post": []
             },
             "AdminSetCommunityLiveMemberBanStatus": {

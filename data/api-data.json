@@ -127,6 +127,24 @@
             "access": ""
         },
         {
+            "name": "GetAuthorizationForUserAndApplication",
+            "method": "GET",
+            "endpoint": "\/App\/Authorization\/{param1}\/{param2}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetAuthorizations",
             "method": "GET",
             "endpoint": "\/App\/Authorizations\/{param1}\/",
@@ -6475,11 +6493,24 @@
             "access": ""
         },
         {
+            "name": "GetCommunityFeaturedActivityModes",
+            "method": "GET",
+            "endpoint": "\/CommunityContent\/Live\/ActivityModes\/Featured\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": ""
+        },
+        {
             "name": "GetCommunityLiveStatuses",
             "method": "GET",
             "endpoint": "\/CommunityContent\/Live\/All\/{param1}\/{param2}\/{param3}\/",
             "params": {
                 "modeHash": {
+                    "desc": "",
+                    "link": ""
+                },
+                "streamLocale": {
                     "desc": "",
                     "link": ""
                 }
@@ -6549,7 +6580,12 @@
             "name": "GetFeaturedCommunityLiveStatuses",
             "method": "GET",
             "endpoint": "\/CommunityContent\/Live\/Featured\/{param1}\/{param2}\/{param3}\/",
-            "params": [],
+            "params": {
+                "streamLocale": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {

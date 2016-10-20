@@ -484,7 +484,8 @@
         "BANNED_PERMANENT": 38,
         "USER_PROFILE_BANNED_PERMANENT": 39,
         "USER_MESSAGE_BANNED_PERMANENT": 40,
-        "GROUP_WALL_BANNED_PERMANENT": 41
+        "GROUP_WALL_BANNED_PERMANENT": 41,
+        "APPLICATION_AUTHORIZED": 42
     },
     "ActivityOutputFormat": {
         "BNet": 0,
@@ -1504,6 +1505,8 @@
         "LockItem": 1008,
         "UnlockItem": 1009,
         "RefundItem": 1010,
+        "Authorize": 2,
+        "Revoke": 2001,
         "None": -1
     },
     "AffectedItemType": {
@@ -1514,6 +1517,7 @@
         "Tag": 4,
         "CommunityContent": 5,
         "Destiny": 6,
+        "Application": 7,
         "None": -1
     },
     "GroupApplicationResolveState": {
@@ -1564,7 +1568,8 @@
         "Report": 5,
         "Activity": 6,
         "Conversation": 7,
-        "Tag": 8
+        "Tag": 8,
+        "Application": 9
     },
     "TextParameterSearchType": {
         "Contains": 0,
@@ -1626,6 +1631,17 @@
         "FamilyFriendly": 1,
         "Rowdy": 2
     },
+    "ForumTopicsCategoryFiltersEnum": {
+        "None": 0,
+        "Links": 1,
+        "Questions": 2,
+        "AnsweredQuestions": 4,
+        "Media": 8,
+        "TextOnly": 16,
+        "Announcement": 32,
+        "BungieOfficial": 64,
+        "Polls": 128
+    },
     "ForumTopicsQuickDateEnum": {
         "All": 0,
         "LastYear": 1,
@@ -1642,17 +1658,6 @@
         "Liked": 5,
         "HighestRated": 6,
         "MostUpvoted": 7
-    },
-    "ForumTopicsCategoryFiltersEnum": {
-        "None": 0,
-        "Links": 1,
-        "Questions": 2,
-        "AnsweredQuestions": 4,
-        "Media": 8,
-        "TextOnly": 16,
-        "Announcement": 32,
-        "BungieOfficial": 64,
-        "Polls": 128
     },
     "ForumPostSortEnum": {
         "Default": 0,

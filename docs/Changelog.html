@@ -83,6 +83,51 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>October 20, 2016</h2>
+<p>The one before the festival.</p>
+<p>Definitions:</p>
+<ul>
+<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 300 &gt; 305 entries (+5)</li>
+<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 539 &gt; 546 entries (+7)</li>
+<li><a href="../docs/Definitions/ActivityModeDefinition">ActivityModeDefinition</a>: new (+32 entries)</li>
+<li><a href="../docs/Definitions/ActivityTypeDefinition">ActivityTypeDefinition</a>: 61 &gt; 62 (+1 entries)</li>
+<li><a href="../docs/Definitions/InventoryBucketDefinition">InventoryBucketDefinition</a>: added &quot;fifo&quot; boolean</li>
+<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 7485 &gt; 7544 (+59 entries) | 163 &gt; 162 (-1 classified)</li>
+<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 149 &gt; 150 (+1 entry)</li>
+<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 1101 &gt; 1144 (+43 entries)</li>
+<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 48 &gt; 56 (+8 entries)</li>
+<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 58 &gt; 59 (+1 entry)</li>
+<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 1043 &gt; 1049 (+6 entries)</li>
+<li><a href="../docs/Definitions/StatDefinition">StatDefinition</a>: added &quot;aggregationType&quot; int and &quot;hasComputedBlock&quot; boolean</li>
+<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: added &quot;maximumRandomMaterialRequirements&quot; int</li>
+<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6795 &gt; 6944 (+149 entries)</li>
+<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 77 &gt; 79 (+2 entries) plus a bunch of new properties under &quot;sales&quot; and &quot;categoryIndex&quot; added to &quot;categories&quot;</li>
+</ul>
+<p>Endpoints (added):</p>
+<ul>
+<li>GET <a href="../docs/ApplicationService/GetAuthorizationForUserAndApplication">ApplicationService/GetAuthorizationForUserAndApplication</a></li>
+<li>GET <a href="../docs/CommunitycontentService/GetCommunityFeaturedActivityModes">CommunitycontentService/GetCommunityFeaturedActivityModes</a></li>
+</ul>
+<p>Enums</p>
+<ul>
+<li>ActivityType
+<ul>
+<li>2 &quot;Authorize&quot;</li>
+<li>2001 &quot;Revoke&quot;</li>
+</ul></li>
+<li>AffectedItemType
+<ul>
+<li>7 &quot;Application&quot;</li>
+</ul></li>
+<li>EntityType
+<ul>
+<li>9 &quot;Application&quot;</li>
+</ul></li>
+<li>NotificationType
+<ul>
+<li>42 &quot;APPLICATION_AUTHORIZED&quot;</li>
+</ul></li>
+</ul>
 <h2>September 30, 2016</h2>
 <p>The one about the raid Exotic.</p>
 <p>Definitions:</p>
