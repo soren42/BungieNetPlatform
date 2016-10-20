@@ -81,6 +81,13 @@
                 ],
                 "post": []
             },
+            "GetAuthorizationForUserAndApplication": {
+                "name": "GetAuthorizationForUserAndApplication",
+                "method": "GET",
+                "endpoint": "\/App\/Authorization\/{param1}\/{param2}\/",
+                "params": [],
+                "post": []
+            },
             "RevokeAuthorization": {
                 "name": "RevokeAuthorization",
                 "method": "POST",
@@ -2974,6 +2981,69 @@
                 "name": "AlterApprovalState",
                 "method": "POST",
                 "endpoint": "\/CommunityContent\/AlterApprovalState\/{param1}\/",
+                "params": [],
+                "post": []
+            },
+            "GetCommunityFeaturedActivityModes": {
+                "name": "GetCommunityFeaturedActivityModes",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/ActivityModes\/Featured\/",
+                "params": [],
+                "post": []
+            },
+            "GetCommunityLiveStatuses": {
+                "name": "GetCommunityLiveStatuses",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/All\/{param1}\/{param2}\/{param3}\/",
+                "params": [
+                    "modeHash",
+                    "streamLocale"
+                ],
+                "post": []
+            },
+            "GetCommunityLiveStatusesForClanmates": {
+                "name": "GetCommunityLiveStatusesForClanmates",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/Clan\/{param1}\/{param2}\/{param3}\/",
+                "params": [],
+                "post": []
+            },
+            "GetCommunityLiveStatusesForFriends": {
+                "name": "GetCommunityLiveStatusesForFriends",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/Friends\/{param1}\/{param2}\/{param3}\/",
+                "params": [],
+                "post": []
+            },
+            "GetAdminCommunityLiveStatuses": {
+                "name": "GetAdminCommunityLiveStatuses",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/Admin\/{param1}\/{param2}\/",
+                "params": [
+                    "name"
+                ],
+                "post": []
+            },
+            "GetFeaturedCommunityLiveStatuses": {
+                "name": "GetFeaturedCommunityLiveStatuses",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/Featured\/{param1}\/{param2}\/{param3}\/",
+                "params": [
+                    "streamLocale"
+                ],
+                "post": []
+            },
+            "AdminSetCommunityLiveMemberBanStatus": {
+                "name": "AdminSetCommunityLiveMemberBanStatus",
+                "method": "POST",
+                "endpoint": "\/CommunityContent\/Live\/Partnerships\/{param1}\/{param2}\/Ban\/{param3}\/",
+                "params": [],
+                "post": []
+            },
+            "AdminSetCommunityLiveMemberFeatureStatus": {
+                "name": "AdminSetCommunityLiveMemberFeatureStatus",
+                "method": "POST",
+                "endpoint": "\/CommunityContent\/Live\/Partnerships\/{param1}\/{param2}\/Feature\/{param3}\/",
                 "params": [],
                 "post": []
             }

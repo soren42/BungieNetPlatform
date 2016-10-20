@@ -334,6 +334,56 @@
         }
     },
     "Enemies": {
+        "AiExpUltraTakenTitanArenaChallengeReef": {
+            "enemyId": "AiExpUltraTakenTitanArenaChallengeReef",
+            "enemyName": "###AiExpUltraTakenTitanArenaChallengeReef###",
+            "activityType": "Arena",
+            "destination": "Reef",
+            "enemyTier": "Ultra",
+            "raceClass": "PlayerTitan",
+            "raceName": "Player",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstAiExpUltraTakenTitanArenaChallengeReef",
+                    "statName": "###assistsAgainstAiExpUltraTakenTitanArenaChallengeReef###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfAiExpUltraTakenTitanArenaChallengeReef",
+                    "statName": "###precisionKillOfAiExpUltraTakenTitanArenaChallengeReef###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromAiExpUltraTakenTitanArenaChallengeReef",
+                    "statName": "###deathsFromAiExpUltraTakenTitanArenaChallengeReef###"
+                },
+                "killsOf": {
+                    "statId": "killsOfAiExpUltraTakenTitanArenaChallengeReef",
+                    "statName": "###killsOfAiExpUltraTakenTitanArenaChallengeReef###"
+                }
+            },
+            "cardId": 101010
+        },
+        "AiIronLord": {
+            "enemyId": "AiIronLord",
+            "enemyName": "###AiIronLord###",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstAiIronLord",
+                    "statName": "###assistsAgainstAiIronLord###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfAiIronLord",
+                    "statName": "###precisionKillOfAiIronLord###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromAiIronLord",
+                    "statName": "###deathsFromAiIronLord###"
+                },
+                "killsOf": {
+                    "statId": "killsOfAiIronLord",
+                    "statName": "###killsOfAiIronLord###"
+                }
+            }
+        },
         "AiMajorCaptainSpearLauncherHouseOfWolves": {
             "enemyId": "AiMajorCaptainSpearLauncherHouseOfWolves",
             "enemyName": "###AiMajorCaptainSpearLauncherHouseOfWolves###",
@@ -12472,6 +12522,157 @@
             ],
             "cardId": 207100
         },
+        "R1S5RaidPromiseSeraphUltraCaptain": {
+            "enemyId": "R1S5RaidPromiseSeraphUltraCaptain",
+            "enemyName": "###R1S5RaidPromiseSeraphUltraCaptain###",
+            "activityType": "Raid",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S5",
+            "raceClass": "FallenCaptain",
+            "raceName": "Fallen",
+            "activity": "RaidPromiseSeraph",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstR1S5RaidPromiseSeraphUltraCaptain",
+                    "statName": "###assistsAgainstR1S5RaidPromiseSeraphUltraCaptain###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfR1S5RaidPromiseSeraphUltraCaptain",
+                    "statName": "###precisionKillOfR1S5RaidPromiseSeraphUltraCaptain###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromR1S5RaidPromiseSeraphUltraCaptain",
+                    "statName": "###deathsFromR1S5RaidPromiseSeraphUltraCaptain###"
+                },
+                "killsDeathsRatio": {
+                    "statId": "killsDeathsRatioR1S5RaidPromiseSeraphUltraCaptain",
+                    "statName": "###killsDeathsRatioR1S5RaidPromiseSeraphUltraCaptain###"
+                },
+                "killsOf": {
+                    "statId": "killsOfR1S5RaidPromiseSeraphUltraCaptain",
+                    "statName": "###killsOfR1S5RaidPromiseSeraphUltraCaptain###"
+                }
+            },
+            "overrides": [],
+            "enemyShield": "ArcShield",
+            "enemyWeapon": "ShrapnelLauncher",
+            "enemyOtherWeapons": [
+                "ShockRifle"
+            ],
+            "cardId": 207100
+        },
+        "R1S5RaidPromiseWelderUltraCaptain": {
+            "enemyId": "R1S5RaidPromiseWelderUltraCaptain",
+            "enemyName": "###R1S5RaidPromiseWelderUltraCaptain###",
+            "activityType": "Raid",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S5",
+            "raceClass": "FallenCaptain",
+            "raceName": "Fallen",
+            "activity": "RaidPromiseWelder",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstR1S5RaidPromiseWelderUltraCaptain",
+                    "statName": "###assistsAgainstR1S5RaidPromiseWelderUltraCaptain###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfR1S5RaidPromiseWelderUltraCaptain",
+                    "statName": "###precisionKillOfR1S5RaidPromiseWelderUltraCaptain###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromR1S5RaidPromiseWelderUltraCaptain",
+                    "statName": "###deathsFromR1S5RaidPromiseWelderUltraCaptain###"
+                },
+                "killsDeathsRatio": {
+                    "statId": "killsDeathsRatioR1S5RaidPromiseWelderUltraCaptain",
+                    "statName": "###killsDeathsRatioR1S5RaidPromiseWelderUltraCaptain###"
+                },
+                "killsOf": {
+                    "statId": "killsOfR1S5RaidPromiseWelderUltraCaptain",
+                    "statName": "###killsOfR1S5RaidPromiseWelderUltraCaptain###"
+                }
+            },
+            "overrides": [],
+            "enemyShield": "ArcShield",
+            "enemyWeapon": "ShrapnelLauncher",
+            "enemyOtherWeapons": [
+                "ShockRifle"
+            ],
+            "cardId": 207100
+        },
+        "R1S5StrikeOathUltraCaptain": {
+            "enemyId": "R1S5StrikeOathUltraCaptain",
+            "enemyName": "###R1S5StrikeOathUltraCaptain###",
+            "activityType": "Strike",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S5",
+            "raceClass": "FallenCaptain",
+            "raceName": "Fallen",
+            "activity": "StrikeOath",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstR1S5StrikeOathUltraCaptain",
+                    "statName": "###assistsAgainstR1S5StrikeOathUltraCaptain###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfR1S5StrikeOathUltraCaptain",
+                    "statName": "###precisionKillOfR1S5StrikeOathUltraCaptain###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromR1S5StrikeOathUltraCaptain",
+                    "statName": "###deathsFromR1S5StrikeOathUltraCaptain###"
+                },
+                "killsDeathsRatio": {
+                    "statId": "killsDeathsRatioR1S5StrikeOathUltraCaptain",
+                    "statName": "###killsDeathsRatioR1S5StrikeOathUltraCaptain###"
+                },
+                "killsOf": {
+                    "statId": "killsOfR1S5StrikeOathUltraCaptain",
+                    "statName": "###killsOfR1S5StrikeOathUltraCaptain###"
+                }
+            },
+            "overrides": [],
+            "enemyShield": "ArcShield",
+            "enemyWeapon": "ShrapnelLauncher",
+            "enemyOtherWeapons": [
+                "ShockRifle"
+            ],
+            "cardId": 207100
+        },
+        "R1S5StrikeStarfishUltraServitor": {
+            "enemyId": "R1S5StrikeStarfishUltraServitor",
+            "enemyName": "###R1S5StrikeStarfishUltraServitor###",
+            "activityType": "Strike",
+            "enemyTier": "Ultra",
+            "expansionId": "R1S5",
+            "raceClass": "FallenServitor",
+            "raceName": "Fallen",
+            "activity": "StrikeStarfish",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstR1S5StrikeStarfishUltraServitor",
+                    "statName": "###assistsAgainstR1S5StrikeStarfishUltraServitor###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfR1S5StrikeStarfishUltraServitor",
+                    "statName": "###precisionKillOfR1S5StrikeStarfishUltraServitor###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromR1S5StrikeStarfishUltraServitor",
+                    "statName": "###deathsFromR1S5StrikeStarfishUltraServitor###"
+                },
+                "killsDeathsRatio": {
+                    "statId": "killsDeathsRatioR1S5StrikeStarfishUltraServitor",
+                    "statName": "###killsDeathsRatioR1S5StrikeStarfishUltraServitor###"
+                },
+                "killsOf": {
+                    "statId": "killsOfR1S5StrikeStarfishUltraServitor",
+                    "statName": "###killsOfR1S5StrikeStarfishUltraServitor###"
+                }
+            },
+            "overrides": [],
+            "cardId": 207140
+        },
         "RaidBosses": {
             "enemyId": "RaidBosses",
             "enemyName": "Raid Bosses",
@@ -12514,6 +12715,175 @@
                 }
             },
             "cardId": 207150
+        },
+        "Siva": {
+            "enemyId": "Siva",
+            "enemyName": "###Siva###",
+            "cardId": 800419,
+            "stats": {
+                "killsOf": {
+                    "statId": "killsOfSiva",
+                    "statName": "###killsOfSiva###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromSiva",
+                    "statName": "###deathsFromSiva###"
+                },
+                "killsDeathsRatio": {
+                    "statId": "killsDeathsRatioSiva",
+                    "statName": "###killsDeathsRatioSiva###"
+                }
+            }
+        },
+        "SivaCaptain": {
+            "enemyId": "SivaCaptain",
+            "enemyName": "###SivaCaptain###",
+            "raceClass": "FallenCaptain",
+            "raceName": "Fallen",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstSivaCaptain",
+                    "statName": "###assistsAgainstSivaCaptain###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfSivaCaptain",
+                    "statName": "###precisionKillOfSivaCaptain###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromSivaCaptain",
+                    "statName": "###deathsFromSivaCaptain###"
+                },
+                "killsOf": {
+                    "statId": "killsOfSivaCaptain",
+                    "statName": "###killsOfSivaCaptain###"
+                }
+            },
+            "overrides": [],
+            "enemyShield": "ArcShield",
+            "enemyWeapon": "ShrapnelLauncher",
+            "enemyOtherWeapons": [
+                "ShockRifle"
+            ],
+            "enemyTier": "Minor",
+            "cardId": 207100
+        },
+        "SivaDreg": {
+            "enemyId": "SivaDreg",
+            "enemyName": "###SivaDreg###",
+            "raceClass": "FallenDreg",
+            "raceName": "Fallen",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstSivaDreg",
+                    "statName": "###assistsAgainstSivaDreg###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfSivaDreg",
+                    "statName": "###precisionKillOfSivaDreg###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromSivaDreg",
+                    "statName": "###deathsFromSivaDreg###"
+                },
+                "killsOf": {
+                    "statId": "killsOfSivaDreg",
+                    "statName": "###killsOfSivaDreg###"
+                }
+            },
+            "overrides": [],
+            "enemyWeapon": "ShockPistol",
+            "enemyOtherWeapons": [
+                "ShrapnelLauncher"
+            ],
+            "enemyTier": "Minor",
+            "heroicPrefix": "",
+            "cardId": 207130
+        },
+        "SivaServitor": {
+            "enemyId": "SivaServitor",
+            "enemyName": "###SivaServitor###",
+            "raceClass": "FallenServitor",
+            "raceName": "Fallen",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstSivaServitor",
+                    "statName": "###assistsAgainstSivaServitor###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfSivaServitor",
+                    "statName": "###precisionKillOfSivaServitor###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromSivaServitor",
+                    "statName": "###deathsFromSivaServitor###"
+                },
+                "killsOf": {
+                    "statId": "killsOfSivaServitor",
+                    "statName": "###killsOfSivaServitor###"
+                }
+            },
+            "overrides": [],
+            "enemyTier": "Minor",
+            "cardId": 207140
+        },
+        "SivaShank": {
+            "enemyId": "SivaShank",
+            "enemyName": "###SivaShank###",
+            "raceClass": "FallenShank",
+            "raceName": "Fallen",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstSivaShank",
+                    "statName": "###assistsAgainstSivaShank###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfSivaShank",
+                    "statName": "###precisionKillOfSivaShank###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromSivaShank",
+                    "statName": "###deathsFromSivaShank###"
+                },
+                "killsOf": {
+                    "statId": "killsOfSivaShank",
+                    "statName": "###killsOfSivaShank###"
+                }
+            },
+            "overrides": [],
+            "enemyTier": "Minor",
+            "cardId": 207150
+        },
+        "SivaVandal": {
+            "enemyId": "SivaVandal",
+            "enemyName": "###SivaVandal###",
+            "raceClass": "FallenVandal",
+            "raceName": "Fallen",
+            "stats": {
+                "assistsAgainst": {
+                    "statId": "assistsAgainstSivaVandal",
+                    "statName": "###assistsAgainstSivaVandal###"
+                },
+                "precisionKillsOf": {
+                    "statId": "precisionKillOfSivaVandal",
+                    "statName": "###precisionKillOfSivaVandal###"
+                },
+                "deathsFrom": {
+                    "statId": "deathsFromSivaVandal",
+                    "statName": "###deathsFromSivaVandal###"
+                },
+                "killsOf": {
+                    "statId": "killsOfSivaVandal",
+                    "statName": "###killsOfSivaVandal###"
+                }
+            },
+            "overrides": [],
+            "enemyWeapon": "ShockRifle",
+            "enemyOtherWeapons": [
+                "WireRifle",
+                "ShrapnelLauncher"
+            ],
+            "enemyTier": "Minor",
+            "cardId": 207120
         },
         "SolProgeny": {
             "enemyId": "SolProgeny",
