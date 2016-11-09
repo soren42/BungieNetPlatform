@@ -4,7 +4,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 4079,
+                "entries": 4096,
                 "classified": 0
             }
         ]
@@ -14,7 +14,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 4079,
+                "entries": 4096,
                 "classified": 0
             }
         ]
@@ -39,7 +39,7 @@
             },
             {
                 "name": "DestinyActivityModeDefinition",
-                "entries": 32,
+                "entries": 36,
                 "classified": 0
             },
             {
@@ -94,7 +94,7 @@
             },
             {
                 "name": "DestinyGrimoireCardDefinition",
-                "entries": 810,
+                "entries": 812,
                 "classified": 0
             },
             {
@@ -104,7 +104,7 @@
             },
             {
                 "name": "DestinyHistoricalStatsDefinition",
-                "entries": 1788,
+                "entries": 1797,
                 "classified": 0
             },
             {
@@ -159,7 +159,7 @@
             },
             {
                 "name": "DestinyRewardSourceDefinition",
-                "entries": 59,
+                "entries": 60,
                 "classified": 0
             },
             {
