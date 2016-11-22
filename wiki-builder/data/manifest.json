@@ -4,7 +4,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 4096,
+                "entries": 4097,
                 "classified": 0
             }
         ]
@@ -14,7 +14,7 @@
         "definitions": [
             {
                 "name": "DestinyGearAssetsDefinition",
-                "entries": 4096,
+                "entries": 4097,
                 "classified": 0
             }
         ]
@@ -115,7 +115,7 @@
             {
                 "name": "DestinyInventoryItemDefinition",
                 "entries": 7544,
-                "classified": 162
+                "classified": 160
             },
             {
                 "name": "DestinyItemCategoryDefinition",
