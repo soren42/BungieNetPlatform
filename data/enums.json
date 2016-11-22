@@ -50,15 +50,39 @@
         "GuiltyAlias": 5,
         "ResolveNoAction": 6
     },
-    "PartnershipType": {
-        "None": 0,
-        "Twitch": 1
+    "ApplicationScopes": {
+        "ReadBasicUserProfile": 1,
+        "ReadGroups": 2,
+        "WriteGroups": 4,
+        "AdminGroups": 8,
+        "BnetWrite": 16,
+        "MoveEquipDestinyItems": 32,
+        "ReadPrivateDestinyData": 64,
+        "ReadUserData": 128,
+        "EditUserData": 256
     },
-    "CommunityStatusSort": {
-        "Viewers": 0,
-        "Trending": 1,
-        "OverallViewers": 2,
-        "Followers": 3
+    "ApplicationStatus": {
+        "None": 0,
+        "Private": 1,
+        "Public": 2,
+        "Disabled": 3,
+        "Blocked": 4
+    },
+    "DeveloperRole": {
+        "None": 0,
+        "Owner": 1,
+        "TeamMember": 2
+    },
+    "ApiKeyStatus": {
+        "None": 0,
+        "Active": 1,
+        "Disabled": 2,
+        "Deleted": 3
+    },
+    "AuthorizationStatus": {
+        "None": 0,
+        "Active": 1,
+        "Revoked": 2
     },
     "BungieMembershipType": {
         "None": 0,
@@ -154,237 +178,6 @@
         "Europe": 2,
         "Japan": 3
     },
-    "DestinyActivityModeType": {
-        "None": 0,
-        "Story": 2,
-        "Strike": 3,
-        "Raid": 4,
-        "AllPvP": 5,
-        "Patrol": 6,
-        "AllPvE": 7,
-        "PvPIntroduction": 8,
-        "ThreeVsThree": 9,
-        "Control": 10,
-        "Lockdown": 11,
-        "Team": 12,
-        "FreeForAll": 13,
-        "TrialsOfOsiris": 14,
-        "Doubles": 15,
-        "Nightfall": 16,
-        "Heroic": 17,
-        "AllStrikes": 18,
-        "IronBanner": 19,
-        "AllArena": 20,
-        "Arena": 21,
-        "ArenaChallenge": 22,
-        "Elimination": 23,
-        "Rift": 24,
-        "AllMayhem": 25,
-        "MayhemClash": 26,
-        "MayhemRumble": 27,
-        "ZoneControl": 28,
-        "Racing": 29,
-        "ArenaElderChallenge": 30,
-        "Supremacy": 31,
-        "PrivateMatchesAll": 32
-    },
-    "GroupAttributeType": {
-        "Computed": 0,
-        "Point": 1,
-        "Range": 2
-    },
-    "DestinyTalentNodeStepWeaponPerformances": {
-        "None": 0,
-        "RateOfFire": 1,
-        "Damage": 2,
-        "Accuracy": 4,
-        "Range": 8,
-        "Zoom": 16,
-        "Recoil": 32,
-        "Ready": 64,
-        "Reload": 128,
-        "HairTrigger": 256,
-        "AmmoAndMagazine": 512,
-        "TrackingAndDetonation": 1024,
-        "ShotgunSpread": 2048,
-        "ChargeTime": 4096,
-        "All": 8191
-    },
-    "DestinyTalentNodeStepImpactEffects": {
-        "None": 0,
-        "ArmorPiercing": 1,
-        "Ricochet": 2,
-        "Flinch": 4,
-        "CollateralDamage": 8,
-        "Disorient": 16,
-        "HighlightTarget": 32,
-        "All": 63
-    },
-    "DestinyTalentNodeStepGuardianAttributes": {
-        "None": 0,
-        "Stats": 1,
-        "Shields": 2,
-        "Health": 4,
-        "Revive": 8,
-        "AimUnderFire": 16,
-        "Radar": 32,
-        "Invisibility": 64,
-        "Reputations": 128,
-        "All": 255
-    },
-    "DestinyTalentNodeStepLightAbilities": {
-        "None": 0,
-        "Grenades": 1,
-        "Melee": 2,
-        "MovementModes": 4,
-        "Orbs": 8,
-        "SuperEnergy": 16,
-        "SuperMods": 32,
-        "All": 63
-    },
-    "DestinyTalentNodeStepDamageTypes": {
-        "None": 0,
-        "Kinetic": 1,
-        "Arc": 2,
-        "Solar": 4,
-        "Void": 8,
-        "All": 15
-    },
-    "DestinyRewardSourceCategory": {
-        "None": 0,
-        "Activity": 1,
-        "Vendor": 2,
-        "Aggregate": 3
-    },
-    "DestinyDefinitionType": {
-        "None": 0,
-        "Activity": 1,
-        "ActivityType": 2,
-        "Class": 3,
-        "Gender": 4,
-        "InventoryBucket": 5,
-        "InventoryItem": 6,
-        "Progression": 7,
-        "Race": 8,
-        "Stat": 9,
-        "TalentGrid": 10,
-        "StatGroup": 11,
-        "UnlockFlag": 12,
-        "Vendor": 13,
-        "Destination": 14,
-        "Place": 15,
-        "DirectorBook": 16,
-        "MaterialRequirement": 17,
-        "SandboxPerk": 18,
-        "ArtDye": 19,
-        "ArtDyeChannel": 20,
-        "ActivityBundle": 21,
-        "GearAsset": 22,
-        "GrimoireCard": 23
-    },
-    "DestinyCardRarity": {
-        "None": 0,
-        "Common": 1,
-        "Superior": 2,
-        "Exotic": 3
-    },
-    "DestinyStatsGroupType": {
-        "General": 1,
-        "Weapons": 2,
-        "Medals": 3,
-        "Enemies": 4,
-        "ReservedGroups": 100,
-        "Leaderboard": 101,
-        "Activity": 102,
-        "UniqueWeapon": 103,
-        "Internal": 104,
-        "Unknown": 105
-    },
-    "PeriodType": {
-        "None": 0,
-        "Daily": 1,
-        "Monthly": 2,
-        "AllTime": 3,
-        "Activity": 4
-    },
-    "DestinyStatsCategoryType": {
-        "None": 0,
-        "Kills": 1,
-        "Assists": 2,
-        "Deaths": 3,
-        "Criticals": 4,
-        "KDa": 5,
-        "KD": 6,
-        "Score": 7,
-        "Entered": 8,
-        "TimePlayed": 9,
-        "MedalWins": 10,
-        "MedalGame": 11,
-        "MedalSpecialKills": 12,
-        "MedalSprees": 13,
-        "MedalMultiKills": 14,
-        "MedalAbilities": 15
-    },
-    "UnitType": {
-        "None": 0,
-        "Count": 1,
-        "PerGame": 2,
-        "Seconds": 3,
-        "Points": 4,
-        "Team": 5,
-        "Distance": 6,
-        "Percent": 7,
-        "Ratio": 8,
-        "Boolean": 9,
-        "WeaponType": 10,
-        "Standing": 11,
-        "Milliseconds": 12
-    },
-    "DestinyStatsMergeMethod": {
-        "Add": 0,
-        "Min": 1,
-        "Max": 2
-    },
-    "DestinyExcellenceBadgeTier": {
-        "None": 0,
-        "Bronze": 1,
-        "Silver": 2,
-        "Gold": 3
-    },
-    "ApplicationScopes": {
-        "ReadBasicUserProfile": 1,
-        "ReadGroups": 2,
-        "WriteGroups": 4,
-        "AdminGroups": 8,
-        "BnetWrite": 16,
-        "MoveEquipDestinyItems": 32,
-        "ReadPrivateDestinyData": 64,
-        "ReadUserData": 128,
-        "EditUserData": 256
-    },
-    "ApplicationStatus": {
-        "None": 0,
-        "Private": 1,
-        "Public": 2,
-        "Disabled": 3,
-        "Blocked": 4
-    },
-    "DeveloperRole": {
-        "None": 0,
-        "Owner": 1,
-        "TeamMember": 2
-    },
-    "ApiKeyStatus": {
-        "None": 0,
-        "Active": 1,
-        "Disabled": 2,
-        "Deleted": 3
-    },
-    "AuthorizationStatus": {
-        "None": 0,
-        "Active": 1,
-        "Revoked": 2
-    },
     "AclEnum": {
         "None": 0,
         "BNextForumNinja": 1,
@@ -413,13 +206,15 @@
         "BNextPrivateUserDataReader": 24,
         "BNextDiagnosticsDataReader": 25,
         "BNextOverrideLinkPrivacy": 26,
-        "BNextDiscountSupport": 27
+        "BNextDiscountSupport": 27,
+        "BNextApplicationSupervision": 28
     },
     "BNetAccountPrivacy": {
         "Default": 0,
         "ShowDestinyInventory": 1,
         "HideDestinyActivityHistoryFeed": 2,
-        "HideDestinyAdvisors": 4
+        "HideDestinyAdvisors": 4,
+        "HideFollowers": 8
     },
     "NotificationMethods": {
         "None": 0,
@@ -707,6 +502,11 @@
         "Equippable": 3,
         "Ignored": 4
     },
+    "DestinyStatAggregationType": {
+        "CharacterAverage": 0,
+        "Character": 1,
+        "Item": 2
+    },
     "DestinyUnlockValueUIStyle": {
         "Automatic": 0,
         "Fraction": 1,
@@ -750,6 +550,207 @@
         "TimeInMilliseconds": 2,
         "Boolean": 3,
         "NumberWithTwoDecimalPlaces": 4
+    },
+    "GroupAttributeType": {
+        "Computed": 0,
+        "Point": 1,
+        "Range": 2
+    },
+    "DestinyTalentNodeStepWeaponPerformances": {
+        "None": 0,
+        "RateOfFire": 1,
+        "Damage": 2,
+        "Accuracy": 4,
+        "Range": 8,
+        "Zoom": 16,
+        "Recoil": 32,
+        "Ready": 64,
+        "Reload": 128,
+        "HairTrigger": 256,
+        "AmmoAndMagazine": 512,
+        "TrackingAndDetonation": 1024,
+        "ShotgunSpread": 2048,
+        "ChargeTime": 4096,
+        "All": 8191
+    },
+    "DestinyTalentNodeStepImpactEffects": {
+        "None": 0,
+        "ArmorPiercing": 1,
+        "Ricochet": 2,
+        "Flinch": 4,
+        "CollateralDamage": 8,
+        "Disorient": 16,
+        "HighlightTarget": 32,
+        "All": 63
+    },
+    "DestinyTalentNodeStepGuardianAttributes": {
+        "None": 0,
+        "Stats": 1,
+        "Shields": 2,
+        "Health": 4,
+        "Revive": 8,
+        "AimUnderFire": 16,
+        "Radar": 32,
+        "Invisibility": 64,
+        "Reputations": 128,
+        "All": 255
+    },
+    "DestinyTalentNodeStepLightAbilities": {
+        "None": 0,
+        "Grenades": 1,
+        "Melee": 2,
+        "MovementModes": 4,
+        "Orbs": 8,
+        "SuperEnergy": 16,
+        "SuperMods": 32,
+        "All": 63
+    },
+    "DestinyTalentNodeStepDamageTypes": {
+        "None": 0,
+        "Kinetic": 1,
+        "Arc": 2,
+        "Solar": 4,
+        "Void": 8,
+        "All": 15
+    },
+    "DestinyRewardSourceCategory": {
+        "None": 0,
+        "Activity": 1,
+        "Vendor": 2,
+        "Aggregate": 3
+    },
+    "DestinyActivityModeType": {
+        "None": 0,
+        "Story": 2,
+        "Strike": 3,
+        "Raid": 4,
+        "AllPvP": 5,
+        "Patrol": 6,
+        "AllPvE": 7,
+        "PvPIntroduction": 8,
+        "ThreeVsThree": 9,
+        "Control": 10,
+        "Lockdown": 11,
+        "Team": 12,
+        "FreeForAll": 13,
+        "TrialsOfOsiris": 14,
+        "Doubles": 15,
+        "Nightfall": 16,
+        "Heroic": 17,
+        "AllStrikes": 18,
+        "IronBanner": 19,
+        "AllArena": 20,
+        "Arena": 21,
+        "ArenaChallenge": 22,
+        "Elimination": 23,
+        "Rift": 24,
+        "AllMayhem": 25,
+        "MayhemClash": 26,
+        "MayhemRumble": 27,
+        "ZoneControl": 28,
+        "Racing": 29,
+        "ArenaElderChallenge": 30,
+        "Supremacy": 31,
+        "PrivateMatchesAll": 32,
+        "SupremacyRumble": 33,
+        "SupremacyClash": 34,
+        "SupremacyInferno": 35,
+        "SupremacyMayhem": 36
+    },
+    "DestinyDefinitionType": {
+        "None": 0,
+        "Activity": 1,
+        "ActivityType": 2,
+        "Class": 3,
+        "Gender": 4,
+        "InventoryBucket": 5,
+        "InventoryItem": 6,
+        "Progression": 7,
+        "Race": 8,
+        "Stat": 9,
+        "TalentGrid": 10,
+        "StatGroup": 11,
+        "UnlockFlag": 12,
+        "Vendor": 13,
+        "Destination": 14,
+        "Place": 15,
+        "DirectorBook": 16,
+        "MaterialRequirement": 17,
+        "SandboxPerk": 18,
+        "ArtDye": 19,
+        "ArtDyeChannel": 20,
+        "ActivityBundle": 21,
+        "GearAsset": 22,
+        "GrimoireCard": 23
+    },
+    "DestinyCardRarity": {
+        "None": 0,
+        "Common": 1,
+        "Superior": 2,
+        "Exotic": 3
+    },
+    "DestinyStatsGroupType": {
+        "General": 1,
+        "Weapons": 2,
+        "Medals": 3,
+        "Enemies": 4,
+        "ReservedGroups": 100,
+        "Leaderboard": 101,
+        "Activity": 102,
+        "UniqueWeapon": 103,
+        "Internal": 104,
+        "Unknown": 105
+    },
+    "PeriodType": {
+        "None": 0,
+        "Daily": 1,
+        "Monthly": 2,
+        "AllTime": 3,
+        "Activity": 4
+    },
+    "DestinyStatsCategoryType": {
+        "None": 0,
+        "Kills": 1,
+        "Assists": 2,
+        "Deaths": 3,
+        "Criticals": 4,
+        "KDa": 5,
+        "KD": 6,
+        "Score": 7,
+        "Entered": 8,
+        "TimePlayed": 9,
+        "MedalWins": 10,
+        "MedalGame": 11,
+        "MedalSpecialKills": 12,
+        "MedalSprees": 13,
+        "MedalMultiKills": 14,
+        "MedalAbilities": 15
+    },
+    "UnitType": {
+        "None": 0,
+        "Count": 1,
+        "PerGame": 2,
+        "Seconds": 3,
+        "Points": 4,
+        "Team": 5,
+        "Distance": 6,
+        "Percent": 7,
+        "Ratio": 8,
+        "Boolean": 9,
+        "WeaponType": 10,
+        "Standing": 11,
+        "Milliseconds": 12
+    },
+    "DestinyStatsMergeMethod": {
+        "Add": 0,
+        "Min": 1,
+        "Max": 2
+    },
+    "DestinyExcellenceBadgeTier": {
+        "None": 0,
+        "Bronze": 1,
+        "Silver": 2,
+        "Gold": 3
     },
     "GroupType": {
         "General": 0
@@ -1431,6 +1432,10 @@
         "GlobalAlert": 0,
         "StreamingAlert": 1
     },
+    "PartnershipType": {
+        "None": 0,
+        "Twitch": 1
+    },
     "TemplateFormat": {
         "BNet": 0,
         "Plain": 1,
@@ -1722,6 +1727,12 @@
         "ItemStatHash": 5,
         "MinimumRequiredLevel": 6,
         "MaximumRequiredLevel": 7
+    },
+    "CommunityStatusSort": {
+        "Viewers": 0,
+        "Trending": 1,
+        "OverallViewers": 2,
+        "Followers": 3
     },
     "SurveyCompletionFlags": {
         "None": 0,
