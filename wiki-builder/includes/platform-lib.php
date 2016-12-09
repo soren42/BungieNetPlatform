@@ -341,9 +341,15 @@ $api_params = array(
 	'GetAdvisorsForCharacterV2' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID), 'post' => array()),
 
 	'GetAdvisorsForAccount' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
-	'GetRecordBookCompletionStatus' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'recordBookHash'), 'post' => array())
+	'GetRecordBookCompletionStatus' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'recordBookHash'), 'post' => array()),
 
 	// Core Service
+
+	// CommunitycontentService
+	'GetCommunityLiveStatuses' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
+	'GetCommunityLiveStatusesForClanmates' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
+	'GetCommunityLiveStatusesForFriends' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
+	'GetFeaturedCommunityLiveStatuses' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
 );
 
 
