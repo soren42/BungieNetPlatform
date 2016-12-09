@@ -6507,8 +6507,8 @@
             "endpoint": "\/CommunityContent\/Live\/All\/{partnershipType}\/{communityStatusSort}\/{page}\/",
             "params": {
                 "modeHash": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "Filter by ActivityModeType.",
+                    "link": "Enums#DestinyActivityModeType"
                 },
                 "streamLocale": {
                     "desc": "",
@@ -6518,12 +6518,12 @@
             "post": [],
             "path": {
                 "partnershipType": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
                 "communityStatusSort": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
                 "page": {
                     "desc": "The current page to return. Starts at 1.",
@@ -6540,12 +6540,12 @@
             "post": [],
             "path": {
                 "partnershipType": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
                 "communityStatusSort": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
                 "page": {
                     "desc": "The current page to return. Starts at 1.",
@@ -6562,12 +6562,12 @@
             "post": [],
             "path": {
                 "partnershipType": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
                 "communityStatusSort": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
                 "page": {
                     "desc": "The current page to return. Starts at 1.",
@@ -6589,12 +6589,12 @@
             "post": [],
             "path": {
                 "partnershipType": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
                 "communityStatusSort": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
                 "page": {
                     "desc": "The current page to return. Starts at 1.",
