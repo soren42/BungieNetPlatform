@@ -75,10 +75,10 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetApprovalQueue</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityContent</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityFeaturedActivityModes</loc><lastmod>2016-10-20T13:46:30+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityLiveStatuses</loc><lastmod>2016-10-20T13:46:30+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityLiveStatusesForClanmates</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityLiveStatusesForFriends</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses</loc><lastmod>2016-10-20T13:46:30+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityLiveStatuses</loc><lastmod>2016-12-10T02:23:07+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityLiveStatusesForClanmates</loc><lastmod>2016-12-10T02:23:07+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetCommunityLiveStatusesForFriends</loc><lastmod>2016-12-10T02:23:07+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses</loc><lastmod>2016-12-10T02:23:07+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/SubmitContent</loc><lastmod>2016-03-12T02:52:00+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ContentService/GetCareer</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ContentService/GetCareers</loc><lastmod>2016-03-13T14:43:15+09:30</lastmod></url>
@@ -208,7 +208,7 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/SetItemLockState</loc><lastmod>2016-03-06T18:04:51+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/SetQuestTrackedState</loc><lastmod>2016-03-06T18:04:51+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/TransferItem</loc><lastmod>2016-03-06T18:04:51+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Endpoints</loc><lastmod>2016-10-20T13:46:30+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Endpoints</loc><lastmod>2016-12-10T02:23:07+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/AiExpUltraTakenTitanArenaChallengeReef</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/AiIronLord</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>

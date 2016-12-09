@@ -2994,7 +2994,7 @@
             "GetCommunityLiveStatuses": {
                 "name": "GetCommunityLiveStatuses",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Live\/All\/{param1}\/{param2}\/{param3}\/",
+                "endpoint": "\/CommunityContent\/Live\/All\/{partnershipType}\/{communityStatusSort}\/{page}\/",
                 "params": [
                     "modeHash",
                     "streamLocale"
@@ -3004,14 +3004,14 @@
             "GetCommunityLiveStatusesForClanmates": {
                 "name": "GetCommunityLiveStatusesForClanmates",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Live\/Clan\/{param1}\/{param2}\/{param3}\/",
+                "endpoint": "\/CommunityContent\/Live\/Clan\/{partnershipType}\/{communityStatusSort}\/{page}\/",
                 "params": [],
                 "post": []
             },
             "GetCommunityLiveStatusesForFriends": {
                 "name": "GetCommunityLiveStatusesForFriends",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Live\/Friends\/{param1}\/{param2}\/{param3}\/",
+                "endpoint": "\/CommunityContent\/Live\/Friends\/{partnershipType}\/{communityStatusSort}\/{page}\/",
                 "params": [],
                 "post": []
             },
@@ -3027,7 +3027,7 @@
             "GetFeaturedCommunityLiveStatuses": {
                 "name": "GetFeaturedCommunityLiveStatuses",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Live\/Featured\/{param1}\/{param2}\/{param3}\/",
+                "endpoint": "\/CommunityContent\/Live\/Featured\/{partnershipType}\/{communityStatusSort}\/{page}\/",
                 "params": [
                     "streamLocale"
                 ],
