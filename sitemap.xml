@@ -65,8 +65,8 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ApplicationService/GetAuthorizations</loc><lastmod>2016-08-01T17:59:14+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ApplicationService/PrivateApplicationSearch</loc><lastmod>2016-08-01T16:51:04+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ApplicationService/RevokeAuthorization</loc><lastmod>2016-08-01T17:59:14+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Authentication</loc><lastmod>2016-03-05T17:55:26+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Changelog</loc><lastmod>2016-11-22T09:43:23+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Authentication</loc><lastmod>2016-12-09T23:41:12+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Changelog</loc><lastmod>2016-12-09T16:57:15+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/AdminSetCommunityLiveMemberBanStatus</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus</loc><lastmod>2016-09-20T10:07:36+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/CommunitycontentService/AlterApprovalState</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
@@ -708,7 +708,7 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/VexMinotaurElite</loc><lastmod>2016-08-01T16:50:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/VexUltraMinotaurA</loc><lastmod>2016-08-01T16:50:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/EnemyHistoricalStats/r1S1RaidVenus0GoblinHeadless</loc><lastmod>2016-08-01T16:50:26+09:30</lastmod></url>
-<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Enums</loc><lastmod>2016-11-22T09:34:50+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Enums</loc><lastmod>2016-12-09T16:42:39+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Error-Codes</loc><lastmod>2016-08-01T19:29:43+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ExternalSocialService/GetAggregatedSocialFeed</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/ForumService/ApproveFireteamThread</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
@@ -875,6 +875,7 @@
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/NotificationService/GetRecentNotificationCount</loc><lastmod>2016-03-13T14:43:15+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/NotificationService/GetRecentNotifications</loc><lastmod>2016-03-06T16:09:57+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/NotificationService/ResetNotification</loc><lastmod>2016-03-13T14:43:15+09:30</lastmod></url>
+<url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/Past-Authentication</loc><lastmod>2016-04-01T16:44:11+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/SurveyService/GetSurvey</loc><lastmod>2016-03-13T14:43:15+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/TokensService/ApplyOfferToCurrentDestinyMembership</loc><lastmod>2016-08-01T18:15:26+09:30</lastmod></url>
 <url><loc>http://destinydevs.github.io/BungieNetPlatform/docs/TokensService/BreakBond</loc><lastmod>2016-03-12T02:52:00+09:30</lastmod></url>

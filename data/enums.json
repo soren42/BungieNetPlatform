@@ -57,9 +57,10 @@
         "AdminGroups": 8,
         "BnetWrite": 16,
         "MoveEquipDestinyItems": 32,
-        "ReadPrivateDestinyData": 64,
+        "ReadDestinyInventoryAndVault": 64,
         "ReadUserData": 128,
-        "EditUserData": 256
+        "EditUserData": 256,
+        "ReadDestinyVendorsAndAdvisors": 512
     },
     "ApplicationStatus": {
         "None": 0,
@@ -1406,6 +1407,7 @@
         "AccessNotPermittedByApplicationScope": 2108,
         "ApplicationNameIsTaken": 2109,
         "RefreshTokenNotYetValid": 2110,
+        "AccessTokenHasExpired": 2111,
         "PartnershipInvalidType": 2200,
         "PartnershipValidationError": 2201,
         "PartnershipValidationTimeout": 2202,
@@ -1413,7 +1415,11 @@
         "PartnershipAccountInvalid": 2204,
         "PartnershipGetAccountInfoFailure": 2205,
         "PartnershipDisabled": 2206,
-        "PartnershipAlreadyExists": 2207
+        "PartnershipAlreadyExists": 2207,
+        "TwitchNotLinked": 2208,
+        "TwitchAccountNotFound": 2209,
+        "TwitchCouldNotLoadDestinyInfo": 2210,
+        "CommunityStreamingUnavailable": 2300
     },
     "OfferRedeemMode": {
         "Off": 0,
