@@ -21,7 +21,11 @@ $paramDetails = array(
 	'characterId' => array('desc' => 'A valid characterId that is associated with the given account.'),
 	'definitions' => array('desc' => 'Include definitions in the response. Use while testing.'),
 	'definitionType' => array('enum' => 'DestinyDefinitionType', 'desc' => 'The type of definition to return.'),
-	'definitionId' => array('desc' => 'A valid definitionId.')
+	'definitionId' => array('desc' => 'A valid definitionId.'),
+
+	'partnershipType' => array('enum' => 'PartnershipType', 'desc' => 'The type of partnership. 0=None, 1=Twitch'),
+	'communityStatusSort' => array('enum' => 'CommunityStatusSort', 'desc' => 'Sort by status.'),
+	'modeHash' => array('enum' => 'DestinyActivityModeType', 'desc' => 'Filter by ActivityModeType.')
 );
 
 function update($path, $markdown) {

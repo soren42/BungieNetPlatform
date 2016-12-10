@@ -354,11 +354,11 @@
         {
             "name": "GetPartnerships",
             "method": "GET",
-            "endpoint": "\/User\/{param1}\/Partnerships\/",
+            "endpoint": "\/User\/{membershipId}\/Partnerships\/",
             "params": [],
             "post": [],
             "path": {
-                "param1": {
+                "membershipId": {
                     "desc": "",
                     "link": ""
                 }
@@ -6504,11 +6504,11 @@
         {
             "name": "GetCommunityLiveStatuses",
             "method": "GET",
-            "endpoint": "\/CommunityContent\/Live\/All\/{param1}\/{param2}\/{param3}\/",
+            "endpoint": "\/CommunityContent\/Live\/All\/{partnershipType}\/{communityStatusSort}\/{page}\/",
             "params": {
                 "modeHash": {
-                    "desc": "",
-                    "link": ""
+                    "desc": "Filter by ActivityModeType.",
+                    "link": "Enums#DestinyActivityModeType"
                 },
                 "streamLocale": {
                     "desc": "",
@@ -6517,16 +6517,16 @@
             },
             "post": [],
             "path": {
-                "param1": {
-                    "desc": "",
-                    "link": ""
+                "partnershipType": {
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
-                "param2": {
-                    "desc": "",
-                    "link": ""
+                "communityStatusSort": {
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
-                "param3": {
-                    "desc": "",
+                "page": {
+                    "desc": "The current page to return. Starts at 1.",
                     "link": ""
                 }
             },
@@ -6535,20 +6535,20 @@
         {
             "name": "GetCommunityLiveStatusesForClanmates",
             "method": "GET",
-            "endpoint": "\/CommunityContent\/Live\/Clan\/{param1}\/{param2}\/{param3}\/",
+            "endpoint": "\/CommunityContent\/Live\/Clan\/{partnershipType}\/{communityStatusSort}\/{page}\/",
             "params": [],
             "post": [],
             "path": {
-                "param1": {
-                    "desc": "",
-                    "link": ""
+                "partnershipType": {
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
-                "param2": {
-                    "desc": "",
-                    "link": ""
+                "communityStatusSort": {
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
-                "param3": {
-                    "desc": "",
+                "page": {
+                    "desc": "The current page to return. Starts at 1.",
                     "link": ""
                 }
             },
@@ -6557,20 +6557,20 @@
         {
             "name": "GetCommunityLiveStatusesForFriends",
             "method": "GET",
-            "endpoint": "\/CommunityContent\/Live\/Friends\/{param1}\/{param2}\/{param3}\/",
+            "endpoint": "\/CommunityContent\/Live\/Friends\/{partnershipType}\/{communityStatusSort}\/{page}\/",
             "params": [],
             "post": [],
             "path": {
-                "param1": {
-                    "desc": "",
-                    "link": ""
+                "partnershipType": {
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
-                "param2": {
-                    "desc": "",
-                    "link": ""
+                "communityStatusSort": {
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
-                "param3": {
-                    "desc": "",
+                "page": {
+                    "desc": "The current page to return. Starts at 1.",
                     "link": ""
                 }
             },
@@ -6579,7 +6579,7 @@
         {
             "name": "GetFeaturedCommunityLiveStatuses",
             "method": "GET",
-            "endpoint": "\/CommunityContent\/Live\/Featured\/{param1}\/{param2}\/{param3}\/",
+            "endpoint": "\/CommunityContent\/Live\/Featured\/{partnershipType}\/{communityStatusSort}\/{page}\/",
             "params": {
                 "streamLocale": {
                     "desc": "",
@@ -6588,15 +6588,37 @@
             },
             "post": [],
             "path": {
-                "param1": {
-                    "desc": "",
-                    "link": ""
+                "partnershipType": {
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
                 },
-                "param2": {
-                    "desc": "",
-                    "link": ""
+                "communityStatusSort": {
+                    "desc": "Sort by status.",
+                    "link": "Enums#CommunityStatusSort"
                 },
-                "param3": {
+                "page": {
+                    "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
+            "name": "GetStreamingStatusForMember",
+            "method": "GET",
+            "endpoint": "\/CommunityContent\/Live\/Users\/{partnershipType}\/{membershipType}\/{membershipId}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "partnershipType": {
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
+                },
+                "membershipType": {
+                    "desc": "A valid Bungie.net membershipType.",
+                    "link": "Enums#BungieMembershipType"
+                },
+                "membershipId": {
                     "desc": "",
                     "link": ""
                 }

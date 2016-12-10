@@ -350,6 +350,9 @@ $api_params = array(
 	'GetCommunityLiveStatusesForClanmates' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
 	'GetCommunityLiveStatusesForFriends' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
 	'GetFeaturedCommunityLiveStatuses' => array('query' => array('partnershipType', 'communityStatusSort', 'page'), 'post' => array()),
+	'GetStreamingStatusForMember' => array('query' => array('partnershipType', MEMBERSHIP_TYPE, MEMBERSHIP_ID), 'post' => array()),
+
+	'GetPartnerships' => array('query' => array(MEMBERSHIP_ID), 'post' => array()),
 );
 
 
@@ -472,6 +475,14 @@ foreach($service_matches as $service_index => $service) {
 	$services[$name]['endpoints'] = (object)$services[$name]['endpoints'];
 }
 
+$services['CommunitycontentService']['endpoints']->GetStreamingStatusForMember = array(
+	'name' => 'GetStreamingStatusForMember',
+	'method' => 'GET',
+	'endpoint' => '/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/',
+	'params' => array(),
+	'post' => array()
+);
+
 
 // Output Services
 $encoded_services = json_encode($services, JSON_PRETTY_PRINT);
@@ -503,7 +514,7 @@ if (count($enums_match) > 0) {
 		$key = str_replace('Enum', '', $enum_group[2]);
 		$enums[$key] = array();
 		foreach (explode(';', $enum_group[1]) as $enum_entry) {
-			preg_match('/'.$enums_var.'\['.$enums_var.'\.([^\=]+)=([^\]]+).+/i', $enum_entry, $entry_match);
+			preg_match('/'.$enums_var.'\['.$enumenums_var.'\.([^\=]+)=([^\]]+).+/i', $enum_entry, $entry_match);
 			$enums[$key][$entry_match[1]] = intval($entry_match[2]);
 		}
 	}
