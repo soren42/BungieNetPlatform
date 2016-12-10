@@ -354,11 +354,11 @@
         {
             "name": "GetPartnerships",
             "method": "GET",
-            "endpoint": "\/User\/{param1}\/Partnerships\/",
+            "endpoint": "\/User\/{membershipId}\/Partnerships\/",
             "params": [],
             "post": [],
             "path": {
-                "param1": {
+                "membershipId": {
                     "desc": "",
                     "link": ""
                 }
@@ -6598,6 +6598,28 @@
                 },
                 "page": {
                     "desc": "The current page to return. Starts at 1.",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
+            "name": "GetStreamingStatusForMember",
+            "method": "GET",
+            "endpoint": "\/CommunityContent\/Live\/Users\/{partnershipType}\/{membershipType}\/{membershipId}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "partnershipType": {
+                    "desc": "The type of partnership. 0=None, 1=Twitch",
+                    "link": "Enums#PartnershipType"
+                },
+                "membershipType": {
+                    "desc": "A valid Bungie.net membershipType.",
+                    "link": "Enums#BungieMembershipType"
+                },
+                "membershipId": {
+                    "desc": "",
                     "link": ""
                 }
             },

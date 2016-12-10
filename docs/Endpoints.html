@@ -265,7 +265,7 @@
 <tr>
 <td>GET</td>
 <td><a href="../docs/UserService/GetPartnerships">GetPartnerships</a></td>
-<td>/User/{param1}/Partnerships/</td>
+<td>/User/{membershipId}/Partnerships/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1970,7 +1970,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="CommunitycontentService"></a>CommunitycontentService (13 Endpoints)</h2>
+<h2><a name="CommunitycontentService"></a>CommunitycontentService (14 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -2039,6 +2039,11 @@
 <td>GET</td>
 <td><a href="../docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses">GetFeaturedCommunityLiveStatuses</a></td>
 <td>/CommunityContent/Live/Featured/{partnershipType}/{communityStatusSort}/{page}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/CommunitycontentService/GetStreamingStatusForMember">GetStreamingStatusForMember</a></td>
+<td>/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/</td>
 </tr>
 <tr>
 <td>POST</td>

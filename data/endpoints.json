@@ -354,7 +354,7 @@
             "GetPartnerships": {
                 "name": "GetPartnerships",
                 "method": "GET",
-                "endpoint": "\/User\/{param1}\/Partnerships\/",
+                "endpoint": "\/User\/{membershipId}\/Partnerships\/",
                 "params": [],
                 "post": []
             },
@@ -3044,6 +3044,13 @@
                 "name": "AdminSetCommunityLiveMemberFeatureStatus",
                 "method": "POST",
                 "endpoint": "\/CommunityContent\/Live\/Partnerships\/{param1}\/{param2}\/Feature\/{param3}\/",
+                "params": [],
+                "post": []
+            },
+            "GetStreamingStatusForMember": {
+                "name": "GetStreamingStatusForMember",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/Users\/{partnershipType}\/{membershipType}\/{membershipId}\/",
                 "params": [],
                 "post": []
             }
