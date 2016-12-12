@@ -97,9 +97,11 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
-<p>POST <a href="https://www.bungie.net/Platform/App/GetAccessTokensFromCode/">https://www.bungie.net/Platform/App/GetAccessTokensFromCode/</a></p>
-<pre><code class="javascript">X-API-Key: {your-api-key}
+<h3>Request</h3>
+<pre><code class="javascript">POST https://www.bungie.net/Platform/App/GetAccessTokensFromCode/
+X-API-Key: {your-api-key}
 {"code":"{your-authorization-code}"}</code></pre>
+<h3>Response</h3>
 <pre><code class="javascript">{
     "Response": {
         "accessToken": {

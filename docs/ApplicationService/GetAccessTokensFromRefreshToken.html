@@ -97,6 +97,18 @@
 <h3>JSON POST Parameters</h3>
 <p>None</p>
 <h2>Example</h2>
+<h3>Request</h3>
+<pre><code class="javascript">POST https://www.bungie.net/Platform/App/GetAccessTokensFromRefreshToken/
+X-API-Key: {your-api-key}
+{"refreshToken":"{your-refresh-token}"}</code></pre>
+<h3>Response (If run within 30 minutes of generating the Refresh Token)</h3>
+<pre><code class="javascript">{
+    "ErrorCode": 2110,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "RefreshTokenNotYetValid",
+    "Message": "The provided refresh token is not yet valid.",
+    "MessageData": {}
+}</code></pre>
 <h2>References</h2>
 		</div>
 	</div>
