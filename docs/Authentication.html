@@ -88,7 +88,40 @@
 <p><a href="https://lowlidev.com.au/destiny/authentication">https://lowlidev.com.au/destiny/authentication</a></p>
 <h2>Code Examples</h2>
 <p>Below is a working list of implementations for various languages provided by members of the community.</p>
-<p>No code examples as of yet :(</p>
+<h3>PHP Authentication (by <a href="https://www.bungie.net/en/User/Profile/5434199">projectxmatt</a>)</h3>
+<pre><code class="php">&lt;?php
+
+$apikey = 'YOUR-API-KEY-HERE';
+
+$code = htmlspecialchars($_GET['code']);
+
+// Exchange code for Token
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,'https://www.bungie.net/Platform/App/GetAccessTokensFromCode/');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-API-KEY: '.$apikey));
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array('code' =&gt; $code)));
+
+$response = curl_exec($ch);
+$response = json_decode($response);
+curl_close($ch);
+
+// Using access token to get user's bungie account
+$accesstoken = $response-&gt;Response-&gt;accessToken-&gt;value;
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL,'https://www.bungie.net/Platform/User/GetCurrentBungieAccount/');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'X-API-KEY: '.$apikey,
+        'Authorization: Bearer '.$accesstoken
+));
+
+$userinfo = curl_exec($ch);
+$userinfo = json_decode($userinfo);
+
+curl_close($ch);</code></pre>
 <h2>References</h2>
 <ol>
 <li><a href="https://www.bungie.net/en/Help/Article/45481">https://www.bungie.net/en/Help/Article/45481</a></li>
