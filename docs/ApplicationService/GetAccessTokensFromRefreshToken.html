@@ -86,7 +86,7 @@
 <ul>
 <li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/App/GetAccessTokensFromRefreshToken/">/App/GetAccessTokensFromRefreshToken/</a></li>
 <li><strong>Method:</strong> POST</li>
-<li><strong>Accessibility:</strong> Private</li>
+<li><strong>Accessibility:</strong> Public</li>
 <li><strong>Service:</strong> <a href="../../docs/Endpoints#ApplicationService">ApplicationService</a></li>
 </ul>
 <h2>Parameters</h2>
@@ -101,6 +101,27 @@
 <pre><code class="javascript">POST https://www.bungie.net/Platform/App/GetAccessTokensFromRefreshToken/
 X-API-Key: {your-api-key}
 {"refreshToken":"{your-refresh-token}"}</code></pre>
+<h3>Response</h3>
+<pre><code class="javascript">{
+    "Response": {
+        "accessToken": {
+            "value": "CJ4BEuYBACDMF4qgVUS43ytpoYW1NehONaU7PLXNJwN93tdUG59XGcAAAABGN3MENYXdyJEvib5F+S4AbsFtm6NNZa8Cxhw9Gt+ApmjBtpJnkiEG/Gzg/urC3bDGz8tm/tGgEQodc3Bh5TCj29FFR8xV1Gz1Nn+UD6laXRgQfLJtU3MMBhN9gv3cPfoL7dGaSLp2k6LgW/AUhWBcSL1oBTsCh883MHxreQQmMzesyiJ4dSVDaiVeLxlO7e5BMetR7LnSQTAaAk4iVrVkuiYpC6XyWOfe4uZEM111Ifl2f6tQBtQztp7k1p/jEsw=",
+            "readyin": 0,
+            "expires": 3600
+        },
+        "refreshToken": {
+            "value": "CJ4BEoYCACC3Ekuqvh3EOPjUqqllkMr/e8Z4G15nwXth0QTNjg1ARuAAAACXEZD2ewj3C8vsoIR9Fvfcc/7yMa3kx1zYsRYYuPqzjBEg8zXa46ZEqFh5Wk1nn7HNd2ns9ZYbvACnIaU1FAjypWuCoPQbUE3SlfYVfBtcJQ5ZLldTLlDR9kLbR9TJAUttAs1O6GPnV7M3FsG68KjiZ1n+Vrt6AV39GniT7JjMVCAPe6q8rU/ryIPmLFVS4PsIk0pRG8SS1I/OdGg6YgpOI7XJy2Q98t5NAuxUDncxS1cl+bRflS5CQAezQmhKYzSYuCoMHS93xDAblGTcR6P3inu2phXbzcF65lx0Mzy1Rg==",
+            "readyin": 1800,
+            "expires": 7776000
+        },
+        "scope": 225
+    },
+    "ErrorCode": 1,
+    "ThrottleSeconds": 0,
+    "ErrorStatus": "Success",
+    "Message": "Ok",
+    "MessageData": {}
+}</code></pre>
 <h3>Response (If run within 30 minutes of generating the Refresh Token)</h3>
 <pre><code class="javascript">{
     "ErrorCode": 2110,
