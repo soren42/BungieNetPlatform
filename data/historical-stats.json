@@ -15212,6 +15212,212 @@
             "statName": "Never Gonna Get It",
             "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_md98c9a033d6f285bdc29f0e9908aefb3.png",
             "description": "Complete a Supremacy match without losing your crest to an opponent."
+        },
+        "medalsStrikePrimaryStreak": {
+            "statId": "medalsStrikePrimaryStreak",
+            "statName": "Primary Streak",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mb0dcdbd4bd7dcf31fbd9658422cec92a.png",
+            "description": "Rapidly kill 3 enemies with a Primary Weapon."
+        },
+        "medalsStrikeSpecialStreak": {
+            "statId": "medalsStrikeSpecialStreak",
+            "statName": "Special Streak",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mb339dac6d5a116aa22f1340313c72b5f.png",
+            "description": "Rapidly kill 3 enemies with a Special Weapon."
+        },
+        "medalsStrikeHeavyStreak": {
+            "statId": "medalsStrikeHeavyStreak",
+            "statName": "Heavy Streak",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m6dd5d8eb0ae341cc5c6013a7a4da345c.png",
+            "description": "Rapidly kill 3 enemies with a Heavy Weapon."
+        },
+        "medalsStrikePrimarySpree": {
+            "statId": "medalsStrikePrimarySpree",
+            "statName": "Primary Spree",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m21980ed212817c32d9d53cd2c1b91811.png",
+            "description": "Rapidly kill 6 enemies with a Primary Weapon."
+        },
+        "medalsStrikeSpecialSpree": {
+            "statId": "medalsStrikeSpecialSpree",
+            "statName": "Special Spree",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m58a98fb724e8c8afc32207453fcbcad5.png",
+            "description": "Rapidly kill 6 enemies with a Special Weapon."
+        },
+        "medalsStrikeHeavySpree": {
+            "statId": "medalsStrikeHeavySpree",
+            "statName": "Heavy Spree",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m50d4f460531ded13722c57b35e75fa0a.png",
+            "description": "Rapidly kill 6 enemies with a Heavy Weapon."
+        },
+        "medalsStrikePrimaryRampage": {
+            "statId": "medalsStrikePrimaryRampage",
+            "statName": "Primary Rampage",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me1320a242e3daccbd85d8c3c6706e40b.png",
+            "description": "Rapidly kill 9 enemies with a Primary Weapon."
+        },
+        "medalsStrikeSpecialRampage": {
+            "statId": "medalsStrikeSpecialRampage",
+            "statName": "Special Rampage",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m9926f409bd54b141e51af41b6c7a9ed6.png",
+            "description": "Rapidly kill 9 enemies with a Special Weapon."
+        },
+        "medalsStrikeHeavyRampage": {
+            "statId": "medalsStrikeHeavyRampage",
+            "statName": "Heavy Rampage",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m0a1cda03eb056d654d98ef9ce4235b2f.png",
+            "description": "Rapidly kill 9 enemies with a Heavy Weapon."
+        },
+        "medalsStrikeRainbow": {
+            "statId": "medalsStrikeRainbow",
+            "statName": "Rainbow",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8961cd42f91ffc3594d7b0982f5dce35.png",
+            "description": "Earn a Primary, Special and Heavy Streak Medal in quick succession."
+        },
+        "medalsStrikeFireteamStreak": {
+            "statId": "medalsStrikeFireteamStreak",
+            "statName": "Fireteam Streak"
+        },
+        "medalsStrikeExplosive": {
+            "statId": "medalsStrikeExplosive",
+            "statName": "Explosive",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma2a19aa7c79f4b1f189888ae11b20cf3.png",
+            "description": "Kill an enemy with a grenade."
+        },
+        "medalsStrikeExplosiveStreak": {
+            "statId": "medalsStrikeExplosiveStreak",
+            "statName": "Explosive Streak",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma43d1e3f0cbdba0b25d7f48e13a1ef21.png",
+            "description": "Kill 3 enemies with a grenade."
+        },
+        "medalsStrikeTakedown": {
+            "statId": "medalsStrikeTakedown",
+            "statName": "Takedown",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf90af27b8a3e56349c2f1a53f24fdd52.png",
+            "description": "Kill an enemy with a Melee ability."
+        },
+        "medalsStrikeTactical": {
+            "statId": "medalsStrikeTactical",
+            "statName": "Tactical"
+        },
+        "medalsStrikeConcentratedFire": {
+            "statId": "medalsStrikeConcentratedFire",
+            "statName": "Concentrated Fire",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mc4f61dfb4233f0069626b7c04ac03a17.png",
+            "description": "Rapidly assist with 5 enemy kills."
+        },
+        "medalsStrikeCycleOfLight": {
+            "statId": "medalsStrikeCycleOfLight",
+            "statName": "Cycle of Light",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m187d84f9bf29ce3f0597acfeaa8d4bf8.png",
+            "description": "Generate at least 1 Orb of Light."
+        },
+        "medalsStrikeHotShot": {
+            "statId": "medalsStrikeHotShot",
+            "statName": "Hot Shot",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m58285eda0ee77b63f317abd07f325747.png",
+            "description": "Kill 3 enemies with a single Golden Gun charge."
+        },
+        "medalsStrikeScintillatingSteel": {
+            "statId": "medalsStrikeScintillatingSteel",
+            "statName": "Scintillating Steel",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8bb65f9f78385f0f567c2d24edf56c49.png",
+            "description": "Kill 5 enemies with a single Arc Blade."
+        },
+        "medalsStrikeOneShotOneKill": {
+            "statId": "medalsStrikeOneShotOneKill",
+            "statName": "One Shot, One Kill",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_md475f1e82242397e504efa3d46ef7b77.png",
+            "description": "Kill an enemy with Shadowshot."
+        },
+        "medalsStrikeEntrapment": {
+            "statId": "medalsStrikeEntrapment",
+            "statName": "Entrapment"
+        },
+        "medalsStrikeFlameTouched": {
+            "statId": "medalsStrikeFlameTouched",
+            "statName": "Radiant",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m94cc1470e8e4b60d148a53a40cec9782.png",
+            "description": "Kill 5 enemies with a single Radiance activation."
+        },
+        "medalsStrikeBigBang": {
+            "statId": "medalsStrikeBigBang",
+            "statName": "Big Bang",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me9a5763289a195798e5714dee0b1f76e.png",
+            "description": "Kill 3 enemies with a single Nova Bomb."
+        },
+        "medalsStrikeSuperconductor": {
+            "statId": "medalsStrikeSuperconductor",
+            "statName": "Superconductor",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m0c6a020e66ba4401361cac7fefbfb27c.png",
+            "description": "Kill 6 enemies with a single Stormtrance."
+        },
+        "medalsStrikeOnePunch": {
+            "statId": "medalsStrikeOnePunch",
+            "statName": "One Punch",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m861eee6f4c0bb9a714ae5410aa498a27.png",
+            "description": "Kill 3 enemies with a single Fist of Havoc."
+        },
+        "medalsStrikeForgingFires": {
+            "statId": "medalsStrikeForgingFires",
+            "statName": "Forging Fires",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m9a872a671706bb84cfd510277ea4b5ba.png",
+            "description": "Kill 5 enemies with a single Hammer of Sol activation."
+        },
+        "medalsStrikeAegisOfLight": {
+            "statId": "medalsStrikeAegisOfLight",
+            "statName": "Aegis of Light",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mea53908b56313c1d0b1ce9b3bc695594.png",
+            "description": "Deflect damage with Ward of Dawn."
+        },
+        "medalsStrikeWardingLight": {
+            "statId": "medalsStrikeWardingLight",
+            "statName": "Warding Light"
+        },
+        "medalsStrikeIndestructible": {
+            "statId": "medalsStrikeIndestructible",
+            "statName": "Indestructible"
+        },
+        "medalsStrikeFlawless": {
+            "statId": "medalsStrikeFlawless",
+            "statName": "Flawless"
+        },
+        "medalsStrikeBrutalEfficiency": {
+            "statId": "medalsStrikeBrutalEfficiency",
+            "statName": "Brutal Efficiency"
+        },
+        "medalsStrikeTimeBonus": {
+            "statId": "medalsStrikeTimeBonus",
+            "statName": "Time Bonus"
+        },
+        "medalsStrikeBronzeTier": {
+            "statId": "medalsStrikeBronzeTier",
+            "statName": "Bronze Tier Achieved",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma813c6c6fc6bcf093471ffb239d78fef.png",
+            "description": "Earn enough points to cross the Bronze score threshold and complete the Strike."
+        },
+        "medalsStrikeSilverTier": {
+            "statId": "medalsStrikeSilverTier",
+            "statName": "Silver Tier Achieved",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf19a59011e02c437be8dc8d7fe0570a9.png",
+            "description": "Earn enough points to cross the Silver score threshold and complete the Strike."
+        },
+        "medalsStrikeGoldTier": {
+            "statId": "medalsStrikeGoldTier",
+            "statName": "Gold Tier Achieved",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m70e0a23faaa123010b491c7d0e71ca3e.png",
+            "description": "Earn enough points to cross the Gold score threshold and complete the Strike."
+        },
+        "medalsStrikeBronze": {
+            "statId": "medalsStrikeBronze",
+            "statName": "Bronze Contender"
+        },
+        "medalsStrikeSilver": {
+            "statId": "medalsStrikeSilver",
+            "statName": "Silver Contender"
+        },
+        "medalsStrikeGold": {
+            "statId": "medalsStrikeGold",
+            "statName": "Gold Contender"
         }
     },
     "Weapons": {
