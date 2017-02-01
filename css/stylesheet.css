@@ -322,6 +322,14 @@ a[name] {
   margin-left: 20px;
   padding-top: 10px;
 }
+#api-test .alert ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#api-test .alert strong {
+  color: inherit;
+}
 @media (min-width: 768px) {
   #api-test .form-group * + * + * {
     padding-left: 0;

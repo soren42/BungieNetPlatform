@@ -1,39 +1,37 @@
 <form name="apiForm" class="form-horizontal">
 	<div class="form-group">
 		<div class="col-sm-10 col-sm-offset-2">
-			<div class="alert alert-success" ng-show="reauthValid[proxy.id]">Bungie.net cookies should still be valid.</div>
-			<div class="alert alert-danger" ng-show="!reauthValid[proxy.id]">Re-authentication with Bungie.net is required to use Private endpoints.</div>
+			<div class="alert alert-success" ng-show="tokens.accessToken">
+				<ul>
+					<li ng-if="username">Logged in as <strong>{{username}}</strong>.</li>
+					<li ng-if="!username">Not currently logged in.</li>
+					<li>The Access Token <span ng-bind-html="accessTokenTime | html"></span>.</li>
+					<li>The Refresh Token <span ng-bind-html="refreshTokenTime | html"></span>.</li>
+				</ul>
+			</div>
+			<div class="alert alert-danger" ng-show="!tokens.accessToken">Re-authentication with Bungie.net is required to use Private endpoints.</div>
 		</div>
 	</div>
+
 	<div class="form-group">
-		<label class="col-sm-2 control-label">Proxy</label>
+		<label class="col-sm-2 control-label">API Key</label>
 		<div class="col-sm-10">
-			<select ng-model="proxy" class="form-control" ng-options="proxy.name for proxy in proxies"></select>
+			<input type="text" class="form-control" ng-model="apiKey" placeholder="Enter Your API Key (leave blank to use the test one)">
 		</div>
 	</div>
 
 	<div class="form-group form-group-auth">
-		<label class="col-sm-2 control-label">bungleatk</label>
-		<div class="col-sm-7">
-			<textarea class="form-control" ng-model="bungleatk" placeholder="Paste a valid bungleatk cookie here."></textarea>
+		<label class="col-sm-2 control-label">Authentication</label>
+		<div class="col-sm-6"></div>
+		<div class="col-sm-2">
+			<button type="button" class="btn btn-default" ng-disabled="!tokens.accessToken" ng-click="getAccessTokensFromRefreshToken()">Referesh Token <i ng-show="isRequestingToken" class="fa fa-spin fa-refresh"></i></button>
 		</div>
-		<div class="col-sm-3">
-			<select class="form-control" ng-model="reauthPlatform">
-				<option value="Psnid">Playstation</option>
-				<option value="Xuid">Xbox</option>
-			</select>
-			<button type="button" class="btn btn-danger" ng-click="reauth()">Reauthenticate <i ng-show="isReauth" class="fa fa-refresh fa-spin"></i></button>
+		<div class="col-sm-2">
+			<button type="button" class="btn btn-danger" ng-click="authorize()">Authorize <i ng-show="isRequestingAuth" class="fa fa-spin fa-refresh"></i></button>
 		</div>
 	</div>
 
 	<hr/>
-
-	<div class="form-group" ng-show="proxy.apiKeyRequired">
-		<label class="col-sm-2 control-label">API Key</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" ng-model="apiKey" placeholder="Enter Your API Key" ng-required="proxy.apiKeyRequired">
-		</div>
-	</div>
 
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Service</label>
@@ -102,9 +100,10 @@
 		<h3>Headers</h3>
 		<code>
 			{{test.request.method}} https://www.bungie.net{{test.request.path}}
-			<span class="request-header"><br/>x-api-key: {your-api-key}</span>
-			<span class="request-header" ng-show="endpoint.access == 'Private'"><br/>x-csrf: {bungled-cookie}</span>
-			<span class="request-header"><br/>cookie: {bungie-net-cookies}</span>
+			<span class="request-header"><br/>X-API-Key: {your-api-key}</span>
+			<span class="request-header"><br/>Authorization: Bearer {your-access-token}</span>
+			<!--<span class="request-header" ng-show="endpoint.access == 'Private'"><br/>x-csrf: {bungled-cookie}</span>
+			<span class="request-header"><br/>cookie: {bungie-net-cookies}</span>-->
 		</code>
 
 		<h3 ng-show="test.request.data">Payload</h3>
