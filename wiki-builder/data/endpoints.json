@@ -810,6 +810,13 @@
                     "types"
                 ],
                 "post": []
+            },
+            "GetPentathlonScores": {
+                "name": "GetPentathlonScores",
+                "method": "GET",
+                "endpoint": "\/ExternalSocial\/Pentathlon\/",
+                "params": [],
+                "post": []
             }
         }
     },
@@ -2706,20 +2713,6 @@
                     "state"
                 ]
             },
-            "BuyItem": {
-                "name": "BuyItem",
-                "method": "POST",
-                "endpoint": "\/Destiny\/BuyItem\/",
-                "params": [],
-                "post": []
-            },
-            "RefundItem": {
-                "name": "RefundItem",
-                "method": "POST",
-                "endpoint": "\/Destiny\/{param1}\/RefundItem\/",
-                "params": [],
-                "post": []
-            },
             "SetQuestTrackedState": {
                 "name": "SetQuestTrackedState",
                 "method": "POST",
@@ -3018,7 +3011,7 @@
             "GetAdminCommunityLiveStatuses": {
                 "name": "GetAdminCommunityLiveStatuses",
                 "method": "GET",
-                "endpoint": "\/CommunityContent\/Live\/Admin\/{param1}\/{param2}\/",
+                "endpoint": "\/CommunityContent\/Live\/Admin\/{param1}\/{param2}\/{param3}\/",
                 "params": [
                     "name"
                 ],
@@ -3033,6 +3026,13 @@
                 ],
                 "post": []
             },
+            "GetStreamingStatusForMember": {
+                "name": "GetStreamingStatusForMember",
+                "method": "GET",
+                "endpoint": "\/CommunityContent\/Live\/Users\/{partnershipType}\/{membershipType}\/{membershipId}\/",
+                "params": [],
+                "post": []
+            },
             "AdminSetCommunityLiveMemberBanStatus": {
                 "name": "AdminSetCommunityLiveMemberBanStatus",
                 "method": "POST",
@@ -3044,13 +3044,6 @@
                 "name": "AdminSetCommunityLiveMemberFeatureStatus",
                 "method": "POST",
                 "endpoint": "\/CommunityContent\/Live\/Partnerships\/{param1}\/{param2}\/Feature\/{param3}\/",
-                "params": [],
-                "post": []
-            },
-            "GetStreamingStatusForMember": {
-                "name": "GetStreamingStatusForMember",
-                "method": "GET",
-                "endpoint": "\/CommunityContent\/Live\/Users\/{partnershipType}\/{membershipType}\/{membershipId}\/",
                 "params": [],
                 "post": []
             }

@@ -87,7 +87,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": "Private"
+            "access": "Public"
         },
         {
             "name": "GetAccessTokensFromRefreshToken",
@@ -96,7 +96,7 @@
             "params": [],
             "post": [],
             "path": [],
-            "access": "Private"
+            "access": "Public"
         },
         {
             "name": "GetApplication",
@@ -1504,6 +1504,15 @@
                     "link": ""
                 }
             },
+            "access": ""
+        },
+        {
+            "name": "GetPentathlonScores",
+            "method": "GET",
+            "endpoint": "\/ExternalSocial\/Pentathlon\/",
+            "params": [],
+            "post": [],
+            "path": [],
             "access": ""
         }
     ],
@@ -4807,15 +4816,6 @@
     ],
     "DestinyService": [
         {
-            "name": "BuyItem",
-            "method": "POST",
-            "endpoint": "\/Destiny\/BuyItem\/",
-            "params": [],
-            "post": [],
-            "path": [],
-            "access": "Private"
-        },
-        {
             "name": "EquipItem",
             "method": "POST",
             "endpoint": "\/Destiny\/EquipItem\/",
@@ -6230,20 +6230,6 @@
             "access": "Private"
         },
         {
-            "name": "RefundItem",
-            "method": "POST",
-            "endpoint": "\/Destiny\/{param1}\/RefundItem\/",
-            "params": [],
-            "post": [],
-            "path": {
-                "param1": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "access": "Private"
-        },
-        {
             "name": "SearchDestinyPlayer",
             "method": "GET",
             "endpoint": "\/Destiny\/SearchDestinyPlayer\/{membershipType}\/{displayName}\/",
@@ -6428,7 +6414,7 @@
         {
             "name": "GetAdminCommunityLiveStatuses",
             "method": "GET",
-            "endpoint": "\/CommunityContent\/Live\/Admin\/{param1}\/{param2}\/",
+            "endpoint": "\/CommunityContent\/Live\/Admin\/{param1}\/{param2}\/{param3}\/",
             "params": {
                 "name": {
                     "desc": "",
@@ -6442,6 +6428,10 @@
                     "link": ""
                 },
                 "param2": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param3": {
                     "desc": "",
                     "link": ""
                 }
