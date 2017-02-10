@@ -1505,6 +1505,15 @@
                 }
             },
             "access": ""
+        },
+        {
+            "name": "GetPentathlonScores",
+            "method": "GET",
+            "endpoint": "\/ExternalSocial\/Pentathlon\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": ""
         }
     ],
     "SurveyService": [
