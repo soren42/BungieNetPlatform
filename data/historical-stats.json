@@ -15271,17 +15271,19 @@
             "statId": "medalsStrikeRainbow",
             "statName": "Rainbow",
             "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m8961cd42f91ffc3594d7b0982f5dce35.png",
-            "description": "Earn a Primary, Special and Heavy Streak Medal in quick succession."
+            "description": "Earn a Primary, Special, and Heavy Streak Medal in quick succession."
         },
         "medalsStrikeFireteamStreak": {
             "statId": "medalsStrikeFireteamStreak",
-            "statName": "Fireteam Streak"
+            "statName": "Fireteam Streak",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m52f4f2dafbf38cd17b95933c8587015c.png",
+            "description": "Rapidly kill 30 enemies."
         },
         "medalsStrikeExplosive": {
             "statId": "medalsStrikeExplosive",
             "statName": "Explosive",
             "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_ma2a19aa7c79f4b1f189888ae11b20cf3.png",
-            "description": "Kill an enemy with a grenade."
+            "description": "Kill 1 enemy with a grenade."
         },
         "medalsStrikeExplosiveStreak": {
             "statId": "medalsStrikeExplosiveStreak",
@@ -15293,11 +15295,13 @@
             "statId": "medalsStrikeTakedown",
             "statName": "Takedown",
             "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_mf90af27b8a3e56349c2f1a53f24fdd52.png",
-            "description": "Kill an enemy with a Melee ability."
+            "description": "Kill 1 enemy with a Melee ability."
         },
         "medalsStrikeTactical": {
             "statId": "medalsStrikeTactical",
-            "statName": "Tactical"
+            "statName": "Tactical",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_me7d11091e13f80be8181dc22d88ebb45.png",
+            "description": "Kill 2 enemies who nearly killed you."
         },
         "medalsStrikeConcentratedFire": {
             "statId": "medalsStrikeConcentratedFire",
@@ -15331,7 +15335,9 @@
         },
         "medalsStrikeEntrapment": {
             "statId": "medalsStrikeEntrapment",
-            "statName": "Entrapment"
+            "statName": "Entrapment",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m3f0e1b0299516581a6f208af648d6a10.png",
+            "description": "Rapidly kill 5 tethered enemies."
         },
         "medalsStrikeFlameTouched": {
             "statId": "medalsStrikeFlameTouched",
@@ -15371,11 +15377,15 @@
         },
         "medalsStrikeWardingLight": {
             "statId": "medalsStrikeWardingLight",
-            "statName": "Warding Light"
+            "statName": "Warding Light",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m9f869a4607cb9863b37154e3c6ffe663.png",
+            "description": "Kill 5 enemies while buffed by a single Ward of Dawn activation."
         },
         "medalsStrikeIndestructible": {
             "statId": "medalsStrikeIndestructible",
-            "statName": "Indestructible"
+            "statName": "Indestructible",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m055e33686453174c491e81a62981d0af.png",
+            "description": "Complete a Strike without dying."
         },
         "medalsStrikeFlawless": {
             "statId": "medalsStrikeFlawless",
@@ -15383,11 +15393,15 @@
         },
         "medalsStrikeBrutalEfficiency": {
             "statId": "medalsStrikeBrutalEfficiency",
-            "statName": "Brutal Efficiency"
+            "statName": "Brutal Efficiency",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m9bd7bda8dee390ed8c8909968eb45582.png",
+            "description": "Get 150 kills and complete the Strike."
         },
         "medalsStrikeTimeBonus": {
             "statId": "medalsStrikeTimeBonus",
-            "statName": "Time Bonus"
+            "statName": "Time Bonus",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m748adb1eb09a5b64da266525aae00bc0.png",
+            "description": "Complete a Nightfall before the timer expires."
         },
         "medalsStrikeBronzeTier": {
             "statId": "medalsStrikeBronzeTier",
@@ -15409,15 +15423,21 @@
         },
         "medalsStrikeBronze": {
             "statId": "medalsStrikeBronze",
-            "statName": "Bronze Contender"
+            "statName": "Bronze Contender",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m64348f66084e7b4e4f821e43cf3aa562.png",
+            "description": "Earn enough points to cross the Bronze score threshold."
         },
         "medalsStrikeSilver": {
             "statId": "medalsStrikeSilver",
-            "statName": "Silver Contender"
+            "statName": "Silver Contender",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m42d62e1ffffc54c2d4d2dfe688302a3b.png",
+            "description": "Earn enough points to cross the Silver score threshold."
         },
         "medalsStrikeGold": {
             "statId": "medalsStrikeGold",
-            "statName": "Gold Contender"
+            "statName": "Gold Contender",
+            "icon": "https:\/\/www.bungie.net\/common\/destiny_content\/icons\/icon_m078d5b5c2ceb6911dd8a35c60b8d0067.png",
+            "description": "Earn enough points to cross the Gold score threshold."
         }
     },
     "Weapons": {

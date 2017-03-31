@@ -810,13 +810,6 @@
                     "types"
                 ],
                 "post": []
-            },
-            "GetPentathlonScores": {
-                "name": "GetPentathlonScores",
-                "method": "GET",
-                "endpoint": "\/ExternalSocial\/Pentathlon\/",
-                "params": [],
-                "post": []
             }
         }
     },
