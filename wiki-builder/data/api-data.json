@@ -1656,7 +1656,12 @@
             "name": "GetCoreTopicsPaged",
             "method": "GET",
             "endpoint": "\/Forum\/GetCoreTopicsPaged\/{param1}\/{param2}\/{param3}\/{param4}\/",
-            "params": [],
+            "params": {
+                "locales": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
             "post": [],
             "path": {
                 "param1": {
@@ -1888,6 +1893,10 @@
             "params": {
                 "tagstring": {
                     "desc": "Filter by tags. Comma separated.",
+                    "link": ""
+                },
+                "locales": {
+                    "desc": "",
                     "link": ""
                 }
             },
@@ -4629,6 +4638,15 @@
             "name": "ResolveReport",
             "method": "POST",
             "endpoint": "\/Admin\/Assigned\/Resolve\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": "Private"
+        },
+        {
+            "name": "ReturnAssignedReports",
+            "method": "POST",
+            "endpoint": "\/Admin\/Assigned\/ReturnAll",
             "params": [],
             "post": [],
             "path": [],
