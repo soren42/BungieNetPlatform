@@ -899,7 +899,8 @@
                 "method": "GET",
                 "endpoint": "\/Forum\/GetTopicsPaged\/{page}\/{pageSize}\/{group}\/{sort}\/{quickDate}\/{categoryFilter}\/",
                 "params": [
-                    "tagstring"
+                    "tagstring",
+                    "locales"
                 ],
                 "post": []
             },
@@ -907,7 +908,9 @@
                 "name": "GetCoreTopicsPaged",
                 "method": "GET",
                 "endpoint": "\/Forum\/GetCoreTopicsPaged\/{param1}\/{param2}\/{param3}\/{param4}\/",
-                "params": [],
+                "params": [
+                    "locales"
+                ],
                 "post": []
             },
             "GetPostsThreadedPaged": {
@@ -2104,6 +2107,13 @@
                 "name": "GetAssignedReports",
                 "method": "POST",
                 "endpoint": "\/Admin\/Assigned\/",
+                "params": [],
+                "post": []
+            },
+            "ReturnAssignedReports": {
+                "name": "ReturnAssignedReports",
+                "method": "POST",
+                "endpoint": "\/Admin\/Assigned\/ReturnAll",
                 "params": [],
                 "post": []
             },
