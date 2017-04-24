@@ -325,6 +325,24 @@
             "access": "Private"
         },
         {
+            "name": "GetMembershipDataById",
+            "method": "GET",
+            "endpoint": "\/User\/GetMembershipsById\/{param1}\/{param2}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetMobileAppPairings",
             "method": "GET",
             "endpoint": "\/User\/GetMobileAppPairings\/",
