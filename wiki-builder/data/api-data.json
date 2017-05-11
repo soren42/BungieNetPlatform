@@ -325,6 +325,24 @@
             "access": "Private"
         },
         {
+            "name": "GetMembershipDataById",
+            "method": "GET",
+            "endpoint": "\/User\/GetMembershipsById\/{membershipId}\/{membershipType}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "membershipId": {
+                    "desc": "",
+                    "link": ""
+                },
+                "membershipType": {
+                    "desc": "A valid Bungie.net membershipType.",
+                    "link": "Enums#BungieMembershipType"
+                }
+            },
+            "access": ""
+        },
+        {
             "name": "GetMobileAppPairings",
             "method": "GET",
             "endpoint": "\/User\/GetMobileAppPairings\/",

@@ -337,6 +337,13 @@
                 ],
                 "post": []
             },
+            "GetMembershipDataById": {
+                "name": "GetMembershipDataById",
+                "method": "GET",
+                "endpoint": "\/User\/GetMembershipsById\/{membershipId}\/{membershipType}\/",
+                "params": [],
+                "post": []
+            },
             "SetAcknowledged": {
                 "name": "SetAcknowledged",
                 "method": "POST",

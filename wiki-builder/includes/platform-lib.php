@@ -41,6 +41,8 @@ $api_params = array(
 	'GetBungieAccount' => array('query' => array('n' => MEMBERSHIP_ID, 'i' => MEMBERSHIP_TYPE), 'post' => array()),
 	'SetAcknowledged' => array('query' => array('f' => 'ackId'), 'post' => array()),
 
+	'GetMembershipDataById' => array('query' => array(MEMBERSHIP_ID, MEMBERSHIP_TYPE), 'post' => array()),
+
 	// Message Service
 	'ReviewInvitationDirect' => array('query' => array('f' => 'invitationId', 'e' => 'invitationResponseState'), 'post' => array()),
 	'GetConversationsV5' => array('query' => array('h' => 'currentPage'), 'post' => array()),

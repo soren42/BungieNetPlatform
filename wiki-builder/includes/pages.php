@@ -79,7 +79,7 @@ function buildPage($markdownPath, $outputPath) {
 
 	$templateTime = filemtime($headerTemplate);
 	$footerTemplateTime = filemtime($footerTemplate);
-	if ($footerTemplate > $templateTime) $templateTime = $footerTemplateTime;
+	if ($footerTemplateTime > $templateTime) $templateTime = $footerTemplateTime;
 
 	$markdownTime = filemtime($markdownPath);
 
@@ -88,7 +88,7 @@ function buildPage($markdownPath, $outputPath) {
 
 	$markdownNotUpdated = isset($buildCache[$buildId]) && $markdownTime <= $buildCache[$buildId];
 	$templatesNotUpdated = $markdownTime <= $templateTime;
-	if (file_exists($cachePath) && $markdownNotUpdated && $templatesNotUpdated) {
+	if (file_exists($cachePath) && $markdownNotUpdated && $templatesNotUpdated && !isset($_GET['update'])) {
 		//echo 'Cache Page: '. str_replace(BASEPATH, '', $markdownPath) . ' -> ' . str_replace(BASEPATH, '', $outputPath) . "\n";
 		if (!file_exists(dirname($outputPath))) mkdir(dirname($outputPath), 0777, true);
 		copy($cachePath, $outputPath);
