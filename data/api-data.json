@@ -327,17 +327,17 @@
         {
             "name": "GetMembershipDataById",
             "method": "GET",
-            "endpoint": "\/User\/GetMembershipsById\/{param1}\/{param2}\/",
+            "endpoint": "\/User\/GetMembershipsById\/{membershipId}\/{membershipType}\/",
             "params": [],
             "post": [],
             "path": {
-                "param1": {
+                "membershipId": {
                     "desc": "",
                     "link": ""
                 },
-                "param2": {
-                    "desc": "",
-                    "link": ""
+                "membershipType": {
+                    "desc": "A valid Bungie.net membershipType.",
+                    "link": "Enums#BungieMembershipType"
                 }
             },
             "access": ""

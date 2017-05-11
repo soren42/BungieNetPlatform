@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
 
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">

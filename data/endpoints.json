@@ -340,7 +340,7 @@
             "GetMembershipDataById": {
                 "name": "GetMembershipDataById",
                 "method": "GET",
-                "endpoint": "\/User\/GetMembershipsById\/{param1}\/{param2}\/",
+                "endpoint": "\/User\/GetMembershipsById\/{membershipId}\/{membershipType}\/",
                 "params": [],
                 "post": []
             },
