@@ -60,7 +60,13 @@
         "ReadDestinyInventoryAndVault": 64,
         "ReadUserData": 128,
         "EditUserData": 256,
-        "ReadDestinyVendorsAndAdvisors": 512
+        "ReadDestinyVendorsAndAdvisors": 512,
+        "ReadAndApplyTokens": 1024
+    },
+    "OAuthApplicationType": {
+        "None": 0,
+        "Confidential": 1,
+        "Public": 2
     },
     "ApplicationStatus": {
         "None": 0,
@@ -964,6 +970,7 @@
         "ContentLocaleDidNotMatchExpected": 172,
         "ContentBabelCallFailed": 173,
         "ContentEnglishPostLiveForbidden": 174,
+        "ContentLocaleEditPermissionDenied": 175,
         "UserNonUniqueName": 200,
         "UserManualLinkingStepRequired": 201,
         "UserCreateUnknownSqlResult": 202,
@@ -1408,6 +1415,7 @@
         "ApplicationNameIsTaken": 2109,
         "RefreshTokenNotYetValid": 2110,
         "AccessTokenHasExpired": 2111,
+        "ApplicationTokenFormatNotValid": 2112,
         "PartnershipInvalidType": 2200,
         "PartnershipValidationError": 2201,
         "PartnershipValidationTimeout": 2202,

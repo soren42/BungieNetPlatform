@@ -108,6 +108,13 @@
                 "endpoint": "\/App\/PrivateSearch\/",
                 "params": [],
                 "post": []
+            },
+            "GetOAuthAccessToken": {
+                "name": "GetOAuthAccessToken",
+                "method": "POST",
+                "endpoint": "\/App\/oauth\/token\/",
+                "params": [],
+                "post": []
             }
         }
     },

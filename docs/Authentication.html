@@ -82,13 +82,22 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Authentication/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>Introduction</h2>
-<p>With the introduction of User Authentication, third party apps can now make calls to endpoints that were previously private access using the new &quot;sanctioned&quot; OAuth implementation. It does however require that your web server has a valid SSL certificate and can operate over https. See the <a href="https://www.bungie.net/en/Help/Article/45481">Official Help Article</a> for more information.</p>
-<h2>Demo</h2>
+<p>With the introduction of User Authentication, third party apps can now make calls to endpoints that were previously private access using the new &quot;sanctioned&quot; OAuth implementation. It does however require that your web server has a valid SSL certificate and can operate over https.</p>
+<h2>OAuth 2.0 (Beta)</h2>
+<p>Support for OAuth 2.0 (RFC 6749) was added on May 31, 2017. This is a more standardized implementation of user authentication and will likely replace the old method in the future. The Bungie Developers have advised to treat it as being still in Beta for the time being. See the <a href="https://www.bungie.net/en/Clan/Post/39966/227773391/0/0">Official Help Article</a> for more information.</p>
+<h3>Demo</h3>
+<p>To make it easier for developers who are unfamiliar with OAuth, lowlines has set up a test page on his website that goes through the steps involved with getting a user to Authorize your App and then refreshing your Access Tokens periodically.</p>
+<p><a href="https://lowlidev.com.au/destiny/authentication-2">https://lowlidev.com.au/destiny/authentication-2</a></p>
+<h3>Code Examples</h3>
+<p>Currently no code examples are available for this implementation.</p>
+<h2>Authentication 1.0</h2>
+<p>The first iteration of User Authentication was a partial implementation the OAuth specification. It will likely be replaced by the new OAuth 2.0 in the future. See the <a href="https://www.bungie.net/en/Help/Article/45481">Official Help Article</a> for more information.</p>
+<h3>Demo</h3>
 <p>To make it easier for developers who are unfamiliar with OAuth, lowlines has set up a test page on his website that goes through the steps involved with getting a user to Authorize your App and then refreshing your Access Tokens periodically.</p>
 <p><a href="https://lowlidev.com.au/destiny/authentication">https://lowlidev.com.au/destiny/authentication</a></p>
-<h2>Code Examples</h2>
+<h3>Code Examples</h3>
 <p>Below is a working list of implementations for various languages provided by members of the community.</p>
-<h3>PHP Authentication (by <a href="https://www.bungie.net/en/User/Profile/5434199">projectxmatt</a>)</h3>
+<h4>PHP Authentication (by <a href="https://www.bungie.net/en/User/Profile/5434199">projectxmatt</a>)</h4>
 <pre><code class="php">&lt;?php
 
 $apikey = 'YOUR-API-KEY-HERE';
@@ -125,6 +134,7 @@ curl_close($ch);</code></pre>
 <h2>References</h2>
 <ol>
 <li><a href="https://www.bungie.net/en/Help/Article/45481">https://www.bungie.net/en/Help/Article/45481</a></li>
+<li><a href="https://www.bungie.net/en/Clan/Post/39966/227773391/0/0">https://www.bungie.net/en/Clan/Post/39966/227773391/0/0</a></li>
 </ol>
 		</div>
 	</div>
