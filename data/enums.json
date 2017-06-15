@@ -95,6 +95,7 @@
         "None": 0,
         "TigerXbox": 1,
         "TigerPsn": 2,
+        "TigerBlizzard": 4,
         "TigerDemon": 10,
         "BungieNext": 254,
         "All": -1
@@ -108,7 +109,8 @@
         "Facebook": 5,
         "Google": 8,
         "Windows": 9,
-        "DemonId": 10
+        "DemonId": 10,
+        "BattleNetId": 14
     },
     "ClientDeviceType": {
         "Unknown": 0,
@@ -829,7 +831,7 @@
     },
     "MigrationMode": {
         "ConvertToClan": 0,
-        "SplitClan": 1
+        "DeleteClan": 1
     },
     "PlatformErrorCodes": {
         "None": 0,
@@ -1416,6 +1418,9 @@
         "RefreshTokenNotYetValid": 2110,
         "AccessTokenHasExpired": 2111,
         "ApplicationTokenFormatNotValid": 2112,
+        "ApplicationNotConfiguredForBungieAuth": 2113,
+        "ApplicationNotConfiguredForOAuth": 2114,
+        "OAuthAccessTokenExpired": 2115,
         "PartnershipInvalidType": 2200,
         "PartnershipValidationError": 2201,
         "PartnershipValidationTimeout": 2202,
@@ -1709,6 +1714,17 @@
         "NotFound": 1,
         "Success": 2,
         "Unknown": 3
+    },
+    "TrendingEntryType": {
+        "News": 0,
+        "DestinyItem": 1,
+        "DestinyActivity": 2,
+        "DestinyEvent": 3,
+        "SupportArticle": 4,
+        "Creation": 5,
+        "Stream": 6,
+        "Update": 7,
+        "Link": 8
     },
     "RAFBondState": {
         "None": 0,

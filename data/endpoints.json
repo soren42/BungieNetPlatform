@@ -109,8 +109,8 @@
                 "params": [],
                 "post": []
             },
-            "GetOAuthAccessToken": {
-                "name": "GetOAuthAccessToken",
+            "GetOAuthTokens": {
+                "name": "GetOAuthTokens",
                 "method": "POST",
                 "endpoint": "\/App\/oauth\/token\/",
                 "params": [],
@@ -348,6 +348,13 @@
                 "name": "GetMembershipDataById",
                 "method": "GET",
                 "endpoint": "\/User\/GetMembershipsById\/{membershipId}\/{membershipType}\/",
+                "params": [],
+                "post": []
+            },
+            "GetMembershipDataForCurrentUser": {
+                "name": "GetMembershipDataForCurrentUser",
+                "method": "GET",
+                "endpoint": "\/User\/GetMembershipsForCurrentUser\/",
                 "params": [],
                 "post": []
             },
@@ -2246,6 +2253,32 @@
                 "name": "BulkEditPost",
                 "method": "POST",
                 "endpoint": "\/Admin\/BulkEditPost\/",
+                "params": [],
+                "post": []
+            }
+        }
+    },
+    "TrendingService": {
+        "name": "TrendingService",
+        "endpoints": {
+            "GetTrendingCategories": {
+                "name": "GetTrendingCategories",
+                "method": "GET",
+                "endpoint": "\/Trending\/Categories\/",
+                "params": [],
+                "post": []
+            },
+            "GetTrendingCategory": {
+                "name": "GetTrendingCategory",
+                "method": "GET",
+                "endpoint": "\/Trending\/Categories\/{param1}\/{param2}\/",
+                "params": [],
+                "post": []
+            },
+            "GetTrendingEntryDetail": {
+                "name": "GetTrendingEntryDetail",
+                "method": "GET",
+                "endpoint": "\/Trending\/Details\/{param1}\/{param2}\/",
                 "params": [],
                 "post": []
             }

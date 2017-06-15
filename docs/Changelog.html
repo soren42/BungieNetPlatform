@@ -84,6 +84,55 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>June 14, 2017</h2>
+<p>The one that brought on a Blizzard.</p>
+<p>Endpoints (added):</p>
+<ul>
+<li>GET <a href="../docs/UserService/GetMembershipDataForCurrentUser">UserService/GetMembershipDataForCurrentUser</a></li>
+<li>GET <a href="../docs/TrendingService/GetTrendingCategories">TrendingService/GetTrendingCategories</a></li>
+<li>GET <a href="../docs/TrendingService/GetTrendingCategory">TrendingService/GetTrendingCategory</a></li>
+<li>GET <a href="../docs/TrendingService/GetTrendingEntryDetail">TrendingService/GetTrendingEntryDetail</a></li>
+</ul>
+<p>Endpoints (changed):</p>
+<ul>
+<li>POST <a href="../docs/ApplicationService/GetOAuthTokens">App/GetOAuthTokens</a> - renamed, was GetOAuthAccessToken</li>
+</ul>
+<p>Enums (added):</p>
+<ul>
+<li>BungieCredentialType
+<ul>
+<li>&quot;14&quot; BattleNetId</li>
+</ul></li>
+<li>BungieMembershipType
+<ul>
+<li>&quot;4&quot; TigerBlizzard</li>
+</ul></li>
+<li>PlatformErrorCodes
+<ul>
+<li>&quot;2113&quot; ApplicationNotConfiguredForBungieAuth</li>
+<li>&quot;2114&quot; ApplicationNotConfiguredForOAuth</li>
+<li>&quot;2115&quot; OAuthAccessTokenExpired</li>
+</ul></li>
+<li>TrendingEntryType
+<ul>
+<li>&quot;0&quot; News</li>
+<li>&quot;1&quot; DestinyItem</li>
+<li>&quot;2&quot; DestinyActivity</li>
+<li>&quot;3&quot; DestinyEvent</li>
+<li>&quot;4&quot; SupportArticle</li>
+<li>&quot;5&quot; Creation</li>
+<li>&quot;6&quot; Stream</li>
+<li>&quot;7&quot; Update</li>
+<li>&quot;8&quot; Link</li>
+</ul></li>
+</ul>
+<p>Enums (changed):</p>
+<ul>
+<li>MigrationMode
+<ul>
+<li>&quot;1&quot; DeleteClan - renamed from SplitClan</li>
+</ul></li>
+</ul>
 <h2>May 31, 2017</h2>
 <p>The one bearing tokens.</p>
 <p>Updated the <a href="../docs/Authentication">User Authentication</a> page with information about the new OAuth 2.0 implementation.</p>

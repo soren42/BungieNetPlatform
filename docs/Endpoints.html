@@ -167,7 +167,7 @@
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/ApplicationService/GetOAuthAccessToken">GetOAuthAccessToken</a></td>
+<td><a href="../docs/ApplicationService/GetOAuthTokens">GetOAuthTokens</a></td>
 <td>/App/oauth/token/</td>
 </tr>
 <tr>
@@ -182,7 +182,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="UserService"></a>UserService (34 Endpoints)</h2>
+<h2><a name="UserService"></a>UserService (35 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -256,6 +256,11 @@
 <td>GET</td>
 <td><a href="../docs/UserService/GetMembershipDataById">GetMembershipDataById</a></td>
 <td>/User/GetMembershipsById/{membershipId}/{membershipType}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/UserService/GetMembershipDataForCurrentUser">GetMembershipDataForCurrentUser</a></td>
+<td>/User/GetMembershipsForCurrentUser/</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -1578,6 +1583,33 @@
 <td>POST</td>
 <td><a href="../docs/AdminService/ReturnAssignedReports">ReturnAssignedReports</a></td>
 <td>/Admin/Assigned/ReturnAll</td>
+</tr>
+</tbody>
+</table>
+<h2><a name="TrendingService"></a>TrendingService (3 Endpoints)</h2>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Method</th>
+<th>Name</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><a href="../docs/TrendingService/GetTrendingCategories">GetTrendingCategories</a></td>
+<td>/Trending/Categories/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/TrendingService/GetTrendingCategory">GetTrendingCategory</a></td>
+<td>/Trending/Categories/{param1}/{param2}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="../docs/TrendingService/GetTrendingEntryDetail">GetTrendingEntryDetail</a></td>
+<td>/Trending/Details/{param1}/{param2}/</td>
 </tr>
 </tbody>
 </table>

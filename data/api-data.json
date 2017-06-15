@@ -164,7 +164,7 @@
             "access": "Private"
         },
         {
-            "name": "GetOAuthAccessToken",
+            "name": "GetOAuthTokens",
             "method": "POST",
             "endpoint": "\/App\/oauth\/token\/",
             "params": [],
@@ -349,6 +349,15 @@
                     "link": "Enums#BungieMembershipType"
                 }
             },
+            "access": ""
+        },
+        {
+            "name": "GetMembershipDataForCurrentUser",
+            "method": "GET",
+            "endpoint": "\/User\/GetMembershipsForCurrentUser\/",
+            "params": [],
+            "post": [],
+            "path": [],
             "access": ""
         },
         {
@@ -4678,6 +4687,53 @@
             "post": [],
             "path": [],
             "access": "Private"
+        }
+    ],
+    "TrendingService": [
+        {
+            "name": "GetTrendingCategories",
+            "method": "GET",
+            "endpoint": "\/Trending\/Categories\/",
+            "params": [],
+            "post": [],
+            "path": [],
+            "access": ""
+        },
+        {
+            "name": "GetTrendingCategory",
+            "method": "GET",
+            "endpoint": "\/Trending\/Categories\/{param1}\/{param2}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
+        },
+        {
+            "name": "GetTrendingEntryDetail",
+            "method": "GET",
+            "endpoint": "\/Trending\/Details\/{param1}\/{param2}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": ""
         }
     ],
     "TokensService": [
