@@ -789,6 +789,12 @@
         "Founder": 2,
         "None": -1
     },
+    "MigrationSelection": {
+        "None": 0,
+        "DeleteClan": 1,
+        "ConvertToClanKeepContent": 2,
+        "ConvertToClanNoContent": 3
+    },
     "GroupAllianceStatus": {
         "Unallied": 0,
         "Parent": 1,
@@ -828,10 +834,6 @@
         "Duration": 1,
         "Name": 2,
         "Activity": 3
-    },
-    "MigrationMode": {
-        "ConvertToClan": 0,
-        "DeleteClan": 1
     },
     "PlatformErrorCodes": {
         "None": 0,

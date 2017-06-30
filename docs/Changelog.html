@@ -84,6 +84,31 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>June 29, 2017</h2>
+<p>The one that prepares for the migration.</p>
+<p>Endpoints (changed):</p>
+<ul>
+<li>POST <a href="../docs/GroupService/DesignateClanFounder">GroupService/DesignateClanFounder</a> - renamed, was Migrate</li>
+</ul>
+<p>Endpoints (added):</p>
+<ul>
+<li>POST <a href="../docs/GroupService/SaveMigrationSelection">GroupService/SaveMigrationSelection</a></li>
+</ul>
+<p>Enums (changes):</p>
+<ul>
+<li>MigrationSelection - renamed, was MigrationMode
+<ul>
+<li>&quot;0&quot; None - renamed, was CovertToClan</li>
+</ul></li>
+</ul>
+<p>Enums (added):</p>
+<ul>
+<li>MigrationSelection
+<ul>
+<li>&quot;2&quot; ConvertToClanKeepContent</li>
+<li>&quot;3&quot; ConvertToClanNoContent</li>
+</ul></li>
+</ul>
 <h2>June 14, 2017</h2>
 <p>The one that brought on a Blizzard.</p>
 <p>Endpoints (added):</p>

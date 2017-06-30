@@ -2875,6 +2875,28 @@
             "access": "Private"
         },
         {
+            "name": "DesignateClanFounder",
+            "method": "POST",
+            "endpoint": "\/Group\/{param1}\/DesignateClanFounder\/{param2}\/{param3}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param3": {
+                    "desc": "",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
             "name": "DisableClanForGroup",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Clans\/Disable\/{clanMembershipType}\/",
@@ -4063,28 +4085,6 @@
             "access": "Private"
         },
         {
-            "name": "Migrate",
-            "method": "POST",
-            "endpoint": "\/Group\/{param1}\/Migrate\/{param2}\/{param3}\/",
-            "params": [],
-            "post": [],
-            "path": {
-                "param1": {
-                    "desc": "",
-                    "link": ""
-                },
-                "param2": {
-                    "desc": "",
-                    "link": ""
-                },
-                "param3": {
-                    "desc": "",
-                    "link": ""
-                }
-            },
-            "access": "Private"
-        },
-        {
             "name": "OverrideFounderAdmin",
             "method": "POST",
             "endpoint": "\/Group\/{groupId}\/Admin\/FounderOverride\/{membershipType}\/",
@@ -4186,6 +4186,28 @@
             "path": {
                 "groupId": {
                     "desc": "A valid groupId.",
+                    "link": ""
+                }
+            },
+            "access": "Private"
+        },
+        {
+            "name": "SaveMigrationSelection",
+            "method": "POST",
+            "endpoint": "\/Group\/{param1}\/MigrationSelection\/{param2}\/{param3}\/",
+            "params": [],
+            "post": [],
+            "path": {
+                "param1": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param2": {
+                    "desc": "",
+                    "link": ""
+                },
+                "param3": {
+                    "desc": "",
                     "link": ""
                 }
             },

@@ -998,7 +998,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="GroupService"></a>GroupService (80 Endpoints)</h2>
+<h2><a name="GroupService"></a>GroupService (81 Endpoints)</h2>
 <table class="table table-bordered">
 <thead>
 <tr>
@@ -1077,6 +1077,11 @@
 <td>POST</td>
 <td><a href="../docs/GroupService/DenyPendingForList">DenyPendingForList</a></td>
 <td>/Group/{groupId}/Members/DenyList/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/GroupService/DesignateClanFounder">DesignateClanFounder</a></td>
+<td>/Group/{param1}/DesignateClanFounder/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
@@ -1340,11 +1345,6 @@
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/GroupService/Migrate">Migrate</a></td>
-<td>/Group/{param1}/Migrate/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
 <td><a href="../docs/GroupService/OverrideFounderAdmin">OverrideFounderAdmin</a></td>
 <td>/Group/{groupId}/Admin/FounderOverride/{membershipType}/</td>
 </tr>
@@ -1372,6 +1372,11 @@
 <td>POST</td>
 <td><a href="../docs/GroupService/RescindGroupMembership">RescindGroupMembership</a></td>
 <td>/Group/{groupId}/Members/Rescind/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="../docs/GroupService/SaveMigrationSelection">SaveMigrationSelection</a></td>
+<td>/Group/{param1}/MigrationSelection/{param2}/{param3}/</td>
 </tr>
 <tr>
 <td>POST</td>
