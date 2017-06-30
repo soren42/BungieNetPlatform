@@ -360,6 +360,7 @@ $api_params = array(
 
 // Download platform.lib.min.js
 $lib_url = 'https://www.bungie.net/sharedbundle/platformlib';//'https://www.bungie.net/Scripts/platform.lib.min.js';
+echo '<pre>PlatformLib: '.$lib_url.'</pre>';
 $ch = curl_init($lib_url);
 curl_setopt_array($ch, array(
 	CURLOPT_RETURNTRANSFER => true
@@ -368,24 +369,49 @@ $lib_data = curl_exec($ch);
 curl_close($ch);
 
 
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
 // Parse Services
 //preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore:\[\],(.*?)\}\)\(jQuery\);/im', $lib_data, $service_matches, PREG_SET_ORDER);
 //preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore:\[\],(.*?)\}\)\(jQuery\)/im', $lib_data, $service_matches, PREG_SET_ORDER);
-preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore\:\[\],/im', $lib_data, $service_match_offs, PREG_SET_ORDER);
+//preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{dataStore\:\[\],/im', $lib_data, $service_match_offs, PREG_SET_ORDER);
+preg_match_all('/[a-z]\.([a-zA-Z]+Service)=\{/im', $lib_data, $service_match_offs, PREG_SET_ORDER);
 $service_matches = array();
 foreach($service_match_offs as $match) {
 	//echo '<pre>'.var_export($match, true).'</pre>';
 	$start = strpos($lib_data, $match[0]);
 	$end = strpos($lib_data, '(jQuery)', $start);
 	//echo '<pre>'.$start.' | '.$end.'</pre>';
+
+	$match_text = substr($lib_data, $start, $end-$start);
+	$match_service = $match[1];
+
+	$endpoint_start = $start+strlen($match[0]);//-1;
+	$endpoint_end = $end-($start+strlen($match[0]));
+
+	if ($match_service == 'ExternalService') continue;
+
+	//echo '<pre>'.$match_service.' | '.$endpoint_start.' | '.$endpoint_end.' | '.($endpoint_start+$endpoint_end).'/'.strlen($lib_data).'</pre>';
+
+	$match_endpoints = substr($lib_data, $endpoint_start, $endpoint_end);
+
+	//echo '<pre>'.$match_endpoints.'</pre>';
+
+	//preg_match('/^\{[^:]+:function/', $match_endpoints, $is_service);
+	//if (!$is_service) continue;
+
 	$service_matches[] = array(
-		substr($lib_data, $start, $end-$start),
-		$match[1],
-		substr($lib_data, $start+strlen($match[0])-1, $end-($start+strlen($match[0])))
+		$match_text,
+		$match_service,
+		'{,'.$match_endpoints
 	);
+
 }
 
-//echo '<pre>'.var_export($service_matches, true).'</pre>';
+if (count($service_matches) == 0) echo '<pre>API Service Regex Broken :\'(</pre>';
+
+//echo '<pre>'.json_encode($service_matches, JSON_PRETTY_PRINT).'</pre>';
 
 $services = array();
 
@@ -397,9 +423,14 @@ foreach($service_matches as $service_index => $service) {
 	$services[$name] = array('name' => $name, 'endpoints' => array());
 
 	preg_match_all('/,([A-Z]+[a-zA-Z0-9]+):function\(([^\)]+)\)\{'
+		//.'(.*?)\.buildUrl\((.*?)\)[,;].*?\.serviceLibrary\.([^\(]+)'
 		.'(.*?)\.buildUrl\((.*?)\)[,;].*?\.serviceLibrary\.([^\(]+)'
 		//.'(.*)a\.buildUrl\((.*?)\);'
 		.'/m', $data, $funcs, PREG_SET_ORDER);
+
+//	echo '<pre>'.$name.' | '.$data.'</pre>';
+//	echo '<pre>'.json_encode($funcs, JSON_PRETTY_PRINT).'</pre>'; continue;
+
 	foreach($funcs as $func_index => $func) {
 		$key2 = $func[1];
 		$params = $func[2];
@@ -477,13 +508,13 @@ foreach($service_matches as $service_index => $service) {
 	$services[$name]['endpoints'] = (object)$services[$name]['endpoints'];
 }
 
-$services['CommunitycontentService']['endpoints']->GetStreamingStatusForMember = array(
-	'name' => 'GetStreamingStatusForMember',
-	'method' => 'GET',
-	'endpoint' => '/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/',
-	'params' => array(),
-	'post' => array()
-);
+//$services['CommunitycontentService']['endpoints']->GetStreamingStatusForMember = array(
+//	'name' => 'GetStreamingStatusForMember',
+//	'method' => 'GET',
+//	'endpoint' => '/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/',
+//	'params' => array(),
+//	'post' => array()
+//);
 
 
 // Output Services

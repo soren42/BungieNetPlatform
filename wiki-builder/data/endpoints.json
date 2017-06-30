@@ -1861,10 +1861,17 @@
                 "params": [],
                 "post": []
             },
-            "Migrate": {
-                "name": "Migrate",
+            "DesignateClanFounder": {
+                "name": "DesignateClanFounder",
                 "method": "POST",
-                "endpoint": "\/Group\/{param1}\/Migrate\/{param2}\/{param3}\/",
+                "endpoint": "\/Group\/{param1}\/DesignateClanFounder\/{param2}\/{param3}\/",
+                "params": [],
+                "post": []
+            },
+            "SaveMigrationSelection": {
+                "name": "SaveMigrationSelection",
+                "method": "POST",
+                "endpoint": "\/Group\/{param1}\/MigrationSelection\/{param2}\/{param3}\/",
                 "params": [],
                 "post": []
             },
