@@ -149,7 +149,7 @@ Spasm.TGXAssetLoader.prototype.getGearRenderableModels = function(renderer) {
 	return d
 };
 Spasm.TGXAssetLoader.prototype.getGearRenderableModel = function(renderer, geometryHash, fileBuffers) {
-	var h, platedTextureKey, platedTexture, platedTexture2, platedTexture3, renderMesh, stagePartListLength, l, ni, a, e, ti, v, f, y, o, vertexBufferData, oi, renderable;
+	var h, platedTextureKey, platedTexture, platedTexture2, platedTexture3, renderMesh, stagePartListLength, l, stagePart, shader, staticTextures, staticTexturesLength, v, textureKey, y, o, vertexBufferData, oi, renderable;
 	Spasm.assertInstance(renderer, Spasm.Renderer);
 	Spasm.assertString(geometryHash);
 	Spasm.assertValid(fileBuffers);
@@ -197,26 +197,31 @@ Spasm.TGXAssetLoader.prototype.getGearRenderableModel = function(renderer, geome
 			for (renderMesh = renderMeshes[0],
 					 stagePartListLength = renderMesh.stage_part_list.length,
 					 l = 0; l < stagePartListLength; l++)
-				if (ni = renderMesh.stage_part_list[l],
-					a = ni.shader,
-					a && a.static_textures && (e = a.static_textures, ti = e.length, ti >= 5)) {
-					var tr = e[0],
-						ir = e[2],
-						rr = e[4],
-						it = null,
-						rt = null,
-						ut = null;
+				if (stagePart = renderMesh.stage_part_list[l],
+					shader = stagePart.shader,
+					shader && shader.static_textures && (
+							staticTextures = shader.static_textures,
+							staticTexturesLength = staticTextures.length,
+							staticTexturesLength >= 5
+						)
+					) {
+					var diffuseId = staticTextures[0],
+						normalId = staticTextures[2],
+						gearstackId = staticTextures[4],
+						diffuseKey = null,
+						normalKey = null,
+						gearstackKey = null;
 					for (v = 0; v < textureKeysLength; v++)
-						f = textureKeys[v],
-						f.indexOf(tr) >= 0 ?
-							it = f :
-							f.indexOf(ir) >= 0 ?
-								rt = f :
-								f.indexOf(rr) >= 0 && (ut = f);
-					if (it && rt && ut) {
-						var diffusePlateTexture = textures[it],
-							normalPlateTexture = textures[rt],
-							gearstackPlateTexture = textures[ut];
+						textureKey = textureKeys[v],
+						textureKey.indexOf(diffuseId) >= 0 ?
+							diffuseKey = textureKey :
+							textureKey.indexOf(normalId) >= 0 ?
+								normalKey = textureKey :
+								textureKey.indexOf(gearstackId) >= 0 && (gearstackKey = textureKey);
+					if (diffuseKey && normalKey && gearstackKey) {
+						var diffusePlateTexture = textures[diffuseKey],
+							normalPlateTexture = textures[normalKey],
+							gearstackPlateTexture = textures[gearstackKey];
 						diffuseTexture = new Spasm.Texture(gl, diffusePlateTextureIndex, diffusePlateTexture);
 						normalTexture = new Spasm.Texture(gl, normalPlateTextureIndex, normalPlateTexture);
 						gearstackTexture = new Spasm.Texture(gl, gearstackPlateTextureIndex, gearstackPlateTexture);
@@ -333,7 +338,7 @@ Spasm.TGXAssetLoader.prototype.onLoadAssetManifest = function() {
 			wt = Spasm.Path.addVersionQuery(Spasm.Path.combine(Spasm.Content.GeometryPath, wi));
 		contentLoadersGeometry[wt] = new Spasm.TGXBinLoader(wt, vi)
 	}
-	var bi = function(n) {
+	var onLoadTexture = function(n) {
 			scope.onLoadTexture(n)
 		},
 		bt = Object.keys(textureIndexes),
@@ -341,10 +346,10 @@ Spasm.TGXAssetLoader.prototype.onLoadAssetManifest = function() {
 	for (a = 0; a < ki; a++) {
 		var di = bt[a],
 			gi = assetManifestTextures[di],
-			kt = Spasm.Path.addVersionQuery(Spasm.Path.combine(Spasm.Content.TexturesPath, gi));
-		contentLoadersTextures[kt] = new Spasm.TextureLoader(kt, bi)
+			textureFilePath = Spasm.Path.addVersionQuery(Spasm.Path.combine(Spasm.Content.TexturesPath, gi));
+		contentLoadersTextures[textureFilePath] = new Spasm.TextureLoader(textureFilePath, onLoadTexture)
 	}
-	var nr = function(n) {
+	var onLoadPlatedTexture = function(n) {
 			scope.onLoadPlatedTexture(n)
 		},
 		dt = Object.keys(plateRegionIndexes),
@@ -352,8 +357,8 @@ Spasm.TGXAssetLoader.prototype.onLoadAssetManifest = function() {
 	for (v = 0; v < tr; v++) {
 		var ir = dt[v],
 			rr = assetManifestPlatedRegions[ir],
-			gt = Spasm.Path.addVersionQuery(Spasm.Path.combine(Spasm.Content.PlatedTexturesPath, rr));
-		contentLoadersPlatedTextures[gt] = new Spasm.TextureLoader(gt, nr)
+			platedTexturePath = Spasm.Path.addVersionQuery(Spasm.Path.combine(Spasm.Content.PlatedTexturesPath, rr));
+		contentLoadersPlatedTextures[platedTexturePath] = new Spasm.TextureLoader(platedTexturePath, onLoadPlatedTexture)
 	}
 };
 Spasm.TGXAssetLoader.prototype.checkContentLoadComplete = function() {
@@ -420,13 +425,39 @@ Spasm.TGXAssetLoader.prototype.onLoadGeometryBuffer = function(n) {
 		) :
 		this.onLoadFailure()
 };
-Spasm.TGXAssetLoader.prototype.onLoadTexture = function(n) {
-	var t, i, r, u;
-	Spasm.assertInstance(n, Spasm.TextureLoader);
-	n.isCompleteAndOK() ? (t = n.filePath, Spasm.assertPath(t), i = n.image, Spasm.assertValid(i), this.contentLoaded.textures[t] = i, r = this.contentLoaders.textures, u = r[t], Spasm.assertEqual(u, n), delete r[t], this.checkContentLoadComplete()) : this.onLoadFailure()
+Spasm.TGXAssetLoader.prototype.onLoadTexture = function(textureLoader) {
+	var filePath, image, contentLoadersTextures, u;
+	Spasm.assertInstance(textureLoader, Spasm.TextureLoader);
+	textureLoader.isCompleteAndOK() ?
+		(
+			filePath = textureLoader.filePath,
+			Spasm.assertPath(filePath),
+			image = textureLoader.image,
+			Spasm.assertValid(image),
+			this.contentLoaded.textures[filePath] = image,
+			contentLoadersTextures = this.contentLoaders.textures,
+			u = contentLoadersTextures[filePath],
+			Spasm.assertEqual(u, textureLoader),
+			delete contentLoadersTextures[filePath],
+			this.checkContentLoadComplete()
+		) :
+		this.onLoadFailure()
 };
-Spasm.TGXAssetLoader.prototype.onLoadPlatedTexture = function(n) {
-	var t, i, r, u;
-	Spasm.assertInstance(n, Spasm.TextureLoader);
-	n.isCompleteAndOK() ? (t = n.filePath, Spasm.assertPath(t), i = n.image, Spasm.assertValid(i, Image), this.contentLoaded.platedTextures[t] = i, r = this.contentLoaders.platedTextures, u = r[t], Spasm.assertEqual(u, n), delete r[t], this.checkContentLoadComplete()) : this.onLoadFailure()
+Spasm.TGXAssetLoader.prototype.onLoadPlatedTexture = function(textureLoader) {
+	var filePath, image, contentLoadersPlatedTextures, u;
+	Spasm.assertInstance(textureLoader, Spasm.TextureLoader);
+	textureLoader.isCompleteAndOK() ?
+		(
+			filePath = textureLoader.filePath,
+			Spasm.assertPath(filePath),
+			image = textureLoader.image,
+			Spasm.assertValid(image, Image),
+			this.contentLoaded.platedTextures[filePath] = image,
+			contentLoadersPlatedTextures = this.contentLoaders.platedTextures,
+			u = contentLoadersPlatedTextures[filePath],
+			Spasm.assertEqual(u, textureLoader),
+			delete contentLoadersPlatedTextures[filePath],
+			this.checkContentLoadComplete()
+		) :
+		this.onLoadFailure()
 };

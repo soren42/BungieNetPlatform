@@ -1,22 +1,22 @@
 Spasm = Spasm || {};
-Spasm.TextureLoader = function(n, t) {
-	var i, r;
-	Spasm.assertPath(n);
-	Spasm.assertFunction(t);
-	this.filePath = n;
-	this.callback = t;
+Spasm.TextureLoader = function(filePath, callback) {
+	var image, scope;
+	Spasm.assertPath(filePath);
+	Spasm.assertFunction(callback);
+	this.filePath = filePath;
+	this.callback = callback;
 	this.loadComplete = !1;
 	this.loadSuccess = !1;
-	i = document.createElement("img");
-	this.image = i;
-	r = this;
-	i.onload = function() {
-		r.onImageLoad()
+	image = document.createElement("img");
+	this.image = image;
+	scope = this;
+	image.onload = function() {
+		scope.onImageLoad()
 	};
-	i.onerror = function() {
-		r.onImageError()
+	image.onerror = function() {
+		scope.onImageError()
 	};
-	i.src = n
+	image.src = filePath
 };
 Spasm.TextureLoader.prototype = {
 	constructor: Spasm.TextureLoader,
