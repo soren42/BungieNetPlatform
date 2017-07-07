@@ -16,4 +16,4 @@ loader.load(itemHash, function(geometry, materials) {
 });
 ```
 
-This implementation is based on Bungie's Spasm library (see [https://www.bungie.net/sharedbundle/spasm]). Since the production files are minified, an unminified copy of the source code has been included with this repo.
+This implementation is based on Bungie's Spasm library (see https://www.bungie.net/sharedbundle/spasm). Since the production files are minified, an unminified copy of the source code has been included with this repo.
