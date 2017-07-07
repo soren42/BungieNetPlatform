@@ -163,6 +163,7 @@ THREE.TGXLoader = function (manager) {
 };
 
 THREE.TGXLoader.APIKey = null;
+THREE.TGXLoader.APIBasePath = 'https://www.bungie.net/Platform/Destiny';
 THREE.TGXLoader.Basepath = 'https://www.bungie.net';
 THREE.TGXLoader.Platform = 'web';
 
@@ -184,7 +185,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			}
 		}
 
-		var url = THREE.TGXLoader.Basepath+'/Platform/Destiny/Manifest/22/'+options.itemHash+'/';
+		var url = THREE.TGXLoader.APIBasePath+'/Manifest/22/'+options.itemHash+'/';
 
 		console.log('GetDestinySingleDefinition', url);
 
