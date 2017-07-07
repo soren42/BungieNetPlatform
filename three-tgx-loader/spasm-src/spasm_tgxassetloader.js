@@ -185,10 +185,19 @@ Spasm.TGXAssetLoader.prototype.getGearRenderableModel = function(renderer, geome
 		for (h = 0; h < platedTextureKeysLength; h++)
 			platedTextureKey = platedTextureKeys[h],
 				platedTextureKey.indexOf(texturePlateDiffuseId) >= 0 ?
-					(platedTexture = platedTextures[platedTextureKey],diffuseTexture = new Spasm.Texture(gl, diffusePlateTextureIndex, platedTexture)) :
+					(
+						platedTexture = platedTextures[platedTextureKey],
+						diffuseTexture = new Spasm.Texture(gl, diffusePlateTextureIndex, platedTexture)
+					) :
 					platedTextureKey.indexOf(texturePlateNormalId) >= 0 ?
-						(platedTexture2 = platedTextures[platedTextureKey], normalTexture = new Spasm.Texture(gl, normalPlateTextureIndex, platedTexture2)) :
-						platedTextureKey.indexOf(gearstackId) >= 0 && (platedTexture3 = platedTextures[platedTextureKey], gearstackTexture = new Spasm.Texture(gl, gearstackPlateTextureIndex, platedTexture3))
+						(
+							platedTexture2 = platedTextures[platedTextureKey],
+							normalTexture = new Spasm.Texture(gl, normalPlateTextureIndex, platedTexture2)
+						) :
+						platedTextureKey.indexOf(gearstackId) >= 0 && (
+							platedTexture3 = platedTextures[platedTextureKey],
+							gearstackTexture = new Spasm.Texture(gl, gearstackPlateTextureIndex, platedTexture3)
+						)
 	} else {
 		var textures = contentLoaded.textures,
 			textureKeys = Object.keys(textures),

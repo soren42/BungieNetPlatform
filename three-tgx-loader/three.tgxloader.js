@@ -299,19 +299,23 @@ Object.assign(THREE.TGXLoader.prototype, {
 				// Load Textures
 				for (var textureIndex in textureIndexes) {
 					var texture = content.textures[textureIndex];
+					var textureReferenceId = texture.split('.')[0];
+					contentLoaded.textures[textureReferenceId] = texture;
 					//console.log('LoadTexture', textureIndex, texture);
-					contentLoaded.textures[texture.split('.')[0]] = loadTexture(texture, function(texture) {
-
-					}, onProgressCallback, onErrorCallback);
+					//contentLoaded.textures[texture.split('.')[0]] = loadTexture(texture, function(texture) {
+					//
+					//}, onProgressCallback, onErrorCallback);
 				}
 
 				// Load Plated Textures
 				for (var platedTextureIndex in platedTextureIndexes) {
 					var platedTexture = content.plate_regions[platedTextureIndex];
+					var platedTextureReferenceId = platedTexture.split('.')[0];
+					contentLoaded.platedTextures[platedTextureReferenceId] = platedTexture;
 					//console.log('LoadPlatedTexture', platedTextureIndex, platedTexture);
-					contentLoaded.platedTextures[platedTexture.split('.')[0]] = loadPlatedTexture(platedTexture, function(texture) {
-
-					}, onProgressCallback, onErrorCallback);
+					//contentLoaded.platedTextures[platedTexture.split('.')[0]] = loadPlatedTexture(platedTexture, function(texture) {
+					//
+					//}, onProgressCallback, onErrorCallback);
 				}
 			}
 		}
@@ -378,25 +382,29 @@ Object.assign(THREE.TGXLoader.prototype, {
 		function loadPlatedTexture(texturePath, onLoad, onProgress, onError) {
 			var url = THREE.TGXLoader.Basepath+'/common/destiny_content/geometry/platform/'+THREE.TGXLoader.Platform+'/plated_textures/'+texturePath;
 			var loader = new THREE.TextureLoader();
-			return loader.load(url, function(texture) {
+			var texture = loader.load(url, function(texture) {
 				//console.log('LoadPlatedTexture', url);
 				//console.log(texture);
-				onLoad(texture);
+				if (onLoad) onLoad(texture);
 			}, onProgress, onError);
+			texture.flipY = false;
+			return texture;
 		}
 
 		function loadTexture(texturePath, onLoad, onProgress, onError) {
 			var url = THREE.TGXLoader.Basepath+'/common/destiny_content/geometry/platform/'+THREE.TGXLoader.Platform+'/textures/'+texturePath;
 			var loader = new THREE.TextureLoader();
-			return loader.load(url, function(texture) {
+			var texture = loader.load(url, function(texture) {
 				//console.log('LoadTexture', url);
 				//console.log(texture);
-				onLoad(texture);
+				if (onLoad) onLoad(texture);
 			}, onProgress, onError);
+			texture.flipY = false;
+			return texture;
 		}
 
 		function parseContent() {
-			//console.log('ContentLoaded', contentLoaded);
+			console.log('ContentLoaded', contentLoaded);
 
 			// Figure out which geometry should be loaded ie class, gender
 			var geometryHashes = [];
@@ -435,7 +443,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					}
 				}
 			}
-			//console.log('GeometryHashes', geometryHashes);
+			console.log('GeometryHashes', geometryHashes);
 
 			var defaultMaterial = new THREE.MeshLambertMaterial({
 				emissive: 0x444444,
@@ -444,7 +452,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				side: THREE.DoubleSide,
 				skinning: false
 			});
-			var materials = [defaultMaterial];
+			var materials = [];
 
 			var geometry = new THREE.Geometry();
 			geometry.bones = [];
@@ -454,7 +462,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 			for (var g=0; g<geometryHashes.length; g++) {
 				var geometryHash = geometryHashes[g];
 				var tgxBin = contentLoaded.geometry[geometryHash];
-				//console.log('Geometry['+geometryHash+'], tgxBin);
+
+				//if (g != 0) continue;
+
+				console.log('Geometry['+g+']', geometryHash, tgxBin);
 
 				var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
 
@@ -465,37 +476,53 @@ Object.assign(THREE.TGXLoader.prototype, {
 				var metadata = tgxBin.metadata;
 				var texturePlates = metadata.texture_plates;
 
-				// To Do :: Implement texture loading
-				//if (texturePlates.length == 1) {
-				//	var texturePlate = texturePlates[0];
-				//	var texturePlateSet = texturePlate.plate_set;
-				//	diffuseTexture = contentLoaded.platedTextures[texturePlateSet.diffuse.reference_id];
-				//	normalTexture = contentLoaded.platedTextures[texturePlateSet.normal.reference_id];
-				//	gearstackTexture = contentLoaded.platedTextures[texturePlateSet.gearstack.reference_id];
-				//	console.log(texturePlateSet, diffuseTexture, normalTexture, gearstackTexture);
-				//} else {
-				//	var textures = contentLoaded.textures;
-				//	if (metadata.render_model.render_meshes.length > 0) {
-				//		var renderMesh = metadata.render_model.render_meshes[0];
-				//		var stagePartList = renderMesh.stage_part_list;
-				//		for (var i=0; i<stagePartList.length; i++) {
-				//			var stagePart = stagePartList[i];
-				//			var shader = stagePart.shader;
-				//			console.warn('LoadingStagePartTextures['+i+']', stagePart);
-				//		}
-				//	}
-				//}
-				//
-				//var material = new THREE.MeshPhongMaterial({
-				//	side: THREE.DoubleSide,
-				//	skinning: true,
-				//	map: diffuseTexture,
-				//	normalMap: normalTexture,
-				//	gearstackMap: gearstackTexture
-				//});
-				//materials.push(material);
-				//
-				var materialIndex = 0;//materials.length-1;
+				// Spasm.TGXAssetLoader.prototype.getGearRenderableModel
+				var diffuseTextureId, normalTextureId, gearstackTextureId;
+				if (texturePlates.length == 1) {
+					var texturePlate = texturePlates[0];
+					var texturePlateSet = texturePlate.plate_set;
+
+					diffuseTextureId = texturePlateSet.diffuse.reference_id;
+					normalTextureId = texturePlateSet.normal.reference_id;
+					gearstackTextureId = texturePlateSet.gearstack.reference_id;
+
+					diffuseTexture = loadPlatedTexture(contentLoaded.platedTextures[diffuseTextureId]);
+					normalTexture = loadPlatedTexture(contentLoaded.platedTextures[normalTextureId]);
+					gearstackTexture = loadPlatedTexture(contentLoaded.platedTextures[gearstackTextureId]);
+					console.log('PlateSet['+geometryHash+']', texturePlateSet.diffuse, texturePlateSet.normal, texturePlateSet.gearstack);
+					//console.log(texturePlateSet/*, diffuseTexture, normalTexture, gearstackTexture*/);
+				} else {
+					if (metadata.render_model.render_meshes.length > 0) {
+						var renderMesh = metadata.render_model.render_meshes[0];
+						var stagePartList = renderMesh.stage_part_list;
+						for (var i=0; i<stagePartList.length; i++) {
+							var stagePart = stagePartList[i];
+							var shader = stagePart.shader;
+							var staticTextures = shader.staticTextures;
+							if (staticTextures && staticTextures.length >= 5) {
+								diffuseTextureId = staticTextures[0];
+								normalTextureId = staticTextures[2];
+								gearstackTextureId = staticTextures[4];
+
+								diffuseTexture = loadTexture(contentLoaded.textures[diffuseTextureId]);
+								normalTexture = loadTexture(contentLoaded.textures[normalTextureId]);
+								gearstackTexture = loadTexture(contentLoaded.textures[gearstackTextureId]);
+								console.log('TextureSet['+geometryHash+']', diffuseTextureId, normalTextureId, gearstackTextureId);
+							}
+						}
+					}
+				}
+
+				var material = new THREE.MeshPhongMaterial({
+					side: THREE.DoubleSide,
+					skinning: false,
+					map: diffuseTexture,
+					normalMap: normalTexture,
+					//gearstackMap: gearstackTexture
+				});
+				materials.push(material);
+
+				var materialIndex = materials.length-1;
 
 				//console.log('RenderMeshes', renderMeshes);
 				for (var m=0; m<renderMeshes.length; m++) {
@@ -511,7 +538,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 					if (parts.length == 0) continue; // Skip meshes with no parts
 
-					//console.log('RenderMesh['+m+']', renderMesh);
+					console.log('RenderMesh['+m+']', renderMesh);
 
 					for (var p=0; p<parts.length; p++) {
 						var part = parts[p];

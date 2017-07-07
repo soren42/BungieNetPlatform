@@ -1,35 +1,35 @@
 Spasm = Spasm || {};
-Spasm.Texture = function(n, t, i) {
-	Spasm.assertWebGLContext(n);
-	Spasm.assertInteger(t);
-	Spasm.assertImage(i);
-	Spasm.assert(t >= 0, "texture index is less than 0: " + t);
-	Spasm.assert(t < 32, "texture index is greater or equal to 32: " + t);
-	this.gl = n;
-	this.index = t;
-	this.image = i;
-	this.glTextureIndex = n["TEXTURE" + t];
+Spasm.Texture = function(gl, index, image) {
+	Spasm.assertWebGLContext(gl);
+	Spasm.assertInteger(index);
+	Spasm.assertImage(image);
+	Spasm.assert(index >= 0, "texture index is less than 0: " + index);
+	Spasm.assert(index < 32, "texture index is greater or equal to 32: " + index);
+	this.gl = gl;
+	this.index = index;
+	this.image = image;
+	this.glTextureIndex = gl["TEXTURE" + index];
 	Spasm.assertInteger(this.glTextureIndex);
-	this.textureHandle = n.createTexture();
+	this.textureHandle = gl.createTexture();
 	this.setTextureImage()
 };
 Spasm.Texture.prototype = {};
 Spasm.Texture.prototype.bindTexture = function() {
-	var n = this.gl;
-	n.activeTexture(this.glTextureIndex);
-	n.bindTexture(n.TEXTURE_2D, this.textureHandle)
+	var gl = this.gl;
+	gl.activeTexture(this.glTextureIndex);
+	gl.bindTexture(gl.TEXTURE_2D, this.textureHandle)
 };
 Spasm.Texture.prototype.setTextureImage = function() {
 	this.bindTexture();
-	var n = this.gl,
-		t = this.image;
-	n.texImage2D(n.TEXTURE_2D, 0, n.RGBA, n.RGBA, n.UNSIGNED_BYTE, t);
-	t.width === t.height ? (n.texParameteri(n.TEXTURE_2D, n.TEXTURE_MAG_FILTER, n.LINEAR), n.texParameteri(n.TEXTURE_2D, n.TEXTURE_MIN_FILTER, n.LINEAR_MIPMAP_NEAREST), n.generateMipmap(n.TEXTURE_2D)) : (n.texParameteri(n.TEXTURE_2D, n.TEXTURE_MAG_FILTER, n.LINEAR), n.texParameteri(n.TEXTURE_2D, n.TEXTURE_MIN_FILTER, n.LINEAR))
+	var gl = this.gl,
+		image = this.image;
+	gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+	image.width === image.height ? (gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR), gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST), gl.generateMipmap(gl.TEXTURE_2D)) : (gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR), gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR))
 };
 Spasm.Texture.prototype.setTextureUniform = function(n) {
 	Spasm.assertShaderUniform(n);
 	this.bindTexture();
-	var t = this.gl,
-		i = this.index;
-	t.uniform1i(n, i)
+	var gl = this.gl,
+		index = this.index;
+	gl.uniform1i(n, index)
 };
