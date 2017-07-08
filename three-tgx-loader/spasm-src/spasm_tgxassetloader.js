@@ -35,59 +35,68 @@ Spasm.TGXAssetLoader.prototype.onContentLoadComplete = function() {
 Spasm.TGXAssetLoader.prototype.onLoadFailure = function() {
 	this.callback && (this.callback(this, !1), this.callback = null)
 };
-Spasm.TGXAssetLoader.prototype.getGearDyes = function(n) {
-	var gl, u, f, o, r, s, diffuseDyeTextureIndex, ut;
-	Spasm.assertInstance(n, Spasm.Renderer);
-	gl = n.gl;
+Spasm.TGXAssetLoader.prototype.getGearDyes = function(renderer) {
+	var gl, u, f, o, textureKey, texture, diffuseDyeTextureIndex, gearDye;
+	Spasm.assertInstance(renderer, Spasm.Renderer);
+	gl = renderer.gl;
 	Spasm.assertWebGLContext(gl);
 	var gear = this.contentLoaded.gear,
-		a = Object.keys(gear),
-		ft = a.length;
-	Spasm.assert(ft >= 1);
+		gearKeys = Object.keys(gear),
+		gearKeysLength = gearKeys.length;
+	Spasm.assert(gearKeysLength >= 1);
 	var textures = this.contentLoaded.textures,
-		y = Object.keys(textures),
-		et = y.length,
-		ot = a[0],
-		h = gear[ot],
-		dyes = {
-			customDyes: h.custom_dyes || [],
-			defaultDyes: h.default_dyes || [],
-			lockedDyes: h.locked_dyes || []
+		textureKeys = Object.keys(textures),
+		textureKeysLength = textureKeys.length,
+		firstGearKey = gearKeys[0],
+		firstGear = gear[firstGearKey],
+		dyeGroups = {
+			customDyes: firstGear.custom_dyes || [],
+			defaultDyes: firstGear.default_dyes || [],
+			lockedDyes: firstGear.locked_dyes || []
 		},
-		w = {},
-		dyeKeys = Object.keys(dyes),
-		st = dyeKeys.length;
-	for (u = 0; u < st; u++) {
-		var k = dyeKeys[u],
-			dye = dyes[k],
-			dyeLength = dye.length,
-			g = [];
-		for (f = 0; f < dyeLength; f++) {
-			var nt = dye[f],
-				dyeTextures = nt.textures,
+		parsedDyes = {},
+		dyeTypes = Object.keys(dyeGroups),
+		dyeKeysLength = dyeTypes.length;
+	for (u = 0; u < dyeKeysLength; u++) {
+		var dyeType = dyeTypes[u],
+			dyes = dyeGroups[dyeType],
+			dyesLength = dyes.length,
+			gearDyes = [];
+		for (f = 0; f < dyesLength; f++) {
+			var dye = dyes[f],
+				dyeTextures = dye.textures,
 				dyeDiffuse = dyeTextures.diffuse,
 				dyeNormal = dyeTextures.normal,
 				dyeDecal = dyeTextures.decal,
 				dyeDiffuseId = dyeDiffuse.reference_id,
 				dyeNormalId = dyeNormal.reference_id,
 				dyeDecalId = dyeDecal.reference_id,
-				e = {};
-			for (o = 0; o < et; o++)
-				r = y[o],
-				s = textures[r],
-				dyeDiffuseId && r.indexOf(dyeDiffuseId) >= 0 ?
-					(diffuseDyeTextureIndex = n.getDiffuseDyeTextureIndex(), e.diffuse = new Spasm.Texture(gl, diffuseDyeTextureIndex, s)) :
-					dyeNormalId && r.indexOf(dyeNormalId) >= 0 ?
-						(diffuseDyeTextureIndex = n.getNormalDyeTextureIndex(), e.normal = new Spasm.Texture(gl, diffuseDyeTextureIndex, s)) :
-						dyeDecalId && r.indexOf(dyeDecalId) >= 0 ?
-							(diffuseDyeTextureIndex = n.getDecalDyeTextureIndex(), e.decal = new Spasm.Texture(gl, diffuseDyeTextureIndex, s)) :
+				gearDyeTextures = {};
+			for (o = 0; o < textureKeysLength; o++)
+				textureKey = textureKeys[o],
+				texture = textures[textureKey],
+				dyeDiffuseId && textureKey.indexOf(dyeDiffuseId) >= 0 ?
+					(
+						diffuseDyeTextureIndex = renderer.getDiffuseDyeTextureIndex(),
+						gearDyeTextures.diffuse = new Spasm.Texture(gl, diffuseDyeTextureIndex, texture)
+					) :
+					dyeNormalId && textureKey.indexOf(dyeNormalId) >= 0 ?
+						(
+							diffuseDyeTextureIndex = renderer.getNormalDyeTextureIndex(),
+							gearDyeTextures.normal = new Spasm.Texture(gl, diffuseDyeTextureIndex, texture)
+						) :
+						dyeDecalId && textureKey.indexOf(dyeDecalId) >= 0 ?
+							(
+								diffuseDyeTextureIndex = renderer.getDecalDyeTextureIndex(),
+								gearDyeTextures.decal = new Spasm.Texture(gl, diffuseDyeTextureIndex, texture)
+							) :
 							diffuseDyeTextureIndex = null;
-			ut = new Spasm.GearDye(nt, e);
-			g.push(ut)
+			gearDye = new Spasm.GearDye(dye, gearDyeTextures);
+			gearDyes.push(gearDye)
 		}
-		w[k] = g
+		parsedDyes[dyeType] = gearDyes
 	}
-	return w
+	return parsedDyes
 };
 Spasm.TGXAssetLoader.prototype.getGearRenderable = function(n) {
 	var gl;

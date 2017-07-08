@@ -38,31 +38,50 @@ Spasm.GearRenderable.prototype.setGearShaders = function(n) {
 		u = i[t],
 		u.setGearShaders(n)
 };
-Spasm.GearRenderable.prototype.getResolvedDyeList = function(n, t) {
-	var r, o, s, v, u, h, y, f, c, e, b, k;
-	Spasm.assertValid(n);
-	var l = n.defaultDyes,
-		a = n.lockedDyes,
-		i = {},
-		d = l.length;
-	for (r = 0; r < d; r++) o = l[r], i[o.slotTypeIndex] = o;
-	if (t)
-		for (Spasm.assertValid(t), s = t.customDyes, v = s.length, u = 0; u < v; u++) h = s[u], i[h.slotTypeIndex] = h;
-	for (y = a.length, f = 0; f < y; f++) c = a[f], i[c.slotTypeIndex] = c;
-	var p = Object.keys(i),
-		g = p.length,
-		w = [];
-	for (e = 0; e < g; e++) b = p[e], k = i[b], w.push(k);
-	return w
+Spasm.GearRenderable.prototype.getResolvedDyeList = function(gearDyes, useCustomDyes) {
+	var r, defaultDye, customDyes, customDyesLength, u, customDye, lockedDyesLength, f, lockedDye, e, dyeSlotTypeKey, resolvedDye;
+	Spasm.assertValid(gearDyes);
+	var defaultDyes = gearDyes.defaultDyes,
+		lockedDyes = gearDyes.lockedDyes,
+		dyeSlotTypes = {},
+		defaultDyesLength = defaultDyes.length;
+
+	for (r = 0; r < defaultDyesLength; r++)
+		defaultDye = defaultDyes[r],
+		dyeSlotTypes[defaultDye.slotTypeIndex] = defaultDye;
+
+	if (useCustomDyes)
+		for (Spasm.assertValid(useCustomDyes),
+				 customDyes = useCustomDyes.customDyes,
+				 customDyesLength = customDyes.length,
+				 u = 0; u < customDyesLength; u++)
+			customDye = customDyes[u],
+			dyeSlotTypes[customDye.slotTypeIndex] = customDye;
+
+	for (lockedDyesLength = lockedDyes.length,
+			 f = 0; f < lockedDyesLength; f++)
+		lockedDye = lockedDyes[f],
+		dyeSlotTypes[lockedDye.slotTypeIndex] = lockedDye;
+
+	var dyeSlotTypeKeys = Object.keys(dyeSlotTypes),
+		dyeSlotTypeKeysLength = dyeSlotTypeKeys.length,
+		resolvedDyeList = [];
+	for (e = 0; e < dyeSlotTypeKeysLength; e++)
+		dyeSlotTypeKey = dyeSlotTypeKeys[e],
+		resolvedDye = dyeSlotTypes[dyeSlotTypeKey],
+		resolvedDyeList.push(resolvedDye);
+	return resolvedDyeList
 };
-Spasm.GearRenderable.prototype.setGearDyes = function(n) {
-	var t, r;
-	Spasm.assertValid(n);
-	this.gearDyes = n;
-	var u = this.getResolvedDyeList(n, null),
-		i = this.renderableModels,
-		f = i.length;
-	for (t = 0; t < f; t++) r = i[t], r.setGearDyes(u)
+Spasm.GearRenderable.prototype.setGearDyes = function(gearDyes) {
+	var t, renderableModel;
+	Spasm.assertValid(gearDyes);
+	this.gearDyes = gearDyes;
+	var resolvedDyeList = this.getResolvedDyeList(gearDyes, null),
+		renderableModels = this.renderableModels,
+		renderableModelsLength = renderableModels.length;
+	for (t = 0; t < renderableModelsLength; t++)
+		renderableModel = renderableModels[t],
+		renderableModel.setGearDyes(resolvedDyeList)
 };
 Spasm.GearRenderable.prototype.setShaderOverrideDyes = function(n) {
 	var t, r;

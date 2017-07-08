@@ -1,21 +1,21 @@
 Spasm = Spasm || {};
-Spasm.GearDye = function(n, t) {
-	Spasm.assertValid(n);
-	Spasm.assertCollectionInstances(t, Spasm.Texture);
-	this.dye = n;
-	this.textures = t;
-	this.identifier = n.identifier;
-	this.blendMode = n.blend_mode;
-	this.slotTypeIndex = n.slot_type_index;
+Spasm.GearDye = function(dye, textures) {
+	Spasm.assertValid(dye);
+	Spasm.assertCollectionInstances(textures, Spasm.Texture);
+	this.dye = dye;
+	this.textures = textures;
+	this.identifier = dye.identifier;
+	this.blendMode = dye.blend_mode;
+	this.slotTypeIndex = dye.slot_type_index;
 	this.materialProperties = {
-		primaryColor: n.material_properties.primary_color,
-		secondaryColor: n.material_properties.secondary_color,
-		detailTransform: n.material_properties.detail_transform,
-		detailNormalContributionStrength: n.material_properties.detail_normal_contribution_strength,
-		decalAlphaMapTransform: n.material_properties.decal_alpha_map_transform,
-		decalBlendOption: n.material_properties.decal_blend_option,
-		specularProperties: n.material_properties.specular_properties,
-		subsurfaceScatteringStrength: n.material_properties.subsurface_scattering_strength
+		primaryColor: dye.material_properties.primary_color,
+		secondaryColor: dye.material_properties.secondary_color,
+		detailTransform: dye.material_properties.detail_transform,
+		detailNormalContributionStrength: dye.material_properties.detail_normal_contribution_strength,
+		decalAlphaMapTransform: dye.material_properties.decal_alpha_map_transform,
+		decalBlendOption: dye.material_properties.decal_blend_option,
+		specularProperties: dye.material_properties.specular_properties,
+		subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
 	};
 	this.uniformDatas = this.getUniformDatas()
 };

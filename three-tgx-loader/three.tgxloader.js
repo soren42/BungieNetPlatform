@@ -163,7 +163,7 @@ THREE.TGXLoader = function (manager) {
 };
 
 THREE.TGXLoader.APIKey = null;
-THREE.TGXLoader.APIBasePath = 'https://www.bungie.net/Platform/Destiny';
+THREE.TGXLoader.APIBasepath = 'https://www.bungie.net/d1/Platform/Destiny';
 THREE.TGXLoader.Basepath = 'https://www.bungie.net';
 THREE.TGXLoader.Platform = 'web';
 
@@ -185,7 +185,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			}
 		}
 
-		var url = THREE.TGXLoader.APIBasePath+'/Manifest/22/'+options.itemHash+'/';
+		var url = THREE.TGXLoader.APIBasepath+'/Manifest/22/'+options.itemHash+'/';
 
 		console.log('GetDestinySingleDefinition', url);
 
@@ -218,10 +218,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 			//console.log('GearAsset', gearAsset);
 			for (var i=0; i<gearAsset.content.length; i++) {
 				var content = gearAsset.content[i];
-				//console.log('Content['+i+']', content);
+				console.log('Content['+i+']', content);
 
 				// Filter Regions
 				var filteredRegionIndexSets = [];
+
+				if (content.dye_index_set) {
+					console.log('DyeIndexSet', content.dye_index_set);
+					filteredRegionIndexSets.push(content.dye_index_set);
+				}
+
 				if (content.region_index_sets) { // Use gender neutral sets
 					for (var setIndex in content.region_index_sets) {
 						var regionIndexSet = content.region_index_sets[setIndex];
@@ -237,6 +243,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 						filteredRegionIndexSets.push(regionIndexSet[0]);
 					}
 				} else { // Use gender-specific set (ie armor)
+					console.log('GenderedIndexSet', content.female_index_set, content.male_index_set);
 					filteredRegionIndexSets.push(isFemale ? content.female_index_set : content.male_index_set);
 				}
 
@@ -261,8 +268,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 						platedTextureIndexes[index] = index;
 					}
 				}
-
-				//console.log('Assets | Geometry', geometryIndexes, 'Textures', textureIndexes, 'PlatedTextures', platedTextureIndexes);
 
 				contentLoaded = {
 					gear: {},
@@ -409,6 +414,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 			// Figure out which geometry should be loaded ie class, gender
 			var geometryHashes = [];
+			var gearDyes = null;
 			for (var gearId in contentLoaded.gear) {
 				var gear = contentLoaded.gear[gearId];
 				var artContent = gear.art_content;
@@ -443,8 +449,11 @@ Object.assign(THREE.TGXLoader.prototype, {
 						}
 					}
 				}
+
+				gearDyes = parseGearDyes(gear);
 			}
 			console.log('GeometryHashes', geometryHashes);
+			console.log('GearDyes', gearDyes);
 
 			var defaultMaterial = new THREE.MeshLambertMaterial({
 				emissive: 0x444444,
@@ -514,17 +523,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 					}
 				}
 
-				var material = new THREE.MeshPhongMaterial({
-					side: THREE.DoubleSide,
-					skinning: false,
-					map: diffuseTexture,
-					normalMap: normalTexture,
-					//gearstackMap: gearstackTexture
-				});
-				materials.push(material);
-
-				var materialIndex = materials.length-1;
-
 				//console.log('RenderMeshes', renderMeshes);
 				for (var m=0; m<renderMeshes.length; m++) {
 					var renderMesh = renderMeshes[m];
@@ -541,11 +539,52 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 					console.log('RenderMesh['+m+']', renderMesh);
 
+					// Spasm.Renderable.prototype.render
 					for (var p=0; p<parts.length; p++) {
 						var part = parts[p];
 						if (part.lodCategory.name.indexOf('0') == -1) continue; // Skip any lods not matchin "_lod_category_01" ?
-						//console.log('RenderMeshPart['+p+']', part);
 
+						console.log('RenderMeshPart['+p+']', part);
+
+						// Load Material
+						var dye = gearDyes[part.gearDyeSlot];
+						var dyeDiffuse = dye.diffuse ? contentLoaded.textures[dye.diffuse] : null;
+						var dyeNormal = dye.normal ? contentLoaded.textures[dye.normal] : null;
+						var dyeDecal = dye.decal ? contentLoaded.textures[dye.decal] : null;
+
+						console.log('RenderMeshPartDye['+part.gearDyeSlot+']', dye);
+						//var material = new THREE.MeshPhongMaterial({
+						var materialParams = {
+							side: THREE.DoubleSide,
+							skinning: false,
+							map: diffuseTexture,
+							normalMap: normalTexture,
+							gearstackMap: gearstackTexture,
+
+							// Dye Properties
+							isCloth: dye.isCloth,
+							blendMode: dye.blendMode,
+							usePrimaryColor: part.usePrimaryColor,
+							primaryColor: dye.primaryColor,
+							secondaryColor: dye.secondaryColor,
+							detailTransform: dye.detailTransform,
+							detailNormalContributionStrength: dye.detailNormalContributionStrength,
+							decalAlphaMapTransform: dye.decalAlphaMapTransform,
+							decalBlendOption: dye.decalBlendOption,
+							specularProperties: dye.specularProperties,
+							subsurfaceScatteringStrength: dye.subsurfaceScatteringStrength,
+
+							dyeDiffuse: dyeDiffuse,
+							dyeNormal: dyeNormal,
+							dyeDecal: dyeDecal
+						};
+
+						var material = new THREE.TGXMaterial(materialParams);
+						materials.push(material);
+
+						var materialIndex = materials.length-1;
+
+						// Load Vertex Stream
 						var increment = 3;
 						var start = part.indexStart;
 						var count = part.indexCount;
@@ -597,6 +636,78 @@ Object.assign(THREE.TGXLoader.prototype, {
 			}
 
 			onLoadCallback(geometry, materials);
+		}
+
+		// Spasm.TGXAssetLoader.prototype.getGearDyes
+		function parseGearDyes(gear) {
+			var dyeGroups = {
+				customDyes: gear.custom_dyes || [],
+				defaultDyes: gear.default_dyes || [],
+				lockedDyes: gear.locked_dyes || []
+			};
+
+			var gearDyeGroups = {};
+
+			for (var dyeType in dyeGroups) {
+				var dyes = dyeGroups[dyeType];
+				var gearDyes = [];
+				for (var i=0; i<dyes.length; i++) {
+					var dye = dyes[i];
+					var dyeTextures = dye.textures;
+					var materialProperties = dye.material_properties;
+					console.log('GearDye['+dyeType+']['+i+']', dye);
+
+					var primaryColor = dye.material_properties.primary_color;
+					var secondaryColor = dye.material_properties.secondary_color;
+
+					// Spasm.GearDye
+					gearDyes.push({
+						//identifier: dye.identifier, // Doesn't exist?
+						hash: dye.hash,
+						investmentHash: dye.investment_hash,
+						slotTypeIndex: dye.slot_type_index,
+						variant: dye.variant,
+
+						diffuse: dyeTextures.diffuse.reference_id ? dyeTextures.diffuse.reference_id : null,
+						normal: dyeTextures.normal.reference_id ? dyeTextures.normal.reference_id : null,
+						decal: dyeTextures.decal.reference_id ? dyeTextures.decal.reference_id : null,
+						// Not used? Files don't appear to exist either
+						//primaryDiffuse: dyeTextures.primary_diffuse.reference_id ? dyeTextures.primary_diffuse.reference_id : null,
+						//secondaryDiffuse: dyeTextures.secondary_diffuse.reference_id ? dyeTextures.secondary_diffuse.reference_id : null,
+						blendMode: dye.blend_mode,
+						isCloth: dye.cloth,
+
+						// Material Properties
+						primaryColor: new THREE.Color(primaryColor[0], primaryColor[1], primaryColor[2]),
+						secondaryColor: new THREE.Color(secondaryColor[0], secondaryColor[1], secondaryColor[2]),
+						detailTransform: dye.material_properties.detail_transform,
+						detailNormalContributionStrength: dye.material_properties.detail_normal_contribution_strength,
+						decalAlphaMapTransform: dye.material_properties.decal_alpha_map_transform,
+						decalBlendOption: dye.material_properties.decal_blend_option,
+						specularProperties: dye.material_properties.specular_properties,
+						subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
+					});
+				}
+				gearDyeGroups[dyeType] = gearDyes;
+			}
+
+			console.log('GearDyes', gearDyeGroups);
+
+			// Spasm.GearRenderable.prototype.getResolvedDyeList
+			var resolvedDyes = [];
+			var dyeTypeOrder = ['defaultDyes', 'customDyes', 'lockedDyes'];
+			for (var i=0; i<dyeTypeOrder.length; i++) {
+				var dyeType = dyeTypeOrder[i];
+				var dyes = gearDyeGroups[dyeType];
+				for (var j=0; j<dyes.length; j++) {
+					var dye = dyes[j];
+					resolvedDyes[dye.slotTypeIndex] = dye;
+				}
+			}
+
+			console.log('ResolvedGearDyes', resolvedDyes);
+
+			return resolvedDyes;
 		}
 
 		// Spasm.TGXAssetLoader.prototype.getGearRenderableModel
@@ -927,3 +1038,262 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 
 	}
 });
+
+// Custom ShaderMaterial that implements Destiny gear dyes
+(function() {
+	function parseColor(color) {
+		if (!color) color = 0;
+		if (typeof color == 'number') color = new THREE.Color().setHex(color);
+		return color;
+	}
+	function colorToFloat(color) {
+		color = parseColor(color);
+		return new THREE.Vector3(color.r, color.g, color.b);
+	}
+
+	function TGXMaterial(params) {
+		if (!params) params = {};
+
+		var shaderLib = THREE.ShaderLib.phong;
+		var uniforms = THREE.UniformsUtils.clone(shaderLib.uniforms);
+		var vertexShader = shaderLib.vertexShader;
+		var fragmentShader = shaderLib.fragmentShader;
+
+		THREE.ShaderMaterial.call(this, {
+			uniforms: uniforms,
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader,
+			lights: true,
+			fog: true
+		});
+
+		this.map = null;
+		this.normalMap = null;
+		this.gearstackMap = null;
+
+		this.dyeDiffuse = null;
+		this.dyeNormal = null;
+		this.dyeDecal = null;
+		this.isCloth = false;
+		this.blendMode = 0;
+		this.usePrimaryColor = true;
+		this.primaryColor = new THREE.Color(0x000000);
+		this.secondaryColor = new THREE.Color(0x000000);
+		this.detailTransform = new THREE.Vector4(0, 0, 0, 0);
+		this.detailNormalContributionStrength = new THREE.Vector4(0, 0, 0, 0);
+		this.decalAlphaMapTransform = new THREE.Vector4(0, 0, 0, 0);
+		this.decalBlendOption = 0;
+		this.specularProperties = new THREE.Vector4(0, 0, 0, 0);
+		this.subsurfaceScatteringStrength = new THREE.Vector4(0, 0, 0, 0);
+
+		this.update();
+
+		this.setValues(params);
+		this.extensions.derivatives = true;
+	}
+	TGXMaterial.prototype = Object.create(THREE.ShaderMaterial.prototype);
+	TGXMaterial.prototype.constructor = TGXMaterial;
+	TGXMaterial.prototype.copy = function(source) {
+		THREE.ShaderMaterial.prototype.copy.call( this, source );
+		if (source.map) this.map = source.map;
+		if (source.normalMap) this.normalMap = source.normalMap;
+		if (source.gearstackMap) this.gearstackMap = source.gearstackMap;
+
+		if (source.dyeDiffuse) this.dyeDiffuse = source.dyeDiffuse;
+		if (source.dyeNormal) this.dyeNormal = source.dyeNormal;
+		if (source.dyeDecal) this.dyeDecal = source.dyeDecal;
+
+		if (source.isCloth) this.isCloth = source.isCloth;
+		if (source.blendMode) this.blendMode = source.blendMode;
+		if (source.usePrimaryColor) this.usePrimaryColor = source.usePrimaryColor;
+		if (source.primaryColor) this.primaryColor = source.primaryColor;
+		if (source.secondaryColor) this.secondaryColor = source.secondaryColor;
+		if (source.detailTransform) this.detailTransform = source.detailTransform;
+		if (source.detailNormalContributionStrength) this.detailNormalContributionStrength = source.detailNormalContributionStrength;
+		if (source.decalAlphaMapTransform) this.decalAlphaMapTransform = source.decalAlphaMapTransform;
+		if (source.decalBlendOption) this.decalBlendOption = source.decalBlendOption;
+		if (source.specularProperties) this.specularProperties = source.specularProperties;
+		if (source.subsurfaceScatteringStrength) this.subsurfaceScatteringStrength = source.subsurfaceScatteringStrength;
+
+		this.update();
+		return this;
+	};
+	TGXMaterial.prototype.update = function() {
+		var uniforms = this.uniforms;
+		var vertexShader = this.vertexShader;
+		var fragmentShader = this.fragmentShader;
+		var defines = {};
+		if (this.map) {
+			defines['USE_MAP'] = '';
+			uniforms.map = {value: this.map};
+		}
+		if (this.normalMap) {
+			defines['USE_NORMALMAP'] = '';
+			uniforms.normalMap = {value: this.normalMap};
+		}
+		if (this.gearstackMap) {
+			defines['USE_GEARSTACKMAP'] = '';
+			uniforms.gearstackMap = {value: this.gearstackMap};
+		}
+
+		uniforms.blendMode = {value: this.blendMode};
+		if (this.isCloth) {
+			defines['USE_CLOTH_DYE'] = '';
+		}
+		uniforms.usePrimaryColor = {value: this.usePrimaryColor};
+		uniforms.primaryColor = {value: this.primaryColor};
+		uniforms.secondaryColor = {value: this.secondaryColor};
+		uniforms.detailTransform = {value: this.detailTransform};
+		uniforms.detailNormalContributionStrength = {value: this.detailNormalContributionStrength};
+		uniforms.decalAlphaMapTransform = {value: this.decalAlphaMapTransform};
+		uniforms.decalBlendOption = {value: this.decalBlendOption};
+		uniforms.specularProperties = {value: this.specularProperties};
+		uniforms.subsurfaceScatteringStrength = {value: this.subsurfaceScatteringStrength};
+
+		defines['USE_DYE'] = '';
+
+		if (this.dyeDiffuse) {
+			defines['USE_DYEDIFFUSE'] = '';
+			uniforms.dyeDiffuse = {value: this.dyeDiffuse};
+		}
+		if (this.dyeNormal) {
+			defines['USE_DYENORMAL'] = '';
+			uniforms.dyeNormal = {value: this.dyeNormal};
+		}
+		if (this.dyeDecal) {
+			defines['USE_DYEDECAL'] = '';
+			uniforms.dyeDecal = {value: this.dyeDecal};
+		}
+
+		if (fragmentShader.indexOf('USE_DYE') == -1) {
+			var dyeParsFragment = [
+				"#ifdef USE_DYE",
+				"uniform float blendMode;",
+				"uniform bool usePrimaryColor;",
+				"uniform vec3 primaryColor;",
+				"uniform vec3 secondaryColor;",
+				"#endif"
+			];
+			fragmentShader = this.insertAfter('#include <map_pars_fragment>', fragmentShader, dyeParsFragment);
+		}
+
+		if (fragmentShader.indexOf('USE_GEARSTACKMAP') == -1) {
+			var gearstackParsFragment = [
+				"#ifdef USE_GEARSTACKMAP",
+				"uniform sampler2D gearstackMap;",
+				//"#define saturate(value) clamp(value, 0.0, 1.0)",
+				"const float gamma_correction_power = 2.2;",
+				"const float gamma_correction_power_inverse = 1.0/2.2;",
+				"vec4 blend_overlay(vec4 back, vec4 front)",
+				"{",
+					"return front * saturate(back * 4.0) + saturate(back - 0.25);",
+				"}",
+				"#endif"
+			];
+			fragmentShader = this.insertAfter('#include <map_pars_fragment>', fragmentShader, gearstackParsFragment);
+
+			var gearstackFragment = [
+				"vec4 diffuseColorCorrected = pow(texture2D(map, vUv), vec4(gamma_correction_power));",
+				"vec4 gearstackColor = texture2D(gearstackMap, vUv);",
+				"vec4 mutedColor = vec4(0.3, 0.3, 0.3, 1.0);",
+				"vec4 dyeColor = usePrimaryColor ? vec4(primaryColor, 1.0) : vec4(secondaryColor, 1.0);",
+				"vec4 blendColorUncorrected = mix(diffuseColorCorrected, blend_overlay(diffuseColorCorrected, dyeColor), gearstackColor.r);",
+				"vec3 blendColor = pow(blendColorUncorrected.xyz, vec3(gamma_correction_power_inverse));",
+				"diffuseColor = vec4(blendColor, 1.0);"
+			];
+			fragmentShader = this.insertAfter('#include <map_fragment>', fragmentShader, gearstackFragment);
+
+			// Spasm.GearShader
+			// Since most of the rendering is handled by Three.js, only some of this shader code is needed
+			var gearstackFragment2 = [
+				//"vec4 gearstackColor = texture2D(gearstackMap, vUv);",
+				//"gearstackColor = mapTexelToLinear(gearstackColor);",
+				//"diffuseColor = gearstackColor;",
+				"vec4 u_muted_color_diffuse = vec4(0.3, 0.3, 0.3, 1.0);", // Spasm.ItemPreview
+				"vec3 u_camera_position = cameraPosition;",
+				"vec3 v_position = vViewPosition;",
+				"vec4 u_change_color = vec4(1.0, 0.0, 0.0, 1.0);",
+
+				"vec4 color_diffuse = pow(texture2D(map, vUv), vec4(gamma_correction_power));",
+				"vec2 normal_sample_raw = texture2D(normalMap, vUv).xy;",
+				"vec2 normal_sample = normal_sample_raw;",
+				//"vec3 tangent_world_space = normalize(v_tangent);",
+				"vec3 tangent_world_space = vec3(0.0, 0.0, 0.0);",
+				//"vec3 binormal_world_space = normalize(v_binormal);",
+				"vec3 binormal_world_space = vec3(0.0, 0.0, 0.0);",
+				//"vec3 normal_world_space = normalize(v_normal);",
+				"vec3 normal_world_space = vec3(0.0, 0.0, 0.0);",
+				"normal_sample = normal_sample * 2.0 - 1.0;",
+
+				//"vec4 color_dye_diffuse_texture = texture2D(u_texture_dye_diffuse, vUv2);",
+				//"float dye_alpha = color_dye_diffuse_texture.w;",
+				//"float dye_color_normalize = (1.0 - dye_alpha) * 0.5;",
+				//"vec4 color_dye_diffuse = pow(vec4(color_dye_diffuse_texture.x * dye_alpha + dye_color_normalize, color_dye_diffuse_texture.y * dye_alpha + dye_color_normalize, color_dye_diffuse_texture.z * dye_alpha + dye_color_normalize, 1.0), vec4(gamma_correction_power));",
+				//"color_diffuse = blend_overlay(color_dye_diffuse, color_diffuse);",
+				//"vec4 color_dye_normal = texture2D(u_texture_dye_normal, vUv2);",
+				//"color_dye_normal = color_dye_normal * 2.0 - 1.0;",
+				//"normal_sample = normal_sample + color_dye_normal.xy;",
+
+				"vec4 color_gearstack = texture2D(gearstackMap, vUv);",
+				//t && (
+					"color_diffuse = u_muted_color_diffuse; // vec4(0.447, 0.498, 0.465, 1.0);",
+					"color_gearstack.r = 0.0; // = vec4(0.3, 0.3, 0.3, 1.0);",
+				//),
+				"float z = sqrt(saturate(1.0 - dot(normal_sample, normal_sample)));",
+				"vec3 normal_tangent_space = vec3(normal_sample.x, normal_sample.y, z);",
+				"vec3 bumpy_normal = (tangent_world_space * normal_tangent_space.x) + (binormal_world_space * normal_tangent_space.y) + (normal_world_space * normal_tangent_space.z);",
+				"vec3 camera_direction = normalize(u_camera_position - v_position);",
+				"float nDotL = saturate(dot(camera_direction, bumpy_normal) * (-1.0 + 2.0 * float(gl_FrontFacing)));",
+				"vec3 reflection = (bumpy_normal * (nDotL * 2.00)) - camera_direction;",
+				"float rDotV = max(0.0, dot(reflection, camera_direction));",
+				"vec3 specular = saturate(vec3(0.2,0.2,0.2) * pow(rDotV, color_gearstack.g * 255.0)) * color_gearstack.g;",
+				"vec4 blend_color_uncorrected = mix(color_diffuse,blend_overlay(color_diffuse, u_change_color),color_gearstack.r);",
+				"vec3 blend_color = pow(blend_color_uncorrected.xyz, vec3(gamma_correction_power_inverse));",
+				"vec3 ambient_color = 0.60 * blend_color;",
+				"vec3 diffuse_color = 0.40 * (nDotL * blend_color);",
+				"gl_FragColor = vec4(ambient_color + diffuse_color + specular, 1.0);",
+				//"texelColor = pow(texture2D(map, vUv), vec4(gamma_correction_power));",
+				//
+				//"gearstackColor.r = 0.0;",
+				//"gearstackColor = mapTexelToLinear(gearstackColor);",
+				//"float nDotL = 1.0;",
+				//"vec4 u_change_color = vec4(1.0, 1.0, 0.0, 0.0);",
+				////"float rDotV = max(0.0, dot(reflection, camera_direction));",
+				//"float rDotV = 0.0;",
+				//"vec3 specular = saturate(vec3(0.2,0.2,0.2) * pow(rDotV, gearstackColor.g * 255.0)) * gearstackColor.g;",
+				//"vec4 blend_color_uncorrected = mix(texelColor, blend_overlay(texelColor, u_change_color), gearstackColor.r);",
+				//"vec3 blend_color = pow(blend_color_uncorrected.xyz, vec3(gamma_correction_power_inverse));",
+				//"vec3 ambient_color = 0.60 * blend_color;",
+				//"vec3 diffuse_color = 0.40 * (nDotL * blend_color);",
+				////"gl_FragColor = vec4(ambient_color + diffuse_color + specular, 1.0);",
+				//"diffuseColor = vec4(ambient_color + diffuse_color + specular, 1.0);",
+				////"diffuseColor = gearstackColor;"
+			];
+			//fragmentShader = this.insertAfter('#include <encodings_fragment>', fragmentShader, gearstackFragment);
+		}
+		//console.log('VertexShader', vertexShader);
+		//console.log('FragmentShader', fragmentShader);
+		this.defines = defines;
+		this.vertexShader = vertexShader;
+		this.fragmentShader = fragmentShader;
+	};
+	TGXMaterial.prototype.insertBefore = function(search, shader, insertCode) {
+		search += "\n";
+		if (typeof insertCode != 'string') insertCode = insertCode.join("\n")+"\n";
+		shader = shader.replace(search, insertCode+search);
+		return shader;
+	};
+	TGXMaterial.prototype.insertAfter = function(search, shader, insertCode) {
+		search += "\n";
+		if (typeof insertCode != 'string') insertCode = insertCode.join("\n")+"\n";
+		shader = shader.replace(search, search+insertCode);
+		return shader;
+	};
+	TGXMaterial.prototype.replace = function(search, shader, insertCode) {
+		search += "\n";
+		if (typeof insertCode != 'string') insertCode = insertCode.join("\n")+"\n";
+		shader = shader.replace(search, insertCode);
+		return shader;
+	};
+	THREE.TGXMaterial = TGXMaterial;
+})();
