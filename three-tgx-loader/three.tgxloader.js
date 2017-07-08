@@ -1086,10 +1086,10 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		this.specularProperties = new THREE.Vector4(0, 0, 0, 0);
 		this.subsurfaceScatteringStrength = new THREE.Vector4(0, 0, 0, 0);
 
-		this.update();
-
 		this.setValues(params);
 		this.extensions.derivatives = true;
+
+		this.update();
 	}
 	TGXMaterial.prototype = Object.create(THREE.ShaderMaterial.prototype);
 	TGXMaterial.prototype.constructor = TGXMaterial;
@@ -1179,7 +1179,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 
 		if (fragmentShader.indexOf('USE_GEARSTACKMAP') == -1) {
 			var gearstackParsFragment = [
-				"#ifdef USE_GEARSTACKMAP",
+				"#ifdef USE_DYE",
 				"uniform sampler2D gearstackMap;",
 				//"#define saturate(value) clamp(value, 0.0, 1.0)",
 				"const float gamma_correction_power = 2.2;",
