@@ -635,6 +635,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 			}
 
+			geometry.mergeVertices();
+			geometry.computeVertexNormals();
+
 			onLoadCallback(geometry, materials);
 		}
 
@@ -972,7 +975,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		// If an API Key is supplied, add it to the request header
 		// otherwise assume we want binary data
 		if (typeof apiKey == 'string') request.setRequestHeader('X-API-Key', apiKey);
-		else request.responseType = 'arraybuffer';
+		if (url.indexOf('geometry') != -1) request.responseType = 'arraybuffer';
 
 		request.addEventListener( 'load', function ( event ) {
 
@@ -1179,7 +1182,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 
 		if (fragmentShader.indexOf('USE_GEARSTACKMAP') == -1) {
 			var gearstackParsFragment = [
-				"#ifdef USE_DYE",
+				"#ifdef USE_GEARSTACKMAP",
 				"uniform sampler2D gearstackMap;",
 				//"#define saturate(value) clamp(value, 0.0, 1.0)",
 				"const float gamma_correction_power = 2.2;",
