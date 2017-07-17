@@ -44,10 +44,10 @@ new THREE.TGXLoader({
 ## Loading Mobile Assets
 This loader supports both web and mobile versions of loading gear assets however the latter requires access to the mobile manifest. This can be done via one of two methods:
 
-* Client-side loading, requires [sql.js](https://github.com/kripken/sql.js/) and [zip.js](https://gildas-lormeau.github.io/zip.js/) and will take a bit to load initially but won't require and extra calls.
-* Server-side loading, requires specifying a cross-origin friendly endpoint that will return a response that matches the format when loading GearAsset definitions from [GetDestinySingleDefinition](https://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetDestinySingleDefinition).
+* Client-side loading, requires [sql.js](https://github.com/kripken/sql.js/) and [zip.js](https://gildas-lormeau.github.io/zip.js/) and will take a bit to load initially but won't require any extra calls.
+* Server-side loading, requires specifying a cross-origin friendly endpoint that will return a response that matches the response data format when loading GearAsset definitions from [GetDestinySingleDefinition](https://destinydevs.github.io/BungieNetPlatform/docs/DestinyService/GetDestinySingleDefinition).
 
-Due to the way compression is applied to the textures, you will get better quality from loading the mobile assets of the web versions.
+Due to the way compression is applied to the textures, you will get better quality from loading the mobile assets over the web versions.
 
 ## Progress Bars
 The TGXLoader uses the default Three.js LoadingManager (see https://threejs.org/docs/#api/loaders/managers/LoadingManager).
