@@ -33,11 +33,11 @@ new THREE.TGXLoader({
 	isFemale: false, // Whether to use male or female geometry sets (for Armor)
 	apiKey: THREE.TGXLoader.APIKey,
 	apiBasepath: THREE.TGXLoader.APIBasepath,
-    basepath: THREE.TGXLoader.Basepath,
-    platform: THREE.TGXLoader.Platform,
-    manifestPath: THREE.TGXLoader.ManifestPath,
-    loadTextures: true, // Whether textures should be loaded
-    loadSkeleton: false, // Whether the skeleton should be loaded (not implemented yet)
+	basepath: THREE.TGXLoader.Basepath,
+	platform: THREE.TGXLoader.Platform,
+	manifestPath: THREE.TGXLoader.ManifestPath,
+	loadTextures: true, // Whether textures should be loaded
+	loadSkeleton: false, // Whether the skeleton should be loaded (not implemented yet)
 }, onLoadCallback, onProgressCallback, onErrorCallback);
 ```
 
