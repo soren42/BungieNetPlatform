@@ -1,48 +1,49 @@
 Spasm = Spasm || {};
-Spasm.Skeleton = function(n, t) {
-	Spasm.assertPath(n);
-	Spasm.assertFunction(t);
-	this.skeletonPath = n;
-	this.callback = t;
+Spasm.Skeleton = function(skeletonPath, callback) {
+	Spasm.assertPath(skeletonPath);
+	Spasm.assertFunction(callback);
+	this.skeletonPath = skeletonPath;
+	this.callback = callback;
 	this.loadComplete = !1;
 	this.loadSuccess = !1;
-	var i = this,
-		r = function(n) {
-			i.onLoadSkeleton(n)
+	var scope = this,
+		onLoad = function(n) {
+			scope.onLoadSkeleton(n)
 		};
 	this.skeleton = null;
-	this.skeletonLoader = new Spasm.JSONLoader(n, r);
+	this.skeletonLoader = new Spasm.JSONLoader(skeletonPath, onLoad);
 	this.inverseObjectSpaceTransformMatrices = null;
 	this.parentNodeIndices = null;
 	this.nodeCount = 0
 };
 Spasm.Skeleton.prototype = {};
-Spasm.Skeleton.prototype.onLoadSkeletonSuccess = function(n) {
-	var t, h, c;
-	Spasm.assertValid(n);
+Spasm.Skeleton.prototype.onLoadSkeletonSuccess = function(data) {
+	var t, node, parent_node_index;
+	Spasm.assertValid(data);
 	this.loadSuccess = !0;
-	var r = n.definition,
-		u = r.default_inverse_object_space_transforms,
-		l = r.nodes,
-		f = [],
-		e = [],
-		a = u.length;
-	for (t = 0; t < a; t++) {
-		var o = u[t],
-			i = o.ts,
-			v = i[3],
-			y = o.r,
-			p = [i[0], i[1], i[2]],
-			w = new Spasm.TransformSRT(v, y, p),
-			s = mat4.create();
-		w.setMatrix(s);
-		f.push(s);
-		h = l[t];
-		c = h.parent_node_index;
-		e.push(c)
+	var definition = data.definition,
+		default_inverse_object_space_transforms = definition.default_inverse_object_space_transforms,
+		nodes = definition.nodes,
+		matrices = [],
+		parentNodeIndices = [],
+		default_inverse_object_space_transforms_length = default_inverse_object_space_transforms.length;
+	for (t = 0; t < default_inverse_object_space_transforms_length; t++) {
+		var default_inverse_object_space_transform = default_inverse_object_space_transforms[t],
+			ts = default_inverse_object_space_transform.ts,
+			scale = ts[3],
+			rotation = default_inverse_object_space_transform.r,
+			translation = [ts[0], ts[1], ts[2]],
+			transform = new Spasm.TransformSRT(scale, rotation, translation),
+			matrix = mat4.create();
+		transform.setMatrix(matrix);
+		console.log('Skeleton', t, translation, rotation, scale, matrix);
+		matrices.push(matrix);
+		node = nodes[t];
+		parent_node_index = node.parent_node_index;
+		parentNodeIndices.push(parent_node_index)
 	}
-	this.inverseObjectSpaceTransformMatrices = f;
-	this.parentNodeIndices = e;
+	this.inverseObjectSpaceTransformMatrices = matrices;
+	this.parentNodeIndices = parentNodeIndices;
 	this.callback && (this.callback(this, !0), this.callback = null)
 };
 Spasm.Skeleton.prototype.onLoadSkeletonFailure = function() {
@@ -51,7 +52,7 @@ Spasm.Skeleton.prototype.onLoadSkeletonFailure = function() {
 };
 Spasm.Skeleton.prototype.onLoadSkeleton = function(n) {
 	if (Spasm.assertInstance(n, Spasm.JSONLoader), this.loadComplete = !0, n.isCompleteAndOK()) {
-		var t = n.parsedResponse;
-		this.onLoadSkeletonSuccess(t)
+		var parsedResponse = n.parsedResponse;
+		this.onLoadSkeletonSuccess(parsedResponse)
 	} else this.onLoadSkeletonFailure()
 };

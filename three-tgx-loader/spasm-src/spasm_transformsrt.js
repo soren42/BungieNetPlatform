@@ -1,13 +1,13 @@
 Spasm = Spasm || {};
-Spasm.TransformSRT = function(n, t, i) {
-	n = n || 1;
-	t = t || [0, 0, 0, 1];
-	i = i || [0, 0, 0];
-	this.scale = n;
+Spasm.TransformSRT = function(scale, rotation, translation) {
+	scale = scale || 1;
+	rotation = rotation || [0, 0, 0, 1];
+	translation = translation || [0, 0, 0];
+	this.scale = scale;
 	this.rotation = quat.create();
 	this.translation = vec3.create();
-	quat.copy(this.rotation, t);
-	vec3.copy(this.translation, i)
+	quat.copy(this.rotation, rotation);
+	vec3.copy(this.translation, translation)
 };
 Spasm.TransformSRT.prototype = {};
 Spasm.TransformSRT.prototype.copy = function(n) {
@@ -26,8 +26,13 @@ Spasm.TransformSRT.prototype.multiply = function(n, t) {
 	vec3.scale(this.translation, this.translation, n.scale);
 	vec3.add(this.translation, this.translation, n.translation)
 };
-Spasm.TransformSRT.prototype.setMatrix = function(n) {
-	var t = this.scale,
-		i = this.translation;
-	return mat4.fromQuat(n, this.rotation), mat4.scale(n, n, [t, t, t]), n[12] = i[0], n[13] = i[1], n[14] = i[2], n
+Spasm.TransformSRT.prototype.setMatrix = function(matrix) {
+	var scale = this.scale,
+		translation = this.translation;
+	return mat4.fromQuat(matrix, this.rotation),
+		mat4.scale(matrix, matrix, [scale, scale, scale]),
+		matrix[12] = translation[0],
+		matrix[13] = translation[1],
+		matrix[14] = translation[2],
+		matrix
 };

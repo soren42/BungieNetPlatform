@@ -172,8 +172,8 @@ Spasm.GearShader.prototype.getFragmentShaderInput = function(n, t) {
 		fragmentShaderInputs[f] = fragmentShaderInput),
 		fragmentShaderInput
 };
-Spasm.GearShader.prototype.getFragmentShaderSourceLines = function(n, t) {
-	var u = this.getFragmentShaderInput(n, t),
+Spasm.GearShader.prototype.getFragmentShaderSourceLines = function(n, ignoreTextures) {
+	var u = this.getFragmentShaderInput(n, ignoreTextures),
 		fragmentShader = [],
 		f, r, e;
 	for (fragmentShader.push("precision mediump float;"),fragmentShader.push(""), f = u.length, r = 0; r < f; r++) e = u[r], fragmentShader.push(e.declaration);
@@ -204,8 +204,10 @@ Spasm.GearShader.prototype.getFragmentShaderSourceLines = function(n, t) {
 			fragmentShader.push("color_dye_normal = color_dye_normal * 2.0 - 1.0;"),
 			fragmentShader.push("normal_sample = normal_sample + color_dye_normal.xy;"),
 			fragmentShader.push("vec4 color_gearstack = texture2D(u_texture_gearstack, v_texcoord);"),
-			t && (fragmentShader.push("color_diffuse = u_muted_color_diffuse; // vec4(0.447, 0.498, 0.465, 1.0);"),
-			fragmentShader.push("color_gearstack.r = 0.0; // = vec4(0.3, 0.3, 0.3, 1.0);")),
+			ignoreTextures && (
+				fragmentShader.push("color_diffuse = u_muted_color_diffuse; // vec4(0.447, 0.498, 0.465, 1.0);"),
+				fragmentShader.push("color_gearstack.r = 0.0; // = vec4(0.3, 0.3, 0.3, 1.0);")
+			),
 			fragmentShader.push("float z = sqrt(saturate(1.0 - dot(normal_sample, normal_sample)));"),
 			fragmentShader.push("vec3 normal_tangent_space = vec3(normal_sample.x, normal_sample.y, z);"),
 			fragmentShader.push("vec3 bumpy_normal = (tangent_world_space * normal_tangent_space.x) + (binormal_world_space * normal_tangent_space.y) + (normal_world_space * normal_tangent_space.z);"),
@@ -234,48 +236,48 @@ Spasm.GearShader.prototype.getShaderProgramKey = function(n, t, i, r) {
 		fragmentShader: this.getFragmentShaderKey(i, r)
 	})
 };
-Spasm.GearShader.prototype.getVertexShaderKey = function(n, t, i) {
-	Spasm.assertBoolean(n);
-	Spasm.assertBoolean(t);
+Spasm.GearShader.prototype.getVertexShaderKey = function(hasBlendIndices, hasBlendWeights, i) {
+	Spasm.assertBoolean(hasBlendIndices);
+	Spasm.assertBoolean(hasBlendWeights);
 	Spasm.assertBoolean(i);
-	Spasm.assert(t ? n : !0);
+	Spasm.assert(hasBlendWeights ? hasBlendIndices : !0);
 	var r = {
-		hasBlendWeights: t,
-		hasBlendIndices: n
+		hasBlendWeights: hasBlendWeights,
+		hasBlendIndices: hasBlendIndices
 	};
 	return JSON.stringify(r)
 };
-Spasm.GearShader.prototype.getFragmentShaderKey = function(n, t) {
+Spasm.GearShader.prototype.getFragmentShaderKey = function(n, ignoresTextures) {
 	Spasm.assertBoolean(n);
-	Spasm.assertBoolean(t);
+	Spasm.assertBoolean(ignoresTextures);
 	var i = {
-		ignoresTextures: t
+		ignoresTextures: ignoresTextures
 	};
 	return JSON.stringify(i)
 };
-Spasm.GearShader.prototype.getVertexShader = function(n, t, i) {
-	var u = this.getVertexShaderKey(n, t, i),
-		r = this.vertexShaders[u];
-	if (!r) {
-		var f = this.gl,
-			e = this.getVertexShaderSourceLines(n, t, i),
-			o = this.getVertexShaderInput(n, t, i);
-		r = new Spasm.Shader(f, f.VERTEX_SHADER, e, o);
-		this.vertexShaders[u] = r
+Spasm.GearShader.prototype.getVertexShader = function(hasBlendIndices, hasBlendWeights, i) {
+	var shaderKey = this.getVertexShaderKey(hasBlendIndices, hasBlendWeights, i),
+		shader = this.vertexShaders[shaderKey];
+	if (!shader) {
+		var gl = this.gl,
+			shaderSourceLines = this.getVertexShaderSourceLines(hasBlendIndices, hasBlendWeights, i),
+			shaderInput = this.getVertexShaderInput(hasBlendIndices, hasBlendWeights, i);
+		shader = new Spasm.Shader(gl, gl.VERTEX_SHADER, shaderSourceLines, shaderInput);
+		this.vertexShaders[shaderKey] = shader
 	}
-	return r
+	return shader
 };
-Spasm.GearShader.prototype.getFragmentShader = function(n, t) {
-	var r = this.getFragmentShaderKey(n, t),
-		i = this.fragmentShaders[r];
-	if (!i) {
-		var u = this.gl,
-			f = this.getFragmentShaderSourceLines(n, t),
-			e = this.getFragmentShaderInput(n, t);
-		i = new Spasm.Shader(u, u.FRAGMENT_SHADER, f, e);
-		this.fragmentShaders[r] = i
+Spasm.GearShader.prototype.getFragmentShader = function(n, ignoresTextures) {
+	var shaderKey = this.getFragmentShaderKey(n, ignoresTextures),
+		shader = this.fragmentShaders[shaderKey];
+	if (!shader) {
+		var gl = this.gl,
+			shaderSourceLines = this.getFragmentShaderSourceLines(n, ignoresTextures),
+			shaderInput = this.getFragmentShaderInput(n, ignoresTextures);
+		shader = new Spasm.Shader(gl, gl.FRAGMENT_SHADER, shaderSourceLines, shaderInput);
+		this.fragmentShaders[shaderKey] = shader
 	}
-	return i
+	return shader
 };
 Spasm.GearShader.prototype.getShaderProgram = function(n, t, i, r) {
 	var o, s, f, h, c, l;

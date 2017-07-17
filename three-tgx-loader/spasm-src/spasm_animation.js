@@ -1,17 +1,17 @@
 Spasm = Spasm || {};
-Spasm.Animation = function(n, t) {
-	Spasm.assertPath(n);
-	Spasm.assertFunction(t);
-	this.animationPath = n;
-	this.callback = t;
+Spasm.Animation = function(animationPath, callback) {
+	Spasm.assertPath(animationPath);
+	Spasm.assertFunction(callback);
+	this.animationPath = animationPath;
+	this.callback = callback;
 	this.loadComplete = !1;
 	this.loadSuccess = !1;
-	var i = this,
-		r = function(n) {
-			i.onLoadAnimation(n)
+	var scope = this,
+		onLoad = function(data) {
+			scope.onLoadAnimation(data)
 		};
 	this.animation = null;
-	this.animationLoader = new Spasm.JSONLoader(n, r);
+	this.animationLoader = new Spasm.JSONLoader(animationPath, onLoad);
 	this.frameCount = 0;
 	this.nodeCount = 0;
 	this.framesMatrices = null;
@@ -19,80 +19,97 @@ Spasm.Animation = function(n, t) {
 	this.tempMatrix0 = mat4.create()
 };
 Spasm.Animation.prototype = {};
-Spasm.Animation.prototype.frameFillTransformBuffer = function(n, t, i, r) {
-	var c, u, a;
-	Spasm.assertNumber(n);
-	Spasm.assertInstance(t, Float32Array);
-	Spasm.assertArrayInstances(i, Float32Array);
-	n = Math.floor(n);
-	var v = this.framesMatrices,
-		h = this.animationMatrices,
-		f = this.tempMatrix0,
-		y = this.frameCount,
-		e = this.nodeCount,
-		p = i.length,
-		w = t.length;
-	for (Spasm.assert(n >= 0), Spasm.assert(n < y), Spasm.assert(w === e * 12), Spasm.assertEqual(e, p), c = v[n], u = 0; u < e; u++) {
-		var l = c[u],
-			o = h[u],
-			b = i[u],
-			s = r[u];
-		s >= 0 ? (Spasm.assert(s < u), a = h[s], mat4.multiply(o, a, l)) : mat4.copy(o, l);
-		mat4.multiply(f, o, b);
-		mat4.transpose(f, f);
-		t.set(f.subarray(0, 12), u * 12)
+Spasm.Animation.prototype.frameFillTransformBuffer = function(frameCount, skinningMatrices, inverseObjectSpaceTransformMatrices, parentNodeIndices) {
+	var framesMatrix, u, parentAnimationMatrix;
+	Spasm.assertNumber(frameCount);
+	Spasm.assertInstance(skinningMatrices, Float32Array);
+	Spasm.assertArrayInstances(inverseObjectSpaceTransformMatrices, Float32Array);
+	frameCount = Math.floor(frameCount);
+	var framesMatrices = this.framesMatrices,
+		animationMatrices = this.animationMatrices,
+		tempMatrix0 = this.tempMatrix0,
+		frameCount = this.frameCount,
+		nodeCount = this.nodeCount,
+		inverseObjectSpaceTransformMatricesLength = inverseObjectSpaceTransformMatrices.length,
+		skinningMatricesLength = skinningMatrices.length;
+	for (Spasm.assert(frameCount >= 0),
+		 Spasm.assert(frameCount < frameCount),
+		 Spasm.assert(skinningMatricesLength === nodeCount * 12),
+		 Spasm.assertEqual(nodeCount, inverseObjectSpaceTransformMatricesLength),
+		 framesMatrix = framesMatrices[frameCount],
+		 u = 0; u < nodeCount; u++) {
+		var nodeMatrix = framesMatrix[u],
+			animationMatrix = animationMatrices[u],
+			inverseObjectSpaceTransformMatrix = inverseObjectSpaceTransformMatrices[u],
+			parentNodeIndex = parentNodeIndices[u];
+		parentNodeIndex >= 0 ?
+			(
+				Spasm.assert(parentNodeIndex < u),
+				parentAnimationMatrix = animationMatrices[parentNodeIndex],
+				mat4.multiply(animationMatrix, parentAnimationMatrix, nodeMatrix)
+			) :
+			mat4.copy(animationMatrix, nodeMatrix);
+		mat4.multiply(tempMatrix0, animationMatrix, inverseObjectSpaceTransformMatrix);
+		mat4.transpose(tempMatrix0, tempMatrix0);
+		skinningMatrices.set(tempMatrix0.subarray(0, 12), u * 12)
 	}
 };
-Spasm.Animation.prototype.onLoadAnimationSuccess = function(n) {
-	var a, f, t, tt, h, c, l, it;
-	Spasm.assertArray(n);
+Spasm.Animation.prototype.onLoadAnimationSuccess = function(animations) {
+	var animations_length, f, t, transform, transformMatrix, c, l, boneMatrix;
+	Spasm.assertArray(animations);
 	this.loadSuccess = !0;
-	a = n.length;
-	Spasm.assert(a > 0);
-	var i = n[0],
-		e = i.node_count,
-		v = i.frame_count,
-		r = i.static_bone_data,
-		rt = r.scale_control_map,
-		ut = r.rotation_control_map,
-		ft = r.translation_control_map,
-		o = r.transform_stream_header.streams.frames[0],
-		et = o.scales,
-		ot = o.rotations,
-		st = o.translations,
-		u = i.animated_bone_data,
-		ht = u.scale_control_map,
-		ct = u.rotation_control_map,
-		lt = u.translation_control_map,
-		at = u.transform_stream_header.streams.frames,
-		y = [];
-	for (f = 0; f < v; f++) {
-		var p = [],
-			s = at[f],
-			vt = s.scales,
-			yt = s.rotations,
-			pt = s.translations;
-		for (t = 0; t < e; t++) {
-			var w = rt.indexOf(t),
-				b = ut.indexOf(t),
-				k = ft.indexOf(t),
-				wt = ht.indexOf(t),
-				bt = ct.indexOf(t),
-				kt = lt.indexOf(t),
-				d = w >= 0 ? et[w] : vt[wt],
-				g = b >= 0 ? ot[b] : yt[bt],
-				nt = k >= 0 ? st[k] : pt[kt];
-			Spasm.assertValid(d);
-			Spasm.assertValid(g);
-			Spasm.assertValid(nt);
-			tt = new Spasm.TransformSRT(d, g, nt);
-			h = mat4.create();
-			tt.setMatrix(h);
-			p.push(h)
+	animations_length = animations.length;
+	Spasm.assert(animations_length > 0);
+	var animation = animations[0],
+		node_count = animation.node_count,
+		frame_count = animation.frame_count,
+		static_bone_data = animation.static_bone_data,
+		scale_control_map = static_bone_data.scale_control_map,
+		rotation_control_map = static_bone_data.rotation_control_map,
+		translation_control_map = static_bone_data.translation_control_map,
+		firstFrame = static_bone_data.transform_stream_header.streams.frames[0],
+		frameScales = firstFrame.scales,
+		frameRotations = firstFrame.rotations,
+		frameTranslations = firstFrame.translations,
+		animated_bone_data = animation.animated_bone_data,
+		anim_scale_control_map = animated_bone_data.scale_control_map,
+		anim_rotation_control_map = animated_bone_data.rotation_control_map,
+		anim_translation_control_map = animated_bone_data.translation_control_map,
+		anim_frames = animated_bone_data.transform_stream_header.streams.frames,
+		framesMatrices = [];
+	for (f = 0; f < frame_count; f++) {
+		var frameMatrices = [],
+			anim_frame = anim_frames[f],
+			scales = anim_frame.scales,
+			rotations = anim_frame.rotations,
+			translations = anim_frame.translations;
+		for (t = 0; t < node_count; t++) {
+			var bone_scale_control_map_index = scale_control_map.indexOf(t),
+				bone_rotation_control_map_index = rotation_control_map.indexOf(t),
+				bone_translation_control_map_index = translation_control_map.indexOf(t),
+				bone_anim_scale_control_map_index = anim_scale_control_map.indexOf(t),
+				bone_anim_rotation_control_map_index = anim_rotation_control_map.indexOf(t),
+				bone_anim_translation_control_map_index = anim_translation_control_map.indexOf(t),
+				bone_scale = bone_scale_control_map_index >= 0 ? frameScales[bone_scale_control_map_index] : scales[bone_anim_scale_control_map_index],
+				bone_rotation = bone_rotation_control_map_index >= 0 ? frameRotations[bone_rotation_control_map_index] : rotations[bone_anim_rotation_control_map_index],
+				bone_translation = bone_translation_control_map_index >= 0 ? frameTranslations[bone_translation_control_map_index] : translations[bone_anim_translation_control_map_index];
+			Spasm.assertValid(bone_scale);
+			Spasm.assertValid(bone_rotation);
+			Spasm.assertValid(bone_translation);
+			transform = new Spasm.TransformSRT(bone_scale, bone_rotation, bone_translation);
+			transformMatrix = mat4.create();
+			transform.setMatrix(transformMatrix);
+			frameMatrices.push(transformMatrix)
 		}
-		y.push(p)
+		framesMatrices.push(frameMatrices)
 	}
-	for (this.nodeCount = e, this.frameCount = v, this.framesMatrices = y, c = [], l = 0; l < e; l++) it = mat4.create(), c.push(it);
+	for (this.nodeCount = node_count,
+			 this.frameCount = frame_count,
+			 this.framesMatrices = framesMatrices,
+			 c = [],
+			 l = 0; l < node_count; l++)
+		boneMatrix = mat4.create(),
+		c.push(boneMatrix);
 	this.animationMatrices = c;
 	this.callback && (this.callback(this, !0), this.callback = null)
 };

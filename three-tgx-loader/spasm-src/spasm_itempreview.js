@@ -407,39 +407,51 @@ Spasm.ItemPreview.prototype.stopAnimating = function(n) {
 };
 Spasm.ItemPreview.prototype.animate = function() {
 	var k, f, tt;
-	if (this.isAnimating = !1, this.shouldAnimate && this.renderer.canRender()) this.isAnimating = !0, window.requestAnimationFrame(this.animationFrame);
+	if (this.isAnimating = !1, this.shouldAnimate && this.renderer.canRender())
+		this.isAnimating = !0,
+		window.requestAnimationFrame(this.animationFrame);
 	else {
 		this.stopAnimating();
 		return
 	}
-	var r = this.renderer.gl,
-		it = this.skinningMatrices,
-		rt = this.itemReferenceIds,
-		n = this.gearShaders,
-		v = this.gearRenderables,
-		t = this.skeleton,
-		e = this.animation,
+	var gl = this.renderer.gl,
+		skinningMatrices = this.skinningMatrices,
+		itemReferenceIds = this.itemReferenceIds,
+		gearShaders = this.gearShaders,
+		gearRenderables = this.gearRenderables,
+		skeleton = this.skeleton,
+		animation = this.animation,
 		i, o;
-	if (rt.length > 1)
-		if (o = !0, t.loadComplete && e.loadComplete)
-			if (t.loadSuccess && t.loadSuccess) {
+	if (itemReferenceIds.length > 1)
+		if (o = !0, skeleton.loadComplete && animation.loadComplete)
+			if (skeleton.loadSuccess && skeleton.loadSuccess) {
 				i = !0;
-				var s = this.frameIndex,
-					h = e.frameCount,
-					c, y = t.inverseObjectSpaceTransformMatrices,
-					p = t.parentNodeIndices;
-				h > 0 && y && p && (c = this.limitToFrame ? 0 : s >= h ? 0 : s < 0 ? h - 1 : s, e.frameFillTransformBuffer(c, it, y, p), this.isAnimationPaused || (this.frameIndex = c + .5))
+				var frameIndex = this.frameIndex,
+					animationFrameCount = animation.frameCount,
+					frameCount, inverseObjectSpaceTransformMatrices = skeleton.inverseObjectSpaceTransformMatrices,
+					p = skeleton.parentNodeIndices;
+				animationFrameCount > 0 && inverseObjectSpaceTransformMatrices && p && (
+					frameCount = this.limitToFrame ?
+						0 :
+						frameIndex >= animationFrameCount ?
+							0 :
+							frameIndex < 0 ?
+								animationFrameCount - 1 :
+								frameIndex,
+					animation.frameFillTransformBuffer(frameCount, skinningMatrices, inverseObjectSpaceTransformMatrices, p),
+					this.isAnimationPaused || (this.frameIndex = frameCount + .5)
+				)
 			} else i = !1;
 		else i = !1;
 	else i = !0, o = !1;
-	var w = this.canvas,
-		u = this.canvasSize,
-		l = Math.abs(w.width),
-		a = Math.abs(w.height),
-		b = l !== u.width || a !== u.height;
-	if (b && (r.viewport(0, 0, l, a), u.width = l, u.height = a), (!this.limitToFrame || this.camera.isDirty() || b) && (this.camera.updateMatrices(), r.clear(r.COLOR_BUFFER_BIT | r.DEPTH_BUFFER_BIT), n && i && this.assetLoaders && Object.keys(this.assetLoaders).length === 0)) {
-		for (n.setUniformData(this.lightPositionUniformData), n.setUniformData(this.mutedColorDiffuseUnfiformData), n.setUniformData(this.camera.uniformDatas.projectionMatrix), n.setUniformData(this.camera.uniformDatas.modelMatrix), n.setUniformData(this.camera.uniformDatas.viewMatrix), o ? n.setUniformData(this.skinningMatricesUniformData) : n.setUniformData(this.identityMatricesUniformData), k = v.length, f = 0; f < k; f++) {
-			var d = v[f],
+	var canvas = this.canvas,
+		canvasSize = this.canvasSize,
+		canvasWidth = Math.abs(canvas.width),
+		canvasHeight = Math.abs(canvas.height),
+		b = canvasWidth !== canvasSize.width || canvasHeight !== canvasSize.height;
+	if (b && (gl.viewport(0, 0, canvasWidth, canvasHeight), canvasSize.width = canvasWidth, canvasSize.height = canvasHeight), (!this.limitToFrame || this.camera.isDirty() || b) && (this.camera.updateMatrices(), gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT), gearShaders && i && this.assetLoaders && Object.keys(this.assetLoaders).length === 0)) {
+		for (gearShaders.setUniformData(this.lightPositionUniformData), gearShaders.setUniformData(this.mutedColorDiffuseUnfiformData), gearShaders.setUniformData(this.camera.uniformDatas.projectionMatrix), gearShaders.setUniformData(this.camera.uniformDatas.modelMatrix), gearShaders.setUniformData(this.camera.uniformDatas.viewMatrix), o ? gearShaders.setUniformData(this.skinningMatricesUniformData) : gearShaders.setUniformData(this.identityMatricesUniformData), k = gearRenderables.length, f = 0; f < k; f++) {
+			var d = gearRenderables[f],
 				g = d.itemId,
 				ut = !!this.mutedItemReferenceIds && g in this.mutedItemReferenceIds,
 				nt = null,
