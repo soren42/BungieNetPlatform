@@ -10,8 +10,8 @@ var loader = new THREE.TGXLoader();
 loader.load(itemHash, function(geometry, materials) {
 	console.log('LoadedItem', geometry, materials);
 	mesh = new THREE.Mesh(geometry, new THREE.MultiMaterial(materials));
-	mesh.rotation.x = -(90 * Math.PI / 180);
-	mesh.scale.set(-500, 500, 500);
+	mesh.rotation.x = 90 * Math.PI / 180;
+	mesh.scale.set(500, 500, 500);
 	scene.add(mesh);
 });
 ```
