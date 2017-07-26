@@ -181,7 +181,8 @@ THREE.TGXLoader.DefaultAnimationPath = 'destiny_player_animation.js';
 Object.assign(THREE.TGXLoader.prototype, {
 	load: function(options, onLoad, onProgress, onError) {
 		var defaultOptions = {
-			itemHash: options,
+			//itemHash: options,
+			itemHashes: [options],
 			classHash: 0,
 			isFemale: false,
 			apiKey: THREE.TGXLoader.APIKey,
@@ -199,6 +200,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 			if (options[key] === undefined) options[key] = defaultOptions[key];
 		}
 
+		if (options.itemHash != undefined) options.itemHashes = [options.itemHash];
+
+		console.log('Loader', options);
+
 		var scope = this;
 
 		//if (onProgress === undefined) {
@@ -213,60 +218,74 @@ Object.assign(THREE.TGXLoader.prototype, {
 			};
 		}
 
-		var url, loader;
+		var url, loader, loadedCount = 0, items = [];
 
 		// Mobile manifest support
 		if (options.platform == 'mobile' && !options.manifestPath && !THREE.TGXManifest.isCapable()) {
 			options.platform = 'web';
 		}
-		if (options.platform == 'mobile') {
-			if (options.manifestPath) { // Load manifest server-side
-				var url = options.manifestPath.replace('$itemHash', options.itemHash);
-				loader = new THREE.BungieNetLoader(this.manager);
-				loader.load(url, options.apiKey, function(response) {
-					try { // Invalid JSON response
-						response = JSON.parse(response);
-					} catch(e) {
-						console.error('Invalid JSON', url);
-						return;
-					}
 
-					scope.parse(response, options, onLoad, onProgress, onError);
-				}, onProgress, onError);
-
-			} else { // Load manifest locally
-				var manifest = THREE.TGXLoader.Manifest;
-				if (!THREE.TGXLoader.Manifest) {
-					THREE.TGXLoader.Manifest = manifest = new THREE.TGXManifest(this.manager, options);
-				}
-				manifest.getAsset(options.itemHash, function(data) {
-					scope.parse(data, options, onLoad, onProgress, onError);
-				}, onProgress, onError);
+		function itemsLoaded() {
+			console.log('LoadedItem', items[items.length-1]);
+			if (loadedCount == options.itemHashes.length) {
+				scope.parse(items, options, onLoad, onProgress, onError);
 			}
-			return;
 		}
 
-		// Web version support
-		url = options.apiBasepath+'/Manifest/22/'+options.itemHash+'/'; // GetDestinySingleDefinition
+		for (var i=0; i<options.itemHashes.length; i++) {
+			var itemHash = options.itemHashes[i];
+			if (options.platform == 'mobile') {
+				if (options.manifestPath) { // Load manifest server-side
+					var url = options.manifestPath.replace('$itemHash', itemHash);
+					loader = new THREE.BungieNetLoader(this.manager);
+					loader.load(url, options.apiKey, function(response) {
+						loadedCount++;
+						try { // Invalid JSON response
+							response = JSON.parse(response);
+							items.push(response);
+						} catch(e) {
+							console.error('Invalid JSON', url);
+						}
+						itemsLoaded();
+					}, onProgress, onError);
 
-		loader = new THREE.BungieNetLoader(this.manager);
-		loader.load(url, options.apiKey, function (response) {
-			try { // Invalid JSON response
-				response = JSON.parse(response);
-			} catch(e) {
-				console.error('Invalid JSON', url);
-				return;
+				} else { // Load manifest locally
+					var manifest = THREE.TGXLoader.Manifest;
+					if (!THREE.TGXLoader.Manifest) {
+						THREE.TGXLoader.Manifest = manifest = new THREE.TGXManifest(this.manager, options);
+					}
+					manifest.getAsset(itemHash, function(data) {
+						items.push(data);
+						loadedCount++;
+						itemsLoaded();
+					}, onProgress, onError);
+				}
+				continue;
 			}
 
-			if (response.ErrorCode == 1) {
-				scope.parse(response.Response.data, options, onLoad, onProgress, onError);
-			} else {
-				console.error('Bungie Error Response', response);
-			}
-		}, onProgress, onError);
+			// Web version support
+			url = options.apiBasepath+'/Manifest/22/'+itemHash+'/'; // GetDestinySingleDefinition
+
+			loader = new THREE.BungieNetLoader(this.manager);
+			loader.load(url, options.apiKey, function (response) {
+				loadedCount++;
+				try { // Invalid JSON response
+					response = JSON.parse(response);
+				} catch(e) {
+					console.error('Invalid JSON', url);
+				}
+
+				if (response.ErrorCode == 1) {
+					items.push(response.Response.data);
+				} else {
+					console.error('Bungie Error Response', response);
+				}
+				itemsLoaded();
+			}, onProgress, onError);
+		}
 	},
 	parse: (function() {
-		var itemHash = 0;
+		//var itemHash = 0;
 		var isFemale = false;
 		var classHash = 0;
 
@@ -284,6 +303,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var basepath = THREE.TGXLoader.Basepath;
 		var platform = THREE.TGXLoader.Platform;
 		var animationPath = THREE.TGXLoader.DefaultAnimationPath;
+
+		var hasBones = false;
+		var defaultMaterial, geometry, materials;
+		var vertexOffset = 0;
 
 		// Spasm.TGXAssetLoader.prototype.onLoadAssetManifest
 		function loadAssetManifest(gearAsset) {
@@ -343,18 +366,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 					}
 				}
 
-				contentLoaded = {
-					gear: {},
-					geometry: {},
-					textures: {},
-					platedTextures: {},
-					mobileTextures: {},
-					skeleton: null,
-					animations: []
-				};
-				assetLoadCount = 0;
-				assetLoadTotal = 0;
-
 				assetLoadTotal += Object.keys(geometryIndexes).length;
 				assetLoadTotal += Object.keys(gearAsset.gear).length;
 				if (loadSkeleton) assetLoadTotal++;
@@ -388,7 +399,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 
 				// Load Bones / Animations
-				if (loadSkeleton) {
+				if (loadSkeleton && contentLoaded.skeleton == undefined) {
+					contentLoaded.skeleton = null;
 					loadPart(basepath+'/common/destiny_content/animations/destiny_player_skeleton.js', function(skeleton) {
 						skeleton = JSON.parse(skeleton);
 						contentLoaded.skeleton = skeleton;
@@ -587,11 +599,38 @@ Object.assign(THREE.TGXLoader.prototype, {
 		function parseContent() {
 			console.log('ContentLoaded', contentLoaded);
 
+			// Set up THREE.Geometry and load skeleton (if any)
+			geometry = new THREE.Geometry();
+			geometry.bones = parseSkeleton();
+			hasBones = geometry.bones.length > 0;
+
+			var animation = hasBones && loadAnimation ? parseAnimation(geometry.bones) : false;
+
+			// Set up default white material
+			defaultMaterial = new THREE.MeshLambertMaterial({
+				emissive: 0x444444,
+				color: 0x777777,
+				shading: THREE.FlatShading,
+				side: THREE.DoubleSide,
+				skinning: hasBones
+			});
+			materials = [];
+			if (!loadTextures) materials.push(defaultMaterial);
+
+			for (var gearId in contentLoaded.gear) {
+				var gear = contentLoaded.gear[gearId];
+				parseGear(gear);
+			}
+
+			onLoadCallback(geometry, materials, animation ? [animation] : []);
+		}
+
+		function parseGear(gear) {
 			// Figure out which geometry should be loaded ie class, gender
 			var geometryHashes = [];
 			var gearDyes = null;
-			for (var gearId in contentLoaded.gear) {
-				var gear = contentLoaded.gear[gearId];
+			//for (var gearId in contentLoaded.gear) {
+			//	var gear = contentLoaded.gear[gearId];
 				var artContent = gear.art_content;
 				var artContentSets = gear.art_content_sets;
 				if (artContentSets && artContentSets.length > 1) {
@@ -626,30 +665,12 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 
 				gearDyes = parseGearDyes(gear);
-			}
+			//}
 			//console.log('GeometryHashes', geometryHashes);
-			//console.log('GearDyes', gearDyes);
+			console.log('GearDyes', gearDyes);
 
-			// Set up THREE.Geometry and load skeleton (if any)
-			var geometry = new THREE.Geometry();
-			geometry.bones = parseSkeleton();
-			var hasBones = geometry.bones.length > 0;
-
-			var animation = hasBones && loadAnimation ? parseAnimation(geometry.bones) : false;
-
-			// Set up default white material
-			var defaultMaterial = new THREE.MeshLambertMaterial({
-				emissive: 0x444444,
-				color: 0x777777,
-				shading: THREE.FlatShading,
-				side: THREE.DoubleSide,
-				skinning: hasBones
-			});
-			var materials = [];
-			if (!loadTextures) materials.push(defaultMaterial);
 
 			// Compress geometry into a single THREE.Geometry
-			var vertexOffset = 0;
 			for (var g=0; g<geometryHashes.length; g++) {
 				var geometryHash = geometryHashes[g];
 				var tgxBin = contentLoaded.geometry[geometryHash];
@@ -997,8 +1018,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 			//geometry.mergeVertices();
 			//geometry.computeVertexNormals();
-
-			onLoadCallback(geometry, materials, animation ? [animation] : []);
 		}
 
 		// Spasm.Skeleton.prototype.onLoadSkeletonSuccess
@@ -1557,11 +1576,11 @@ Object.assign(THREE.TGXLoader.prototype, {
 			return part;
 		}
 
-		return function(data, options, onLoad, onProgress, onError) {
+		return function(items, options, onLoad, onProgress, onError) {
 			basepath = options.basepath;
 			platform = options.platform;
 			animationPath = options.animationPath;
-			itemHash = options.itemHash;
+			//itemHash = options.itemHash;
 			isFemale = options.isFemale;
 			classHash = options.classHash;
 			loadSkeleton = options.loadSkeleton;
@@ -1571,7 +1590,22 @@ Object.assign(THREE.TGXLoader.prototype, {
 			onProgressCallback = onProgress;
 			onErrorCallback = onError;
 
-			loadAssetManifest(data.gearAsset);
+			contentLoaded = {
+				gear: {},
+				geometry: {},
+				textures: {},
+				platedTextures: {},
+				mobileTextures: {},
+				skeleton: null,
+				animations: []
+			};
+			assetLoadCount = 0;
+			assetLoadTotal = 0;
+
+			for (var i=0; i<items.length; i++) {
+				var data = items[i];
+				loadAssetManifest(data.gearAsset);
+			}
 		}
 	})()
 });
