@@ -176,6 +176,7 @@ THREE.TGXLoader.APIBasepath = 'https://www.bungie.net/d1/Platform/Destiny';
 THREE.TGXLoader.Basepath = 'https://www.bungie.net';
 THREE.TGXLoader.Platform = 'web';
 THREE.TGXLoader.ManifestPath = null;
+THREE.TGXLoader.DefaultAnimationPath = 'destiny_player_animation.js';
 
 Object.assign(THREE.TGXLoader.prototype, {
 	load: function(options, onLoad, onProgress, onError) {
@@ -189,7 +190,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 			platform: THREE.TGXLoader.Platform,
 			manifestPath: THREE.TGXLoader.ManifestPath,
 			loadTextures: true,
-			loadSkeleton: false
+			loadSkeleton: false,
+			loadAnimation: false,
+			animationPath: THREE.TGXLoader.DefaultAnimationPath
 		};
 		if (typeof options != 'object') options = {};
 		for (var key in defaultOptions) {
@@ -268,6 +271,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var classHash = 0;
 
 		var loadSkeleton = false;
+		var loadAnimation = false;
 		var loadTextures = true;
 
 		var contentLoaded = null;
@@ -279,6 +283,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var utils = THREE.TGXLoaderUtils;
 		var basepath = THREE.TGXLoader.Basepath;
 		var platform = THREE.TGXLoader.Platform;
+		var animationPath = THREE.TGXLoader.DefaultAnimationPath;
 
 		// Spasm.TGXAssetLoader.prototype.onLoadAssetManifest
 		function loadAssetManifest(gearAsset) {
@@ -344,7 +349,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 					textures: {},
 					platedTextures: {},
 					mobileTextures: {},
-					skeleton: null
+					skeleton: null,
+					animations: []
 				};
 				assetLoadCount = 0;
 				assetLoadTotal = 0;
@@ -352,6 +358,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				assetLoadTotal += Object.keys(geometryIndexes).length;
 				assetLoadTotal += Object.keys(gearAsset.gear).length;
 				if (loadSkeleton) assetLoadTotal++;
+				if (loadAnimation) assetLoadTotal++;
 				if (loadTextures) {
 					assetLoadTotal += Object.keys(textureIndexes).length;
 					assetLoadTotal += Object.keys(platedTextureIndexes).length;
@@ -360,6 +367,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				// Load Geometry
 				for (var geometryIndex in geometryIndexes) {
 					loadGeometry(content.geometry[geometryIndex], function(geometry) {
+						//console.log('Geometry', geometry);
 						contentLoaded.geometry[geometry.fileIdentifier] = geometry;
 						assetLoadCount++;
 						checkContentLoaded();
@@ -387,6 +395,15 @@ Object.assign(THREE.TGXLoader.prototype, {
 						assetLoadCount++;
 						checkContentLoaded();
 					}, onProgressCallback, onErrorCallback);
+
+					if (loadAnimation) {
+						loadPart(basepath+'/common/destiny_content/animations/'+animationPath, function(animations) {
+							animations = JSON.parse(animations);
+							contentLoaded.animations = animations;
+							assetLoadCount++;
+							checkContentLoaded();
+						}, onProgressCallback, onErrorCallback);
+					}
 				}
 
 				if (!loadTextures) continue;
@@ -568,7 +585,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		}
 
 		function parseContent() {
-			//console.log('ContentLoaded', contentLoaded);
+			console.log('ContentLoaded', contentLoaded);
 
 			// Figure out which geometry should be loaded ie class, gender
 			var geometryHashes = [];
@@ -601,7 +618,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 							}
 						}
 					} else {
-						var overrideArtArrangement = this.isFemale ? gearSet.female_override_art_arrangement : gearSet.base_art_arrangement;
+						var overrideArtArrangement = isFemale ? gearSet.female_override_art_arrangement : gearSet.base_art_arrangement;
 						for (var o=0; o<overrideArtArrangement.geometry_hashes.length; o++) {
 							geometryHashes.push(overrideArtArrangement.geometry_hashes[o]);
 						}
@@ -618,14 +635,15 @@ Object.assign(THREE.TGXLoader.prototype, {
 			geometry.bones = parseSkeleton();
 			var hasBones = geometry.bones.length > 0;
 
+			var animation = hasBones && loadAnimation ? parseAnimation(geometry.bones) : false;
+
 			// Set up default white material
 			var defaultMaterial = new THREE.MeshLambertMaterial({
 				emissive: 0x444444,
 				color: 0x777777,
 				shading: THREE.FlatShading,
 				side: THREE.DoubleSide,
-				skinning: hasBones,
-				overdraw: true
+				skinning: hasBones
 			});
 			var materials = [];
 			if (!loadTextures) materials.push(defaultMaterial);
@@ -637,8 +655,12 @@ Object.assign(THREE.TGXLoader.prototype, {
 				var tgxBin = contentLoaded.geometry[geometryHash];
 
 				//if (g != 0) continue;
+				if (tgxBin == undefined) {
+					console.warn('MissingGeometry['+g+']', geometryHash);
+					continue;
+				}
 
-				//console.log('Geometry['+g+']', geometryHash, tgxBin);
+				console.log('Geometry['+g+']', geometryHash, tgxBin);
 
 				var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
 
@@ -744,7 +766,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					//if (m != 1) continue;
 
 					if (parts.length == 0) {
-						//console.log('Skipped RenderMesh['+m+']: No parts');
+						console.log('Skipped RenderMesh['+m+']: No parts');
 						continue;
 					} // Skip meshes with no parts
 
@@ -976,13 +998,14 @@ Object.assign(THREE.TGXLoader.prototype, {
 			//geometry.mergeVertices();
 			//geometry.computeVertexNormals();
 
-			onLoadCallback(geometry, materials);
+			onLoadCallback(geometry, materials, animation ? [animation] : []);
 		}
 
 		// Spasm.Skeleton.prototype.onLoadSkeletonSuccess
 		// TODO Fix bone loading
 		function parseSkeleton() {
 			var bones = [];
+			var absBones = [];
 			if (contentLoaded.skeleton) {
 				var definition = contentLoaded.skeleton.definition;
 				//var transforms = definition.default_inverse_object_space_transforms;
@@ -991,52 +1014,12 @@ Object.assign(THREE.TGXLoader.prototype, {
 				//transforms = inverseTransforms;
 				var nodes = definition.nodes;
 
-				var matrices = [
-					[1, -0.00002999954995175358, 0.00003000044853251893, -0.000007000000096013537, 0.00003000044853251893, 1, -0.00002999954995175358, -9.999999974752427e-7, -0.00002999954995175358, 0.00003000044853251893, 1, -0.0000019999999949504854, 0, 0, 0, 1],
-					[0.9801157116889954, 0.19034430384635925, 0.05605984851717949, -0.06831592321395874, -0.18996374309062958, 0.9817168712615967, -0.01209370419383049, 0.014000986702740192, -0.05733706057071686, 0.0012036511907353997, 0.9983543753623962, -0.005501100327819586, 0, 0, 0, 1],
-					[1, -1.4191889850800887e-12, -1.4191889850800887e-12, -0.000014000030205352232, -1.4191889850800887e-12, 1, -1.4191889850800887e-12, -0.000002000150061576278, -1.4191889850800887e-12, -1.4191889850800887e-12, 1, -0.00000399981990995002, 0, 0, 0, 1],
-					[0.9979707598686218, -0.03309955447912216, -0.05435013398528099, 0.06703712791204453, 0.02993491291999817, 0.9978638291358948, -0.05802343413233757, 0.05169997736811638, 0.05615539848804474, 0.056277647614479065, 0.9968340396881104, -0.013565830886363983, 0, 0, 0, 1],
-					[0.9791208505630493, 0.19240985810756683, 0.06558473408222198, -0.07762237638235092, -0.19275233149528503, 0.9812451601028442, -0.0011398973874747753, 0.0030304978135973215, -0.06457426398992538, -0.011525552719831467, 0.9978445172309875, -0.0062067327089607716, 0, 0, 0, 1],
-					[0.9724768996238708, 0.1884377896785736, 0.1370410919189453, -0.15658064186573029, -0.18591594696044922, 0.9820737838745117, -0.031093217432498932, 0.03468060865998268, -0.14044378697872162, 0.004759072791785002, 0.9900774359703064, 0.0045079998672008514, 0, 0, 0, 1],
-					[0.9981094598770142, -0.04080794379115105, 0.045919060707092285, 0.012718167155981064, 0.042856842279434204, 0.9980847835540771, -0.04456724226474762, 0.04381892457604408, -0.0440126396715641, 0.04645051062107086, 0.9979504346847534, -0.009566089138388634, 0, 0, 0, 1],
-					[0.9774969816207886, 0.19391271471977234, 0.08304928243160248, -0.08700916171073914, -0.1940585970878601, 0.9809669256210327, -0.006397423800081015, 0.005940734874457121, -0.08270982652902603, -0.009863472543656826, 0.9965227246284485, -0.004656741861253977, 0, 0, 0, 1],
-					[0.9798725247383118, 0.19271574914455414, 0.052085909992456436, -0.05549555644392967, -0.19193898141384125, 0.981212854385376, -0.019599031656980515, 0.02105993963778019, -0.05488575994968414, 0.009205679409205914, 0.9984515905380249, -0.006476571783423424, 0, 0, 0, 1],
-					[0.9999574422836304, 0.002256079576909542, -0.008818789385259151, 0.01223362609744072, -0.002192907966673374, 0.9999703168869019, 0.0072272359393537045, 0.035145051777362823, 0.0088342921808362, -0.007208544295281172, 0.9999356269836426, 0.0015992989065125585, 0, 0, 0, 1],
-					[0.9696974754333496, 0.244236022233963, -0.005808396730571985, -0.06747090071439743, -0.2442866712808609, 0.9696434736251831, -0.01049322634935379, 0.002447111066430807, 0.0030697775073349476, 0.011593809351325035, 0.9999249577522278, 0.0021306006237864494, 0, 0, 0, 1],
-					[0.980004608631134, 0.19617678225040436, -0.03325662389397621, 0.0545404776930809, -0.19653891026973724, 0.9804639220237732, -0.007955373264849186, 0.0060372669249773026, 0.031046036630868912, 0.014332282356917858, 0.999415397644043, -0.007550979033112526, 0, 0, 0, 1],
-					[0.985386312007904, 0.16620615124702454, -0.037278879433870316, 0.06181623786687851, -0.16893742978572845, 0.9815899133682251, -0.08911412954330444, 0.12798841297626495, 0.021781034767627716, 0.09410939365625381, 0.995323657989502, -0.004692168906331062, 0, 0, 0, 1],
-					[0.9781733751296997, 0.20291952788829803, 0.044735271483659744, -0.06879343092441559, -0.1969602406024933, 0.9740423560142517, -0.11157554388046265, 0.16981157660484314, -0.06621529906988144, 0.100328728556633, 0.992749035358429, 0.00005141554356669076, 0, 0, 0, 1],
-					[0.9857261180877686, 0.1683417409658432, 0.0013976511545479298, 0.0012193504953756928, -0.16834770143032074, 0.985697865486145, 0.007457362487912178, -0.017044084146618843, -0.00012255721958354115, -0.007586475927382708, 0.9999714493751526, -0.009183683432638645, 0, 0, 0, 1],
-					[0.8442354202270508, 0.19163988530635834, 0.5005471706390381, -0.7451958656311035, -0.2778599262237549, 0.9550867080688477, 0.10297906398773193, -0.15519681572914124, -0.45833149552345276, -0.22602111101150513, 0.8595662117004395, 0.24352216720581055, 0, 0, 0, 1],
-					[0.9939886331558228, 0.10930190980434418, -0.0063692317344248295, 0.014706732705235481, -0.10947734117507935, 0.9914080500602722, -0.07159378379583359, 0.10618557780981064, -0.0015112542314454913, 0.07186026871204376, 0.9974140524864197, -0.006450708489865065, 0, 0, 0, 1],
-					[0.8271387219429016, 0.13178329169750214, 0.5463243722915649, -0.8188632130622864, 0.00036614545388147235, 0.9719901084899902, -0.2350165694952011, 0.34491610527038574, -0.561994731426239, 0.19459189474582672, 0.8039243817329407, 0.3044455945491791, 0, 0, 0, 1],
-					[0.9980241656303406, 0.0319381058216095, -0.0541132390499115, 0.0947752520442009, -0.0324317142367363, 0.9994400143623352, -0.008263197727501392, 0.00029887803248129785, 0.053818803280591965, 0.010001637041568756, 0.9985009431838989, -0.008060899563133717, 0, 0, 0, 1],
-					[0.7838451862335205, 0.12082090973854065, 0.6090949773788452, -0.8558641076087952, -0.19936610758304596, 0.9779254794120789, 0.06258083134889603, -0.11716616153717041, -0.5880888104438782, -0.17048656940460205, 0.7906286716461182, 0.3232874870300293, 0, 0, 0, 1],
-					[0.7494807839393616, 0.18774954974651337, 0.6348416805267334, -0.9075111746788025, -0.04787546396255493, 0.9718017578125, -0.23088274896144867, 0.3432961702346802, -0.6602901816368103, 0.14264902472496033, 0.7373375296592712, 0.37997427582740784, 0, 0, 0, 1],
-					[0.7318723797798157, 0.06729403883218765, 0.6781105399131775, -0.8994971513748169, -0.13674934208393097, 0.9893725514411926, 0.04940712824463844, -0.12469913065433502, -0.6675799489021301, -0.12889154255390167, 0.7332966923713684, 0.3964546322822571, 0, 0, 0, 1],
-					[0.6346674561500549, -0.15112298727035522, 0.7578613758087158, -1.148959994316101, 0.16325603425502777, 0.9847771525382996, 0.05965302139520645, -0.04906150698661804, -0.7553419470787048, 0.08586539328098297, 0.6496793031692505, 0.4867972731590271, 0, 0, 0, 1],
-					[0.731839656829834, 0.06731421500444412, 0.6781467795372009, -0.8995251655578613, -0.13676860928535461, 0.9893707036972046, 0.04938841611146927, -0.12467449903488159, -0.6676150560379028, -0.128895103931427, 0.7332668304443359, 0.3964996039867401, 0, 0, 0, 1],
-					[0.63468998670578, -0.15115970373153687, 0.7578351497650146, -1.1489577293395996, 0.16326819360256195, 0.9847730994224548, 0.05968698859214783, -0.04910428076982498, -0.7553204298019409, 0.08584743738174438, 0.6497067213058472, 0.4867638349533081, 0, 0, 0, 1],
-					[0.9998804330825806, -0.007780218496918678, -0.013279682956635952, 0.014362306334078312, 0.007922662422060966, 0.9999096989631653, 0.010749048553407192, 0.03402912616729736, 0.013194323517382145, -0.010853939689695835, 0.9998546838760376, 0.001885891892015934, 0, 0, 0, 1],
-					[0.9680200815200806, 0.25080108642578125, -0.005846662912517786, -0.06600987166166306, -0.25085175037384033, 0.9679659605026245, -0.010475932620465755, 0.0027662119828164577, 0.003032528329640627, 0.011607198975980282, 0.999924898147583, 0.0021368826273828745, 0, 0, 0, 1],
-				];
-
 				for (var n=0; n<nodes.length; n++) {
 					var node = nodes[n];
 					var inverseTransform = inverseTransforms[n];
 					var transform = transforms[n];
 
-					if (n > 26) continue; // For now don't worry about fingers, facial rigs, etc
-					//if (n != 0 && n != 1 && n != 3 && n != 4 && n != 6) continue;
-
-					//var inversePos = new THREE.Vector3().fromArray(inverseTransform.origin);
-					//var inverseRotq = new THREE.Quaternion().fromArray(inverseTransform.r);
-					//var inverseScale = new THREE.Vector3(inverseTransform.s, inverseTransform.s, inverseTransform.s);
-					//var inverseMatrix = new THREE.Matrix4();
-					//inverseMatrix.compose(inversePos, inverseRotq, inverseScale);
-					//inverseMatrix.inverse();
-					//inverseMatrix.decompose(inversePos, inverseRotq, inverseScale);
-					//var inverseEuler = new THREE.Euler().setFromQuaternion(inverseRotq);
+					//if (n > 26) continue; // For now don't worry about fingers, facial rigs, etc
 
 					//var ts = transform.ts;
 					var offset = transform.offset;
@@ -1046,95 +1029,56 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var parentNode = bones[node.parent_node_index];
 
 					var pos = new THREE.Vector3(origin[0], origin[1], origin[2]);
-					//pos.set(pos.x+offset[0], pos.y+offset[1], pos.z+offset[2]);
-					//pos.set(pos.x, -pos.y, pos.z);
-					//pos.set(pos.x, pos.y, pos.z);
-					//pos.set(pos.x, pos.y, pos.z);
+					var scale = new THREE.Vector3(s, s, s);
 					var rotq = new THREE.Quaternion(r[0], r[1], r[2], r[3]);
 					var euler = new THREE.Euler().setFromQuaternion(rotq);
-					var oldEuler = new THREE.Euler().copy(euler);
-					/*if (n > 6) euler.set(0, 0, 0);
-					 else if (n > 0) {
-					 var parentRotq = new THREE.Quaternion().fromArray(transforms[node.parent_node_index].r);
-					 var parentEuler = new THREE.Euler().setFromQuaternion(parentRotq);
-					 if (node.parent_node_index == 0) {
-					 //parentEuler.x -= utils.degreesToRadian(90);
-					 //parentEuler.z -= utils.degreesToRadian(90);
-					 }
-					 //euler.x = parentEuler.x-euler.x;
-					 //euler.z = parentEuler.z-euler.z;
-					 }
-					 else {
-					 //euler.x += utils.degreesToRadian(90);
-					 //euler.z += utils.degreesToRadian(90);
-					 }*/
+
 					euler.set(0, 0, 0);
-
-					switch(n) {
-						//case 0: euler.z -= utils.degreesToRadian(90); break;
-						//case 1: euler.set(utils.degreesToRadian(0), utils.degreesToRadian(0), utils.degreesToRadian(0)); break;
-						//case 3: euler.set(utils.degreesToRadian(-4), utils.degreesToRadian(6), utils.degreesToRadian(0)); break;
-						//case 4: euler.set(utils.degreesToRadian(4), utils.degreesToRadian(-6), utils.degreesToRadian(0)); break;
-						//case 5: euler.set(utils.degreesToRadian(0), utils.degreesToRadian(0), utils.degreesToRadian(0)); break;
-						//case 6: euler.set(utils.degreesToRadian(-4), utils.degreesToRadian(6), utils.degreesToRadian(10)); break;
-						//case 7: euler.set(utils.degreesToRadian(4), utils.degreesToRadian(-6), utils.degreesToRadian(-10)); break;
-						//case 8: euler.set(utils.degreesToRadian(0), utils.degreesToRadian(0), utils.degreesToRadian(-8)); break;
-						//case 9: euler.set(utils.degreesToRadian(90), utils.degreesToRadian(80), utils.degreesToRadian(90)); break;
-						//case 10: euler.set(utils.degreesToRadian(-90), utils.degreesToRadian(80), utils.degreesToRadian(-90)); break;
-
-						//case 1: euler.x -= utils.degreesToRadian(90); euler.z -= utils.degreesToRadian(90); break;
-						//case 3: euler.x += utils.degreesToRadian(90); euler.z += utils.degreesToRadian(90); break;
-					}
-					//euler.set(euler.z, euler.y, euler.x);
-					//if (n != 0 && n != 1 && n != 3 && n != 4 && n != 6) euler.set(0, 0, 0);
 					rotq.setFromEuler(euler);
-					var scale = new THREE.Vector3(s, s, s);
 
-					var matrix = new THREE.Matrix4();
+					var absPos = new THREE.Vector3(pos.x, pos.y, pos.z);
+					var absRotq = new THREE.Quaternion(rotq.x, rotq.y, rotq.z, rotq.w);
+					var absEuler = new THREE.Euler().setFromQuaternion(absRotq);
 
-					matrix.makeRotationFromQuaternion(rotq);
-					matrix.scale(scale);
-					matrix.setPosition(pos);
-					//matrix.transpose();
-					//matrix.setPosition(pos);
+					var absScale = new THREE.Vector3(scale.x, scale.y, scale.z);
 
-					//matrix.makeTranslation(pos[0], pos[1], pos[2]);
-					//matrix.compose(pos, rotq, scale);
+					if (n == 0) {
+						//euler.y = utils.degreesToRadian(-90);
+						//euler.set(utils.degreesToRadian(-90), 0, utils.degreesToRadian(-90));
+						//rotq.setFromEuler(euler);
+					}
+
 					if (parentNode) {
 						//pos.set(parentNode.pos[0]-pos.x, parentNode.pos[1]-pos.y, parentNode.pos[2]-pos.z);
 
-						var parentRotq = new THREE.Quaternion().fromArray(parentNode.rotq);
-						//var parentEuler = new THREE.Euler().setFromQuaternion(parentRotq);
-						//rotq.multiply(parentRotq);
-						//euler.setFromQuaternion(rotq);
+						absPos.x -= parentNode.pos[0];
+						absPos.y -= parentNode.pos[1];
+						absPos.z -= parentNode.pos[2];
 
-						//var parentRotq = new THREE.Quaternion();
-						//parentRotq.fromArray(parentNode.rotq);
-						//parentRotq.inverse();
-						//rotq.multiply(parentRotq);
-						//rotq.inverse();
-						//rotq.multiply(parentRotq);
-						//euler.setFromQuaternion(rotq);
-						//parentMatrix.makeRotationFromQuaternion(new THREE.Quaternion().fromArray(parentNode.rotq));
-						//console.log('BoneParent', parentRotq);
-						//rotq = rotq.multiply(parentRotq);
-						//matrix.multiply(parentNode.matrix);
-						//matrix.multiplyMatrices(matrix, parentNode.matrix);
+						var parentRotq = new THREE.Quaternion().fromArray(parentNode.rotq);
+						var parentEuler = new THREE.Euler().setFromQuaternion(parentRotq);
+
+
+						absEuler.x -= parentEuler.x;
+						absEuler.y -= parentEuler.y;
+						absEuler.z -= parentEuler.z;
+						//absRotq.setFromEuler(absEuler);
+
+						absRotq = absRotq.multiply(parentRotq.inverse());
 					}
 
-					//matrix.decompose(pos, rotq, scale);
-
 					//if (n == 0 || n == 1 || n == 3 || n == 4 || n == 6)
-					console.log('Bone['+n+']', node.name.string+':'+node.name.hash, node.parent_node_index,
-						"\n"+'opos: '+origin[0]+', '+origin[1]+', '+origin[2],
+					if (n <= -1/*26*/) console.log('Bone['+n+']', node.name.string+':'+node.name.hash, node.parent_node_index,
 						"\n"+'pos: '+pos.x+', '+pos.y+', '+pos.z,
+						"\n"+'apos: '+absPos.x+', '+absPos.y+', '+absPos.z,
 						//"\n"+'lpos: '+logPos.x+', '+logPos.y+', '+logPos.z,
 						//"\n"+'ipos: '+inversePos.x+', '+inversePos.y+', '+inversePos.z,
 
 						//"\n"+'orotq: '+r[0]+', '+r[1]+', '+r[2]+', '+r[3],
 						//	"\n"+'rotq: '+rotq.x+','+rotq.y+','+rotq.z+','+rotq.w,
-						"\n"+'orot: '+Math.round(utils.radianToDegrees(oldEuler.x))+', '+Math.round(utils.radianToDegrees(oldEuler.y))+', '+Math.round(utils.radianToDegrees(oldEuler.z)),
 						"\n"+'rot: '+Math.round(utils.radianToDegrees(euler.x))+', '+Math.round(utils.radianToDegrees(euler.y))+', '+Math.round(utils.radianToDegrees(euler.z)),
+						"\n"+'arot: '+Math.round(utils.radianToDegrees(absEuler.x))+', '+Math.round(utils.radianToDegrees(absEuler.y))+', '+Math.round(utils.radianToDegrees(absEuler.z)),
+
 						//"\n"+'irot: '+Math.round(utils.radianToDegrees(inverseEuler.x))+', '+Math.round(utils.radianToDegrees(inverseEuler.y))+', '+Math.round(utils.radianToDegrees(inverseEuler.z)),
 						//"\n"+'lrot: '+Math.round(utils.radianToDegrees(logEuler.x))+', '+Math.round(utils.radianToDegrees(logEuler.y))+', '+Math.round(utils.radianToDegrees(logEuler.z)),
 						////'rotq: '+r[0]+'/'+rotq.x+','+r[1]+'/'+rotq.y+','+r[2]+'/'+rotq.z+','+r[3]+'/'+rotq.w,
@@ -1155,18 +1099,100 @@ Object.assign(THREE.TGXLoader.prototype, {
 						parent: node.parent_node_index,
 						nodeHash: node.name.hash,
 						name: node.name.string,
-						pos: pos.toArray(),//[pos[0]+offset[0], pos[1]+offset[1], pos[2]+offset[2]],
+						pos: pos.toArray(),
 						rotq: rotq.toArray(),
-						scl: scale.toArray(),
-						//pos: logPos.toArray(),
-						//rotq: logQuat.toArray(),
-						//scl: logScale.toArray(),
-						matrix: matrix
+						scl: scale.toArray()
+					});
+					absBones.push({
+						parent: node.parent_node_index,
+						nodeHash: node.name.hash,
+						name: node.name.string,
+						pos: absPos.toArray(),
+						rotq: absRotq.toArray(),
+						scl: absScale.toArray()
 					});
 				}
-				console.log('Bones', bones);
+				//console.log('Bones', bones, absBones);
 			}
-			return bones;
+			return absBones;
+		}
+
+		function parseAnimation(bones) {
+			console.log('Animation['+animationPath+']', contentLoaded.animations);
+			var animation = contentLoaded.animations[0];
+
+			var animRate = 30;
+			var animLength = animation.duration_in_frames / animRate;
+
+			var staticBoneData = animation.static_bone_data;
+			var staticScaleControlMap = staticBoneData.scale_control_map;
+			var staticRotationControlMap = staticBoneData.rotation_control_map;
+			var staticTranslationControlMap = staticBoneData.translation_control_map;
+			var staticTransforms = staticBoneData.transform_stream_header.streams.frames[0];
+
+			var staticScales = staticTransforms.scales;
+			var staticRotations = staticTransforms.rotations;
+			var staticTranslations = staticTransforms.translations;
+
+			var animatedBoneData = animation.animated_bone_data;
+			var animatedScaleControlMap = animatedBoneData.scale_control_map;
+			var animatedRotationControlMap = animatedBoneData.rotation_control_map;
+			var animatedTranslationControlMap = animatedBoneData.translation_control_map;
+			var animatedTransformFrames = animatedBoneData.transform_stream_header.streams.frames;
+
+			var hierarchy = [];
+
+			for (var i=0; i<animation.frame_count; i++) {
+				var animatedTransforms = animatedTransformFrames[i];
+				var animatedScales = animatedTransforms.scales;
+				var animatedRotations = animatedTransforms.rotations;
+				var animatedTranslations = animatedTransforms.translations;
+
+				for (var j=0; j<animation.node_count; j++) {
+					var staticScaleIndex = staticScaleControlMap.indexOf(j);
+					var staticRotationIndex = staticRotationControlMap.indexOf(j);
+					var staticTranslationIndex = staticTranslationControlMap.indexOf(j);
+
+					var animatedScaleIndex = animatedScaleControlMap.indexOf(j);
+					var animatedRotationIndex = animatedRotationControlMap.indexOf(j);
+					var animatedTranslationIndex = animatedTranslationControlMap.indexOf(j);
+
+					var scale = staticScaleIndex >= 0 ?
+						staticScales[staticScaleIndex] : animatedScales[animatedScaleIndex];
+					var rotation = staticRotationIndex >= 0 ?
+						staticRotations[staticRotationIndex] : animatedRotations[animatedRotationIndex];
+					var translation = staticTranslationIndex >= 0
+						?
+						staticTranslations[staticTranslationIndex]
+						: animatedTranslations[animatedTranslationIndex];
+
+					var bone = bones[j];
+
+					//console.log('Frame['+i+'-'+j+']', translation, rotation, scale, bone);
+					if (i == 0) {
+						hierarchy.push({
+							parent: bone.parent,
+							name: bone.name,
+							keys: []
+						});
+					}
+					var node = hierarchy[j];
+					node.keys.push({
+						time: i/animRate,
+						pos: translation,
+						rot: rotation,
+						scl: [scale, scale, scale]
+					});
+				}
+				//break;
+			}
+
+			return {
+				name: animationPath.split('.js')[0],
+				fps: animRate,
+				length: animLength,
+				hierarchy: hierarchy
+			};
 		}
 
 		// Spasm.TGXAssetLoader.prototype.getGearDyes
@@ -1534,10 +1560,12 @@ Object.assign(THREE.TGXLoader.prototype, {
 		return function(data, options, onLoad, onProgress, onError) {
 			basepath = options.basepath;
 			platform = options.platform;
+			animationPath = options.animationPath;
 			itemHash = options.itemHash;
 			isFemale = options.isFemale;
 			classHash = options.classHash;
 			loadSkeleton = options.loadSkeleton;
+			loadAnimation = options.loadAnimation;
 			loadTextures = options.loadTextures;
 			onLoadCallback = onLoad;
 			onProgressCallback = onProgress;
