@@ -4,12 +4,42 @@ $cachePath = BUILDERPATH.'/cache/cache.json';
 
 $enumsPath = BUILDERPATH.'/data/enums.json';
 
+$races = array(
+	'Fallen' => array(
+		'raceId' => 'Fallen',
+		'name' => 'Fallen',
+		'symbol' => 'symbol_fallen.svg'
+	),
+	'Hive' => array(
+		'raceId' => 'Hive',
+		'name' => 'Hive',
+		'symbol' => 'symbol_hive.svg'
+	),
+	'Vex' => array(
+		'raceId' => 'Vex',
+		'name' => 'Vex',
+		'symbol' => 'symbol_vex.svg'
+	),
+	'Cabal' => array(
+		'raceId' => 'Cabal',
+		'name' => 'Cabal',
+		'symbol' => 'symbol_cabal.svg'
+	),
+	'Taken' => array(
+		'raceId' => 'Taken',
+		'name' => 'Taken',
+		'symbol' => 'symbol_taken.svg'
+	)
+);
+
 $factions = array(
 	'FallenDevils' => array('factionId' => 'FallenDevils', 'factionName' => 'House of Devils'),
 	'FallenExile' => array('factionId' => 'FallenExile', 'factionName' => 'House of Exile'),
 	'FallenKings' => array('factionId' => 'FallenKings', 'factionName' => 'House of Kings'),
 	'FallenWinter' => array('factionId' => 'FallenWinter', 'factionName' => 'House of Winter'),
 	'FallenWolves' => array('factionId' => 'FallenWolves', 'factionName' => 'House of Wolves'),
+	
+	'FallenDevilSplicers' => array('factionId' => 'FallenDevilSplicers', 'factionName' => 'Devil Splicers'),
 
 	'HiveSpawnOfCrota' => array('factionId' => 'HiveSpawnOfCrota', 'factionName' => 'Spawn of Crota'),
 	'HiveHiddenSwarm' => array('factionId' => 'HiveHiddenSwarm', 'factionName' => 'Hidden Swarm'),
@@ -41,40 +71,44 @@ $prefixes = array(
 );
 
 $weapons = array(
-	'ShockPistol' => array('weaponId' => 'ShockPistol', 'weaponName' => 'Shock Pistol', 'damageType' => 'Arc'),
-	'ShockRifle' => array('weaponId' => 'ShockRifle', 'weaponName' => 'Shock Rifle', 'damageType' => 'Arc'),
-	'WireRifle' => array('weaponId' => 'WireRifle', 'weaponName' => 'Wire Rifle', 'damageType' => 'Arc'),
-	'ShrapnelLauncher' => array('weaponId' => 'ShrapnelLauncher', 'weaponName' => 'Shrapnel Launcher', 'damageType' => 'Solar'),
-	'ShockDagger' => array('weaponId' => 'ShockDagger', 'weaponName' => 'Shock Dagger', 'damageType' => 'Arc'),
-	'ShockBlade' => array('weaponId' => 'ShockBlade', 'weaponName' => 'Shock Blade', 'damageType' => 'Arc'),
-	'ShockGrenade' => array('weaponId' => 'ShockGrenade', 'weaponName' => 'Shock Grenade', 'damageType' => 'Arc'),
-	'ShockTurret' => array('weaponId' => 'ShockTurret', 'weaponName' => 'Shock Turrent', 'damageType' => 'Arc'),
+	'ShockPistol' => array('weaponId' => 'ShockPistol', 'weaponName' => 'Shock Pistol', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'ShockRifle' => array('weaponId' => 'ShockRifle', 'weaponName' => 'Shock Rifle', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'WireRifle' => array('weaponId' => 'WireRifle', 'weaponName' => 'Wire Rifle', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'ShrapnelLauncher' => array('weaponId' => 'ShrapnelLauncher', 'weaponName' => 'Shrapnel Launcher', 'damageType' => 'Solar', 'enemyRace' => 'Fallen'),
+	'ShockDagger' => array('weaponId' => 'ShockDagger', 'weaponName' => 'Shock Dagger', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'ShockBlade' => array('weaponId' => 'ShockBlade', 'weaponName' => 'Shock Blade', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'ShockGrenade' => array('weaponId' => 'ShockGrenade', 'weaponName' => 'Shock Grenade', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'ShockTurret' => array('weaponId' => 'ShockTurret', 'weaponName' => 'Shock Turret', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
 
-	'Shredder' => array('weaponId' => 'Shredder', 'weaponName' => 'Shredder', 'damageType' => 'Void'),
-	'Boomer' => array('weaponId' => 'Boomer', 'weaponName' => 'Boomer', 'damageType' => 'Arc'),
-	'Cleaver' => array('weaponId' => 'Cleaver', 'weaponName' => 'Cleaver', 'damageType' => ''),
+	'Shredder' => array('weaponId' => 'Shredder', 'weaponName' => 'Shredder', 'damageType' => 'Void', 'enemyRace' => 'Hive'),
+	'Boomer' => array('weaponId' => 'Boomer', 'weaponName' => 'Boomer', 'damageType' => 'Arc', 'enemyRace' => 'Hive'),
+	'Cleaver' => array('weaponId' => 'Cleaver', 'weaponName' => 'Cleaver', 'damageType' => '', 'enemyRace' => 'Hive'),
 
-	'Exploder' => array('weaponId', 'Exploder', 'weaponName' => 'Explode'),
+	'Exploder' => array('weaponId', 'Exploder', 'weaponName' => 'Explode', 'enemyRace' => 'Hive'),
 
-	'SlapRifle' => array('weaponId' => 'SlapRifle', 'weaponName' => 'Slap Rifle', 'damageType' => 'Solar'),
-	'LineRifle' => array('weaponId' => 'LineRifle', 'weaponName' => 'Line Rifle', 'damageType' => 'Solar'),
-	'TorchHammer' => array('weaponId' => 'TorchHammer', 'weaponName' => 'Torch Hammer', 'damageType' => 'Void'),
-	'SlapGrenade' => array('weaponId' => 'SlapGrenade', 'weaponName' => 'Slap Grenade', 'damageType' => 'Void'),
+	'SlapRifle' => array('weaponId' => 'SlapRifle', 'weaponName' => 'Slap Rifle', 'damageType' => 'Solar', 'enemyRace' => 'Vex'),
+	'LineRifle' => array('weaponId' => 'LineRifle', 'weaponName' => 'Line Rifle', 'damageType' => 'Solar', 'enemyRace' => 'Vex'),
+	'TorchHammer' => array('weaponId' => 'TorchHammer', 'weaponName' => 'Torch Hammer', 'damageType' => 'Void', 'enemyRace' => 'Vex'),
+	'SlapGrenade' => array('weaponId' => 'SlapGrenade', 'weaponName' => 'Slap Grenade', 'damageType' => 'Void', 'enemyRace' => 'Vex'),
 
-	'SlugRifle' => array('weaponId' => 'SlugRifle', 'weaponName' => 'Slug Rifle', 'damageType' => 'Solar'),
-	'ProjectionRifle' => array('weaponId' => 'ProjectionRifle', 'weaponName' => 'Projection Rifle', 'damageType' => 'Solar'),
-	'HeavySlugThrower' => array('weaponId' => 'HeavySlugThrower', 'weaponName' => 'Heavy Slug Thrower', 'damageType' => 'Solar'),
-	'CabalShield' => array('weaponId' => 'CabalShield', 'weaponName' => 'Cabal Shield', 'damageType' => ''),
+	'SlugRifle' => array('weaponId' => 'SlugRifle', 'weaponName' => 'Slug Rifle', 'damageType' => 'Solar', 'enemyRace' => 'Cabal'),
+	'ProjectionRifle' => array('weaponId' => 'ProjectionRifle', 'weaponName' => 'Projection Rifle', 'damageType' => 'Solar', 'enemyRace' => 'Cabal'),
+	'HeavySlugThrower' => array('weaponId' => 'HeavySlugThrower', 'weaponName' => 'Heavy Slug Thrower', 'damageType' => 'Solar', 'enemyRace' => 'Cabal'),
+	'CabalShield' => array('weaponId' => 'CabalShield', 'weaponName' => 'Cabal Shield', 'damageType' => '', 'enemyRace' => 'Cabal'),
 
-	'WebMines' => array('weaponId' => 'WebMines', 'weaponName' => 'Web Mines', 'damageType' => 'Arc'),
-	'ScorchCannon' => array('weaponId' => 'ScorchCannon', 'weaponName' => 'Scorch Cannon', 'damageType' => 'Solar'),
+	'WebMines' => array('weaponId' => 'WebMines', 'weaponName' => 'Web Mines', 'damageType' => 'Arc', 'enemyRace' => 'Fallen'),
+	'ScorchCannon' => array('weaponId' => 'ScorchCannon', 'weaponName' => 'Scorch Cannon', 'damageType' => 'Solar', 'enemyRace' => 'Fallen'),
 
-	'TakenWireRifle' => array('weaponId' => 'WireRifle', 'weaponName' => 'Wire Rifle', 'damageType' => 'Solar'),
-	'TakenShrapnelLauncher' => array('weaponId' => 'ShrapnelLauncher', 'weaponName' => 'Shrapnel Launcher', 'damageType' => 'Arc'),
-	'TakenShredder' => array('weaponId' => 'Shredder', 'weaponName' => 'Shredder', 'damageType' => 'Solar'),
-	'TakenBoomer' => array('weaponId' => 'Boomer', 'weaponName' => 'Boomer', 'damageType' => 'Void'),
-	'TakenLineRifle' => array('weaponId' => 'LineRifle', 'weaponName' => 'Line Rifle', 'damageType' => 'Void'),
-	'TakenTorchHammer' => array('weaponId' => 'TorchHammer', 'weaponName' => 'Torch Hammer', 'damageType' => 'Solar'),
+	'TakenWireRifle' => array('weaponId' => 'TakenWireRifle', 'weaponName' => 'Wire Rifle', 'damageType' => 'Solar', 'enemyRace' => 'Taken'),
+	'TakenShrapnelLauncher' => array('weaponId' => 'TakenShrapnelLauncher', 'weaponName' => 'Shrapnel Launcher', 'damageType' => 'Arc', 'enemyRace' => 'Taken'),
+	'TakenShredder' => array('weaponId' => 'TakenShredder', 'weaponName' => 'Shredder', 'damageType' => 'Solar', 'enemyRace' => 'Taken'),
+	'TakenBoomer' => array('weaponId' => 'TakenBoomer', 'weaponName' => 'Taken Boomer', 'damageType' => 'Void', 'enemyRace' => 'Taken'),
+	'TakenLineRifle' => array('weaponId' => 'TakenLineRifle', 'weaponName' => 'Line Rifle', 'damageType' => 'Void', 'enemyRace' => 'Taken'),
+	'TakenTorchHammer' => array('weaponId' => 'TakenTorchHammer', 'weaponName' => 'Torch Hammer', 'damageType' => 'Solar', 'enemyRace' => 'Taken'),
+	
+	'TakenNecromanticGaze' => array('weaponId' => 'TakenNecromanticGaze', 'weaponName' => 'Necromantic Gaze', 'damageType' => 'Solar', 'enemyRace' => 'Taken'),
+	'TakenBurn' => array('weaponId' => 'TakenBurn', 'weaponName' => 'Burn', 'damageType' => 'Solar', 'enemyRace' => 'Taken'),
+	'RageOfOryx' => array('weaponId' => 'RageOfOryx', 'weaponName' => 'Rage of Oryx', 'enemyRace' => 'Taken'),
 
 );
 
@@ -281,7 +315,7 @@ $enemyOverrides = array(
 	'TheGorgons' => array('raceClass' => 'VexMajorHarpyA', 'cardId' => 603025, 'activityType' => 'Raid', 'activity' => 'RaidVenus0', 'destination' => 'Venus', 'location' => 'GorgonsLabyrinth'),
 	'DustPalaceBosses' => array('raceClass' => 'CabalMajorPsionA', 'cardId' => 601040, 'activityType' => 'Strike', 'activity' => 'StrikeMars1'),
 	'ThePsionFlayers' => array('raceClass' => 'CabalMajorPsionA', 'cardId' => 601040, 'activityType' => 'Strike', 'activity' => 'StrikeMars1'),
-	'SwarmPrinces' => array('raceClass'=> 'HiveMajorKnightACleaver', 'cardId' => 502090, 'activityType' => 'Story', 'destination' => 'Moon', 'HiveHiddenSwarm'),
+	'SwarmPrinces' => array('raceClass'=> 'HiveMajorKnightACleaver', 'cardId' => 502090, 'activityType' => 'Story', 'destination' => 'Moon', 'faction' => 'HiveHiddenSwarm'),
 	'BossesAtVaultOfGlass' => array('cardId' => 603020),
 	'RaidBosses' => array('cardId' => 603010),
 	'SolProgeny' => array('enemyName' => 'Sol Progeny', 'raceClass' => 'VexUltraMinotaurA', 'location' => 'BlackGardenHeart', 'cardId' => 504150, 'activityType' => 'Story', 'activity' => 'StoryMars7'),
@@ -454,12 +488,12 @@ $enemyOverrides = array(
 	//'TakenShank', 'Taken Shank',
 	'TakenVandal' => array('enemyName' => 'Taken Vandal', 'expansionId' => 'R1S4', 'enemyWeapon' => 'TakenWireRifle'),
 
-	'TakenKnight' => array('enemyName' => 'Taken Knight', 'expansionId' => 'R1S4'),
+	'TakenKnight' => array('enemyName' => 'Taken Knight', 'expansionId' => 'R1S4', 'enemyWeapon' => 'TakenBoomer', 'otherWeapons' => array('TakenBurn')),
 	'TakenOgre' => array('enemyName' => 'Taken Ogre', 'expansionId' => 'R1S4'),
 	'TakenThrall' => array('enemyName' => 'Taken Thrall', 'expansionId' => 'R1S4'),
 	//'TakenThrallExploder' => 'Taken Cursed Thrall',
 	'TakenAcolyte' => array('enemyName' => 'Taken Acolyte', 'expansionId' => 'R1S4', 'epic' => array('enemyShield' => 'VoidShield'), 'enemyWeapon' => 'TakenShredder'),
-	'TakenWizard' => array('enemyName' => 'Taken Wizard', 'expansionId' => 'R1S4', 'enemyShield' => 'VoidShield'),
+	'TakenWizard' => array('enemyName' => 'Taken Wizard', 'expansionId' => 'R1S4', 'enemyShield' => 'VoidShield', 'otherWeapons' => array('TakenNecromanticGaze')),
 
 	//'TakenHarpy' => 'Taken Harpy',
 	'TakenMinotaur' => array('enemyName' => 'Taken Minotaur', 'expansionId' => 'R1S4'),
@@ -474,7 +508,7 @@ $enemyOverrides = array(
 	'CabalChampions' => array('enemyName' => 'Cabal Champions', 'expansionId' => 'R1S4'),
 	'TakenChampions' => array('enemyName' => 'Taken Champions', 'expansionId' => 'R1S4'),
 
-	'R1S4StoryCosmoElevatorUltra0' => array('enemyName' => 'Echo of Oryx', 'enemyRace' => 'Taken'),
+	'R1S4StoryCosmoElevatorUltra0' => array('enemyName' => 'Echo of Oryx', 'enemyRace' => 'Taken', 'enemyWeapon' => 'RageOfOryx'),
 
 	'R1S4StoryPhobosDarksnowMajor2' => array('enemyName' => 'Syrok, Word of Oryx', 'raceClass' => 'TakenMajorKnightA'),
 
@@ -525,6 +559,21 @@ $enemyOverrides = array(
 	'R1S4RaidEpiphanyTwinWizard' => array('enemyName' => 'Ir Halak, Deathsinger', 'raceClass' => 'HiveMajorWizardA', 'enemyTier' => 'Ultra', 'destination' => 'Hiveship'),
 	'R1S4RaidEpiphanyTwinWizardA' => array('enemyName' => 'Ir Anûk, Deathsinger', 'raceClass' => 'HiveMajorWizardA', 'enemyTier' => 'Ultra', 'destination' => 'Hiveship'),
 	'R1S4RaidEpiphanyDeadKing' => array('enemyName' => 'Oryx, The Taken King', 'raceName' => 'Taken', 'enemyTier' => 'Ultra', 'destination' => 'Hiveship', 'cardId' => 700470),
+
+	// ============================
+	// Expansion IV: Rise of Iron
+	// ============================
+	'SivaCaptain' => array('enemyName' => 'SIVA Captain', 'faction' => 'FallenDevilSplicers'),
+	'SivaDreg' => array('enemyName' => 'SIVA Dreg', 'faction' => 'FallenDevilSplicers'),
+	'SivaServitor' => array('enemyName' => 'SIVA Servitor', 'faction' => 'FallenDevilSplicers'),
+	'SivaShank' => array('enemyName' => 'SIVA Shank', 'faction' => 'FallenDevilSplicers'),
+	'SivaVandal' => array('enemyName' => 'SIVA Vandal', 'faction' => 'FallenDevilSplicers'),
+	'AiIronLord' => array('enemyName' => 'Iron Lords', 'enemyRace' => 'Fallen', 'faction' => 'FallenDevilSplicers'),
+	'R1S5StrikeStarfishUltraServitor' => array('enemyName' => 'Sepiks Perfected', 'raceClass' => 'FallenUltraServitorA', 'faction' => 'FallenDevilSplicers'),
+	'R1S5StrikeOathUltraCaptain' => array('enemyName' => 'Kovik, Splicer Priest', 'raceClass' => 'FallenUltraCaptainA', 'faction' => 'FallenDevilSplicers', 'enemyWeapon' => 'ScorchCannonVoid'),
+	'R1S5RaidPromiseWelderUltraCaptain' => array('enemyName' => 'Vosik, The Archepriest', 'raceClass' => 'FallenUltraCaptainA', 'faction' => 'FallenDevilSplicers', 'enemyWeapon' => 'ScorchCannon'),
+	'R1S5RaidPromiseSeraphUltraCaptain' => array('enemyName' => 'Aksis, Archon Prime', 'raceClass' => 'FallenUltraCaptainA', 'faction' => 'FallenDevilSplicers'),
+	
 );
 
 $enemyNoStats = array(
@@ -663,8 +712,8 @@ $enemyNoStats = array(
 	'R1S4StrikeHiveshipOverlordMinorBurners' => array('enemyName' => 'Psion Burners', 'raceClass' => 'CabalPsion'),
 
 	// Dust Palace
-	'R1S4StrikeMars1MajorLharkiss' => array('enemyName' => 'Lharkiss, Wolf Bane', 'raceClass' => 'TakenMajorVandalA', 'Overwatch'),
-	'R1S4StrikeMars1MajorDraang' => array('enemyName' => 'Bracus Dra\'ang', 'raceClass' => 'CabalMajorGladiatorA', 'Overwatch'),
+	'R1S4StrikeMars1MajorLharkiss' => array('enemyName' => 'Lharkiss, Wolf Bane', 'raceClass' => 'TakenMajorVandalA', 'location' => 'Overwatch'),
+	'R1S4StrikeMars1MajorDraang' => array('enemyName' => 'Bracus Dra\'ang', 'raceClass' => 'CabalMajorGladiatorA', 'location' => 'Overwatch'),
 
 	// Cerberus Vae III
 	'R1S4StrikeMars2MajorHephone' => array('enemyName' => 'Hephone, Corruption Mind', 'raceClass' => 'TakenMajorHydraA', 'location' => 'IronLine'),
@@ -680,10 +729,10 @@ $enemyNoStats = array(
 
 	'R1S4WantedEventUltraKeldar' => array('enemyName' => 'Keldar, Archon Priest', 'raceClass' => 'FallenUltraCaptainA', 'faction' => 'FallenWolves'),
 
-	'R1S4EventHiveshipMajorNengalish' => array('enemyName' => 'Nengalish', 'raceClass' => 'HiveMajorKnightA', 'HullBreach'),
-	'R1S4EventHiveshipMajorBlahgrish' => array('enemyName' => 'Blahgrish', 'raceClass' => 'HiveMajorOgreA', 'HullBreach'),
-	'R1S4EventHiveshipMajorVeength' => array('enemyName' => 'Ve\'ength', 'raceClass' => 'CabalMajorCenturionA', 'HullBreach'),
-	'R1S4EventHiveshipMajorTauugh' => array('enemyName' => 'Valus Tau\'ugh', 'raceClass' => 'CabalMajorGladiatorA', 'HullBreach'),
+	'R1S4EventHiveshipMajorNengalish' => array('enemyName' => 'Nengalish', 'raceClass' => 'HiveMajorKnightA', 'location' => 'HullBreach'),
+	'R1S4EventHiveshipMajorBlahgrish' => array('enemyName' => 'Blahgrish', 'raceClass' => 'HiveMajorOgreA', 'location' => 'HullBreach'),
+	'R1S4EventHiveshipMajorVeength' => array('enemyName' => 'Ve\'ength', 'raceClass' => 'CabalMajorCenturionA', 'location' => 'HullBreach'),
+	'R1S4EventHiveshipMajorTauugh' => array('enemyName' => 'Valus Tau\'ugh', 'raceClass' => 'CabalMajorGladiatorA', 'location' => 'HullBreach'),
 
 	'R1S4EventHiveshipMajorAarta' => array('enemyName' => 'Aarta', 'raceClass' => 'TakenMajorKnightA'),
 	'R1S4EventHiveshipMajorDakkadi' => array('enemyName' => 'Daakkadi', 'raceClass' => 'TakenMajorKnightA'),
@@ -719,7 +768,7 @@ $enemyNoStats = array(
 	'R1S4RaidEpiphanyAdept' => array('enemyName' => 'Adept', 'raceClass' => 'HiveMajorAcoylteA'),
 	'R1S4RaidEpiphanyLightOgre' => array('enemyName' => 'Light Eater Ogre', 'raceClass' => 'TakenMajorOgreA'),
 	'R1S4RaidEpiphanyVessel' => array('enemyName' => 'Vessel', 'raceClass' => 'TakenMajorKnightA'),
-	'R1S4RaidEpiphanyLightKnight' => array('enemyName' => 'Light Eater Knight', 'raceClass' => 'TakenMajorKnightA', 'HiveMajorKnightACleaver'),
+	'R1S4RaidEpiphanyLightKnight' => array('enemyName' => 'Light Eater Knight', 'raceClass' => 'TakenMajorKnightA', 'enemyWeapon' => 'Cleaver'),
 
 	// New Prison of Elders
 	'R1S4ArenaReefSeditiousMind' => array('enemyName' => 'Seditious Mind', 'raceClass' => 'TakenUltraHydraA'),
@@ -727,6 +776,7 @@ $enemyNoStats = array(
 	// Taken Winters Run
 	'R1S4VenusStrikeNixis' => array('enemyName' => 'Nixis, Hunger of Oryx', 'raceClass' => 'TakenUltraCaptainA', 'location' => 'WintersRun')
 
+	// Rise of Iron
 );
 
 function applyEnemyClass(&$enemy, $enemies, $enemyClass=false) {
@@ -982,7 +1032,7 @@ if (file_exists($cachePath) && file_exists($enumsPath)) {
 
 	file_put_contents(BUILDERPATH.'/data/historical-stats.json', json_encode($statGroups, JSON_PRETTY_PRINT));
 
-	?>
+	/*?>
 	<table class="historical-stats" style="font-size: 0.8em;">
 		<thead>
 			<tr>
@@ -1047,6 +1097,170 @@ if (file_exists($cachePath) && file_exists($enumsPath)) {
 	<?php
 	foreach($cards as $card) {
 		echo '<pre>'.$card->cardId.' | '.$card->cardName.'</pre>';
-	}
+	}*/
 	//echo '<pre>'.var_export($cards, true).'</pre>';
 }
+
+$bestiaryPath = BUILDERPATH.'/data/enemy-bestiary.json';
+$bestiary = (object)array(
+	'enemyRaces' => array(),
+	'enemyWeapons' => array(),
+	'enemyTypes' => array()
+);
+
+foreach($races as $raceId => $race) {
+	$raceFactions = array();
+	foreach($factions as $factionId => $faction) {
+		if (strpos($factionId, $raceId) !== false) {
+			$raceFactions[$factionId] = array(
+				'id' => $factionId,
+				'name' => $faction['factionName']
+			);
+			if (isset($faction['symbol'])) $raceFactions[$factionId]['symbol'] = $faction['symbol'];
+		}
+	}
+	$bestiary->enemyRaces[$raceId] = array(
+		'id' => $raceId,
+		'name' => $race['name'],
+		'symbol' => $race['symbol'],
+		'factions' => $raceFactions
+	);
+}
+
+foreach($statGroups['Enemies'] as $enemyId => $enemy) {
+	
+	if (isset($enemy['overrides'])) foreach($enemy['overrides'] as $key => $value) {
+		$enemy[$key] = $value;
+	}
+	
+	$enemyWeapons = array();
+	$entry = array(
+		'id' => $enemyId,
+		'name' => $enemy['enemyName'],
+		//'enemyRace' => $enemy['raceName'],
+		//'tier' => $enemy['enemyTier'],
+		//'weapons' => $weapons,
+		//'stats' => $enemy['stats']
+	);
+	$entry['tier'] = isset($enemy['enemyTier']) ? $enemy['enemyTier'] : 'Minor';
+	if (isset($enemy['raceClass']) && $enemy['raceClass'] != $enemyId) {
+		$entry['parent'] = $enemy['raceClass'];
+	}
+	if (isset($enemy['raceName'])) {
+		if ($enemy['raceName'] == $enemyId) continue;
+		//if ($enemy['raceName'] == 'Player') continue;
+		$entry['enemyRace'] = $enemy['raceName'];
+	}
+	if (isset($enemy['enemyRace'])) $entry['enemyRace'] = $enemy['enemyRace'];
+	
+	if (isset($enemy['faction'])) $entry['factions'] = array($enemy['faction']);
+	
+	if (isset($enemy['activityType'])) $entry['activityType'] = $enemy['activityType'];
+	if (isset($enemy['activity'])) $entry['activity'] = $enemy['activity'];
+	if (isset($enemy['destination'])) $entry['destination'] = $enemy['destination'];
+	if (isset($enemy['location'])) $entry['location'] = $enemy['location'];
+	if (isset($enemy['expansionId'])) $entry['expansionId'] = $enemy['expansionId'];
+	
+	if (isset($enemy['cardId'])) $entry['cardId'] = $enemy['cardId'];
+	
+	if (isset($enemy['enemyShield'])) $entry['shield'] = str_replace('Shield', '', $enemy['enemyShield']);
+	if (isset($enemy['enemyWeapon'])) $enemyWeapons[] = $enemy['enemyWeapon'];
+	if (isset($enemy['enemyOtherWeapons'])) $enemyWeapons = array_merge($enemyWeapons, array_diff($enemy['enemyOtherWeapons'], $enemyWeapons));
+	
+	$entry['weapons'] = $enemyWeapons;
+	
+	foreach($enemyWeapons as $weaponId) {
+		if (isset($bestiary->enemyWeapons[$weaponId])) continue;
+		if (!isset($weapons[$weaponId])) {
+			echo '<pre>MissingWeapon: '.$weaponId.'</pre>';
+			continue;
+		}
+		$weapon = $weapons[$weaponId];
+		//echo '<pre>'.json_encode($weapon, JSON_PRETTY_PRINT).'</pre>';
+		
+		$weaponEntry = array(
+			'id' => $weaponId,
+			'name' => $weapon['weaponName'],
+			'enemyRace' => $weapon['enemyRace']
+		);
+		if (isset($weapon['damageType']) && $weapon['damageType']) $weaponEntry['damageType'] = $weapon['damageType'];
+		
+		$bestiary->enemyWeapons[$weaponId] = $weaponEntry;
+	}
+	
+	if (isset($enemy['epic'])) {
+		$epic = array();
+		if (isset($enemy['epic']['enemyShield'])) $epic['shield'] = $enemy['epic']['enemyShield'];
+		$entry['epic'] = $epic;
+	}
+	
+	if (isset($enemy['stats']) && count($enemy['stats']) == 1) {
+		echo '<pre>SkippedEnemy: '.$enemyId.'</pre>';
+		continue;
+	}
+	$entry['stats'] = isset($enemy['stats']) ? $enemy['stats'] : array();
+	
+	$bestiary->enemyTypes[$enemyId] = $entry;
+	
+	//unset($enemy['enemyId']);
+	//unset($enemy['enemyName']);
+	unset($enemy['enemyRace']);
+	unset($enemy['enemyTier']);
+	unset($enemy['enemyShield']);
+	unset($enemy['enemyWeapon']);
+	unset($enemy['enemyOtherWeapons']);
+	unset($enemy['raceClass']);
+	unset($enemy['raceName']);
+	unset($enemy['overrides']);
+	unset($enemy['stats']);
+	unset($enemy['cardId']);
+	
+	unset($enemy['faction']);
+	
+	unset($enemy['epic']);
+	
+	unset($enemy['heroicPrefix']);
+	
+	unset($enemy['activityType']);
+	unset($enemy['activity']);
+	unset($enemy['destination']);
+	unset($enemy['location']);
+	unset($enemy['expansionId']);
+	
+	if (count(array_keys($enemy)) > 2) echo '<pre>'.json_encode($enemy, JSON_PRETTY_PRINT).'</pre>';
+	//echo '<pre>'.json_encode($entry, JSON_PRETTY_PRINT).'</pre>';
+	//break;
+}
+
+foreach($bestiary->enemyTypes as $enemyId => $enemy) {
+	if (isset($enemy['parent']) && !isset($bestiary->enemyTypes[$enemy['parent']])) {
+		echo '<pre>MissingEnemyParent: '.$enemy['parent'].'</pre>';
+	}
+}
+
+function base_class($enemy) {
+	global $bestiary;
+	return isset($enemy['parent']) && isset($bestiary->enemyTypes[$enemy['parent']]) ? base_class($bestiary->enemyTypes[$enemy['parent']]) : $enemy['id'];
+}
+function base_tier($enemy) {
+	global $bestiary;
+	if (isset($enemy['tier'])) return $enemy['tier'];
+	if (isset($enemy['parent']) && isset($bestiary->enemyTypes[$enemy['parent']])) {
+		base_tier($bestiary->enemyTypes[$enemy['parent']]);
+	}
+	return 'Minor';
+}
+
+//usort($bestiary->enemyTypes, function($a, $b) {
+//	$result = strcasecmp(base_class($a), base_class($b));
+//	if ($result === 0) {
+//		$tiers = array('Minor', 'Elite', 'Major', 'Champions', 'Ultra');
+//		$result = array_search(base_tier($a), $tiers) - array_search(base_tier($b), $tiers);
+//	}
+//	if ($result === 0) {
+//		$result = strcasecmp($a['enemyRace'], $b['enemyRace']);
+//	}
+//	return $result;
+//});
+
+file_put_contents($bestiaryPath, json_encode($bestiary, JSON_PRETTY_PRINT));

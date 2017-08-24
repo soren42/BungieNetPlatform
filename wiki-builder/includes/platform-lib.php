@@ -359,14 +359,18 @@ $api_params = array(
 
 
 // Download platform.lib.min.js
-$lib_url = 'https://www.bungie.net/sharedbundle/platformlib';//'https://www.bungie.net/Scripts/platform.lib.min.js';
-echo '<pre>PlatformLib: '.$lib_url.'</pre>';
-$ch = curl_init($lib_url);
-curl_setopt_array($ch, array(
-	CURLOPT_RETURNTRANSFER => true
-));
-$lib_data = curl_exec($ch);
-curl_close($ch);
+//$lib_url = 'https://www.bungie.net/sharedbundle/platformlib';//'https://www.bungie.net/Scripts/platform.lib.min.js';
+//echo '<pre>PlatformLib: '.$lib_url.'</pre>';
+//$ch = curl_init($lib_url);
+//curl_setopt_array($ch, array(
+//	CURLOPT_RETURNTRANSFER => true
+//));
+//$lib_data = curl_exec($ch);
+//curl_close($ch);
+
+// Use cached version instead
+$libCachePath = 'platformlib-d1.js';
+$lib_data = file_exists($libCachePath) ? file_get_contents($libCachePath) : '';
 
 
 //error_reporting(E_ALL);

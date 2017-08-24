@@ -35,7 +35,7 @@ function getJson($url) {
 	return $result->Response;
 }
 
-$manifest_url = BUNGIE_URL.'/platform/destiny/manifest/';
+$manifest_url = BUNGIE_URL.'/d1/platform/destiny/manifest/';
 
 $cachePath = BUILDERPATH.'/cache/cache.json';
 $cache = false;
