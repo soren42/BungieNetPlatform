@@ -365,6 +365,11 @@
         "AiIronLord": {
             "enemyId": "AiIronLord",
             "enemyName": "###AiIronLord###",
+            "overrides": {
+                "enemyName": "Iron Lords"
+            },
+            "enemyRace": "Fallen",
+            "faction": "FallenDevilSplicers",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstAiIronLord",
@@ -10461,7 +10466,7 @@
             "enemyId": "R1S4EventHiveshipMajorBlahgrish",
             "enemyName": "Blahgrish",
             "raceClass": "HiveMajorOgreA",
-            "0": "HullBreach",
+            "location": "HullBreach",
             "overrides": [],
             "stats": [],
             "activityType": "Event",
@@ -10623,7 +10628,7 @@
             "enemyId": "R1S4EventHiveshipMajorNengalish",
             "enemyName": "Nengalish",
             "raceClass": "HiveMajorKnightA",
-            "0": "HullBreach",
+            "location": "HullBreach",
             "overrides": [],
             "stats": [],
             "activityType": "Event",
@@ -10672,7 +10677,7 @@
             "enemyId": "R1S4EventHiveshipMajorTauugh",
             "enemyName": "Valus Tau'ugh",
             "raceClass": "CabalMajorGladiatorA",
-            "0": "HullBreach",
+            "location": "HullBreach",
             "overrides": [],
             "stats": [],
             "activityType": "Event",
@@ -10704,7 +10709,7 @@
             "enemyId": "R1S4EventHiveshipMajorVeength",
             "enemyName": "Ve'ength",
             "raceClass": "CabalMajorCenturionA",
-            "0": "HullBreach",
+            "location": "HullBreach",
             "overrides": [],
             "stats": [],
             "activityType": "Event",
@@ -11074,7 +11079,10 @@
                 }
             },
             "raceName": "Taken",
-            "enemyWeapon": "Boomer",
+            "enemyWeapon": "TakenBoomer",
+            "otherWeapons": [
+                "TakenBurn"
+            ],
             "enemyOtherWeapons": [
                 "Shredder"
             ]
@@ -11385,14 +11393,13 @@
             "enemyId": "R1S4RaidEpiphanyLightKnight",
             "enemyName": "Light Eater Knight",
             "raceClass": "HiveKnight",
-            "0": "HiveMajorKnightACleaver",
+            "enemyWeapon": "Cleaver",
             "overrides": [],
             "stats": [],
             "activityType": "Raid",
             "expansionId": "R1S4",
             "raceName": "Hive",
             "activity": "RaidEpiphanyLightKnight",
-            "enemyWeapon": "Boomer",
             "enemyOtherWeapons": [
                 "Shredder"
             ],
@@ -11547,6 +11554,7 @@
                 "enemyName": "Echo of Oryx"
             },
             "enemyRace": "Taken",
+            "enemyWeapon": "RageOfOryx",
             "cardId": 700450,
             "stats": {
                 "assistsAgainst": {
@@ -12259,7 +12267,7 @@
             "enemyId": "R1S4StrikeMars1MajorDraang",
             "enemyName": "Bracus Dra'ang",
             "raceClass": "CabalMajorGladiatorA",
-            "0": "Overwatch",
+            "location": "Overwatch",
             "overrides": [],
             "stats": [],
             "activityType": "Strike",
@@ -12275,7 +12283,7 @@
             "enemyId": "R1S4StrikeMars1MajorLharkiss",
             "enemyName": "Lharkiss, Wolf Bane",
             "raceClass": "TakenMajorVandalA",
-            "0": "Overwatch",
+            "location": "Overwatch",
             "overrides": [],
             "stats": [],
             "activityType": "Strike",
@@ -12531,6 +12539,12 @@
             "raceClass": "FallenCaptain",
             "raceName": "Fallen",
             "activity": "RaidPromiseSeraph",
+            "overrides": {
+                "enemyName": "Aksis, Archon Prime",
+                "raceClass": "FallenUltraCaptainA"
+            },
+            "faction": "FallenDevilSplicers",
+            "cardId": 800425,
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S5RaidPromiseSeraphUltraCaptain",
@@ -12553,13 +12567,11 @@
                     "statName": "###killsOfR1S5RaidPromiseSeraphUltraCaptain###"
                 }
             },
-            "overrides": [],
             "enemyShield": "ArcShield",
             "enemyWeapon": "ShrapnelLauncher",
             "enemyOtherWeapons": [
                 "ShockRifle"
-            ],
-            "cardId": 207100
+            ]
         },
         "R1S5RaidPromiseWelderUltraCaptain": {
             "enemyId": "R1S5RaidPromiseWelderUltraCaptain",
@@ -12570,6 +12582,12 @@
             "raceClass": "FallenCaptain",
             "raceName": "Fallen",
             "activity": "RaidPromiseWelder",
+            "overrides": {
+                "enemyName": "Vosik, The Archepriest",
+                "raceClass": "FallenUltraCaptainA"
+            },
+            "faction": "FallenDevilSplicers",
+            "enemyWeapon": "ScorchCannon",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S5RaidPromiseWelderUltraCaptain",
@@ -12592,9 +12610,7 @@
                     "statName": "###killsOfR1S5RaidPromiseWelderUltraCaptain###"
                 }
             },
-            "overrides": [],
             "enemyShield": "ArcShield",
-            "enemyWeapon": "ShrapnelLauncher",
             "enemyOtherWeapons": [
                 "ShockRifle"
             ],
@@ -12609,6 +12625,13 @@
             "raceClass": "FallenCaptain",
             "raceName": "Fallen",
             "activity": "StrikeOath",
+            "overrides": {
+                "enemyName": "Kovik, Splicer Priest",
+                "raceClass": "FallenUltraCaptainA"
+            },
+            "faction": "FallenDevilSplicers",
+            "enemyWeapon": "ScorchCannonVoid",
+            "cardId": 800427,
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S5StrikeOathUltraCaptain",
@@ -12631,13 +12654,10 @@
                     "statName": "###killsOfR1S5StrikeOathUltraCaptain###"
                 }
             },
-            "overrides": [],
             "enemyShield": "ArcShield",
-            "enemyWeapon": "ShrapnelLauncher",
             "enemyOtherWeapons": [
                 "ShockRifle"
-            ],
-            "cardId": 207100
+            ]
         },
         "R1S5StrikeStarfishUltraServitor": {
             "enemyId": "R1S5StrikeStarfishUltraServitor",
@@ -12648,6 +12668,12 @@
             "raceClass": "FallenServitor",
             "raceName": "Fallen",
             "activity": "StrikeStarfish",
+            "overrides": {
+                "enemyName": "Sepiks Perfected",
+                "raceClass": "FallenUltraServitorA"
+            },
+            "faction": "FallenDevilSplicers",
+            "cardId": 800428,
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstR1S5StrikeStarfishUltraServitor",
@@ -12669,9 +12695,7 @@
                     "statId": "killsOfR1S5StrikeStarfishUltraServitor",
                     "statName": "###killsOfR1S5StrikeStarfishUltraServitor###"
                 }
-            },
-            "overrides": [],
-            "cardId": 207140
+            }
         },
         "RaidBosses": {
             "enemyId": "RaidBosses",
@@ -12740,6 +12764,10 @@
             "enemyName": "###SivaCaptain###",
             "raceClass": "FallenCaptain",
             "raceName": "Fallen",
+            "overrides": {
+                "enemyName": "SIVA Captain"
+            },
+            "faction": "FallenDevilSplicers",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstSivaCaptain",
@@ -12758,7 +12786,6 @@
                     "statName": "###killsOfSivaCaptain###"
                 }
             },
-            "overrides": [],
             "enemyShield": "ArcShield",
             "enemyWeapon": "ShrapnelLauncher",
             "enemyOtherWeapons": [
@@ -12772,6 +12799,10 @@
             "enemyName": "###SivaDreg###",
             "raceClass": "FallenDreg",
             "raceName": "Fallen",
+            "overrides": {
+                "enemyName": "SIVA Dreg"
+            },
+            "faction": "FallenDevilSplicers",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstSivaDreg",
@@ -12790,7 +12821,6 @@
                     "statName": "###killsOfSivaDreg###"
                 }
             },
-            "overrides": [],
             "enemyWeapon": "ShockPistol",
             "enemyOtherWeapons": [
                 "ShrapnelLauncher"
@@ -12804,6 +12834,10 @@
             "enemyName": "###SivaServitor###",
             "raceClass": "FallenServitor",
             "raceName": "Fallen",
+            "overrides": {
+                "enemyName": "SIVA Servitor"
+            },
+            "faction": "FallenDevilSplicers",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstSivaServitor",
@@ -12822,7 +12856,6 @@
                     "statName": "###killsOfSivaServitor###"
                 }
             },
-            "overrides": [],
             "enemyTier": "Minor",
             "cardId": 207140
         },
@@ -12831,6 +12864,10 @@
             "enemyName": "###SivaShank###",
             "raceClass": "FallenShank",
             "raceName": "Fallen",
+            "overrides": {
+                "enemyName": "SIVA Shank"
+            },
+            "faction": "FallenDevilSplicers",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstSivaShank",
@@ -12849,7 +12886,6 @@
                     "statName": "###killsOfSivaShank###"
                 }
             },
-            "overrides": [],
             "enemyTier": "Minor",
             "cardId": 207150
         },
@@ -12858,6 +12894,10 @@
             "enemyName": "###SivaVandal###",
             "raceClass": "FallenVandal",
             "raceName": "Fallen",
+            "overrides": {
+                "enemyName": "SIVA Vandal"
+            },
+            "faction": "FallenDevilSplicers",
             "stats": {
                 "assistsAgainst": {
                     "statId": "assistsAgainstSivaVandal",
@@ -12876,7 +12916,6 @@
                     "statName": "###killsOfSivaVandal###"
                 }
             },
-            "overrides": [],
             "enemyWeapon": "ShockRifle",
             "enemyOtherWeapons": [
                 "WireRifle",
@@ -12922,7 +12961,7 @@
             "cardId": 502090,
             "activityType": "Story",
             "destination": "Moon",
-            "0": "HiveHiddenSwarm",
+            "faction": "HiveHiddenSwarm",
             "stats": {
                 "deathsFrom": {
                     "statId": "deathsFromSwarmPrinces",
@@ -13369,6 +13408,10 @@
                 "enemyName": "Taken Knight"
             },
             "expansionId": "R1S4",
+            "enemyWeapon": "TakenBoomer",
+            "otherWeapons": [
+                "TakenBurn"
+            ],
             "cardId": 701210,
             "stats": {
                 "assistsAgainst": {
@@ -13392,7 +13435,6 @@
                     "statName": "###killsOfTakenKnight###"
                 }
             },
-            "enemyWeapon": "Boomer",
             "enemyOtherWeapons": [
                 "Shredder"
             ],
@@ -13935,6 +13977,9 @@
             },
             "expansionId": "R1S4",
             "enemyShield": "VoidShield",
+            "otherWeapons": [
+                "TakenNecromanticGaze"
+            ],
             "cardId": 701220,
             "stats": {
                 "assistsAgainst": {
