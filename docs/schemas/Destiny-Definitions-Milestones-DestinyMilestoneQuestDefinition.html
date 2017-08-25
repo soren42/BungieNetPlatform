@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog">Changelog</a></li>
+<li><a href="../../docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started">Getting Started</a></li>
-<li><a href="/docs/API-Details">API Details</a></li>
-<li><a href="/docs/Manifest">Manifest</a></li>
-<li><a href="/docs/Authentication">Authentication</a></li>
-<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../docs/API-Details">API Details</a></li>
+<li><a href="../../docs/Manifest">Manifest</a></li>
+<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components">Components</a></li>
-<li><a href="/docs/Endpoints">Endpoints</a></li>
+<li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -102,7 +102,7 @@ Even just typing this description, I already regret it.</p>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>The individual quests may have different definitions from the overall milestone: if there's a specific active<br/>quest, use these displayProperties instead of that of the overall DestinyMilestoneDefinition.</td>
 </tr>
 <tr>
@@ -112,12 +112,12 @@ Even just typing this description, I already regret it.</p>
 </tr>
 <tr>
 <td>questRewards</td>
-<td><a href="/docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a></td>
 <td>The rewards you will get for completing this quest, as best as we could extract them from<br/>our data.  Sometimes, it'll be a decent amount of data.  Sometimes, it's going to be sucky.  Sorry.</td>
 </tr>
 <tr>
 <td>activities</td>
-<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;</td>
 <td>The full set of all possible &quot;conceptual activities&quot; that are related to this Milestone.<br/>Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities.<br/>Keyed by the Conceptual Activity Hash.  Use the key to look up DestinyActivityDefinition.</td>
 </tr>
 </tbody>
@@ -126,7 +126,7 @@ Even just typing this description, I already regret it.</p>
 <pre><code class="javascript">{
     // Type: integer:uint32
     "questItemHash": 0,
-    // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -139,11 +139,11 @@ Even just typing this description, I already regret it.</p>
     },
     // Type: string
     "overrideImage": "",
-    // Type: <a href="/docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a>
     "questRewards": {
-        // Type: <a href="/docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]
         "items": [
-           // Type: <a href="/docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>
+           // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>
             {
                 // Type: integer:uint32:nullable
                 "vendorHash": 0,
@@ -158,7 +158,7 @@ Even just typing this description, I already regret it.</p>
             }
         ]
     },
-    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;
+    // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;
     "activities": {}
 }
 </code></pre>

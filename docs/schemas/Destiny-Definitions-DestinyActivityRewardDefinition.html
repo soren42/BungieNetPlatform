@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog">Changelog</a></li>
+<li><a href="../../docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started">Getting Started</a></li>
-<li><a href="/docs/API-Details">API Details</a></li>
-<li><a href="/docs/Manifest">Manifest</a></li>
-<li><a href="/docs/Authentication">Authentication</a></li>
-<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../docs/API-Details">API Details</a></li>
+<li><a href="../../docs/Manifest">Manifest</a></li>
+<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components">Components</a></li>
-<li><a href="/docs/Endpoints">Endpoints</a></li>
+<li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -102,7 +102,7 @@ for those tooltip friendly rewards.</p>
 </tr>
 <tr>
 <td>rewardItems</td>
-<td><a href="/docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
 <td>The &quot;Items provided&quot; in the reward.  This is almost always a pointer to a DestinyInventoryItemDefintion<br/>for an item that you can't actually earn in-game, but that has name/description/icon information for<br/>the vague concept of the rewards you will receive.  This is because the actual reward generation is<br/>non-deterministic and extremely complicated, so the best the game can do is tell you what you'll get<br/>in vague terms.  And so too shall we.<br/><br/>Interesting trivia: you actually <em>do</em> earn these items when you complete the activity.  They go into a single-slot<br/>bucket on your profile, which is how you see the pop-ups of these rewards when you complete an activity that match<br/>these &quot;dummy&quot; items.  You can even see them if you look at the last one you earned in your<br/>profile-level inventory through the BNet API!  Who said reading documentation is a waste of time?</td>
 </tr>
 </tbody>
@@ -111,9 +111,9 @@ for those tooltip friendly rewards.</p>
 <pre><code class="javascript">{
     // Type: string
     "rewardText": "",
-    // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
     "rewardItems": [
-       // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
         {
             // Type: integer:uint32
             "itemHash": 0,

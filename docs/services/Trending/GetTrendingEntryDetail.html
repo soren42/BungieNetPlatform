@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../../">Home</a></li>
-<li><a href="/docs/Changelog">Changelog</a></li>
+<li><a href="../../../docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started">Getting Started</a></li>
-<li><a href="/docs/API-Details">API Details</a></li>
-<li><a href="/docs/Manifest">Manifest</a></li>
-<li><a href="/docs/Authentication">Authentication</a></li>
-<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="../../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../../docs/API-Details">API Details</a></li>
+<li><a href="../../../docs/Manifest">Manifest</a></li>
+<li><a href="../../../docs/Authentication">Authentication</a></li>
+<li><a href="../../../docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components">Components</a></li>
-<li><a href="/docs/Endpoints">Endpoints</a></li>
+<li><a href="../../../docs/Components">Components</a></li>
+<li><a href="../../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -109,7 +109,7 @@
 </tr>
 <tr>
 <td>trendingEntryType</td>
-<td><a href="/docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a></td>
+<td><a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a></td>
 <td>Yes</td>
 <td>The type of entity to be returned.</td>
 </tr>
@@ -121,18 +121,18 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/Trending/Details/{trendingEntryType}/{identifier">https://bungie.net/Platform/Trending/Details/{trendingEntryType}/{identifier</a>}/</p>
 <h3>Response</h3>
-<p>Schema: <a href="/docs/responses/Trending-TrendingDetail">Trending.TrendingDetail</a>
+<p>Schema: <a href="../../../docs/responses/Trending-TrendingDetail">Trending.TrendingDetail</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="/docs/responses/Trending-TrendingDetail">Trending.TrendingDetail</a>
+    // Type: <a href="../../../docs/responses/Trending-TrendingDetail">Trending.TrendingDetail</a>
     "Response": {
         // Type: string
         "identifier": "",
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>
         "entityType": 0,
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryNews">Trending.TrendingEntryNews</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryNews">Trending.TrendingEntryNews</a>
         "news": {
-            // Type: <a href="/docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
+            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
             "article": {
                 // Type: integer:int64
                 "contentId": 0,
@@ -152,7 +152,7 @@ PlatformErrorCode: 200</p>
                 "minimumAge": 0,
                 // Type: string
                 "ratingImagePath": "",
-                // Type: <a href="/docs/responses/User-GeneralUser">User.GeneralUser</a>
+                // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>
                 "author": {
                     // Type: integer:int64
                     "membershipId": 0,
@@ -180,15 +180,15 @@ PlatformErrorCode: 200</p>
                     "lastUpdate": "",
                     // Type: integer:int64:nullable
                     "legacyPortalUID": 0,
-                    // Type: <a href="/docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
                     "context": {
                         // Type: boolean
                         "isFollowing": false,
-                        // Type: <a href="/docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
                         "ignoreStatus": {
                             // Type: boolean
                             "isIgnored": false,
-                            // Type: <a href="/docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
                             "ignoreFlags": 0
                         },
                         // Type: string:date-time:nullable
@@ -231,9 +231,9 @@ PlatformErrorCode: 200</p>
                 "autoEnglishPropertyFallback": false,
                 // Type: Dictionary&lt;string,object&gt;
                 "properties": {},
-                // Type: <a href="/docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
                 "representations": [
-                   // Type: <a href="/docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
                     {
                         // Type: string
                         "name": "",
@@ -248,7 +248,7 @@ PlatformErrorCode: 200</p>
                    // Type: string
                     ""
                 ],
-                // Type: <a href="/docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+                // Type: <a href="../../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
                 "commentSummary": {
                     // Type: integer:int64
                     "topicId": 0,
@@ -257,9 +257,9 @@ PlatformErrorCode: 200</p>
                 }
             }
         },
-        // Type: <a href="/docs/schemas/Trending-TrendingEntrySupportArticle">Trending.TrendingEntrySupportArticle</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntrySupportArticle">Trending.TrendingEntrySupportArticle</a>
         "support": {
-            // Type: <a href="/docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
+            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
             "article": {
                 // Type: integer:int64
                 "contentId": 0,
@@ -279,7 +279,7 @@ PlatformErrorCode: 200</p>
                 "minimumAge": 0,
                 // Type: string
                 "ratingImagePath": "",
-                // Type: <a href="/docs/responses/User-GeneralUser">User.GeneralUser</a>
+                // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>
                 "author": {
                     // Type: integer:int64
                     "membershipId": 0,
@@ -307,15 +307,15 @@ PlatformErrorCode: 200</p>
                     "lastUpdate": "",
                     // Type: integer:int64:nullable
                     "legacyPortalUID": 0,
-                    // Type: <a href="/docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
                     "context": {
                         // Type: boolean
                         "isFollowing": false,
-                        // Type: <a href="/docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
                         "ignoreStatus": {
                             // Type: boolean
                             "isIgnored": false,
-                            // Type: <a href="/docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
                             "ignoreFlags": 0
                         },
                         // Type: string:date-time:nullable
@@ -358,9 +358,9 @@ PlatformErrorCode: 200</p>
                 "autoEnglishPropertyFallback": false,
                 // Type: Dictionary&lt;string,object&gt;
                 "properties": {},
-                // Type: <a href="/docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
                 "representations": [
-                   // Type: <a href="/docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
                     {
                         // Type: string
                         "name": "",
@@ -375,7 +375,7 @@ PlatformErrorCode: 200</p>
                    // Type: string
                     ""
                 ],
-                // Type: <a href="/docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+                // Type: <a href="../../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
                 "commentSummary": {
                     // Type: integer:int64
                     "topicId": 0,
@@ -384,16 +384,16 @@ PlatformErrorCode: 200</p>
                 }
             }
         },
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryDestinyItem">Trending.TrendingEntryDestinyItem</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyItem">Trending.TrendingEntryDestinyItem</a>
         "destinyItem": {
             // Type: integer:uint32
             "itemHash": 0
         },
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryDestinyActivity">Trending.TrendingEntryDestinyActivity</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyActivity">Trending.TrendingEntryDestinyActivity</a>
         "destinyActivity": {
             // Type: integer:uint32
             "activityHash": 0,
-            // Type: <a href="/docs/schemas/Destiny-Activities-DestinyPublicActivityStatus">Destiny.Activities.DestinyPublicActivityStatus</a>
+            // Type: <a href="../../../docs/schemas/Destiny-Activities-DestinyPublicActivityStatus">Destiny.Activities.DestinyPublicActivityStatus</a>
             "status": {
                 // Type: integer:uint32[]
                 "challengeObjectiveHashes": [
@@ -405,9 +405,9 @@ PlatformErrorCode: 200</p>
                    // Type: integer:uint32
                     0
                 ],
-                // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
                 "rewardTooltipItems": [
-                   // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
                     {
                         // Type: integer:uint32
                         "itemHash": 0,
@@ -419,7 +419,7 @@ PlatformErrorCode: 200</p>
                 ]
             }
         },
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryDestinyRitual">Trending.TrendingEntryDestinyRitual</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyRitual">Trending.TrendingEntryDestinyRitual</a>
         "destinyRitual": {
             // Type: string
             "image": "",
@@ -433,17 +433,17 @@ PlatformErrorCode: 200</p>
             "dateStart": "",
             // Type: string:date-time:nullable
             "dateEnd": "",
-            // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestone">Destiny.Milestones.DestinyPublicMilestone</a>
+            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">Destiny.Milestones.DestinyPublicMilestone</a>
             "milestoneDetails": {
                 // Type: integer:uint32
                 "milestoneHash": 0,
-                // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>[]
                 "availableQuests": [
-                   // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>
                     {
                         // Type: integer:uint32
                         "questItemHash": 0,
-                        // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
                         "activity": {
                             // Type: integer:uint32
                             "activityHash": 0,
@@ -452,18 +452,18 @@ PlatformErrorCode: 200</p>
                                // Type: integer:uint32
                                 0
                             ],
-                            // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
+                            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
                             "variants": [
-                               // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
+                               // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
                                 {
                                     // Type: integer:uint32
                                     "activityHash": 0
                                 }
                             ]
                         },
-                        // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]
+                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]
                         "challenges": [
-                           // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>
+                           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>
                             {
                                 // Type: integer:uint32
                                 "objectiveHash": 0,
@@ -483,7 +483,7 @@ PlatformErrorCode: 200</p>
                 // Type: string:date-time:nullable
                 "endDate": ""
             },
-            // Type: <a href="/docs/responses/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
+            // Type: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
             "eventContent": {
                 // Type: string
                 "about": "",
@@ -494,9 +494,9 @@ PlatformErrorCode: 200</p>
                    // Type: string
                     ""
                 ],
-                // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>[]
                 "itemCategories": [
-                   // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>
                     {
                         // Type: string
                         "title": "",
@@ -509,7 +509,7 @@ PlatformErrorCode: 200</p>
                 ]
             }
         },
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryCommunityCreation">Trending.TrendingEntryCommunityCreation</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityCreation">Trending.TrendingEntryCommunityCreation</a>
         "creation": {
             // Type: string
             "media": "",
@@ -526,7 +526,7 @@ PlatformErrorCode: 200</p>
             // Type: integer:int32
             "upvotes": 0
         },
-        // Type: <a href="/docs/schemas/Trending-TrendingEntryCommunityStream">Trending.TrendingEntryCommunityStream</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityStream">Trending.TrendingEntryCommunityStream</a>
         "stream": {
             // Type: string
             "image": "",
@@ -534,11 +534,11 @@ PlatformErrorCode: 200</p>
             "title": "",
             // Type: string
             "partnershipIdentifier": "",
-            // Type: <a href="/docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>
+            // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>
             "partnershipType": 0
         }
     },
-    // Type: <a href="/docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

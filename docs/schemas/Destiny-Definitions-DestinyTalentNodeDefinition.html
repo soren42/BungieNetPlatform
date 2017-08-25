@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog">Changelog</a></li>
+<li><a href="../../docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started">Getting Started</a></li>
-<li><a href="/docs/API-Details">API Details</a></li>
-<li><a href="/docs/Manifest">Manifest</a></li>
-<li><a href="/docs/Authentication">Authentication</a></li>
-<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../docs/API-Details">API Details</a></li>
+<li><a href="../../docs/Manifest">Manifest</a></li>
+<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components">Components</a></li>
-<li><a href="/docs/Endpoints">Endpoints</a></li>
+<li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -146,7 +146,7 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
 </tr>
 <tr>
 <td>randomActivationRequirement</td>
-<td><a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a></td>
 <td>At one point, you were going to be able to repurchase talent nodes that had random steps,<br/>to &quot;re-roll&quot; the current step of the node (and thus change the properties of your item).<br/>This was to be the activation requirement for performing that re-roll.<br/><br/>The system still exists to do this, as far as I know, so it may yet come back around!</td>
 </tr>
 <tr>
@@ -156,7 +156,7 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
 </tr>
 <tr>
 <td>steps</td>
-<td><a href="/docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>[]</td>
 <td>At this point, &quot;steps&quot; have been obfuscated into conceptual entities, aggregating <br/>the underlying notions of &quot;properties&quot; and &quot;true steps&quot;.<br/><br/>If you need to know a step as it truly exists - such as when recreating Node logic when processing<br/>Vendor data - you'll have to use the &quot;realSteps&quot; property below.</td>
 </tr>
 <tr>
@@ -219,7 +219,7 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
     "lastStepRepeats": false,
     // Type: boolean
     "isRandom": false,
-    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a>
     "randomActivationRequirement": {
         // Type: integer:int32
         "gridLevel": 0,
@@ -231,11 +231,11 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
     },
     // Type: boolean
     "isRandomRepurchasable": false,
-    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>[]
     "steps": [
-       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>
         {
-            // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -252,11 +252,11 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
             "nodeStepHash": 0,
             // Type: string
             "interactionDescription": "",
-            // Type: <a href="/docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
+            // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
             "damageType": 0,
             // Type: integer:uint32:nullable
             "damageTypeHash": 0,
-            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a>
             "activationRequirement": {
                 // Type: integer:int32
                 "gridLevel": 0,
@@ -286,24 +286,24 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
             ],
             // Type: boolean
             "affectsQuality": false,
-            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">Destiny.Definitions.DestinyTalentNodeStepGroups</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">Destiny.Definitions.DestinyTalentNodeStepGroups</a>
             "stepGroups": {
-                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">Destiny.Definitions.DestinyTalentNodeStepWeaponPerformances</a>
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">Destiny.Definitions.DestinyTalentNodeStepWeaponPerformances</a>
                 "weaponPerformance": 0,
-                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">Destiny.Definitions.DestinyTalentNodeStepImpactEffects</a>
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">Destiny.Definitions.DestinyTalentNodeStepImpactEffects</a>
                 "impactEffects": 0,
-                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">Destiny.Definitions.DestinyTalentNodeStepGuardianAttributes</a>
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">Destiny.Definitions.DestinyTalentNodeStepGuardianAttributes</a>
                 "guardianAttributes": 0,
-                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">Destiny.Definitions.DestinyTalentNodeStepLightAbilities</a>
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">Destiny.Definitions.DestinyTalentNodeStepLightAbilities</a>
                 "lightAbilities": 0,
-                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">Destiny.Definitions.DestinyTalentNodeStepDamageTypes</a>
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">Destiny.Definitions.DestinyTalentNodeStepDamageTypes</a>
                 "damageTypes": 0
             },
             // Type: boolean
             "affectsLevel": false,
-            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>[]
             "socketReplacements": [
-               // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>
                 {
                     // Type: integer:uint32
                     "socketTypeHash": 0,

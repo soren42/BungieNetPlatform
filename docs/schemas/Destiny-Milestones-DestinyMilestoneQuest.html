@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog">Changelog</a></li>
+<li><a href="../../docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started">Getting Started</a></li>
-<li><a href="/docs/API-Details">API Details</a></li>
-<li><a href="/docs/Manifest">Manifest</a></li>
-<li><a href="/docs/Authentication">Authentication</a></li>
-<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../docs/API-Details">API Details</a></li>
+<li><a href="../../docs/Manifest">Manifest</a></li>
+<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components">Components</a></li>
-<li><a href="/docs/Endpoints">Endpoints</a></li>
+<li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -102,17 +102,17 @@ one of those quests.</p>
 </tr>
 <tr>
 <td>status</td>
-<td><a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a></td>
+<td><a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a></td>
 <td>The current status of the quest for the character making the request.</td>
 </tr>
 <tr>
 <td>activity</td>
-<td><a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a></td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a></td>
 <td><em>IF</em> the Milestone has an active Activity that can give you greater details<br/>about what you need to do, it will be returned here.<br/>Remember to associate this with the DestinyMilestoneDefinition's activities<br/>to get details about the activity, including what specific quest it is related to if you<br/>have multiple quests to choose from.</td>
 </tr>
 <tr>
 <td>challenges</td>
-<td><a href="/docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]</td>
 <td>The activities referred to by this quest can have many associated challenges.<br/>They are all contained here, with activityHashes so that you can associate them with<br/>the specific activity variants in which they can be found.<br/>In retrospect, I probably should have put these under the specific Activity Variants,<br/>but it's too late to change it now.<br/>Theoretically, a quest without Activities can still have Challenges, which is why<br/>this is on a higher level than activity/variants, but it probably should have been<br/>in both places.  That may come as a later revision.</td>
 </tr>
 </tbody>
@@ -121,15 +121,15 @@ one of those quests.</p>
 <pre><code class="javascript">{
     // Type: integer:uint32
     "questItemHash": 0,
-    // Type: <a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
+    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
     "status": {
         // Type: integer:uint32
         "questHash": 0,
         // Type: integer:uint32
         "stepHash": 0,
-        // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
         "stepObjectives": [
-           // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
             {
                 // Type: integer:uint32
                 "objectiveHash": 0,
@@ -156,7 +156,7 @@ one of those quests.</p>
         // Type: integer:uint32:nullable
         "vendorHash": 0
     },
-    // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
     "activity": {
         // Type: integer:uint32
         "activityHash": 0,
@@ -165,19 +165,19 @@ one of those quests.</p>
            // Type: integer:uint32
             0
         ],
-        // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
         "variants": [
-           // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
             {
                 // Type: integer:uint32
                 "activityHash": 0,
-                // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
                 "completionStatus": {
                     // Type: boolean
                     "completed": false,
-                    // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
                     "phases": [
-                       // Type: <a href="/docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
                         {
                             // Type: boolean
                             "complete": false
@@ -187,11 +187,11 @@ one of those quests.</p>
             }
         ]
     },
-    // Type: <a href="/docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]
     "challenges": [
-       // Type: <a href="/docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>
+       // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>
         {
-            // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
             "objective": {
                 // Type: integer:uint32
                 "objectiveHash": 0,

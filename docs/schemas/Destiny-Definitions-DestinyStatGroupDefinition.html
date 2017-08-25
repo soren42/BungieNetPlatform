@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog">Changelog</a></li>
+<li><a href="../../docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started">Getting Started</a></li>
-<li><a href="/docs/API-Details">API Details</a></li>
-<li><a href="/docs/Manifest">Manifest</a></li>
-<li><a href="/docs/Authentication">Authentication</a></li>
-<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../docs/API-Details">API Details</a></li>
+<li><a href="../../docs/Manifest">Manifest</a></li>
+<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components">Components</a></li>
-<li><a href="/docs/Endpoints">Endpoints</a></li>
+<li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -115,12 +115,12 @@ Talent Grids and Socket Plugs)</p>
 </tr>
 <tr>
 <td>scaledStats</td>
-<td><a href="/docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>[]</td>
 <td>Any stat that requires scaling to be transformed from an &quot;Investment&quot; stat to a &quot;Display&quot;<br/>stat will have an entry in this list.  For more information on what those types of stats<br/>mean and the transformation process, see DestinyStatDefinition.<br/><br/>In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead.<br/>But I'm going to leave it be because <a href="After Apple Picking">After Apple Picking</a>.</td>
 </tr>
 <tr>
 <td>overrides</td>
-<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">Destiny.Definitions.DestinyStatOverrideDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">Destiny.Definitions.DestinyStatOverrideDefinition</a>&gt;</td>
 <td>The game has the ability to override, based on the stat group, what the localized text is<br/>that is displayed for Stats being shown on the item.<br/><br/>Mercifully, no Stat Groups use this feature currently.  If they start using them,<br/>we'll all need to start using them (and those of you who are more prudent than I am<br/>can go ahead and start pre-checking for this.)</td>
 </tr>
 <tr>
@@ -146,9 +146,9 @@ Talent Grids and Socket Plugs)</p>
     "maximumValue": 0,
     // Type: integer:int32
     "uiPosition": 0,
-    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>[]
     "scaledStats": [
-       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>
         {
             // Type: integer:uint32
             "statHash": 0,
@@ -156,9 +156,9 @@ Talent Grids and Socket Plugs)</p>
             "maximumValue": 0,
             // Type: boolean
             "displayAsNumeric": false,
-            // Type: <a href="/docs/schemas/Interpolation-InterpolationPoint">Interpolation.InterpolationPoint</a>[]
+            // Type: <a href="../../docs/schemas/Interpolation-InterpolationPoint">Interpolation.InterpolationPoint</a>[]
             "displayInterpolation": [
-               // Type: <a href="/docs/schemas/Interpolation-InterpolationPoint">Interpolation.InterpolationPoint</a>
+               // Type: <a href="../../docs/schemas/Interpolation-InterpolationPoint">Interpolation.InterpolationPoint</a>
                 {
                     // Type: integer:int32
                     "value": 0,
@@ -168,7 +168,7 @@ Talent Grids and Socket Plugs)</p>
             ]
         }
     ],
-    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">Destiny.Definitions.DestinyStatOverrideDefinition</a>&gt;
+    // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">Destiny.Definitions.DestinyStatOverrideDefinition</a>&gt;
     "overrides": {},
     // Type: integer:uint32
     "hash": 0,
