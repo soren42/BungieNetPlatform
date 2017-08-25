@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyItemCategoryDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition.html | Destiny.Definitions.DestinyItemCategoryDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyItemCategoryDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemCategoryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>In an attempt to categorize items by type, usage, and other interesting properties, we created
+DestinyItemCategoryDefinition: information about types that is assembled using a set of heuristics
+that examine the properties of an item such as what inventory bucket it's in, its item type name,
+and whether it has or is missing certain blocks of data.</p>
+<p>This heuristic is imperfect, however.  If you find an item miscategorized, let us know on the Bungie
+API forums!</p>
+<p>We then populate all of the categories that we think an item belongs to in its
+DestinyInventoryItemDefinition.itemCategoryHashes property.  You can use that to provide
+your own custom item filtering, sorting, aggregating... go nuts on it!  And let us know if you
+see more categories that you wish would be added!</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayProperties</td>
+<td><a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>boolean</td>
+<td>If True, this category should be visible in UI.  Sometimes we make categories that we<br/>don't think are interesting externally.  It's up to you if you want to skip on showing them.</td>
+</tr>
+<tr>
+<td>shortTitle</td>
+<td>string</td>
+<td>A shortened version of the title.  The reason why we have this is because the Armory in German<br/>had titles that were too long to display in our UI, so these were localized abbreviated versions<br/>of those categories.  The property still exists today, even though the Armory doesn't exist for D2... yet.</td>
+</tr>
+<tr>
+<td>itemTypeRegex</td>
+<td>string</td>
+<td>The janky regular expression we used against the item type to try and discern whether<br/>the item belongs to this category.</td>
+</tr>
+<tr>
+<td>itemTypeRegexNot</td>
+<td>string</td>
+<td>If the item type matches this janky regex, it does <em>not</em> belong to this category.</td>
+</tr>
+<tr>
+<td>originBucketIdentifier</td>
+<td>string</td>
+<td>If the item belongs to this bucket, it does belong to this category.</td>
+</tr>
+<tr>
+<td>grantDestinyItemType</td>
+<td><a href="/docs/schemas/Destiny-DestinyItemType.html">Destiny.DestinyItemType</a></td>
+<td>If an item belongs to this category, it will also receive this item type.<br/>This is now how DestinyItemType is populated for items: it used to be an even jankier process,<br/>but that's a story that requires more alcohol.</td>
+</tr>
+<tr>
+<td>grantDestinySubType</td>
+<td><a href="/docs/schemas/Destiny-DestinyItemSubType.html">Destiny.DestinyItemSubType</a></td>
+<td>If an item belongs to this category, it will also receive this subtype enum value.<br/><br/>I know what you're thinking - what if it belongs to multiple categories that provide sub-types?<br/><br/>The last one processed wins, as is the case with all of these &quot;grant&quot; enums.  Now you can see<br/>one reason why we moved away from these enums... but they're so convenient when they work, aren't they?</td>
+</tr>
+<tr>
+<td>grantDestinyClass</td>
+<td><a href="/docs/schemas/Destiny-DestinyClass.html">Destiny.DestinyClass</a></td>
+<td>If an item belongs to this category, it will also get this class restriction enum value.<br/><br/>See the other &quot;grant&quot;-prefixed properties on this definition for my color commentary.</td>
+</tr>
+<tr>
+<td>groupedCategoryHashes</td>
+<td>integer:uint32[]</td>
+<td>If this category is a &quot;parent&quot; category of other categories, those children will have their<br/>hashes listed in rendering order here, and can be looked up using these hashes against<br/>DestinyItemCategoryDefinition.<br/><br/>In this way, you can build up a visual hierarchy of item categories.  That's what we did,<br/>and you can do it too.  I believe in you.  Yes, you, Carl.<br/><br/>(I hope someone named Carl reads this someday)</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>integer:uint32</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer:int32</td>
+<td>The index of the entity as it was found in the investment tables.</td>
+</tr>
+<tr>
+<td>redacted</td>
+<td>boolean</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    "displayProperties": {
+        // Type: string
+        "description": "",
+        // Type: string
+        "name": "",
+        // Type: string
+        "icon": "",
+        // Type: boolean
+        "hasIcon": false
+    },
+    // Type: boolean
+    "visible": false,
+    // Type: string
+    "shortTitle": "",
+    // Type: string
+    "itemTypeRegex": "",
+    // Type: string
+    "itemTypeRegexNot": "",
+    // Type: string
+    "originBucketIdentifier": "",
+    // Type: <a href="/docs/schemas/Destiny-DestinyItemType.html">Destiny.DestinyItemType</a>
+    "grantDestinyItemType": 0,
+    // Type: <a href="/docs/schemas/Destiny-DestinyItemSubType.html">Destiny.DestinyItemSubType</a>
+    "grantDestinySubType": 0,
+    // Type: <a href="/docs/schemas/Destiny-DestinyClass.html">Destiny.DestinyClass</a>
+    "grantDestinyClass": 0,
+    // Type: integer:uint32[]
+    "groupedCategoryHashes": [
+       // Type: integer:uint32
+        0
+    ],
+    // Type: integer:uint32
+    "hash": 0,
+    // Type: integer:int32
+    "index": 0,
+    // Type: boolean
+    "redacted": false
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyItemCategoryDefinition.html#schema_Destiny-Definitions-DestinyItemCategoryDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyItemCategoryDefinition.html#schema_Destiny-Definitions-DestinyItemCategoryDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

@@ -178,6 +178,9 @@ a {
 		.table th {
 			border-bottom: none;
 			width: 80px;
+			a {
+				white-space: nowrap;
+			}
 		}
 		.table td {
 			color: fade(rgb(245, 245, 245), 65%);
@@ -232,6 +235,13 @@ a {
 				}
 				.hljs-built_in {
 					color: #b184c5;
+				}
+				a {
+					color: #fff;
+					//text-decoration: underline;
+					span {
+						color: inherit;
+					}
 				}
 			}
 			&.collapse {

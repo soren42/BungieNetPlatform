@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Forum PostSearchResponse | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Forum-PostSearchResponse.html | Forum.PostSearchResponse -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Forum.PostSearchResponse</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Forum-PostSearchResponse/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>relatedPosts</td>
+<td><a href="/docs/schemas/Forum-PostResponse.html">Forum.PostResponse</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>authors</td>
+<td><a href="/docs/responses/User-GeneralUser.html">User.GeneralUser</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>groups</td>
+<td><a href="/docs/schemas/GroupsV2-GroupResponse.html">GroupsV2.GroupResponse</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>searchedTags</td>
+<td><a href="/docs/schemas/Tags-Models-Contracts-TagResponse.html">Tags.Models.Contracts.TagResponse</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>polls</td>
+<td><a href="/docs/schemas/Forum-PollResponse.html">Forum.PollResponse</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>recruitmentDetails</td>
+<td><a href="/docs/responses/Forum-ForumRecruitmentDetail.html">Forum.ForumRecruitmentDetail</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>availablePages</td>
+<td>integer:int32:nullable</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>results</td>
+<td><a href="/docs/schemas/Forum-PostResponse.html">Forum.PostResponse</a>[]</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>totalResults</td>
+<td>integer:int32</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>hasMore</td>
+<td>boolean</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>query</td>
+<td><a href="/docs/schemas/Queries-PagedQuery.html">Queries.PagedQuery</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>replacementContinuationToken</td>
+<td>string</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>useTotalResults</td>
+<td>boolean</td>
+<td>If useTotalResults is true, then totalResults represents an accurate count.<br/><br/>If False, it does not, and may be estimated/only the size of the current page.<br/><br/>Either way, you should probably always only trust hasMore.<br/><br/>This is a long-held historical throwback to when we used to do paging with known total results.<br/>Those queries toasted our database, and we were left to hastily alter our endpoints and create backward-<br/>compatible shims, of which useTotalResults is one.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Forum-PostResponse.html">Forum.PostResponse</a>[]
+    "relatedPosts": [
+       // Type: <a href="/docs/schemas/Forum-PostResponse.html">Forum.PostResponse</a>
+        {
+            // Type: string:date-time
+            "lastReplyTimestamp": "",
+            // Type: boolean
+            "IsPinned": false,
+            // Type: <a href="/docs/schemas/Forum-ForumMediaType.html">Forum.ForumMediaType</a>
+            "urlMediaType": 0,
+            // Type: string
+            "thumbnail": "",
+            // Type: <a href="/docs/schemas/Forum-ForumPostPopularity.html">Forum.ForumPostPopularity</a>
+            "popularity": 0,
+            // Type: boolean
+            "isActive": false,
+            // Type: boolean
+            "isAnnouncement": false,
+            // Type: integer:int32
+            "userRating": 0,
+            // Type: boolean
+            "userHasRated": false,
+            // Type: boolean
+            "userHasMutedPost": false,
+            // Type: integer:int64
+            "latestReplyPostId": 0,
+            // Type: integer:int64
+            "latestReplyAuthorId": 0,
+            // Type: <a href="/docs/schemas/Ignores-IgnoreResponse.html">Ignores.IgnoreResponse</a>
+            "ignoreStatus": {
+                // Type: boolean
+                "isIgnored": false,
+                // Type: <a href="/docs/schemas/Ignores-IgnoreStatus.html">Ignores.IgnoreStatus</a>
+                "ignoreFlags": 0
+            },
+            // Type: string
+            "locale": ""
+        }
+    ],
+    // Type: <a href="/docs/responses/User-GeneralUser.html">User.GeneralUser</a>[]
+    "authors": [
+       // Type: <a href="/docs/responses/User-GeneralUser.html">User.GeneralUser</a>
+        {
+            // Type: integer:int64
+            "membershipId": 0,
+            // Type: string
+            "uniqueName": "",
+            // Type: string
+            "normalizedName": "",
+            // Type: string
+            "displayName": "",
+            // Type: integer:int32
+            "profilePicture": 0,
+            // Type: integer:int32
+            "profileTheme": 0,
+            // Type: integer:int32
+            "userTitle": 0,
+            // Type: integer:int64
+            "successMessageFlags": 0,
+            // Type: boolean
+            "isDeleted": false,
+            // Type: string
+            "about": "",
+            // Type: string:date-time:nullable
+            "firstAccess": "",
+            // Type: string:date-time:nullable
+            "lastUpdate": "",
+            // Type: integer:int64:nullable
+            "legacyPortalUID": 0,
+            // Type: <a href="/docs/schemas/User-UserToUserContext.html">User.UserToUserContext</a>
+            "context": {
+                // Type: boolean
+                "isFollowing": false,
+                // Type: <a href="/docs/schemas/Ignores-IgnoreResponse.html">Ignores.IgnoreResponse</a>
+                "ignoreStatus": {
+                    // Type: boolean
+                    "isIgnored": false,
+                    // Type: <a href="/docs/schemas/Ignores-IgnoreStatus.html">Ignores.IgnoreStatus</a>
+                    "ignoreFlags": 0
+                },
+                // Type: string:date-time:nullable
+                "globalIgnoreEndDate": ""
+            },
+            // Type: string
+            "psnDisplayName": "",
+            // Type: string
+            "xboxDisplayName": "",
+            // Type: string
+            "fbDisplayName": "",
+            // Type: boolean:nullable
+            "showActivity": false,
+            // Type: string
+            "locale": "",
+            // Type: boolean
+            "localeInheritDefault": false,
+            // Type: integer:int64:nullable
+            "lastBanReportId": 0,
+            // Type: boolean
+            "showGroupMessaging": false,
+            // Type: string
+            "profilePicturePath": "",
+            // Type: string
+            "profilePictureWidePath": "",
+            // Type: string
+            "profileThemeName": "",
+            // Type: string
+            "userTitleDisplay": "",
+            // Type: string
+            "statusText": "",
+            // Type: string:date-time
+            "statusDate": "",
+            // Type: string:date-time:nullable
+            "profileBanExpire": "",
+            // Type: string
+            "blizzardDisplayName": ""
+        }
+    ],
+    // Type: <a href="/docs/schemas/GroupsV2-GroupResponse.html">GroupsV2.GroupResponse</a>[]
+    "groups": [
+       // Type: <a href="/docs/schemas/GroupsV2-GroupResponse.html">GroupsV2.GroupResponse</a>
+        {
+            // Type: <a href="/docs/schemas/GroupsV2-GroupV2.html">GroupsV2.GroupV2</a>
+            "detail": {
+                // Type: integer:int64
+                "groupId": 0,
+                // Type: string
+                "name": "",
+                // Type: <a href="/docs/schemas/GroupsV2-GroupType.html">GroupsV2.GroupType</a>
+                "groupType": 0,
+                // Type: integer:int64
+                "membershipIdCreated": 0,
+                // Type: string:date-time
+                "creationDate": "",
+                // Type: string:date-time
+                "modificationDate": "",
+                // Type: string
+                "about": "",
+                // Type: string[]
+                "tags": [
+                   // Type: string
+                    ""
+                ],
+                // Type: integer:int32
+                "memberCount": 0,
+                // Type: boolean
+                "isPublic": false,
+                // Type: boolean
+                "isPublicTopicAdminOnly": false,
+                // Type: integer:int64
+                "primaryAlliedGroupId": 0,
+                // Type: string
+                "motto": "",
+                // Type: boolean
+                "allowChat": false,
+                // Type: boolean
+                "isDefaultPostPublic": false,
+                // Type: <a href="/docs/schemas/GroupsV2-ChatSecuritySetting.html">GroupsV2.ChatSecuritySetting</a>
+                "chatSecurity": 0,
+                // Type: string
+                "locale": "",
+                // Type: integer:int32
+                "avatarImageIndex": 0,
+                // Type: <a href="/docs/schemas/GroupsV2-GroupHomepage.html">GroupsV2.GroupHomepage</a>
+                "homepage": 0,
+                // Type: <a href="/docs/schemas/GroupsV2-MembershipOption.html">GroupsV2.MembershipOption</a>
+                "membershipOption": 0,
+                // Type: <a href="/docs/schemas/GroupsV2-GroupPostPublicity.html">GroupsV2.GroupPostPublicity</a>
+                "defaultPublicity": 0,
+                // Type: string
+                "theme": "",
+                // Type: string
+                "bannerPath": "",
+                // Type: string
+                "avatarPath": "",
+                // Type: boolean
+                "isAllianceOwner": false,
+                // Type: integer:int64
+                "conversationId": 0,
+                // Type: boolean
+                "enableInvitationMessagingForAdmins": false,
+                // Type: string:date-time:nullable
+                "banExpireDate": "",
+                // Type: <a href="/docs/schemas/GroupsV2-GroupFeatures.html">GroupsV2.GroupFeatures</a>
+                "features": {
+                    // Type: integer:int32
+                    "maximumMembers": 0,
+                    // Type: integer:int32
+                    "maximumMembershipsOfGroupType": 0,
+                    // Type: <a href="/docs/schemas/GroupsV2-Capabilities.html">GroupsV2.Capabilities</a>
+                    "capabilities": 0,
+                    // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>[]
+                    "membershipTypes": [
+                       // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>
+                        0
+                    ],
+                    // Type: boolean
+                    "invitePermissionOverride": false,
+                    // Type: boolean
+                    "updateCulturePermissionOverride": false,
+                    // Type: <a href="/docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel.html">GroupsV2.HostGuidedGamesPermissionLevel</a>
+                    "hostGuidedGamePermissionOverride": 0,
+                    // Type: boolean
+                    "updateBannerPermissionOverride": false,
+                    // Type: <a href="/docs/schemas/GroupsV2-RuntimeGroupMemberType.html">GroupsV2.RuntimeGroupMemberType</a>
+                    "joinLevel": 0
+                },
+                // Type: <a href="/docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment.html">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+                "clanInfo": {
+                    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-DestinyProgression.html">Destiny.DestinyProgression</a>&gt;
+                    "d2ClanProgressions": {},
+                    // Type: string
+                    "clanCallsign": "",
+                    // Type: <a href="/docs/schemas/GroupsV2-ClanBanner.html">GroupsV2.ClanBanner</a>
+                    "clanBannerData": {
+                        // Type: integer:uint32
+                        "decalId": 0,
+                        // Type: integer:uint32
+                        "decalColorId": 0,
+                        // Type: integer:uint32
+                        "decalBackgroundColorId": 0,
+                        // Type: integer:uint32
+                        "gonfalonId": 0,
+                        // Type: integer:uint32
+                        "gonfalonColorId": 0,
+                        // Type: integer:uint32
+                        "gonfalonDetailId": 0,
+                        // Type: integer:uint32
+                        "gonfalonDetailColorId": 0
+                    }
+                }
+            },
+            // Type: <a href="/docs/schemas/GroupsV2-GroupMember.html">GroupsV2.GroupMember</a>
+            "founder": {
+                // Type: <a href="/docs/schemas/GroupsV2-RuntimeGroupMemberType.html">GroupsV2.RuntimeGroupMemberType</a>
+                "memberType": 0,
+                // Type: boolean
+                "isOnline": false,
+                // Type: integer:int64
+                "groupId": 0,
+                // Type: <a href="/docs/schemas/User-UserInfoCard.html">User.UserInfoCard</a>
+                "destinyUserInfo": {
+                    // Type: string
+                    "supplementalDisplayName": "",
+                    // Type: string
+                    "iconPath": "",
+                    // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>
+                    "membershipType": 0,
+                    // Type: integer:int64
+                    "membershipId": 0,
+                    // Type: string
+                    "displayName": ""
+                },
+                // Type: <a href="/docs/schemas/User-UserInfoCard.html">User.UserInfoCard</a>
+                "bungieNetUserInfo": {
+                    // Type: string
+                    "supplementalDisplayName": "",
+                    // Type: string
+                    "iconPath": "",
+                    // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>
+                    "membershipType": 0,
+                    // Type: integer:int64
+                    "membershipId": 0,
+                    // Type: string
+                    "displayName": ""
+                },
+                // Type: string:date-time
+                "joinDate": ""
+            },
+            // Type: integer:int64[]
+            "alliedIds": [
+               // Type: integer:int64
+                0
+            ],
+            // Type: <a href="/docs/schemas/GroupsV2-GroupV2.html">GroupsV2.GroupV2</a>
+            "parentGroup": {
+                // Type: integer:int64
+                "groupId": 0,
+                // Type: string
+                "name": "",
+                // Type: <a href="/docs/schemas/GroupsV2-GroupType.html">GroupsV2.GroupType</a>
+                "groupType": 0,
+                // Type: integer:int64
+                "membershipIdCreated": 0,
+                // Type: string:date-time
+                "creationDate": "",
+                // Type: string:date-time
+                "modificationDate": "",
+                // Type: string
+                "about": "",
+                // Type: string[]
+                "tags": [
+                   // Type: string
+                    ""
+                ],
+                // Type: integer:int32
+                "memberCount": 0,
+                // Type: boolean
+                "isPublic": false,
+                // Type: boolean
+                "isPublicTopicAdminOnly": false,
+                // Type: integer:int64
+                "primaryAlliedGroupId": 0,
+                // Type: string
+                "motto": "",
+                // Type: boolean
+                "allowChat": false,
+                // Type: boolean
+                "isDefaultPostPublic": false,
+                // Type: <a href="/docs/schemas/GroupsV2-ChatSecuritySetting.html">GroupsV2.ChatSecuritySetting</a>
+                "chatSecurity": 0,
+                // Type: string
+                "locale": "",
+                // Type: integer:int32
+                "avatarImageIndex": 0,
+                // Type: <a href="/docs/schemas/GroupsV2-GroupHomepage.html">GroupsV2.GroupHomepage</a>
+                "homepage": 0,
+                // Type: <a href="/docs/schemas/GroupsV2-MembershipOption.html">GroupsV2.MembershipOption</a>
+                "membershipOption": 0,
+                // Type: <a href="/docs/schemas/GroupsV2-GroupPostPublicity.html">GroupsV2.GroupPostPublicity</a>
+                "defaultPublicity": 0,
+                // Type: string
+                "theme": "",
+                // Type: string
+                "bannerPath": "",
+                // Type: string
+                "avatarPath": "",
+                // Type: boolean
+                "isAllianceOwner": false,
+                // Type: integer:int64
+                "conversationId": 0,
+                // Type: boolean
+                "enableInvitationMessagingForAdmins": false,
+                // Type: string:date-time:nullable
+                "banExpireDate": "",
+                // Type: <a href="/docs/schemas/GroupsV2-GroupFeatures.html">GroupsV2.GroupFeatures</a>
+                "features": {
+                    // Type: integer:int32
+                    "maximumMembers": 0,
+                    // Type: integer:int32
+                    "maximumMembershipsOfGroupType": 0,
+                    // Type: <a href="/docs/schemas/GroupsV2-Capabilities.html">GroupsV2.Capabilities</a>
+                    "capabilities": 0,
+                    // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>[]
+                    "membershipTypes": [
+                       // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>
+                        0
+                    ],
+                    // Type: boolean
+                    "invitePermissionOverride": false,
+                    // Type: boolean
+                    "updateCulturePermissionOverride": false,
+                    // Type: <a href="/docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel.html">GroupsV2.HostGuidedGamesPermissionLevel</a>
+                    "hostGuidedGamePermissionOverride": 0,
+                    // Type: boolean
+                    "updateBannerPermissionOverride": false,
+                    // Type: <a href="/docs/schemas/GroupsV2-RuntimeGroupMemberType.html">GroupsV2.RuntimeGroupMemberType</a>
+                    "joinLevel": 0
+                },
+                // Type: <a href="/docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment.html">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+                "clanInfo": {
+                    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-DestinyProgression.html">Destiny.DestinyProgression</a>&gt;
+                    "d2ClanProgressions": {},
+                    // Type: string
+                    "clanCallsign": "",
+                    // Type: <a href="/docs/schemas/GroupsV2-ClanBanner.html">GroupsV2.ClanBanner</a>
+                    "clanBannerData": {
+                        // Type: integer:uint32
+                        "decalId": 0,
+                        // Type: integer:uint32
+                        "decalColorId": 0,
+                        // Type: integer:uint32
+                        "decalBackgroundColorId": 0,
+                        // Type: integer:uint32
+                        "gonfalonId": 0,
+                        // Type: integer:uint32
+                        "gonfalonColorId": 0,
+                        // Type: integer:uint32
+                        "gonfalonDetailId": 0,
+                        // Type: integer:uint32
+                        "gonfalonDetailColorId": 0
+                    }
+                }
+            },
+            // Type: <a href="/docs/schemas/GroupsV2-GroupAllianceStatus.html">GroupsV2.GroupAllianceStatus</a>
+            "allianceStatus": 0,
+            // Type: integer:int32
+            "groupJoinInviteCount": 0,
+            // Type: Dictionary<<a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>,<a href="/docs/schemas/GroupsV2-GroupMember.html">GroupsV2.GroupMember</a>&gt;
+            "currentUserMemberMap": {},
+            // Type: Dictionary<<a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>,<a href="/docs/schemas/GroupsV2-GroupPotentialMember.html">GroupsV2.GroupPotentialMember</a>&gt;
+            "currentUserPotentialMemberMap": {}
+        }
+    ],
+    // Type: <a href="/docs/schemas/Tags-Models-Contracts-TagResponse.html">Tags.Models.Contracts.TagResponse</a>[]
+    "searchedTags": [
+       // Type: <a href="/docs/schemas/Tags-Models-Contracts-TagResponse.html">Tags.Models.Contracts.TagResponse</a>
+        {
+            // Type: string
+            "tagText": "",
+            // Type: <a href="/docs/schemas/Ignores-IgnoreResponse.html">Ignores.IgnoreResponse</a>
+            "ignoreStatus": {
+                // Type: boolean
+                "isIgnored": false,
+                // Type: <a href="/docs/schemas/Ignores-IgnoreStatus.html">Ignores.IgnoreStatus</a>
+                "ignoreFlags": 0
+            }
+        }
+    ],
+    // Type: <a href="/docs/schemas/Forum-PollResponse.html">Forum.PollResponse</a>[]
+    "polls": [
+       // Type: <a href="/docs/schemas/Forum-PollResponse.html">Forum.PollResponse</a>
+        {
+            // Type: integer:int64
+            "topicId": 0,
+            // Type: <a href="/docs/schemas/Forum-PollResult.html">Forum.PollResult</a>[]
+            "results": [
+               // Type: <a href="/docs/schemas/Forum-PollResult.html">Forum.PollResult</a>
+                {
+                    // Type: string
+                    "answerText": "",
+                    // Type: integer:int32
+                    "answerSlot": 0,
+                    // Type: string:date-time
+                    "lastVoteDate": "",
+                    // Type: integer:int32
+                    "votes": 0,
+                    // Type: boolean
+                    "requestingUserVoted": false
+                }
+            ],
+            // Type: integer:int32
+            "totalVotes": 0
+        }
+    ],
+    // Type: <a href="/docs/responses/Forum-ForumRecruitmentDetail.html">Forum.ForumRecruitmentDetail</a>[]
+    "recruitmentDetails": [
+       // Type: <a href="/docs/responses/Forum-ForumRecruitmentDetail.html">Forum.ForumRecruitmentDetail</a>
+        {
+            // Type: integer:int64
+            "topicId": 0,
+            // Type: boolean
+            "microphoneRequired": false,
+            // Type: <a href="/docs/schemas/Forum-ForumRecruitmentIntensityLabel.html">Forum.ForumRecruitmentIntensityLabel</a>
+            "intensity": 0,
+            // Type: <a href="/docs/schemas/Forum-ForumRecruitmentToneLabel.html">Forum.ForumRecruitmentToneLabel</a>
+            "tone": 0,
+            // Type: boolean
+            "approved": false,
+            // Type: integer:int64:nullable
+            "conversationId": 0,
+            // Type: integer:int32
+            "playerSlotsTotal": 0,
+            // Type: integer:int32
+            "playerSlotsRemaining": 0,
+            // Type: <a href="/docs/responses/User-GeneralUser.html">User.GeneralUser</a>[]
+            "Fireteam": [
+               // Type: <a href="/docs/responses/User-GeneralUser.html">User.GeneralUser</a>
+                {
+                    // Type: integer:int64
+                    "membershipId": 0,
+                    // Type: string
+                    "uniqueName": "",
+                    // Type: string
+                    "normalizedName": "",
+                    // Type: string
+                    "displayName": "",
+                    // Type: integer:int32
+                    "profilePicture": 0,
+                    // Type: integer:int32
+                    "profileTheme": 0,
+                    // Type: integer:int32
+                    "userTitle": 0,
+                    // Type: integer:int64
+                    "successMessageFlags": 0,
+                    // Type: boolean
+                    "isDeleted": false,
+                    // Type: string
+                    "about": "",
+                    // Type: string:date-time:nullable
+                    "firstAccess": "",
+                    // Type: string:date-time:nullable
+                    "lastUpdate": "",
+                    // Type: integer:int64:nullable
+                    "legacyPortalUID": 0,
+                    // Type: <a href="/docs/schemas/User-UserToUserContext.html">User.UserToUserContext</a>
+                    "context": {
+                        // Type: boolean
+                        "isFollowing": false,
+                        // Type: <a href="/docs/schemas/Ignores-IgnoreResponse.html">Ignores.IgnoreResponse</a>
+                        "ignoreStatus": {
+                            // Type: boolean
+                            "isIgnored": false,
+                            // Type: <a href="/docs/schemas/Ignores-IgnoreStatus.html">Ignores.IgnoreStatus</a>
+                            "ignoreFlags": 0
+                        },
+                        // Type: string:date-time:nullable
+                        "globalIgnoreEndDate": ""
+                    },
+                    // Type: string
+                    "psnDisplayName": "",
+                    // Type: string
+                    "xboxDisplayName": "",
+                    // Type: string
+                    "fbDisplayName": "",
+                    // Type: boolean:nullable
+                    "showActivity": false,
+                    // Type: string
+                    "locale": "",
+                    // Type: boolean
+                    "localeInheritDefault": false,
+                    // Type: integer:int64:nullable
+                    "lastBanReportId": 0,
+                    // Type: boolean
+                    "showGroupMessaging": false,
+                    // Type: string
+                    "profilePicturePath": "",
+                    // Type: string
+                    "profilePictureWidePath": "",
+                    // Type: string
+                    "profileThemeName": "",
+                    // Type: string
+                    "userTitleDisplay": "",
+                    // Type: string
+                    "statusText": "",
+                    // Type: string:date-time
+                    "statusDate": "",
+                    // Type: string:date-time:nullable
+                    "profileBanExpire": "",
+                    // Type: string
+                    "blizzardDisplayName": ""
+                }
+            ],
+            // Type: integer:int64[]
+            "kickedPlayerIds": [
+               // Type: integer:int64
+                0
+            ]
+        }
+    ],
+    // Type: integer:int32:nullable
+    "availablePages": 0,
+    // Type: <a href="/docs/schemas/Forum-PostResponse.html">Forum.PostResponse</a>[]
+    "results": [
+       // Type: <a href="/docs/schemas/Forum-PostResponse.html">Forum.PostResponse</a>
+        {
+            // Type: string:date-time
+            "lastReplyTimestamp": "",
+            // Type: boolean
+            "IsPinned": false,
+            // Type: <a href="/docs/schemas/Forum-ForumMediaType.html">Forum.ForumMediaType</a>
+            "urlMediaType": 0,
+            // Type: string
+            "thumbnail": "",
+            // Type: <a href="/docs/schemas/Forum-ForumPostPopularity.html">Forum.ForumPostPopularity</a>
+            "popularity": 0,
+            // Type: boolean
+            "isActive": false,
+            // Type: boolean
+            "isAnnouncement": false,
+            // Type: integer:int32
+            "userRating": 0,
+            // Type: boolean
+            "userHasRated": false,
+            // Type: boolean
+            "userHasMutedPost": false,
+            // Type: integer:int64
+            "latestReplyPostId": 0,
+            // Type: integer:int64
+            "latestReplyAuthorId": 0,
+            // Type: <a href="/docs/schemas/Ignores-IgnoreResponse.html">Ignores.IgnoreResponse</a>
+            "ignoreStatus": {
+                // Type: boolean
+                "isIgnored": false,
+                // Type: <a href="/docs/schemas/Ignores-IgnoreStatus.html">Ignores.IgnoreStatus</a>
+                "ignoreFlags": 0
+            },
+            // Type: string
+            "locale": ""
+        }
+    ],
+    // Type: integer:int32
+    "totalResults": 0,
+    // Type: boolean
+    "hasMore": false,
+    // Type: <a href="/docs/schemas/Queries-PagedQuery.html">Queries.PagedQuery</a>
+    "query": {
+        // Type: integer:int32
+        "itemsPerPage": 0,
+        // Type: integer:int32
+        "currentPage": 0,
+        // Type: string
+        "requestContinuationToken": ""
+    },
+    // Type: string
+    "replacementContinuationToken": "",
+    // Type: boolean
+    "useTotalResults": false
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Forum-PostSearchResponse.html#schema_Forum-PostSearchResponse">https://bungie-net.github.io/multi/schema_Forum-PostSearchResponse.html#schema_Forum-PostSearchResponse</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

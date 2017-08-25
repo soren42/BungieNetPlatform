@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyVendorDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyVendorDefinition.html | Destiny.Definitions.DestinyVendorDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyVendorDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyVendorDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>These are the definitions for Vendors.</p>
+<p>In Destiny, a Vendor can be a lot of things - some things that you wouldn't expect, and some things
+that you don't even see directly in the game.  Vendors are the Dolly Levi of the Destiny universe.</p>
+<ul>
+<li>
+<p>Traditional Vendors as you see in game: people who you come up to and who give you quests, rewards, or who
+you can buy things from.</p>
+</li>
+<li>
+<p>Kiosks/Collections, which are really just Vendors that don't charge currency (or charge some pittance of a currency)
+and whose gating for purchases revolves more around your character's state.</p>
+</li>
+<li>
+<p>Previews for rewards or the contents of sacks.  These are implemented as Vendors, where you can't actually purchase from
+them but the items that they have for sale and the categories of sale items reflect the rewards or contents of the sack.
+This is so that the game could reuse the existing Vendor display UI for rewards and save a bunch of wheel reinvention.</p>
+</li>
+<li>Item Transfer capabilities, like the Vault and Postmaster.  Vendors can have &quot;acceptedItem&quot; buckets that determine
+the source and destination buckets for transfers.  When you interact with such a vendor, these buckets are what
+gets shown in the UI instead of any items that the Vendor would have for sale.  Yep, the Vault is a vendor.</li>
+</ul>
+<p>It is pretty much guaranteed that they'll be used for even more features in the future.  They have come
+to be seen more as generic categorized containers for items than &quot;vendors&quot; in a traditional sense, for
+better or worse.</p>
+<p>Where possible and time allows, we'll attempt to split those out into their own more
+digestible derived &quot;Definitions&quot;: but often time does not allow that, as you can see from the above ways
+that vendors are used which we never split off from Vendor Definitions externally.</p>
+<p>Since Vendors are so many things to so many parts of the game, the definition is understandably complex.
+You will want to combine this data with live Vendor information from the API when it is available.</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayProperties</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition.html">Destiny.Definitions.DestinyVendorDisplayPropertiesDefinition</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>buyString</td>
+<td>string</td>
+<td>If the vendor has a custom localized string describing the &quot;buy&quot; action, that is<br/>returned here.</td>
+</tr>
+<tr>
+<td>sellString</td>
+<td>string</td>
+<td>Ditto for selling.  Not that you can sell items to a vendor anymore.  Will it come back?<br/>Who knows.  The string's still there.</td>
+</tr>
+<tr>
+<td>displayItemHash</td>
+<td>integer:uint32</td>
+<td>If the vendor has an item that should be displayed as the &quot;featured&quot; item, this is<br/>the hash identifier for that DestinyVendorItemDefinition.<br/><br/>Apparently this is usually a related currency, like a reputation token.  But it need not be restricted to that.</td>
+</tr>
+<tr>
+<td>inhibitBuying</td>
+<td>boolean</td>
+<td>If this is true, you aren't allowed to buy whatever the vendor is selling.</td>
+</tr>
+<tr>
+<td>inhibitSelling</td>
+<td>boolean</td>
+<td>If this is true, you're not allowed to sell whatever the vendor is buying.</td>
+</tr>
+<tr>
+<td>factionHash</td>
+<td>integer:uint32</td>
+<td>If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition.<br/><br/>The game UI and BNet often mine the faction definition for additional elements and details to place<br/>on the screen, such as the faction's Progression status (aka &quot;Reputation&quot;).</td>
+</tr>
+<tr>
+<td>resetIntervalMinutes</td>
+<td>integer:int32</td>
+<td>A number used for calculating the frequency of a vendor's inventory resetting/refreshing.<br/><br/>Don't worry about calculating this - we do it on the server side and send you the next refresh<br/>date with the live data.</td>
+</tr>
+<tr>
+<td>resetOffsetMinutes</td>
+<td>integer:int32</td>
+<td>Again, used for reset/refreshing of inventory.  Don't worry too much about it.  Unless you want to.</td>
+</tr>
+<tr>
+<td>failureStrings</td>
+<td>string[]</td>
+<td>If an item can't be purchased from the vendor, there may be many &quot;custom&quot;/game state specific reasons why not.<br/><br/>This is a list of localized strings with messages for those custom failures.  The live BNet data will return a<br/>failureIndexes property for items that can't be purchased: using those values to index into this array,<br/>you can show the user the appropriate failure message for the item that can't be bought.</td>
+</tr>
+<tr>
+<td>unlockRanges</td>
+<td><a href="/docs/schemas/Dates-DateRange.html">Dates.DateRange</a>[]</td>
+<td>If we were able to predict the dates when this Vendor will be visible/available, this will be the list<br/>of those date ranges.  Sadly, we're not able to predict this very frequently, so this will often be useless data.</td>
+</tr>
+<tr>
+<td>vendorIdentifier</td>
+<td>string</td>
+<td>The internal identifier for the Vendor.  A holdover from the old days of Vendors, but we don't have<br/>time to refactor it away.</td>
+</tr>
+<tr>
+<td>vendorPortrait</td>
+<td>string</td>
+<td>A portrait of the Vendor's smiling mug.  Or frothing tentacles.</td>
+</tr>
+<tr>
+<td>vendorBanner</td>
+<td>string</td>
+<td>If the vendor has a custom banner image, that can be found here.</td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>boolean</td>
+<td>If a vendor is not enabled, we won't even save the vendor's definition, and we won't return any items or info about them.<br/>It's as if they don't exist.</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>boolean</td>
+<td>If a vendor is not visible, we still have and will give vendor definition info, but we won't use them<br/>for things like Advisors or UI.</td>
+</tr>
+<tr>
+<td>vendorCategoryIdentifier</td>
+<td>string</td>
+<td>The identifier of the VendorCategoryDefinition for this vendor.</td>
+</tr>
+<tr>
+<td>vendorSubcategoryIdentifier</td>
+<td>string</td>
+<td>The identifier of the VendorCategoryDefinition for this vendor's subcategory.</td>
+</tr>
+<tr>
+<td>consolidateCategories</td>
+<td>boolean</td>
+<td>If TRUE, consolidate categories that only differ by trivial properties (such as having minor differences in name)</td>
+</tr>
+<tr>
+<td>actions</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition.html">Destiny.Definitions.DestinyVendorActionDefinition</a>[]</td>
+<td>Describes &quot;actions&quot; that can be performed on a vendor.  Currently, none of these exist.  But theoretically<br/>a Vendor could let you interact with it by performing actions.  We'll see what these end up looking<br/>like if they ever get used.</td>
+</tr>
+<tr>
+<td>categories</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]</td>
+<td>These are the headers for sections of items that the vendor is selling.<br/>When you see items organized by category in the header, it is these categories<br/>that it is showing.<br/><br/>Well, technically not <em>exactly</em> these.  On BNet, it doesn't make sense to have categories<br/>be &quot;paged&quot; as we do in Destiny, so we run some heuristics to attempt to aggregate pages of<br/>categories together.  <br/><br/>These are the categories post-concatenation, if the vendor had concatenation<br/>applied.  If you want the pre-aggregated category data, use originalCategories.</td>
+</tr>
+<tr>
+<td>originalCategories</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]</td>
+<td>See the categories property for a description of categories and why originalCategories exists.</td>
+</tr>
+<tr>
+<td>displayCategories</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition.html">Destiny.Definitions.DestinyDisplayCategoryDefinition</a>[]</td>
+<td>Display Categories are different from &quot;categories&quot; in that these are specifically for visual grouping<br/>and display of categories in Vendor UI.  <br/><br/>The &quot;categories&quot; structure is for validation of the contained<br/>items, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will be<br/>no meaningful relationship between the two.</td>
+</tr>
+<tr>
+<td>interactions</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition</a>[]</td>
+<td>In addition to selling items, vendors can have &quot;interactions&quot;: UI where you &quot;talk&quot; with the vendor<br/>and they offer you a reward, some item, or merely acknowledge via dialog that you did something cool.</td>
+</tr>
+<tr>
+<td>inventoryFlyouts</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition.html">Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition</a>[]</td>
+<td>If the vendor shows you items from your own inventory - such as the Vault vendor does -<br/>this data describes the UI around showing those inventory buckets and which ones get shown.</td>
+</tr>
+<tr>
+<td>itemList</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition.html">Destiny.Definitions.DestinyVendorItemDefinition</a>[]</td>
+<td>If the vendor sells items (or merely has a list of items to show like the &quot;Sack&quot; vendors do),<br/>this is the list of those items that the vendor can sell.  From this list, only a subset will be<br/>available from the vendor at any given time, selected randomly and reset on the vendor's refresh interval.<br/><br/>Note that a vendor can sell the same item multiple ways: for instance, nothing stops a vendor from selling<br/>you some specific weapon but using two different currencies, or the same weapon at multiple &quot;item levels&quot;.</td>
+</tr>
+<tr>
+<td>services</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition.html">Destiny.Definitions.DestinyVendorServiceDefinition</a>[]</td>
+<td>BNet doesn't use this data yet, but it appears to be an optional list of flavor text<br/>about services that the Vendor can provide.</td>
+</tr>
+<tr>
+<td>acceptedItems</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition.html">Destiny.Definitions.DestinyVendorAcceptedItemDefinition</a>[]</td>
+<td>If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster<br/>vendors), this defines the list of source-&gt;destination buckets for transferring.</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>integer:uint32</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer:int32</td>
+<td>The index of the entity as it was found in the investment tables.</td>
+</tr>
+<tr>
+<td>redacted</td>
+<td>boolean</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition.html">Destiny.Definitions.DestinyVendorDisplayPropertiesDefinition</a>
+    "displayProperties": {
+        // Type: string
+        "largeIcon": "",
+        // Type: string
+        "subtitle": "",
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition.html">Destiny.Definitions.DestinyVendorRequirementDisplayEntryDefinition</a>[]
+        "requirementsDisplay": [
+           // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition.html">Destiny.Definitions.DestinyVendorRequirementDisplayEntryDefinition</a>
+            {
+                // Type: string
+                "icon": "",
+                // Type: string
+                "name": "",
+                // Type: string
+                "source": "",
+                // Type: string
+                "type": ""
+            }
+        ],
+        // Type: string
+        "description": "",
+        // Type: string
+        "name": "",
+        // Type: string
+        "icon": "",
+        // Type: boolean
+        "hasIcon": false
+    },
+    // Type: string
+    "buyString": "",
+    // Type: string
+    "sellString": "",
+    // Type: integer:uint32
+    "displayItemHash": 0,
+    // Type: boolean
+    "inhibitBuying": false,
+    // Type: boolean
+    "inhibitSelling": false,
+    // Type: integer:uint32
+    "factionHash": 0,
+    // Type: integer:int32
+    "resetIntervalMinutes": 0,
+    // Type: integer:int32
+    "resetOffsetMinutes": 0,
+    // Type: string[]
+    "failureStrings": [
+       // Type: string
+        ""
+    ],
+    // Type: <a href="/docs/schemas/Dates-DateRange.html">Dates.DateRange</a>[]
+    "unlockRanges": [
+       // Type: <a href="/docs/schemas/Dates-DateRange.html">Dates.DateRange</a>
+        {
+            // Type: string:date-time
+            "start": "",
+            // Type: string:date-time
+            "end": ""
+        }
+    ],
+    // Type: string
+    "vendorIdentifier": "",
+    // Type: string
+    "vendorPortrait": "",
+    // Type: string
+    "vendorBanner": "",
+    // Type: boolean
+    "enabled": false,
+    // Type: boolean
+    "visible": false,
+    // Type: string
+    "vendorCategoryIdentifier": "",
+    // Type: string
+    "vendorSubcategoryIdentifier": "",
+    // Type: boolean
+    "consolidateCategories": false,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition.html">Destiny.Definitions.DestinyVendorActionDefinition</a>[]
+    "actions": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition.html">Destiny.Definitions.DestinyVendorActionDefinition</a>
+        {
+            // Type: string
+            "description": "",
+            // Type: integer:int32
+            "executeSeconds": 0,
+            // Type: string
+            "icon": "",
+            // Type: string
+            "name": "",
+            // Type: string
+            "verb": "",
+            // Type: boolean
+            "isPositive": false,
+            // Type: string
+            "actionId": "",
+            // Type: integer:uint32
+            "actionHash": 0,
+            // Type: boolean
+            "autoPerformAction": false
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]
+    "categories": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>
+        {
+            // Type: integer:int32
+            "categoryIndex": 0,
+            // Type: string
+            "categoryId": "",
+            // Type: integer:uint32
+            "categoryHash": 0,
+            // Type: integer:int32
+            "quantityAvailable": 0,
+            // Type: boolean
+            "showUnavailableItems": false,
+            // Type: boolean
+            "hideIfNoCurrency": false,
+            // Type: boolean
+            "hideFromRegularPurchase": false,
+            // Type: string
+            "buyStringOverride": "",
+            // Type: string
+            "disabledDescription": "",
+            // Type: string
+            "displayTitle": "",
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a>
+            "overlay": {
+                // Type: string
+                "choiceDescription": "",
+                // Type: string
+                "description": "",
+                // Type: string
+                "icon": "",
+                // Type: string
+                "title": ""
+            }
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]
+    "originalCategories": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>
+        {
+            // Type: integer:int32
+            "categoryIndex": 0,
+            // Type: string
+            "categoryId": "",
+            // Type: integer:uint32
+            "categoryHash": 0,
+            // Type: integer:int32
+            "quantityAvailable": 0,
+            // Type: boolean
+            "showUnavailableItems": false,
+            // Type: boolean
+            "hideIfNoCurrency": false,
+            // Type: boolean
+            "hideFromRegularPurchase": false,
+            // Type: string
+            "buyStringOverride": "",
+            // Type: string
+            "disabledDescription": "",
+            // Type: string
+            "displayTitle": "",
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition.html">Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a>
+            "overlay": {
+                // Type: string
+                "choiceDescription": "",
+                // Type: string
+                "description": "",
+                // Type: string
+                "icon": "",
+                // Type: string
+                "title": ""
+            }
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition.html">Destiny.Definitions.DestinyDisplayCategoryDefinition</a>[]
+    "displayCategories": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition.html">Destiny.Definitions.DestinyDisplayCategoryDefinition</a>
+        {
+            // Type: string
+            "identifier": "",
+            // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            "displayProperties": {
+                // Type: string
+                "description": "",
+                // Type: string
+                "name": "",
+                // Type: string
+                "icon": "",
+                // Type: boolean
+                "hasIcon": false
+            }
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition</a>[]
+    "interactions": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition</a>
+        {
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]
+            "replies": [
+               // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>
+                {
+                    // Type: <a href="/docs/schemas/Destiny-DestinyVendorInteractionRewardSelection.html">Destiny.DestinyVendorInteractionRewardSelection</a>
+                    "itemRewardsSelection": 0,
+                    // Type: string
+                    "reply": "",
+                    // Type: <a href="/docs/schemas/Destiny-DestinyVendorReplyType.html">Destiny.DestinyVendorReplyType</a>
+                    "replyType": 0
+                }
+            ],
+            // Type: integer:int32
+            "vendorCategoryIndex": 0,
+            // Type: integer:uint32
+            "questlineItemHash": 0,
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]
+            "sackInteractionList": [
+               // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition.html">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>
+                {
+                    // Type: integer:uint32
+                    "sackType": 0
+                }
+            ],
+            // Type: integer:uint32
+            "uiInteractionType": 0,
+            // Type: string
+            "rewardBlockLabel": "",
+            // Type: integer:int32
+            "rewardVendorCategoryIndex": 0,
+            // Type: string
+            "flavorLineOne": "",
+            // Type: string
+            "flavorLineTwo": "",
+            // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            "headerDisplayProperties": {
+                // Type: string
+                "description": "",
+                // Type: string
+                "name": "",
+                // Type: string
+                "icon": "",
+                // Type: boolean
+                "hasIcon": false
+            },
+            // Type: string
+            "instructions": ""
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition.html">Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition</a>[]
+    "inventoryFlyouts": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition.html">Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition</a>
+        {
+            // Type: string
+            "lockedDescription": "",
+            // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            "displayProperties": {
+                // Type: string
+                "description": "",
+                // Type: string
+                "name": "",
+                // Type: string
+                "icon": "",
+                // Type: boolean
+                "hasIcon": false
+            },
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition.html">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>[]
+            "buckets": [
+               // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition.html">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>
+                {
+                    // Type: boolean
+                    "collapsible": false,
+                    // Type: integer:uint32
+                    "inventoryBucketHash": 0,
+                    // Type: <a href="/docs/schemas/Destiny-DestinyItemSortType.html">Destiny.DestinyItemSortType</a>
+                    "sortItemsBy": 0
+                }
+            ],
+            // Type: integer:uint32
+            "flyoutId": 0,
+            // Type: boolean
+            "suppressNewness": false
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition.html">Destiny.Definitions.DestinyVendorItemDefinition</a>[]
+    "itemList": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition.html">Destiny.Definitions.DestinyVendorItemDefinition</a>
+        {
+            // Type: integer:int32
+            "vendorItemIndex": 0,
+            // Type: integer:uint32
+            "itemHash": 0,
+            // Type: integer:int32
+            "quantity": 0,
+            // Type: integer:int32[]
+            "failureIndexes": [
+               // Type: integer:int32
+                0
+            ],
+            // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>[]
+            "currencies": [
+               // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>
+                {
+                    // Type: integer:uint32
+                    "itemHash": 0,
+                    // Type: integer:int64:nullable
+                    "itemInstanceId": 0,
+                    // Type: integer:int32
+                    "quantity": 0
+                }
+            ],
+            // Type: <a href="/docs/schemas/Destiny-DestinyVendorItemRefundPolicy.html">Destiny.DestinyVendorItemRefundPolicy</a>
+            "refundPolicy": 0,
+            // Type: integer:int32
+            "refundTimeLimit": 0,
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition.html">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>[]
+            "creationLevels": [
+               // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition.html">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>
+                {
+                    // Type: integer:int32
+                    "level": 0
+                }
+            ],
+            // Type: integer:int32
+            "displayCategoryIndex": 0,
+            // Type: integer:int32
+            "categoryIndex": 0,
+            // Type: integer:int32
+            "originalCategoryIndex": 0,
+            // Type: integer:int32
+            "minimumLevel": 0,
+            // Type: integer:int32
+            "maximumLevel": 0,
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition.html">Destiny.Definitions.DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>
+            "action": {
+                // Type: number:float
+                "executeSeconds": 0,
+                // Type: boolean
+                "isPositive": false
+            },
+            // Type: string
+            "displayCategory": "",
+            // Type: integer:uint32
+            "inventoryBucketHash": 0,
+            // Type: <a href="/docs/schemas/Destiny-DestinyGatingScope.html">Destiny.DestinyGatingScope</a>
+            "visibilityScope": 0,
+            // Type: <a href="/docs/schemas/Destiny-DestinyGatingScope.html">Destiny.DestinyGatingScope</a>
+            "purchasableScope": 0
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition.html">Destiny.Definitions.DestinyVendorServiceDefinition</a>[]
+    "services": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition.html">Destiny.Definitions.DestinyVendorServiceDefinition</a>
+        {
+            // Type: string
+            "name": ""
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition.html">Destiny.Definitions.DestinyVendorAcceptedItemDefinition</a>[]
+    "acceptedItems": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition.html">Destiny.Definitions.DestinyVendorAcceptedItemDefinition</a>
+        {
+            // Type: integer:uint32
+            "acceptedInventoryBucketHash": 0,
+            // Type: integer:uint32
+            "destinationInventoryBucketHash": 0
+        }
+    ],
+    // Type: integer:uint32
+    "hash": 0,
+    // Type: integer:int32
+    "index": 0,
+    // Type: boolean
+    "redacted": false
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorDefinition.html#schema_Destiny-Definitions-DestinyVendorDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorDefinition.html#schema_Destiny-Definitions-DestinyVendorDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

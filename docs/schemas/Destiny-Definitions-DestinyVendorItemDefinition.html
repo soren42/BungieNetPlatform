@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyVendorItemDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition.html | Destiny.Definitions.DestinyVendorItemDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyVendorItemDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyVendorItemDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>This represents an item being sold by the vendor.</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vendorItemIndex</td>
+<td>integer:int32</td>
+<td>The index into the DestinyVendorDefinition.saleList.  This is what we use to refer to items<br/>being sold throughout live and definition data.</td>
+</tr>
+<tr>
+<td>itemHash</td>
+<td>integer:uint32</td>
+<td>The hash identifier of the item being sold (DestinyInventoryItemDefinition).<br/><br/>Note that a vendor can sell the same item in multiple ways, so don't assume that itemHash is<br/>a unique identifier for this entity.</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>integer:int32</td>
+<td>The amount you will recieve of the item described in itemHash if you make the purchase.</td>
+</tr>
+<tr>
+<td>failureIndexes</td>
+<td>integer:int32[]</td>
+<td>An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating<br/>the possible failure strings that can be relevant for this item.</td>
+</tr>
+<tr>
+<td>currencies</td>
+<td><a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>[]</td>
+<td>This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place<br/>to check for what the purchaser must pay for the item.  Use this instead of trying to piece together<br/>the price separately.</td>
+</tr>
+<tr>
+<td>refundPolicy</td>
+<td><a href="/docs/schemas/Destiny-DestinyVendorItemRefundPolicy.html">Destiny.DestinyVendorItemRefundPolicy</a></td>
+<td>If this item can be refunded, this is the policy for what will be refundd, how, and in what time period.</td>
+</tr>
+<tr>
+<td>refundTimeLimit</td>
+<td>integer:int32</td>
+<td>The amount of time before refundability of the newly purchased item will expire.</td>
+</tr>
+<tr>
+<td>creationLevels</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition.html">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>[]</td>
+<td>The Default level at which the item will spawn.  Almost always driven by an adjusto these days.<br/>Ideally should be singular.  It's a long story how this ended up as a list, but there is always either<br/>going to be 0:1 of these entities.</td>
+</tr>
+<tr>
+<td>displayCategoryIndex</td>
+<td>integer:int32</td>
+<td>This is an index specifically into the display category, as opposed to the server-side Categories<br/>(which do not need to match or pair with each other in any way: server side categories are really just<br/>structures for common validation.  Display Category will let us more easily categorize items visually)</td>
+</tr>
+<tr>
+<td>categoryIndex</td>
+<td>integer:int32</td>
+<td>The index into the DestinyVendorDefinition.categories array, so you can find the category associated with<br/>this item.</td>
+</tr>
+<tr>
+<td>originalCategoryIndex</td>
+<td>integer:int32</td>
+<td>Same as above, but for the original category indexes.</td>
+</tr>
+<tr>
+<td>minimumLevel</td>
+<td>integer:int32</td>
+<td>The minimum character level at which this item is available for sale.</td>
+</tr>
+<tr>
+<td>maximumLevel</td>
+<td>integer:int32</td>
+<td>The maximum character level at which this item is available for sale.</td>
+</tr>
+<tr>
+<td>action</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition.html">Destiny.Definitions.DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a></td>
+<td>The action to be performed when purchasing the item, if it's not just &quot;buy&quot;.</td>
+</tr>
+<tr>
+<td>displayCategory</td>
+<td>string</td>
+<td>The string identifier for the category selling this item.</td>
+</tr>
+<tr>
+<td>inventoryBucketHash</td>
+<td>integer:uint32</td>
+<td>The inventory bucket into which this item will be placed upon purchase.</td>
+</tr>
+<tr>
+<td>visibilityScope</td>
+<td><a href="/docs/schemas/Destiny-DestinyGatingScope.html">Destiny.DestinyGatingScope</a></td>
+<td>The most restrictive scope that determines whether the item is available in the Vendor's inventory.<br/>See DestinyGatingScope's documentation for more information.<br/><br/>This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel<br/>and maximumLevel properties).</td>
+</tr>
+<tr>
+<td>purchasableScope</td>
+<td><a href="/docs/schemas/Destiny-DestinyGatingScope.html">Destiny.DestinyGatingScope</a></td>
+<td>Similar to visibilityScope, it represents the most restrictive scope that determines whether the item can be purchased.<br/>It will at least be as restrictive as visibilityScope, but could be more restrictive if the item has additional<br/>purchase requirements beyond whether it is merely visible or not.<br/><br/>See DestinyGatingScope's documentation for more information.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: integer:int32
+    "vendorItemIndex": 0,
+    // Type: integer:uint32
+    "itemHash": 0,
+    // Type: integer:int32
+    "quantity": 0,
+    // Type: integer:int32[]
+    "failureIndexes": [
+       // Type: integer:int32
+        0
+    ],
+    // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>[]
+    "currencies": [
+       // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>
+        {
+            // Type: integer:uint32
+            "itemHash": 0,
+            // Type: integer:int64:nullable
+            "itemInstanceId": 0,
+            // Type: integer:int32
+            "quantity": 0
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-DestinyVendorItemRefundPolicy.html">Destiny.DestinyVendorItemRefundPolicy</a>
+    "refundPolicy": 0,
+    // Type: integer:int32
+    "refundTimeLimit": 0,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition.html">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>[]
+    "creationLevels": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition.html">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>
+        {
+            // Type: integer:int32
+            "level": 0
+        }
+    ],
+    // Type: integer:int32
+    "displayCategoryIndex": 0,
+    // Type: integer:int32
+    "categoryIndex": 0,
+    // Type: integer:int32
+    "originalCategoryIndex": 0,
+    // Type: integer:int32
+    "minimumLevel": 0,
+    // Type: integer:int32
+    "maximumLevel": 0,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition.html">Destiny.Definitions.DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>
+    "action": {
+        // Type: number:float
+        "executeSeconds": 0,
+        // Type: boolean
+        "isPositive": false
+    },
+    // Type: string
+    "displayCategory": "",
+    // Type: integer:uint32
+    "inventoryBucketHash": 0,
+    // Type: <a href="/docs/schemas/Destiny-DestinyGatingScope.html">Destiny.DestinyGatingScope</a>
+    "visibilityScope": 0,
+    // Type: <a href="/docs/schemas/Destiny-DestinyGatingScope.html">Destiny.DestinyGatingScope</a>
+    "purchasableScope": 0
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorItemDefinition.html#schema_Destiny-Definitions-DestinyVendorItemDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorItemDefinition.html#schema_Destiny-Definitions-DestinyVendorItemDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

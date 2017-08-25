@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyActivityDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyActivityDefinition.html | Destiny.Definitions.DestinyActivityDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyActivityDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyActivityDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>The static data about Activities in Destiny 2.</p>
+<p>Note that an Activity must be combined with an ActivityMode to know - from a Gameplay perspective -
+what the user is &quot;Playing&quot;.</p>
+<p>In most PvE activities, this is fairly straightforward.  A Story Activity can only be played in the Story
+Activity Mode.</p>
+<p>However, in PvP activities, the Activity alone only tells you the map being played, or the Playlist that the user
+chose to enter.  You'll need to know the Activity Mode they're playing to know that they're playing Mode X on Map Y.</p>
+<p>Activity Definitions tell a great deal of information about what <em>could</em> be relevant to a user: what rewards they
+can earn, what challenges could be performed, what modifiers could be applied.  To figure out which of these properties
+is actually live, you'll need to combine the definition with &quot;Live&quot; data from one of the Destiny endpoints.</p>
+<p>Activities also have Activity Types, but unfortunately in Destiny 2 these are even less reliable of a source of
+information than they were in Destiny 1.  I will be looking into ways to provide more reliable sources for type information
+as time goes on, but for now we're going to have to deal with the limitations.  See DestinyActivityTypeDefinition
+for more information.</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayProperties</td>
+<td><a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td>The title, subtitle, and icon for the activity.</td>
+</tr>
+<tr>
+<td>releaseIcon</td>
+<td>string</td>
+<td>If the activity has an icon associated with a specific release (such as a DLC),<br/>this is the path to that release's icon.</td>
+</tr>
+<tr>
+<td>releaseTime</td>
+<td>integer:int32</td>
+<td>If the activity will not be visible until a specific and known time, this will be<br/>the seconds since the Epoch when it will become visible.</td>
+</tr>
+<tr>
+<td>activityLevel</td>
+<td>integer:int32</td>
+<td>The difficulty level of the activity.</td>
+</tr>
+<tr>
+<td>activityLightLevel</td>
+<td>integer:int32</td>
+<td>The recommended light level for this activity.</td>
+</tr>
+<tr>
+<td>destinationHash</td>
+<td>integer:uint32</td>
+<td>The hash identifier for the Destination on which this Activity is played.  Use it to look up<br/>the DestinyDestinationDefinition for human readable info about the destination.<br/>A Destination can be thought of as a more specific location than a &quot;Place&quot;.  For instance,<br/>if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
+</tr>
+<tr>
+<td>placeHash</td>
+<td>integer:uint32</td>
+<td>The hash identifier for the &quot;Place&quot; on which this Activity is played.  Use it to look up<br/>the DestinyPlaceDefinition for human readable info about the Place.<br/>A Place is the largest-scoped concept for location information.  For instance,<br/>if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
+</tr>
+<tr>
+<td>activityTypeHash</td>
+<td>integer:uint32</td>
+<td>The hash identifier for the Activity Type of this Activity.  You may use it to look up<br/>the DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists and<br/>many PVP Map Activities will map to generic Activity Types.  You'll have to use your knowledge<br/>of the Activity Mode being played to get more specific information about what the user is playing.</td>
+</tr>
+<tr>
+<td>tier</td>
+<td>integer:int32</td>
+<td>The difficulty tier of the activity.</td>
+</tr>
+<tr>
+<td>pgcrImage</td>
+<td>string</td>
+<td>When Activities are completed, we generate a &quot;Post-Game Carnage Report&quot;, or PGCR, with details about<br/>what happened in that activity (how many kills someone got, which team won, etc...)  We use this image<br/>as the background when displaying PGCR information, and often use it when we refer to the Activity in general.</td>
+</tr>
+<tr>
+<td>rewards</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityRewardDefinition.html">Destiny.Definitions.DestinyActivityRewardDefinition</a>[]</td>
+<td>The expected possible rewards for the activity.  These rewards may or may not be accessible for an individual player<br/>based on their character state, the account state, and even the game's state overall.  But it is a useful reference<br/>for possible rewards you can earn in the activity.  These match up to rewards displayed when you hover over<br/>the Activity in the in-game Director, and often refer to Placeholder or &quot;Dummy&quot; items: items that tell you <br/>what you can earn in vague terms rather than what you'll specifically be earning (partly because the game<br/>doesn't even know what you'll earn specifically until you roll for it at the end)</td>
+</tr>
+<tr>
+<td>modifiers</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityModifierReferenceDefinition.html">Destiny.Definitions.DestinyActivityModifierReferenceDefinition</a>[]</td>
+<td>Activities can have Modifiers, as defined in DestinyActivityModifierDefinition.  These are references<br/>to the modifiers that <em>can</em> be applied to that activity, along with data that we use to determine if<br/>that modifier is actually active at any given point in time.</td>
+</tr>
+<tr>
+<td>isPlaylist</td>
+<td>boolean</td>
+<td>If True, this Activity is actually a Playlist that refers to multiple possible specific Activities and Activity<br/>Modes.  For instance, a Crucible Playlist may have references to multiple Activities (Maps) with multiple Activity Modes<br/>(specific PvP gameplay modes).  If this is true, refer to the playlistItems property for the specific entries<br/>in the playlist.</td>
+</tr>
+<tr>
+<td>challenges</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityChallengeDefinition.html">Destiny.Definitions.DestinyActivityChallengeDefinition</a>[]</td>
+<td>An activity can have many Challenges, of which any subset of them may be active for play<br/>at any given period of time.  This gives the information about the challenges and data<br/>that we use to understand when they're active and what rewards they provide.<br/>Sadly, at the moment there's no central definition for challenges: much like &quot;Skulls&quot; were<br/>in Destiny 1, these are defined on individual activities and there can be many duplicates/near duplicates<br/>across the Destiny 2 ecosystem.  I have it in mind to centralize these in a future revision of the API, but<br/>we are out of time.</td>
+</tr>
+<tr>
+<td>optionalUnlockStrings</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityUnlockStringDefinition.html">Destiny.Definitions.DestinyActivityUnlockStringDefinition</a>[]</td>
+<td>If there are status strings related to the activity and based on internal state of the game, account, or character,<br/>then this will be the definition of those strings and the states needed in order for the strings to be shown.</td>
+</tr>
+<tr>
+<td>activityGraphList</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition.html">Destiny.Definitions.DestinyActivityGraphListEntryDefinition</a>[]</td>
+<td>Unfortunately, in practice this is almost never populated.  In theory, this is supposed to tell<br/>which Activity Graph to show if you bring up the director while in this activity.</td>
+</tr>
+<tr>
+<td>matchmaking</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityMatchmakingBlockDefinition.html">Destiny.Definitions.DestinyActivityMatchmakingBlockDefinition</a></td>
+<td>This block of data provides information about the Activity's matchmaking attributes: how many people can join and such.</td>
+</tr>
+<tr>
+<td>guidedGame</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyActivityGuidedBlockDefinition.html">Destiny.Definitions.DestinyActivityGuidedBlockDefinition</a></td>
+<td>This block of data, if it exists, provides information about the guided game experience and restrictions for this<br/>activity.  If it doesn't exist, the game is not able to be played as a guided game.</td>
+</tr>
+<tr>
+<td>activityModeHash</td>
+<td>integer:uint32</td>
+<td>The Activity Mode for this activity.  Note that if this is a playlist, the specific playlist entry chosen<br/>will determine the actual activity mode that ends up being played.</td>
+</tr>
+<tr>
+<td>isPvP</td>
+<td>boolean</td>
+<td>If true, this activity is a PVP activity or playlist.</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>integer:uint32</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer:int32</td>
+<td>The index of the entity as it was found in the investment tables.</td>
+</tr>
+<tr>
+<td>redacted</td>
+<td>boolean</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    "displayProperties": {
+        // Type: string
+        "description": "",
+        // Type: string
+        "name": "",
+        // Type: string
+        "icon": "",
+        // Type: boolean
+        "hasIcon": false
+    },
+    // Type: string
+    "releaseIcon": "",
+    // Type: integer:int32
+    "releaseTime": 0,
+    // Type: integer:int32
+    "activityLevel": 0,
+    // Type: integer:int32
+    "activityLightLevel": 0,
+    // Type: integer:uint32
+    "destinationHash": 0,
+    // Type: integer:uint32
+    "placeHash": 0,
+    // Type: integer:uint32
+    "activityTypeHash": 0,
+    // Type: integer:int32
+    "tier": 0,
+    // Type: string
+    "pgcrImage": "",
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityRewardDefinition.html">Destiny.Definitions.DestinyActivityRewardDefinition</a>[]
+    "rewards": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityRewardDefinition.html">Destiny.Definitions.DestinyActivityRewardDefinition</a>
+        {
+            // Type: string
+            "rewardText": "",
+            // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>[]
+            "rewardItems": [
+               // Type: <a href="/docs/schemas/Destiny-DestinyItemQuantity.html">Destiny.DestinyItemQuantity</a>
+                {
+                    // Type: integer:uint32
+                    "itemHash": 0,
+                    // Type: integer:int64:nullable
+                    "itemInstanceId": 0,
+                    // Type: integer:int32
+                    "quantity": 0
+                }
+            ]
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityModifierReferenceDefinition.html">Destiny.Definitions.DestinyActivityModifierReferenceDefinition</a>[]
+    "modifiers": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityModifierReferenceDefinition.html">Destiny.Definitions.DestinyActivityModifierReferenceDefinition</a>
+        {
+            // Type: integer:uint32
+            "activityModifierHash": 0
+        }
+    ],
+    // Type: boolean
+    "isPlaylist": false,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityChallengeDefinition.html">Destiny.Definitions.DestinyActivityChallengeDefinition</a>[]
+    "challenges": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityChallengeDefinition.html">Destiny.Definitions.DestinyActivityChallengeDefinition</a>
+        {
+            // Type: integer:uint32
+            "objectiveHash": 0
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityUnlockStringDefinition.html">Destiny.Definitions.DestinyActivityUnlockStringDefinition</a>[]
+    "optionalUnlockStrings": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityUnlockStringDefinition.html">Destiny.Definitions.DestinyActivityUnlockStringDefinition</a>
+        {
+            // Type: string
+            "displayString": ""
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition.html">Destiny.Definitions.DestinyActivityGraphListEntryDefinition</a>[]
+    "activityGraphList": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition.html">Destiny.Definitions.DestinyActivityGraphListEntryDefinition</a>
+        {
+            // Type: integer:uint32
+            "activityGraphHash": 0
+        }
+    ],
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityMatchmakingBlockDefinition.html">Destiny.Definitions.DestinyActivityMatchmakingBlockDefinition</a>
+    "matchmaking": {
+        // Type: boolean
+        "isMatchmade": false,
+        // Type: integer:int32
+        "minParty": 0,
+        // Type: integer:int32
+        "maxParty": 0,
+        // Type: integer:int32
+        "maxPlayers": 0,
+        // Type: boolean
+        "requiresGuardianOath": false
+    },
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyActivityGuidedBlockDefinition.html">Destiny.Definitions.DestinyActivityGuidedBlockDefinition</a>
+    "guidedGame": {
+        // Type: integer:int32
+        "guidedMaxLobbySize": 0,
+        // Type: integer:int32
+        "guidedMinLobbySize": 0,
+        // Type: integer:int32
+        "guidedDisbandCount": 0
+    },
+    // Type: integer:uint32
+    "activityModeHash": 0,
+    // Type: boolean
+    "isPvP": false,
+    // Type: integer:uint32
+    "hash": 0,
+    // Type: integer:int32
+    "index": 0,
+    // Type: boolean
+    "redacted": false
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyActivityDefinition.html#schema_Destiny-Definitions-DestinyActivityDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyActivityDefinition.html#schema_Destiny-Definitions-DestinyActivityDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

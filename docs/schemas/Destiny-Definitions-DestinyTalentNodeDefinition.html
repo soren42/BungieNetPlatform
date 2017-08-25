@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyTalentNodeDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyTalentNodeDefinition.html | Destiny.Definitions.DestinyTalentNodeDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyTalentNodeDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyTalentNodeDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>Talent Grids on items have Nodes.  These nodes have positions in the talent grid's UI,
+and contain &quot;Steps&quot; (DestinyTalentNodeStepDefinition), one of whom will be the &quot;Current&quot; step.</p>
+<p>The Current Step determines the visual properties of the node, as well as what the node grants
+when it is activated.</p>
+<p>See DestinyTalentGridDefinition for a more complete overview of how Talent Grids work, and how
+they are used in Destiny 2 (and how they were used in Destiny 1).</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodeIndex</td>
+<td>integer:int32</td>
+<td>The index into the DestinyTalentGridDefinition's &quot;nodes&quot; property where this node<br/>is located.  Used to uniquely identify the node within the Talent Grid.  Note that<br/>this is content version dependent: make sure you have the latest version of content<br/>before trying to use these properties.</td>
+</tr>
+<tr>
+<td>nodeHash</td>
+<td>integer:uint32</td>
+<td>The hash identifier for the node, which unfortunately is also content version dependent<br/>but can be (and ideally, should be) used instead of the nodeIndex to uniquely identify the node.<br/><br/>The two exist side-by-side for backcompat reasons due to the Great Talent Node Restructuring<br/>of Destiny 1, and I ran out of time to remove one of them and standardize on the other.  Sorry!</td>
+</tr>
+<tr>
+<td>row</td>
+<td>integer:int32</td>
+<td>The visual &quot;row&quot; where the node should be shown in the UI.  If negative, then the node is hidden.</td>
+</tr>
+<tr>
+<td>column</td>
+<td>integer:int32</td>
+<td>The visual &quot;column&quot; where the node should be shown in the UI.  If negative, the node is hidden.</td>
+</tr>
+<tr>
+<td>prerequisiteNodeIndexes</td>
+<td>integer:int32[]</td>
+<td>Indexes into the DestinyTalentGridDefinition.nodes property for any nodes<br/>that must be activated before this one is allowed to be activated.<br/><br/>I would have liked to change this to hashes for Destiny 2, but we have run out of time.</td>
+</tr>
+<tr>
+<td>binaryPairNodeIndex</td>
+<td>integer:int32</td>
+<td>At one point, Talent Nodes supported the idea of &quot;Binary Pairs&quot;: nodes that overlapped each<br/>other visually, and where activating one deactivated the other.  They ended up not being used,<br/>mostly because Exclusive Sets are <em>almost</em> a superset of this concept, but the potential<br/>for it to be used still exists in theory.<br/><br/>If this is ever used, this will be the index into<br/>the DestinyTalentGridDefinition.nodes property for the node that is the binary pair match<br/>to this node.  Activating one deactivates the other.</td>
+</tr>
+<tr>
+<td>autoUnlocks</td>
+<td>boolean</td>
+<td>If true, this node will automatically unlock when the Talent Grid's level reaches<br/>the required level of the current step of this node.</td>
+</tr>
+<tr>
+<td>lastStepRepeats</td>
+<td>boolean</td>
+<td>At one point, Nodes were going to be able to be activated multiple times, changing<br/>the current step and potentially piling on multiple effects from the previously<br/>activated steps.  This property would indicate if the last step could be activated<br/>multiple times.  <br/><br/>This is not currently used, but it isn't out of the question that<br/>this could end up being used again in a theoretical future.</td>
+</tr>
+<tr>
+<td>isRandom</td>
+<td>boolean</td>
+<td>If this is true, the node's step is determined randomly rather than<br/>the first step being chosen.</td>
+</tr>
+<tr>
+<td>randomActivationRequirement</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement.html">Destiny.Definitions.DestinyNodeActivationRequirement</a></td>
+<td>At one point, you were going to be able to repurchase talent nodes that had random steps,<br/>to &quot;re-roll&quot; the current step of the node (and thus change the properties of your item).<br/>This was to be the activation requirement for performing that re-roll.<br/><br/>The system still exists to do this, as far as I know, so it may yet come back around!</td>
+</tr>
+<tr>
+<td>isRandomRepurchasable</td>
+<td>boolean</td>
+<td>If this is true, the node can be &quot;re-rolled&quot; to acquire a different random current step.<br/>This is not used, but still exists for a theoretical future of talent grids.</td>
+</tr>
+<tr>
+<td>steps</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition.html">Destiny.Definitions.DestinyNodeStepDefinition</a>[]</td>
+<td>At this point, &quot;steps&quot; have been obfuscated into conceptual entities, aggregating <br/>the underlying notions of &quot;properties&quot; and &quot;true steps&quot;.<br/><br/>If you need to know a step as it truly exists - such as when recreating Node logic when processing<br/>Vendor data - you'll have to use the &quot;realSteps&quot; property below.</td>
+</tr>
+<tr>
+<td>exclusiveWithNodeHashes</td>
+<td>integer:uint32[]</td>
+<td>The nodeHash values for nodes that are in an Exclusive Set with this node.<br/><br/>See DestinyTalentGridDefinition.exclusiveSets for more info about exclusive sets.<br/><br/>Again, note that these are nodeHashes and <em>not</em> nodeIndexes.</td>
+</tr>
+<tr>
+<td>randomStartProgressionBarAtProgression</td>
+<td>integer:int32</td>
+<td>If the node's step is randomly selected, this is the amount of the Talent Grid's progression experience<br/>at which the progression bar for the node should be shown.</td>
+</tr>
+<tr>
+<td>layoutIdentifier</td>
+<td>string</td>
+<td>A string identifier for a custom visual layout to apply to this talent node.  Unfortunately,<br/>we do not have any data for rendering these custom layouts.  It will be up to you to interpret<br/>these strings and change your UI if you want to have custom UI matching these layouts.</td>
+</tr>
+<tr>
+<td>groupHash</td>
+<td>integer:uint32:nullable</td>
+<td>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,<br/>within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes<br/>(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.<br/><br/>See DestinyTalentExclusiveGroup for more information on the details.  This is an identifier for this node's group,<br/>if it is part of one.</td>
+</tr>
+<tr>
+<td>loreHash</td>
+<td>integer:uint32:nullable</td>
+<td>Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip.  This is the hash identifier<br/>of the lore element to show, if there is one to be show.</td>
+</tr>
+<tr>
+<td>nodeStyleIdentifier</td>
+<td>string</td>
+<td>Comes from the talent grid node style: this identifier should be used to determine<br/>how to render the node in the UI.</td>
+</tr>
+<tr>
+<td>ignoreForCompletion</td>
+<td>boolean</td>
+<td>Comes from the talent grid node style: if true, then this node should be ignored for determining whether the grid is complete.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: integer:int32
+    "nodeIndex": 0,
+    // Type: integer:uint32
+    "nodeHash": 0,
+    // Type: integer:int32
+    "row": 0,
+    // Type: integer:int32
+    "column": 0,
+    // Type: integer:int32[]
+    "prerequisiteNodeIndexes": [
+       // Type: integer:int32
+        0
+    ],
+    // Type: integer:int32
+    "binaryPairNodeIndex": 0,
+    // Type: boolean
+    "autoUnlocks": false,
+    // Type: boolean
+    "lastStepRepeats": false,
+    // Type: boolean
+    "isRandom": false,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement.html">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+    "randomActivationRequirement": {
+        // Type: integer:int32
+        "gridLevel": 0,
+        // Type: integer:uint32[]
+        "materialRequirementHashes": [
+           // Type: integer:uint32
+            0
+        ]
+    },
+    // Type: boolean
+    "isRandomRepurchasable": false,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition.html">Destiny.Definitions.DestinyNodeStepDefinition</a>[]
+    "steps": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition.html">Destiny.Definitions.DestinyNodeStepDefinition</a>
+        {
+            // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            "displayProperties": {
+                // Type: string
+                "description": "",
+                // Type: string
+                "name": "",
+                // Type: string
+                "icon": "",
+                // Type: boolean
+                "hasIcon": false
+            },
+            // Type: integer:int32
+            "stepIndex": 0,
+            // Type: integer:uint32
+            "nodeStepHash": 0,
+            // Type: string
+            "interactionDescription": "",
+            // Type: <a href="/docs/schemas/Destiny-DamageType.html">Destiny.DamageType</a>
+            "damageType": 0,
+            // Type: integer:uint32:nullable
+            "damageTypeHash": 0,
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement.html">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+            "activationRequirement": {
+                // Type: integer:int32
+                "gridLevel": 0,
+                // Type: integer:uint32[]
+                "materialRequirementHashes": [
+                   // Type: integer:uint32
+                    0
+                ]
+            },
+            // Type: boolean
+            "canActivateNextStep": false,
+            // Type: integer:int32
+            "nextStepIndex": 0,
+            // Type: boolean
+            "isNextStepRandom": false,
+            // Type: integer:uint32[]
+            "perkHashes": [
+               // Type: integer:uint32
+                0
+            ],
+            // Type: integer:int32
+            "startProgressionBarAtProgress": 0,
+            // Type: integer:uint32[]
+            "statHashes": [
+               // Type: integer:uint32
+                0
+            ],
+            // Type: boolean
+            "affectsQuality": false,
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups.html">Destiny.Definitions.DestinyTalentNodeStepGroups</a>
+            "stepGroups": {
+                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances.html">Destiny.Definitions.DestinyTalentNodeStepWeaponPerformances</a>
+                "weaponPerformance": 0,
+                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects.html">Destiny.Definitions.DestinyTalentNodeStepImpactEffects</a>
+                "impactEffects": 0,
+                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes.html">Destiny.Definitions.DestinyTalentNodeStepGuardianAttributes</a>
+                "guardianAttributes": 0,
+                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities.html">Destiny.Definitions.DestinyTalentNodeStepLightAbilities</a>
+                "lightAbilities": 0,
+                // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes.html">Destiny.Definitions.DestinyTalentNodeStepDamageTypes</a>
+                "damageTypes": 0
+            },
+            // Type: boolean
+            "affectsLevel": false,
+            // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse.html">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>[]
+            "socketReplacements": [
+               // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse.html">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>
+                {
+                    // Type: integer:uint32
+                    "socketTypeHash": 0,
+                    // Type: integer:uint32
+                    "plugItemHash": 0
+                }
+            ]
+        }
+    ],
+    // Type: integer:uint32[]
+    "exclusiveWithNodeHashes": [
+       // Type: integer:uint32
+        0
+    ],
+    // Type: integer:int32
+    "randomStartProgressionBarAtProgression": 0,
+    // Type: string
+    "layoutIdentifier": "",
+    // Type: integer:uint32:nullable
+    "groupHash": 0,
+    // Type: integer:uint32:nullable
+    "loreHash": 0,
+    // Type: string
+    "nodeStyleIdentifier": "",
+    // Type: boolean
+    "ignoreForCompletion": false
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyTalentNodeDefinition.html#schema_Destiny-Definitions-DestinyTalentNodeDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyTalentNodeDefinition.html#schema_Destiny-Definitions-DestinyTalentNodeDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

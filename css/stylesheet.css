@@ -172,6 +172,9 @@ a[name] {
   border-bottom: none;
   width: 80px;
 }
+#content .inner .table th a {
+  white-space: nowrap;
+}
 #content .inner .table td {
   color: rgba(245, 245, 245, 0.65);
 }
@@ -232,6 +235,12 @@ a[name] {
 }
 #content .inner pre code .hljs-built_in {
   color: #b184c5;
+}
+#content .inner pre code a {
+  color: #fff;
+}
+#content .inner pre code a span {
+  color: inherit;
 }
 #content .inner pre.collapse {
   position: relative;

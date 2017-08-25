@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyNodeStepDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition.html | Destiny.Definitions.DestinyNodeStepDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyNodeStepDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyNodeStepDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>This defines the properties of a &quot;Talent Node Step&quot;.  When you see a talent node
+in game, the actual visible properties that you see (its icon, description, the
+perks and stats it provides) are not provided by the Node itself, but rather by the
+currently active Step on the node.</p>
+<p>When a Talent Node is activated, the currently active step's benefits are conferred
+upon the item and character.</p>
+<p>The currently active step on talent nodes are determined when an item
+is first instantiated.  Sometimes it is random, sometimes it is more deterministic
+(particularly when a node has only a single step).</p>
+<p>Note that, when dealing with Talent Node Steps, you must ensure that you have
+the latest version of content.  stepIndex and nodeStepHash - two ways of
+identifying the step within a node - are both content version dependent, and thus
+are subject to change between content updates.</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayProperties</td>
+<td><a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td>These are the display properties actually used to render the Talent Node.<br/>The currently active step's displayProperties are shown.</td>
+</tr>
+<tr>
+<td>stepIndex</td>
+<td>integer:int32</td>
+<td>The index of this step in the list of Steps on the Talent Node.<br/><br/>Unfortunately, this is the closest thing we have to an identifier for the Step:<br/>steps are not provided a content version agnostic identifier.  This means that,<br/>when you are dealing with talent nodes, you will need to first ensure that you have<br/>the latest version of content.</td>
+</tr>
+<tr>
+<td>nodeStepHash</td>
+<td>integer:uint32</td>
+<td>The hash of this node step.  Unfortunately, while it can be used to uniquely identify<br/>the step within a node, it is also content version dependent and should not be relied on<br/>without ensuring you have the latest vesion of content.</td>
+</tr>
+<tr>
+<td>interactionDescription</td>
+<td>string</td>
+<td>If you can interact with this node in some way, this is the localized description<br/>of that interaction.</td>
+</tr>
+<tr>
+<td>damageType</td>
+<td><a href="/docs/schemas/Destiny-DamageType.html">Destiny.DamageType</a></td>
+<td>An enum representing a damage type granted by activating this step, if any.</td>
+</tr>
+<tr>
+<td>damageTypeHash</td>
+<td>integer:uint32:nullable</td>
+<td>If the step provides a damage type, this will be the hash identifier used to look up<br/>the damage type's DestinyDamageTypeDefinition.</td>
+</tr>
+<tr>
+<td>activationRequirement</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement.html">Destiny.Definitions.DestinyNodeActivationRequirement</a></td>
+<td>If the step has requirements for activation (they almost always do, if nothing<br/>else than for the Talent Grid's Progression to have reached a certain level),<br/>they will be defined here.</td>
+</tr>
+<tr>
+<td>canActivateNextStep</td>
+<td>boolean</td>
+<td>There was a time when talent nodes could be activated multiple times, and<br/>the effects of subsequent Steps would be compounded on each other, essentially<br/>&quot;upgrading&quot; the node.  We have moved away from this, but theoretically the capability<br/>still exists.<br/><br/>I continue to return this in case it is used in the future: if true and<br/>this step is the current step in the node, you are allowed to activate the node<br/>a second time to receive the benefits of the next step in the node, which will then<br/>become the active step.</td>
+</tr>
+<tr>
+<td>nextStepIndex</td>
+<td>integer:int32</td>
+<td>The stepIndex of the next step in the talent node, or -1 if this is the last step or if<br/>the next step to be chosen is random.<br/><br/>This doesn't really matter anymore unless canActivateNextStep begins to be used again.</td>
+</tr>
+<tr>
+<td>isNextStepRandom</td>
+<td>boolean</td>
+<td>If true, the next step to be chosen is random, and if you're allowed to activate the<br/>next step. (if canActivateNextStep = true)</td>
+</tr>
+<tr>
+<td>perkHashes</td>
+<td>integer:uint32[]</td>
+<td>The list of hash identifiers for Perks (DestinySandboxPerkDefinition) that are applied<br/>when this step is active.  Perks provide a variety of benefits and modifications - examine<br/>DestinySandboxPerkDefinition to learn more.</td>
+</tr>
+<tr>
+<td>startProgressionBarAtProgress</td>
+<td>integer:int32</td>
+<td>When the Talent Grid's progression reaches this value, the circular &quot;progress bar&quot; that<br/>surrounds the talent node should be shown.<br/><br/>This also indicates the lower bound of said<br/>progress bar, with the upper bound being the progress required to reach <br/>activationRequirement.gridLevel. (at some point I should precalculate the upper bound and put<br/>it in the definition to save people time)</td>
+</tr>
+<tr>
+<td>statHashes</td>
+<td>integer:uint32[]</td>
+<td>When the step provides stat benefits on the item or character, this is the list of hash identifiers<br/>for stats (DestinyStatDefinition) that are provided.</td>
+</tr>
+<tr>
+<td>affectsQuality</td>
+<td>boolean</td>
+<td>If this is true, the step affects the item's Quality in some way.  See DestinyInventoryItemDefinition<br/>for more information about the meaning of Quality.  I already made a joke about Zen and the Art of<br/>Motorcycle Maintenance elsewhere in the documentation, so I will avoid doing it again.  Oops too late</td>
+</tr>
+<tr>
+<td>stepGroups</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups.html">Destiny.Definitions.DestinyTalentNodeStepGroups</a></td>
+<td>In Destiny 1, the Armory's Perk Filtering was driven by a concept of TalentNodeStepGroups: categorizations<br/>of talent nodes based on their functionality.  While the Armory isn't a BNet-facing thing for now, and<br/>the new Armory will need to account for Sockets rather than Talent Nodes, this categorization capability<br/>feels useful enough to still keep around.</td>
+</tr>
+<tr>
+<td>affectsLevel</td>
+<td>boolean</td>
+<td>If true, this step can affect the level of the item.  See DestinyInventoryItemDefintion for more<br/>information about item levels and their effect on stats.</td>
+</tr>
+<tr>
+<td>socketReplacements</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse.html">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>[]</td>
+<td>If this step is activated, this will be a list of information used to replace socket items<br/>with new Plugs.  See DestinyInventoryItemDefinition for more information about sockets and plugs.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    "displayProperties": {
+        // Type: string
+        "description": "",
+        // Type: string
+        "name": "",
+        // Type: string
+        "icon": "",
+        // Type: boolean
+        "hasIcon": false
+    },
+    // Type: integer:int32
+    "stepIndex": 0,
+    // Type: integer:uint32
+    "nodeStepHash": 0,
+    // Type: string
+    "interactionDescription": "",
+    // Type: <a href="/docs/schemas/Destiny-DamageType.html">Destiny.DamageType</a>
+    "damageType": 0,
+    // Type: integer:uint32:nullable
+    "damageTypeHash": 0,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement.html">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+    "activationRequirement": {
+        // Type: integer:int32
+        "gridLevel": 0,
+        // Type: integer:uint32[]
+        "materialRequirementHashes": [
+           // Type: integer:uint32
+            0
+        ]
+    },
+    // Type: boolean
+    "canActivateNextStep": false,
+    // Type: integer:int32
+    "nextStepIndex": 0,
+    // Type: boolean
+    "isNextStepRandom": false,
+    // Type: integer:uint32[]
+    "perkHashes": [
+       // Type: integer:uint32
+        0
+    ],
+    // Type: integer:int32
+    "startProgressionBarAtProgress": 0,
+    // Type: integer:uint32[]
+    "statHashes": [
+       // Type: integer:uint32
+        0
+    ],
+    // Type: boolean
+    "affectsQuality": false,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups.html">Destiny.Definitions.DestinyTalentNodeStepGroups</a>
+    "stepGroups": {
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances.html">Destiny.Definitions.DestinyTalentNodeStepWeaponPerformances</a>
+        "weaponPerformance": 0,
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects.html">Destiny.Definitions.DestinyTalentNodeStepImpactEffects</a>
+        "impactEffects": 0,
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes.html">Destiny.Definitions.DestinyTalentNodeStepGuardianAttributes</a>
+        "guardianAttributes": 0,
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities.html">Destiny.Definitions.DestinyTalentNodeStepLightAbilities</a>
+        "lightAbilities": 0,
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes.html">Destiny.Definitions.DestinyTalentNodeStepDamageTypes</a>
+        "damageTypes": 0
+    },
+    // Type: boolean
+    "affectsLevel": false,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse.html">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>[]
+    "socketReplacements": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse.html">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>
+        {
+            // Type: integer:uint32
+            "socketTypeHash": 0,
+            // Type: integer:uint32
+            "plugItemHash": 0
+        }
+    ]
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyNodeStepDefinition.html#schema_Destiny-Definitions-DestinyNodeStepDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyNodeStepDefinition.html#schema_Destiny-Definitions-DestinyNodeStepDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

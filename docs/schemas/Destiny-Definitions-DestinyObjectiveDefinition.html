@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions DestinyObjectiveDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition.html | Destiny.Definitions.DestinyObjectiveDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.DestinyObjectiveDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyObjectiveDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>Defines an &quot;Objective&quot;.</p>
+<p>An objective is a specific task you should accomplish in the game.  These are referred to by:</p>
+<ul>
+<li>
+<p>Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives)</p>
+</li>
+<li>
+<p>Challenges (which are Objectives defined on an DestinyActivityDefintion)</p>
+</li>
+<li>
+<p>Milestones (which refer to Objectives that are defined on both Quest Steps and Activities)</p>
+</li>
+<li>Anything else that the designers decide to do later.</li>
+</ul>
+<p>Objectives have progress, a notion of having been Completed, human readable data describing the task
+to be accomplished, and a lot of optional tack-on data that can enhance the information provided about
+the task.</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayProperties</td>
+<td><a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td>Ideally, this should tell you what your task is.  I'm not going to lie to you though.  Sometimes<br/>this doesn't have useful information at all.  Which sucks, but there's nothing either of us can do<br/>about it.</td>
+</tr>
+<tr>
+<td>completionValue</td>
+<td>integer:int32</td>
+<td>The value that the unlock value defined in unlockValueHash must reach in order for<br/>the objective to be considered Completed.  Used in calculating progress and completion status.</td>
+</tr>
+<tr>
+<td>locationHash</td>
+<td>integer:uint32</td>
+<td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished,<br/>if there is a location defined.  Look up the DestinyLocationDefinition for this hash for that<br/>additional location info.</td>
+</tr>
+<tr>
+<td>allowNegativeValue</td>
+<td>boolean</td>
+<td>If true, the value is allowed to go negative.</td>
+</tr>
+<tr>
+<td>allowValueChangeWhenCompleted</td>
+<td>boolean</td>
+<td>If true, you can effectively &quot;un-complete&quot; this objective if you lose progress after<br/>crossing the completion threshold.  <br/><br/>If False, once you complete the task it will remain<br/>completed forever by locking the value.</td>
+</tr>
+<tr>
+<td>isCountingDownward</td>
+<td>boolean</td>
+<td>If true, completion means having an unlock value less than or equal to the completionValue.<br/><br/>If False, completion means having an unlock value greater than or equal to the completionValue.</td>
+</tr>
+<tr>
+<td>valueStyle</td>
+<td><a href="/docs/schemas/Destiny-DestinyUnlockValueUIStyle.html">Destiny.DestinyUnlockValueUIStyle</a></td>
+<td>The UI style applied to the objective.  It's an enum, take a look at DestinyUnlockValueUIStyle for details<br/>of the possible styles.  Use this info as you wish to customize your UI.</td>
+</tr>
+<tr>
+<td>progressDescription</td>
+<td>string</td>
+<td>Text to describe the progress bar.</td>
+</tr>
+<tr>
+<td>perks</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition.html">Destiny.Definitions.DestinyObjectivePerkEntryDefinition</a></td>
+<td>If this objective enables Perks intrinsically, the conditions for that enabling are defined here.</td>
+</tr>
+<tr>
+<td>stats</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition.html">Destiny.Definitions.DestinyObjectiveStatEntryDefinition</a></td>
+<td>If this objective enables modifications on a player's stats intrinsically, the conditions are defined here.</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>integer:uint32</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer:int32</td>
+<td>The index of the entity as it was found in the investment tables.</td>
+</tr>
+<tr>
+<td>redacted</td>
+<td>boolean</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition.html">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    "displayProperties": {
+        // Type: string
+        "description": "",
+        // Type: string
+        "name": "",
+        // Type: string
+        "icon": "",
+        // Type: boolean
+        "hasIcon": false
+    },
+    // Type: integer:int32
+    "completionValue": 0,
+    // Type: integer:uint32
+    "locationHash": 0,
+    // Type: boolean
+    "allowNegativeValue": false,
+    // Type: boolean
+    "allowValueChangeWhenCompleted": false,
+    // Type: boolean
+    "isCountingDownward": false,
+    // Type: <a href="/docs/schemas/Destiny-DestinyUnlockValueUIStyle.html">Destiny.DestinyUnlockValueUIStyle</a>
+    "valueStyle": 0,
+    // Type: string
+    "progressDescription": "",
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition.html">Destiny.Definitions.DestinyObjectivePerkEntryDefinition</a>
+    "perks": {
+        // Type: integer:uint32
+        "perkHash": 0,
+        // Type: <a href="/docs/schemas/Destiny-DestinyObjectiveGrantStyle.html">Destiny.DestinyObjectiveGrantStyle</a>
+        "style": 0
+    },
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition.html">Destiny.Definitions.DestinyObjectiveStatEntryDefinition</a>
+    "stats": {
+        // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition.html">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a>
+        "stat": {
+            // Type: integer:uint32
+            "statTypeHash": 0,
+            // Type: integer:int32
+            "value": 0
+        },
+        // Type: <a href="/docs/schemas/Destiny-DestinyObjectiveGrantStyle.html">Destiny.DestinyObjectiveGrantStyle</a>
+        "style": 0
+    },
+    // Type: integer:uint32
+    "hash": 0,
+    // Type: integer:int32
+    "index": 0,
+    // Type: boolean
+    "redacted": false
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyObjectiveDefinition.html#schema_Destiny-Definitions-DestinyObjectiveDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyObjectiveDefinition.html#schema_Destiny-Definitions-DestinyObjectiveDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

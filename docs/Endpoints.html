@@ -18,14 +18,14 @@
 
 	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1503693345">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../docs/Endpoints.html | Endpoints -->
+<!-- docs/Endpoints.html | Endpoints -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -40,22 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../">Home</a></li>
-<li><a href="../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
 <ul>
-<li><a href="../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../docs/API-Details">API Details</a></li>
-<li><a href="../docs/Manifest">Manifest</a></li>
-<li><a href="../docs/Authentication">Authentication</a></li>
-<li><a href="../docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
 </ul></li>
-<li><a href="#References">References</a>
+<li><a href="#">References</a>
 <ul>
-<li><a href="../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../docs/Enums">Enums</a></li>
-<li><a href="../docs/Endpoints">Endpoints</a></li>
-<li><a href="../docs/Definitions">Definitions</a></li>
-<li><a href="../docs/HistoricalStats">HistoricalStats</a></li>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -69,7 +66,7 @@
 <div id="header">
 	<div class="container">
 		<h1>Endpoints</h1>
-		<h2></h2>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
 
 		<!--<section id="downloads">
 		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
@@ -82,9 +79,8 @@
 <div id="content">
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Endpoints/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
-<p>This listing is based on <a href="https://www.bungie.net/sharedbundle/platformlib">platform library</a> file used by <a href="https://www.bungie.net">Bungie.net</a>.</p>
-<h2><a name="JSONPService"></a>JSONPService (1 Endpoint)</h2>
-<table class="table table-bordered">
+<h2><a name="User"></a>User (7 Endpoints)</h2>
+<table class="table table-bordered parameters">
 <thead>
 <tr>
 <th>Method</th>
@@ -95,454 +91,43 @@
 <tbody>
 <tr>
 <td>GET</td>
-<td><a href="../docs/JSONPService/GetCurrentUser">GetCurrentUser</a></td>
-<td>/JSONP/GetBungieNetUser/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="ApplicationService"></a>ApplicationService (14 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/ApplicationSearch">ApplicationSearch</a></td>
-<td>/App/Search/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/ChangeApiKeyStatus">ChangeApiKeyStatus</a></td>
-<td>/App/ChangeApiKeyState/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/CreateApiKey">CreateApiKey</a></td>
-<td>/App/CreateApiKey/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/CreateApplication">CreateApplication</a></td>
-<td>/App/CreateApplication/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/EditApplication">EditApplication</a></td>
-<td>/App/EditApplication/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/GetAccessTokensFromCode">GetAccessTokensFromCode</a></td>
-<td>/App/GetAccessTokensFromCode/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/GetAccessTokensFromRefreshToken">GetAccessTokensFromRefreshToken</a></td>
-<td>/App/GetAccessTokensFromRefreshToken/</td>
+<td><a href="/docs/services/User/GetBungieNetUserById.html">GetBungieNetUserById</a></td>
+<td>/User/GetBungieNetUserById/{id}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ApplicationService/GetApplication">GetApplication</a></td>
-<td>/App/Application/{param1}/</td>
+<td><a href="/docs/services/User/GetUserAliases.html">GetUserAliases</a></td>
+<td>/User/GetUserAliases/{id}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ApplicationService/GetApplicationApiKeys">GetApplicationApiKeys</a></td>
-<td>/App/ApplicationApiKeys/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ApplicationService/GetAuthorizationForUserAndApplication">GetAuthorizationForUserAndApplication</a></td>
-<td>/App/Authorization/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ApplicationService/GetAuthorizations">GetAuthorizations</a></td>
-<td>/App/Authorizations/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/GetOAuthTokens">GetOAuthTokens</a></td>
-<td>/App/oauth/token/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/PrivateApplicationSearch">PrivateApplicationSearch</a></td>
-<td>/App/PrivateSearch/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ApplicationService/RevokeAuthorization">RevokeAuthorization</a></td>
-<td>/App/RevokeAuthorization/{param1}/{param2}/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="UserService"></a>UserService (35 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/CreateUser">CreateUser</a></td>
-<td>/User/CreateUser/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/EditSuccessMessageFlags">EditSuccessMessageFlags</a></td>
-<td>/User/MessageFlags/Success/Update/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetAvailableAvatars">GetAvailableAvatars</a></td>
-<td>/User/GetAvailableAvatars/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetAvailableAvatarsAdmin">GetAvailableAvatarsAdmin</a></td>
-<td>/User/GetAvailableAvatarsAdmin/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetAvailableThemes">GetAvailableThemes</a></td>
-<td>/User/GetAvailableThemes/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetBungieAccount">GetBungieAccount</a></td>
-<td>/User/GetBungieAccount/{membershipId}/{membershipType}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetBungieNetUserById">GetBungieNetUserById</a></td>
-<td>/User/GetBungieNetUserById/{membershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetCountsForCurrentUser">GetCountsForCurrentUser</a></td>
-<td>/User/GetCounts/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetCredentialTypesForAccount">GetCredentialTypesForAccount</a></td>
-<td>/User/GetCredentialTypesForAccount/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetCurrentBungieAccount">GetCurrentBungieAccount</a></td>
-<td>/User/GetCurrentBungieAccount/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetCurrentBungieNetUser">GetCurrentBungieNetUser</a></td>
-<td>/User/GetCurrentBungieNetUser/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetCurrentUser-(User)">GetCurrentUser (User)</a></td>
-<td>/User/GetBungieNetUser/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetMembershipDataById">GetMembershipDataById</a></td>
-<td>/User/GetMembershipsById/{membershipId}/{membershipType}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetMembershipDataForCurrentUser">GetMembershipDataForCurrentUser</a></td>
-<td>/User/GetMembershipsForCurrentUser/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetMobileAppPairings">GetMobileAppPairings</a></td>
-<td>/User/GetMobileAppPairings/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetMobileAppPairingsUncached">GetMobileAppPairingsUncached</a></td>
-<td>/User/GetMobileAppPairingsUncached/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetNotificationSettings">GetNotificationSettings</a></td>
-<td>/User/GetNotificationSettings/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetPartnerships">GetPartnerships</a></td>
-<td>/User/{membershipId}/Partnerships/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetPlatformApiKeysForUser">GetPlatformApiKeysForUser</a></td>
-<td>/User/GetPlatformApiKeysForUser/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetSignOutUrl">GetSignOutUrl</a></td>
-<td>/User/GetSignOutUrl/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetUserAliases">GetUserAliases</a></td>
-<td>/User/GetUserAliases/{membershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/GetUserMembershipIds">GetUserMembershipIds</a></td>
-<td>/User/GetMembershipIds/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/LinkOverride">LinkOverride</a></td>
-<td>/User/LinkOverride/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/RegisterMobileAppPair">RegisterMobileAppPair</a></td>
-<td>/User/RegisterMobileAppPair/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/RemovePartnership">RemovePartnership</a></td>
-<td>/User/Partnerships/{param1}/Remove/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/UserService/SearchUsers">SearchUsers</a></td>
+<td><a href="/docs/services/User/SearchUsers.html">SearchUsers</a></td>
 <td>/User/SearchUsers/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/UserService/SearchUsersPaged">SearchUsersPaged</a></td>
-<td>/User/SearchUsersPaged/{searchTerm}/{page}/</td>
+<td><a href="/docs/services/User/GetAvailableThemes.html">GetAvailableThemes</a></td>
+<td>/User/GetAvailableThemes/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/UserService/SearchUsersPagedV2">SearchUsersPagedV2</a></td>
-<td>/User/SearchUsersPaged/{searchTerm}/{page}/{param3}/</td>
+<td><a href="/docs/services/User/GetMembershipDataById.html">GetMembershipDataById</a></td>
+<td>/User/GetMembershipsById/{membershipId}/{membershipType}/</td>
 </tr>
 <tr>
-<td>POST</td>
-<td><a href="../docs/UserService/SetAcknowledged">SetAcknowledged</a></td>
-<td>/User/Acknowledged/{ackId}/</td>
+<td>GET</td>
+<td><a href="/docs/services/User/GetMembershipDataForCurrentUser.html">GetMembershipDataForCurrentUser</a></td>
+<td>/User/GetMembershipsForCurrentUser/</td>
 </tr>
 <tr>
-<td>POST</td>
-<td><a href="../docs/UserService/UnregisterMobileAppPair">UnregisterMobileAppPair</a></td>
-<td>/User/UnregisterMobileAppPair/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/UpdateDestinyEmblemAvatar">UpdateDestinyEmblemAvatar</a></td>
-<td>/User/UpdateDestinyEmblemAvatar/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/UpdateNotificationSetting">UpdateNotificationSetting</a></td>
-<td>/User/Notification/Update/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/UpdateStateInfoForMobileAppPair">UpdateStateInfoForMobileAppPair</a></td>
-<td>/User/UpdateStateInfoForMobileAppPair/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/UpdateUser">UpdateUser</a></td>
-<td>/User/UpdateUser/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/UserService/UpdateUserAdmin">UpdateUserAdmin</a></td>
-<td>/User/UpdateUserAdmin/{param1}/</td>
+<td>GET</td>
+<td><a href="/docs/services/User/GetPartnerships.html">GetPartnerships</a></td>
+<td>/User/{membershipId}/Partnerships/</td>
 </tr>
 </tbody>
 </table>
-<h2><a name="MessageService"></a>MessageService (32 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/CreateConversation">CreateConversation</a></td>
-<td>/Message/CreateConversation/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/CreateConversationV2">CreateConversationV2</a></td>
-<td>/Message/CreateConversationV2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetAllianceInvitedToJoinInvitations">GetAllianceInvitedToJoinInvitations</a></td>
-<td>/Message/AllianceInvitations/InvitationsToJoinAnotherGroup/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetAllianceJoinInvitations">GetAllianceJoinInvitations</a></td>
-<td>/Message/AllianceInvitations/RequestsToJoinYourGroup/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationById">GetConversationById</a></td>
-<td>/Message/GetConversationById/{conversationId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationByIdV2">GetConversationByIdV2</a></td>
-<td>/Message/GetConversationByIdV2/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationsV2">GetConversationsV2</a></td>
-<td>/Message/GetConversationsV2/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationsV3">GetConversationsV3</a></td>
-<td>/Message/GetConversationsV3/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationsV4">GetConversationsV4</a></td>
-<td>/Message/GetConversationsV4/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationsV5">GetConversationsV5</a></td>
-<td>/Message/GetConversationsV5/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationThreadV2">GetConversationThreadV2</a></td>
-<td>/Message/GetConversationThreadV2/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationThreadV3">GetConversationThreadV3</a></td>
-<td>/Message/GetConversationThreadV3/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationWithMemberId">GetConversationWithMemberId</a></td>
-<td>/Message/GetConversationWithMember/{memberId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetConversationWithMemberIdV2">GetConversationWithMemberIdV2</a></td>
-<td>/Message/GetConversationWithMemberV2/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetGroupConversations">GetGroupConversations</a></td>
-<td>/Message/GetGroupConversations/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetInvitationDetails">GetInvitationDetails</a></td>
-<td>/Message/Invitations/{param1}/Details/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetTotalConversationCount">GetTotalConversationCount</a></td>
-<td>/Message/GetTotalConversationCount/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetUnreadConversationCountV2">GetUnreadConversationCountV2</a></td>
-<td>/Message/GetUnreadPrivateConversationCount/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetUnreadConversationCountV3">GetUnreadConversationCountV3</a></td>
-<td>/Message/GetUnreadConversationCountV3/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetUnreadConversationCountV4">GetUnreadConversationCountV4</a></td>
-<td>/Message/GetUnreadConversationCountV4/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/GetUnreadGroupConversationCount">GetUnreadGroupConversationCount</a></td>
-<td>/Message/GetUnreadGroupConversationCount/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/MessageService/LeaveConversation">LeaveConversation</a></td>
-<td>/Message/LeaveConversation/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/ModerateGroupWall">ModerateGroupWall</a></td>
-<td>/Message/ModerateGroupWall/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/ReviewAllInvitations">ReviewAllInvitations</a></td>
-<td>/Message/Invitations/ReviewAllDirect/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/ReviewInvitation">ReviewInvitation</a></td>
-<td>/Message/Invitations/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/ReviewInvitationDirect">ReviewInvitationDirect</a></td>
-<td>/Message/Invitations/ReviewDirect/{invitationId}/{invitationResponseState}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/ReviewInvitations">ReviewInvitations</a></td>
-<td>/Message/Invitations/ReviewListDirect/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/SaveMessageV2">SaveMessageV2</a></td>
-<td>/Message/SaveMessageV2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/SaveMessageV3">SaveMessageV3</a></td>
-<td>/Message/SaveMessageV3/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/SaveMessageV4">SaveMessageV4</a></td>
-<td>/Message/SaveMessageV4/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/UpdateConversationLastViewedTimestamp">UpdateConversationLastViewedTimestamp</a></td>
-<td>/Message/Conversations/UpdateLastViewedTimestamp/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/MessageService/UserIsTyping">UserIsTyping</a></td>
-<td>/Message/UserIsTyping/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="NotificationService"></a>NotificationService (4 Endpoints)</h2>
-<table class="table table-bordered">
+<h2><a name="Forum"></a>Forum (14 Endpoints)</h2>
+<table class="table table-bordered parameters">
 <thead>
 <tr>
 <th>Method</th>
@@ -553,922 +138,78 @@
 <tbody>
 <tr>
 <td>GET</td>
-<td><a href="../docs/NotificationService/GetRealTimeEvents">GetRealTimeEvents</a></td>
-<td>/Notification/Events/{param1}/{param2}/</td>
+<td><a href="/docs/services/Forum/GetTopicsPaged.html">GetTopicsPaged</a></td>
+<td>/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/NotificationService/GetRecentNotificationCount">GetRecentNotificationCount</a></td>
-<td>/Notification/GetCount/</td>
+<td><a href="/docs/services/Forum/GetCoreTopicsPaged.html">GetCoreTopicsPaged</a></td>
+<td>/Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/NotificationService/GetRecentNotifications">GetRecentNotifications</a></td>
-<td>/Notification/GetRecent/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/NotificationService/ResetNotification">ResetNotification</a></td>
-<td>/Notification/Reset/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="ContentService"></a>ContentService (18 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetCareer">GetCareer</a></td>
-<td>/Content/Careers/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetCareers">GetCareers</a></td>
-<td>/Content/Careers/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetContentById">GetContentById</a></td>
-<td>/Content/GetContentById/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetContentByTagAndType">GetContentByTagAndType</a></td>
-<td>/Content/GetContentByTagAndType/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetContentType">GetContentType</a></td>
-<td>/Content/GetContentType/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetDestinyContent">GetDestinyContent</a></td>
-<td>/Content/Site/Destiny/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetDestinyContentV2">GetDestinyContentV2</a></td>
-<td>/Content/Site/Destiny/V2/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetFeaturedArticle">GetFeaturedArticle</a></td>
-<td>/Content/Site/Featured/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetHomepageContent">GetHomepageContent</a></td>
-<td>/Content/Site/Homepage/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetHomepageContentV2">GetHomepageContentV2</a></td>
-<td>/Content/Site/Homepage/V2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetJobs">GetJobs</a></td>
-<td>/Content/Site/Jobs/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetNews">GetNews</a></td>
-<td>/Content/Site/News/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetPromoWidget">GetPromoWidget</a></td>
-<td>/Content/Site/Destiny/Promo/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/GetPublications">GetPublications</a></td>
-<td>/Content/Site/Publications/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/SearchCareers">SearchCareers</a></td>
-<td>/Content/Careers/Search/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/SearchContentByTagAndType">SearchContentByTagAndType</a></td>
-<td>/Content/SearchContentByTagAndType/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ContentService/SearchContentEx">SearchContentEx</a></td>
-<td>/Content/SearchEx/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ContentService/SearchContentWithText">SearchContentWithText</a></td>
-<td>/Content/Search/{param1}/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="ExternalSocialService"></a>ExternalSocialService (1 Endpoint)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ExternalSocialService/GetAggregatedSocialFeed">GetAggregatedSocialFeed</a></td>
-<td>/ExternalSocial/GetAggregatedSocialFeed/{param1}/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="SurveyService"></a>SurveyService (1 Endpoint)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="../docs/SurveyService/GetSurvey">GetSurvey</a></td>
-<td>/Survey/GetSurvey/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="ForumService"></a>ForumService (29 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/ApproveFireteamThread">ApproveFireteamThread</a></td>
-<td>/Forum/Recruit/Approve/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/ChangeLockState">ChangeLockState</a></td>
-<td>/Forum/ChangeLockState/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/ChangePinState">ChangePinState</a></td>
-<td>/Forum/ChangePinState/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/CreateContentComment">CreateContentComment</a></td>
-<td>/Forum/CreateContentComment/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/CreatePost">CreatePost</a></td>
-<td>/Forum/CreatePost/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/DeletePost">DeletePost</a></td>
-<td>/Forum/DeletePost/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/EditPost">EditPost</a></td>
-<td>/Forum/EditPost/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetCoreTopicsPaged">GetCoreTopicsPaged</a></td>
-<td>/Forum/GetCoreTopicsPaged/{param1}/{param2}/{param3}/{param4}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetForumTagCountEstimate">GetForumTagCountEstimate</a></td>
-<td>/Forum/GetForumTagCountEstimate/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetForumTagSuggestions">GetForumTagSuggestions</a></td>
-<td>/Forum/GetForumTagSuggestions/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetPoll">GetPoll</a></td>
-<td>/Forum/Poll/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetPopularTags">GetPopularTags</a></td>
-<td>/Forum/GetPopularTags/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetPostAndParent">GetPostAndParent</a></td>
-<td>/Forum/GetPostAndParent/{childPostId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetPostAndParentAwaitingApproval">GetPostAndParentAwaitingApproval</a></td>
-<td>/Forum/GetPostAndParentAwaitingApproval/{childPostId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ForumService/GetPostsThreadedPaged">GetPostsThreadedPaged</a></td>
+<td><a href="/docs/services/Forum/GetPostsThreadedPaged.html">GetPostsThreadedPaged</a></td>
 <td>/Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ForumService/GetPostsThreadedPagedFromChild">GetPostsThreadedPagedFromChild</a></td>
+<td><a href="/docs/services/Forum/GetPostsThreadedPagedFromChild.html">GetPostsThreadedPagedFromChild</a></td>
 <td>/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/</td>
 </tr>
 <tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/GetRecruitmentThreadSummaries">GetRecruitmentThreadSummaries</a></td>
-<td>/Forum/Recruit/Summaries/</td>
+<td>GET</td>
+<td><a href="/docs/services/Forum/GetPostAndParent.html">GetPostAndParent</a></td>
+<td>/Forum/GetPostAndParent/{childPostId}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ForumService/GetTopicForContent">GetTopicForContent</a></td>
+<td><a href="/docs/services/Forum/GetPostAndParentAwaitingApproval.html">GetPostAndParentAwaitingApproval</a></td>
+<td>/Forum/GetPostAndParentAwaitingApproval/{childPostId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Forum/GetTopicForContent.html">GetTopicForContent</a></td>
 <td>/Forum/GetTopicForContent/{contentId}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/ForumService/GetTopicsPaged">GetTopicsPaged</a></td>
-<td>/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/</td>
+<td><a href="/docs/services/Forum/GetForumTagSuggestions.html">GetForumTagSuggestions</a></td>
+<td>/Forum/GetForumTagSuggestions/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Forum/GetPoll.html">GetPoll</a></td>
+<td>/Forum/Poll/{topicId}/</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/ForumService/JoinFireteamThread">JoinFireteamThread</a></td>
-<td>/Forum/Recruit/Join/{param1}/</td>
+<td><a href="/docs/services/Forum/JoinFireteamThread.html">JoinFireteamThread</a></td>
+<td>/Forum/Recruit/Join/{topicId}/</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/ForumService/KickBanFireteamApplicant">KickBanFireteamApplicant</a></td>
-<td>/Forum/Recruit/KickBan/{param1}/{param2}/</td>
+<td><a href="/docs/services/Forum/LeaveFireteamThread.html">LeaveFireteamThread</a></td>
+<td>/Forum/Recruit/Leave/{topicId}/</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/ForumService/LeaveFireteamThread">LeaveFireteamThread</a></td>
-<td>/Forum/Recruit/Leave/{param1}/</td>
+<td><a href="/docs/services/Forum/KickBanFireteamApplicant.html">KickBanFireteamApplicant</a></td>
+<td>/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/ForumService/MarkReplyAsAnswer">MarkReplyAsAnswer</a></td>
-<td>/Forum/MarkReplyAsAnswer/{param1}/{param2}/</td>
+<td><a href="/docs/services/Forum/ApproveFireteamThread.html">ApproveFireteamThread</a></td>
+<td>/Forum/Recruit/Approve/{topicId}/</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/ForumService/ModerateGroupPost">ModerateGroupPost</a></td>
-<td>/Forum/Post/{param1}/GroupModerate/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/ModeratePost">ModeratePost</a></td>
-<td>/Forum/Post/{param1}/Moderate/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/ModerateTag">ModerateTag</a></td>
-<td>/Forum/Tags/{param1}/Moderate/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/PollVote">PollVote</a></td>
-<td>/Forum/Poll/Vote/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/RatePost">RatePost</a></td>
-<td>/Forum/RatePost/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ForumService/UnmarkReplyAsAnswer">UnmarkReplyAsAnswer</a></td>
-<td>/Forum/UnmarkReplyAsAnswer/{param1}/</td>
+<td><a href="/docs/services/Forum/GetRecruitmentThreadSummaries.html">GetRecruitmentThreadSummaries</a></td>
+<td>/Forum/Recruit/Summaries/</td>
 </tr>
 </tbody>
 </table>
-<h2><a name="ActivityService"></a>ActivityService (24 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ActivityService/FollowTag">FollowTag</a></td>
-<td>/Activity/Tag/Follow/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ActivityService/FollowUser">FollowUser</a></td>
-<td>/Activity/User/{param1}/Follow/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetApplicationActivityForUser">GetApplicationActivityForUser</a></td>
-<td>/Activity/User/{param1}/Activities/Application/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetEntitiesFollowedByCurrentUser">GetEntitiesFollowedByCurrentUser</a></td>
-<td>/Activity/Following/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetEntitiesFollowedByCurrentUserV2">GetEntitiesFollowedByCurrentUserV2</a></td>
-<td>/Activity/Following/V2/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetEntitiesFollowedByUser">GetEntitiesFollowedByUser</a></td>
-<td>/Activity/User/{param1}/Following/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetEntitiesFollowedByUserV2">GetEntitiesFollowedByUserV2</a></td>
-<td>/Activity/User/{param1}/Following/V2/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetFollowersOfTag">GetFollowersOfTag</a></td>
-<td>/Activity/Tag/Followers/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetFollowersOfUser">GetFollowersOfUser</a></td>
-<td>/Activity/User/{profileId}/Followers/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetForumActivityForUser">GetForumActivityForUser</a></td>
-<td>/Activity/User/{param1}/Activities/Forums/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetForumActivityForUserV2">GetForumActivityForUserV2</a></td>
-<td>/Activity/User/{param1}/Activities/ForumsV2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetFriends">GetFriends</a></td>
-<td>/Activity/Friends/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetFriendsAllNoPresence">GetFriendsAllNoPresence</a></td>
-<td>/Activity/Friends/AllNoPresence/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetFriendsPaged">GetFriendsPaged</a></td>
-<td>/Activity/Friends/Paged/{membershipType}/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetGroupsFollowedByCurrentUser">GetGroupsFollowedByCurrentUser</a></td>
-<td>/Activity/Following/Groups/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetGroupsFollowedByUser">GetGroupsFollowedByUser</a></td>
-<td>/Activity/User/{param1}/Following/Groups/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetGroupsFollowedPagedByCurrentUser">GetGroupsFollowedPagedByCurrentUser</a></td>
-<td>/Activity/Following/Groups/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetGroupsFollowedPagedByUser">GetGroupsFollowedPagedByUser</a></td>
-<td>/Activity/User/{param1}/Following/Groups/Paged/{param2}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetLikeAndShareActivityForUser">GetLikeAndShareActivityForUser</a></td>
-<td>/Activity/User/{param1}/Activities/LikesAndShares/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetLikeAndShareActivityForUserV2">GetLikeAndShareActivityForUserV2</a></td>
-<td>/Activity/User/{param1}/Activities/LikesAndSharesV2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetLikeShareAndForumActivityForUser">GetLikeShareAndForumActivityForUser</a></td>
-<td>/Activity/User/{param1}/Activities/LikeShareAndForum/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/ActivityService/GetUsersFollowedByCurrentUser">GetUsersFollowedByCurrentUser</a></td>
-<td>/Activity/Following/Users/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ActivityService/UnfollowTag">UnfollowTag</a></td>
-<td>/Activity/Tag/Unfollow/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/ActivityService/UnfollowUser">UnfollowUser</a></td>
-<td>/Activity/User/{param1}/Unfollow/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="GroupService"></a>GroupService (81 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/ApproveAllPending">ApproveAllPending</a></td>
-<td>/Group/{groupId}/Members/ApproveAll/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/ApproveGroupMembership">ApproveGroupMembership</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/Approve/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/ApproveGroupMembershipV2">ApproveGroupMembershipV2</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/ApproveV2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/ApprovePendingForList">ApprovePendingForList</a></td>
-<td>/Group/{groupId}/Members/ApproveList/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/BanMember">BanMember</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/Ban/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/BreakAlliance">BreakAlliance</a></td>
-<td>/Group/{groupId}/Relationship/{allyGroupId}/BreakAlliance/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/BreakAlliances">BreakAlliances</a></td>
-<td>/Group/{groupId}/BreakAlliances/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/CreateGroup">CreateGroup</a></td>
-<td>/Group/Create/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/CreateGroupV2">CreateGroupV2</a></td>
-<td>/Group/Create/V2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/CreateMinimalGroup">CreateMinimalGroup</a></td>
-<td>/Group/Create/Minimal/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DenyAllPending">DenyAllPending</a></td>
-<td>/Group/{groupId}/Members/DenyAll/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DenyGroupMembership">DenyGroupMembership</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/Deny/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DenyGroupMembershipV2">DenyGroupMembershipV2</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/DenyV2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DenyPendingForList">DenyPendingForList</a></td>
-<td>/Group/{groupId}/Members/DenyList/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DesignateClanFounder">DesignateClanFounder</a></td>
-<td>/Group/{param1}/DesignateClanFounder/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DisableClanForGroup">DisableClanForGroup</a></td>
-<td>/Group/{groupId}/Clans/Disable/{clanMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/DisbandAlliance">DisbandAlliance</a></td>
-<td>/Group/{groupId}/BreakAllAlliances/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/EditGroup">EditGroup</a></td>
-<td>/Group/{groupId}/Edit/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/EditGroupMembership">EditGroupMembership</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/SetMembershipType/{groupMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/EditGroupV2">EditGroupV2</a></td>
-<td>/Group/{groupId}/EditV2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/EnableClanForGroup">EnableClanForGroup</a></td>
-<td>/Group/{groupId}/Clans/Enable/{clanMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/FollowGroupsWithGroup">FollowGroupsWithGroup</a></td>
-<td>/Group/{groupId}/FollowList/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/FollowGroupWithGroup">FollowGroupWithGroup</a></td>
-<td>/Group/{groupId}/Follow/{followGroupId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAdminsOfGroup">GetAdminsOfGroup</a></td>
-<td>/Group/{groupId}/Admins/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAdminsOfGroupV2">GetAdminsOfGroupV2</a></td>
-<td>/Group/{groupId}/AdminsV2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAllFoundedGroupsForMember">GetAllFoundedGroupsForMember</a></td>
-<td>/Group/User/{param1}/Founded/All/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAllGroupsForCurrentMember">GetAllGroupsForCurrentMember</a></td>
-<td>/Group/MyGroups/All/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAllGroupsForMember">GetAllGroupsForMember</a></td>
-<td>/Group/User/{membershipId}/All/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAlliedGroups">GetAlliedGroups</a></td>
-<td>/Group/{groupId}/Allies/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAvailableAvatars-(Group)">GetAvailableAvatars (Group)</a></td>
-<td>/Group/GetAvailableAvatars/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetAvailableThemes-(Group)">GetAvailableThemes (Group)</a></td>
-<td>/Group/GetAvailableThemes/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetBannedMembersOfGroup">GetBannedMembersOfGroup</a></td>
-<td>/Group/{groupId}/Banned/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetBannedMembersOfGroupV2">GetBannedMembersOfGroupV2</a></td>
-<td>/Group/{groupId}/BannedV2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetClanAttributeDefinitions">GetClanAttributeDefinitions</a></td>
-<td>/Group/GetClanAttributeDefinitions/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetDeletedGroupsForCurrentMember">GetDeletedGroupsForCurrentMember</a></td>
-<td>/Group/MyGroups/Deleted/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetFoundedGroupsForMember">GetFoundedGroupsForMember</a></td>
-<td>/Group/User/{membershipId}/Founded/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetGroup">GetGroup</a></td>
-<td>/Group/{groupId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetGroupByName">GetGroupByName</a></td>
-<td>/Group/Name/{groupName}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetGroupsFollowedByGroup">GetGroupsFollowedByGroup</a></td>
-<td>/Group/{groupId}/Following/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetGroupsFollowingGroup">GetGroupsFollowingGroup</a></td>
-<td>/Group/{groupId}/FollowedBy/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetGroupTagSuggestions">GetGroupTagSuggestions</a></td>
-<td>/Group/GetGroupTagSuggestions/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetJoinedGroupsForCurrentMember">GetJoinedGroupsForCurrentMember</a></td>
-<td>/Group/MyGroups/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetJoinedGroupsForCurrentMemberV2">GetJoinedGroupsForCurrentMemberV2</a></td>
-<td>/Group/MyGroups/V2/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetJoinedGroupsForMember">GetJoinedGroupsForMember</a></td>
-<td>/Group/User/{membershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetJoinedGroupsForMemberV2">GetJoinedGroupsForMemberV2</a></td>
-<td>/Group/User/{membershipId}/Joined/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetJoinedGroupsForMemberV3">GetJoinedGroupsForMemberV3</a></td>
-<td>/Group/User/{membershipId}/JoinedV3/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetMembersOfClan">GetMembersOfClan</a></td>
-<td>/Group/{groupId}/ClanMembers/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetMembersOfGroup">GetMembersOfGroup</a></td>
-<td>/Group/{groupId}/Members/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetMembersOfGroupV2">GetMembersOfGroupV2</a></td>
-<td>/Group/{groupId}/MembersV2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetMembersOfGroupV3">GetMembersOfGroupV3</a></td>
-<td>/Group/{groupId}/MembersV3/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetMyClanMemberships">GetMyClanMemberships</a></td>
-<td>/Group/MyClans/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingClanMemberships">GetPendingClanMemberships</a></td>
-<td>/Group/{groupId}/Clan/{clanMembershipType}/Pending/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingGroupsForCurrentMember">GetPendingGroupsForCurrentMember</a></td>
-<td>/Group/MyPendingGroups/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingGroupsForCurrentMemberV2">GetPendingGroupsForCurrentMemberV2</a></td>
-<td>/Group/MyPendingGroups/V2/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingGroupsForMember">GetPendingGroupsForMember</a></td>
-<td>/Group/User/{membershipId}/Pending/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingGroupsForMemberV2">GetPendingGroupsForMemberV2</a></td>
-<td>/Group/User/{membershipId}/PendingV2/{currentPage}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingMemberships">GetPendingMemberships</a></td>
-<td>/Group/{groupId}/Members/Pending/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/GroupService/GetPendingMembershipsV2">GetPendingMembershipsV2</a></td>
-<td>/Group/{groupId}/Members/PendingV2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/GetRecommendedGroups">GetRecommendedGroups</a></td>
-<td>/Group/Recommended/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/GroupSearch">GroupSearch</a></td>
-<td>/Group/Search/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/InviteClanMember">InviteClanMember</a></td>
-<td>/Group/{groupId}/InviteToClan/{membershipId}/{clanMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/InviteGroupMember">InviteGroupMember</a></td>
-<td>/Group/{groupId}/Invite/{membershipId}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/InviteManyToJoinAlliance">InviteManyToJoinAlliance</a></td>
-<td>/Group/{groupId}/Allies/InviteMany/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/InviteToJoinAlliance">InviteToJoinAlliance</a></td>
-<td>/Group/{groupId}/Allies/Invite/{allyGroupId}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/JoinClanForGroup">JoinClanForGroup</a></td>
-<td>/Group/{groupId}/Clans/Join/{clanMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/KickMember">KickMember</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/Kick/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/LeaveClanForGroup">LeaveClanForGroup</a></td>
-<td>/Group/{groupId}/Clans/Leave/{clanMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/OverrideFounderAdmin">OverrideFounderAdmin</a></td>
-<td>/Group/{groupId}/Admin/FounderOverride/{membershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/RefreshClanSettingsInDestiny">RefreshClanSettingsInDestiny</a></td>
-<td>/Group/MyClans/Refresh/{clanMembershipType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/RequestGroupMembership">RequestGroupMembership</a></td>
-<td>/Group/{groupId}/Members/Apply/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/RequestGroupMembershipV2">RequestGroupMembershipV2</a></td>
-<td>/Group/{groupId}/Members/ApplyV2/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/RequestToJoinAlliance">RequestToJoinAlliance</a></td>
-<td>/Group/{groupId}/Allies/RequestToJoin/{allyGroupId}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/RescindGroupMembership">RescindGroupMembership</a></td>
-<td>/Group/{groupId}/Members/Rescind/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/SaveMigrationSelection">SaveMigrationSelection</a></td>
-<td>/Group/{param1}/MigrationSelection/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/SetGroupAsAlliance">SetGroupAsAlliance</a></td>
-<td>/Group/{groupId}/SetAsAlliance/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/SetPrivacy">SetPrivacy</a></td>
-<td>/Group/{groupId}/Privacy/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/UnbanMember">UnbanMember</a></td>
-<td>/Group/{groupId}/Members/{membershipId}/Unban/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/UndeleteGroup">UndeleteGroup</a></td>
-<td>/Group/{groupId}/Undelete/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/UnfollowAllGroupsWithGroup">UnfollowAllGroupsWithGroup</a></td>
-<td>/Group/{groupId}/UnfollowAll/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/UnfollowGroupsWithGroup">UnfollowGroupsWithGroup</a></td>
-<td>/Group/{groupId}/UnfollowList/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/GroupService/UnfollowGroupWithGroup">UnfollowGroupWithGroup</a></td>
-<td>/Group/{groupId}/Unfollow/{followGroupId}/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="IgnoreService"></a>IgnoreService (8 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/IgnoreService/FlagItem">FlagItem</a></td>
-<td>/Ignore/Flag/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/IgnoreService/GetIgnoresForUser">GetIgnoresForUser</a></td>
-<td>/Ignore/MyIgnores/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/IgnoreService/GetIgnoreStatusForPost">GetIgnoreStatusForPost</a></td>
-<td>/Ignore/MyIgnores/Posts/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/IgnoreService/GetIgnoreStatusForUser">GetIgnoreStatusForUser</a></td>
-<td>/Ignore/MyIgnores/Users/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/IgnoreService/GetReportContext">GetReportContext</a></td>
-<td>/Ignore/ReportContext/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/IgnoreService/IgnoreItem">IgnoreItem</a></td>
-<td>/Ignore/Ignore/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/IgnoreService/MyLastReport">MyLastReport</a></td>
-<td>/Ignore/MyLastReport/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/IgnoreService/UnignoreItem">UnignoreItem</a></td>
-<td>/Ignore/Unignore/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="GameService"></a>GameService (2 Endpoints)</h2>
-<table class="table table-bordered">
+<h2><a name="Destiny2"></a>Destiny2 (28 Endpoints)</h2>
+<table class="table table-bordered parameters">
 <thead>
 <tr>
 <th>Method</th>
@@ -1479,18 +220,148 @@
 <tbody>
 <tr>
 <td>GET</td>
-<td><a href="../docs/GameService/GetPlayerGamesById">GetPlayerGamesById</a></td>
-<td>/Game/GetPlayerGamesById/{param1}/</td>
+<td><a href="/docs/services/Destiny2/GetDestinyManifest.html">GetDestinyManifest</a></td>
+<td>/Destiny2/Manifest/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/SearchDestinyPlayer.html">SearchDestinyPlayer</a></td>
+<td>/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetProfile.html">GetProfile</a></td>
+<td>/Destiny2/{membershipType}/Profile/{destinyMembershipId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetCharacter.html">GetCharacter</a></td>
+<td>/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetClanWeeklyRewardState.html">GetClanWeeklyRewardState</a></td>
+<td>/Destiny2/Clan/{groupId}/WeeklyRewardState/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetItem.html">GetItem</a></td>
+<td>/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetVendors.html">GetVendors</a></td>
+<td>/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetVendor.html">GetVendor</a></td>
+<td>/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><a href="../docs/GameService/ReachModelSneakerNet">ReachModelSneakerNet</a></td>
-<td>/Game/ReachModelSneakerNet/{param1}/</td>
+<td><a href="/docs/services/Destiny2/TransferItem.html">TransferItem</a></td>
+<td>/Destiny2/Actions/Items/TransferItem/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="/docs/services/Destiny2/EquipItem.html">EquipItem</a></td>
+<td>/Destiny2/Actions/Items/EquipItem/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="/docs/services/Destiny2/EquipItems.html">EquipItems</a></td>
+<td>/Destiny2/Actions/Items/EquipItems/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="/docs/services/Destiny2/SetItemLockState.html">SetItemLockState</a></td>
+<td>/Destiny2/Actions/Items/SetLockState/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="/docs/services/Destiny2/InsertSocketPlug.html">InsertSocketPlug</a></td>
+<td>/Destiny2/Actions/Items/InsertSocketPlug/</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="/docs/services/Destiny2/ActivateTalentNode.html">ActivateTalentNode</a></td>
+<td>/Destiny2/Actions/Items/ActivateTalentNode/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetPostGameCarnageReport.html">GetPostGameCarnageReport</a></td>
+<td>/Destiny2/Stats/PostGameCarnageReport/{activityId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetHistoricalStatsDefinition.html">GetHistoricalStatsDefinition</a></td>
+<td>/Destiny2/Stats/Definition/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetClanLeaderboards.html">GetClanLeaderboards</a></td>
+<td>/Destiny2/Stats/Leaderboards/Clans/{groupId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetClanAggregateStats.html">GetClanAggregateStats</a></td>
+<td>/Destiny2/Stats/AggregateClanStats/{groupId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetLeaderboards.html">GetLeaderboards</a></td>
+<td>/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetLeaderboardsForCharacter.html">GetLeaderboardsForCharacter</a></td>
+<td>/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/SearchDestinyEntities.html">SearchDestinyEntities</a></td>
+<td>/Destiny2/Armory/Search/{type}/{searchTerm}/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetHistoricalStats.html">GetHistoricalStats</a></td>
+<td>/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetHistoricalStatsForAccount.html">GetHistoricalStatsForAccount</a></td>
+<td>/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetActivityHistory.html">GetActivityHistory</a></td>
+<td>/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetUniqueWeaponHistory.html">GetUniqueWeaponHistory</a></td>
+<td>/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetDestinyAggregateActivityStats.html">GetDestinyAggregateActivityStats</a></td>
+<td>/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetPublicMilestoneContent.html">GetPublicMilestoneContent</a></td>
+<td>/Destiny2/Milestones/{milestoneHash}/Content/</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="/docs/services/Destiny2/GetPublicMilestones.html">GetPublicMilestones</a></td>
+<td>/Destiny2/Milestones/</td>
 </tr>
 </tbody>
 </table>
-<h2><a name="AdminService"></a>AdminService (18 Endpoints)</h2>
-<table class="table table-bordered">
+<h2><a name="CommunityContent"></a>CommunityContent (6 Endpoints)</h2>
+<table class="table table-bordered parameters">
 <thead>
 <tr>
 <th>Method</th>
@@ -1501,98 +372,38 @@
 <tbody>
 <tr>
 <td>GET</td>
-<td><a href="../docs/AdminService/AdminUserSearch">AdminUserSearch</a></td>
-<td>/Admin/Member/Search/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/BulkEditPost">BulkEditPost</a></td>
-<td>/Admin/BulkEditPost/</td>
+<td><a href="/docs/services/CommunityContent/GetCommunityContent.html">GetCommunityContent</a></td>
+<td>/CommunityContent/Get/{sort}/{mediaFilter}/{page}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/AdminService/GetAdminHistory">GetAdminHistory</a></td>
-<td>/Admin/GlobalHistory/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/GetAssignedReports">GetAssignedReports</a></td>
-<td>/Admin/Assigned/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/GetDisciplinedReportsForMember">GetDisciplinedReportsForMember</a></td>
-<td>/Admin/Member/{param1}/Reports/</td>
+<td><a href="/docs/services/CommunityContent/GetCommunityLiveStatuses.html">GetCommunityLiveStatuses</a></td>
+<td>/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/AdminService/GetRecentDisciplineAndFlagHistoryForMember">GetRecentDisciplineAndFlagHistoryForMember</a></td>
-<td>/Admin/Member/{param1}/RecentIncludingFlags/{param2}</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/GetResolvedReports">GetResolvedReports</a></td>
-<td>/Admin/Reports/</td>
+<td><a href="/docs/services/CommunityContent/GetCommunityLiveStatusesForClanmates.html">GetCommunityLiveStatusesForClanmates</a></td>
+<td>/CommunityContent/Live/Clan/{partnershipType}/{sort}/{page}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/AdminService/GetUserBanState">GetUserBanState</a></td>
-<td>/Admin/Member/{param1}/GetBanState/</td>
+<td><a href="/docs/services/CommunityContent/GetCommunityLiveStatusesForFriends.html">GetCommunityLiveStatusesForFriends</a></td>
+<td>/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/AdminService/GetUserPostHistory">GetUserPostHistory</a></td>
-<td>/Admin/Member/{param1}/PostHistory/{param2}/</td>
+<td><a href="/docs/services/CommunityContent/GetFeaturedCommunityLiveStatuses.html">GetFeaturedCommunityLiveStatuses</a></td>
+<td>/CommunityContent/Live/Featured/{partnershipType}/{sort}/{page}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/AdminService/GetUserWebClientIpHistory">GetUserWebClientIpHistory</a></td>
-<td>/Admin/Member/{param1}/GetWebClientIpHistory/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/GloballyIgnoreItem">GloballyIgnoreItem</a></td>
-<td>/Admin/Ignores/GloballyIgnore/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/OverrideBanOnUser">OverrideBanOnUser</a></td>
-<td>/Admin/Member/{param1}/SetBan/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/OverrideGlobalIgnore">OverrideGlobalIgnore</a></td>
-<td>/Admin/Ignores/OverrideGlobalIgnore/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/OverrideGroupWallBanOnUser">OverrideGroupWallBanOnUser</a></td>
-<td>/Admin/Member/{param1}/SetGroupWallBan/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/OverrideMsgBanOnUser">OverrideMsgBanOnUser</a></td>
-<td>/Admin/Member/{param1}/SetMsgBan/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/OverturnReport">OverturnReport</a></td>
-<td>/Admin/Reports/Overturn/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/ResolveReport">ResolveReport</a></td>
-<td>/Admin/Assigned/Resolve/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/AdminService/ReturnAssignedReports">ReturnAssignedReports</a></td>
-<td>/Admin/Assigned/ReturnAll</td>
+<td><a href="/docs/services/CommunityContent/GetStreamingStatusForMember.html">GetStreamingStatusForMember</a></td>
+<td>/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/</td>
 </tr>
 </tbody>
 </table>
-<h2><a name="TrendingService"></a>TrendingService (3 Endpoints)</h2>
-<table class="table table-bordered">
+<h2><a name="Trending"></a>Trending (3 Endpoints)</h2>
+<table class="table table-bordered parameters">
 <thead>
 <tr>
 <th>Method</th>
@@ -1603,531 +414,18 @@
 <tbody>
 <tr>
 <td>GET</td>
-<td><a href="../docs/TrendingService/GetTrendingCategories">GetTrendingCategories</a></td>
+<td><a href="/docs/services/Trending/GetTrendingCategories.html">GetTrendingCategories</a></td>
 <td>/Trending/Categories/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/TrendingService/GetTrendingCategory">GetTrendingCategory</a></td>
-<td>/Trending/Categories/{param1}/{param2}/</td>
+<td><a href="/docs/services/Trending/GetTrendingCategory.html">GetTrendingCategory</a></td>
+<td>/Trending/Categories/{categoryId}/{pageNumber}/</td>
 </tr>
 <tr>
 <td>GET</td>
-<td><a href="../docs/TrendingService/GetTrendingEntryDetail">GetTrendingEntryDetail</a></td>
-<td>/Trending/Details/{param1}/{param2}/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="TokensService"></a>TokensService (14 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/ApplyOfferToCurrentDestinyMembership">ApplyOfferToCurrentDestinyMembership</a></td>
-<td>/Tokens/ApplyOfferToCurrentDestinyMembership/{param1}/{param2}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/BreakBond">BreakBond</a></td>
-<td>/Tokens/RAF/BreakBond/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/ClaimAndApplyOnToken">ClaimAndApplyOnToken</a></td>
-<td>/Tokens/ClaimAndApplyToken/{tokenType}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/ClaimToken">ClaimToken</a></td>
-<td>/Tokens/Claim/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/ConsumeMarketplacePlatformCodeOffer">ConsumeMarketplacePlatformCodeOffer</a></td>
-<td>/Tokens/ConsumeMarketplacePlatformCodeOffer/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/TokensService/GetCurrentUserOfferHistory">GetCurrentUserOfferHistory</a></td>
-<td>/Tokens/OfferHistory/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/TokensService/GetCurrentUserThrottleState">GetCurrentUserThrottleState</a></td>
-<td>/Tokens/ThrottleState/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/TokensService/GetRAFEligibility">GetRAFEligibility</a></td>
-<td>/Tokens/RAF/GetEligibility/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/TokensService/MarketplacePlatformCodeOfferHistory">MarketplacePlatformCodeOfferHistory</a></td>
-<td>/Tokens/MarketplacePlatformCodeOfferHistory/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/RAFClaim">RAFClaim</a></td>
-<td>/Tokens/RAF/Claim/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/RAFGenerateReferralCode">RAFGenerateReferralCode</a></td>
-<td>/Tokens/RAF/GenerateReferralCode/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/TokensService/RAFGetNewPlayerBondDetails">RAFGetNewPlayerBondDetails</a></td>
-<td>/Tokens/RAF/GetNewPlayerBondDetails/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/TokensService/RAFGetVeteranBondDetails">RAFGetVeteranBondDetails</a></td>
-<td>/Tokens/RAF/GetVeteranBondDetails/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/TokensService/VerifyAge">VerifyAge</a></td>
-<td>/Tokens/VerifyAge/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="DestinyService"></a>DestinyService (60 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/DestinyService/EquipItem">EquipItem</a></td>
-<td>/Destiny/EquipItem/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/DestinyService/EquipItems">EquipItems</a></td>
-<td>/Destiny/EquipItems/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAccount">GetAccount</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAccountSummary">GetAccountSummary</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Summary/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetActivityBlob">GetActivityBlob</a></td>
-<td>/Destiny/Stats/ActivityBlob/{e}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetActivityHistory">GetActivityHistory</a></td>
-<td>/Destiny/Stats/ActivityHistory/{membershipType}/{destinyMembershipId}/{characterId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAdvisorsForAccount">GetAdvisorsForAccount</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Advisors/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAdvisorsForCharacter">GetAdvisorsForCharacter</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAdvisorsForCharacterV2">GetAdvisorsForCharacterV2</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Advisors/V2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAdvisorsForCurrentCharacter">GetAdvisorsForCurrentCharacter</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Advisors/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAllItemsSummary">GetAllItemsSummary</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Items/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetAllVendorsForCurrentCharacter">GetAllVendorsForCurrentCharacter</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetBondAdvisors">GetBondAdvisors</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Advisors/Bonds/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetCharacter">GetCharacter</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Complete/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetCharacterActivities">GetCharacterActivities</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Activities/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetCharacterInventory">GetCharacterInventory</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetCharacterInventorySummary">GetCharacterInventorySummary</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/Summary/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetCharacterProgression">GetCharacterProgression</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Progression/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetCharacterSummary">GetCharacterSummary</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetClanLeaderboards">GetClanLeaderboards</a></td>
-<td>/Destiny/Stats/ClanLeaderboards/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetDestinyAggregateActivityStats">GetDestinyAggregateActivityStats</a></td>
-<td>/Destiny/Stats/AggregateActivityStats/{membershipType}/{destinyMembershipId}/{characterId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetDestinyExplorerItems">GetDestinyExplorerItems</a></td>
-<td>/Destiny/Explorer/Items/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetDestinyExplorerTalentNodeSteps">GetDestinyExplorerTalentNodeSteps</a></td>
-<td>/Destiny/Explorer/TalentNodeSteps/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetDestinyLiveTileContentItems">GetDestinyLiveTileContentItems</a></td>
-<td>/Destiny/LiveTiles/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetDestinyManifest">GetDestinyManifest</a></td>
-<td>/Destiny/Manifest/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetDestinySingleDefinition">GetDestinySingleDefinition</a></td>
-<td>/Destiny/Manifest/{definitionType}/{definitionId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetExcellenceBadges">GetExcellenceBadges</a></td>
-<td>/Destiny/Stats/GetExcellenceBadges/{membershipType}/{destinyMembershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetGrimoireByMembership">GetGrimoireByMembership</a></td>
-<td>/Destiny/Vanguard/Grimoire/{membershipType}/{destinyMembershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetGrimoireDefinition">GetGrimoireDefinition</a></td>
-<td>/Destiny/Vanguard/Grimoire/Definition/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetHistoricalStats">GetHistoricalStats</a></td>
-<td>/Destiny/Stats/{membershipType}/{destinyMembershipId}/{characterId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetHistoricalStatsDefinition">GetHistoricalStatsDefinition</a></td>
-<td>/Destiny/Stats/Definition/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetHistoricalStatsForAccount">GetHistoricalStatsForAccount</a></td>
-<td>/Destiny/Stats/Account/{membershipType}/{destinyMembershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetItemDetail">GetItemDetail</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Inventory/{itemInstanceId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetItemReferenceDetail">GetItemReferenceDetail</a></td>
-<td>/Destiny/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetLeaderboards">GetLeaderboards</a></td>
-<td>/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetLeaderboardsForCharacter">GetLeaderboardsForCharacter</a></td>
-<td>/Destiny/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetLeaderboardsForPsn">GetLeaderboardsForPsn</a></td>
-<td>/Destiny/Stats/LeaderboardsForPsn/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetMembershipIdByDisplayName">GetMembershipIdByDisplayName</a></td>
-<td>/Destiny/{membershipType}/Stats/GetMembershipIdByDisplayName/{displayName}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetMyGrimoire">GetMyGrimoire</a></td>
-<td>/Destiny/Vanguard/Grimoire/{membershipType}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetPostGameCarnageReport">GetPostGameCarnageReport</a></td>
-<td>/Destiny/Stats/PostGameCarnageReport/{activityInstanceId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetPublicAdvisors">GetPublicAdvisors</a></td>
-<td>/Destiny/Advisors/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetPublicAdvisorsV2">GetPublicAdvisorsV2</a></td>
-<td>/Destiny/Advisors/V2/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetPublicVendor">GetPublicVendor</a></td>
-<td>/Destiny/Vendors/{vendorId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetPublicVendorWithMetadata">GetPublicVendorWithMetadata</a></td>
-<td>/Destiny/Vendors/{vendorId}/Metadata/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetPublicXurVendor">GetPublicXurVendor</a></td>
-<td>/Destiny/Advisors/Xur/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetRecordBookCompletionStatus">GetRecordBookCompletionStatus</a></td>
-<td>/Destiny/{membershipType}/MyAccount/RecordBooks/{recordBookHash}/Completion/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetSpecialEventAdvisors">GetSpecialEventAdvisors</a></td>
-<td>/Destiny/Events/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetTriumphs">GetTriumphs</a></td>
-<td>/Destiny/{membershipType}/Account/{destinyMembershipId}/Triumphs/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetUniqueWeaponHistory">GetUniqueWeaponHistory</a></td>
-<td>/Destiny/Stats/UniqueWeapons/{membershipType}/{destinyMembershipId}/{characterId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVault">GetVault</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Vault/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVaultSummary">GetVaultSummary</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Vault/Summary/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVendorForCurrentCharacter">GetVendorForCurrentCharacter</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVendorForCurrentCharacterWithMetadata">GetVendorForCurrentCharacterWithMetadata</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Metadata/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVendorItemDetailForCurrentCharacter">GetVendorItemDetailForCurrentCharacter</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVendorItemDetailForCurrentCharacterWithMetadata">GetVendorItemDetailForCurrentCharacterWithMetadata</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendor/{vendorId}/Item/{itemId}/Metadata/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/GetVendorSummariesForCurrentCharacter">GetVendorSummariesForCurrentCharacter</a></td>
-<td>/Destiny/{membershipType}/MyAccount/Character/{characterId}/Vendors/Summaries/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/DestinyService/SearchDestinyPlayer">SearchDestinyPlayer</a></td>
-<td>/Destiny/SearchDestinyPlayer/{membershipType}/{displayName}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/DestinyService/SetItemLockState">SetItemLockState</a></td>
-<td>/Destiny/SetLockState/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/DestinyService/SetQuestTrackedState">SetQuestTrackedState</a></td>
-<td>/Destiny/SetQuestTrackedState/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/DestinyService/TransferItem">TransferItem</a></td>
-<td>/Destiny/TransferItem/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="CommunitycontentService"></a>CommunitycontentService (14 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberBanStatus">AdminSetCommunityLiveMemberBanStatus</a></td>
-<td>/CommunityContent/Live/Partnerships/{param1}/{param2}/Ban/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus">AdminSetCommunityLiveMemberFeatureStatus</a></td>
-<td>/CommunityContent/Live/Partnerships/{param1}/{param2}/Feature/{param3}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/CommunitycontentService/AlterApprovalState">AlterApprovalState</a></td>
-<td>/CommunityContent/AlterApprovalState/{param1}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/CommunitycontentService/EditContent">EditContent</a></td>
-<td>/CommunityContent/Edit/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetAdminCommunityLiveStatuses">GetAdminCommunityLiveStatuses</a></td>
-<td>/CommunityContent/Live/Admin/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetApprovalQueue">GetApprovalQueue</a></td>
-<td>/CommunityContent/Queue/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetCommunityContent">GetCommunityContent</a></td>
-<td>/CommunityContent/Get/{param1}/{param2}/{param3}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetCommunityFeaturedActivityModes">GetCommunityFeaturedActivityModes</a></td>
-<td>/CommunityContent/Live/ActivityModes/Featured/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetCommunityLiveStatuses">GetCommunityLiveStatuses</a></td>
-<td>/CommunityContent/Live/All/{partnershipType}/{communityStatusSort}/{page}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForClanmates">GetCommunityLiveStatusesForClanmates</a></td>
-<td>/CommunityContent/Live/Clan/{partnershipType}/{communityStatusSort}/{page}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForFriends">GetCommunityLiveStatusesForFriends</a></td>
-<td>/CommunityContent/Live/Friends/{partnershipType}/{communityStatusSort}/{page}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses">GetFeaturedCommunityLiveStatuses</a></td>
-<td>/CommunityContent/Live/Featured/{partnershipType}/{communityStatusSort}/{page}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CommunitycontentService/GetStreamingStatusForMember">GetStreamingStatusForMember</a></td>
-<td>/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="../docs/CommunitycontentService/SubmitContent">SubmitContent</a></td>
-<td>/CommunityContent/Submit/</td>
-</tr>
-</tbody>
-</table>
-<h2><a name="CoreService"></a>CoreService (5 Endpoints)</h2>
-<table class="table table-bordered">
-<thead>
-<tr>
-<th>Method</th>
-<th>Name</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CoreService/GetAvailableLocales">GetAvailableLocales</a></td>
-<td>//GetAvailableLocales/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CoreService/GetCommonSettings">GetCommonSettings</a></td>
-<td>//Settings/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CoreService/GetGlobalAlerts">GetGlobalAlerts</a></td>
-<td>//GlobalAlerts/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CoreService/GetSystemStatus">GetSystemStatus</a></td>
-<td>//Status/{param1}/</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="../docs/CoreService/HelloWorld">HelloWorld</a></td>
-<td>//HelloWorld/</td>
+<td><a href="/docs/services/Trending/GetTrendingEntryDetail.html">GetTrendingEntryDetail</a></td>
+<td>/Trending/Details/{trendingEntryType}/{identifier}/</td>
 </tr>
 </tbody>
 </table>

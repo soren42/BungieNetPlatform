@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ActivateTalentNode | Destiny2 | services | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/services/Destiny2/ActivateTalentNode.html | Destiny2.ActivateTalentNode -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny2.ActivateTalentNode</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/ActivateTalentNode/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>Activate a Talent Node, which may result in swapping or payment of activation cost.  You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.  PREVIEW: This service is not yet active, but we are returning the planned schema of the endpoint for review, comment, and preparation for its eventual implementation.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://bungie.net/Platform/Destiny2/Actions/Items/ActivateTalentNode/">/Destiny2/Actions/Items/ActivateTalentNode/</a></li>
+<li><strong>Basepath:</strong> <a href="https://bungie.net/Platform">https://bungie.net/Platform</a></li>
+<li><strong>Method:</strong> POST</li>
+<li><strong>Service:</strong> <a href="Endpoints#Destiny2">Destiny2</a></li>
+<li><strong>Permissions:</strong> MoveEquipDestinyItems</li>
+<li><strong>Officially Supported:</strong> Yes</li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<p>None</p>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<h3>Request</h3>
+<p>POST <a href="https://bungie.net/Platform/Destiny2/Actions/Items/ActivateTalentNode/">https://bungie.net/Platform/Destiny2/Actions/Items/ActivateTalentNode/</a>
+Schema: <a href="/docs/schemas/Destiny-Requests-Actions-DestinyItemActionRequest.html">Destiny.Requests.Actions.DestinyItemActionRequest</a></p>
+<pre><code class="javascript">{
+    // Type: integer:int64
+    "itemId": 0,
+    // Type: integer:int64
+    "characterId": 0,
+    // Type: <a href="/docs/schemas/BungieMembershipType.html">BungieMembershipType</a>
+    "membershipType": 0,
+    // Type: <a href="/docs/schemas/Destiny-Requests-Actions-DestinyItemActionRequest.html">Destiny.Requests.Actions.DestinyItemActionRequest</a>
+}
+</code></pre>
+<h3>Response</h3>
+<p>Schema: <a href="/docs/responses/int32.html">int32</a>
+PlatformErrorCode: 200</p>
+<pre><code class="javascript">{
+    // Type: integer:int32
+    "Response": 0,
+    // Type: <a href="/docs/schemas/Exceptions-PlatformErrorCodes.html">Exceptions.PlatformErrorCodes</a>
+    "ErrorCode": 0,
+    // Type: integer:int32
+    "ThrottleSeconds": 0,
+    // Type: string
+    "ErrorStatus": "",
+    // Type: string
+    "Message": "",
+    // Type: Dictionary&lt;string,string&gt;
+    "MessageData": {},
+    // Type: object
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/operation_post_Destiny2-ActivateTalentNode.html#operation_post_Destiny2-ActivateTalentNode">https://bungie-net.github.io/multi/operation_post_Destiny2-ActivateTalentNode.html#operation_post_Destiny2-ActivateTalentNode</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../../js/main.js?1458004654"></script>
+</body>
+</html>

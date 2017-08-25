@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny Definitions Items DestinyItemPlugDefinition | schemas | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503693345">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-Definitions-Items-DestinyItemPlugDefinition.html | Destiny.Definitions.Items.DestinyItemPlugDefinition -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.Definitions.Items.DestinyItemPlugDefinition</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Items-DestinyItemPlugDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>If an item is a Plug, its DestinyInventoryItemDefinition.plug property will be populated
+with an instance of one of these bad boys.</p>
+<p>This gives information about when it can be inserted, what the plug's category
+is (and thus whether it is compatible with a socket... see DestinySocketTypeDefinition
+for information about Plug Categories and socket compatibility), whether it is enabled
+and other Plug info.</p>
+<ul>
+<li><strong>Type:</strong> object</li>
+</ul>
+<h2>Properties</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insertionRules</td>
+<td><a href="/docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition.html">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]</td>
+<td>The rules around when this plug can be inserted into a socket, aside<br/>from the socket's individual restrictions.<br/><br/>The live data DestinyItemPlugComponent.insertFailIndexes will be an index into<br/>this array, so you can pull out the failure strings appropriate for the user.</td>
+</tr>
+<tr>
+<td>plugCategoryIdentifier</td>
+<td>string</td>
+<td>The string identifier for the plug's category.  Use the socket's DestinySocketTypeDefinition.plugWhitelist<br/>to determine whether this plug can be inserted into the socket.</td>
+</tr>
+<tr>
+<td>plugCategoryHash</td>
+<td>integer:uint32</td>
+<td>The hash for the plugCategoryIdentifier.  You can use this instead if you wish: I put both in the definition<br/>for debugging purposes.</td>
+</tr>
+<tr>
+<td>onActionRecreateSelf</td>
+<td>boolean</td>
+<td>If you successfully socket the item, this will determine whether or not you get &quot;refunded&quot; on the plug.</td>
+</tr>
+<tr>
+<td>insertionMaterialRequirementHash</td>
+<td>integer:uint32</td>
+<td>If inserting this plug requires materials, this is the hash identifier for looking up the<br/>DestinyMaterialRequirementSetDefinition for those requirements.</td>
+</tr>
+<tr>
+<td>previewItemOverrideHash</td>
+<td>integer:uint32</td>
+<td>In the game, if you're inspecting a plug item directly, this will be the item shown<br/>with the plug attached.  Look up the DestinyInventoryItemDefinition for this hash for the item.</td>
+</tr>
+<tr>
+<td>enabledMaterialRequirementHash</td>
+<td>integer:uint32</td>
+<td>It's not enough for the plug to be inserted.  It has to be enabled as well.<br/>For it to be enabled, it may require materials.<br/>This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements,<br/>if there is one.</td>
+</tr>
+<tr>
+<td>enabledRules</td>
+<td><a href="/docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition.html">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]</td>
+<td>The rules around whether the plug, once inserted, is enabled and providing its benefits.<br/><br/>The live data DestinyItemPlugComponent.enableFailIndexes will be an index into<br/>this array, so you can pull out the failure strings appropriate for the user.</td>
+</tr>
+</tbody>
+</table>
+<h2>Example</h2>
+<pre><code class="javascript">{
+    // Type: <a href="/docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition.html">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]
+    "insertionRules": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition.html">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>
+        {
+            // Type: string
+            "failureMessage": ""
+        }
+    ],
+    // Type: string
+    "plugCategoryIdentifier": "",
+    // Type: integer:uint32
+    "plugCategoryHash": 0,
+    // Type: boolean
+    "onActionRecreateSelf": false,
+    // Type: integer:uint32
+    "insertionMaterialRequirementHash": 0,
+    // Type: integer:uint32
+    "previewItemOverrideHash": 0,
+    // Type: integer:uint32
+    "enabledMaterialRequirementHash": 0,
+    // Type: <a href="/docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition.html">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]
+    "enabledRules": [
+       // Type: <a href="/docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition.html">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>
+        {
+            // Type: string
+            "failureMessage": ""
+        }
+    ]
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-Items-DestinyItemPlugDefinition.html#schema_Destiny-Definitions-Items-DestinyItemPlugDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-Items-DestinyItemPlugDefinition.html#schema_Destiny-Definitions-Items-DestinyItemPlugDefinition</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>

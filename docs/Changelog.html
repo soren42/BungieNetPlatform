@@ -18,14 +18,14 @@
 
 	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1485939573">
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1503693345">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- ../docs/Changelog.html | Changelog -->
+<!-- docs/Changelog.html | Changelog -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -40,22 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../">Home</a></li>
-<li><a href="../docs/Changelog">Changelog</a></li>
-<li><a href="#Guides">Guides</a>
+<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="#">Guides</a>
 <ul>
-<li><a href="../docs/Getting-Started">Getting Started</a></li>
-<li><a href="../docs/API-Details">API Details</a></li>
-<li><a href="../docs/Manifest">Manifest</a></li>
-<li><a href="../docs/Authentication">Authentication</a></li>
-<li><a href="../docs/Past-Authentication">Past Authentication</a></li>
+<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
+<li><a href="/docs/API-Details.html">API Details</a></li>
+<li><a href="/docs/Manifest.html">Manifest</a></li>
+<li><a href="/docs/Authentication.html">Authentication</a></li>
+<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
 </ul></li>
-<li><a href="#References">References</a>
+<li><a href="#">References</a>
 <ul>
-<li><a href="../docs/Error-Codes">Error Codes</a></li>
-<li><a href="../docs/Enums">Enums</a></li>
-<li><a href="../docs/Endpoints">Endpoints</a></li>
-<li><a href="../docs/Definitions">Definitions</a></li>
-<li><a href="../docs/HistoricalStats">HistoricalStats</a></li>
+<li><a href="/docs/Components.html">Components</a></li>
+<li><a href="/docs/Endpoints.html">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -69,7 +66,7 @@
 <div id="header">
 	<div class="container">
 		<h1>Changelog</h1>
-		<h2></h2>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
 
 		<!--<section id="downloads">
 		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
@@ -84,15 +81,21 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Changelog/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><h2>About</h2>
 <p>This page will cover automated updates to the Wiki as well as changes to the <a href="http://destinydevs.github.io/BungieNetPlatform">GitHub Pages frontend</a>.</p>
 <hr />
+<h2>August 26, 2017</h2>
+<p>The one that became official.</p>
+<p>The two main pages you will want to look at are <a href="/docs/Components.html">Components</a> and <a href="/docs/Endpoints.html">Endpoints</a>. Example response objects may not be accurate so treat them as a work in progress until it can be determined whether they are being generated properly.</p>
+<p>Since there's a bit of a changeover involved with upgrading my scripts to work with the new OpenAPI spec in the official docs, I haven't yet got diff changes working again.
+At the moment, the only endpoints included are the ones available in the official specification. This also means legacy endpoints will be missing until I get round to updating them to the new format.</p>
+<p>TODO: Add details on what has changed since the changeover on August 23.</p>
 <h2>June 29, 2017</h2>
 <p>The one that prepares for the migration.</p>
 <p>Endpoints (changed):</p>
 <ul>
-<li>POST <a href="../docs/GroupService/DesignateClanFounder">GroupService/DesignateClanFounder</a> - renamed, was Migrate</li>
+<li>POST <a href="DesignateClanFounder">GroupService/DesignateClanFounder</a> - renamed, was Migrate</li>
 </ul>
 <p>Endpoints (added):</p>
 <ul>
-<li>POST <a href="../docs/GroupService/SaveMigrationSelection">GroupService/SaveMigrationSelection</a></li>
+<li>POST <a href="SaveMigrationSelection">GroupService/SaveMigrationSelection</a></li>
 </ul>
 <p>Enums (changes):</p>
 <ul>
@@ -113,14 +116,14 @@
 <p>The one that brought on a Blizzard.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/UserService/GetMembershipDataForCurrentUser">UserService/GetMembershipDataForCurrentUser</a></li>
-<li>GET <a href="../docs/TrendingService/GetTrendingCategories">TrendingService/GetTrendingCategories</a></li>
-<li>GET <a href="../docs/TrendingService/GetTrendingCategory">TrendingService/GetTrendingCategory</a></li>
-<li>GET <a href="../docs/TrendingService/GetTrendingEntryDetail">TrendingService/GetTrendingEntryDetail</a></li>
+<li>GET <a href="/docs/services/User/GetMembershipDataForCurrentUser.html">UserService/GetMembershipDataForCurrentUser</a></li>
+<li>GET <a href="/docs/services/Trending/GetTrendingCategories.html">TrendingService/GetTrendingCategories</a></li>
+<li>GET <a href="/docs/services/Trending/GetTrendingCategory.html">TrendingService/GetTrendingCategory</a></li>
+<li>GET <a href="/docs/services/Trending/GetTrendingEntryDetail.html">TrendingService/GetTrendingEntryDetail</a></li>
 </ul>
 <p>Endpoints (changed):</p>
 <ul>
-<li>POST <a href="../docs/ApplicationService/GetOAuthTokens">App/GetOAuthTokens</a> - renamed, was GetOAuthAccessToken</li>
+<li>POST <a href="GetOAuthTokens">App/GetOAuthTokens</a> - renamed, was GetOAuthAccessToken</li>
 </ul>
 <p>Enums (added):</p>
 <ul>
@@ -160,10 +163,10 @@
 </ul>
 <h2>May 31, 2017</h2>
 <p>The one bearing tokens.</p>
-<p>Updated the <a href="../docs/Authentication">User Authentication</a> page with information about the new OAuth 2.0 implementation.</p>
+<p>Updated the <a href="/docs/Authentication.html">User Authentication</a> page with information about the new OAuth 2.0 implementation.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>POST <a href="../docs/ApplicationService/GetOAuthAccessToken">App/GetOAuthAccessToken</a></li>
+<li>POST <a href="GetOAuthAccessToken">App/GetOAuthAccessToken</a></li>
 </ul>
 <p>Enums:</p>
 <ul>
@@ -187,115 +190,115 @@
 <p>The one that needed documenting.</p>
 <p>Endpoints:</p>
 <ul>
-<li>GET <a href="../docs/UserService/GetMembershipDataById">UserService/GetMembershipDataById</a> changed param1 and param2 to the correct param names.</li>
+<li>GET <a href="/docs/services/User/GetMembershipDataById.html">UserService/GetMembershipDataById</a> changed param1 and param2 to the correct param names.</li>
 </ul>
 <p>Pages:</p>
 <ul>
-<li><a href="../docs/Manifest">Manifest</a> - Fixed an error with the PHP implementation, added code samples for Python 3.X support.</li>
+<li><a href="/docs/Manifest.html">Manifest</a> - Fixed an error with the PHP implementation, added code samples for Python 3.X support.</li>
 </ul>
 <h2>April 19, 2017</h2>
 <p>The one that was sacrificed to a machine god.</p>
 <p>Endpoints (renamed):</p>
 <ul>
-<li>GET <a href="../docs/UserService/GetMembershipDataById">UserService/GetMembershipDataById</a> was &quot;GetMembershipById&quot;</li>
+<li>GET <a href="/docs/services/User/GetMembershipDataById.html">UserService/GetMembershipDataById</a> was &quot;GetMembershipById&quot;</li>
 </ul>
 <h2>April 5, 2017</h2>
 <p>The one that was lost in time.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>POST <a href="../docs/AdminService/ReturnAssignedReports">AdminService/ReturnAssignedReports</a></li>
+<li>POST <a href="ReturnAssignedReports">AdminService/ReturnAssignedReports</a></li>
 </ul>
 <p>Endpoints (changed):</p>
 <ul>
-<li>GET <a href="../docs/ForumService/GetCoreTopicsPaged">ForumService/GetCoreTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
-<li>GET <a href="../docs/ForumService/GetTopicsPaged">ForumService/GetTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
+<li>GET <a href="/docs/services/Forum/GetCoreTopicsPaged.html">ForumService/GetCoreTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
+<li>GET <a href="/docs/services/Forum/GetTopicsPaged.html">ForumService/GetTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
 </ul>
 <h2>March 30, 2017</h2>
 <p>The one that followed in hot pursuit.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 309 &gt; 310 (+1)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 652 &gt; 653 (+1)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 7730 &gt; 7731 (+1)</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 309 &gt; 310 (+1)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 652 &gt; 653 (+1)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 7730 &gt; 7731 (+1)</li>
 </ul>
 <h2>March 28, 2017</h2>
 <p>The one aged with triumphs.</p>
 <p>Endpoints (removed):</p>
 <ul>
-<li>GET <a href="../docs/ExternalSocialService/GetPentathlonScores">ExternalSocialService/GetPentathlonScores</a></li>
+<li>GET <a href="GetPentathlonScores">ExternalSocialService/GetPentathlonScores</a></li>
 </ul>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 312 &gt; 309 (-3)</li>
-<li><a href="../docs/Definitions/ActivityCategoryDefinition">ActivityCategoryDefinition</a>: 6 &gt; 7 (+1)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 568 &gt; 652 (+4) | 2 &gt; 1 (-1 classified)</li>
-<li><a href="../docs/Definitions/ActivityTypeDefinition">ActivityTypeDefinition</a>: 66 &gt; 67 (+1)</li>
-<li><a href="../docs/Definitions/DestinationDefinition">DestinationDefinition</a>: 23 &gt; 24 (+1)</li>
-<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 823 &gt; 834 (+11)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 7840 &gt; 8609 (+769) | 207 &gt; 85 (-122 classified)</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 1231 &gt; 1388 (+157)</li>
-<li><a href="../docs/Definitions/PlaceDefinition">PlaceDefinition</a>: 10 &gt; 11 (+1)</li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 248 &gt; 252 (+4)</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 4 &gt; 5 (+1)</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 72 &gt; 168 (+96)</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 62 &gt; 64 (+2)</li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 1052 &gt; 1058 (+6)</li>
-<li><a href="../docs/Definitions/SpecialEventDefinition">SpecialEventDefinition</a>: 6 &gt; 3 (-3)</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1297 &gt; 1405 (+108)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 7276 &gt; 7730 (+454)</li>
-<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 81 &gt; 95 (+14)</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 312 &gt; 309 (-3)</li>
+<li><a href="ActivityCategoryDefinition">ActivityCategoryDefinition</a>: 6 &gt; 7 (+1)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 568 &gt; 652 (+4) | 2 &gt; 1 (-1 classified)</li>
+<li><a href="ActivityTypeDefinition">ActivityTypeDefinition</a>: 66 &gt; 67 (+1)</li>
+<li><a href="DestinationDefinition">DestinationDefinition</a>: 23 &gt; 24 (+1)</li>
+<li><a href="GrimoireCardDefinition">GrimoireCardDefinition</a>: 823 &gt; 834 (+11)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 7840 &gt; 8609 (+769) | 207 &gt; 85 (-122 classified)</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 1231 &gt; 1388 (+157)</li>
+<li><a href="PlaceDefinition">PlaceDefinition</a>: 10 &gt; 11 (+1)</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: 248 &gt; 252 (+4)</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: 4 &gt; 5 (+1)</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 72 &gt; 168 (+96)</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 62 &gt; 64 (+2)</li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a>: 1052 &gt; 1058 (+6)</li>
+<li><a href="SpecialEventDefinition">SpecialEventDefinition</a>: 6 &gt; 3 (-3)</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: 1297 &gt; 1405 (+108)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 7276 &gt; 7730 (+454)</li>
+<li><a href="VendorDefinition">VendorDefinition</a>: 81 &gt; 95 (+14)</li>
 </ul>
 <h2>February 10, 2017</h2>
 <p>The one that was forgotten (again).</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/ExternalSocialService/GetPentathlonScores">ExternalSocialService/GetPentathlonScores</a></li>
+<li>GET <a href="GetPentathlonScores">ExternalSocialService/GetPentathlonScores</a></li>
 </ul>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 257 &gt; 207 (-50 classified)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 257 &gt; 207 (-50 classified)</li>
 </ul>
 <p>Definition Structure Changes:</p>
 <ul>
-<li><a href="../docs/Definitions/BondDefinition">BondDefinition</a> - &quot;questItemHashes&quot;, &quot;providedUnlockHash&quot;, &quot;contentIdentifier&quot;</li>
-<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a> - &quot;uiLocationType&quot;, &quot;contentIdentifier&quot;, plus changes to &quot;locationReleases&quot;</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a> - &quot;contentIdentifier&quot;</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a> - &quot;bookAvailableUnlockExpression&quot;, &quot;activeRanges&quot;, &quot;webmasterCampaignSystem&quot;, &quot;contentIdentifier&quot;, plus changes to &quot;pages&quot;</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a> - &quot;actualRewards&quot; array</li>
+<li><a href="BondDefinition">BondDefinition</a> - &quot;questItemHashes&quot;, &quot;providedUnlockHash&quot;, &quot;contentIdentifier&quot;</li>
+<li><a href="LocationDefinition">LocationDefinition</a> - &quot;uiLocationType&quot;, &quot;contentIdentifier&quot;, plus changes to &quot;locationReleases&quot;</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a> - &quot;contentIdentifier&quot;</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a> - &quot;bookAvailableUnlockExpression&quot;, &quot;activeRanges&quot;, &quot;webmasterCampaignSystem&quot;, &quot;contentIdentifier&quot;, plus changes to &quot;pages&quot;</li>
+<li><a href="RecordDefinition">RecordDefinition</a> - &quot;actualRewards&quot; array</li>
 </ul>
 <h2>December 13, 2016</h2>
 <p>The one before The Dawning.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/MedalTierDefinition">MedalTierDefinition</a>: New definition for Strike Scoring Medals | 11 entries</li>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 305 &gt; 312 entries (+7)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 546 &gt; 568 entries (+22)</li>
-<li><a href="../docs/Definitions/ActivityTypeDefinition">ActivityTypeDefinition</a>: 62 &gt; 66 entries (+4)</li>
-<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 812 &gt; 823 entries (+11)</li>
-<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1797 &gt; 1835 entries (+38)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 7544 &gt; 7840 entries (+296) | 160 &gt; 257 (+97 classified)</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 1144 &gt; 1231 entries (+87)</li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 247 &gt; 248 entries (+1)</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 3 &gt; 4 entries (+1)</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 56 &gt; 72 entries (+16)</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 60 &gt; 62 entries (+2)</li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 1049 &gt; 1052 entries (+3)</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1285 &gt; 1297 entries (+12)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6944 &gt; 7276 entries (+332)</li>
-<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 79 &gt; 81 entries (+2)</li>
+<li><a href="MedalTierDefinition">MedalTierDefinition</a>: New definition for Strike Scoring Medals | 11 entries</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 305 &gt; 312 entries (+7)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 546 &gt; 568 entries (+22)</li>
+<li><a href="ActivityTypeDefinition">ActivityTypeDefinition</a>: 62 &gt; 66 entries (+4)</li>
+<li><a href="GrimoireCardDefinition">GrimoireCardDefinition</a>: 812 &gt; 823 entries (+11)</li>
+<li><a href="HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1797 &gt; 1835 entries (+38)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 7544 &gt; 7840 entries (+296) | 160 &gt; 257 (+97 classified)</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 1144 &gt; 1231 entries (+87)</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: 247 &gt; 248 entries (+1)</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: 3 &gt; 4 entries (+1)</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 56 &gt; 72 entries (+16)</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 60 &gt; 62 entries (+2)</li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a>: 1049 &gt; 1052 entries (+3)</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: 1285 &gt; 1297 entries (+12)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 6944 &gt; 7276 entries (+332)</li>
+<li><a href="VendorDefinition">VendorDefinition</a>: 79 &gt; 81 entries (+2)</li>
 </ul>
 <p>Endpoints (removed):</p>
 <ul>
-<li>POST <a href="../docs/DestinyService/BuyItem">DestinyService/BuyItem</a></li>
-<li>POST <a href="../docs/DestinyService/RefundItem">DestinyService/RefundItem</a></li>
+<li>POST <a href="BuyItem">DestinyService/BuyItem</a></li>
+<li>POST <a href="RefundItem">DestinyService/RefundItem</a></li>
 </ul>
 <p>Endpoints (updated):</p>
 <ul>
-<li>GET <a href="../docs/CommunitycontentService/GetAdminCommunityLiveStatuses">CommunitycontentService/GetAdminCommunityLiveStatuses</a>: now takes 3 parameters instead of 2</li>
+<li>GET <a href="GetAdminCommunityLiveStatuses">CommunitycontentService/GetAdminCommunityLiveStatuses</a>: now takes 3 parameters instead of 2</li>
 </ul>
 <h2>December 8, 2016</h2>
 <p>The one that was finally sanctioned.</p>
-<p>User Authentication is now live and then <a href="../docs/Authentication">Authentication</a> page has been updated with the newly &quot;sanctioned&quot; method of accessing private endpoints. Also due to an error with my Wiki script, there's a bunch of Enums and ErrorCodes related to the new ApplicationService which I haven't mentioned in any of my changelogs. Enums include ApiKeyStatus, ApplicationScopes, ApplicationStatus, AuthorizationStatus.</p>
+<p>User Authentication is now live and then <a href="/docs/Authentication.html">Authentication</a> page has been updated with the newly &quot;sanctioned&quot; method of accessing private endpoints. Also due to an error with my Wiki script, there's a bunch of Enums and ErrorCodes related to the new ApplicationService which I haven't mentioned in any of my changelogs. Enums include ApiKeyStatus, ApplicationScopes, ApplicationStatus, AuthorizationStatus.</p>
 <p>Enums:</p>
 <ul>
 <li>ApplicationScopes
@@ -318,7 +321,7 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <p>The one for Supremacy.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 162 &gt; 160 (-2 classified)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 162 &gt; 160 (-2 classified)</li>
 </ul>
 <p>Enums:</p>
 <ul>
@@ -348,40 +351,40 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <p>The one that came with less Silver Dust.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1788 &gt; 1797 entries (+9)</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 59 &gt; 60 entries (+1)</li>
+<li><a href="HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1788 &gt; 1797 entries (+9)</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 59 &gt; 60 entries (+1)</li>
 </ul>
 <h2>October 26, 2016</h2>
 <p>The one that was forgotten.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityModeDefinition">ActivityModeDefinition</a>: 32 &gt; 36 entries (+4)</li>
-<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 810 &gt; 812 entries (+2)</li>
+<li><a href="ActivityModeDefinition">ActivityModeDefinition</a>: 32 &gt; 36 entries (+4)</li>
+<li><a href="GrimoireCardDefinition">GrimoireCardDefinition</a>: 810 &gt; 812 entries (+2)</li>
 </ul>
 <h2>October 20, 2016</h2>
 <p>The one before the festival.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 300 &gt; 305 entries (+5)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 539 &gt; 546 entries (+7)</li>
-<li><a href="../docs/Definitions/ActivityModeDefinition">ActivityModeDefinition</a>: new (+32 entries)</li>
-<li><a href="../docs/Definitions/ActivityTypeDefinition">ActivityTypeDefinition</a>: 61 &gt; 62 (+1 entries)</li>
-<li><a href="../docs/Definitions/InventoryBucketDefinition">InventoryBucketDefinition</a>: added &quot;fifo&quot; boolean</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 7485 &gt; 7544 (+59 entries) | 163 &gt; 162 (-1 classified)</li>
-<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 149 &gt; 150 (+1 entry)</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 1101 &gt; 1144 (+43 entries)</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 48 &gt; 56 (+8 entries)</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 58 &gt; 59 (+1 entry)</li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 1043 &gt; 1049 (+6 entries)</li>
-<li><a href="../docs/Definitions/StatDefinition">StatDefinition</a>: added &quot;aggregationType&quot; int and &quot;hasComputedBlock&quot; boolean</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: added &quot;maximumRandomMaterialRequirements&quot; int</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6795 &gt; 6944 (+149 entries)</li>
-<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 77 &gt; 79 (+2 entries) plus a bunch of new properties under &quot;sales&quot; and &quot;categoryIndex&quot; added to &quot;categories&quot;</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 300 &gt; 305 entries (+5)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 539 &gt; 546 entries (+7)</li>
+<li><a href="ActivityModeDefinition">ActivityModeDefinition</a>: new (+32 entries)</li>
+<li><a href="ActivityTypeDefinition">ActivityTypeDefinition</a>: 61 &gt; 62 (+1 entries)</li>
+<li><a href="InventoryBucketDefinition">InventoryBucketDefinition</a>: added &quot;fifo&quot; boolean</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 7485 &gt; 7544 (+59 entries) | 163 &gt; 162 (-1 classified)</li>
+<li><a href="LocationDefinition">LocationDefinition</a>: 149 &gt; 150 (+1 entry)</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 1101 &gt; 1144 (+43 entries)</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 48 &gt; 56 (+8 entries)</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 58 &gt; 59 (+1 entry)</li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a>: 1043 &gt; 1049 (+6 entries)</li>
+<li><a href="StatDefinition">StatDefinition</a>: added &quot;aggregationType&quot; int and &quot;hasComputedBlock&quot; boolean</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: added &quot;maximumRandomMaterialRequirements&quot; int</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 6795 &gt; 6944 (+149 entries)</li>
+<li><a href="VendorDefinition">VendorDefinition</a>: 77 &gt; 79 (+2 entries) plus a bunch of new properties under &quot;sales&quot; and &quot;categoryIndex&quot; added to &quot;categories&quot;</li>
 </ul>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/ApplicationService/GetAuthorizationForUserAndApplication">ApplicationService/GetAuthorizationForUserAndApplication</a></li>
-<li>GET <a href="../docs/CommunitycontentService/GetCommunityFeaturedActivityModes">CommunitycontentService/GetCommunityFeaturedActivityModes</a></li>
+<li>GET <a href="GetAuthorizationForUserAndApplication">ApplicationService/GetAuthorizationForUserAndApplication</a></li>
+<li>GET <a href="GetCommunityFeaturedActivityModes">CommunitycontentService/GetCommunityFeaturedActivityModes</a></li>
 </ul>
 <p>Enums</p>
 <ul>
@@ -407,20 +410,20 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <p>The one about the raid Exotic.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 808 &gt; 810 entries (+2)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 164 &gt; 163 classified (-1)</li>
+<li><a href="GrimoireCardDefinition">GrimoireCardDefinition</a>: 808 &gt; 810 entries (+2)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 164 &gt; 163 classified (-1)</li>
 </ul>
 <h2>September 20, 2016</h2>
 <p>The last minute push before the world ends.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>POST <a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberBanStatus">CommunitycontentService/AdminSetCommunityLiveMemberBanStatus</a></li>
-<li>POST <a href="../docs/CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus">CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus</a></li>
-<li>GET <a href="../docs/CommunitycontentService/GetAdminCommunityLiveStatuses">CommunitycontentService/GetAdminCommunityLiveStatuses</a></li>
-<li>GET <a href="../docs/CommunitycontentService/GetCommunityLiveStatuses">CommunitycontentService/GetCommunityLiveStatuses</a></li>
-<li>GET <a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForClanmates">CommunitycontentService/GetCommunityLiveStatusesForClanmates</a></li>
-<li>GET <a href="../docs/CommunitycontentService/GetCommunityLiveStatusesForFriends">CommunitycontentService/GetCommunityLiveStatusesForFriends</a></li>
-<li>GET <a href="../docs/CommunitycontentService/GetFeaturedCommunityLiveStatuses">CommunitycontentService/GetFeaturedCommunityLiveStatuses</a></li>
+<li>POST <a href="AdminSetCommunityLiveMemberBanStatus">CommunitycontentService/AdminSetCommunityLiveMemberBanStatus</a></li>
+<li>POST <a href="AdminSetCommunityLiveMemberFeatureStatus">CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus</a></li>
+<li>GET <a href="GetAdminCommunityLiveStatuses">CommunitycontentService/GetAdminCommunityLiveStatuses</a></li>
+<li>GET <a href="/docs/services/CommunityContent/GetCommunityLiveStatuses.html">CommunitycontentService/GetCommunityLiveStatuses</a></li>
+<li>GET <a href="/docs/services/CommunityContent/GetCommunityLiveStatusesForClanmates.html">CommunitycontentService/GetCommunityLiveStatusesForClanmates</a></li>
+<li>GET <a href="/docs/services/CommunityContent/GetCommunityLiveStatusesForFriends.html">CommunitycontentService/GetCommunityLiveStatusesForFriends</a></li>
+<li>GET <a href="/docs/services/CommunityContent/GetFeaturedCommunityLiveStatuses.html">CommunitycontentService/GetFeaturedCommunityLiveStatuses</a></li>
 </ul>
 <p>Enums</p>
 <ul>
@@ -450,25 +453,25 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 </ul>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 224 &gt; 300 entries (+6)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 337 &gt; 539 entries (+202)</li>
-<li><a href="../docs/Definitions/ActivityTypeDefinition">ActivityTypeDefinition</a>: 56 &gt; 61 entries (+5)</li>
-<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 675 &gt; 808 entries (+133)</li>
-<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1737 &gt; 1788 entries (+51)</li>
-<li><a href="../docs/Definitions/InventoryBucketDefinition">InventoryBucketDefinition</a>: 37 &gt; 40 entries (+3)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6643 &gt; 7485 entries (+842) | 176 &gt; 164 classified (-12)</li>
-<li><a href="../docs/Definitions/ItemCategoryDefinition">ItemCategoryDefinition</a>: 55 &gt; 56 entries (+1)</li>
-<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 134 &gt; 149 entries (+15)</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 929 &gt; 1101 entries (+172)</li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 246 &gt; 247 entries (+1)</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 2 &gt; 3 entries (+1)</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 24 &gt; 48 entries (+24)</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 49 &gt; 58 entries (+9)</li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 977 &gt; 1043 entries (+66)</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1145 &gt; 1285 entries (+140)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6774 &gt; 6795 entries (+21) | 788 &gt; 0 classified (-788)</li>
-<li><a href="../docs/Definitions/VendorCategoryDefinition">VendorCategoryDefinition</a>: 12 &gt; 13 entries (+1)</li>
-<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 48 &gt; 77 entries (+29)</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 224 &gt; 300 entries (+6)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 337 &gt; 539 entries (+202)</li>
+<li><a href="ActivityTypeDefinition">ActivityTypeDefinition</a>: 56 &gt; 61 entries (+5)</li>
+<li><a href="GrimoireCardDefinition">GrimoireCardDefinition</a>: 675 &gt; 808 entries (+133)</li>
+<li><a href="HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1737 &gt; 1788 entries (+51)</li>
+<li><a href="InventoryBucketDefinition">InventoryBucketDefinition</a>: 37 &gt; 40 entries (+3)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 6643 &gt; 7485 entries (+842) | 176 &gt; 164 classified (-12)</li>
+<li><a href="ItemCategoryDefinition">ItemCategoryDefinition</a>: 55 &gt; 56 entries (+1)</li>
+<li><a href="LocationDefinition">LocationDefinition</a>: 134 &gt; 149 entries (+15)</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 929 &gt; 1101 entries (+172)</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: 246 &gt; 247 entries (+1)</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: 2 &gt; 3 entries (+1)</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 24 &gt; 48 entries (+24)</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 49 &gt; 58 entries (+9)</li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a>: 977 &gt; 1043 entries (+66)</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: 1145 &gt; 1285 entries (+140)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 6774 &gt; 6795 entries (+21) | 788 &gt; 0 classified (-788)</li>
+<li><a href="VendorCategoryDefinition">VendorCategoryDefinition</a>: 12 &gt; 13 entries (+1)</li>
+<li><a href="VendorDefinition">VendorDefinition</a>: 48 &gt; 77 entries (+29)</li>
 </ul>
 <p>EnemyHistoricalStats (added)</p>
 <ul>
@@ -489,13 +492,13 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <p>The &quot;pre-load&quot; before Rise of Iron.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/UserService/GetPartnerships">UserService/GetPartnerships</a></li>
-<li>POST <a href="../docs/UserService/RemovePartnership">UserService/RemovePartnership</a></li>
-<li>GET <a href="../docs/ActivityService/GetApplicationActivityForUser">ActivityService/GetApplicationActivityForUser</a></li>
+<li>GET <a href="/docs/services/User/GetPartnerships.html">UserService/GetPartnerships</a></li>
+<li>POST <a href="RemovePartnership">UserService/RemovePartnership</a></li>
+<li>GET <a href="GetApplicationActivityForUser">ActivityService/GetApplicationActivityForUser</a></li>
 </ul>
 <p>Endpoints (removed):</p>
 <ul>
-<li>GET <a href="../docs/ActivityService/GetAggregatedActivitiesForCurrentUser">ActivityService/GetAggregatedActivitiesForCurrentUser</a> - replaced with GetApplicationActivityForUser?</li>
+<li>GET <a href="GetAggregatedActivitiesForCurrentUser">ActivityService/GetAggregatedActivitiesForCurrentUser</a> - replaced with GetApplicationActivityForUser?</li>
 </ul>
 <p>Enums:</p>
 <ul>
@@ -529,16 +532,16 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 </ul>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 224 &gt; 225 entries (-1)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 338 &gt; 337 entries (-1)</li>
-<li><a href="../docs/Definitions/DestinationDefinition">DestinationDefinition</a>: 22 &gt; 23 entries (+1)</li>
-<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1731 &gt; 1737 entries (+6)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6557 &gt; 6643 entries (+86) | 60 &gt; 176 classified (+116)</li>
-<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 133 &gt; 134 entries (+1)</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 976 &gt; 929 entries (-47)</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 28 &gt; 24 entries (-4)</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1135 &gt; 1145 entries (+10)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6029 &gt; 6774 entries (+745) | 0 &gt; 788 classified (+788)</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 224 &gt; 225 entries (-1)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 338 &gt; 337 entries (-1)</li>
+<li><a href="DestinationDefinition">DestinationDefinition</a>: 22 &gt; 23 entries (+1)</li>
+<li><a href="HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1731 &gt; 1737 entries (+6)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 6557 &gt; 6643 entries (+86) | 60 &gt; 176 classified (+116)</li>
+<li><a href="LocationDefinition">LocationDefinition</a>: 133 &gt; 134 entries (+1)</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 976 &gt; 929 entries (-47)</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 28 &gt; 24 entries (-4)</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: 1135 &gt; 1145 entries (+10)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 6029 &gt; 6774 entries (+745) | 0 &gt; 788 classified (+788)</li>
 </ul>
 <p>EnemyHistoricalStats:</p>
 <ul>
@@ -558,11 +561,11 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <p>The one during Gamescom.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/UserService/GetCurrentBungieNetUser">UserService/GetCurrentBungieNetUser</a></li>
+<li>GET <a href="GetCurrentBungieNetUser">UserService/GetCurrentBungieNetUser</a></li>
 </ul>
 <p>Endpoints (changed):</p>
 <ul>
-<li>GET <a href="../docs/CoreService/GetGlobalAlerts">CoreServices/GetGlobalAlerts</a> - added &quot;includesteaming&quot; query parameter</li>
+<li>GET <a href="GetGlobalAlerts">CoreServices/GetGlobalAlerts</a> - added &quot;includesteaming&quot; query parameter</li>
 </ul>
 <p>Enums:
 It appears that the Enum code being generated in the platformlib is broken (and has been for several weeks now), so I am holding of pushing any updates to it until I hear back from the devs as to what is going on with it.</p>
@@ -574,68 +577,68 @@ There was an issue with the Enum export script that was generating errors. A fix
 A &quot;redacted&quot; boolean was added to several definition types, which I assume is used to represent when it has been classified, so no special logic is required to detect missing information.</p>
 <p>This includes...</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a></li>
-<li><a href="../docs/Definitions/ActivityCategoryDefinition">ActivityCategoryDefinition</a></li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a></li>
-<li><a href="../docs/Definitions/ActivityTypeDefinition">ActivityTypeDefinition</a></li>
-<li><a href="../docs/Definitions/BondDefinition">BondDefinition</a></li>
-<li><a href="../docs/Definitions/ClassDefinition">ClassDefinition</a></li>
-<li><a href="../docs/Definitions/CombatantDefinition">CombatantDefinition</a></li>
-<li><a href="../docs/Definitions/DamageTypeDefinition">DamageTypeDefinition</a></li>
-<li><a href="../docs/Definitions/DestinationDefinition">DestinationDefinition</a></li>
-<li><a href="../docs/Definitions/DirectorBookDefinition">DirectorBookDefinition</a></li>
-<li><a href="../docs/Definitions/EnemyRaceDefinition">EnemyRaceDefinition</a></li>
-<li><a href="../docs/Definitions/FactionDefinition">FactionDefinition</a></li>
-<li><a href="../docs/Definitions/GenderDefinition">GenderDefinition</a></li>
-<li><a href="../docs/Definitions/InventoryBucketDefinition">InventoryBucketDefinition</a></li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a></li>
-<li><a href="../docs/Definitions/ItemCategoryDefinition">ItemCategoryDefinition</a></li>
-<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a></li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a></li>
-<li><a href="../docs/Definitions/PlaceDefinition">PlaceDefinition</a></li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a></li>
-<li><a href="../docs/Definitions/RaceDefinition">RaceDefinition</a></li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a></li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a></li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a></li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a></li>
-<li><a href="../docs/Definitions/ScriptedSkullDefinition">ScriptedSkullDefinition</a></li>
-<li><a href="../docs/Definitions/SpecialEventDefinition">SpecialEventDefinition</a></li>
-<li><a href="../docs/Definitions/StatDefinition">StatDefinition</a></li>
-<li><a href="../docs/Definitions/StatGroupDefinition">StatGroupDefinition</a></li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a></li>
-<li><a href="../docs/Definitions/TriumphSetDefinition">TriumphSetDefinition</a></li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a></li>
-<li><a href="../docs/Definitions/VendorCategoryDefinition">VendorCategoryDefinition</a></li>
-<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a></li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a></li>
+<li><a href="ActivityCategoryDefinition">ActivityCategoryDefinition</a></li>
+<li><a href="ActivityDefinition">ActivityDefinition</a></li>
+<li><a href="ActivityTypeDefinition">ActivityTypeDefinition</a></li>
+<li><a href="BondDefinition">BondDefinition</a></li>
+<li><a href="ClassDefinition">ClassDefinition</a></li>
+<li><a href="CombatantDefinition">CombatantDefinition</a></li>
+<li><a href="DamageTypeDefinition">DamageTypeDefinition</a></li>
+<li><a href="DestinationDefinition">DestinationDefinition</a></li>
+<li><a href="DirectorBookDefinition">DirectorBookDefinition</a></li>
+<li><a href="EnemyRaceDefinition">EnemyRaceDefinition</a></li>
+<li><a href="FactionDefinition">FactionDefinition</a></li>
+<li><a href="GenderDefinition">GenderDefinition</a></li>
+<li><a href="InventoryBucketDefinition">InventoryBucketDefinition</a></li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a></li>
+<li><a href="ItemCategoryDefinition">ItemCategoryDefinition</a></li>
+<li><a href="LocationDefinition">LocationDefinition</a></li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a></li>
+<li><a href="PlaceDefinition">PlaceDefinition</a></li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a></li>
+<li><a href="RaceDefinition">RaceDefinition</a></li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a></li>
+<li><a href="RecordDefinition">RecordDefinition</a></li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a></li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a></li>
+<li><a href="ScriptedSkullDefinition">ScriptedSkullDefinition</a></li>
+<li><a href="SpecialEventDefinition">SpecialEventDefinition</a></li>
+<li><a href="StatDefinition">StatDefinition</a></li>
+<li><a href="StatGroupDefinition">StatGroupDefinition</a></li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a></li>
+<li><a href="TriumphSetDefinition">TriumphSetDefinition</a></li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a></li>
+<li><a href="VendorCategoryDefinition">VendorCategoryDefinition</a></li>
+<li><a href="VendorDefinition">VendorDefinition</a></li>
 </ul>
 <p>You should probably try and account for all these definitions as possibly having classified entries at some point, but it's mainly the ones related to activties and items where it is typically used.</p>
 <h2>July 27, 2016</h2>
 <p>The one that broke my code (again).</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 6028 &gt; 6029</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 6028 &gt; 6029</li>
 </ul>
 <p>Endpoints (changed):</p>
 <ul>
-<li>GET <a href="../docs/DestinyService/GetDestinyExplorerItems">DestinyService/GetDestinyExplorerItems</a> &quot;page&quot; query parameter changed to &quot;tpage&quot;</li>
+<li>GET <a href="GetDestinyExplorerItems">DestinyService/GetDestinyExplorerItems</a> &quot;page&quot; query parameter changed to &quot;tpage&quot;</li>
 </ul>
 <p>Endpoints (added):</p>
 <ul>
-<li>POST <a href="../docs/UserService/UpdateDestinyEmblemAvatar">UserService/UpdateDestinyEmblemAvatar</a></li>
+<li>POST <a href="UpdateDestinyEmblemAvatar">UserService/UpdateDestinyEmblemAvatar</a></li>
 <li>New &quot;ApplicationService&quot; (likely still in development)</li>
-<li>POST <a href="../docs/ApplicationService/ApplicationSearch">ApplicationService/ApplicationSearch</a></li>
-<li>POST <a href="../docs/ApplicationService/ChangeApiKeyStatus">ApplicationService/ChangeApiKeyStatus</a></li>
-<li>POST <a href="../docs/ApplicationService/CreateApiKey">ApplicationService/CreateApiKey</a></li>
-<li>POST <a href="../docs/ApplicationService/CreateApplication">ApplicationService/CreateApplication</a></li>
-<li>POST <a href="../docs/ApplicationService/EditApplication">ApplicationService/EditApplication</a></li>
-<li>POST <a href="../docs/ApplicationService/GetAccessTokensFromCode">ApplicationService/GetAccessTokensFromCode</a></li>
-<li>POST <a href="../docs/ApplicationService/GetAccessTokensFromRefreshToken">ApplicationService/GetAccessTokensFromRefreshToken</a></li>
-<li>GET <a href="../docs/ApplicationService/GetApplication">ApplicationService/GetApplication</a></li>
-<li>GET <a href="../docs/ApplicationService/GetApplicationApiKeys">ApplicationService/GetApplicationApiKeys</a></li>
-<li>GET <a href="../docs/ApplicationService/GetAuthorizations">ApplicationService/GetAuthorizations</a></li>
-<li>POST <a href="../docs/ApplicationService/PrivateApplicationSearch">ApplicationService/PrivateApplicationSearch</a></li>
-<li>POST <a href="../docs/ApplicationService/RevokeAuthorization">ApplicationService/RevokeAuthorization</a></li>
+<li>POST <a href="ApplicationSearch">ApplicationService/ApplicationSearch</a></li>
+<li>POST <a href="ChangeApiKeyStatus">ApplicationService/ChangeApiKeyStatus</a></li>
+<li>POST <a href="CreateApiKey">ApplicationService/CreateApiKey</a></li>
+<li>POST <a href="CreateApplication">ApplicationService/CreateApplication</a></li>
+<li>POST <a href="EditApplication">ApplicationService/EditApplication</a></li>
+<li>POST <a href="GetAccessTokensFromCode">ApplicationService/GetAccessTokensFromCode</a></li>
+<li>POST <a href="GetAccessTokensFromRefreshToken">ApplicationService/GetAccessTokensFromRefreshToken</a></li>
+<li>GET <a href="GetApplication">ApplicationService/GetApplication</a></li>
+<li>GET <a href="GetApplicationApiKeys">ApplicationService/GetApplicationApiKeys</a></li>
+<li>GET <a href="GetAuthorizations">ApplicationService/GetAuthorizations</a></li>
+<li>POST <a href="PrivateApplicationSearch">ApplicationService/PrivateApplicationSearch</a></li>
+<li>POST <a href="RevokeAuthorization">ApplicationService/RevokeAuthorization</a></li>
 </ul>
 <p>Note: Converted undocumented url parameters to output as &quot;param1&quot;, &quot;param2&quot; instead of using the minified names which change frequently.</p>
 <p>Enums:
@@ -647,18 +650,18 @@ Some enums that are still being used by Destiny (such as more than half of the D
 <p>The one after Bungie Day.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 70 &gt; 60 classified</li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 2 &gt; 1 classified</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 1 &gt; 0 classified</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 12 &gt; 0 classified</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 70 &gt; 60 classified</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: 2 &gt; 1 classified</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: 1 &gt; 0 classified</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 12 &gt; 0 classified</li>
 </ul>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/GroupService/GetAllFoundedGroupsForMember">GroupService/GetAllFoundedGroupsForMember</a></li>
-<li>GET <a href="../docs/GroupService/GetMyClanMemberships">GroupSerivce/GetMyClanMemberships</a></li>
-<li>GET <a href="../docs/IgnoreService/GetReportContext">IgnoreService/GetReportContext</a></li>
-<li>GET <a href="../docs/DestinyService/GetAdvisorsForAccount">DestinyService/GetAdvisorsForAccount</a></li>
-<li>GET <a href="../docs/DestinyService/GetRecordBookCompletionStatus">DestinyService/GetRecordBookCompletionStatus</a></li>
+<li>GET <a href="GetAllFoundedGroupsForMember">GroupService/GetAllFoundedGroupsForMember</a></li>
+<li>GET <a href="GetMyClanMemberships">GroupSerivce/GetMyClanMemberships</a></li>
+<li>GET <a href="GetReportContext">IgnoreService/GetReportContext</a></li>
+<li>GET <a href="GetAdvisorsForAccount">DestinyService/GetAdvisorsForAccount</a></li>
+<li>GET <a href="GetRecordBookCompletionStatus">DestinyService/GetRecordBookCompletionStatus</a></li>
 </ul>
 <p>Enums:</p>
 <ul>
@@ -688,20 +691,20 @@ Some enums that are still being used by Destiny (such as more than half of the D
 <p>This update broke my code :'(</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: added &quot;rewardItems&quot; to &quot;steps&quot; property.</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: 0 &gt; 1 classified (Year Two triumphs are now hidden)</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a>: 0 &gt; 12 classified (Year Two triumphs are now hidden)</li>
-<li><a href="../docs/Definitions/SpecialEventDefinition">SpecialEventDefinition</a>: added &quot;unlockEventHash&quot; property.</li>
-<li><a href="../docs/Definitions/TriumphSetDefinition">TriumphSetDefinition</a>: added &quot;isRecordBook&quot; property.</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: added &quot;rewardItems&quot; to &quot;steps&quot; property.</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: 0 &gt; 1 classified (Year Two triumphs are now hidden)</li>
+<li><a href="RecordDefinition">RecordDefinition</a>: 0 &gt; 12 classified (Year Two triumphs are now hidden)</li>
+<li><a href="SpecialEventDefinition">SpecialEventDefinition</a>: added &quot;unlockEventHash&quot; property.</li>
+<li><a href="TriumphSetDefinition">TriumphSetDefinition</a>: added &quot;isRecordBook&quot; property.</li>
 </ul>
 <p>Endpoints (added):</p>
 <ul>
-<li>POST <a href="../docs/AdminService/OverrideGroupWallBanOnUser">AdminService/OverrideGroupWallBanOnUser</a></li>
+<li>POST <a href="OverrideGroupWallBanOnUser">AdminService/OverrideGroupWallBanOnUser</a></li>
 </ul>
 <p>Endpoints (removed):</p>
 <ul>
-<li>POST <a href="../docs/GroupService/DesignateClanFounderForMigration">GroupService/DesignateClanFounderForMigration</a></li>
-<li>GET <a href="../docs/DestinyService/GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
+<li>POST <a href="DesignateClanFounderForMigration">GroupService/DesignateClanFounderForMigration</a></li>
+<li>GET <a href="GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
 </ul>
 <p>Enums (Holy crap!! Where do I start?):</p>
 <ul>
@@ -767,57 +770,57 @@ Some enums that are still being used by Destiny (such as more than half of the D
 <h2>June 16, 2016</h2>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 337 &gt; 338 entries (+1)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6549 &gt; 6557 entries (+12) | 60 &gt; 70 classified</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 971 &gt; 976 entries (+5)</li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 245 &gt; 246 entries (+1) | 1 &gt; 2 classified</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: Looks like it has been re-purposed for Moments of Triumph challenges.</li>
-<li><a href="../docs/Definitions/RecordDefinition">RecordDefinition</a> 16 &gt; 28 entries (+12)</li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 973 &gt; 977 entries (+5)</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1134 &gt; 1135 entries (+1)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 5991 &gt; 6028 entries (+37)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 337 &gt; 338 entries (+1)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 6549 &gt; 6557 entries (+12) | 60 &gt; 70 classified</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 971 &gt; 976 entries (+5)</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: 245 &gt; 246 entries (+1) | 1 &gt; 2 classified</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: Looks like it has been re-purposed for Moments of Triumph challenges.</li>
+<li><a href="RecordDefinition">RecordDefinition</a> 16 &gt; 28 entries (+12)</li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a>: 973 &gt; 977 entries (+5)</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: 1134 &gt; 1135 entries (+1)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 5991 &gt; 6028 entries (+37)</li>
 </ul>
 <p>Endpoints (Added):</p>
 <ul>
-<li>GET <a href="../docs/DestinyService/GetPublicAdvisorsV2">DestinyService/GetPublicAdvisorsV2</a></li>
-<li>GET <a href="../docs/DestinyService/GetAdvisorsForCharacterV2">DestinyService/GetAdvisorsForCharacterV2</a></li>
-<li>GET <a href="../docs/DestinyService/GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
+<li>GET <a href="GetPublicAdvisorsV2">DestinyService/GetPublicAdvisorsV2</a></li>
+<li>GET <a href="GetAdvisorsForCharacterV2">DestinyService/GetAdvisorsForCharacterV2</a></li>
+<li>GET <a href="GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
 </ul>
 <p>These were added in the previous release but were not included in the platform.lib.min.js file.</p>
 <h2>May 27, 2016</h2>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityCategoryDefinition">ActivityCategoryDefinition</a>: new definition type</li>
-<li><a href="../docs/Definitions/HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1733 &gt; 1731 entries (-2), Armed and Dangerous (medalsArtifactKillSpree) and The Heist (medalsArtifactHeist) removed.</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 61 &gt; 60 classified</li>
-<li><a href="../docs/Definitions/RecordBookDefinition">RecordBookDefinition</a>: each record now has a &quot;spotlight&quot; property and there's also a &quot;displayStyle&quot; property for each map</li>
-<li><a href="../docs/Definitions/SpecialEventDefinition">SpecialEventDefinition</a>: 7 &gt; 6 entries (-1), new properties; backgroundImageMobile, recruitmentIds, playlistActivityHash</li>
+<li><a href="ActivityCategoryDefinition">ActivityCategoryDefinition</a>: new definition type</li>
+<li><a href="HistoricalStatsDefinition">HistoricalStatsDefinition</a>: 1733 &gt; 1731 entries (-2), Armed and Dangerous (medalsArtifactKillSpree) and The Heist (medalsArtifactHeist) removed.</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 61 &gt; 60 classified</li>
+<li><a href="RecordBookDefinition">RecordBookDefinition</a>: each record now has a &quot;spotlight&quot; property and there's also a &quot;displayStyle&quot; property for each map</li>
+<li><a href="SpecialEventDefinition">SpecialEventDefinition</a>: 7 &gt; 6 entries (-1), new properties; backgroundImageMobile, recruitmentIds, playlistActivityHash</li>
 </ul>
 <p>Update #1:
 Manually added V2 Advisor Endpoints that were left out of the current platform.lib.min.js build.</p>
 <p>Endpoints (Added):</p>
 <ul>
-<li>GET <a href="../docs/DestinyService/GetPublicAdvisorsV2">DestinyService/GetPublicAdvisorsV2</a></li>
-<li>GET <a href="../docs/DestinyService/GetAdvisorsForCharacterV2">DestinyService/GetAdvisorsForCharacterV2</a></li>
-<li>GET <a href="../docs/DestinyService/GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
+<li>GET <a href="GetPublicAdvisorsV2">DestinyService/GetPublicAdvisorsV2</a></li>
+<li>GET <a href="GetAdvisorsForCharacterV2">DestinyService/GetAdvisorsForCharacterV2</a></li>
+<li>GET <a href="GetAdvisorsForCurrentCharacterV2">DestinyService/GetAdvisorsForCurrentCharacterV2</a></li>
 </ul>
 <h2>May 13, 2016</h2>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: added &quot;isMatchmade&quot; property</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6548 &gt; 6549 entries (+1) | 63 &gt; 61 classified</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 5990 &gt; 5991 entries (+1)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: added &quot;isMatchmade&quot; property</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 6548 &gt; 6549 entries (+1) | 63 &gt; 61 classified</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 5990 &gt; 5991 entries (+1)</li>
 </ul>
 <h2>April 28, 2016</h2>
 <p>Endpoints (Added):</p>
 <ul>
-<li>POST <a href="../docs/ForumService/GetRecruitmentThreadSummaries">ForumService/GetRecruitmentThreadSummaries</a></li>
-<li>POST <a href="../docs/ForumService/LeaveFireteamThread">ForumService/LeaveFireteamThread</a></li>
+<li>POST <a href="/docs/services/Forum/GetRecruitmentThreadSummaries.html">ForumService/GetRecruitmentThreadSummaries</a></li>
+<li>POST <a href="/docs/services/Forum/LeaveFireteamThread.html">ForumService/LeaveFireteamThread</a></li>
 </ul>
 <p>Endpoints (Changed):</p>
 <ul>
-<li>POST <a href="../docs/GroupService/Migrate">GroupService/Migrate</a></li>
-<li>GET <a href="../docs/MessageService/GetConversationThreadV3">MessageService/GetConversationThreadV3</a></li>
+<li>POST <a href="Migrate">GroupService/Migrate</a></li>
+<li>GET <a href="MessageService/GetConversationThreadV3">MessageService/GetConversationThreadV3</a></li>
 </ul>
 <p>Enums:</p>
 <ul>
@@ -827,31 +830,31 @@ Manually added V2 Advisor Endpoints that were left out of the current platform.l
 </ul>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6548 entries | 64 &gt; 63 classified</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 48 &gt; 49 entries (+1)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 6548 entries | 64 &gt; 63 classified</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 48 &gt; 49 entries (+1)</li>
 </ul>
 <h2>April 21, 2016</h2>
 <p>Historical Stats:</p>
 <p>Added a bunch of unique named enemies found in strikes and other PvE activities that are currently not tracked. If you know of others, please let me know.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 5988 &gt; 5990 (+2)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 5988 &gt; 5990 (+2)</li>
 </ul>
 <h2>April 13, 2016</h2>
 <p>April Update Launched.</p>
 <p>Endpoints (Added):</p>
 <ul>
-<li>POST <a href="../docs/ForumService/ApproveFireteamThread">ForumService/ApproveFireteamThread</a></li>
-<li>POST <a href="../docs/ForumService/JoinFireteamThread">ForumService/JoinFireteamThread</a></li>
-<li>POST <a href="../docs/ForumService/KickBanFireteamApplicant">ForumService/KickBanFireteamApplicant</a></li>
-<li>POST <a href="../docs/GroupService/Migrate">GroupService/Migrate</a></li>
-<li>GET <a href="../docs/DestinyService/GetClanLeaderboards">DestinyService/GetClanLeaderboards</a></li>
-<li>GET <a href="../docs/DestinyService/GetItemReferenceDetail">DestinyService/GetItemReferenceDetail</a></li>
+<li>POST <a href="/docs/services/Forum/ApproveFireteamThread.html">ForumService/ApproveFireteamThread</a></li>
+<li>POST <a href="/docs/services/Forum/JoinFireteamThread.html">ForumService/JoinFireteamThread</a></li>
+<li>POST <a href="/docs/services/Forum/KickBanFireteamApplicant.html">ForumService/KickBanFireteamApplicant</a></li>
+<li>POST <a href="Migrate">GroupService/Migrate</a></li>
+<li>GET <a href="/docs/services/Destiny2/GetClanLeaderboards.html">DestinyService/GetClanLeaderboards</a></li>
+<li>GET <a href="GetItemReferenceDetail">DestinyService/GetItemReferenceDetail</a></li>
 </ul>
 <p>Endpoints (Changed):</p>
 <ul>
-<li>GET <a href="../docs/DestinyService/GetLeaderboards">DestinyService/GetLeaderboards</a></li>
-<li>GET <a href="../docs/DestinyService/GetLeaderboardsForCharacter">DestinyService/GetLeaderboardsForCharacter</a></li>
+<li>GET <a href="/docs/services/Destiny2/GetLeaderboards.html">DestinyService/GetLeaderboards</a></li>
+<li>GET <a href="/docs/services/Destiny2/GetLeaderboardsForCharacter.html">DestinyService/GetLeaderboardsForCharacter</a></li>
 </ul>
 <p>Enums:</p>
 <ul>
@@ -869,42 +872,42 @@ Manually added V2 Advisor Endpoints that were left out of the current platform.l
 <p>A handful of stats that previously had no statName now have one. The &quot;Ace&quot; medal has had a description change.</p>
 <p>Definitions:</p>
 <ul>
-<li><a href="../docs/Definitions/ActivityBundleDefinition">ActivityBundleDefinition</a>: 223 &gt; 225 entries (+2)</li>
-<li><a href="../docs/Definitions/ActivityDefinition">ActivityDefinition</a>: 329 &gt; 337 entries (+8) | 2 &gt; 5 classified</li>
-<li><a href="../docs/Definitions/BondDefinition">BondDefinition</a>: 3 &gt; 4 entries (+1)</li>
-<li><a href="../docs/Definitions/CombatantDefinition">CombatantDefinition</a> (New): 167 entries (+167)</li>
-<li><a href="../docs/Definitions/GrimoireCardDefinition">GrimoireCardDefinition</a>: 664 &gt; 675 entries (+11)</li>
-<li><a href="../docs/Definitions/InventoryItemDefinition">InventoryItemDefinition</a>: 6271 &gt; 6547 entries (+276) | 50 &gt; 64 classified</li>
-<li><a href="../docs/Definitions/LocationDefinition">LocationDefinition</a>: 130 &gt; 133 entries (+3)</li>
-<li><a href="../docs/Definitions/ObjectiveDefinition">ObjectiveDefinition</a>: 933 &gt; 971 entries (+38) * new valueStyle property</li>
-<li><a href="../docs/Definitions/ProgressionDefinition">ProgressionDefinition</a>: 243 &gt; 254 entries (+2) | 0 &gt; 1 classified</li>
-<li><a href="../docs/Definitions/RewardSourceDefinition">RewardSourceDefinition</a>: 47 &gt; 48 entries (+1)</li>
-<li><a href="../docs/Definitions/SandboxPerkDefinition">SandboxPerkDefinition</a>: 959 &gt; 973 entries (+14)</li>
-<li><a href="../docs/Definitions/SpecialEventDefinition">SpecialEventDefinition</a>: 6 &gt; 7 entries (+1)</li>
-<li><a href="../docs/Definitions/TalentGridDefinition">TalentGridDefinition</a>: 1083 &gt; 1134 entries (+51)</li>
-<li><a href="../docs/Definitions/UnlockFlagDefinition">UnlockFlagDefinition</a>: 5717 &gt; 5988 entries (+271)</li>
-<li><a href="../docs/Definitions/VendorDefinition">VendorDefinition</a>: 33 &gt; 48 entries (+15)</li>
+<li><a href="ActivityBundleDefinition">ActivityBundleDefinition</a>: 223 &gt; 225 entries (+2)</li>
+<li><a href="ActivityDefinition">ActivityDefinition</a>: 329 &gt; 337 entries (+8) | 2 &gt; 5 classified</li>
+<li><a href="BondDefinition">BondDefinition</a>: 3 &gt; 4 entries (+1)</li>
+<li><a href="CombatantDefinition">CombatantDefinition</a> (New): 167 entries (+167)</li>
+<li><a href="GrimoireCardDefinition">GrimoireCardDefinition</a>: 664 &gt; 675 entries (+11)</li>
+<li><a href="InventoryItemDefinition">InventoryItemDefinition</a>: 6271 &gt; 6547 entries (+276) | 50 &gt; 64 classified</li>
+<li><a href="LocationDefinition">LocationDefinition</a>: 130 &gt; 133 entries (+3)</li>
+<li><a href="ObjectiveDefinition">ObjectiveDefinition</a>: 933 &gt; 971 entries (+38) * new valueStyle property</li>
+<li><a href="ProgressionDefinition">ProgressionDefinition</a>: 243 &gt; 254 entries (+2) | 0 &gt; 1 classified</li>
+<li><a href="RewardSourceDefinition">RewardSourceDefinition</a>: 47 &gt; 48 entries (+1)</li>
+<li><a href="SandboxPerkDefinition">SandboxPerkDefinition</a>: 959 &gt; 973 entries (+14)</li>
+<li><a href="SpecialEventDefinition">SpecialEventDefinition</a>: 6 &gt; 7 entries (+1)</li>
+<li><a href="TalentGridDefinition">TalentGridDefinition</a>: 1083 &gt; 1134 entries (+51)</li>
+<li><a href="UnlockFlagDefinition">UnlockFlagDefinition</a>: 5717 &gt; 5988 entries (+271)</li>
+<li><a href="VendorDefinition">VendorDefinition</a>: 33 &gt; 48 entries (+15)</li>
 </ul>
 <h2>March 31, 2016</h2>
-<p>Added <a href="../docs/HistoricalStats">HistoricalStats</a> section.</p>
+<p>Added <a href="HistoricalStats">HistoricalStats</a> section.</p>
 <p>Endpoints (Added):</p>
 <ul>
-<li>POST <a href="../docs/MessageService/CreateConversationV2">MessageService/CreateConversationV2</a></li>
-<li>POST <a href="../docs/MessageService/ModerateGroupWall">MessageService/ModerateGroupWall</a></li>
+<li>POST <a href="CreateConversationV2">MessageService/CreateConversationV2</a></li>
+<li>POST <a href="ModerateGroupWall">MessageService/ModerateGroupWall</a></li>
 </ul>
 <p>Endpoints (Removed):</p>
 <ul>
-<li>POST <a href="../docs/ActivityService/FollowGroup">ActivityService/FollowGroup</a></li>
-<li>GET <a href="../docs/ActivityService/GetFollowersOfGroup">ActivityService/GetFollowersOfGroup</a></li>
-<li>GET <a href="../docs/ActivityService/GetGroupActivities">ActivityService/GetGroupActivities</a></li>
-<li>POST <a href="../docs/ActivityService/UnfollowGroup">ActivityService/UnfollowGroup</a></li>
+<li>POST <a href="FollowGroup">ActivityService/FollowGroup</a></li>
+<li>GET <a href="GetFollowersOfGroup">ActivityService/GetFollowersOfGroup</a></li>
+<li>GET <a href="GetGroupActivities">ActivityService/GetGroupActivities</a></li>
+<li>POST <a href="UnfollowGroup">ActivityService/UnfollowGroup</a></li>
 </ul>
 <h2>March 13, 2016</h2>
 <p>Added 2 new Angular modules to the frontend (see below).</p>
 <p>Frontend (Pages):</p>
 <ul>
 <li>Added Search Wiki module.</li>
-<li>Added <a href="../docs/API-Test">API Test</a> module.</li>
+<li>Added <a href="/docs/API-Test.html">API Test</a> module.</li>
 </ul>
 <h2>March 6, 2016</h2>
 <p>Initial GitHub Wiki was setup and existing pages were pulled from the old <a href="http://bungienetplatform.wikia.com/wiki/Bungienetplatform_Wikia">BungieNetPlatform Wikia</a>.</p>
