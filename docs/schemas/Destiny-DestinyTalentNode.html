@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="/docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
-<li><a href="/docs/API-Details.html">API Details</a></li>
-<li><a href="/docs/Manifest.html">Manifest</a></li>
-<li><a href="/docs/Authentication.html">Authentication</a></li>
-<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+<li><a href="/docs/Getting-Started">Getting Started</a></li>
+<li><a href="/docs/API-Details">API Details</a></li>
+<li><a href="/docs/Manifest">Manifest</a></li>
+<li><a href="/docs/Authentication">Authentication</a></li>
+<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components.html">Components</a></li>
-<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+<li><a href="/docs/Components">Components</a></li>
+<li><a href="/docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -121,7 +121,7 @@ matches that of the server responses before showing or making decisions based on
 </tr>
 <tr>
 <td>state</td>
-<td><a href="/docs/schemas/Destiny-DestinyTalentNodeState.html">Destiny.DestinyTalentNodeState</a></td>
+<td><a href="/docs/schemas/Destiny-DestinyTalentNodeState">Destiny.DestinyTalentNodeState</a></td>
 <td>An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why not<br/>if neither can be performed.</td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@ matches that of the server responses before showing or making decisions based on
 </tr>
 <tr>
 <td>materialsToUpgrade</td>
-<td><a href="/docs/schemas/Destiny-Definitions-DestinyMaterialRequirement.html">Destiny.Definitions.DestinyMaterialRequirement</a>[]</td>
+<td><a href="/docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>[]</td>
 <td>If the node has material requirements to be activated, this is the list of those requirements.</td>
 </tr>
 <tr>
@@ -156,7 +156,7 @@ matches that of the server responses before showing or making decisions based on
 </tr>
 <tr>
 <td>nodeStatsBlock</td>
-<td><a href="/docs/schemas/Destiny-DestinyTalentNodeStatBlock.html">Destiny.DestinyTalentNodeStatBlock</a></td>
+<td><a href="/docs/schemas/Destiny-DestinyTalentNodeStatBlock">Destiny.DestinyTalentNodeStatBlock</a></td>
 <td>This property has some history.  A talent grid can provide stats on both the item it's related to and<br/>the character equipping the item.  This returns data about those stat bonuses.</td>
 </tr>
 </tbody>
@@ -167,15 +167,15 @@ matches that of the server responses before showing or making decisions based on
     "nodeIndex": 0,
     // Type: integer:uint32
     "nodeHash": 0,
-    // Type: <a href="/docs/schemas/Destiny-DestinyTalentNodeState.html">Destiny.DestinyTalentNodeState</a>
+    // Type: <a href="/docs/schemas/Destiny-DestinyTalentNodeState">Destiny.DestinyTalentNodeState</a>
     "state": 0,
     // Type: boolean
     "isActivated": false,
     // Type: integer:int32
     "stepIndex": 0,
-    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyMaterialRequirement.html">Destiny.Definitions.DestinyMaterialRequirement</a>[]
+    // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>[]
     "materialsToUpgrade": [
-       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyMaterialRequirement.html">Destiny.Definitions.DestinyMaterialRequirement</a>
+       // Type: <a href="/docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>
         {
             // Type: integer:uint32
             "itemHash": 0,
@@ -193,11 +193,11 @@ matches that of the server responses before showing or making decisions based on
     "progressPercent": 0,
     // Type: boolean
     "hidden": false,
-    // Type: <a href="/docs/schemas/Destiny-DestinyTalentNodeStatBlock.html">Destiny.DestinyTalentNodeStatBlock</a>
+    // Type: <a href="/docs/schemas/Destiny-DestinyTalentNodeStatBlock">Destiny.DestinyTalentNodeStatBlock</a>
     "nodeStatsBlock": {
-        // Type: <a href="/docs/schemas/Destiny-DestinyStat.html">Destiny.DestinyStat</a>[]
+        // Type: <a href="/docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
         "currentStepStats": [
-           // Type: <a href="/docs/schemas/Destiny-DestinyStat.html">Destiny.DestinyStat</a>
+           // Type: <a href="/docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
             {
                 // Type: integer:uint32
                 "statHash": 0,
@@ -207,9 +207,9 @@ matches that of the server responses before showing or making decisions based on
                 "maximumValue": 0
             }
         ],
-        // Type: <a href="/docs/schemas/Destiny-DestinyStat.html">Destiny.DestinyStat</a>[]
+        // Type: <a href="/docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
         "nextStepStats": [
-           // Type: <a href="/docs/schemas/Destiny-DestinyStat.html">Destiny.DestinyStat</a>
+           // Type: <a href="/docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
             {
                 // Type: integer:uint32
                 "statHash": 0,

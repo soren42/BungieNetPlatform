@@ -40,19 +40,19 @@
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 <li><li><a href="../../">Home</a></li>
-<li><a href="/docs/Changelog.html">Changelog</a></li>
+<li><a href="/docs/Changelog">Changelog</a></li>
 <li><a href="#">Guides</a>
 <ul>
-<li><a href="/docs/Getting-Started.html">Getting Started</a></li>
-<li><a href="/docs/API-Details.html">API Details</a></li>
-<li><a href="/docs/Manifest.html">Manifest</a></li>
-<li><a href="/docs/Authentication.html">Authentication</a></li>
-<li><a href="/docs/Past-Authentication.html">Past Authentication</a></li>
+<li><a href="/docs/Getting-Started">Getting Started</a></li>
+<li><a href="/docs/API-Details">API Details</a></li>
+<li><a href="/docs/Manifest">Manifest</a></li>
+<li><a href="/docs/Authentication">Authentication</a></li>
+<li><a href="/docs/Past-Authentication">Past Authentication</a></li>
 </ul></li>
 <li><a href="#">References</a>
 <ul>
-<li><a href="/docs/Components.html">Components</a></li>
-<li><a href="/docs/Endpoints.html">Endpoints</a></li>
+<li><a href="/docs/Components">Components</a></li>
+<li><a href="/docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
 				<li>
@@ -97,50 +97,50 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
 <tbody>
 <tr>
 <td>progressions</td>
-<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-DestinyProgression.html">Destiny.DestinyProgression</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;</td>
 <td>A Dictionary of all known progressions for the Character, keyed by the Progression's hash.<br/><br/>Not all progressions have user-facing data, but those who do will have that data contained in the DestinyProgressionDefinition.</td>
 </tr>
 <tr>
 <td>factions</td>
-<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-Progression-DestinyFactionProgression.html">Destiny.Progression.DestinyFactionProgression</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>&gt;</td>
 <td>A dictionary of all known Factions, keyed by the Faction's hash.  It contains data about this character's<br/>status with the faction.</td>
 </tr>
 <tr>
 <td>milestones</td>
-<td>Dictionary&lt;integer:uint32,<a href="/docs/responses/Destiny-Milestones-DestinyMilestone.html">Destiny.Milestones.DestinyMilestone</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="/docs/responses/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>&gt;</td>
 <td>Milestones are related to the simple progressions shown in the game, but return additional and<br/>hopefully helpful information for users about the specifics of the Milestone's status.</td>
 </tr>
 <tr>
 <td>quests</td>
-<td><a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus.html">Destiny.Quests.DestinyQuestStatus</a>[]</td>
+<td><a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>[]</td>
 <td>If the user has any active quests, the quests' statuses will be returned here.<br/><br/>Note that quests have been largely supplanted by Milestones, but that doesn't mean that<br/>they won't make a comeback independent of milestones at some point.</td>
 </tr>
 <tr>
 <td>uninstancedItemObjectives</td>
-<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress.html">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;</td>
 <td>Sometimes, you have items in your inventory that don't have instances, but still have<br/>Objective information.  This provides you that objective information for uninstanced<br/>items.  <br/><br/>This dictionary is keyed by the item's hash: which you can use to look up the<br/>name and description for the overall task(s) implied by the objective.<br/>The value is the list of objectives for this item, and their statuses.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-DestinyProgression.html">Destiny.DestinyProgression</a>&gt;
+    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
     "progressions": {},
-    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-Progression-DestinyFactionProgression.html">Destiny.Progression.DestinyFactionProgression</a>&gt;
+    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>&gt;
     "factions": {},
-    // Type: Dictionary<integer:uint32,<a href="/docs/responses/Destiny-Milestones-DestinyMilestone.html">Destiny.Milestones.DestinyMilestone</a>&gt;
+    // Type: Dictionary<integer:uint32,<a href="/docs/responses/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>&gt;
     "milestones": {},
-    // Type: <a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus.html">Destiny.Quests.DestinyQuestStatus</a>[]
+    // Type: <a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>[]
     "quests": [
-       // Type: <a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus.html">Destiny.Quests.DestinyQuestStatus</a>
+       // Type: <a href="/docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
         {
             // Type: integer:uint32
             "questHash": 0,
             // Type: integer:uint32
             "stepHash": 0,
-            // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress.html">Destiny.Quests.DestinyObjectiveProgress</a>[]
+            // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
             "stepObjectives": [
-               // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress.html">Destiny.Quests.DestinyObjectiveProgress</a>
+               // Type: <a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
                 {
                     // Type: integer:uint32
                     "objectiveHash": 0,
@@ -168,7 +168,7 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
             "vendorHash": 0
         }
     ],
-    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress.html">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;
+    // Type: Dictionary<integer:uint32,<a href="/docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;
     "uninstancedItemObjectives": {}
 }
 </code></pre>
