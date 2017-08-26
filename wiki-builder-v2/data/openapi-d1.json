@@ -1,0 +1,2225 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Unofficial Bungie.net API for Destiny 1",
+        "description": "These are legacy endpoints for Destiny 1 that are no longer supported officially by Bungie.",
+        "termsOfService": "https://www.bungie.net/en/View/Bungie/terms",
+        "contact": {
+            "name": "lowlines",
+            "url": "https://github.com/DestinyDevs/BungieNetPlatform",
+            "email": "lowlines89@gmail.com"
+        },
+        "license": {
+            "name": "BSD License 2.0",
+            "url": "https://github.com/DestinyDevs/BungieNetPlatform/blob/master/wiki-builder-v2/LICENSE"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://bungie.net/d1/Platform",
+            "description": "The final resting place for the first 3 years of Destiny."
+        }
+    ],
+    "paths": {
+        "/Destiny/Advisors/V2/": {
+            "summary": "Destiny.GetPublicAdvisorsV2",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetPublicAdvisorsV2",
+                "parameters": [
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Advisors/": {
+            "summary": "Destiny.GetAdvisorsForAccount",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAdvisorsForAccount",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Advisors/V2/": {
+            "summary": "Destiny.GetAdvisorsForCharacterV2",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAdvisorsForCharacterV2",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Manifest/": {
+            "summary": "Destiny.GetDestinyManifest",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetDestinyManifest",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/Manifest/{param1}/{param2}/": {
+            "summary": "Destiny.GetDestinySingleDefinition",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetDestinySingleDefinition",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/SearchDestinyPlayer/{param1}/{param2}/": {
+            "summary": "Destiny.SearchDestinyPlayer",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.SearchDestinyPlayer",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/ItemReference/{param4}/": {
+            "summary": "Destiny.GetItemReferenceDetail",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetItemReferenceDetail",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param4",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Items/": {
+            "summary": "Destiny.GetAllItemsSummary",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAllItemsSummary",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/": {
+            "summary": "Destiny.GetAccount",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAccount",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Summary/": {
+            "summary": "Destiny.GetAccountSummary",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAccountSummary",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Vault/": {
+            "summary": "Destiny.GetVault",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVault",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "accountId",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Vault/Summary/": {
+            "summary": "Destiny.GetVaultSummary",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVaultSummary",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "accountId",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/": {
+            "summary": "Destiny.GetCharacterSummary",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetCharacterSummary",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Complete/": {
+            "summary": "Destiny.GetCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Inventory/": {
+            "summary": "Destiny.GetCharacterInventory",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetCharacterInventory",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Inventory/Summary/": {
+            "summary": "Destiny.GetCharacterInventorySummary",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetCharacterInventorySummary",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Inventory/{param4}/": {
+            "summary": "Destiny.GetItemDetail",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetItemDetail",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param4",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Activities/": {
+            "summary": "Destiny.GetCharacterActivities",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetCharacterActivities",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Progression/": {
+            "summary": "Destiny.GetCharacterProgression",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetCharacterProgression",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Triumphs/": {
+            "summary": "Destiny.GetTriumphs",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetTriumphs",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/RecordBooks/{param2}/Completion/": {
+            "summary": "Destiny.GetRecordBookCompletionStatus",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetRecordBookCompletionStatus",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Vendors/": {
+            "summary": "Destiny.GetAllVendorsForCurrentCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAllVendorsForCurrentCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Vendors/Summaries/": {
+            "summary": "Destiny.GetVendorSummariesForCurrentCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVendorSummariesForCurrentCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Vendor/{param3}/": {
+            "summary": "Destiny.GetVendorForCurrentCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVendorForCurrentCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Vendor/{param3}/Item/{param4}/": {
+            "summary": "Destiny.GetVendorItemDetailForCurrentCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVendorItemDetailForCurrentCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param4",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Advisors/": {
+            "summary": "Destiny.GetPublicAdvisors",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetPublicAdvisors",
+                "parameters": [
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Advisors/Xur/": {
+            "summary": "Destiny.GetPublicXurVendor",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetPublicXurVendor",
+                "parameters": [
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Vendors/{param1}/": {
+            "summary": "Destiny.GetPublicVendor",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetPublicVendor",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Advisors/": {
+            "summary": "Destiny.GetAdvisorsForCurrentCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAdvisorsForCurrentCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Account/{param2}/Character/{param3}/Advisors/": {
+            "summary": "Destiny.GetAdvisorsForCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetAdvisorsForCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Events/": {
+            "summary": "Destiny.GetSpecialEventAdvisors",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetSpecialEventAdvisors",
+                "parameters": [
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/LiveTiles/": {
+            "summary": "Destiny.GetDestinyLiveTileContentItems",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetDestinyLiveTileContentItems",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Advisors/Bonds/": {
+            "summary": "Destiny.GetBondAdvisors",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetBondAdvisors",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Vendors/{param1}/Metadata/": {
+            "summary": "Destiny.GetPublicVendorWithMetadata",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetPublicVendorWithMetadata",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Vendor/{param3}/Metadata/": {
+            "summary": "Destiny.GetVendorForCurrentCharacterWithMetadata",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVendorForCurrentCharacterWithMetadata",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/MyAccount/Character/{param2}/Vendor/{param3}/Item/{param4}/Metadata/": {
+            "summary": "Destiny.GetVendorItemDetailForCurrentCharacterWithMetadata",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetVendorItemDetailForCurrentCharacterWithMetadata",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param4",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/TransferItem/": {
+            "summary": "Destiny.TransferItem",
+            "description": "",
+            "post": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.TransferItem",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/EquipItem/": {
+            "summary": "Destiny.EquipItem",
+            "description": "",
+            "post": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.EquipItem",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/EquipItems/": {
+            "summary": "Destiny.EquipItems",
+            "description": "",
+            "post": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.EquipItems",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/SetLockState/": {
+            "summary": "Destiny.SetItemLockState",
+            "description": "",
+            "post": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.SetItemLockState",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/SetQuestTrackedState/": {
+            "summary": "Destiny.SetQuestTrackedState",
+            "description": "",
+            "post": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.SetQuestTrackedState",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/Definition/": {
+            "summary": "Destiny.GetHistoricalStatsDefinition",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetHistoricalStatsDefinition",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/{param1}/{param2}/{param3}/": {
+            "summary": "Destiny.GetHistoricalStats",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetHistoricalStats",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "periodType",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "modes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "groups",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "monthstart",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "monthend",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "daystart",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "dayend",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/Account/{param1}/{param2}/": {
+            "summary": "Destiny.GetHistoricalStatsForAccount",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetHistoricalStatsForAccount",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "groups",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/ActivityHistory/{param1}/{param2}/{param3}/": {
+            "summary": "Destiny.GetActivityHistory",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetActivityHistory",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "mode",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/UniqueWeapons/{param1}/{param2}/{param3}/": {
+            "summary": "Destiny.GetUniqueWeaponHistory",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetUniqueWeaponHistory",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/Leaderboards/{param1}/{param2}/": {
+            "summary": "Destiny.GetLeaderboards",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetLeaderboards",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "modes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "statid",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "maxtop",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/ClanLeaderboards/{param1}/": {
+            "summary": "Destiny.GetClanLeaderboards",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetClanLeaderboards",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "modes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "statid",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "maxtop",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/LeaderboardsForPsn/": {
+            "summary": "Destiny.GetLeaderboardsForPsn",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetLeaderboardsForPsn",
+                "parameters": [
+                    {
+                        "name": "modes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/Leaderboards/{param1}/{param2}/{param3}/": {
+            "summary": "Destiny.GetLeaderboardsForCharacter",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetLeaderboardsForCharacter",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "modes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "statid",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "maxtop",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/PostGameCarnageReport/{param1}/": {
+            "summary": "Destiny.GetPostGameCarnageReport",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetPostGameCarnageReport",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/ActivityBlob/{param1}/": {
+            "summary": "Destiny.GetActivityBlob",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetActivityBlob",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/AggregateActivityStats/{param1}/{param2}/{param3}/": {
+            "summary": "Destiny.GetDestinyAggregateActivityStats",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetDestinyAggregateActivityStats",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param3",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/{param1}/Stats/GetMembershipIdByDisplayName/{param2}/": {
+            "summary": "Destiny.GetMembershipIdByDisplayName",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetMembershipIdByDisplayName",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "ignorecase",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Stats/GetExcellenceBadges/{param1}/{param2}/": {
+            "summary": "Destiny.GetExcellenceBadges",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetExcellenceBadges",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Vanguard/Grimoire/{param1}/": {
+            "summary": "Destiny.GetMyGrimoire",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetMyGrimoire",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "flavour",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "single",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Vanguard/Grimoire/{param1}/{param2}/": {
+            "summary": "Destiny.GetGrimoireByMembership",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetGrimoireByMembership",
+                "parameters": [
+                    {
+                        "name": "param1",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "param2",
+                        "in": "path",
+                        "description": "",
+                        "required": true,
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "flavour",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "single",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Vanguard/Grimoire/Definition/": {
+            "summary": "Destiny.GetGrimoireDefinition",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetGrimoireDefinition",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/Destiny/Explorer/Items/": {
+            "summary": "Destiny.GetDestinyExplorerItems",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetDestinyExplorerItems",
+                "parameters": [
+                    {
+                        "name": "tpage",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "orderstathash",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "direction",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "rarity",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "step",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "categories",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "weaponPerformance",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "impactEffects",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "guardianAttributes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "lightAbilities",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "damageTypes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "matchrandomsteps",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "sourcecat",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "sourcehash",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/Destiny/Explorer/TalentNodeSteps/": {
+            "summary": "Destiny.GetDestinyExplorerTalentNodeSteps",
+            "description": "",
+            "get": {
+                "tags": [
+                    "Destiny",
+                    "Unofficial"
+                ],
+                "description": "",
+                "operationId": "Destiny.GetDestinyExplorerTalentNodeSteps",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "direction",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "weaponPerformance",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "impactEffects",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "guardianAttributes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "lightAbilities",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "damageTypes",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    },
+                    {
+                        "name": "definitions",
+                        "in": "query",
+                        "description": "",
+                        "schema": {}
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Destiny",
+            "description": "destiny"
+        }
+    ]
+}
