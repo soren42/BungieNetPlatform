@@ -97,21 +97,21 @@ a fun way to mix-up play and provide extra rewards.</p>
 <tbody>
 <tr>
 <td>objectiveHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32</td>
 <td>The objective for the Challenge, which should have human-readable data about what<br/>needs to be done to accomplish the objective.  Use this hash to look up the DestinyObjectiveDefinition.</td>
 </tr>
 <tr>
 <td>activityHash</td>
-<td>integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable</td>
 <td>IF the Objective is related to a specific Activity, this will be that activity's hash.<br/>Use it to look up the DestinyActivityDefinition for additional data to show.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
     "objectiveHash": 0,
-    // Type: integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
     "activityHash": 0
 }
 </code></pre>

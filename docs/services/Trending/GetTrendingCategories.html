@@ -98,22 +98,22 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/Trending/Categories/">https://bungie.net/Platform/Trending/Categories/</a></p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/Trending-TrendingCategories">Trending.TrendingCategories</a>
+<p>Schema: <a href="../../../docs/responses/Trending-TrendingCategories">TrendingCategories</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/Trending-TrendingCategories">Trending.TrendingCategories</a>
+    // Type: <a href="../../../docs/responses/Trending-TrendingCategories">TrendingCategories</a>
     "Response": {
-        // Type: <a href="../../../docs/schemas/Trending-TrendingCategory">Trending.TrendingCategory</a>[]
+        // Type: <a href="../../../docs/schemas/Trending-TrendingCategory">TrendingCategory</a>[]
         "categories": [
-           // Type: <a href="../../../docs/schemas/Trending-TrendingCategory">Trending.TrendingCategory</a>
+           // Type: <a href="../../../docs/schemas/Trending-TrendingCategory">TrendingCategory</a>
             {
                 // Type: string
                 "categoryName": "",
-                // Type: <a href="../../../docs/responses/SearchResult-Trending-TrendingEntry-">SearchResult&lt;Trending.TrendingEntry&gt;</a>
+                // Type: <a href="../../../docs/responses/SearchResult-Trending-TrendingEntry-">TrendingEntry&gt;</a>
                 "entries": {
-                    // Type: <a href="../../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>[]
+                    // Type: <a href="../../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>[]
                     "results": [
-                       // Type: <a href="../../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>
+                       // Type: <a href="../../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>
                         {
                             // Type: number:double
                             "weight": 0,
@@ -121,7 +121,7 @@ PlatformErrorCode: 200</p>
                             "isFeatured": false,
                             // Type: string
                             "identifier": "",
-                            // Type: <a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>
+                            // Type: <a href="../../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>
                             "entityType": 0,
                             // Type: string
                             "displayName": "",
@@ -147,7 +147,7 @@ PlatformErrorCode: 200</p>
                     "totalResults": 0,
                     // Type: boolean
                     "hasMore": false,
-                    // Type: <a href="../../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
+                    // Type: <a href="../../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
                     "query": {
                         // Type: integer:int32
                         "itemsPerPage": 0,
@@ -166,7 +166,7 @@ PlatformErrorCode: 200</p>
             }
         ]
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

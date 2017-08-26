@@ -102,12 +102,12 @@ part of an otherwise hidden vendor inventory: like the Vault inventory buckets.<
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>The title and other common properties of the flyout.</td>
 </tr>
 <tr>
 <td>buckets</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>[]</td>
 <td>A list of inventory buckets and other metadata to show on the screen.</td>
 </tr>
 <tr>
@@ -126,7 +126,7 @@ part of an otherwise hidden vendor inventory: like the Vault inventory buckets.<
 <pre><code class="javascript">{
     // Type: string
     "lockedDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -137,15 +137,15 @@ part of an otherwise hidden vendor inventory: like the Vault inventory buckets.<
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>[]
     "buckets": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>
         {
             // Type: boolean
             "collapsible": false,
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
             "inventoryBucketHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyItemSortType">Destiny.DestinyItemSortType</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemSortType">DestinyItemSortType</a>
             "sortItemsBy": 0
         }
     ],

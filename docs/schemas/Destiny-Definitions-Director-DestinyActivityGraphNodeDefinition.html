@@ -104,22 +104,22 @@ will also determine the tooltip and other UI related to the node)</p>
 </tr>
 <tr>
 <td>overrideDisplay</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>The node <em>may</em> have display properties that override the active Activity's display properties.</td>
 </tr>
 <tr>
 <td>position</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">Destiny.Definitions.Common.DestinyPositionDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a></td>
 <td>The position on the map for this node.</td>
 </tr>
 <tr>
 <td>featuringStates</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeFeaturingStateDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>[]</td>
 <td>The node may have various visual accents placed on it, or styles applied.  These are the list of possible styles<br/>that the Node can have.  The game iterates through each, looking for the first one that passes a check of the required<br/>game/character/account state in order to show that style, and then renders the node in that style.</td>
 </tr>
 <tr>
 <td>activities</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeActivityDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>[]</td>
 <td>The node may have various possible activities that could be active for it, however only one may be active<br/>at a time.  See the DestinyActivityGraphNodeActivityDefinition for details.</td>
 </tr>
 </tbody>
@@ -128,7 +128,7 @@ will also determine the tooltip and other UI related to the node)</p>
 <pre><code class="javascript">{
     // Type: integer:uint32
     "nodeId": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "overrideDisplay": {
         // Type: string
         "description": "",
@@ -139,7 +139,7 @@ will also determine the tooltip and other UI related to the node)</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">Destiny.Definitions.Common.DestinyPositionDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a>
     "position": {
         // Type: integer:int32
         "x": 0,
@@ -148,21 +148,21 @@ will also determine the tooltip and other UI related to the node)</p>
         // Type: integer:int32
         "z": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeFeaturingStateDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>[]
     "featuringStates": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeFeaturingStateDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">Destiny.ActivityGraphNodeHighlightType</a>
+            // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a>
             "highlightType": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeActivityDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>[]
     "activities": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeActivityDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>
         {
             // Type: integer:uint32
             "nodeActivityId": 0,
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0
         }
     ]

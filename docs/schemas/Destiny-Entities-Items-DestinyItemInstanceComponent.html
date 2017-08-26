@@ -102,17 +102,17 @@ definition.inventory.isInstanceItem property.</p>
 <tbody>
 <tr>
 <td>damageType</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a></td>
+<td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a></td>
 <td>If the item has a damage type, this is the item's current damage type.</td>
 </tr>
 <tr>
 <td>damageTypeHash</td>
-<td>integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:integer:uint32:nullable</td>
 <td>The current damage type's hash, so you can look up localized info and icons for it.</td>
 </tr>
 <tr>
 <td>primaryStat</td>
-<td><a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a></td>
 <td>The item stat that we consider to be &quot;primary&quot; for the item.  For instance, this would be &quot;Attack&quot; for<br/>Weapons or &quot;Defense&quot; for armor.</td>
 </tr>
 <tr>
@@ -142,25 +142,25 @@ definition.inventory.isInstanceItem property.</p>
 </tr>
 <tr>
 <td>unlockHashesRequiredToEquip</td>
-<td>integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]</td>
 <td>Sometimes, there are limitations to equipping that are represented by character-level flags called &quot;unlocks&quot;.<br/><br/>This is a list of flags that they need in order to equip the item that the character has not met.<br/>Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.</td>
 </tr>
 <tr>
 <td>cannotEquipReason</td>
-<td><a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a></td>
+<td><a href="../../docs/schemas/Destiny-EquipFailureReason">EquipFailureReason</a></td>
 <td>If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip<br/>the item.  You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>
     "damageType": 0,
-    // Type: integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:integer:uint32:nullable
     "damageTypeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
     "primaryStat": {
-        // Type: integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
         "statHash": 0,
         // Type: integer:int32
         "value": 0,
@@ -177,12 +177,12 @@ definition.inventory.isInstanceItem property.</p>
     "canEquip": false,
     // Type: integer:int32
     "equipRequiredLevel": 0,
-    // Type: integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]
     "unlockHashesRequiredToEquip": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a>
+    // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">EquipFailureReason</a>
     "cannotEquipReason": 0
 }
 </code></pre>

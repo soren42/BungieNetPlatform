@@ -115,34 +115,34 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/Destiny2/Clan/{groupId}/WeeklyRewardState/">https://bungie.net/Platform/Destiny2/Clan/{groupId}/WeeklyRewardState/</a></p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>
+<p>Schema: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestone">DestinyMilestone</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>
+    // Type: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestone">DestinyMilestone</a>
     "Response": {
-        // Type: integer:uint32
+        // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32
         "milestoneHash": 0,
-        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>[]
         "availableQuests": [
-           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>
+           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>
             {
-                // Type: integer:uint32
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                 "questItemHash": 0,
-                // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
+                // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>
                 "status": {
-                    // Type: integer:uint32
+                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                     "questHash": 0,
-                    // Type: integer:uint32
+                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                     "stepHash": 0,
-                    // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+                    // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
                     "stepObjectives": [
-                       // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                       // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
                         {
-                            // Type: integer:uint32
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
                             "objectiveHash": 0,
-                            // Type: integer:uint32:nullable
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
                             "destinationHash": 0,
-                            // Type: integer:uint32:nullable
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
                             "activityHash": 0,
                             // Type: integer:int32:nullable
                             "progress": 0,
@@ -163,28 +163,28 @@ PlatformErrorCode: 200</p>
                     // Type: integer:uint32:nullable
                     "vendorHash": 0
                 },
-                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">DestinyMilestoneActivity</a>
                 "activity": {
-                    // Type: integer:uint32
+                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
                     "activityHash": 0,
-                    // Type: integer:uint32[]
+                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]
                     "modifierHashes": [
                        // Type: integer:uint32
                         0
                     ],
-                    // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
+                    // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]
                     "variants": [
-                       // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+                       // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>
                         {
-                            // Type: integer:uint32
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
                             "activityHash": 0,
-                            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+                            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
                             "completionStatus": {
                                 // Type: boolean
                                 "completed": false,
-                                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+                                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
                                 "phases": [
-                                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+                                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
                                     {
                                         // Type: boolean
                                         "complete": false
@@ -194,17 +194,17 @@ PlatformErrorCode: 200</p>
                         }
                     ]
                 },
-                // Type: <a href="../../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>[]
                 "challenges": [
-                   // Type: <a href="../../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>
                     {
-                        // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
                         "objective": {
-                            // Type: integer:uint32
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
                             "objectiveHash": 0,
-                            // Type: integer:uint32:nullable
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
                             "destinationHash": 0,
-                            // Type: integer:uint32:nullable
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
                             "activityHash": 0,
                             // Type: integer:int32:nullable
                             "progress": 0,
@@ -219,20 +219,20 @@ PlatformErrorCode: 200</p>
         "values": {
             "key": 0
         },
-        // Type: integer:uint32[]
+        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32[]
         "vendorHashes": [
            // Type: integer:uint32
             0
         ],
-        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>[]
         "rewards": [
-           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>
+           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>
             {
                 // Type: integer:uint32
                 "rewardCategoryHash": 0,
-                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>[]
                 "entries": [
-                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>
                     {
                         // Type: integer:uint32
                         "rewardEntryHash": 0,
@@ -249,7 +249,7 @@ PlatformErrorCode: 200</p>
         // Type: string:date-time:nullable
         "endDate": ""
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

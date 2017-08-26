@@ -105,27 +105,27 @@ ItemInstances, ItemPerks etc... and acquire them from the DestinyVendorResponse'
 </tr>
 <tr>
 <td>itemHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash of the item being sold, as a quick shortcut for looking up the DestinyInventoryItemDefinition<br/>of the sale item.</td>
 </tr>
 <tr>
 <td>saleStatus</td>
-<td><a href="../../docs/schemas/Destiny-VendorItemStatus">Destiny.VendorItemStatus</a></td>
+<td><a href="../../docs/schemas/Destiny-VendorItemStatus">VendorItemStatus</a></td>
 <td>A flag indicating whether the requesting character can buy the item, and if not the reasons why the character can't buy it.</td>
 </tr>
 <tr>
 <td>costs</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
 <td>A summary of the current costs of the item.</td>
 </tr>
 <tr>
 <td>requiredUnlocks</td>
-<td>integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]</td>
 <td>If you can't buy the item due to a complex character state, these will be hashes for<br/>DestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlocks<br/>have human readable information: it is not guaranteed that Unlocks will have human readable strings, and<br/>your application will have to handle that)<br/><br/>Prefer using failureIndexes instead.  These are provided for informational purposes, but have largely<br/>been supplanted by failureIndexes.</td>
 </tr>
 <tr>
 <td>unlockStatuses</td>
-<td><a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>[]</td>
 <td>If any complex unlock states are checked in determining purchasability, these will<br/>be returned here along with the status of the unlock check.<br/><br/>Prefer using failureIndexes instead.  These are provided for informational purposes, but have largely<br/>been supplanted by failureIndexes.</td>
 </tr>
 <tr>
@@ -139,15 +139,15 @@ ItemInstances, ItemPerks etc... and acquire them from the DestinyVendorResponse'
 <pre><code class="javascript">{
     // Type: integer:int32
     "vendorItemIndex": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
     "itemHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">Destiny.VendorItemStatus</a>
+    // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">VendorItemStatus</a>
     "saleStatus": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "costs": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
@@ -155,16 +155,16 @@ ItemInstances, ItemPerks etc... and acquire them from the DestinyVendorResponse'
             "quantity": 0
         }
     ],
-    // Type: integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]
     "requiredUnlocks": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>[]
     "unlockStatuses": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32
             "unlockHash": 0,
             // Type: boolean
             "isSet": false

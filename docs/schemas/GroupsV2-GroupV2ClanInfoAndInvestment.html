@@ -96,7 +96,7 @@
 <tbody>
 <tr>
 <td>d2ClanProgressions</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -106,17 +106,17 @@
 </tr>
 <tr>
 <td>clanBannerData</td>
-<td><a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a></td>
+<td><a href="../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
     "d2ClanProgressions": {
         "0": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
             "progressionHash": 0,
             // Type: integer:int32
             "dailyProgress": 0,
@@ -142,7 +142,7 @@
     },
     // Type: string
     "clanCallsign": "",
-    // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a>
     "clanBannerData": {
         // Type: integer:uint32
         "decalId": 0,

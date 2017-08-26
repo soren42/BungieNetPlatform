@@ -112,7 +112,7 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -122,7 +122,7 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
 </tr>
 <tr>
 <td>milestoneType</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneType">Destiny.Definitions.Milestones.DestinyMilestoneType</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneType">DestinyMilestoneType</a></td>
 <td>An enumeration listing one of the possible types of milestones.  Check out the<br/>DestinyMilestoneType enum for more info!</td>
 </tr>
 <tr>
@@ -147,22 +147,22 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
 </tr>
 <tr>
 <td>quests</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition">DestinyMilestoneQuestDefinition</a>&gt;</td>
 <td>The full set of possible Quests that give the overview of the Milestone event/activity in question.<br/>Only one of these can be active at a time for a given Conceptual Milestone, but many of them may be<br/>&quot;available&quot; for the user to choose from. (for instance, with Milestones you can choose from the three<br/>available Quests, but only one can be active at a time)<br/>Keyed by the quest item.</td>
 </tr>
 <tr>
 <td>rewards</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition">Destiny.Definitions.Milestones.DestinyMilestoneRewardCategoryDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition">DestinyMilestoneRewardCategoryDefinition</a>&gt;</td>
 <td>If this milestone can provide rewards, this will define the categories<br/>into which the individual reward entries are placed.</td>
 </tr>
 <tr>
 <td>vendors</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">Destiny.Definitions.Milestones.DestinyMilestoneVendorDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">DestinyMilestoneVendorDefinition</a>[]</td>
 <td>Sometimes, milestones will have rewards provided by Vendors.  This definition gives the information needed<br/>to understand which vendors are relevant, the order in which they should be returned if order matters,<br/>and the conditions under which the Vendor is relevant to the user.</td>
 </tr>
 <tr>
 <td>values</td>
-<td>Dictionary&lt;string,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition">Destiny.Definitions.Milestones.DestinyMilestoneValueDefinition</a>&gt;</td>
+<td>Dictionary&lt;string,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition">DestinyMilestoneValueDefinition</a>&gt;</td>
 <td>Sometimes, milestones will have arbitrary values associated with them that are of interest to us<br/>or to third party developers.  This is the collection of those values' definitions, keyed by the identifier<br/>of the value and providing useful definition information such as localizable names and descriptions for the value.</td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -202,7 +202,7 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
     },
     // Type: string
     "image": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneType">Destiny.Definitions.Milestones.DestinyMilestoneType</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneType">DestinyMilestoneType</a>
     "milestoneType": 0,
     // Type: boolean
     "recruitable": false,
@@ -212,12 +212,12 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
     "showInExplorer": false,
     // Type: boolean
     "hasPredictableDates": false,
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestDefinition</a>&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition">DestinyMilestoneQuestDefinition</a>&gt;
     "quests": {
         "0": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
             "questItemHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -230,17 +230,17 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
             },
             // Type: string
             "overrideImage": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a>
             "questRewards": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>[]
                 "items": [
-                   // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>
                     {
-                        // Type: integer:uint32:nullable
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
                         "vendorHash": 0,
                         // Type: integer:int32:nullable
                         "vendorItemIndex": 0,
-                        // Type: integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
@@ -249,15 +249,15 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
                     }
                 ]
             },
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;
+            // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a>&gt;
             "activities": {
                 "0": {
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
                     "conceptualActivityHash": 0,
-                    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityVariantDefinition</a>&gt;
+                    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>&gt;
                     "variants": {
                         "0": {
-                            // Type: integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
                             "activityHash": 0,
                             // Type: integer:int32
                             "order": 0
@@ -267,14 +267,14 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
             }
         }
     },
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition">Destiny.Definitions.Milestones.DestinyMilestoneRewardCategoryDefinition</a>&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition">DestinyMilestoneRewardCategoryDefinition</a>&gt;
     "rewards": {
         "0": {
             // Type: integer:uint32
             "categoryHash": 0,
             // Type: string
             "categoryIdentifier": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -285,18 +285,18 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
                 // Type: boolean
                 "hasIcon": false
             },
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">Destiny.Definitions.Milestones.DestinyMilestoneRewardEntryDefinition</a>&gt;
+            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">DestinyMilestoneRewardEntryDefinition</a>&gt;
             "rewardEntries": {
                 "0": {
                     // Type: integer:uint32
                     "rewardEntryHash": 0,
                     // Type: string
                     "rewardEntryIdentifier": "",
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
                     "items": [
-                       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                         {
-                            // Type: integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                             "itemHash": 0,
                             // Type: integer:int64:nullable
                             "itemInstanceId": 0,
@@ -304,9 +304,9 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
                             "quantity": 0
                         }
                     ],
-                    // Type: integer:uint32:nullable
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
                     "vendorHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
                     "displayProperties": {
                         // Type: string
                         "description": "",
@@ -325,20 +325,20 @@ API and tacked all of the data we would have put on Advisors onto Milestones ins
             "order": 0
         }
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">Destiny.Definitions.Milestones.DestinyMilestoneVendorDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">DestinyMilestoneVendorDefinition</a>[]
     "vendors": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">Destiny.Definitions.Milestones.DestinyMilestoneVendorDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">DestinyMilestoneVendorDefinition</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32
             "vendorHash": 0
         }
     ],
-    // Type: Dictionary&lt;string,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition">Destiny.Definitions.Milestones.DestinyMilestoneValueDefinition</a>&gt;
+    // Type: Dictionary&lt;string,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition">DestinyMilestoneValueDefinition</a>&gt;
     "values": {
         "key": {
             // Type: string
             "key": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",

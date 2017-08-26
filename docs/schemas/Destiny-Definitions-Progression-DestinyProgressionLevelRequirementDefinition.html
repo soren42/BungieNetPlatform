@@ -103,12 +103,12 @@ be the required level for the item.</p>
 <tbody>
 <tr>
 <td>requirementCurve</td>
-<td><a href="../../docs/schemas/Interpolation-InterpolationPointFloat">Interpolation.InterpolationPointFloat</a>[]</td>
+<td><a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>[]</td>
 <td>A curve of level requirements, weighted by the related progressions' level.<br/><br/>Interpolate against this curve with the character's progression level to determine<br/>what the level requirement of the generated item that is using this data will be.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32</td>
 <td>The progression whose level should be used to determine the level requirement.<br/><br/>Look up the DestinyProgressionDefinition with this hash for more information about<br/>the progression in question.</td>
 </tr>
 <tr>
@@ -130,9 +130,9 @@ be the required level for the item.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">Interpolation.InterpolationPointFloat</a>[]
+    // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>[]
     "requirementCurve": [
-       // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">Interpolation.InterpolationPointFloat</a>
+       // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>
         {
             // Type: number:float
             "value": 0,
@@ -140,7 +140,7 @@ be the required level for the item.</p>
             "weight": 0
         }
     ],
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
     "progressionHash": 0,
     // Type: integer:uint32
     "hash": 0,

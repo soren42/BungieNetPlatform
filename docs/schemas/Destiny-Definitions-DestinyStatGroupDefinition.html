@@ -115,12 +115,12 @@ Talent Grids and Socket Plugs)</p>
 </tr>
 <tr>
 <td>scaledStats</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a>[]</td>
 <td>Any stat that requires scaling to be transformed from an &quot;Investment&quot; stat to a &quot;Display&quot;<br/>stat will have an entry in this list.  For more information on what those types of stats<br/>mean and the transformation process, see DestinyStatDefinition.<br/><br/>In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead.<br/>But I'm going to leave it be because <a href="After Apple Picking">After Apple Picking</a>.</td>
 </tr>
 <tr>
 <td>overrides</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">Destiny.Definitions.DestinyStatOverrideDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">DestinyStatOverrideDefinition</a>&gt;</td>
 <td>The game has the ability to override, based on the stat group, what the localized text is<br/>that is displayed for Stats being shown on the item.<br/><br/>Mercifully, no Stat Groups use this feature currently.  If they start using them,<br/>we'll all need to start using them (and those of you who are more prudent than I am<br/>can go ahead and start pre-checking for this.)</td>
 </tr>
 <tr>
@@ -146,19 +146,19 @@ Talent Grids and Socket Plugs)</p>
     "maximumValue": 0,
     // Type: integer:int32
     "uiPosition": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a>[]
     "scaledStats": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">Destiny.Definitions.DestinyStatDisplayDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "maximumValue": 0,
             // Type: boolean
             "displayAsNumeric": false,
-            // Type: <a href="../../docs/schemas/Interpolation-InterpolationPoint">Interpolation.InterpolationPoint</a>[]
+            // Type: <a href="../../docs/schemas/Interpolation-InterpolationPoint">InterpolationPoint</a>[]
             "displayInterpolation": [
-               // Type: <a href="../../docs/schemas/Interpolation-InterpolationPoint">Interpolation.InterpolationPoint</a>
+               // Type: <a href="../../docs/schemas/Interpolation-InterpolationPoint">InterpolationPoint</a>
                 {
                     // Type: integer:int32
                     "value": 0,
@@ -168,12 +168,12 @@ Talent Grids and Socket Plugs)</p>
             ]
         }
     ],
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">Destiny.Definitions.DestinyStatOverrideDefinition</a>&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">DestinyStatOverrideDefinition</a>&gt;
     "overrides": {
         "0": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",

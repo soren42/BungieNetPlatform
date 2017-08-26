@@ -100,22 +100,22 @@ nested inside of their own class?&quot;</p>
 <tbody>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>[]</td>
 <td>The items that represent your reward for completing the quest.<br/><br/>Be warned, these could be &quot;dummy&quot; items: items that are only used to<br/>render a good-looking in-game tooltip, but aren't the actual items themselves.<br/><br/>For instance, when experience is given there's often a dummy item representing &quot;experience&quot;,<br/>with quantity being the amount of experience you got.  We don't have a programmatic association<br/>between those and whatever Progression is actually getting that experience... yet.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>[]
     "items": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>
         {
-            // Type: integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
             "vendorHash": 0,
             // Type: integer:int32:nullable
             "vendorItemIndex": 0,
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

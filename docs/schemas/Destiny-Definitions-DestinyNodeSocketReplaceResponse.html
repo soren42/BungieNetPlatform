@@ -98,21 +98,21 @@ socket type, inserting the indicated plug item.</p>
 <tbody>
 <tr>
 <td>socketTypeHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the socket type to find amidst the item's sockets (the item to which this<br/>talent grid is attached).  See DestinyInventoryItemDefinition.sockets.socketEntries to find<br/>the socket type of sockets on the item in question.</td>
 </tr>
 <tr>
 <td>plugItemHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the plug item that will be inserted into the socket found.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:integer:uint32
     "socketTypeHash": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
     "plugItemHash": 0
 }
 </code></pre>

@@ -132,12 +132,12 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/User/SearchUsers/">https://bungie.net/Platform/User/SearchUsers/</a></p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/List-User-GeneralUser-">List&lt;User.GeneralUser&gt;</a>
+<p>Schema: <a href="../../../docs/responses/List-User-GeneralUser-">GeneralUser&gt;</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>[]
+    // Type: <a href="../../../docs/responses/User-GeneralUser">GeneralUser</a>[]
     "Response": [
-       // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>
+       // Type: <a href="../../../docs/responses/User-GeneralUser">GeneralUser</a>
         {
             // Type: integer:int64
             "membershipId": 0,
@@ -165,15 +165,15 @@ PlatformErrorCode: 200</p>
             "lastUpdate": "",
             // Type: integer:int64:nullable
             "legacyPortalUID": 0,
-            // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+            // Type: <a href="../../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
             "context": {
                 // Type: boolean
                 "isFollowing": false,
-                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                 "ignoreStatus": {
                     // Type: boolean
                     "isIgnored": false,
-                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
                     "ignoreFlags": 0
                 },
                 // Type: string:date-time:nullable
@@ -213,7 +213,7 @@ PlatformErrorCode: 200</p>
             "blizzardDisplayName": ""
         }
     ],
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

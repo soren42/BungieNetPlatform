@@ -127,12 +127,12 @@ if you care.</p>
 </tr>
 <tr>
 <td>requiredItems</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>[]</td>
 <td>If the action requires other items to exist or be destroyed, this is<br/>the list of those items and requirements.</td>
 </tr>
 <tr>
 <td>progressionRewards</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>[]</td>
 <td>If performing this action earns you Progression, this is the list of progressions and values granted<br/>for those progressions by performing this action.</td>
 </tr>
 <tr>
@@ -181,23 +181,23 @@ if you care.</p>
     "overlayIcon": "",
     // Type: integer:int32
     "requiredCooldownSeconds": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>[]
     "requiredItems": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>
         {
             // Type: integer:int32
             "count": 0,
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: boolean
             "deleteOnAction": false
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>[]
     "progressionRewards": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a>:integer:uint32
             "progressionMappingHash": 0,
             // Type: integer:int32
             "amount": 0,

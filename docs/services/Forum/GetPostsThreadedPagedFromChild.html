@@ -133,7 +133,7 @@
 </tr>
 <tr>
 <td>sortMode</td>
-<td><a href="../../../docs/schemas/Forum-ForumPostSortEnum">Forum.ForumPostSortEnum</a></td>
+<td><a href="../../../docs/schemas/Forum-ForumPostSortEnum">ForumPostSortEnum</a></td>
 <td>Yes</td>
 <td>&nbsp;</td>
 </tr>
@@ -162,24 +162,24 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode">https://bungie.net/Platform/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode</a>}/</p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/Forum-PostSearchResponse">Forum.PostSearchResponse</a>
+<p>Schema: <a href="../../../docs/responses/Forum-PostSearchResponse">PostSearchResponse</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/Forum-PostSearchResponse">Forum.PostSearchResponse</a>
+    // Type: <a href="../../../docs/responses/Forum-PostSearchResponse">PostSearchResponse</a>
     "Response": {
-        // Type: <a href="../../../docs/schemas/Forum-PostResponse">Forum.PostResponse</a>[]
+        // Type: <a href="../../../docs/schemas/Forum-PostResponse">PostResponse</a>[]
         "relatedPosts": [
-           // Type: <a href="../../../docs/schemas/Forum-PostResponse">Forum.PostResponse</a>
+           // Type: <a href="../../../docs/schemas/Forum-PostResponse">PostResponse</a>
             {
                 // Type: string:date-time
                 "lastReplyTimestamp": "",
                 // Type: boolean
                 "IsPinned": false,
-                // Type: <a href="../../../docs/schemas/Forum-ForumMediaType">Forum.ForumMediaType</a>
+                // Type: <a href="../../../docs/schemas/Forum-ForumMediaType">ForumMediaType</a>
                 "urlMediaType": 0,
                 // Type: string
                 "thumbnail": "",
-                // Type: <a href="../../../docs/schemas/Forum-ForumPostPopularity">Forum.ForumPostPopularity</a>
+                // Type: <a href="../../../docs/schemas/Forum-ForumPostPopularity">ForumPostPopularity</a>
                 "popularity": 0,
                 // Type: boolean
                 "isActive": false,
@@ -195,20 +195,20 @@ PlatformErrorCode: 200</p>
                 "latestReplyPostId": 0,
                 // Type: integer:int64
                 "latestReplyAuthorId": 0,
-                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                 "ignoreStatus": {
                     // Type: boolean
                     "isIgnored": false,
-                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
                     "ignoreFlags": 0
                 },
                 // Type: string
                 "locale": ""
             }
         ],
-        // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>[]
+        // Type: <a href="../../../docs/responses/User-GeneralUser">GeneralUser</a>[]
         "authors": [
-           // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>
+           // Type: <a href="../../../docs/responses/User-GeneralUser">GeneralUser</a>
             {
                 // Type: integer:int64
                 "membershipId": 0,
@@ -236,15 +236,15 @@ PlatformErrorCode: 200</p>
                 "lastUpdate": "",
                 // Type: integer:int64:nullable
                 "legacyPortalUID": 0,
-                // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                // Type: <a href="../../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
                 "context": {
                     // Type: boolean
                     "isFollowing": false,
-                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                     "ignoreStatus": {
                         // Type: boolean
                         "isIgnored": false,
-                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
                         "ignoreFlags": 0
                     },
                     // Type: string:date-time:nullable
@@ -284,17 +284,17 @@ PlatformErrorCode: 200</p>
                 "blizzardDisplayName": ""
             }
         ],
-        // Type: <a href="../../../docs/schemas/GroupsV2-GroupResponse">GroupsV2.GroupResponse</a>[]
+        // Type: <a href="../../../docs/schemas/GroupsV2-GroupResponse">GroupResponse</a>[]
         "groups": [
-           // Type: <a href="../../../docs/schemas/GroupsV2-GroupResponse">GroupsV2.GroupResponse</a>
+           // Type: <a href="../../../docs/schemas/GroupsV2-GroupResponse">GroupResponse</a>
             {
-                // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2">GroupsV2.GroupV2</a>
+                // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2">GroupV2</a>
                 "detail": {
                     // Type: integer:int64
                     "groupId": 0,
                     // Type: string
                     "name": "",
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupType">GroupsV2.GroupType</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupType">GroupType</a>
                     "groupType": 0,
                     // Type: integer:int64
                     "membershipIdCreated": 0,
@@ -323,17 +323,17 @@ PlatformErrorCode: 200</p>
                     "allowChat": false,
                     // Type: boolean
                     "isDefaultPostPublic": false,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-ChatSecuritySetting">GroupsV2.ChatSecuritySetting</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-ChatSecuritySetting">ChatSecuritySetting</a>
                     "chatSecurity": 0,
                     // Type: string
                     "locale": "",
                     // Type: integer:int32
                     "avatarImageIndex": 0,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupHomepage">GroupsV2.GroupHomepage</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupHomepage">GroupHomepage</a>
                     "homepage": 0,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-MembershipOption">GroupsV2.MembershipOption</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-MembershipOption">MembershipOption</a>
                     "membershipOption": 0,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupPostPublicity">GroupsV2.GroupPostPublicity</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupPostPublicity">GroupPostPublicity</a>
                     "defaultPublicity": 0,
                     // Type: string
                     "theme": "",
@@ -349,13 +349,13 @@ PlatformErrorCode: 200</p>
                     "enableInvitationMessagingForAdmins": false,
                     // Type: string:date-time:nullable
                     "banExpireDate": "",
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupFeatures">GroupsV2.GroupFeatures</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupFeatures">GroupFeatures</a>
                     "features": {
                         // Type: integer:int32
                         "maximumMembers": 0,
                         // Type: integer:int32
                         "maximumMembershipsOfGroupType": 0,
-                        // Type: <a href="../../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-Capabilities">Capabilities</a>
                         "capabilities": 0,
                         // Type: <a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>[]
                         "membershipTypes": [
@@ -366,19 +366,19 @@ PlatformErrorCode: 200</p>
                         "invitePermissionOverride": false,
                         // Type: boolean
                         "updateCulturePermissionOverride": false,
-                        // Type: <a href="../../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">HostGuidedGamesPermissionLevel</a>
                         "hostGuidedGamePermissionOverride": 0,
                         // Type: boolean
                         "updateBannerPermissionOverride": false,
-                        // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
                         "joinLevel": 0
                     },
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupV2ClanInfoAndInvestment</a>
                     "clanInfo": {
-                        // Type: Dictionary&lt;integer:uint32,<a href="../../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+                        // Type: Dictionary&lt;integer:uint32,<a href="../../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
                         "d2ClanProgressions": {
                             "0": {
-                                // Type: integer:uint32
+                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
                                 "progressionHash": 0,
                                 // Type: integer:int32
                                 "dailyProgress": 0,
@@ -404,7 +404,7 @@ PlatformErrorCode: 200</p>
                         },
                         // Type: string
                         "clanCallsign": "",
-                        // Type: <a href="../../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a>
                         "clanBannerData": {
                             // Type: integer:uint32
                             "decalId": 0,
@@ -423,15 +423,15 @@ PlatformErrorCode: 200</p>
                         }
                     }
                 },
-                // Type: <a href="../../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a>
+                // Type: <a href="../../../docs/schemas/GroupsV2-GroupMember">GroupMember</a>
                 "founder": {
-                    // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
                     "memberType": 0,
                     // Type: boolean
                     "isOnline": false,
                     // Type: integer:int64
                     "groupId": 0,
-                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                     "destinyUserInfo": {
                         // Type: string
                         "supplementalDisplayName": "",
@@ -444,7 +444,7 @@ PlatformErrorCode: 200</p>
                         // Type: string
                         "displayName": ""
                     },
-                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                     "bungieNetUserInfo": {
                         // Type: string
                         "supplementalDisplayName": "",
@@ -465,13 +465,13 @@ PlatformErrorCode: 200</p>
                    // Type: integer:int64
                     0
                 ],
-                // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2">GroupsV2.GroupV2</a>
+                // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2">GroupV2</a>
                 "parentGroup": {
                     // Type: integer:int64
                     "groupId": 0,
                     // Type: string
                     "name": "",
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupType">GroupsV2.GroupType</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupType">GroupType</a>
                     "groupType": 0,
                     // Type: integer:int64
                     "membershipIdCreated": 0,
@@ -500,17 +500,17 @@ PlatformErrorCode: 200</p>
                     "allowChat": false,
                     // Type: boolean
                     "isDefaultPostPublic": false,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-ChatSecuritySetting">GroupsV2.ChatSecuritySetting</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-ChatSecuritySetting">ChatSecuritySetting</a>
                     "chatSecurity": 0,
                     // Type: string
                     "locale": "",
                     // Type: integer:int32
                     "avatarImageIndex": 0,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupHomepage">GroupsV2.GroupHomepage</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupHomepage">GroupHomepage</a>
                     "homepage": 0,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-MembershipOption">GroupsV2.MembershipOption</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-MembershipOption">MembershipOption</a>
                     "membershipOption": 0,
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupPostPublicity">GroupsV2.GroupPostPublicity</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupPostPublicity">GroupPostPublicity</a>
                     "defaultPublicity": 0,
                     // Type: string
                     "theme": "",
@@ -526,13 +526,13 @@ PlatformErrorCode: 200</p>
                     "enableInvitationMessagingForAdmins": false,
                     // Type: string:date-time:nullable
                     "banExpireDate": "",
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupFeatures">GroupsV2.GroupFeatures</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupFeatures">GroupFeatures</a>
                     "features": {
                         // Type: integer:int32
                         "maximumMembers": 0,
                         // Type: integer:int32
                         "maximumMembershipsOfGroupType": 0,
-                        // Type: <a href="../../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-Capabilities">Capabilities</a>
                         "capabilities": 0,
                         // Type: <a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>[]
                         "membershipTypes": [
@@ -543,19 +543,19 @@ PlatformErrorCode: 200</p>
                         "invitePermissionOverride": false,
                         // Type: boolean
                         "updateCulturePermissionOverride": false,
-                        // Type: <a href="../../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">HostGuidedGamesPermissionLevel</a>
                         "hostGuidedGamePermissionOverride": 0,
                         // Type: boolean
                         "updateBannerPermissionOverride": false,
-                        // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
                         "joinLevel": 0
                     },
-                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+                    // Type: <a href="../../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupV2ClanInfoAndInvestment</a>
                     "clanInfo": {
-                        // Type: Dictionary&lt;integer:uint32,<a href="../../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+                        // Type: Dictionary&lt;integer:uint32,<a href="../../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
                         "d2ClanProgressions": {
                             "0": {
-                                // Type: integer:uint32
+                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
                                 "progressionHash": 0,
                                 // Type: integer:int32
                                 "dailyProgress": 0,
@@ -581,7 +581,7 @@ PlatformErrorCode: 200</p>
                         },
                         // Type: string
                         "clanCallsign": "",
-                        // Type: <a href="../../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a>
                         "clanBannerData": {
                             // Type: integer:uint32
                             "decalId": 0,
@@ -600,20 +600,20 @@ PlatformErrorCode: 200</p>
                         }
                     }
                 },
-                // Type: <a href="../../../docs/schemas/GroupsV2-GroupAllianceStatus">GroupsV2.GroupAllianceStatus</a>
+                // Type: <a href="../../../docs/schemas/GroupsV2-GroupAllianceStatus">GroupAllianceStatus</a>
                 "allianceStatus": 0,
                 // Type: integer:int32
                 "groupJoinInviteCount": 0,
-                // Type: Dictionary&lt;<a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a>&gt;
+                // Type: Dictionary&lt;<a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../../docs/schemas/GroupsV2-GroupMember">GroupMember</a>&gt;
                 "currentUserMemberMap": {
                     "0": {
-                        // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
                         "memberType": 0,
                         // Type: boolean
                         "isOnline": false,
                         // Type: integer:int64
                         "groupId": 0,
-                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                         "destinyUserInfo": {
                             // Type: string
                             "supplementalDisplayName": "",
@@ -626,7 +626,7 @@ PlatformErrorCode: 200</p>
                             // Type: string
                             "displayName": ""
                         },
-                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                         "bungieNetUserInfo": {
                             // Type: string
                             "supplementalDisplayName": "",
@@ -643,14 +643,14 @@ PlatformErrorCode: 200</p>
                         "joinDate": ""
                     }
                 },
-                // Type: Dictionary&lt;<a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../../docs/schemas/GroupsV2-GroupPotentialMember">GroupsV2.GroupPotentialMember</a>&gt;
+                // Type: Dictionary&lt;<a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../../docs/schemas/GroupsV2-GroupPotentialMember">GroupPotentialMember</a>&gt;
                 "currentUserPotentialMemberMap": {
                     "0": {
-                        // Type: <a href="../../../docs/schemas/GroupsV2-GroupPotentialMemberStatus">GroupsV2.GroupPotentialMemberStatus</a>
+                        // Type: <a href="../../../docs/schemas/GroupsV2-GroupPotentialMemberStatus">GroupPotentialMemberStatus</a>
                         "potentialStatus": 0,
                         // Type: integer:int64
                         "groupId": 0,
-                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                         "destinyUserInfo": {
                             // Type: string
                             "supplementalDisplayName": "",
@@ -663,7 +663,7 @@ PlatformErrorCode: 200</p>
                             // Type: string
                             "displayName": ""
                         },
-                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                         "bungieNetUserInfo": {
                             // Type: string
                             "supplementalDisplayName": "",
@@ -682,30 +682,30 @@ PlatformErrorCode: 200</p>
                 }
             }
         ],
-        // Type: <a href="../../../docs/schemas/Tags-Models-Contracts-TagResponse">Tags.Models.Contracts.TagResponse</a>[]
+        // Type: <a href="../../../docs/schemas/Tags-Models-Contracts-TagResponse">TagResponse</a>[]
         "searchedTags": [
-           // Type: <a href="../../../docs/schemas/Tags-Models-Contracts-TagResponse">Tags.Models.Contracts.TagResponse</a>
+           // Type: <a href="../../../docs/schemas/Tags-Models-Contracts-TagResponse">TagResponse</a>
             {
                 // Type: string
                 "tagText": "",
-                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                 "ignoreStatus": {
                     // Type: boolean
                     "isIgnored": false,
-                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
                     "ignoreFlags": 0
                 }
             }
         ],
-        // Type: <a href="../../../docs/schemas/Forum-PollResponse">Forum.PollResponse</a>[]
+        // Type: <a href="../../../docs/schemas/Forum-PollResponse">PollResponse</a>[]
         "polls": [
-           // Type: <a href="../../../docs/schemas/Forum-PollResponse">Forum.PollResponse</a>
+           // Type: <a href="../../../docs/schemas/Forum-PollResponse">PollResponse</a>
             {
                 // Type: integer:int64
                 "topicId": 0,
-                // Type: <a href="../../../docs/schemas/Forum-PollResult">Forum.PollResult</a>[]
+                // Type: <a href="../../../docs/schemas/Forum-PollResult">PollResult</a>[]
                 "results": [
-                   // Type: <a href="../../../docs/schemas/Forum-PollResult">Forum.PollResult</a>
+                   // Type: <a href="../../../docs/schemas/Forum-PollResult">PollResult</a>
                     {
                         // Type: string
                         "answerText": "",
@@ -723,17 +723,17 @@ PlatformErrorCode: 200</p>
                 "totalVotes": 0
             }
         ],
-        // Type: <a href="../../../docs/responses/Forum-ForumRecruitmentDetail">Forum.ForumRecruitmentDetail</a>[]
+        // Type: <a href="../../../docs/responses/Forum-ForumRecruitmentDetail">ForumRecruitmentDetail</a>[]
         "recruitmentDetails": [
-           // Type: <a href="../../../docs/responses/Forum-ForumRecruitmentDetail">Forum.ForumRecruitmentDetail</a>
+           // Type: <a href="../../../docs/responses/Forum-ForumRecruitmentDetail">ForumRecruitmentDetail</a>
             {
                 // Type: integer:int64
                 "topicId": 0,
                 // Type: boolean
                 "microphoneRequired": false,
-                // Type: <a href="../../../docs/schemas/Forum-ForumRecruitmentIntensityLabel">Forum.ForumRecruitmentIntensityLabel</a>
+                // Type: <a href="../../../docs/schemas/Forum-ForumRecruitmentIntensityLabel">ForumRecruitmentIntensityLabel</a>
                 "intensity": 0,
-                // Type: <a href="../../../docs/schemas/Forum-ForumRecruitmentToneLabel">Forum.ForumRecruitmentToneLabel</a>
+                // Type: <a href="../../../docs/schemas/Forum-ForumRecruitmentToneLabel">ForumRecruitmentToneLabel</a>
                 "tone": 0,
                 // Type: boolean
                 "approved": false,
@@ -743,9 +743,9 @@ PlatformErrorCode: 200</p>
                 "playerSlotsTotal": 0,
                 // Type: integer:int32
                 "playerSlotsRemaining": 0,
-                // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>[]
+                // Type: <a href="../../../docs/responses/User-GeneralUser">GeneralUser</a>[]
                 "Fireteam": [
-                   // Type: <a href="../../../docs/responses/User-GeneralUser">User.GeneralUser</a>
+                   // Type: <a href="../../../docs/responses/User-GeneralUser">GeneralUser</a>
                     {
                         // Type: integer:int64
                         "membershipId": 0,
@@ -773,15 +773,15 @@ PlatformErrorCode: 200</p>
                         "lastUpdate": "",
                         // Type: integer:int64:nullable
                         "legacyPortalUID": 0,
-                        // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                        // Type: <a href="../../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
                         "context": {
                             // Type: boolean
                             "isFollowing": false,
-                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                             "ignoreStatus": {
                                 // Type: boolean
                                 "isIgnored": false,
-                                // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                                // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
                                 "ignoreFlags": 0
                             },
                             // Type: string:date-time:nullable
@@ -830,19 +830,19 @@ PlatformErrorCode: 200</p>
         ],
         // Type: integer:int32:nullable
         "availablePages": 0,
-        // Type: <a href="../../../docs/schemas/Forum-PostResponse">Forum.PostResponse</a>[]
+        // Type: <a href="../../../docs/schemas/Forum-PostResponse">PostResponse</a>[]
         "results": [
-           // Type: <a href="../../../docs/schemas/Forum-PostResponse">Forum.PostResponse</a>
+           // Type: <a href="../../../docs/schemas/Forum-PostResponse">PostResponse</a>
             {
                 // Type: string:date-time
                 "lastReplyTimestamp": "",
                 // Type: boolean
                 "IsPinned": false,
-                // Type: <a href="../../../docs/schemas/Forum-ForumMediaType">Forum.ForumMediaType</a>
+                // Type: <a href="../../../docs/schemas/Forum-ForumMediaType">ForumMediaType</a>
                 "urlMediaType": 0,
                 // Type: string
                 "thumbnail": "",
-                // Type: <a href="../../../docs/schemas/Forum-ForumPostPopularity">Forum.ForumPostPopularity</a>
+                // Type: <a href="../../../docs/schemas/Forum-ForumPostPopularity">ForumPostPopularity</a>
                 "popularity": 0,
                 // Type: boolean
                 "isActive": false,
@@ -858,11 +858,11 @@ PlatformErrorCode: 200</p>
                 "latestReplyPostId": 0,
                 // Type: integer:int64
                 "latestReplyAuthorId": 0,
-                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                 "ignoreStatus": {
                     // Type: boolean
                     "isIgnored": false,
-                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                    // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
                     "ignoreFlags": 0
                 },
                 // Type: string
@@ -873,7 +873,7 @@ PlatformErrorCode: 200</p>
         "totalResults": 0,
         // Type: boolean
         "hasMore": false,
-        // Type: <a href="../../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
+        // Type: <a href="../../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
         "query": {
             // Type: integer:int32
             "itemsPerPage": 0,
@@ -887,7 +887,7 @@ PlatformErrorCode: 200</p>
         // Type: boolean
         "useTotalResults": false
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

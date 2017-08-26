@@ -102,7 +102,7 @@ for those tooltip friendly rewards.</p>
 </tr>
 <tr>
 <td>rewardItems</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
 <td>The &quot;Items provided&quot; in the reward.  This is almost always a pointer to a DestinyInventoryItemDefintion<br/>for an item that you can't actually earn in-game, but that has name/description/icon information for<br/>the vague concept of the rewards you will receive.  This is because the actual reward generation is<br/>non-deterministic and extremely complicated, so the best the game can do is tell you what you'll get<br/>in vague terms.  And so too shall we.<br/><br/>Interesting trivia: you actually <em>do</em> earn these items when you complete the activity.  They go into a single-slot<br/>bucket on your profile, which is how you see the pop-ups of these rewards when you complete an activity that match<br/>these &quot;dummy&quot; items.  You can even see them if you look at the last one you earned in your<br/>profile-level inventory through the BNet API!  Who said reading documentation is a waste of time?</td>
 </tr>
 </tbody>
@@ -111,11 +111,11 @@ for those tooltip friendly rewards.</p>
 <pre><code class="javascript">{
     // Type: string
     "rewardText": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "rewardItems": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

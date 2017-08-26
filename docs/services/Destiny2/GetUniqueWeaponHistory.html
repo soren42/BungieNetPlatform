@@ -127,37 +127,37 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/">https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/</a></p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/Destiny-HistoricalStats-DestinyHistoricalWeaponStatsData">Destiny.HistoricalStats.DestinyHistoricalWeaponStatsData</a>
+<p>Schema: <a href="../../../docs/responses/Destiny-HistoricalStats-DestinyHistoricalWeaponStatsData">DestinyHistoricalWeaponStatsData</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/Destiny-HistoricalStats-DestinyHistoricalWeaponStatsData">Destiny.HistoricalStats.DestinyHistoricalWeaponStatsData</a>
+    // Type: <a href="../../../docs/responses/Destiny-HistoricalStats-DestinyHistoricalWeaponStatsData">DestinyHistoricalWeaponStatsData</a>
     "Response": {
-        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">Destiny.HistoricalStats.DestinyHistoricalWeaponStats</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">DestinyHistoricalWeaponStats</a>[]
         "weapons": [
-           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">Destiny.HistoricalStats.DestinyHistoricalWeaponStats</a>
+           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">DestinyHistoricalWeaponStats</a>
             {
-                // Type: integer:uint32
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                 "referenceId": 0,
-                // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>&gt;
+                // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>&gt;
                 "values": {
                     "key": {
                         // Type: string
                         "statId": "",
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "basic": {
                             // Type: number:double
                             "value": 0,
                             // Type: string
                             "displayValue": ""
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "pga": {
                             // Type: number:double
                             "value": 0,
                             // Type: string
                             "displayValue": ""
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "weighted": {
                             // Type: number:double
                             "value": 0,
@@ -169,7 +169,7 @@ PlatformErrorCode: 200</p>
             }
         ]
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

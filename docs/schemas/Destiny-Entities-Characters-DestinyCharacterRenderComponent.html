@@ -100,26 +100,26 @@ be warned: the rabbit hole goes pretty deep.</p>
 <tbody>
 <tr>
 <td>customDyes</td>
-<td><a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]</td>
 <td>Custom dyes, calculated by iterating over the character's equipped items.<br/>Useful for pre-fetching all of the dye data needed from our server.</td>
 </tr>
 <tr>
 <td>customization</td>
-<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a></td>
+<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a></td>
 <td>This is actually something that Spasm.js <em>doesn't</em> do right now, and that we don't return assets for yet.<br/>This is the data about what character customization options you picked.  You can combine this with<br/>DestinyCharacterCustomizationOptionDefinition to show some cool info, and hopefully someday to actually<br/>render a user's face in 3D.  We'll see if we ever end up with time for that.</td>
 </tr>
 <tr>
 <td>peerView</td>
-<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a></td>
+<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a></td>
 <td>A minimal view of:<br/><br/>- Equipped items<br/><br/>- The rendering-related custom options on those equipped items<br/><br/>Combined, that should be enough to render all of the items on the equipped character.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
     "customDyes": [
-       // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+       // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
         {
             // Type: integer:uint32
             "channelHash": 0,
@@ -127,7 +127,7 @@ be warned: the rabbit hole goes pretty deep.</p>
             "dyeHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a>
+    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a>
     "customization": {
         // Type: integer:uint32
         "personality": 0,
@@ -160,17 +160,17 @@ be warned: the rabbit hole goes pretty deep.</p>
         // Type: integer:int32
         "decalIndex": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a>
+    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a>
     "peerView": {
-        // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>[]
         "equipment": [
-           // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>
+           // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>
             {
-                // Type: integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                 "itemHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
                 "dyes": [
-                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
                     {
                         // Type: integer:uint32
                         "channelHash": 0,

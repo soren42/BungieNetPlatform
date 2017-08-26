@@ -95,7 +95,7 @@
 <tbody>
 <tr>
 <td>referenceId</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
 <td>Hash ID that can be looked up in the DestinyActivityTable.</td>
 </tr>
 <tr>
@@ -105,12 +105,12 @@
 </tr>
 <tr>
 <td>mode</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a></td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a></td>
 <td>Indicates the game mode of the activity.</td>
 </tr>
 <tr>
 <td>activityTypeHashOverride</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:integer:uint32</td>
 <td>Hash ID that can be looked up in the DestinyActivityTypeTable. Prefer this value over the <br/>type used by the activity if it is specified.</td>
 </tr>
 <tr>
@@ -122,13 +122,13 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
     "referenceId": 0,
     // Type: integer:int64
     "instanceId": 0,
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>
     "mode": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:integer:uint32
     "activityTypeHashOverride": 0,
     // Type: boolean
     "isPrivate": false

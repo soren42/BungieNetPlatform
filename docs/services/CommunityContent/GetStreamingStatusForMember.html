@@ -115,7 +115,7 @@
 </tr>
 <tr>
 <td>partnershipType</td>
-<td><a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a></td>
+<td><a href="../../../docs/schemas/Partnerships-PartnershipType">PartnershipType</a></td>
 <td>Yes</td>
 <td>The type of partnership for which info will be extracted.</td>
 </tr>
@@ -127,10 +127,10 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId">https://bungie.net/Platform/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId</a>}/</p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>
+<p>Schema: <a href="../../../docs/responses/Community-CommunityLiveStatus">CommunityLiveStatus</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>
+    // Type: <a href="../../../docs/responses/Community-CommunityLiveStatus">CommunityLiveStatus</a>
     "Response": {
         // Type: string:date-time
         "dateStatusUpdated": "",
@@ -138,7 +138,7 @@ PlatformErrorCode: 200</p>
         "url": "",
         // Type: string
         "partnershipIdentifier": "",
-        // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>
+        // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">PartnershipType</a>
         "partnershipType": 0,
         // Type: string
         "thumbnail": "",
@@ -148,7 +148,7 @@ PlatformErrorCode: 200</p>
         "thumbnailLarge": "",
         // Type: integer:int64
         "destinyCharacterId": 0,
-        // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+        // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
         "userInfo": {
             // Type: string
             "supplementalDisplayName": "",
@@ -188,7 +188,7 @@ PlatformErrorCode: 200</p>
         // Type: boolean
         "isSubscribable": false
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

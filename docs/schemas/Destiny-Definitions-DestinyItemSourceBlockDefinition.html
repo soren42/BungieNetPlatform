@@ -96,12 +96,12 @@
 <tbody>
 <tr>
 <td>sourceHashes</td>
-<td>integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:integer:uint32[]</td>
 <td>The list of hash identifiers for Reward Sources that hint where the item can be found (DestinyRewardSourceDefinition).</td>
 </tr>
 <tr>
 <td>sources</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">Destiny.Definitions.Sources.DestinyItemSourceDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">DestinyItemSourceDefinition</a>[]</td>
 <td>A collection of details about the stats that were computed for the ways we found that the item<br/>could be spawned.</td>
 </tr>
 <tr>
@@ -113,14 +113,14 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:integer:uint32[]
     "sourceHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">Destiny.Definitions.Sources.DestinyItemSourceDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">DestinyItemSourceDefinition</a>[]
     "sources": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">Destiny.Definitions.Sources.DestinyItemSourceDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">DestinyItemSourceDefinition</a>
         {
             // Type: integer:int32
             "level": 0,
@@ -132,10 +132,10 @@
             "minLevelRequired": 0,
             // Type: integer:int32
             "maxLevelRequired": 0,
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">Destiny.Definitions.DestinyInventoryItemStatDefinition</a>&gt;
+            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>&gt;
             "computedStats": {
                 "0": {
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
                     "statHash": 0,
                     // Type: integer:int32
                     "value": 0,
@@ -145,7 +145,7 @@
                     "maximum": 0
                 }
             },
-            // Type: integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:integer:uint32[]
             "sourceHashes": [
                // Type: integer:uint32
                 0

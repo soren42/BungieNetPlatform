@@ -106,17 +106,17 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>scope</td>
-<td><a href="../../docs/schemas/Destiny-BucketScope">Destiny.BucketScope</a></td>
+<td><a href="../../docs/schemas/Destiny-BucketScope">BucketScope</a></td>
 <td>Where the bucket is found.  0 = Character, 1 = Account</td>
 </tr>
 <tr>
 <td>category</td>
-<td><a href="../../docs/schemas/Destiny-BucketCategory">Destiny.BucketCategory</a></td>
+<td><a href="../../docs/schemas/Destiny-BucketCategory">BucketCategory</a></td>
 <td>An enum value for what items can be found in the bucket.  See the BucketCategory enum<br/>for more details.</td>
 </tr>
 <tr>
@@ -131,7 +131,7 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
 </tr>
 <tr>
 <td>location</td>
-<td><a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a></td>
+<td><a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a></td>
 <td>Sometimes, inventory buckets represent conceptual &quot;locations&quot; in the game that might not be expected.<br/>This value indicates the conceptual location of the bucket, regardless of where it is actually<br/>contained on the character/account.  <br/><br/>See ItemLocation for details.  <br/><br/>Note that location includes the Vault and the Postmaster (both of whom being just inventory buckets with <br/>additional actions that can be performed on them through a Vendor)</td>
 </tr>
 <tr>
@@ -168,7 +168,7 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -179,15 +179,15 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-BucketScope">Destiny.BucketScope</a>
+    // Type: <a href="../../docs/schemas/Destiny-BucketScope">BucketScope</a>
     "scope": 0,
-    // Type: <a href="../../docs/schemas/Destiny-BucketCategory">Destiny.BucketCategory</a>
+    // Type: <a href="../../docs/schemas/Destiny-BucketCategory">BucketCategory</a>
     "category": 0,
     // Type: integer:int32
     "bucketOrder": 0,
     // Type: integer:int32
     "itemCount": 0,
-    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
+    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>
     "location": 0,
     // Type: boolean
     "hasTransferDestination": false,

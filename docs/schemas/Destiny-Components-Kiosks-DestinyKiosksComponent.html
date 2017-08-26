@@ -103,17 +103,17 @@ the latest version of the content manifest databases before using this data.</p>
 <tbody>
 <tr>
 <td>kioskItems</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;</td>
 <td>A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinition<br/>for the relevant kiosk vendor), and whose value is a list of all the items that the user can &quot;see&quot; in<br/>the Kiosk, and any other interesting metadata.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
     "kioskItems": {
         "0": [
-           // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>
+           // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>
             {
                 // Type: integer:int32
                 "index": 0,

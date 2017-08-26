@@ -95,25 +95,25 @@
 <tbody>
 <tr>
 <td>data</td>
-<td>Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">Destiny.Components.Kiosks.DestinyKiosksComponent</a>&gt;</td>
+<td>Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">DestinyKiosksComponent</a>&gt;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>privacy</td>
-<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a></td>
+<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">Destiny.Components.Kiosks.DestinyKiosksComponent</a>&gt;
+    // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">DestinyKiosksComponent</a>&gt;
     "data": {
         "0": {
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;
+            // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
             "kioskItems": {
                 "0": [
-                   // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>
                     {
                         // Type: integer:int32
                         "index": 0,
@@ -129,7 +129,7 @@
             }
         }
     },
-    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
+    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
     "privacy": 0
 }
 </code></pre>

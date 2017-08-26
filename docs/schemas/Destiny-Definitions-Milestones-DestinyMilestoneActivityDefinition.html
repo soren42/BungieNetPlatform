@@ -99,24 +99,24 @@ a relationship between a conceptual Activity and its difficulty levels and varia
 <tbody>
 <tr>
 <td>conceptualActivityHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The &quot;Conceptual&quot; activity hash.  Basically, we picked the lowest level activity<br/>and are treating it as the canonical definition of the activity for rendering purposes.<br/><br/>If you care about the specific difficulty modes and variations, use the activities under<br/>&quot;Variants&quot;.</td>
 </tr>
 <tr>
 <td>variants</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityVariantDefinition</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>&gt;</td>
 <td>A milestone-referenced activity can have many variants, such as Tiers or alternative modes of play.<br/><br/>Even if there is only a single variant, the details for these are represented within as a variant definition.<br/><br/>It is assumed that, if this DestinyMilestoneActivityDefinition is active, then all variants should be active.<br/><br/>If a Milestone could ever split the variants' active status conditionally, they should all have their own <br/>DestinyMilestoneActivityDefinition instead!  The potential duplication will be worth it for the obviousness of processing<br/>and use.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
     "conceptualActivityHash": 0,
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityVariantDefinition</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>&gt;
     "variants": {
         "0": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0,
             // Type: integer:int32
             "order": 0

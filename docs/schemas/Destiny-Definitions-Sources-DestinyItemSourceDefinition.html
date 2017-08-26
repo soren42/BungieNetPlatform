@@ -124,12 +124,12 @@ and give more granular data about where items spawn for specific level ranges.</
 </tr>
 <tr>
 <td>computedStats</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">Destiny.Definitions.DestinyInventoryItemStatDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>&gt;</td>
 <td>The stats computed for this level/quality range.</td>
 </tr>
 <tr>
 <td>sourceHashes</td>
-<td>integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:integer:uint32[]</td>
 <td>The DestinyRewardSourceDefinitions found that can spawn the item at this level.</td>
 </tr>
 </tbody>
@@ -146,10 +146,10 @@ and give more granular data about where items spawn for specific level ranges.</
     "minLevelRequired": 0,
     // Type: integer:int32
     "maxLevelRequired": 0,
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">Destiny.Definitions.DestinyInventoryItemStatDefinition</a>&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>&gt;
     "computedStats": {
         "0": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -159,7 +159,7 @@ and give more granular data about where items spawn for specific level ranges.</
             "maximum": 0
         }
     },
-    // Type: integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:integer:uint32[]
     "sourceHashes": [
        // Type: integer:uint32
         0

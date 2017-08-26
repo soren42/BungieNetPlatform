@@ -109,12 +109,12 @@ in DestinyCharacterProgressionComponent.progressions, so you don't have to worry
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDisplayPropertiesDefinition">Destiny.Definitions.DestinyProgressionDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDisplayPropertiesDefinition">DestinyProgressionDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>scope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyProgressionScope">Destiny.DestinyProgressionScope</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyProgressionScope">DestinyProgressionScope</a></td>
 <td>The &quot;Scope&quot; of the progression indicates the source of the progression's live data.<br/><br/>See the DestinyProgressionScope enum for more info: but essentially, a Progression can either be<br/>backed by a stored value, or it can be a calculated derivative of other values.</td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ in DestinyCharacterProgressionComponent.progressions, so you don't have to worry
 </tr>
 <tr>
 <td>steps</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">Destiny.Definitions.DestinyProgressionStepDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">DestinyProgressionStepDefinition</a>[]</td>
 <td>Progressions are divided into Steps, which roughly equate to &quot;Levels&quot; in the traditional<br/>sense of a Progression.  Notably, the last step can be repeated indefinitely if repeatLastStep<br/>is true, meaning that the calculation for your level is not as simple as comparing your current<br/>progress to the max progress of the steps.  <br/><br/>These and more calculations are done for you if<br/>you grab live character progression data, such as in the DestinyCharacterProgressionComponent.</td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ in DestinyCharacterProgressionComponent.progressions, so you don't have to worry
 </tr>
 <tr>
 <td>factionHash</td>
-<td>integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32:nullable</td>
 <td>If the value exists, this is the hash identifier for the Faction that owns this Progression.<br/><br/>This is purely for convenience, if you're looking at a progression and want to know if and who<br/>it's related to in terms of Faction Reputation.</td>
 </tr>
 <tr>
@@ -161,7 +161,7 @@ in DestinyCharacterProgressionComponent.progressions, so you don't have to worry
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDisplayPropertiesDefinition">Destiny.Definitions.DestinyProgressionDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDisplayPropertiesDefinition">DestinyProgressionDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "displayUnitsName": "",
@@ -174,27 +174,27 @@ in DestinyCharacterProgressionComponent.progressions, so you don't have to worry
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionScope">Destiny.DestinyProgressionScope</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionScope">DestinyProgressionScope</a>
     "scope": 0,
     // Type: boolean
     "repeatLastStep": false,
     // Type: string
     "source": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">Destiny.Definitions.DestinyProgressionStepDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">DestinyProgressionStepDefinition</a>[]
     "steps": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">Destiny.Definitions.DestinyProgressionStepDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">DestinyProgressionStepDefinition</a>
         {
             // Type: string
             "stepName": "",
-            // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">Destiny.DestinyProgressionStepDisplayEffect</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">DestinyProgressionStepDisplayEffect</a>
             "displayEffectType": 0,
             // Type: integer:int32
             "progressTotal": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
             "rewardItems": [
-               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                 {
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -206,7 +206,7 @@ in DestinyCharacterProgressionComponent.progressions, so you don't have to worry
     ],
     // Type: boolean
     "visible": false,
-    // Type: integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32:nullable
     "factionHash": 0,
     // Type: integer:uint32
     "hash": 0,

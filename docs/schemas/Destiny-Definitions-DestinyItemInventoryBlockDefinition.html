@@ -107,17 +107,17 @@ then this is the basic properties regarding the item's relationship with the inv
 </tr>
 <tr>
 <td>bucketTypeHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the DestinyInventoryBucketDefinition to which this item belongs.<br/>I should have named this &quot;bucketHash&quot;, but too many things refer to it now.  Sigh.</td>
 </tr>
 <tr>
 <td>recoveryBucketTypeHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32</td>
 <td>If the item is picked up by the lost loot queue, this is the hash identifier<br/>for the DestinyInventoryBucketDefinition into which it will be placed.<br/>Again, I should have named this recoveryBucketHash instead.</td>
 </tr>
 <tr>
 <td>tierTypeHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeDefinition">DestinyItemTierTypeDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the Tier Type of the item, use to look up its DestinyItemTierTypeDefinition<br/>if you need to show localized data for the item's tier.</td>
 </tr>
 <tr>
@@ -132,7 +132,7 @@ then this is the basic properties regarding the item's relationship with the inv
 </tr>
 <tr>
 <td>tierType</td>
-<td><a href="../../docs/schemas/Destiny-TierType">Destiny.TierType</a></td>
+<td><a href="../../docs/schemas/Destiny-TierType">TierType</a></td>
 <td>The enumeration matching the tier type of the item to known values, again for convenience sake.</td>
 </tr>
 </tbody>
@@ -143,17 +143,17 @@ then this is the basic properties regarding the item's relationship with the inv
     "stackUniqueLabel": "",
     // Type: integer:int32
     "maxStackSize": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
     "bucketTypeHash": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
     "recoveryBucketTypeHash": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeDefinition">DestinyItemTierTypeDefinition</a>:integer:uint32
     "tierTypeHash": 0,
     // Type: boolean
     "isInstanceItem": false,
     // Type: string
     "tierTypeName": "",
-    // Type: <a href="../../docs/schemas/Destiny-TierType">Destiny.TierType</a>
+    // Type: <a href="../../docs/schemas/Destiny-TierType">TierType</a>
     "tierType": 0
 }
 </code></pre>

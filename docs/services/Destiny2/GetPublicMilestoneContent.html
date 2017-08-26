@@ -115,10 +115,10 @@
 <h3>Request</h3>
 <p>GET <a href="https://bungie.net/Platform/Destiny2/Milestones/{milestoneHash}/Content/">https://bungie.net/Platform/Destiny2/Milestones/{milestoneHash}/Content/</a></p>
 <h3>Response</h3>
-<p>Schema: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
+<p>Schema: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">DestinyMilestoneContent</a>
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
+    // Type: <a href="../../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">DestinyMilestoneContent</a>
     "Response": {
         // Type: string
         "about": "",
@@ -129,13 +129,13 @@ PlatformErrorCode: 200</p>
            // Type: string
             ""
         ],
-        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>[]
         "itemCategories": [
-           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>
+           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>
             {
                 // Type: string
                 "title": "",
-                // Type: integer:uint32[]
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32[]
                 "itemHashes": [
                    // Type: integer:uint32
                     0
@@ -143,7 +143,7 @@ PlatformErrorCode: 200</p>
             }
         ]
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

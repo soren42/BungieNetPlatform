@@ -105,32 +105,32 @@ on us providing that content in this definition.</p>
 <tbody>
 <tr>
 <td>nodes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">DestinyActivityGraphNodeDefinition</a>[]</td>
 <td>These represent the visual &quot;nodes&quot; on the map's view.  These are the activities you<br/>can click on in the map.</td>
 </tr>
 <tr>
 <td>artElements</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">Destiny.Definitions.Director.DestinyActivityGraphArtElementDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">DestinyActivityGraphArtElementDefinition</a>[]</td>
 <td>Represents one-off/special UI elements that appear on the map.</td>
 </tr>
 <tr>
 <td>connections</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">Destiny.Definitions.Director.DestinyActivityGraphConnectionDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">DestinyActivityGraphConnectionDefinition</a>[]</td>
 <td>Represents connections between graph nodes.  However, it lacks context that we'd need to make good use of it.</td>
 </tr>
 <tr>
 <td>displayObjectives</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">Destiny.Definitions.Director.DestinyActivityGraphDisplayObjectiveDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">DestinyActivityGraphDisplayObjectiveDefinition</a>[]</td>
 <td>Objectives can display on maps, and this is supposedly metadata for that.  I have not had the time to<br/>analyze the details of what is useful within however: we could be missing important data to make this work.<br/>Expect this property to be expanded on later if possible.</td>
 </tr>
 <tr>
 <td>displayProgressions</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">Destiny.Definitions.Director.DestinyActivityGraphDisplayProgressionDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">DestinyActivityGraphDisplayProgressionDefinition</a>[]</td>
 <td>Progressions can also display on maps, but similarly to displayObjectives we appear to lack some required<br/>information and context right now.  We will have to look into it later and add more data if possible.</td>
 </tr>
 <tr>
 <td>linkedGraphs</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">Destiny.Definitions.Director.DestinyLinkedGraphDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">DestinyLinkedGraphDefinition</a>[]</td>
 <td>Represents links between this Activity Graph and other ones.</td>
 </tr>
 <tr>
@@ -152,13 +152,13 @@ on us providing that content in this definition.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">DestinyActivityGraphNodeDefinition</a>[]
     "nodes": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">DestinyActivityGraphNodeDefinition</a>
         {
             // Type: integer:uint32
             "nodeId": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
             "overrideDisplay": {
                 // Type: string
                 "description": "",
@@ -169,7 +169,7 @@ on us providing that content in this definition.</p>
                 // Type: boolean
                 "hasIcon": false
             },
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">Destiny.Definitions.Common.DestinyPositionDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a>
             "position": {
                 // Type: integer:int32
                 "x": 0,
@@ -178,31 +178,31 @@ on us providing that content in this definition.</p>
                 // Type: integer:int32
                 "z": 0
             },
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeFeaturingStateDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>[]
             "featuringStates": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeFeaturingStateDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">Destiny.ActivityGraphNodeHighlightType</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a>
                     "highlightType": 0
                 }
             ],
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeActivityDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>[]
             "activities": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">Destiny.Definitions.Director.DestinyActivityGraphNodeActivityDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>
                 {
                     // Type: integer:uint32
                     "nodeActivityId": 0,
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
                     "activityHash": 0
                 }
             ]
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">Destiny.Definitions.Director.DestinyActivityGraphArtElementDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">DestinyActivityGraphArtElementDefinition</a>[]
     "artElements": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">Destiny.Definitions.Director.DestinyActivityGraphArtElementDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">DestinyActivityGraphArtElementDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">Destiny.Definitions.Common.DestinyPositionDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a>
             "position": {
                 // Type: integer:int32
                 "x": 0,
@@ -213,9 +213,9 @@ on us providing that content in this definition.</p>
             }
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">Destiny.Definitions.Director.DestinyActivityGraphConnectionDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">DestinyActivityGraphConnectionDefinition</a>[]
     "connections": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">Destiny.Definitions.Director.DestinyActivityGraphConnectionDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">DestinyActivityGraphConnectionDefinition</a>
         {
             // Type: integer:uint32
             "sourceNodeHash": 0,
@@ -223,19 +223,19 @@ on us providing that content in this definition.</p>
             "destNodeHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">Destiny.Definitions.Director.DestinyActivityGraphDisplayObjectiveDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">DestinyActivityGraphDisplayObjectiveDefinition</a>[]
     "displayObjectives": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">Destiny.Definitions.Director.DestinyActivityGraphDisplayObjectiveDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">DestinyActivityGraphDisplayObjectiveDefinition</a>
         {
             // Type: integer:uint32
             "id": 0,
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
             "objectiveHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">Destiny.Definitions.Director.DestinyActivityGraphDisplayProgressionDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">DestinyActivityGraphDisplayProgressionDefinition</a>[]
     "displayProgressions": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">Destiny.Definitions.Director.DestinyActivityGraphDisplayProgressionDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">DestinyActivityGraphDisplayProgressionDefinition</a>
         {
             // Type: integer:uint32
             "id": 0,
@@ -243,24 +243,24 @@ on us providing that content in this definition.</p>
             "progressionHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">Destiny.Definitions.Director.DestinyLinkedGraphDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">DestinyLinkedGraphDefinition</a>[]
     "linkedGraphs": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">Destiny.Definitions.Director.DestinyLinkedGraphDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">DestinyLinkedGraphDefinition</a>
         {
             // Type: string
             "description": "",
             // Type: string
             "name": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockExpressionDefinition">Destiny.Definitions.DestinyUnlockExpressionDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockExpressionDefinition">DestinyUnlockExpressionDefinition</a>
             "unlockExpression": {
-                // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>
+                // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>
                 "scope": 0
             },
             // Type: integer:uint32
             "linkedGraphId": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphEntryDefinition">Destiny.Definitions.Director.DestinyLinkedGraphEntryDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphEntryDefinition">DestinyLinkedGraphEntryDefinition</a>[]
             "linkedGraphs": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphEntryDefinition">Destiny.Definitions.Director.DestinyLinkedGraphEntryDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphEntryDefinition">DestinyLinkedGraphEntryDefinition</a>
                 {
                     // Type: integer:uint32
                     "activityGraphHash": 0

@@ -95,23 +95,23 @@
 <tbody>
 <tr>
 <td>data</td>
-<td><a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorComponent">Destiny.Entities.Vendors.DestinyVendorComponent</a></td>
+<td><a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorComponent">DestinyVendorComponent</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>privacy</td>
-<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a></td>
+<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorComponent">Destiny.Entities.Vendors.DestinyVendorComponent</a>
+    // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorComponent">DestinyVendorComponent</a>
     "data": {
-        // Type: integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32
         "vendorHash": 0,
-        // Type: <a href="../../docs/schemas/User-AckState">User.AckState</a>
+        // Type: <a href="../../docs/schemas/User-AckState">AckState</a>
         "ackState": {
             // Type: boolean
             "needsAck": false,
@@ -124,9 +124,9 @@
         "enabled": false,
         // Type: boolean
         "canPurchase": false,
-        // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>
+        // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
         "progression": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
             "progressionHash": 0,
             // Type: integer:int32
             "dailyProgress": 0,
@@ -150,7 +150,7 @@
             "nextLevelAt": 0
         }
     },
-    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
+    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
     "privacy": 0
 }
 </code></pre>

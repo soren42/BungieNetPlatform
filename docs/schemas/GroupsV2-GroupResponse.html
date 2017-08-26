@@ -95,12 +95,12 @@
 <tbody>
 <tr>
 <td>detail</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupV2">GroupsV2.GroupV2</a></td>
+<td><a href="../../docs/schemas/GroupsV2-GroupV2">GroupV2</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>founder</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a></td>
+<td><a href="../../docs/schemas/GroupsV2-GroupMember">GroupMember</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -110,12 +110,12 @@
 </tr>
 <tr>
 <td>parentGroup</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupV2">GroupsV2.GroupV2</a></td>
+<td><a href="../../docs/schemas/GroupsV2-GroupV2">GroupV2</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>allianceStatus</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupAllianceStatus">GroupsV2.GroupAllianceStatus</a></td>
+<td><a href="../../docs/schemas/GroupsV2-GroupAllianceStatus">GroupAllianceStatus</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -125,25 +125,25 @@
 </tr>
 <tr>
 <td>currentUserMemberMap</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupMember">GroupMember</a>&gt;</td>
 <td>This property will be populated if the authenticated user is a member of the group. Note that because of<br/>account linking, a user can sometimes be part of a clan more than once.  As such, this returns the<br/>highest member type available.</td>
 </tr>
 <tr>
 <td>currentUserPotentialMemberMap</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupPotentialMember">GroupsV2.GroupPotentialMember</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupPotentialMember">GroupPotentialMember</a>&gt;</td>
 <td>This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join.<br/>Note that because of account linking, a user can sometimes be part of a clan more than once.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupV2">GroupsV2.GroupV2</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupV2">GroupV2</a>
     "detail": {
         // Type: integer:int64
         "groupId": 0,
         // Type: string
         "name": "",
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupType">GroupsV2.GroupType</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupType">GroupType</a>
         "groupType": 0,
         // Type: integer:int64
         "membershipIdCreated": 0,
@@ -172,17 +172,17 @@
         "allowChat": false,
         // Type: boolean
         "isDefaultPostPublic": false,
-        // Type: <a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">GroupsV2.ChatSecuritySetting</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">ChatSecuritySetting</a>
         "chatSecurity": 0,
         // Type: string
         "locale": "",
         // Type: integer:int32
         "avatarImageIndex": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupsV2.GroupHomepage</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupHomepage</a>
         "homepage": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-MembershipOption">GroupsV2.MembershipOption</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-MembershipOption">MembershipOption</a>
         "membershipOption": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupsV2.GroupPostPublicity</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupPostPublicity</a>
         "defaultPublicity": 0,
         // Type: string
         "theme": "",
@@ -198,13 +198,13 @@
         "enableInvitationMessagingForAdmins": false,
         // Type: string:date-time:nullable
         "banExpireDate": "",
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupsV2.GroupFeatures</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupFeatures</a>
         "features": {
             // Type: integer:int32
             "maximumMembers": 0,
             // Type: integer:int32
             "maximumMembershipsOfGroupType": 0,
-            // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">Capabilities</a>
             "capabilities": 0,
             // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>[]
             "membershipTypes": [
@@ -215,19 +215,19 @@
             "invitePermissionOverride": false,
             // Type: boolean
             "updateCulturePermissionOverride": false,
-            // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">HostGuidedGamesPermissionLevel</a>
             "hostGuidedGamePermissionOverride": 0,
             // Type: boolean
             "updateBannerPermissionOverride": false,
-            // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
             "joinLevel": 0
         },
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupV2ClanInfoAndInvestment</a>
         "clanInfo": {
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
             "d2ClanProgressions": {
                 "0": {
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
                     "progressionHash": 0,
                     // Type: integer:int32
                     "dailyProgress": 0,
@@ -253,7 +253,7 @@
             },
             // Type: string
             "clanCallsign": "",
-            // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a>
             "clanBannerData": {
                 // Type: integer:uint32
                 "decalId": 0,
@@ -272,15 +272,15 @@
             }
         }
     },
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupMember">GroupMember</a>
     "founder": {
-        // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
         "memberType": 0,
         // Type: boolean
         "isOnline": false,
         // Type: integer:int64
         "groupId": 0,
-        // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+        // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
         "destinyUserInfo": {
             // Type: string
             "supplementalDisplayName": "",
@@ -293,7 +293,7 @@
             // Type: string
             "displayName": ""
         },
-        // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+        // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
         "bungieNetUserInfo": {
             // Type: string
             "supplementalDisplayName": "",
@@ -314,13 +314,13 @@
        // Type: integer:int64
         0
     ],
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupV2">GroupsV2.GroupV2</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupV2">GroupV2</a>
     "parentGroup": {
         // Type: integer:int64
         "groupId": 0,
         // Type: string
         "name": "",
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupType">GroupsV2.GroupType</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupType">GroupType</a>
         "groupType": 0,
         // Type: integer:int64
         "membershipIdCreated": 0,
@@ -349,17 +349,17 @@
         "allowChat": false,
         // Type: boolean
         "isDefaultPostPublic": false,
-        // Type: <a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">GroupsV2.ChatSecuritySetting</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">ChatSecuritySetting</a>
         "chatSecurity": 0,
         // Type: string
         "locale": "",
         // Type: integer:int32
         "avatarImageIndex": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupsV2.GroupHomepage</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupHomepage</a>
         "homepage": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-MembershipOption">GroupsV2.MembershipOption</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-MembershipOption">MembershipOption</a>
         "membershipOption": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupsV2.GroupPostPublicity</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupPostPublicity</a>
         "defaultPublicity": 0,
         // Type: string
         "theme": "",
@@ -375,13 +375,13 @@
         "enableInvitationMessagingForAdmins": false,
         // Type: string:date-time:nullable
         "banExpireDate": "",
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupsV2.GroupFeatures</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupFeatures</a>
         "features": {
             // Type: integer:int32
             "maximumMembers": 0,
             // Type: integer:int32
             "maximumMembershipsOfGroupType": 0,
-            // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">Capabilities</a>
             "capabilities": 0,
             // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>[]
             "membershipTypes": [
@@ -392,19 +392,19 @@
             "invitePermissionOverride": false,
             // Type: boolean
             "updateCulturePermissionOverride": false,
-            // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">HostGuidedGamesPermissionLevel</a>
             "hostGuidedGamePermissionOverride": 0,
             // Type: boolean
             "updateBannerPermissionOverride": false,
-            // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
             "joinLevel": 0
         },
-        // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupV2ClanInfoAndInvestment</a>
         "clanInfo": {
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
             "d2ClanProgressions": {
                 "0": {
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
                     "progressionHash": 0,
                     // Type: integer:int32
                     "dailyProgress": 0,
@@ -430,7 +430,7 @@
             },
             // Type: string
             "clanCallsign": "",
-            // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a>
             "clanBannerData": {
                 // Type: integer:uint32
                 "decalId": 0,
@@ -449,20 +449,20 @@
             }
         }
     },
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupAllianceStatus">GroupsV2.GroupAllianceStatus</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupAllianceStatus">GroupAllianceStatus</a>
     "allianceStatus": 0,
     // Type: integer:int32
     "groupJoinInviteCount": 0,
-    // Type: Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupMember">GroupMember</a>&gt;
     "currentUserMemberMap": {
         "0": {
-            // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>
             "memberType": 0,
             // Type: boolean
             "isOnline": false,
             // Type: integer:int64
             "groupId": 0,
-            // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+            // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
             "destinyUserInfo": {
                 // Type: string
                 "supplementalDisplayName": "",
@@ -475,7 +475,7 @@
                 // Type: string
                 "displayName": ""
             },
-            // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+            // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
             "bungieNetUserInfo": {
                 // Type: string
                 "supplementalDisplayName": "",
@@ -492,14 +492,14 @@
             "joinDate": ""
         }
     },
-    // Type: Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupPotentialMember">GroupsV2.GroupPotentialMember</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupPotentialMember">GroupPotentialMember</a>&gt;
     "currentUserPotentialMemberMap": {
         "0": {
-            // Type: <a href="../../docs/schemas/GroupsV2-GroupPotentialMemberStatus">GroupsV2.GroupPotentialMemberStatus</a>
+            // Type: <a href="../../docs/schemas/GroupsV2-GroupPotentialMemberStatus">GroupPotentialMemberStatus</a>
             "potentialStatus": 0,
             // Type: integer:int64
             "groupId": 0,
-            // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+            // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
             "destinyUserInfo": {
                 // Type: string
                 "supplementalDisplayName": "",
@@ -512,7 +512,7 @@
                 // Type: string
                 "displayName": ""
             },
-            // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+            // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
             "bungieNetUserInfo": {
                 // Type: string
                 "supplementalDisplayName": "",

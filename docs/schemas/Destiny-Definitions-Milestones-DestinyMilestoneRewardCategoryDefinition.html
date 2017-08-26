@@ -106,12 +106,12 @@
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>Hopefully this is obvious by now.</td>
 </tr>
 <tr>
 <td>rewardEntries</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">Destiny.Definitions.Milestones.DestinyMilestoneRewardEntryDefinition</a>&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">DestinyMilestoneRewardEntryDefinition</a>&gt;</td>
 <td>If this milestone can provide rewards, this will define the sets<br/>of rewards that can be earned, the conditions under which they can be acquired,<br/>internal data that we'll use at runtime to determine whether you've<br/>already earned or redeemed this set of rewards,<br/>and the category that this reward should be placed under.</td>
 </tr>
 <tr>
@@ -127,7 +127,7 @@
     "categoryHash": 0,
     // Type: string
     "categoryIdentifier": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -138,18 +138,18 @@
         // Type: boolean
         "hasIcon": false
     },
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">Destiny.Definitions.Milestones.DestinyMilestoneRewardEntryDefinition</a>&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">DestinyMilestoneRewardEntryDefinition</a>&gt;
     "rewardEntries": {
         "0": {
             // Type: integer:uint32
             "rewardEntryHash": 0,
             // Type: string
             "rewardEntryIdentifier": "",
-            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
             "items": [
-               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                 {
-                    // Type: integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -157,9 +157,9 @@
                     "quantity": 0
                 }
             ],
-            // Type: integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
             "vendorHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",

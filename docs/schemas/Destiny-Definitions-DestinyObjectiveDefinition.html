@@ -112,7 +112,7 @@ the task.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>Ideally, this should tell you what your task is.  I'm not going to lie to you though.  Sometimes<br/>this doesn't have useful information at all.  Which sucks, but there's nothing either of us can do<br/>about it.</td>
 </tr>
 <tr>
@@ -122,7 +122,7 @@ the task.</p>
 </tr>
 <tr>
 <td>locationHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:integer:uint32</td>
 <td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished,<br/>if there is a location defined.  Look up the DestinyLocationDefinition for this hash for that<br/>additional location info.</td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ the task.</p>
 </tr>
 <tr>
 <td>valueStyle</td>
-<td><a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">Destiny.DestinyUnlockValueUIStyle</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a></td>
 <td>The UI style applied to the objective.  It's an enum, take a look at DestinyUnlockValueUIStyle for details<br/>of the possible styles.  Use this info as you wish to customize your UI.</td>
 </tr>
 <tr>
@@ -152,12 +152,12 @@ the task.</p>
 </tr>
 <tr>
 <td>perks</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">Destiny.Definitions.DestinyObjectivePerkEntryDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a></td>
 <td>If this objective enables Perks intrinsically, the conditions for that enabling are defined here.</td>
 </tr>
 <tr>
 <td>stats</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">Destiny.Definitions.DestinyObjectiveStatEntryDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">DestinyObjectiveStatEntryDefinition</a></td>
 <td>If this objective enables modifications on a player's stats intrinsically, the conditions are defined here.</td>
 </tr>
 <tr>
@@ -179,7 +179,7 @@ the task.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -192,7 +192,7 @@ the task.</p>
     },
     // Type: integer:int32
     "completionValue": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:integer:uint32
     "locationHash": 0,
     // Type: boolean
     "allowNegativeValue": false,
@@ -200,27 +200,27 @@ the task.</p>
     "allowValueChangeWhenCompleted": false,
     // Type: boolean
     "isCountingDownward": false,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">Destiny.DestinyUnlockValueUIStyle</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a>
     "valueStyle": 0,
     // Type: string
     "progressDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">Destiny.Definitions.DestinyObjectivePerkEntryDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a>
     "perks": {
-        // Type: integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:integer:uint32
         "perkHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>
+        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>
         "style": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">Destiny.Definitions.DestinyObjectiveStatEntryDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">DestinyObjectiveStatEntryDefinition</a>
     "stats": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>
         "stat": {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
             "statTypeHash": 0,
             // Type: integer:int32
             "value": 0
         },
-        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>
+        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>
         "style": 0
     },
     // Type: integer:uint32

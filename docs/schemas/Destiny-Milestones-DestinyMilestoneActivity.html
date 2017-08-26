@@ -98,43 +98,43 @@ variants.  (sometimes there's only one variant, but I think you get the point)</
 <tbody>
 <tr>
 <td>activityHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The hash of an arbitrarily chosen variant of this activity.  We'll go ahead and<br/>call that the &quot;canonical&quot; activity, because if you're using this value you should<br/>only use it for properties that are common across the variants: things like the<br/>name of the activity, it's location, etc...<br/>Use this hash to look up the DestinyActivityDefinition of this activity for rendering data.</td>
 </tr>
 <tr>
 <td>modifierHashes</td>
-<td>integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
 <td>If the activity has modifiers, this will be the list of modifiers that all variants<br/>have in common.  Perform lookups against<br/>DestinyActivityModifierDefinition which defines the modifier being applied to get<br/>at the modifier data.<br/>Note that, in the DestiyActivityDefinition, you will see many more modifiers than this<br/>being referred to: those are all <em>possible</em> modifiers for the activity, not the active ones.<br/>Use only the active ones to match what's really live.</td>
 </tr>
 <tr>
 <td>variants</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]</td>
 <td>If you want more than just name/location/etc... you're going to have to dig into<br/>and show the variants of the conceptual activity.  These will differ in seemingly<br/>arbitrary ways, like difficulty level and modifiers applied.  Show it in whatever<br/>way tickles your fancy.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0,
-    // Type: integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]
     "modifierHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]
     "variants": [
-       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
             "completionStatus": {
                 // Type: boolean
                 "completed": false,
-                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
                 "phases": [
-                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
                     {
                         // Type: boolean
                         "complete": false

@@ -97,17 +97,17 @@ Combine with DestinyObjectiveDefinition static data for display purposes.</p>
 <tbody>
 <tr>
 <td>objectiveHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32</td>
 <td>The unique identifier of the Objective being referred to.  Use to look up the DestinyObjectiveDefinition in static data.</td>
 </tr>
 <tr>
 <td>destinationHash</td>
-<td>integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable</td>
 <td>If the Objective has a Destination associated with it, this is the unique identifier of the Destination being referred to.<br/>Use to look up the DestinyDestinationDefinition in static data.<br/>This will give localized data about <em>where</em> in the universe the objective should be achieved.</td>
 </tr>
 <tr>
 <td>activityHash</td>
-<td>integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable</td>
 <td>If the Objective has an Activity associated with it, this is the unique identifier of the Activity being referred to.<br/>Use to look up the DestinyActivityDefinition in static data.<br/>This will give localized data about <em>what</em> you should be playing for the objective to be achieved.</td>
 </tr>
 <tr>
@@ -124,11 +124,11 @@ Combine with DestinyObjectiveDefinition static data for display purposes.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
     "objectiveHash": 0,
-    // Type: integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
     "destinationHash": 0,
-    // Type: integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
     "activityHash": 0,
     // Type: integer:int32:nullable
     "progress": 0,

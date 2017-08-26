@@ -102,22 +102,22 @@ as well as activities that are available to the user.</p>
 </tr>
 <tr>
 <td>availableActivities</td>
-<td><a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyActivity">DestinyActivity</a>[]</td>
 <td>The list of activities that the user can play.</td>
 </tr>
 <tr>
 <td>currentActivityHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
 <td>If the user is in an activity, this will be the hash of the Activity being played.<br/>Note that you must combine this info with currentActivityModeHash to get a real picture of what<br/>the user is doing right now.  For instance, PVP &quot;Activities&quot; are just maps: it's the ActivityMode<br/>that determines what type of PVP game they're playing.</td>
 </tr>
 <tr>
 <td>currentActivityModeHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">DestinyActivityModeDefinition</a>:integer:uint32</td>
 <td>If the user is in an activity, this will be the hash of the activity mode being played.<br/>Combine with currentActivityHash to give a person a full picture of what they're doing right now.</td>
 </tr>
 <tr>
 <td>lastCompletedStoryHash</td>
-<td>integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
 <td>This will have the activity hash of the last completed story/campaign mission, in case you care about that.</td>
 </tr>
 </tbody>
@@ -126,11 +126,11 @@ as well as activities that are available to the user.</p>
 <pre><code class="javascript">{
     // Type: string:date-time
     "dateActivityStarted": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">DestinyActivity</a>[]
     "availableActivities": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">DestinyActivity</a>
         {
-            // Type: integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0,
             // Type: boolean
             "isNew": false,
@@ -146,15 +146,15 @@ as well as activities that are available to the user.</p>
             "displayLevel": 0,
             // Type: integer:int32:nullable
             "recommendedLight": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">Destiny.DestinyActivityDifficultyTier</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">DestinyActivityDifficultyTier</a>
             "difficultyTier": 0
         }
     ],
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
     "currentActivityHash": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">DestinyActivityModeDefinition</a>:integer:uint32
     "currentActivityModeHash": 0,
-    // Type: integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
     "lastCompletedStoryHash": 0
 }
 </code></pre>

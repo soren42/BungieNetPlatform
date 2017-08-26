@@ -97,22 +97,22 @@ Titan, Warlock, and Hunter.</p>
 <tbody>
 <tr>
 <td>classType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a></td>
 <td>In Destiny 1, we added a convenience Enumeration for referring to classes.  We've kept it,<br/>though mostly for posterity.  This is the enum value for this definition's class.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>genderedClassNames</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>,string&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>,string&gt;</td>
 <td>A localized string referring to the singular form of the Class's name when referred to in gendered form.<br/>Keyed by the DestinyGender.</td>
 </tr>
 <tr>
 <td>mentorVendorHash</td>
-<td>integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable</td>
 <td>If the Class has a Mentor (all classes <em>should</em>), this will be the hash identifier for that Vendor if you care.</td>
 </tr>
 <tr>
@@ -134,9 +134,9 @@ Titan, Warlock, and Hunter.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>
     "classType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -147,11 +147,11 @@ Titan, Warlock, and Hunter.</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>,string&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>,string&gt;
     "genderedClassNames": {
         "0": ""
     },
-    // Type: integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
     "mentorVendorHash": 0,
     // Type: integer:uint32
     "hash": 0,
