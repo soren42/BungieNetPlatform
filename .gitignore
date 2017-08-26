@@ -5,3 +5,5 @@ wiki-builder/cache
 wiki-wikia.php
 endpoints-changes.json
 enums-changes.json
+wiki-builder-v2/cache
+.gitignore
