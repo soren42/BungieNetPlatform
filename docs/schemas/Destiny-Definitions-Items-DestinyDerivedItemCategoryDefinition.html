@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Items DestinyDerivedItemCategoryDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -89,6 +89,7 @@ to be used to show what items you can get as a result of acquiring or using this
 This &quot;Preview Vendor&quot; is not a vendor you can actually see in the game, but it defines categories and sale items for all of the possible
 items you could get from the Box so that the game can show them to you.  We summarize that info here
 so that you don't have to do that Vendor lookup and aggregation manually.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -109,7 +110,7 @@ so that you don't have to do that Vendor lookup and aggregation manually.</p>
 </tr>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>[]</td>
 <td>This is the list of all of the items for this category and the basic properties we'll<br/>know about them.</td>
 </tr>
 </tbody>
@@ -118,9 +119,9 @@ so that you don't have to do that Vendor lookup and aggregation manually.</p>
 <pre><code class="javascript">{
     // Type: string
     "categoryDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>[]
     "items": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>
         {
             // Type: integer:uint32:nullable
             "itemHash": 0,

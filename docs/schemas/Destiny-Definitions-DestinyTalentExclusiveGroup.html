@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyTalentExclusiveGroup | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyTalentExclusiveGroup | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,
 within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes
 (nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -103,7 +104,7 @@ within the group, many nodes can be activated.  But the act of activating any no
 </tr>
 <tr>
 <td>loreHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable</td>
 <td>If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.</td>
 </tr>
 <tr>
@@ -127,7 +128,7 @@ within the group, many nodes can be activated.  But the act of activating any no
 <pre><code class="javascript">{
     // Type: integer:uint32
     "groupHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable
     "loreHash": 0,
     // Type: integer:uint32[]
     "nodeHashes": [

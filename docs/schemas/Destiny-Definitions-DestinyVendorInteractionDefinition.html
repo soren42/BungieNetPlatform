@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyVendorInteractionDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyVendorInteractionDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>A Vendor Interaction is a dialog shown by the vendor other than sale items or transfer screens.
 The vendor is showing you something, and asking you to reply to it by choosing an option or reward.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -97,7 +98,7 @@ The vendor is showing you something, and asking you to reply to it by choosing a
 <tbody>
 <tr>
 <td>replies</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]</td>
 <td>The potential replies that the user can make to the interaction.</td>
 </tr>
 <tr>
@@ -107,12 +108,12 @@ The vendor is showing you something, and asking you to reply to it by choosing a
 </tr>
 <tr>
 <td>questlineItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>If this interaction dialog is about a quest, this is the questline related to the interaction.<br/>You can use this to show the quest overview, or even the character's status with the quest if<br/>you use it to find the character's current Quest Step by checking their inventory against this questlineItemHash's<br/>DestinyInventoryItemDefinition.setData.</td>
 </tr>
 <tr>
 <td>sackInteractionList</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]</td>
 <td>If this interaction is meant to show you sacks, this is the list of types of sacks to be shown.<br/>If empty, the interaction is not meant to show sacks.</td>
 </tr>
 <tr>
@@ -142,7 +143,7 @@ The vendor is showing you something, and asking you to reply to it by choosing a
 </tr>
 <tr>
 <td>headerDisplayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>The header for the interaction dialog.</td>
 </tr>
 <tr>
@@ -154,25 +155,25 @@ The vendor is showing you something, and asking you to reply to it by choosing a
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]
     "replies": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-DestinyVendorInteractionRewardSelection">DestinyVendorInteractionRewardSelection</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyVendorInteractionRewardSelection">Destiny.DestinyVendorInteractionRewardSelection</a>
             "itemRewardsSelection": 0,
             // Type: string
             "reply": "",
-            // Type: <a href="../../docs/schemas/Destiny-DestinyVendorReplyType">DestinyVendorReplyType</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyVendorReplyType">Destiny.DestinyVendorReplyType</a>
             "replyType": 0
         }
     ],
     // Type: integer:int32
     "vendorCategoryIndex": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "questlineItemHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]
     "sackInteractionList": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>
         {
             // Type: integer:uint32
             "sackType": 0
@@ -188,7 +189,7 @@ The vendor is showing you something, and asking you to reply to it by choosing a
     "flavorLineOne": "",
     // Type: string
     "flavorLineTwo": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "headerDisplayProperties": {
         // Type: string
         "description": "",

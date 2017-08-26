@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Milestones DestinyMilestoneActivityVariantDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Milestones.DestinyMilestoneActivityVariantDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>Represents a variant on an activity for a Milestone: a specific difficulty tier, or a specific activity variant for example.</p>
 <p>These will often have more specific details, such as an associated Guided Game, progression steps, tier-specific rewards,
 and custom values.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,7 +99,7 @@ and custom values.</p>
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The hash to use for looking up the variant Activity's definition (DestinyActivityDefinition),<br/>where you can find its distinguishing characteristics such as difficulty level and recommended<br/>light level.  <br/><br/>Frequently, that will be the only distinguishing characteristics in practice, which<br/>is somewhat of a bummer.</td>
 </tr>
 <tr>
@@ -110,7 +111,7 @@ and custom values.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0,
     // Type: integer:int32
     "order": 0

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyInventoryBucketDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyInventoryBucketDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -91,6 +91,7 @@ bucket.</p>
 <p>You cannot transfer an item to a bucket that is not its Default without going through a Vendor's &quot;accepted items&quot;
 (DestinyVendorDefinition.acceptedItems).  This is how transfer functionality like the Vault is implemented, as a
 feature of a Vendor.  See the vendor's acceptedItems property for more details.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -106,17 +107,17 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>scope</td>
-<td><a href="../../docs/schemas/Destiny-BucketScope">BucketScope</a></td>
+<td><a href="../../docs/schemas/Destiny-BucketScope">Destiny.BucketScope</a></td>
 <td>Where the bucket is found.  0 = Character, 1 = Account</td>
 </tr>
 <tr>
 <td>category</td>
-<td><a href="../../docs/schemas/Destiny-BucketCategory">BucketCategory</a></td>
+<td><a href="../../docs/schemas/Destiny-BucketCategory">Destiny.BucketCategory</a></td>
 <td>An enum value for what items can be found in the bucket.  See the BucketCategory enum<br/>for more details.</td>
 </tr>
 <tr>
@@ -131,7 +132,7 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
 </tr>
 <tr>
 <td>location</td>
-<td><a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a></td>
+<td><a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a></td>
 <td>Sometimes, inventory buckets represent conceptual &quot;locations&quot; in the game that might not be expected.<br/>This value indicates the conceptual location of the bucket, regardless of where it is actually<br/>contained on the character/account.  <br/><br/>See ItemLocation for details.  <br/><br/>Note that location includes the Vault and the Postmaster (both of whom being just inventory buckets with <br/>additional actions that can be performed on them through a Vendor)</td>
 </tr>
 <tr>
@@ -168,7 +169,7 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -179,15 +180,15 @@ feature of a Vendor.  See the vendor's acceptedItems property for more details.<
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-BucketScope">BucketScope</a>
+    // Type: <a href="../../docs/schemas/Destiny-BucketScope">Destiny.BucketScope</a>
     "scope": 0,
-    // Type: <a href="../../docs/schemas/Destiny-BucketCategory">BucketCategory</a>
+    // Type: <a href="../../docs/schemas/Destiny-BucketCategory">Destiny.BucketCategory</a>
     "category": 0,
     // Type: integer:int32
     "bucketOrder": 0,
     // Type: integer:int32
     "itemCount": 0,
-    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>
+    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
     "location": 0,
     // Type: boolean
     "hasTransferDestination": false,

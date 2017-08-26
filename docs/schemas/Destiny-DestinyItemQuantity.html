@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny DestinyItemQuantity | schemas | BungieNetPlatform</title>
+	<title>Destiny.DestinyItemQuantity | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>Used in a number of Destiny contracts to return data about an item stack and its quantity.
 Can optionally return an itemInstanceId if the item is instanced - in which case, the quantity returned
 will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,7 +99,7 @@ will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
 <tbody>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the item in question.  Use it to look up the item's DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
@@ -115,7 +116,7 @@ will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "itemHash": 0,
     // Type: integer:int64:nullable
     "itemInstanceId": 0,

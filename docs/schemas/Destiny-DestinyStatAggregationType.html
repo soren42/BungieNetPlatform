@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny DestinyStatAggregationType | schemas | BungieNetPlatform</title>
+	<title>Destiny.DestinyStatAggregationType | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -87,10 +87,12 @@ the level and formula used for aggregation.</p>
 on the DestinyInventoryItemDefinition across the character's equipped items.  See both of
 those definitions for details.</li>
 <li>Character = don't aggregate: the stat should be located and used directly on the character.</li>
-<li>
-<p>Item = don't aggregate: the stat should be located and used directly on the item.</p>
-</li>
-<li><strong>Type:</strong> integer:int32</li>
+<li>Item = don't aggregate: the stat should be located and used directly on the item.</li>
+</ul>
+<h2>Schema</h2>
+<ul>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
 <table class="table table-bordered parameters">
@@ -98,20 +100,24 @@ those definitions for details.</li>
 <tr>
 <th>Identifier</th>
 <th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>CharacterAverage</td>
 <td>0</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Character</td>
 <td>1</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Item</td>
 <td>2</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>

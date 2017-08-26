@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyItemActionBlockDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyItemActionBlockDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined here
 if you care.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -127,12 +128,12 @@ if you care.</p>
 </tr>
 <tr>
 <td>requiredItems</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>[]</td>
 <td>If the action requires other items to exist or be destroyed, this is<br/>the list of those items and requirements.</td>
 </tr>
 <tr>
 <td>progressionRewards</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>[]</td>
 <td>If performing this action earns you Progression, this is the list of progressions and values granted<br/>for those progressions by performing this action.</td>
 </tr>
 <tr>
@@ -181,23 +182,23 @@ if you care.</p>
     "overlayIcon": "",
     // Type: integer:int32
     "requiredCooldownSeconds": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>[]
     "requiredItems": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>
         {
             // Type: integer:int32
             "count": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: boolean
             "deleteOnAction": false
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>[]
     "progressionRewards": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">Destiny.Definitions.DestinyProgressionMappingDefinition</a>:integer:uint32
             "progressionMappingHash": 0,
             // Type: integer:int32
             "amount": 0,

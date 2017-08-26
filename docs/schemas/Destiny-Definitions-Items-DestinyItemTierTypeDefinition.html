@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Items DestinyItemTierTypeDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Items.DestinyItemTierTypeDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>Defines the tier type of an item.  Mostly this provides human readable properties for types
 like Common, Rare, etc...</p>
 <p>It also provides some base data for infusion that could be useful.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,12 +99,12 @@ like Common, Rare, etc...</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>infusionProcess</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">DestinyItemTierTypeInfusionBlock</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">Destiny.Definitions.Items.DestinyItemTierTypeInfusionBlock</a></td>
 <td>If this tier defines infusion properties, they will be contained here.</td>
 </tr>
 <tr>
@@ -125,7 +126,7 @@ like Common, Rare, etc...</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -136,7 +137,7 @@ like Common, Rare, etc...</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">DestinyItemTierTypeInfusionBlock</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">Destiny.Definitions.Items.DestinyItemTierTypeInfusionBlock</a>
     "infusionProcess": {
         // Type: number:float
         "baseQualityTransferRatio": 0,

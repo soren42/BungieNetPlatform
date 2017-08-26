@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Milestones DestinyPublicMilestoneActivity | schemas | BungieNetPlatform</title>
+	<title>Destiny.Milestones.DestinyPublicMilestoneActivity | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ activities could have a variety of variants, modes, tiers, what-have-you.
 Our attempts to determine what qualifies as a conceptual activity are, unfortunately, janky.  So if
 you see missing modes or modes that don't seem appropriate to you, let us know and I'll buy you a beer
 if we ever meet up in person.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,33 +101,33 @@ if we ever meet up in person.</p>
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the activity that's been chosen to be considered the canonical <br/>&quot;conceptual&quot; activity definition.  This may have many variants, defined herein.</td>
 </tr>
 <tr>
 <td>modifierHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
 <td>The activity may have 0-to-many modifiers: if it does, this will contain the hashes<br/>to the DestinyActivityModifierDefinition that defines the modifier being applied.</td>
 </tr>
 <tr>
 <td>variants</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]</td>
 <td>Every relevant variation of this conceptual activity, including the conceptual activity itself,<br/>have variants defined here.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
     "modifierHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
     "variants": [
-       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>
+       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
         {
             // Type: integer:uint32
             "activityHash": 0

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Milestones DestinyMilestoneQuestDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Milestones.DestinyMilestoneQuestDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone.
 Even just typing this description, I already regret it.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -97,12 +98,12 @@ Even just typing this description, I already regret it.</p>
 <tbody>
 <tr>
 <td>questItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The item representing this Milestone quest.  Use this hash to look up the DestinyInventoryItemDefinition<br/>for the quest to find its steps and human readable data.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>The individual quests may have different definitions from the overall milestone: if there's a specific active<br/>quest, use these displayProperties instead of that of the overall DestinyMilestoneDefinition.</td>
 </tr>
 <tr>
@@ -112,21 +113,21 @@ Even just typing this description, I already regret it.</p>
 </tr>
 <tr>
 <td>questRewards</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a></td>
 <td>The rewards you will get for completing this quest, as best as we could extract them from<br/>our data.  Sometimes, it'll be a decent amount of data.  Sometimes, it's going to be sucky.  Sorry.</td>
 </tr>
 <tr>
 <td>activities</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;</td>
 <td>The full set of all possible &quot;conceptual activities&quot; that are related to this Milestone.<br/>Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities.<br/>Keyed by the Conceptual Activity Hash.  Use the key to look up DestinyActivityDefinition.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "questItemHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -139,17 +140,17 @@ Even just typing this description, I already regret it.</p>
     },
     // Type: string
     "overrideImage": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition</a>
     "questRewards": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]
         "items": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>
+           // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable
                 "vendorHash": 0,
                 // Type: integer:int32:nullable
                 "vendorItemIndex": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                 "itemHash": 0,
                 // Type: integer:int64:nullable
                 "itemInstanceId": 0,
@@ -158,15 +159,15 @@ Even just typing this description, I already regret it.</p>
             }
         ]
     },
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityDefinition</a>&gt;
     "activities": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
             "conceptualActivityHash": 0,
-            // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>&gt;
+            // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">Destiny.Definitions.Milestones.DestinyMilestoneActivityVariantDefinition</a>&gt;
             "variants": {
                 "0": {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                     "activityHash": 0,
                     // Type: integer:int32
                     "order": 0

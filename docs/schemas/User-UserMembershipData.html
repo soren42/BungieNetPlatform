@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>User UserMembershipData | schemas | BungieNetPlatform</title>
+	<title>User.UserMembershipData | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/User-UserMembershipData/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -95,21 +96,21 @@
 <tbody>
 <tr>
 <td>destinyMemberships</td>
-<td><a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>[]</td>
+<td><a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>[]</td>
 <td>this allows you to see destiny memberships that are visible and linked to this account <br/>(regardless of whether or not they have characters on the world server)</td>
 </tr>
 <tr>
 <td>bungieNetUser</td>
-<td><a href="../../docs/responses/User-GeneralUser">GeneralUser</a></td>
+<td><a href="../../docs/schemas/User-GeneralUser">User.GeneralUser</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>[]
+    // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>[]
     "destinyMemberships": [
-       // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
+       // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
         {
             // Type: string
             "supplementalDisplayName": "",
@@ -123,7 +124,7 @@
             "displayName": ""
         }
     ],
-    // Type: <a href="../../docs/responses/User-GeneralUser">GeneralUser</a>
+    // Type: <a href="../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
     "bungieNetUser": {
         // Type: integer:int64
         "membershipId": 0,
@@ -151,15 +152,15 @@
         "lastUpdate": "",
         // Type: integer:int64:nullable
         "legacyPortalUID": 0,
-        // Type: <a href="../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
+        // Type: <a href="../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
         "context": {
             // Type: boolean
             "isFollowing": false,
-            // Type: <a href="../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
+            // Type: <a href="../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
             "ignoreStatus": {
                 // Type: boolean
                 "isIgnored": false,
-                // Type: <a href="../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>
+                // Type: <a href="../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
                 "ignoreFlags": 0
             },
             // Type: string:date-time:nullable

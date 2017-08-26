@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyObjectiveDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyObjectiveDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -97,6 +97,7 @@
 <p>Objectives have progress, a notion of having been Completed, human readable data describing the task
 to be accomplished, and a lot of optional tack-on data that can enhance the information provided about
 the task.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -112,7 +113,7 @@ the task.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>Ideally, this should tell you what your task is.  I'm not going to lie to you though.  Sometimes<br/>this doesn't have useful information at all.  Which sucks, but there's nothing either of us can do<br/>about it.</td>
 </tr>
 <tr>
@@ -122,7 +123,7 @@ the task.</p>
 </tr>
 <tr>
 <td>locationHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">Destiny.Definitions.DestinyLocationDefinition</a>:integer:uint32</td>
 <td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished,<br/>if there is a location defined.  Look up the DestinyLocationDefinition for this hash for that<br/>additional location info.</td>
 </tr>
 <tr>
@@ -142,7 +143,7 @@ the task.</p>
 </tr>
 <tr>
 <td>valueStyle</td>
-<td><a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">Destiny.DestinyUnlockValueUIStyle</a></td>
 <td>The UI style applied to the objective.  It's an enum, take a look at DestinyUnlockValueUIStyle for details<br/>of the possible styles.  Use this info as you wish to customize your UI.</td>
 </tr>
 <tr>
@@ -152,12 +153,12 @@ the task.</p>
 </tr>
 <tr>
 <td>perks</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">Destiny.Definitions.DestinyObjectivePerkEntryDefinition</a></td>
 <td>If this objective enables Perks intrinsically, the conditions for that enabling are defined here.</td>
 </tr>
 <tr>
 <td>stats</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">DestinyObjectiveStatEntryDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">Destiny.Definitions.DestinyObjectiveStatEntryDefinition</a></td>
 <td>If this objective enables modifications on a player's stats intrinsically, the conditions are defined here.</td>
 </tr>
 <tr>
@@ -179,7 +180,7 @@ the task.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -192,7 +193,7 @@ the task.</p>
     },
     // Type: integer:int32
     "completionValue": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">Destiny.Definitions.DestinyLocationDefinition</a>:integer:uint32
     "locationHash": 0,
     // Type: boolean
     "allowNegativeValue": false,
@@ -200,27 +201,27 @@ the task.</p>
     "allowValueChangeWhenCompleted": false,
     // Type: boolean
     "isCountingDownward": false,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">Destiny.DestinyUnlockValueUIStyle</a>
     "valueStyle": 0,
     // Type: string
     "progressDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">Destiny.Definitions.DestinyObjectivePerkEntryDefinition</a>
     "perks": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
         "perkHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>
+        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>
         "style": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">DestinyObjectiveStatEntryDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">Destiny.Definitions.DestinyObjectiveStatEntryDefinition</a>
     "stats": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a>
         "stat": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statTypeHash": 0,
             // Type: integer:int32
             "value": 0
         },
-        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>
+        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>
         "style": 0
     },
     // Type: integer:uint32

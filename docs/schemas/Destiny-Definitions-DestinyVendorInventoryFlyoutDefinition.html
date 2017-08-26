@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyVendorInventoryFlyoutDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>The definition for an &quot;inventory flyout&quot;: a UI screen where we show you
 part of an otherwise hidden vendor inventory: like the Vault inventory buckets.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -102,12 +103,12 @@ part of an otherwise hidden vendor inventory: like the Vault inventory buckets.<
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>The title and other common properties of the flyout.</td>
 </tr>
 <tr>
 <td>buckets</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>[]</td>
 <td>A list of inventory buckets and other metadata to show on the screen.</td>
 </tr>
 <tr>
@@ -126,7 +127,7 @@ part of an otherwise hidden vendor inventory: like the Vault inventory buckets.<
 <pre><code class="javascript">{
     // Type: string
     "lockedDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -137,15 +138,15 @@ part of an otherwise hidden vendor inventory: like the Vault inventory buckets.<
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>[]
     "buckets": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>
         {
             // Type: boolean
             "collapsible": false,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
             "inventoryBucketHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyItemSortType">DestinyItemSortType</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemSortType">Destiny.DestinyItemSortType</a>
             "sortItemsBy": 0
         }
     ],

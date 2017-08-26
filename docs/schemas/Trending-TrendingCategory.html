@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Trending TrendingCategory | schemas | BungieNetPlatform</title>
+	<title>Trending.TrendingCategory | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Trending-TrendingCategory/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,7 +101,7 @@
 </tr>
 <tr>
 <td>entries</td>
-<td><a href="../../docs/responses/SearchResult-Trending-TrendingEntry-">TrendingEntry&gt;</a></td>
+<td><a href="../../docs/schemas/SearchResult-Trending-TrendingEntry-">SearchResult&lt;Trending.TrendingEntry&gt;</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -114,11 +115,11 @@
 <pre><code class="javascript">{
     // Type: string
     "categoryName": "",
-    // Type: <a href="../../docs/responses/SearchResult-Trending-TrendingEntry-">TrendingEntry&gt;</a>
+    // Type: <a href="../../docs/schemas/SearchResult-Trending-TrendingEntry-">SearchResult&lt;Trending.TrendingEntry&gt;</a>
     "entries": {
-        // Type: <a href="../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>[]
+        // Type: <a href="../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>[]
         "results": [
-           // Type: <a href="../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>
+           // Type: <a href="../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>
             {
                 // Type: number:double
                 "weight": 0,
@@ -126,7 +127,7 @@
                 "isFeatured": false,
                 // Type: string
                 "identifier": "",
-                // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>
+                // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>
                 "entityType": 0,
                 // Type: string
                 "displayName": "",
@@ -152,7 +153,7 @@
         "totalResults": 0,
         // Type: boolean
         "hasMore": false,
-        // Type: <a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
+        // Type: <a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
         "query": {
             // Type: integer:int32
             "itemsPerPage": 0,

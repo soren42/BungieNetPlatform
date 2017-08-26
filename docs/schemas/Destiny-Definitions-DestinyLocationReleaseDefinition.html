@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyLocationReleaseDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyLocationReleaseDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time for
 a given Location.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -97,7 +98,7 @@ a given Location.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>Sadly, these don't appear to be populated anymore (ever?)</td>
 </tr>
 <tr>
@@ -107,12 +108,12 @@ a given Location.</p>
 </tr>
 <tr>
 <td>destinationHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32</td>
 <td>The Destination being pointed to by this location.</td>
 </tr>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The Activity being pointed to by this location.</td>
 </tr>
 <tr>
@@ -142,7 +143,7 @@ a given Location.</p>
 </tr>
 <tr>
 <td>navPointType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">DestinyActivityNavPointType</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">Destiny.DestinyActivityNavPointType</a></td>
 <td>The type of Nav Point that this represents.  See the enumeration for more info.</td>
 </tr>
 <tr>
@@ -154,7 +155,7 @@ a given Location.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -167,9 +168,9 @@ a given Location.</p>
     },
     // Type: integer:uint32
     "spawnPoint": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32
     "destinationHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0,
     // Type: integer:uint32
     "activityGraphHash": 0,
@@ -181,7 +182,7 @@ a given Location.</p>
     "activityPathBundle": 0,
     // Type: integer:uint32
     "activityPathDestination": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">DestinyActivityNavPointType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">Destiny.DestinyActivityNavPointType</a>
     "navPointType": 0,
     // Type: integer:int32[]
     "worldPosition": [

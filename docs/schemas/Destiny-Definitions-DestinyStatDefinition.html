@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyStatDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyStatDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -112,6 +112,7 @@ are applied to the Investment Stat value.  For most stats, this is what is displ
 scripts based on the game and character's state.  This is the final transformation that BNet does not have
 access to.  For most stats, this is not actually displayed to the user, with the exception of Magazine Size
 which is then piped back to the UI for display in-game, but not to BNet.)</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -127,12 +128,12 @@ which is then piped back to the UI for display in-game, but not to BNet.)</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>aggregationType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyStatAggregationType">DestinyStatAggregationType</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyStatAggregationType">Destiny.DestinyStatAggregationType</a></td>
 <td>Stats can exist on a character or an item, and they may potentially be aggregated in different<br/>ways.  The DestinyStatAggregationType enum value indicates the way that this stat is being<br/>aggregated.</td>
 </tr>
 <tr>
@@ -159,7 +160,7 @@ which is then piped back to the UI for display in-game, but not to BNet.)</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -170,7 +171,7 @@ which is then piped back to the UI for display in-game, but not to BNet.)</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-DestinyStatAggregationType">DestinyStatAggregationType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyStatAggregationType">Destiny.DestinyStatAggregationType</a>
     "aggregationType": 0,
     // Type: boolean
     "hasComputedBlock": false,

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Director DestinyActivityGraphNodeActivityDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Director.DestinyActivityGraphNodeActivityDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -86,6 +86,7 @@ given time.  The list of Node Activities will be traversed, and the first one fo
 will be displayed.  This way, a node can layer multiple variants of an activity on top of each other.
 For instance, one node can control the weekly Crucible Playlist.  There are multiple possible playlists,
 but only one is active for the week.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -106,7 +107,7 @@ but only one is active for the week.</p>
 </tr>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The activity that will be activated if the user clicks on this node.  Controls all activity-related<br/>information displayed on the node if it is active (the text shown in the tooltip etc)</td>
 </tr>
 </tbody>
@@ -115,7 +116,7 @@ but only one is active for the week.</p>
 <pre><code class="javascript">{
     // Type: integer:uint32
     "nodeActivityId": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0
 }
 </code></pre>

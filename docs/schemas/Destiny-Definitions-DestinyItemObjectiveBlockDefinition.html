@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyItemObjectiveBlockDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyItemObjectiveBlockDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -84,6 +84,7 @@
 &quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest.</p>
 <p>Quest steps have 1:M objectives that we end up processing and returning in live data as DestinyQuestStatus
 data, and other useful information.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -99,12 +100,12 @@ data, and other useful information.</p>
 <tbody>
 <tr>
 <td>objectiveHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]</td>
 <td>The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in the<br/>order that they should be rendered.</td>
 </tr>
 <tr>
 <td>displayActivityHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32[]</td>
 <td>For every entry in objectiveHashes, there is a corresponding entry in this array<br/>at the same index.  If the objective is meant to be associated with a specific DestinyActivityDefinition,<br/>there will be a valid hash at that index.  Otherwise, it will be invalid (0).</td>
 </tr>
 <tr>
@@ -114,7 +115,7 @@ data, and other useful information.</p>
 </tr>
 <tr>
 <td>questlineItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash for the DestinyInventoryItemDefinition representing the Quest to which this Quest Step belongs.</td>
 </tr>
 <tr>
@@ -141,19 +142,19 @@ data, and other useful information.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]
     "objectiveHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32[]
     "displayActivityHashes": [
        // Type: integer:uint32
         0
     ],
     // Type: boolean
     "requireFullObjectiveCompletion": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "questlineItemHash": 0,
     // Type: string
     "narrative": "",

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Progression DestinyFactionProgression | schemas | BungieNetPlatform</title>
+	<title>Destiny.Progression.DestinyFactionProgression | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>Mostly for historical purposes, we segregate Faction progressions from other progressions.
 This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinition
 of the faction related to the progression.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,12 +99,12 @@ of the faction related to the progression.</p>
 <tbody>
 <tr>
 <td>factionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinition<br/>for more rendering info.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.</td>
 </tr>
 <tr>
@@ -160,9 +161,9 @@ of the faction related to the progression.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32
     "factionHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
     "progressionHash": 0,
     // Type: integer:int32
     "dailyProgress": 0,

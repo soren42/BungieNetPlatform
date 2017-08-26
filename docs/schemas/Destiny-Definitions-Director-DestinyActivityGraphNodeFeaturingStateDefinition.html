@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Director DestinyActivityGraphNodeFeaturingStateDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Director.DestinyActivityGraphNodeFeaturingStateDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>Nodes can have different visual states.  This object represents a single visual state (&quot;highlight type&quot;)
 that a node can be in, and the unlock expression condition to determine whether it should be set.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -97,14 +98,14 @@ that a node can be in, and the unlock expression condition to determine whether 
 <tbody>
 <tr>
 <td>highlightType</td>
-<td><a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a></td>
+<td><a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">Destiny.ActivityGraphNodeHighlightType</a></td>
 <td>The node can be highlighted in a variety of ways - the game iterates through these and finds<br/>the first FeaturingState that is valid at the present moment given the Game, Account, and Character<br/>state, and renders the node in that state.  See the ActivityGraphNodeHighlightType enum for possible<br/>values.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a>
+    // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">Destiny.ActivityGraphNodeHighlightType</a>
     "highlightType": 0
 }
 </code></pre>

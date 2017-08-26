@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Entities Characters DestinyCharacterComponent | schemas | BungieNetPlatform</title>
+	<title>Destiny.Entities.Characters.DestinyCharacterComponent | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>This component contains base properties of the character.  You'll probably want to always request this component,
 but hey you do you.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -137,32 +138,32 @@ but hey you do you.</p>
 </tr>
 <tr>
 <td>raceHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyRaceDefinition">DestinyRaceDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyRaceDefinition">Destiny.Definitions.DestinyRaceDefinition</a>:integer:uint32</td>
 <td>Use this hash to look up the character's DestinyRaceDefinition.</td>
 </tr>
 <tr>
 <td>genderHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyGenderDefinition">DestinyGenderDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyGenderDefinition">Destiny.Definitions.DestinyGenderDefinition</a>:integer:uint32</td>
 <td>Use this hash to look up the character's DestinyGenderDefinition.</td>
 </tr>
 <tr>
 <td>classHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">DestinyClassDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">Destiny.Definitions.DestinyClassDefinition</a>:integer:uint32</td>
 <td>Use this hash to look up the character's DestinyClassDefinition.</td>
 </tr>
 <tr>
 <td>raceType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a></td>
 <td>Mostly for historical purposes at this point, this is an enumeration for the character's race.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this<br/>was too convenient to remove.</td>
 </tr>
 <tr>
 <td>classType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a></td>
 <td>Mostly for historical purposes at this point, this is an enumeration for the character's class.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this<br/>was too convenient to remove.</td>
 </tr>
 <tr>
 <td>genderType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a></td>
 <td>Mostly for historical purposes at this point, this is an enumeration for the character's Gender.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this<br/>was too convenient to remove.  And yeah, it's an enumeration and not a boolean.  Fight me.</td>
 </tr>
 <tr>
@@ -177,12 +178,12 @@ but hey you do you.</p>
 </tr>
 <tr>
 <td>emblemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash of the currently equipped emblem for the user.  Can be used to look up the DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
 <td>levelProgression</td>
-<td><a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a></td>
 <td>The progression that indicates your character's level.  Not their light level, but their<br/>character level: you know, the thing you max out a couple hours in and then ignore for<br/>the sake of light level.</td>
 </tr>
 <tr>
@@ -217,27 +218,27 @@ but hey you do you.</p>
     "stats": {
         "0": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRaceDefinition">DestinyRaceDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRaceDefinition">Destiny.Definitions.DestinyRaceDefinition</a>:integer:uint32
     "raceHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyGenderDefinition">DestinyGenderDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyGenderDefinition">Destiny.Definitions.DestinyGenderDefinition</a>:integer:uint32
     "genderHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">DestinyClassDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">Destiny.Definitions.DestinyClassDefinition</a>:integer:uint32
     "classHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a>
     "raceType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>
     "classType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>
     "genderType": 0,
     // Type: string
     "emblemPath": "",
     // Type: string
     "emblemBackgroundPath": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "emblemHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>
     "levelProgression": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
         "progressionHash": 0,
         // Type: integer:int32
         "dailyProgress": 0,

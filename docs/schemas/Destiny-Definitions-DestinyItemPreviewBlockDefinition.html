@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyItemPreviewBlockDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyItemPreviewBlockDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>Items like Sacks or Boxes can have items that it shows in-game when you view details
 that represent the items you can obtain if you use or acquire the item.</p>
 <p>This defines those categories, and gives some insights into that data's source.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,7 +99,7 @@ that represent the items you can obtain if you use or acquire the item.</p>
 <tbody>
 <tr>
 <td>previewVendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32</td>
 <td>If the preview data is derived from a fake &quot;Preview&quot; Vendor, this will<br/>be the hash identifier for the DestinyVendorDefinition of that fake vendor.</td>
 </tr>
 <tr>
@@ -108,26 +109,26 @@ that represent the items you can obtain if you use or acquire the item.</p>
 </tr>
 <tr>
 <td>derivedItemCategories</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition</a>[]</td>
 <td>This is a list of the items being previewed, categorized in the same way as they are<br/>in the preview UI.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
     "previewVendorHash": 0,
     // Type: string
     "previewActionString": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition</a>[]
     "derivedItemCategories": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition</a>
         {
             // Type: string
             "categoryDescription": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>[]
             "items": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>
                 {
                     // Type: integer:uint32:nullable
                     "itemHash": 0,

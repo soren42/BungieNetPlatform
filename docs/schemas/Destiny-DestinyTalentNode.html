@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny DestinyTalentNode | schemas | BungieNetPlatform</title>
+	<title>Destiny.DestinyTalentNode | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -96,6 +96,7 @@ carefully.
 those hashes are not guaranteed to be immutable across content versions.  This is a source of great exasperation for me,
 but as a result anyone using Talent Grid data must ensure that the content version of their static content
 matches that of the server responses before showing or making decisions based on talent grid data.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -121,7 +122,7 @@ matches that of the server responses before showing or making decisions based on
 </tr>
 <tr>
 <td>state</td>
-<td><a href="../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyTalentNodeState">Destiny.DestinyTalentNodeState</a></td>
 <td>An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why not<br/>if neither can be performed.</td>
 </tr>
 <tr>
@@ -136,7 +137,7 @@ matches that of the server responses before showing or making decisions based on
 </tr>
 <tr>
 <td>materialsToUpgrade</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>[]</td>
 <td>If the node has material requirements to be activated, this is the list of those requirements.</td>
 </tr>
 <tr>
@@ -156,7 +157,7 @@ matches that of the server responses before showing or making decisions based on
 </tr>
 <tr>
 <td>nodeStatsBlock</td>
-<td><a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">Destiny.DestinyTalentNodeStatBlock</a></td>
 <td>This property has some history.  A talent grid can provide stats on both the item it's related to and<br/>the character equipping the item.  This returns data about those stat bonuses.</td>
 </tr>
 </tbody>
@@ -167,17 +168,17 @@ matches that of the server responses before showing or making decisions based on
     "nodeIndex": 0,
     // Type: integer:uint32
     "nodeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">Destiny.DestinyTalentNodeState</a>
     "state": 0,
     // Type: boolean
     "isActivated": false,
     // Type: integer:int32
     "stepIndex": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>[]
     "materialsToUpgrade": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: boolean
             "deleteOnAction": false,
@@ -193,13 +194,13 @@ matches that of the server responses before showing or making decisions based on
     "progressPercent": 0,
     // Type: boolean
     "hidden": false,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">Destiny.DestinyTalentNodeStatBlock</a>
     "nodeStatsBlock": {
-        // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
         "currentStepStats": [
-           // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+           // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                 "statHash": 0,
                 // Type: integer:int32
                 "value": 0,
@@ -207,11 +208,11 @@ matches that of the server responses before showing or making decisions based on
                 "maximumValue": 0
             }
         ],
-        // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
         "nextStepStats": [
-           // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+           // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                 "statHash": 0,
                 // Type: integer:int32
                 "value": 0,

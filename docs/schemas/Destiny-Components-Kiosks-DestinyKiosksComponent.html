@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Components Kiosks DestinyKiosksComponent | schemas | BungieNetPlatform</title>
+	<title>Destiny.Components.Kiosks.DestinyKiosksComponent | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -88,6 +88,7 @@ If you ever have those, you will find them on the individual character's Destiny
 <p>Note that, because this component returns vendorItemIndexes (that is to say, indexes into the Kiosk Vendor's
 itemList property), these results are necessarily content version dependent.  Make sure that you have
 the latest version of the content manifest databases before using this data.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -103,17 +104,17 @@ the latest version of the content manifest databases before using this data.</p>
 <tbody>
 <tr>
 <td>kioskItems</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;</td>
 <td>A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinition<br/>for the relevant kiosk vendor), and whose value is a list of all the items that the user can &quot;see&quot; in<br/>the Kiosk, and any other interesting metadata.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;
     "kioskItems": {
         "0": [
-           // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>
+           // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>
             {
                 // Type: integer:int32
                 "index": 0,

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyEquippingBlockDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyEquippingBlockDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>Items that can be equipped define this block.  It contains information we need to
 understand how and when the item can be equipped.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -97,7 +98,7 @@ understand how and when the item can be equipped.</p>
 <tbody>
 <tr>
 <td>gearsetItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable</td>
 <td>If the item is part of a gearset, this is a reference to that gearset item.</td>
 </tr>
 <tr>
@@ -112,12 +113,12 @@ understand how and when the item can be equipped.</p>
 </tr>
 <tr>
 <td>equipmentSlotTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">Destiny.Definitions.DestinyEquipmentSlotDefinition</a>:integer:uint32</td>
 <td>An equipped item <em>must</em> be equipped in an Equipment Slot.  This is the hash identifier<br/>of the DestinyEquipmentSlotDefinition into which it must be equipped.</td>
 </tr>
 <tr>
 <td>attributes</td>
-<td><a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a></td>
+<td><a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">Destiny.EquippingItemBlockAttributes</a></td>
 <td>These are custom attributes on the equippability of the item.<br/><br/>For now, this can only be &quot;equip on acquire&quot;, which would mean that the item<br/>will be automatically equipped as soon as you pick it up.</td>
 </tr>
 <tr>
@@ -129,15 +130,15 @@ understand how and when the item can be equipped.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
     "gearsetItemHash": 0,
     // Type: string
     "uniqueLabel": "",
     // Type: integer:uint32
     "uniqueLabelHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">Destiny.Definitions.DestinyEquipmentSlotDefinition</a>:integer:uint32
     "equipmentSlotTypeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a>
+    // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">Destiny.EquippingItemBlockAttributes</a>
     "attributes": 0,
     // Type: string[]
     "displayStrings": [

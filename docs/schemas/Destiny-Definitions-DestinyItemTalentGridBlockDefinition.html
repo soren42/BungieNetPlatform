@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyItemTalentGridBlockDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyItemTalentGridBlockDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ Items mostly have negligible talent grid data these days, but instanced items st
 grids as a source for some of this common information.</p>
 <p>Builds/Subclasses are the only items left that still have talent grids with meaningful
 Nodes.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,7 +101,7 @@ Nodes.</p>
 <tbody>
 <tr>
 <td>talentGridHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">DestinyTalentGridDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the DestinyTalentGridDefinition attached to this item.</td>
 </tr>
 <tr>
@@ -115,7 +116,7 @@ Nodes.</p>
 </tr>
 <tr>
 <td>hudDamageType</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a></td>
+<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a></td>
 <td>If the talent grid implies a damage type, this is the enum value for that damage type.</td>
 </tr>
 <tr>
@@ -127,13 +128,13 @@ Nodes.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">DestinyTalentGridDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32
     "talentGridHash": 0,
     // Type: string
     "itemDetailString": "",
     // Type: string
     "buildName": "",
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
     "hudDamageType": 0,
     // Type: string
     "hudIcon": ""

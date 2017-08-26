@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyDestinationDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyDestinationDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ is the relationship between it, Activities, Locations, and Places?</p>
 <p>A &quot;Destination&quot; is a specific region/city/area of a larger &quot;Place&quot;.
 For instance, a Place might be Earth where a Destination might be Bellevue, Washington.
 (Please, pick a more interesting destination if you come to visit Earth).</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,32 +101,32 @@ For instance, a Place might be Earth where a Destination might be Bellevue, Wash
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>placeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">DestinyPlaceDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32</td>
 <td>The place that &quot;owns&quot; this Destination.  Use this hash to look up the DestinyPlaceDefinition.</td>
 </tr>
 <tr>
 <td>defaultFreeroamActivityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>If this Destination has a default Free-Roam activity, this is the hash for that Activity.<br/>Use it to look up the DestinyActivityDefintion.</td>
 </tr>
 <tr>
 <td>activityGraphEntries</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">Destiny.Definitions.DestinyActivityGraphListEntryDefinition</a>[]</td>
 <td>If the Destination has default Activity Graphs (i.e. &quot;Map&quot;) that should be shown<br/>in the director, this is the list of those Graphs.  At most, only one should be active<br/>at any given time for a Destination: these would represent, for example, different<br/>variants on a Map if the Destination is changing on a macro level based on game state.</td>
 </tr>
 <tr>
 <td>bubbleSettings</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">DestinyDestinationBubbleSettingDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">Destiny.Definitions.DestinyDestinationBubbleSettingDefinition</a>[]</td>
 <td>A Destination may have many &quot;Bubbles&quot; zones with human readable properties.<br/><br/>We don't get as much info as I'd like about them - I'd love to return info like <br/>where on the map they are located - but at least this gives you the name of those bubbles.<br/>bubbleSettings and bubbles both have the identical number of entries, and you should<br/>match up their indexes to provide matching bubble and bubbleSettings data.</td>
 </tr>
 <tr>
 <td>bubbles</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">DestinyBubbleDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">Destiny.Definitions.DestinyBubbleDefinition</a>[]</td>
 <td>This provides the unique identifiers for every bubble in the destination<br/>(only guaranteed unique within the destination), and any intrinsic properties of the bubble.<br/><br/>bubbleSettings and bubbles both have the identical number of entries, and you should<br/>match up their indexes to provide matching bubble and bubbleSettings data.</td>
 </tr>
 <tr>
@@ -147,7 +148,7 @@ For instance, a Place might be Earth where a Destination might be Bellevue, Wash
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -158,23 +159,23 @@ For instance, a Place might be Earth where a Destination might be Bellevue, Wash
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">DestinyPlaceDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32
     "placeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "defaultFreeroamActivityHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">Destiny.Definitions.DestinyActivityGraphListEntryDefinition</a>[]
     "activityGraphEntries": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">Destiny.Definitions.DestinyActivityGraphListEntryDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">DestinyActivityGraphDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">Destiny.Definitions.Director.DestinyActivityGraphDefinition</a>:integer:uint32
             "activityGraphHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">DestinyDestinationBubbleSettingDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">Destiny.Definitions.DestinyDestinationBubbleSettingDefinition</a>[]
     "bubbleSettings": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">DestinyDestinationBubbleSettingDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">Destiny.Definitions.DestinyDestinationBubbleSettingDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -187,9 +188,9 @@ For instance, a Place might be Earth where a Destination might be Bellevue, Wash
             }
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">DestinyBubbleDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">Destiny.Definitions.DestinyBubbleDefinition</a>[]
     "bubbles": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">DestinyBubbleDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">Destiny.Definitions.DestinyBubbleDefinition</a>
         {
             // Type: integer:uint32
             "hash": 0

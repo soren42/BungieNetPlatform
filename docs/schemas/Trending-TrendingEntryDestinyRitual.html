@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Trending TrendingEntryDestinyRitual | schemas | BungieNetPlatform</title>
+	<title>Trending.TrendingEntryDestinyRitual | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Trending-TrendingEntryDestinyRitual/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -125,12 +126,12 @@
 </tr>
 <tr>
 <td>milestoneDetails</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">DestinyPublicMilestone</a></td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">Destiny.Milestones.DestinyPublicMilestone</a></td>
 <td>A destiny event does not necessarily have a related Milestone, but if it does the details<br/>will be returned here.</td>
 </tr>
 <tr>
 <td>eventContent</td>
-<td><a href="../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">DestinyMilestoneContent</a></td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a></td>
 <td>A destiny event will not necessarily have milestone &quot;custom content&quot;, but if it does<br/>the details will be here.</td>
 </tr>
 </tbody>
@@ -149,41 +150,41 @@
     "dateStart": "",
     // Type: string:date-time:nullable
     "dateEnd": "",
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">DestinyPublicMilestone</a>
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">Destiny.Milestones.DestinyPublicMilestone</a>
     "milestoneDetails": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
         "milestoneHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">DestinyPublicMilestoneQuest</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>[]
         "availableQuests": [
-           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">DestinyPublicMilestoneQuest</a>
+           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
                 "questItemHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">DestinyPublicMilestoneActivity</a>
+                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
                 "activity": {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                     "activityHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
                     "modifierHashes": [
                        // Type: integer:uint32
                         0
                     ],
-                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
                     "variants": [
-                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
                         {
                             // Type: integer:uint32
                             "activityHash": 0
                         }
                     ]
                 },
-                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]
                 "challenges": [
-                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
                         "objectiveHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
                         "activityHash": 0
                     }
                 ]
@@ -199,7 +200,7 @@
         // Type: string:date-time:nullable
         "endDate": ""
     },
-    // Type: <a href="../../docs/responses/Destiny-Milestones-DestinyMilestoneContent">DestinyMilestoneContent</a>
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
     "eventContent": {
         // Type: string
         "about": "",
@@ -210,13 +211,13 @@
            // Type: string
             ""
         ],
-        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>[]
         "itemCategories": [
-           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>
+           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>
             {
                 // Type: string
                 "title": "",
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32[]
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
                 "itemHashes": [
                    // Type: integer:uint32
                     0

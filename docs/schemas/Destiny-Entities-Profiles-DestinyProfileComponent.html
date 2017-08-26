@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Entities Profiles DestinyProfileComponent | schemas | BungieNetPlatform</title>
+	<title>Destiny.Entities.Profiles.DestinyProfileComponent | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -81,6 +81,7 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Profiles-DestinyProfileComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>The most essential summary information about a Profile (in Destiny 1, we called these &quot;Accounts&quot;).</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -96,7 +97,7 @@
 <tbody>
 <tr>
 <td>userInfo</td>
-<td><a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a></td>
+<td><a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a></td>
 <td>If you need to render the Profile (their platform name, icon, etc...) somewhere, this property contains<br/>that information.</td>
 </tr>
 <tr>
@@ -106,7 +107,7 @@
 </tr>
 <tr>
 <td>versionsOwned</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGameVersions">DestinyGameVersions</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyGameVersions">Destiny.DestinyGameVersions</a></td>
 <td>If you want to know what expansions they own, this will contain that data.</td>
 </tr>
 <tr>
@@ -118,7 +119,7 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
+    // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
     "userInfo": {
         // Type: string
         "supplementalDisplayName": "",
@@ -133,7 +134,7 @@
     },
     // Type: string:date-time
     "dateLastPlayed": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGameVersions">DestinyGameVersions</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGameVersions">Destiny.DestinyGameVersions</a>
     "versionsOwned": 0,
     // Type: integer:int64[]
     "characterIds": [

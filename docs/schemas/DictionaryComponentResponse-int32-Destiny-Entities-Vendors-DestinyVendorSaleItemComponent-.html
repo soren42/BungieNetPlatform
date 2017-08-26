@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>DictionaryComponentResponse int32 Destiny Entities Vendors DestinyVendorSaleItemComponent  | schemas | BungieNetPlatform</title>
+	<title>DictionaryComponentResponse&lt;int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent&gt; | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,14 +18,14 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Vendors-DestinyVendorSaleItemComponent-.html | DictionaryComponentResponse<int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent> -->
+<!-- docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Vendors-DestinyVendorSaleItemComponent-.html | DictionaryComponentResponse&lt;int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent&gt; -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -65,7 +65,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>DictionaryComponentResponse<int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent></h1>
+		<h1>DictionaryComponentResponse&lt;int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent&gt;</h1>
 		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
 
 		<!--<section id="downloads">
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/DictionaryComponentResponse-int32-Destiny-Entities-Vendors-DestinyVendorSaleItemComponent-/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -95,32 +96,32 @@
 <tbody>
 <tr>
 <td>data</td>
-<td>Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">DestinyVendorSaleItemComponent</a>&gt;</td>
+<td>Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">Destiny.Entities.Vendors.DestinyVendorSaleItemComponent</a>&gt;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>privacy</td>
-<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a></td>
+<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">DestinyVendorSaleItemComponent</a>&gt;
+    // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">Destiny.Entities.Vendors.DestinyVendorSaleItemComponent</a>&gt;
     "data": {
         "0": {
             // Type: integer:int32
             "vendorItemIndex": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">VendorItemStatus</a>
+            // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">Destiny.VendorItemStatus</a>
             "saleStatus": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
             "costs": [
-               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -128,16 +129,16 @@
                     "quantity": 0
                 }
             ],
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]
             "requiredUnlocks": [
                // Type: integer:uint32
                 0
             ],
-            // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>[]
             "unlockStatuses": [
-               // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>
+               // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32
                     "unlockHash": 0,
                     // Type: boolean
                     "isSet": false
@@ -150,7 +151,7 @@
             ]
         }
     },
-    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
     "privacy": 0
 }
 </code></pre>

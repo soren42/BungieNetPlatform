@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyProgressionStepDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyProgressionStepDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinition
 for caveats).</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -102,7 +103,7 @@ for caveats).</p>
 </tr>
 <tr>
 <td>displayEffectType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">DestinyProgressionStepDisplayEffect</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">Destiny.DestinyProgressionStepDisplayEffect</a></td>
 <td>This appears to be, when you &quot;level up&quot;, whether a visual effect will display and on what entity.<br/>See DestinyProgressionStepDisplayEffect for slightly more info.</td>
 </tr>
 <tr>
@@ -112,7 +113,7 @@ for caveats).</p>
 </tr>
 <tr>
 <td>rewardItems</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
 <td>A listing of items rewarded as a result of reaching this level.</td>
 </tr>
 </tbody>
@@ -121,15 +122,15 @@ for caveats).</p>
 <pre><code class="javascript">{
     // Type: string
     "stepName": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">DestinyProgressionStepDisplayEffect</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">Destiny.DestinyProgressionStepDisplayEffect</a>
     "displayEffectType": 0,
     // Type: integer:int32
     "progressTotal": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
     "rewardItems": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

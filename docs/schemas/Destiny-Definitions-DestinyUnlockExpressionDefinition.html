@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyUnlockExpressionDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyUnlockExpressionDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ mechanics and investment-related restrictions.  They can test Unlock Flags and U
 for certain states, using a sufficient amount of logical operators such that
 unlock expressions are effectively Turing complete.</p>
 <p>Use UnlockExpressionParser to evaluate expressions using an IUnlockContext parsed from Babel.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,14 +101,14 @@ unlock expressions are effectively Turing complete.</p>
 <tbody>
 <tr>
 <td>scope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a></td>
 <td>A shortcut for determining the most restrictive gating that this expression performs.<br/>See the DestinyGatingScope enum's documentation for more details.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>
     "scope": 0
 }
 </code></pre>

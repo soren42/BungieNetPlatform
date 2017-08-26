@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>SearchResult Community CommunityLiveStatus  | schemas | BungieNetPlatform</title>
+	<title>SearchResult&lt;Community.CommunityLiveStatus&gt; | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,14 +18,14 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- docs/schemas/SearchResult-Community-CommunityLiveStatus-.html | SearchResult<Community.CommunityLiveStatus> -->
+<!-- docs/schemas/SearchResult-Community-CommunityLiveStatus-.html | SearchResult&lt;Community.CommunityLiveStatus&gt; -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -65,7 +65,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>SearchResult<Community.CommunityLiveStatus></h1>
+		<h1>SearchResult&lt;Community.CommunityLiveStatus&gt;</h1>
 		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
 
 		<!--<section id="downloads">
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/SearchResult-Community-CommunityLiveStatus-/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -95,7 +96,7 @@
 <tbody>
 <tr>
 <td>results</td>
-<td><a href="../../docs/responses/Community-CommunityLiveStatus">CommunityLiveStatus</a>[]</td>
+<td><a href="../../docs/schemas/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>[]</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -110,7 +111,7 @@
 </tr>
 <tr>
 <td>query</td>
-<td><a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a></td>
+<td><a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -127,9 +128,9 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/responses/Community-CommunityLiveStatus">CommunityLiveStatus</a>[]
+    // Type: <a href="../../docs/schemas/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>[]
     "results": [
-       // Type: <a href="../../docs/responses/Community-CommunityLiveStatus">CommunityLiveStatus</a>
+       // Type: <a href="../../docs/schemas/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>
         {
             // Type: string:date-time
             "dateStatusUpdated": "",
@@ -137,7 +138,7 @@
             "url": "",
             // Type: string
             "partnershipIdentifier": "",
-            // Type: <a href="../../docs/schemas/Partnerships-PartnershipType">PartnershipType</a>
+            // Type: <a href="../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>
             "partnershipType": 0,
             // Type: string
             "thumbnail": "",
@@ -147,7 +148,7 @@
             "thumbnailLarge": "",
             // Type: integer:int64
             "destinyCharacterId": 0,
-            // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
+            // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
             "userInfo": {
                 // Type: string
                 "supplementalDisplayName": "",
@@ -192,7 +193,7 @@
     "totalResults": 0,
     // Type: boolean
     "hasMore": false,
-    // Type: <a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
+    // Type: <a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
     "query": {
         // Type: integer:int32
         "itemsPerPage": 0,

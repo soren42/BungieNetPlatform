@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyMaterialRequirement | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyMaterialRequirement | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,14 +83,15 @@
 <p>Many actions relating to items require you to expend materials:</p>
 <ul>
 <li>Activating a talent node</li>
-<li>
-<p>Inserting a plug into a socket
+<li>Inserting a plug into a socket
 The items will refer to material requirements by a materialRequirementsHash in these cases, and this
 is the definition for those requirements in terms of the item required, how much of it is required and other
 interesting info.
 This is one of the rare/strange times where a single contract class is used both in definitions <em>and</em>
-in live data response contracts.  I'm not sure yet whether I regret that.</p>
-</li>
+in live data response contracts.  I'm not sure yet whether I regret that.</li>
+</ul>
+<h2>Schema</h2>
+<ul>
 <li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
@@ -105,7 +106,7 @@ in live data response contracts.  I'm not sure yet whether I regret that.</p>
 <tbody>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the material required.  Use it to look up the material's DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
@@ -127,7 +128,7 @@ in live data response contracts.  I'm not sure yet whether I regret that.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "itemHash": 0,
     // Type: boolean
     "deleteOnAction": false,

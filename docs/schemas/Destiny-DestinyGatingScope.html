@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny DestinyGatingScope | schemas | BungieNetPlatform</title>
+	<title>Destiny.DestinyGatingScope | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -95,8 +95,10 @@ For instance, if some great person decided that an unlock value should be global
 character-specific data in a way that BNet doesn't know about.  Because of the open-ended potential for this to occur, many unlock checks
 for &quot;globally&quot; scoped unlock data may be assumed as the worst case unless it has been specifically whitelisted as otherwise.  That sucks, but
 them's the breaks.</p>
+<h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> integer:int32</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
 <table class="table table-bordered parameters">
@@ -104,36 +106,44 @@ them's the breaks.</p>
 <tr>
 <th>Identifier</th>
 <th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>None</td>
 <td>0</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Global</td>
 <td>1</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Clan</td>
 <td>2</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Profile</td>
 <td>3</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Character</td>
 <td>4</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Item</td>
 <td>5</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>AssumedWorstCase</td>
 <td>6</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>

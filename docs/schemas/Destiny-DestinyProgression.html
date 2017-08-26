@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny DestinyProgression | schemas | BungieNetPlatform</title>
+	<title>Destiny.DestinyProgression | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ A progression is a value that can increase with activity and has levels.
 Think Character Level and Reputation Levels.
 Combine this &quot;live&quot; data with the related DestinyProgressionDefinition for a full picture
 of the Progression.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,7 +101,7 @@ of the Progression.</p>
 <tbody>
 <tr>
 <td>progressionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.</td>
 </tr>
 <tr>
@@ -157,7 +158,7 @@ of the Progression.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
     "progressionHash": 0,
     // Type: integer:int32
     "dailyProgress": 0,

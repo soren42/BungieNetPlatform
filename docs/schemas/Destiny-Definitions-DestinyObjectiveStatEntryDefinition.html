@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyObjectiveStatEntryDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyObjectiveStatEntryDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -82,6 +82,7 @@
 <h2>Info</h2>
 <p>Defines the conditions under which stat modifications will be applied to a Character while
 participating in an objective.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -97,26 +98,26 @@ participating in an objective.</p>
 <tbody>
 <tr>
 <td>stat</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a></td>
 <td>The stat being modified, and the value used.</td>
 </tr>
 <tr>
 <td>style</td>
-<td><a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a></td>
 <td>Whether it will be applied as long as the objective is active, when it's completed, or until it's completed.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a>
     "stat": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
         "statTypeHash": 0,
         // Type: integer:int32
         "value": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>
     "style": 0
 }
 </code></pre>

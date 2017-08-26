@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Entities Items DestinyItemStatsComponent | schemas | BungieNetPlatform</title>
+	<title>Destiny.Entities.Items.DestinyItemStatsComponent | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@
 <p>Note that some stats have additional computation in-game at runtime - for instance,
 Magazine Size - and thus these stats might not be 100% accurate compared to what you see
 in-game for some stats.  I know, it sucks.  I hate it too.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,17 +101,17 @@ in-game for some stats.  I know, it sucks.  I hate it too.</p>
 <tbody>
 <tr>
 <td>stats</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>&gt;</td>
 <td>If the item has stats that it provides (damage, defense, etc...), it will be given here.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>&gt;
     "stats": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,

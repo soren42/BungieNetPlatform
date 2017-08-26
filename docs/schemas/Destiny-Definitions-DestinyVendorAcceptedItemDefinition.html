@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyVendorAcceptedItemDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyVendorAcceptedItemDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -86,6 +86,7 @@ When you transfer items in the Vault, the game is using the Vault Vendor's Desti
 to see where the appropriate destination bucket is for the source bucket from whence your item is moving.
 If it finds such an entry, it transfers the item to the other bucket.</p>
 <p>The mechanics for Postmaster works similarly, which is also a vendor.  All driven by Accepted Items.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -101,21 +102,21 @@ If it finds such an entry, it transfers the item to the other bucket.</p>
 <tbody>
 <tr>
 <td>acceptedInventoryBucketHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32</td>
 <td>The &quot;source&quot; bucket for a transfer.  When a user wants to transfer an item, the appropriate DestinyVendorDefinition's<br/>acceptedItems property is evaluated, looking for an entry where acceptedInventoryBucketHash matches<br/>the bucket that the item being transferred is currently located.  If it exists, the item will be<br/>transferred into whatever bucket is defined by destinationInventoryBucketHash.</td>
 </tr>
 <tr>
 <td>destinationInventoryBucketHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32</td>
 <td>This is the bucket where the item being transferred will be put, given that it was being<br/>transferred <em>from</em> the bucket defined in acceptedInventoryBucketHash.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
     "acceptedInventoryBucketHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
     "destinationInventoryBucketHash": 0
 }
 </code></pre>

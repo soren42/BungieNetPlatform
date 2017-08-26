@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>GroupsV2 RuntimeGroupMemberType | schemas | BungieNetPlatform</title>
+	<title>GroupsV2.RuntimeGroupMemberType | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,8 +83,10 @@
 <p>The member levels used by all V2 Groups API.  Individual group types use their own mappings in their
 native storage (general uses BnetDbGroupMemberType and D2 clans use ClanMemberLevel), but they are all translated
 to this in the runtime api.  These runtime values should NEVER be stored anywhere, so the values can be changed as necessary.</p>
+<h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> integer:int32</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
 <table class="table table-bordered parameters">
@@ -92,32 +94,39 @@ to this in the runtime api.  These runtime values should NEVER be stored anywher
 <tr>
 <th>Identifier</th>
 <th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>None</td>
 <td>0</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Beginner</td>
 <td>1</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Member</td>
 <td>2</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Admin</td>
 <td>3</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>ActingFounder</td>
 <td>4</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>Founder</td>
 <td>5</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>

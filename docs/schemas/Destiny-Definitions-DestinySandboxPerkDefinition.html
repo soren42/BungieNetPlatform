@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinySandboxPerkDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinySandboxPerkDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -97,6 +97,7 @@ that by pulling that data from places that uniquely refer to these perks: namely
 and Plugs.  That only gives us a subset of perks that are human readable, but those perks are
 the ones people generally care about anyways.  The others are left as a mystery, their true
 purpose mostly unknown and undocumented.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -112,7 +113,7 @@ purpose mostly unknown and undocumented.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>These display properties are by no means guaranteed to be populated.  Usually when it is,<br/>it's only because we back-filled them with the displayProperties of some Talent Node or<br/>Plug item that happened to be uniquely providing that perk.</td>
 </tr>
 <tr>
@@ -127,7 +128,7 @@ purpose mostly unknown and undocumented.</p>
 </tr>
 <tr>
 <td>damageType</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a></td>
+<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a></td>
 <td>If this perk grants a damage type to a weapon, the damage type will be defined here.<br/><br/>Unless you have a compelling reason to use this enum value, use the damageTypeHash instead<br/>to look up the actual DestinyDamageTypeDefinition.</td>
 </tr>
 <tr>
@@ -137,7 +138,7 @@ purpose mostly unknown and undocumented.</p>
 </tr>
 <tr>
 <td>perkGroups</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">DestinyTalentNodeStepGroups</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">Destiny.Definitions.DestinyTalentNodeStepGroups</a></td>
 <td>An old holdover from the original Armory, this was an attempt to group perks by functionality.<br/><br/>It is as yet unpopulated, and there will be quite a bit of work needed to restore it to its former<br/>working order.</td>
 </tr>
 <tr>
@@ -159,7 +160,7 @@ purpose mostly unknown and undocumented.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -174,21 +175,21 @@ purpose mostly unknown and undocumented.</p>
     "perkIdentifier": "",
     // Type: boolean
     "isDisplayable": false,
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
     "damageType": 0,
     // Type: integer:uint32:nullable
     "damageTypeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">DestinyTalentNodeStepGroups</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">Destiny.Definitions.DestinyTalentNodeStepGroups</a>
     "perkGroups": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">DestinyTalentNodeStepWeaponPerformances</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">Destiny.Definitions.DestinyTalentNodeStepWeaponPerformances</a>
         "weaponPerformance": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">DestinyTalentNodeStepImpactEffects</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">Destiny.Definitions.DestinyTalentNodeStepImpactEffects</a>
         "impactEffects": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">DestinyTalentNodeStepGuardianAttributes</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">Destiny.Definitions.DestinyTalentNodeStepGuardianAttributes</a>
         "guardianAttributes": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">DestinyTalentNodeStepLightAbilities</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">Destiny.Definitions.DestinyTalentNodeStepLightAbilities</a>
         "lightAbilities": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">DestinyTalentNodeStepDamageTypes</a>
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">Destiny.Definitions.DestinyTalentNodeStepDamageTypes</a>
         "damageTypes": 0
     },
     // Type: integer:uint32

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Entities Items DestinyItemTalentGridComponent | schemas | BungieNetPlatform</title>
+	<title>Destiny.Entities.Items.DestinyItemTalentGridComponent | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -95,6 +95,7 @@ is coming from the current Step of that node).</p>
 each other).</p>
 <p>See DestinyTalentGridDefinition for more information.  Brace yourself, the water's cold
 out there in the deep end.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -110,12 +111,12 @@ out there in the deep end.</p>
 <tbody>
 <tr>
 <td>talentGridHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">DestinyTalentGridDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32</td>
 <td>Most items don't have useful talent grids anymore, but Builds in particular still do.<br/><br/>You can use this hash to lookup the DestinyTalentGridDefinition attached to this item,<br/>which will be crucial for understanding the node values on the item.</td>
 </tr>
 <tr>
 <td>nodes</td>
-<td><a href="../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyTalentNode">Destiny.DestinyTalentNode</a>[]</td>
 <td>Detailed information about the individual nodes in the talent grid.<br/><br/>A node represents a single visual &quot;pip&quot; in the talent grid or Build detail view,<br/>though each node may have multiple &quot;steps&quot; which indicate the actual bonuses<br/>and visual representation of that node.</td>
 </tr>
 <tr>
@@ -125,34 +126,34 @@ out there in the deep end.</p>
 </tr>
 <tr>
 <td>gridProgression</td>
-<td><a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a></td>
 <td>If the item has a progression, it will be detailed here.  A progression<br/>means that the item can gain experience.  Thresholds of experience are what determines<br/>whether and when a talent node can be activated.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">DestinyTalentGridDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32
     "talentGridHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">Destiny.DestinyTalentNode</a>[]
     "nodes": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">Destiny.DestinyTalentNode</a>
         {
             // Type: integer:int32
             "nodeIndex": 0,
             // Type: integer:uint32
             "nodeHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">Destiny.DestinyTalentNodeState</a>
             "state": 0,
             // Type: boolean
             "isActivated": false,
             // Type: integer:int32
             "stepIndex": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>[]
             "materialsToUpgrade": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: boolean
                     "deleteOnAction": false,
@@ -168,13 +169,13 @@ out there in the deep end.</p>
             "progressPercent": 0,
             // Type: boolean
             "hidden": false,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">Destiny.DestinyTalentNodeStatBlock</a>
             "nodeStatsBlock": {
-                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
                 "currentStepStats": [
-                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                         "statHash": 0,
                         // Type: integer:int32
                         "value": 0,
@@ -182,11 +183,11 @@ out there in the deep end.</p>
                         "maximumValue": 0
                     }
                 ],
-                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
                 "nextStepStats": [
-                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                         "statHash": 0,
                         // Type: integer:int32
                         "value": 0,
@@ -199,9 +200,9 @@ out there in the deep end.</p>
     ],
     // Type: boolean
     "isGridComplete": false,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>
     "gridProgression": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
         "progressionHash": 0,
         // Type: integer:int32
         "dailyProgress": 0,

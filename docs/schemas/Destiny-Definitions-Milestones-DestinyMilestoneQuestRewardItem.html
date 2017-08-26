@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Milestones DestinyMilestoneQuestRewardItem | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ but also information that BNet can - at some point - use internally to provide
 more robust runtime information about the item's qualities.</p>
 <p>If you want it, please ask!  We're just out of time to wire it up right now.
 Or a clever person just may do it with our existing endpoints.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,7 +101,7 @@ Or a clever person just may do it with our existing endpoints.</p>
 <tbody>
 <tr>
 <td>vendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable</td>
 <td>The quest reward item <em>may</em> be associated with a vendor.  If so,<br/>this is that vendor.  Use this hash to look up the DestinyVendorDefinition.</td>
 </tr>
 <tr>
@@ -110,7 +111,7 @@ Or a clever person just may do it with our existing endpoints.</p>
 </tr>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the item in question.  Use it to look up the item's DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
@@ -127,11 +128,11 @@ Or a clever person just may do it with our existing endpoints.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable
     "vendorHash": 0,
     // Type: integer:int32:nullable
     "vendorItemIndex": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "itemHash": 0,
     // Type: integer:int64:nullable
     "itemInstanceId": 0,

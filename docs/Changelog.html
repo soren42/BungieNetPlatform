@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -116,10 +116,10 @@ At the moment, the only endpoints included are the ones available in the officia
 <p>The one that brought on a Blizzard.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/services/User/GetMembershipDataForCurrentUser">UserService/GetMembershipDataForCurrentUser</a></li>
-<li>GET <a href="../docs/services/Trending/GetTrendingCategories">TrendingService/GetTrendingCategories</a></li>
-<li>GET <a href="../docs/services/Trending/GetTrendingCategory">TrendingService/GetTrendingCategory</a></li>
-<li>GET <a href="../docs/services/Trending/GetTrendingEntryDetail">TrendingService/GetTrendingEntryDetail</a></li>
+<li>GET <a href="GetMembershipDataForCurrentUser">UserService/GetMembershipDataForCurrentUser</a></li>
+<li>GET <a href="GetTrendingCategories">TrendingService/GetTrendingCategories</a></li>
+<li>GET <a href="GetTrendingCategory">TrendingService/GetTrendingCategory</a></li>
+<li>GET <a href="GetTrendingEntryDetail">TrendingService/GetTrendingEntryDetail</a></li>
 </ul>
 <p>Endpoints (changed):</p>
 <ul>
@@ -190,7 +190,7 @@ At the moment, the only endpoints included are the ones available in the officia
 <p>The one that needed documenting.</p>
 <p>Endpoints:</p>
 <ul>
-<li>GET <a href="../docs/services/User/GetMembershipDataById">UserService/GetMembershipDataById</a> changed param1 and param2 to the correct param names.</li>
+<li>GET <a href="GetMembershipDataById">UserService/GetMembershipDataById</a> changed param1 and param2 to the correct param names.</li>
 </ul>
 <p>Pages:</p>
 <ul>
@@ -200,7 +200,7 @@ At the moment, the only endpoints included are the ones available in the officia
 <p>The one that was sacrificed to a machine god.</p>
 <p>Endpoints (renamed):</p>
 <ul>
-<li>GET <a href="../docs/services/User/GetMembershipDataById">UserService/GetMembershipDataById</a> was &quot;GetMembershipById&quot;</li>
+<li>GET <a href="GetMembershipDataById">UserService/GetMembershipDataById</a> was &quot;GetMembershipById&quot;</li>
 </ul>
 <h2>April 5, 2017</h2>
 <p>The one that was lost in time.</p>
@@ -210,8 +210,8 @@ At the moment, the only endpoints included are the ones available in the officia
 </ul>
 <p>Endpoints (changed):</p>
 <ul>
-<li>GET <a href="../docs/services/Forum/GetCoreTopicsPaged">ForumService/GetCoreTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
-<li>GET <a href="../docs/services/Forum/GetTopicsPaged">ForumService/GetTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
+<li>GET <a href="GetCoreTopicsPaged">ForumService/GetCoreTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
+<li>GET <a href="GetTopicsPaged">ForumService/GetTopicsPaged</a> - added &quot;locales&quot; query parameter</li>
 </ul>
 <h2>March 30, 2017</h2>
 <p>The one that followed in hot pursuit.</p>
@@ -420,10 +420,10 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <li>POST <a href="AdminSetCommunityLiveMemberBanStatus">CommunitycontentService/AdminSetCommunityLiveMemberBanStatus</a></li>
 <li>POST <a href="AdminSetCommunityLiveMemberFeatureStatus">CommunitycontentService/AdminSetCommunityLiveMemberFeatureStatus</a></li>
 <li>GET <a href="GetAdminCommunityLiveStatuses">CommunitycontentService/GetAdminCommunityLiveStatuses</a></li>
-<li>GET <a href="../docs/services/CommunityContent/GetCommunityLiveStatuses">CommunitycontentService/GetCommunityLiveStatuses</a></li>
-<li>GET <a href="../docs/services/CommunityContent/GetCommunityLiveStatusesForClanmates">CommunitycontentService/GetCommunityLiveStatusesForClanmates</a></li>
-<li>GET <a href="../docs/services/CommunityContent/GetCommunityLiveStatusesForFriends">CommunitycontentService/GetCommunityLiveStatusesForFriends</a></li>
-<li>GET <a href="../docs/services/CommunityContent/GetFeaturedCommunityLiveStatuses">CommunitycontentService/GetFeaturedCommunityLiveStatuses</a></li>
+<li>GET <a href="GetCommunityLiveStatuses">CommunitycontentService/GetCommunityLiveStatuses</a></li>
+<li>GET <a href="GetCommunityLiveStatusesForClanmates">CommunitycontentService/GetCommunityLiveStatusesForClanmates</a></li>
+<li>GET <a href="GetCommunityLiveStatusesForFriends">CommunitycontentService/GetCommunityLiveStatusesForFriends</a></li>
+<li>GET <a href="GetFeaturedCommunityLiveStatuses">CommunitycontentService/GetFeaturedCommunityLiveStatuses</a></li>
 </ul>
 <p>Enums</p>
 <ul>
@@ -492,7 +492,7 @@ It turns out there was an extra CommunitycontentService endpoint that wasn't add
 <p>The &quot;pre-load&quot; before Rise of Iron.</p>
 <p>Endpoints (added):</p>
 <ul>
-<li>GET <a href="../docs/services/User/GetPartnerships">UserService/GetPartnerships</a></li>
+<li>GET <a href="GetPartnerships">UserService/GetPartnerships</a></li>
 <li>POST <a href="RemovePartnership">UserService/RemovePartnership</a></li>
 <li>GET <a href="GetApplicationActivityForUser">ActivityService/GetApplicationActivityForUser</a></li>
 </ul>
@@ -814,8 +814,8 @@ Manually added V2 Advisor Endpoints that were left out of the current platform.l
 <h2>April 28, 2016</h2>
 <p>Endpoints (Added):</p>
 <ul>
-<li>POST <a href="../docs/services/Forum/GetRecruitmentThreadSummaries">ForumService/GetRecruitmentThreadSummaries</a></li>
-<li>POST <a href="../docs/services/Forum/LeaveFireteamThread">ForumService/LeaveFireteamThread</a></li>
+<li>POST <a href="GetRecruitmentThreadSummaries">ForumService/GetRecruitmentThreadSummaries</a></li>
+<li>POST <a href="LeaveFireteamThread">ForumService/LeaveFireteamThread</a></li>
 </ul>
 <p>Endpoints (Changed):</p>
 <ul>
@@ -844,17 +844,17 @@ Manually added V2 Advisor Endpoints that were left out of the current platform.l
 <p>April Update Launched.</p>
 <p>Endpoints (Added):</p>
 <ul>
-<li>POST <a href="../docs/services/Forum/ApproveFireteamThread">ForumService/ApproveFireteamThread</a></li>
-<li>POST <a href="../docs/services/Forum/JoinFireteamThread">ForumService/JoinFireteamThread</a></li>
-<li>POST <a href="../docs/services/Forum/KickBanFireteamApplicant">ForumService/KickBanFireteamApplicant</a></li>
+<li>POST <a href="ApproveFireteamThread">ForumService/ApproveFireteamThread</a></li>
+<li>POST <a href="JoinFireteamThread">ForumService/JoinFireteamThread</a></li>
+<li>POST <a href="KickBanFireteamApplicant">ForumService/KickBanFireteamApplicant</a></li>
 <li>POST <a href="Migrate">GroupService/Migrate</a></li>
-<li>GET <a href="../docs/services/Destiny2/GetClanLeaderboards">DestinyService/GetClanLeaderboards</a></li>
+<li>GET <a href="GetClanLeaderboards">DestinyService/GetClanLeaderboards</a></li>
 <li>GET <a href="GetItemReferenceDetail">DestinyService/GetItemReferenceDetail</a></li>
 </ul>
 <p>Endpoints (Changed):</p>
 <ul>
-<li>GET <a href="../docs/services/Destiny2/GetLeaderboards">DestinyService/GetLeaderboards</a></li>
-<li>GET <a href="../docs/services/Destiny2/GetLeaderboardsForCharacter">DestinyService/GetLeaderboardsForCharacter</a></li>
+<li>GET <a href="GetLeaderboards">DestinyService/GetLeaderboards</a></li>
+<li>GET <a href="GetLeaderboardsForCharacter">DestinyService/GetLeaderboardsForCharacter</a></li>
 </ul>
 <p>Enums:</p>
 <ul>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Vendors DestinyVendorReceipt | schemas | BungieNetPlatform</title>
+	<title>Destiny.Vendors.DestinyVendorReceipt | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>If a character purchased an item that is refundable, a Vendor Receipt will be created on the user's Destiny Profile.
 These expire after a configurable period of time, but until then can be used to get refunds on items.
 BNet does not provide the ability to refund a purchase <em>yet</em>, but you know.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,12 +99,12 @@ BNet does not provide the ability to refund a purchase <em>yet</em>, but you kno
 <tbody>
 <tr>
 <td>currencyPaid</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
 <td>The amount paid for the item, in terms of items that were consumed in the purchase and their quantity.</td>
 </tr>
 <tr>
 <td>itemReceived</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a></td>
 <td>The item that was received, and its quantity.</td>
 </tr>
 <tr>
@@ -118,7 +119,7 @@ BNet does not provide the ability to refund a purchase <em>yet</em>, but you kno
 </tr>
 <tr>
 <td>refundPolicy</td>
-<td><a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a></td>
 <td>Whether you can get a refund, and what happens in order for the refund to be received.<br/>See the DestinyVendorItemRefundPolicy enum for details.</td>
 </tr>
 <tr>
@@ -140,11 +141,11 @@ BNet does not provide the ability to refund a purchase <em>yet</em>, but you kno
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
     "currencyPaid": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
@@ -152,9 +153,9 @@ BNet does not provide the ability to refund a purchase <em>yet</em>, but you kno
             "quantity": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
     "itemReceived": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
         "itemHash": 0,
         // Type: integer:int64:nullable
         "itemInstanceId": 0,
@@ -165,7 +166,7 @@ BNet does not provide the ability to refund a purchase <em>yet</em>, but you kno
     "licenseUnlockHash": 0,
     // Type: integer:int64
     "purchasedByCharacterId": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>
     "refundPolicy": 0,
     // Type: integer:int32
     "sequenceNumber": 0,

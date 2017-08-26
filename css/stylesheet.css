@@ -163,9 +163,6 @@ a[name] {
 #content .inner .table .active {
   background: none;
 }
-#content .inner .table a {
-  white-space: nowrap;
-}
 #content .inner .table,
 #content .inner .table th,
 #content .inner .table td {
@@ -174,6 +171,9 @@ a[name] {
 #content .inner .table th {
   border-bottom: none;
   width: 80px;
+}
+#content .inner .table th a {
+  white-space: nowrap;
 }
 #content .inner .table td {
   color: rgba(245, 245, 245, 0.65);

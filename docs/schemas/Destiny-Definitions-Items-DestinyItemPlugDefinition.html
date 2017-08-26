@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Items DestinyItemPlugDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Items.DestinyItemPlugDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -86,6 +86,7 @@ with an instance of one of these bad boys.</p>
 is (and thus whether it is compatible with a socket... see DestinySocketTypeDefinition
 for information about Plug Categories and socket compatibility), whether it is enabled
 and other Plug info.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -101,7 +102,7 @@ and other Plug info.</p>
 <tbody>
 <tr>
 <td>insertionRules</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]</td>
 <td>The rules around when this plug can be inserted into a socket, aside<br/>from the socket's individual restrictions.<br/><br/>The live data DestinyItemPlugComponent.insertFailIndexes will be an index into<br/>this array, so you can pull out the failure strings appropriate for the user.</td>
 </tr>
 <tr>
@@ -121,31 +122,31 @@ and other Plug info.</p>
 </tr>
 <tr>
 <td>insertionMaterialRequirementHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">Destiny.Definitions.DestinyMaterialRequirementSetDefinition</a>:integer:uint32</td>
 <td>If inserting this plug requires materials, this is the hash identifier for looking up the<br/>DestinyMaterialRequirementSetDefinition for those requirements.</td>
 </tr>
 <tr>
 <td>previewItemOverrideHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>In the game, if you're inspecting a plug item directly, this will be the item shown<br/>with the plug attached.  Look up the DestinyInventoryItemDefinition for this hash for the item.</td>
 </tr>
 <tr>
 <td>enabledMaterialRequirementHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">Destiny.Definitions.DestinyMaterialRequirementSetDefinition</a>:integer:uint32</td>
 <td>It's not enough for the plug to be inserted.  It has to be enabled as well.<br/>For it to be enabled, it may require materials.<br/>This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements,<br/>if there is one.</td>
 </tr>
 <tr>
 <td>enabledRules</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]</td>
 <td>The rules around whether the plug, once inserted, is enabled and providing its benefits.<br/><br/>The live data DestinyItemPlugComponent.enableFailIndexes will be an index into<br/>this array, so you can pull out the failure strings appropriate for the user.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]
     "insertionRules": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>
         {
             // Type: string
             "failureMessage": ""
@@ -157,15 +158,15 @@ and other Plug info.</p>
     "plugCategoryHash": 0,
     // Type: boolean
     "onActionRecreateSelf": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">Destiny.Definitions.DestinyMaterialRequirementSetDefinition</a>:integer:uint32
     "insertionMaterialRequirementHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "previewItemOverrideHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">Destiny.Definitions.DestinyMaterialRequirementSetDefinition</a>:integer:uint32
     "enabledMaterialRequirementHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>[]
     "enabledRules": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">Destiny.Definitions.Items.DestinyPlugRuleDefinition</a>
         {
             // Type: string
             "failureMessage": ""

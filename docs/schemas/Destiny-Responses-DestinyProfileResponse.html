@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Responses DestinyProfileResponse | schemas | BungieNetPlatform</title>
+	<title>Destiny.Responses.DestinyProfileResponse | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -81,6 +81,7 @@
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Responses-DestinyProfileResponse/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>The response for GetDestinyProfile, with components for character and item-level data.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -96,62 +97,62 @@
 <tbody>
 <tr>
 <td>vendorReceipts</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyVendorReceiptsComponent-">DestinyVendorReceiptsComponent&gt;</a></td>
+<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyVendorReceiptsComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyVendorReceiptsComponent&gt;</a></td>
 <td>Recent, refundable purchases you have made from vendors.  When will you use it?  Couldn't say...<br/><br/>COMPONENT TYPE: VendorReceipts</td>
 </tr>
 <tr>
 <td>profileInventory</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a></td>
+<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
 <td>The profile-level inventory of the Destiny Profile.<br/><br/>COMPONENT TYPE: ProfileInventories</td>
 </tr>
 <tr>
 <td>profileCurrencies</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a></td>
+<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
 <td>The profile-level currencies owned by the Destiny Profile.<br/><br/>COMPONENT TYPE: ProfileCurrencies</td>
 </tr>
 <tr>
 <td>profile</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyProfileComponent-">DestinyProfileComponent&gt;</a></td>
+<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyProfileComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyProfileComponent&gt;</a></td>
 <td>The basic information about the Destiny Profile (formerly &quot;Account&quot;).<br/><br/>COMPONENT TYPE: Profiles</td>
 </tr>
 <tr>
 <td>profileKiosks</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Components-Kiosks-DestinyKiosksComponent-">DestinyKiosksComponent&gt;</a></td>
+<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Components-Kiosks-DestinyKiosksComponent-">SingleComponentResponse&lt;Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a></td>
 <td>Items available from Kiosks that are available Profile-wide (i.e. across all characters)<br/><br/>This component returns information about what Kiosk items are available to you on a <em>Profile</em><br/>level.  It is theoretically possible for Kiosks to have items gated by specific Character as well.<br/>If you ever have those, you will find them on the characterKiosks property.<br/><br/>COMPONENT TYPE: Kiosks</td>
 </tr>
 <tr>
 <td>characters</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterComponent-">DestinyCharacterComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterComponent&gt;</a></td>
 <td>Basic information about each character, keyed by the CharacterId.<br/><br/>COMPONENT TYPE: Characters</td>
 </tr>
 <tr>
 <td>characterInventories</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
 <td>The character-level non-equipped inventory items, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterInventories</td>
 </tr>
 <tr>
 <td>characterProgressions</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterProgressionComponent-">DestinyCharacterProgressionComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterProgressionComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterProgressionComponent&gt;</a></td>
 <td>Character-level progression data, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterProgressions</td>
 </tr>
 <tr>
 <td>characterRenderData</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterRenderComponent-">DestinyCharacterRenderComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterRenderComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterRenderComponent&gt;</a></td>
 <td>Character rendering data - a minimal set of info needed to render a character in 3D - keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterRenderData</td>
 </tr>
 <tr>
 <td>characterActivities</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterActivitiesComponent-">DestinyCharacterActivitiesComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterActivitiesComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterActivitiesComponent&gt;</a></td>
 <td>Character activity data - the activities available to this character and its status, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterActivities</td>
 </tr>
 <tr>
 <td>characterEquipment</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
 <td>The character's equipped items, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterEquipment</td>
 </tr>
 <tr>
 <td>characterKiosks</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Components-Kiosks-DestinyKiosksComponent-">DestinyKiosksComponent&gt;</a></td>
+<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Components-Kiosks-DestinyKiosksComponent-">DictionaryComponentResponse&lt;int64,Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a></td>
 <td>Items available from Kiosks that are available to a specific character as opposed to the account as a whole.<br/>It must be combined with data from the profileKiosks property to get a full picture of the character's available<br/>items to check out of a kiosk.<br/><br/>This component returns information about what Kiosk items are available to you on a <em>Character</em><br/>level.  Usually, kiosk items will be earned for the entire Profile (all characters) at once.<br/>To find those, look in the profileKiosks property.<br/><br/>COMPONENT TYPE: Kiosks</td>
 </tr>
 <tr>
@@ -163,19 +164,19 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyVendorReceiptsComponent-">DestinyVendorReceiptsComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyVendorReceiptsComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyVendorReceiptsComponent&gt;</a>
     "vendorReceipts": {
-        // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">DestinyVendorReceiptsComponent</a>
+        // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">Destiny.Entities.Profiles.DestinyVendorReceiptsComponent</a>
         "data": {
-            // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">DestinyVendorReceipt</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">Destiny.Vendors.DestinyVendorReceipt</a>[]
             "receipts": [
-               // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">DestinyVendorReceipt</a>
+               // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">Destiny.Vendors.DestinyVendorReceipt</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
                     "currencyPaid": [
-                       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+                       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                             "itemHash": 0,
                             // Type: integer:int64:nullable
                             "itemInstanceId": 0,
@@ -183,9 +184,9 @@
                             "quantity": 0
                         }
                     ],
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
                     "itemReceived": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
@@ -196,7 +197,7 @@
                     "licenseUnlockHash": 0,
                     // Type: integer:int64
                     "purchasedByCharacterId": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>
                     "refundPolicy": 0,
                     // Type: integer:int32
                     "sequenceNumber": 0,
@@ -207,78 +208,78 @@
                 }
             ]
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
     "profileInventory": {
-        // Type: <a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>
+        // Type: <a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">Destiny.Entities.Inventory.DestinyInventoryComponent</a>
         "data": {
-            // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>[]
             "items": [
-               // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>
+               // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
                     // Type: integer:int32
                     "quantity": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>
                     "bindStatus": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
                     "location": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
                     "bucketHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>
+                    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>
                     "transferStatus": 0,
                     // Type: boolean
                     "lockable": false,
-                    // Type: <a href="../../docs/schemas/Destiny-ItemState">ItemState</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>
                     "state": 0
                 }
             ]
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
     "profileCurrencies": {
-        // Type: <a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>
+        // Type: <a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">Destiny.Entities.Inventory.DestinyInventoryComponent</a>
         "data": {
-            // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>[]
             "items": [
-               // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>
+               // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
                     // Type: integer:int32
                     "quantity": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>
                     "bindStatus": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
                     "location": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
                     "bucketHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>
+                    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>
                     "transferStatus": 0,
                     // Type: boolean
                     "lockable": false,
-                    // Type: <a href="../../docs/schemas/Destiny-ItemState">ItemState</a>
+                    // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>
                     "state": 0
                 }
             ]
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyProfileComponent-">DestinyProfileComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyProfileComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyProfileComponent&gt;</a>
     "profile": {
-        // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyProfileComponent">DestinyProfileComponent</a>
+        // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyProfileComponent">Destiny.Entities.Profiles.DestinyProfileComponent</a>
         "data": {
-            // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
+            // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
             "userInfo": {
                 // Type: string
                 "supplementalDisplayName": "",
@@ -293,7 +294,7 @@
             },
             // Type: string:date-time
             "dateLastPlayed": "",
-            // Type: <a href="../../docs/schemas/Destiny-DestinyGameVersions">DestinyGameVersions</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyGameVersions">Destiny.DestinyGameVersions</a>
             "versionsOwned": 0,
             // Type: integer:int64[]
             "characterIds": [
@@ -301,17 +302,17 @@
                 0
             ]
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Components-Kiosks-DestinyKiosksComponent-">DestinyKiosksComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Components-Kiosks-DestinyKiosksComponent-">SingleComponentResponse&lt;Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a>
     "profileKiosks": {
-        // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">DestinyKiosksComponent</a>
+        // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">Destiny.Components.Kiosks.DestinyKiosksComponent</a>
         "data": {
-            // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
+            // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;
             "kioskItems": {
                 "0": [
-                   // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>
                     {
                         // Type: integer:int32
                         "index": 0,
@@ -326,12 +327,12 @@
                 ]
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterComponent-">DestinyCharacterComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterComponent&gt;</a>
     "characters": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterComponent">DestinyCharacterComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterComponent">Destiny.Entities.Characters.DestinyCharacterComponent</a>&gt;
         "data": {
             "0": {
                 // Type: integer:int64
@@ -352,27 +353,27 @@
                 "stats": {
                     "0": 0
                 },
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRaceDefinition">DestinyRaceDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRaceDefinition">Destiny.Definitions.DestinyRaceDefinition</a>:integer:uint32
                 "raceHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyGenderDefinition">DestinyGenderDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyGenderDefinition">Destiny.Definitions.DestinyGenderDefinition</a>:integer:uint32
                 "genderHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">DestinyClassDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">Destiny.Definitions.DestinyClassDefinition</a>:integer:uint32
                 "classHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>
+                // Type: <a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a>
                 "raceType": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>
+                // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>
                 "classType": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>
+                // Type: <a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>
                 "genderType": 0,
                 // Type: string
                 "emblemPath": "",
                 // Type: string
                 "emblemBackgroundPath": "",
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                 "emblemHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
+                // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>
                 "levelProgression": {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
                     "progressionHash": 0,
                     // Type: integer:int32
                     "dailyProgress": 0,
@@ -401,52 +402,52 @@
                 "percentToNextLevel": 0
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
     "characterInventories": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">Destiny.Entities.Inventory.DestinyInventoryComponent</a>&gt;
         "data": {
             "0": {
-                // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>[]
                 "items": [
-                   // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
                         // Type: integer:int32
                         "quantity": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>
+                        // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>
                         "bindStatus": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>
+                        // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
                         "location": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
                         "bucketHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>
+                        // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>
                         "transferStatus": 0,
                         // Type: boolean
                         "lockable": false,
-                        // Type: <a href="../../docs/schemas/Destiny-ItemState">ItemState</a>
+                        // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>
                         "state": 0
                     }
                 ]
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterProgressionComponent-">DestinyCharacterProgressionComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterProgressionComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterProgressionComponent&gt;</a>
     "characterProgressions": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterProgressionComponent">DestinyCharacterProgressionComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterProgressionComponent">Destiny.Entities.Characters.DestinyCharacterProgressionComponent</a>&gt;
         "data": {
             "0": {
-                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
+                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
                 "progressions": {
                     "0": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
                         "progressionHash": 0,
                         // Type: integer:int32
                         "dailyProgress": 0,
@@ -470,12 +471,12 @@
                         "nextLevelAt": 0
                     }
                 },
-                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">DestinyFactionProgression</a>&gt;
+                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>&gt;
                 "factions": {
                     "0": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32
                         "factionHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
                         "progressionHash": 0,
                         // Type: integer:int32
                         "dailyProgress": 0,
@@ -499,32 +500,32 @@
                         "nextLevelAt": 0
                     }
                 },
-                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32,<a href="../../docs/responses/Destiny-Milestones-DestinyMilestone">DestinyMilestone</a>&gt;
+                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>&gt;
                 "milestones": {
                     "0": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
                         "milestoneHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>[]
+                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>[]
                         "availableQuests": [
-                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>
+                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>
                             {
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                                 "questItemHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>
+                                // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
                                 "status": {
-                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                                     "questHash": 0,
-                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                                     "stepHash": 0,
-                                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
+                                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
                                     "stepObjectives": [
-                                       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
+                                       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
                                         {
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
                                             "objectiveHash": 0,
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
                                             "destinationHash": 0,
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
                                             "activityHash": 0,
                                             // Type: integer:int32:nullable
                                             "progress": 0,
@@ -545,28 +546,28 @@
                                     // Type: integer:uint32:nullable
                                     "vendorHash": 0
                                 },
-                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">DestinyMilestoneActivity</a>
+                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
                                 "activity": {
-                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                                     "activityHash": 0,
-                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]
+                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
                                     "modifierHashes": [
                                        // Type: integer:uint32
                                         0
                                     ],
-                                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]
+                                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
                                     "variants": [
-                                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>
+                                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
                                         {
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                                             "activityHash": 0,
-                                            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
+                                            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
                                             "completionStatus": {
                                                 // Type: boolean
                                                 "completed": false,
-                                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
+                                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
                                                 "phases": [
-                                                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
+                                                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
                                                     {
                                                         // Type: boolean
                                                         "complete": false
@@ -576,17 +577,17 @@
                                         }
                                     ]
                                 },
-                                // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>[]
+                                // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]
                                 "challenges": [
-                                   // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>
+                                   // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>
                                     {
-                                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
+                                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
                                         "objective": {
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
                                             "objectiveHash": 0,
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
                                             "destinationHash": 0,
-                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+                                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
                                             "activityHash": 0,
                                             // Type: integer:int32:nullable
                                             "progress": 0,
@@ -599,22 +600,22 @@
                         ],
                         // Type: Dictionary&lt;string,number:float&gt;
                         "values": {
-                            "key": 0
+                            "{string}": 0
                         },
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32[]
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32[]
                         "vendorHashes": [
                            // Type: integer:uint32
                             0
                         ],
-                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>[]
+                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>[]
                         "rewards": [
-                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>
+                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>
                             {
                                 // Type: integer:uint32
                                 "rewardCategoryHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>[]
+                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>[]
                                 "entries": [
-                                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>
+                                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>
                                     {
                                         // Type: integer:uint32
                                         "rewardEntryHash": 0,
@@ -632,23 +633,23 @@
                         "endDate": ""
                     }
                 },
-                // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>[]
                 "quests": [
-                   // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                         "questHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                         "stepHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
+                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
                         "stepObjectives": [
-                           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
+                           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
                             {
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
                                 "objectiveHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
                                 "destinationHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
                                 "activityHash": 0,
                                 // Type: integer:int32:nullable
                                 "progress": 0,
@@ -670,16 +671,16 @@
                         "vendorHash": 0
                     }
                 ],
-                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]&gt;
+                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;
                 "uninstancedItemObjectives": {
                     "0": [
-                       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
                             "objectiveHash": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
                             "destinationHash": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
                             "activityHash": 0,
                             // Type: integer:int32:nullable
                             "progress": 0,
@@ -690,17 +691,17 @@
                 }
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterRenderComponent-">DestinyCharacterRenderComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterRenderComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterRenderComponent&gt;</a>
     "characterRenderData": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">DestinyCharacterRenderComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">Destiny.Entities.Characters.DestinyCharacterRenderComponent</a>&gt;
         "data": {
             "0": {
-                // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
                 "customDyes": [
-                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
                     {
                         // Type: integer:uint32
                         "channelHash": 0,
@@ -708,7 +709,7 @@
                         "dyeHash": 0
                     }
                 ],
-                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a>
+                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a>
                 "customization": {
                     // Type: integer:uint32
                     "personality": 0,
@@ -741,17 +742,17 @@
                     // Type: integer:int32
                     "decalIndex": 0
                 },
-                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a>
+                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a>
                 "peerView": {
-                    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>[]
                     "equipment": [
-                       // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                             "itemHash": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
+                            // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
                             "dyes": [
-                               // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
+                               // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
                                 {
                                     // Type: integer:uint32
                                     "channelHash": 0,
@@ -764,21 +765,21 @@
                 }
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterActivitiesComponent-">DestinyCharacterActivitiesComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterActivitiesComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterActivitiesComponent&gt;</a>
     "characterActivities": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterActivitiesComponent">DestinyCharacterActivitiesComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterActivitiesComponent">Destiny.Entities.Characters.DestinyCharacterActivitiesComponent</a>&gt;
         "data": {
             "0": {
                 // Type: string:date-time
                 "dateActivityStarted": "",
-                // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">DestinyActivity</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>[]
                 "availableActivities": [
-                   // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">DestinyActivity</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                         "activityHash": 0,
                         // Type: boolean
                         "isNew": false,
@@ -794,64 +795,64 @@
                         "displayLevel": 0,
                         // Type: integer:int32:nullable
                         "recommendedLight": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">DestinyActivityDifficultyTier</a>
+                        // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">Destiny.DestinyActivityDifficultyTier</a>
                         "difficultyTier": 0
                     }
                 ],
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                 "currentActivityHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">DestinyActivityModeDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32
                 "currentActivityModeHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
                 "lastCompletedStoryHash": 0
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
     "characterEquipment": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">Destiny.Entities.Inventory.DestinyInventoryComponent</a>&gt;
         "data": {
             "0": {
-                // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>[]
                 "items": [
-                   // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
                         // Type: integer:int32
                         "quantity": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>
+                        // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>
                         "bindStatus": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>
+                        // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
                         "location": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
                         "bucketHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>
+                        // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>
                         "transferStatus": 0,
                         // Type: boolean
                         "lockable": false,
-                        // Type: <a href="../../docs/schemas/Destiny-ItemState">ItemState</a>
+                        // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>
                         "state": 0
                     }
                 ]
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Components-Kiosks-DestinyKiosksComponent-">DestinyKiosksComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Components-Kiosks-DestinyKiosksComponent-">DictionaryComponentResponse&lt;int64,Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a>
     "characterKiosks": {
-        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">DestinyKiosksComponent</a>&gt;
+        // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">Destiny.Components.Kiosks.DestinyKiosksComponent</a>&gt;
         "data": {
             "0": {
-                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
+                // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;
                 "kioskItems": {
                     "0": [
-                       // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>
                         {
                             // Type: integer:int32
                             "index": 0,
@@ -867,23 +868,23 @@
                 }
             }
         },
-        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+        // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
         "privacy": 0
     },
     // Type: <a href="../../docs/schemas/DestinyItemComponentSet-int64-">DestinyItemComponentSet&lt;int64&gt;</a>
     "itemComponents": {
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemInstanceComponent-">DestinyItemInstanceComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemInstanceComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemInstanceComponent&gt;</a>
         "instances": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">Destiny.Entities.Items.DestinyItemInstanceComponent</a>&gt;
             "data": {
                 "0": {
-                    // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
                     "damageType": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:integer:uint32:nullable
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
                     "damageTypeHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
                     "primaryStat": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                         "statHash": 0,
                         // Type: integer:int32
                         "value": 0,
@@ -900,32 +901,32 @@
                     "canEquip": false,
                     // Type: integer:int32
                     "equipRequiredLevel": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]
                     "unlockHashesRequiredToEquip": [
                        // Type: integer:uint32
                         0
                     ],
-                    // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">EquipFailureReason</a>
+                    // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a>
                     "cannotEquipReason": 0
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemObjectivesComponent-">DestinyItemObjectivesComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemObjectivesComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemObjectivesComponent&gt;</a>
         "objectives": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">DestinyItemObjectivesComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">Destiny.Entities.Items.DestinyItemObjectivesComponent</a>&gt;
             "data": {
                 "0": {
-                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
                     "objectives": [
-                       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
                             "objectiveHash": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:integer:uint32:nullable
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
                             "destinationHash": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
                             "activityHash": 0,
                             // Type: integer:int32:nullable
                             "progress": 0,
@@ -935,19 +936,19 @@
                     ]
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemPerksComponent-">DestinyItemPerksComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemPerksComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemPerksComponent&gt;</a>
         "perks": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemPerksComponent">DestinyItemPerksComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemPerksComponent">Destiny.Entities.Items.DestinyItemPerksComponent</a>&gt;
             "data": {
                 "0": {
-                    // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">Destiny.Perks.DestinyPerkReference</a>[]
                     "perks": [
-                       // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">Destiny.Perks.DestinyPerkReference</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
                             "perkHash": 0,
                             // Type: string
                             "iconPath": "",
@@ -959,12 +960,12 @@
                     ]
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemRenderComponent-">DestinyItemRenderComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemRenderComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemRenderComponent&gt;</a>
         "renderData": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemRenderComponent">DestinyItemRenderComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemRenderComponent">Destiny.Entities.Items.DestinyItemRenderComponent</a>&gt;
             "data": {
                 "0": {
                     // Type: boolean
@@ -975,18 +976,18 @@
                     }
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemStatsComponent-">DestinyItemStatsComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemStatsComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemStatsComponent&gt;</a>
         "stats": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemStatsComponent">DestinyItemStatsComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemStatsComponent">Destiny.Entities.Items.DestinyItemStatsComponent</a>&gt;
             "data": {
                 "0": {
-                    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>&gt;
+                    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>&gt;
                     "stats": {
                         "0": {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                             "statHash": 0,
                             // Type: integer:int32
                             "value": 0,
@@ -996,19 +997,19 @@
                     }
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemSocketsComponent-">DestinyItemSocketsComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemSocketsComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemSocketsComponent&gt;</a>
         "sockets": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketsComponent">DestinyItemSocketsComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketsComponent">Destiny.Entities.Items.DestinyItemSocketsComponent</a>&gt;
             "data": {
                 "0": {
-                    // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">Destiny.Entities.Items.DestinyItemSocketState</a>[]
                     "sockets": [
-                       // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">Destiny.Entities.Items.DestinyItemSocketState</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32:nullable
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
                             "plugHash": 0,
                             // Type: boolean
                             "isEnabled": false,
@@ -1017,7 +1018,7 @@
                                // Type: integer:int32
                                 0
                             ],
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32[]
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
                             "reusablePlugHashes": [
                                // Type: integer:uint32
                                 0
@@ -1026,35 +1027,35 @@
                     ]
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemTalentGridComponent-">DestinyItemTalentGridComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemTalentGridComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemTalentGridComponent&gt;</a>
         "talentGrids": {
-            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemTalentGridComponent">DestinyItemTalentGridComponent</a>&gt;
+            // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemTalentGridComponent">Destiny.Entities.Items.DestinyItemTalentGridComponent</a>&gt;
             "data": {
                 "0": {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">DestinyTalentGridDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32
                     "talentGridHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">Destiny.DestinyTalentNode</a>[]
                     "nodes": [
-                       // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>
+                       // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNode">Destiny.DestinyTalentNode</a>
                         {
                             // Type: integer:int32
                             "nodeIndex": 0,
                             // Type: integer:uint32
                             "nodeHash": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a>
+                            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">Destiny.DestinyTalentNodeState</a>
                             "state": 0,
                             // Type: boolean
                             "isActivated": false,
                             // Type: integer:int32
                             "stepIndex": 0,
-                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>[]
+                            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>[]
                             "materialsToUpgrade": [
-                               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>
+                               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">Destiny.Definitions.DestinyMaterialRequirement</a>
                                 {
-                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                                     "itemHash": 0,
                                     // Type: boolean
                                     "deleteOnAction": false,
@@ -1070,13 +1071,13 @@
                             "progressPercent": 0,
                             // Type: boolean
                             "hidden": false,
-                            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a>
+                            // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">Destiny.DestinyTalentNodeStatBlock</a>
                             "nodeStatsBlock": {
-                                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
+                                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
                                 "currentStepStats": [
-                                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+                                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
                                     {
-                                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                                         "statHash": 0,
                                         // Type: integer:int32
                                         "value": 0,
@@ -1084,11 +1085,11 @@
                                         "maximumValue": 0
                                     }
                                 ],
-                                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
+                                // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>[]
                                 "nextStepStats": [
-                                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+                                   // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
                                     {
-                                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                                         "statHash": 0,
                                         // Type: integer:int32
                                         "value": 0,
@@ -1101,9 +1102,9 @@
                     ],
                     // Type: boolean
                     "isGridComplete": false,
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>
                     "gridProgression": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
                         "progressionHash": 0,
                         // Type: integer:int32
                         "dailyProgress": 0,
@@ -1128,12 +1129,12 @@
                     }
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-uint32-Destiny-Components-Items-DestinyItemPlugComponent-">DestinyItemPlugComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-uint32-Destiny-Components-Items-DestinyItemPlugComponent-">DictionaryComponentResponse&lt;uint32,Destiny.Components.Items.DestinyItemPlugComponent&gt;</a>
         "plugStates": {
-            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Items-DestinyItemPlugComponent">DestinyItemPlugComponent</a>&gt;
+            // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Items-DestinyItemPlugComponent">Destiny.Components.Items.DestinyItemPlugComponent</a>&gt;
             "data": {
                 "0": {
                     // Type: integer:int32[]
@@ -1148,7 +1149,7 @@
                     ]
                 }
             },
-            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+            // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
             "privacy": 0
         }
     }

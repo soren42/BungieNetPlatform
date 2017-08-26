@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>DictionaryComponentResponse int64 Destiny Entities Items DestinyItemInstanceComponent  | schemas | BungieNetPlatform</title>
+	<title>DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemInstanceComponent&gt; | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,14 +18,14 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemInstanceComponent-.html | DictionaryComponentResponse<int64,Destiny.Entities.Items.DestinyItemInstanceComponent> -->
+<!-- docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemInstanceComponent-.html | DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemInstanceComponent&gt; -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -65,7 +65,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>DictionaryComponentResponse<int64,Destiny.Entities.Items.DestinyItemInstanceComponent></h1>
+		<h1>DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemInstanceComponent&gt;</h1>
 		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
 
 		<!--<section id="downloads">
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemInstanceComponent-/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -95,28 +96,28 @@
 <tbody>
 <tr>
 <td>data</td>
-<td>Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>&gt;</td>
+<td>Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">Destiny.Entities.Items.DestinyItemInstanceComponent</a>&gt;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>privacy</td>
-<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a></td>
+<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>&gt;
+    // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">Destiny.Entities.Items.DestinyItemInstanceComponent</a>&gt;
     "data": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>
+            // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
             "damageType": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
             "damageTypeHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>
             "primaryStat": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                 "statHash": 0,
                 // Type: integer:int32
                 "value": 0,
@@ -133,16 +134,16 @@
             "canEquip": false,
             // Type: integer:int32
             "equipRequiredLevel": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]
             "unlockHashesRequiredToEquip": [
                // Type: integer:uint32
                 0
             ],
-            // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">EquipFailureReason</a>
+            // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a>
             "cannotEquipReason": 0
         }
     },
-    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>
+    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
     "privacy": 0
 }
 </code></pre>

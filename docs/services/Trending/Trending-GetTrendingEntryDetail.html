@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>User.GetBungieNetUserById | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503724823">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/services/Trending/Trending-GetTrendingEntryDetail.html | User.GetBungieNetUserById -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../../">Home</a></li>
+<li><a href="../../../docs/Changelog">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="../../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../../docs/API-Details">API Details</a></li>
+<li><a href="../../../docs/Manifest">Manifest</a></li>
+<li><a href="../../../docs/Authentication">Authentication</a></li>
+<li><a href="../../../docs/Past-Authentication">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="../../../docs/Components">Components</a></li>
+<li><a href="../../../docs/Endpoints">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>User.GetBungieNetUserById</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Trending-GetTrendingEntryDetail/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<p>Returns the detailed results for a specific trending entry.  Note that trending entries are uniquely identified by a combination of <em>both</em> the TrendingEntryType <em>and</em> the identifier: the identifier alone is not guaranteed to be globally unique.</p>
+<ul>
+<li><strong>URI:</strong> <a href="https://bungie.net/Platform/Trending/Details/{trendingEntryType}/{identifier}/">/Trending/Details/{trendingEntryType}/{identifier}/</a></li>
+<li><strong>Basepath:</strong> <a href="https://bungie.net/Platform">https://bungie.net/Platform</a></li>
+<li><strong>Method:</strong> GET</li>
+<li><strong>Service:</strong> <a href="../../../docs/Endpoints#Trending">Trending</a></li>
+<li><strong>Permissions:</strong> None</li>
+<li><strong>Officially Supported:</strong> Yes</li>
+</ul>
+<h2>Parameters</h2>
+<h3>Path Parameters</h3>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Schema</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td>string</td>
+<td>Yes</td>
+<td>The identifier for the entity to be returned.</td>
+</tr>
+<tr>
+<td>trendingEntryType</td>
+<td><a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a></td>
+<td>Yes</td>
+<td>The type of entity to be returned.</td>
+</tr>
+</tbody>
+</table>
+<h3>Query String Parameters</h3>
+<p>None</p>
+<h2>Example</h2>
+<h3>Request</h3>
+<p>GET <a href="https://bungie.net/Platform/Trending/Details/{trendingEntryType}/{identifier">https://bungie.net/Platform/Trending/Details/{trendingEntryType}/{identifier</a>}/</p>
+<h3>Response</h3>
+<p>PlatformErrorCode: 200</p>
+<pre><code class="javascript">{
+    // Type: <a href="../../../docs/schemas/Trending-TrendingDetail">Trending.TrendingDetail</a>
+    "Response": {
+        // Type: string
+        "identifier": "",
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>
+        "entityType": 0,
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryNews">Trending.TrendingEntryNews</a>
+        "news": {
+            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
+            "article": {
+                // Type: integer:int64
+                "contentId": 0,
+                // Type: string
+                "cType": "",
+                // Type: string
+                "cmsPath": "",
+                // Type: string:date-time
+                "creationDate": "",
+                // Type: string:date-time
+                "modifyDate": "",
+                // Type: boolean
+                "allowComments": false,
+                // Type: boolean
+                "hasAgeGate": false,
+                // Type: integer:int32
+                "minimumAge": 0,
+                // Type: string
+                "ratingImagePath": "",
+                // Type: <a href="../../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
+                "author": {
+                    // Type: integer:int64
+                    "membershipId": 0,
+                    // Type: string
+                    "uniqueName": "",
+                    // Type: string
+                    "normalizedName": "",
+                    // Type: string
+                    "displayName": "",
+                    // Type: integer:int32
+                    "profilePicture": 0,
+                    // Type: integer:int32
+                    "profileTheme": 0,
+                    // Type: integer:int32
+                    "userTitle": 0,
+                    // Type: integer:int64
+                    "successMessageFlags": 0,
+                    // Type: boolean
+                    "isDeleted": false,
+                    // Type: string
+                    "about": "",
+                    // Type: string:date-time:nullable
+                    "firstAccess": "",
+                    // Type: string:date-time:nullable
+                    "lastUpdate": "",
+                    // Type: integer:int64:nullable
+                    "legacyPortalUID": 0,
+                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                    "context": {
+                        // Type: boolean
+                        "isFollowing": false,
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                        "ignoreStatus": {
+                            // Type: boolean
+                            "isIgnored": false,
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                            "ignoreFlags": 0
+                        },
+                        // Type: string:date-time:nullable
+                        "globalIgnoreEndDate": ""
+                    },
+                    // Type: string
+                    "psnDisplayName": "",
+                    // Type: string
+                    "xboxDisplayName": "",
+                    // Type: string
+                    "fbDisplayName": "",
+                    // Type: boolean:nullable
+                    "showActivity": false,
+                    // Type: string
+                    "locale": "",
+                    // Type: boolean
+                    "localeInheritDefault": false,
+                    // Type: integer:int64:nullable
+                    "lastBanReportId": 0,
+                    // Type: boolean
+                    "showGroupMessaging": false,
+                    // Type: string
+                    "profilePicturePath": "",
+                    // Type: string
+                    "profilePictureWidePath": "",
+                    // Type: string
+                    "profileThemeName": "",
+                    // Type: string
+                    "userTitleDisplay": "",
+                    // Type: string
+                    "statusText": "",
+                    // Type: string:date-time
+                    "statusDate": "",
+                    // Type: string:date-time:nullable
+                    "profileBanExpire": "",
+                    // Type: string
+                    "blizzardDisplayName": ""
+                },
+                // Type: boolean
+                "autoEnglishPropertyFallback": false,
+                // Type: Dictionary&lt;string,object&gt;
+                "properties": {
+                    "{string}": {}
+                },
+                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+                "representations": [
+                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+                    {
+                        // Type: string
+                        "name": "",
+                        // Type: string
+                        "path": "",
+                        // Type: string
+                        "validationString": ""
+                    }
+                ],
+                // Type: string[]
+                "tags": [
+                   // Type: string
+                    ""
+                ],
+                // Type: <a href="../../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+                "commentSummary": {
+                    // Type: integer:int64
+                    "topicId": 0,
+                    // Type: integer:int32
+                    "commentCount": 0
+                }
+            }
+        },
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntrySupportArticle">Trending.TrendingEntrySupportArticle</a>
+        "support": {
+            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
+            "article": {
+                // Type: integer:int64
+                "contentId": 0,
+                // Type: string
+                "cType": "",
+                // Type: string
+                "cmsPath": "",
+                // Type: string:date-time
+                "creationDate": "",
+                // Type: string:date-time
+                "modifyDate": "",
+                // Type: boolean
+                "allowComments": false,
+                // Type: boolean
+                "hasAgeGate": false,
+                // Type: integer:int32
+                "minimumAge": 0,
+                // Type: string
+                "ratingImagePath": "",
+                // Type: <a href="../../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
+                "author": {
+                    // Type: integer:int64
+                    "membershipId": 0,
+                    // Type: string
+                    "uniqueName": "",
+                    // Type: string
+                    "normalizedName": "",
+                    // Type: string
+                    "displayName": "",
+                    // Type: integer:int32
+                    "profilePicture": 0,
+                    // Type: integer:int32
+                    "profileTheme": 0,
+                    // Type: integer:int32
+                    "userTitle": 0,
+                    // Type: integer:int64
+                    "successMessageFlags": 0,
+                    // Type: boolean
+                    "isDeleted": false,
+                    // Type: string
+                    "about": "",
+                    // Type: string:date-time:nullable
+                    "firstAccess": "",
+                    // Type: string:date-time:nullable
+                    "lastUpdate": "",
+                    // Type: integer:int64:nullable
+                    "legacyPortalUID": 0,
+                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                    "context": {
+                        // Type: boolean
+                        "isFollowing": false,
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                        "ignoreStatus": {
+                            // Type: boolean
+                            "isIgnored": false,
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>
+                            "ignoreFlags": 0
+                        },
+                        // Type: string:date-time:nullable
+                        "globalIgnoreEndDate": ""
+                    },
+                    // Type: string
+                    "psnDisplayName": "",
+                    // Type: string
+                    "xboxDisplayName": "",
+                    // Type: string
+                    "fbDisplayName": "",
+                    // Type: boolean:nullable
+                    "showActivity": false,
+                    // Type: string
+                    "locale": "",
+                    // Type: boolean
+                    "localeInheritDefault": false,
+                    // Type: integer:int64:nullable
+                    "lastBanReportId": 0,
+                    // Type: boolean
+                    "showGroupMessaging": false,
+                    // Type: string
+                    "profilePicturePath": "",
+                    // Type: string
+                    "profilePictureWidePath": "",
+                    // Type: string
+                    "profileThemeName": "",
+                    // Type: string
+                    "userTitleDisplay": "",
+                    // Type: string
+                    "statusText": "",
+                    // Type: string:date-time
+                    "statusDate": "",
+                    // Type: string:date-time:nullable
+                    "profileBanExpire": "",
+                    // Type: string
+                    "blizzardDisplayName": ""
+                },
+                // Type: boolean
+                "autoEnglishPropertyFallback": false,
+                // Type: Dictionary&lt;string,object&gt;
+                "properties": {
+                    "{string}": {}
+                },
+                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+                "representations": [
+                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+                    {
+                        // Type: string
+                        "name": "",
+                        // Type: string
+                        "path": "",
+                        // Type: string
+                        "validationString": ""
+                    }
+                ],
+                // Type: string[]
+                "tags": [
+                   // Type: string
+                    ""
+                ],
+                // Type: <a href="../../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+                "commentSummary": {
+                    // Type: integer:int64
+                    "topicId": 0,
+                    // Type: integer:int32
+                    "commentCount": 0
+                }
+            }
+        },
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyItem">Trending.TrendingEntryDestinyItem</a>
+        "destinyItem": {
+            // Type: integer:uint32
+            "itemHash": 0
+        },
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyActivity">Trending.TrendingEntryDestinyActivity</a>
+        "destinyActivity": {
+            // Type: integer:uint32
+            "activityHash": 0,
+            // Type: <a href="../../../docs/schemas/Destiny-Activities-DestinyPublicActivityStatus">Destiny.Activities.DestinyPublicActivityStatus</a>
+            "status": {
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]
+                "challengeObjectiveHashes": [
+                   // Type: integer:uint32
+                    0
+                ],
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+                "modifierHashes": [
+                   // Type: integer:uint32
+                    0
+                ],
+                // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+                "rewardTooltipItems": [
+                   // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                    {
+                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                        "itemHash": 0,
+                        // Type: integer:int64:nullable
+                        "itemInstanceId": 0,
+                        // Type: integer:int32
+                        "quantity": 0
+                    }
+                ]
+            }
+        },
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyRitual">Trending.TrendingEntryDestinyRitual</a>
+        "destinyRitual": {
+            // Type: string
+            "image": "",
+            // Type: string
+            "icon": "",
+            // Type: string
+            "title": "",
+            // Type: string
+            "subtitle": "",
+            // Type: string:date-time:nullable
+            "dateStart": "",
+            // Type: string:date-time:nullable
+            "dateEnd": "",
+            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">Destiny.Milestones.DestinyPublicMilestone</a>
+            "milestoneDetails": {
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
+                "milestoneHash": 0,
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>[]
+                "availableQuests": [
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>
+                    {
+                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
+                        "questItemHash": 0,
+                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
+                        "activity": {
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+                            "activityHash": 0,
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+                            "modifierHashes": [
+                               // Type: integer:uint32
+                                0
+                            ],
+                            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
+                            "variants": [
+                               // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
+                                {
+                                    // Type: integer:uint32
+                                    "activityHash": 0
+                                }
+                            ]
+                        },
+                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]
+                        "challenges": [
+                           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>
+                            {
+                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                                "objectiveHash": 0,
+                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                                "activityHash": 0
+                            }
+                        ]
+                    }
+                ],
+                // Type: integer:uint32[]
+                "vendorHashes": [
+                   // Type: integer:uint32
+                    0
+                ],
+                // Type: string:date-time:nullable
+                "startDate": "",
+                // Type: string:date-time:nullable
+                "endDate": ""
+            },
+            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
+            "eventContent": {
+                // Type: string
+                "about": "",
+                // Type: string
+                "status": "",
+                // Type: string[]
+                "tips": [
+                   // Type: string
+                    ""
+                ],
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>[]
+                "itemCategories": [
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>
+                    {
+                        // Type: string
+                        "title": "",
+                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
+                        "itemHashes": [
+                           // Type: integer:uint32
+                            0
+                        ]
+                    }
+                ]
+            }
+        },
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityCreation">Trending.TrendingEntryCommunityCreation</a>
+        "creation": {
+            // Type: string
+            "media": "",
+            // Type: string
+            "title": "",
+            // Type: string
+            "author": "",
+            // Type: integer:int64
+            "authorMembershipId": 0,
+            // Type: integer:uint64
+            "postId": 0,
+            // Type: string
+            "body": "",
+            // Type: integer:int32
+            "upvotes": 0
+        },
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityStream">Trending.TrendingEntryCommunityStream</a>
+        "stream": {
+            // Type: string
+            "image": "",
+            // Type: string
+            "title": "",
+            // Type: string
+            "partnershipIdentifier": "",
+            // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>
+            "partnershipType": 0
+        }
+    },
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    "ErrorCode": 0,
+    // Type: integer:int32
+    "ThrottleSeconds": 0,
+    // Type: string
+    "ErrorStatus": "",
+    // Type: string
+    "Message": "",
+    // Type: Dictionary&lt;string,string&gt;
+    "MessageData": {
+        "{string}": ""
+    },
+    // Type: object
+}
+</code></pre>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/operation_get_Trending-GetTrendingEntryDetail.html#operation_get_Trending-GetTrendingEntryDetail">https://bungie-net.github.io/multi/operation_get_Trending-GetTrendingEntryDetail.html#operation_get_Trending-GetTrendingEntryDetail</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../../js/main.js?1458004654"></script>
+</body>
+</html>

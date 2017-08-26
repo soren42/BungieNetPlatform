@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyRaceDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyRaceDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>In Destiny, &quot;Races&quot; are really more like &quot;Species&quot;.  Sort of.  I mean, are the Awoken a separate species from
 humans?  I'm not sure.  But either way, they're defined here.  You'll see Exo, Awoken, and Human as examples
 of these Species.  Players will choose one for their character.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,17 +99,17 @@ of these Species.  Players will choose one for their character.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>raceType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a></td>
 <td>An enumeration defining the existing, known Races/Species for player characters.  This value<br/>will be the enum value matching this definition.</td>
 </tr>
 <tr>
 <td>genderedRaceNames</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>,string&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>,string&gt;</td>
 <td>A localized string referring to the singular form of the Race's name when referred to in gendered form.<br/>Keyed by the DestinyGender.</td>
 </tr>
 <tr>
@@ -130,7 +131,7 @@ of these Species.  Players will choose one for their character.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "description": "",
@@ -141,9 +142,9 @@ of these Species.  Players will choose one for their character.</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a>
     "raceType": 0,
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>,string&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>,string&gt;
     "genderedRaceNames": {
         "0": ""
     },

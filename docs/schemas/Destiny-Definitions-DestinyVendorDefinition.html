@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions DestinyVendorDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyVendorDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -109,6 +109,7 @@ digestible derived &quot;Definitions&quot;: but often time does not allow that, 
 that vendors are used which we never split off from Vendor Definitions externally.</p>
 <p>Since Vendors are so many things to so many parts of the game, the definition is understandably complex.
 You will want to combine this data with live Vendor information from the API when it is available.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -124,7 +125,7 @@ You will want to combine this data with live Vendor information from the API whe
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition">DestinyVendorDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition">Destiny.Definitions.DestinyVendorDisplayPropertiesDefinition</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -139,7 +140,7 @@ You will want to combine this data with live Vendor information from the API whe
 </tr>
 <tr>
 <td>displayItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>If the vendor has an item that should be displayed as the &quot;featured&quot; item, this is<br/>the hash identifier for that DestinyVendorItemDefinition.<br/><br/>Apparently this is usually a related currency, like a reputation token.  But it need not be restricted to that.</td>
 </tr>
 <tr>
@@ -154,7 +155,7 @@ You will want to combine this data with live Vendor information from the API whe
 </tr>
 <tr>
 <td>factionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32</td>
 <td>If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition.<br/><br/>The game UI and BNet often mine the faction definition for additional elements and details to place<br/>on the screen, such as the faction's Progression status (aka &quot;Reputation&quot;).</td>
 </tr>
 <tr>
@@ -174,7 +175,7 @@ You will want to combine this data with live Vendor information from the API whe
 </tr>
 <tr>
 <td>unlockRanges</td>
-<td><a href="../../docs/schemas/Dates-DateRange">DateRange</a>[]</td>
+<td><a href="../../docs/schemas/Dates-DateRange">Dates.DateRange</a>[]</td>
 <td>If we were able to predict the dates when this Vendor will be visible/available, this will be the list<br/>of those date ranges.  Sadly, we're not able to predict this very frequently, so this will often be useless data.</td>
 </tr>
 <tr>
@@ -219,47 +220,47 @@ You will want to combine this data with live Vendor information from the API whe
 </tr>
 <tr>
 <td>actions</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">DestinyVendorActionDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">Destiny.Definitions.DestinyVendorActionDefinition</a>[]</td>
 <td>Describes &quot;actions&quot; that can be performed on a vendor.  Currently, none of these exist.  But theoretically<br/>a Vendor could let you interact with it by performing actions.  We'll see what these end up looking<br/>like if they ever get used.</td>
 </tr>
 <tr>
 <td>categories</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]</td>
 <td>These are the headers for sections of items that the vendor is selling.<br/>When you see items organized by category in the header, it is these categories<br/>that it is showing.<br/><br/>Well, technically not <em>exactly</em> these.  On BNet, it doesn't make sense to have categories<br/>be &quot;paged&quot; as we do in Destiny, so we run some heuristics to attempt to aggregate pages of<br/>categories together.  <br/><br/>These are the categories post-concatenation, if the vendor had concatenation<br/>applied.  If you want the pre-aggregated category data, use originalCategories.</td>
 </tr>
 <tr>
 <td>originalCategories</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]</td>
 <td>See the categories property for a description of categories and why originalCategories exists.</td>
 </tr>
 <tr>
 <td>displayCategories</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">DestinyDisplayCategoryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">Destiny.Definitions.DestinyDisplayCategoryDefinition</a>[]</td>
 <td>Display Categories are different from &quot;categories&quot; in that these are specifically for visual grouping<br/>and display of categories in Vendor UI.  <br/><br/>The &quot;categories&quot; structure is for validation of the contained<br/>items, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will be<br/>no meaningful relationship between the two.</td>
 </tr>
 <tr>
 <td>interactions</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">DestinyVendorInteractionDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition</a>[]</td>
 <td>In addition to selling items, vendors can have &quot;interactions&quot;: UI where you &quot;talk&quot; with the vendor<br/>and they offer you a reward, some item, or merely acknowledge via dialog that you did something cool.</td>
 </tr>
 <tr>
 <td>inventoryFlyouts</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">DestinyVendorInventoryFlyoutDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition</a>[]</td>
 <td>If the vendor shows you items from your own inventory - such as the Vault vendor does -<br/>this data describes the UI around showing those inventory buckets and which ones get shown.</td>
 </tr>
 <tr>
 <td>itemList</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">DestinyVendorItemDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">Destiny.Definitions.DestinyVendorItemDefinition</a>[]</td>
 <td>If the vendor sells items (or merely has a list of items to show like the &quot;Sack&quot; vendors do),<br/>this is the list of those items that the vendor can sell.  From this list, only a subset will be<br/>available from the vendor at any given time, selected randomly and reset on the vendor's refresh interval.<br/><br/>Note that a vendor can sell the same item multiple ways: for instance, nothing stops a vendor from selling<br/>you some specific weapon but using two different currencies, or the same weapon at multiple &quot;item levels&quot;.</td>
 </tr>
 <tr>
 <td>services</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">DestinyVendorServiceDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">Destiny.Definitions.DestinyVendorServiceDefinition</a>[]</td>
 <td>BNet doesn't use this data yet, but it appears to be an optional list of flavor text<br/>about services that the Vendor can provide.</td>
 </tr>
 <tr>
 <td>acceptedItems</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">DestinyVendorAcceptedItemDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">Destiny.Definitions.DestinyVendorAcceptedItemDefinition</a>[]</td>
 <td>If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster<br/>vendors), this defines the list of source-&gt;destination buckets for transferring.</td>
 </tr>
 <tr>
@@ -281,15 +282,15 @@ You will want to combine this data with live Vendor information from the API whe
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition">DestinyVendorDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition">Destiny.Definitions.DestinyVendorDisplayPropertiesDefinition</a>
     "displayProperties": {
         // Type: string
         "largeIcon": "",
         // Type: string
         "subtitle": "",
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition">DestinyVendorRequirementDisplayEntryDefinition</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition">Destiny.Definitions.DestinyVendorRequirementDisplayEntryDefinition</a>[]
         "requirementsDisplay": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition">DestinyVendorRequirementDisplayEntryDefinition</a>
+           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition">Destiny.Definitions.DestinyVendorRequirementDisplayEntryDefinition</a>
             {
                 // Type: string
                 "icon": "",
@@ -314,13 +315,13 @@ You will want to combine this data with live Vendor information from the API whe
     "buyString": "",
     // Type: string
     "sellString": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "displayItemHash": 0,
     // Type: boolean
     "inhibitBuying": false,
     // Type: boolean
     "inhibitSelling": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32
     "factionHash": 0,
     // Type: integer:int32
     "resetIntervalMinutes": 0,
@@ -331,9 +332,9 @@ You will want to combine this data with live Vendor information from the API whe
        // Type: string
         ""
     ],
-    // Type: <a href="../../docs/schemas/Dates-DateRange">DateRange</a>[]
+    // Type: <a href="../../docs/schemas/Dates-DateRange">Dates.DateRange</a>[]
     "unlockRanges": [
-       // Type: <a href="../../docs/schemas/Dates-DateRange">DateRange</a>
+       // Type: <a href="../../docs/schemas/Dates-DateRange">Dates.DateRange</a>
         {
             // Type: string:date-time
             "start": "",
@@ -357,9 +358,9 @@ You will want to combine this data with live Vendor information from the API whe
     "vendorSubcategoryIdentifier": "",
     // Type: boolean
     "consolidateCategories": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">DestinyVendorActionDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">Destiny.Definitions.DestinyVendorActionDefinition</a>[]
     "actions": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">DestinyVendorActionDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">Destiny.Definitions.DestinyVendorActionDefinition</a>
         {
             // Type: string
             "description": "",
@@ -381,9 +382,9 @@ You will want to combine this data with live Vendor information from the API whe
             "autoPerformAction": false
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]
     "categories": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>
         {
             // Type: integer:int32
             "categoryIndex": 0,
@@ -405,7 +406,7 @@ You will want to combine this data with live Vendor information from the API whe
             "disabledDescription": "",
             // Type: string
             "displayTitle": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition">DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a>
             "overlay": {
                 // Type: string
                 "choiceDescription": "",
@@ -418,9 +419,9 @@ You will want to combine this data with live Vendor information from the API whe
             }
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>[]
     "originalCategories": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>
         {
             // Type: integer:int32
             "categoryIndex": 0,
@@ -442,7 +443,7 @@ You will want to combine this data with live Vendor information from the API whe
             "disabledDescription": "",
             // Type: string
             "displayTitle": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition">DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a>
             "overlay": {
                 // Type: string
                 "choiceDescription": "",
@@ -455,13 +456,13 @@ You will want to combine this data with live Vendor information from the API whe
             }
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">DestinyDisplayCategoryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">Destiny.Definitions.DestinyDisplayCategoryDefinition</a>[]
     "displayCategories": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">DestinyDisplayCategoryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">Destiny.Definitions.DestinyDisplayCategoryDefinition</a>
         {
             // Type: string
             "identifier": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -474,29 +475,29 @@ You will want to combine this data with live Vendor information from the API whe
             }
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">DestinyVendorInteractionDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition</a>[]
     "interactions": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">DestinyVendorInteractionDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>[]
             "replies": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorInteractionRewardSelection">DestinyVendorInteractionRewardSelection</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorInteractionRewardSelection">Destiny.DestinyVendorInteractionRewardSelection</a>
                     "itemRewardsSelection": 0,
                     // Type: string
                     "reply": "",
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorReplyType">DestinyVendorReplyType</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorReplyType">Destiny.DestinyVendorReplyType</a>
                     "replyType": 0
                 }
             ],
             // Type: integer:int32
             "vendorCategoryIndex": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "questlineItemHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>[]
             "sackInteractionList": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition">Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionSackEntryDefinition</a>
                 {
                     // Type: integer:uint32
                     "sackType": 0
@@ -512,7 +513,7 @@ You will want to combine this data with live Vendor information from the API whe
             "flavorLineOne": "",
             // Type: string
             "flavorLineTwo": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
             "headerDisplayProperties": {
                 // Type: string
                 "description": "",
@@ -527,13 +528,13 @@ You will want to combine this data with live Vendor information from the API whe
             "instructions": ""
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">DestinyVendorInventoryFlyoutDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition</a>[]
     "inventoryFlyouts": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">DestinyVendorInventoryFlyoutDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutDefinition</a>
         {
             // Type: string
             "lockedDescription": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -544,15 +545,15 @@ You will want to combine this data with live Vendor information from the API whe
                 // Type: boolean
                 "hasIcon": false
             },
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>[]
             "buckets": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">Destiny.Definitions.DestinyVendorInventoryFlyoutBucketDefinition</a>
                 {
                     // Type: boolean
                     "collapsible": false,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
                     "inventoryBucketHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSortType">DestinyItemSortType</a>
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSortType">Destiny.DestinyItemSortType</a>
                     "sortItemsBy": 0
                 }
             ],
@@ -562,13 +563,13 @@ You will want to combine this data with live Vendor information from the API whe
             "suppressNewness": false
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">DestinyVendorItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">Destiny.Definitions.DestinyVendorItemDefinition</a>[]
     "itemList": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">DestinyVendorItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">Destiny.Definitions.DestinyVendorItemDefinition</a>
         {
             // Type: integer:int32
             "vendorItemIndex": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int32
             "quantity": 0,
@@ -577,11 +578,11 @@ You will want to combine this data with live Vendor information from the API whe
                // Type: integer:int32
                 0
             ],
-            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
             "currencies": [
-               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
+               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -589,13 +590,13 @@ You will want to combine this data with live Vendor information from the API whe
                     "quantity": 0
                 }
             ],
-            // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>
             "refundPolicy": 0,
             // Type: integer:int32
             "refundTimeLimit": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">DestinyItemCreationEntryLevelDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>[]
             "creationLevels": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">DestinyItemCreationEntryLevelDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>
                 {
                     // Type: integer:int32
                     "level": 0
@@ -611,7 +612,7 @@ You will want to combine this data with live Vendor information from the API whe
             "minimumLevel": 0,
             // Type: integer:int32
             "maximumLevel": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition">DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition">Destiny.Definitions.DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>
             "action": {
                 // Type: number:float
                 "executeSeconds": 0,
@@ -622,27 +623,27 @@ You will want to combine this data with live Vendor information from the API whe
             "displayCategory": "",
             // Type: integer:uint32
             "inventoryBucketHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>
             "visibilityScope": 0,
-            // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>
+            // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>
             "purchasableScope": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">DestinyVendorServiceDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">Destiny.Definitions.DestinyVendorServiceDefinition</a>[]
     "services": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">DestinyVendorServiceDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">Destiny.Definitions.DestinyVendorServiceDefinition</a>
         {
             // Type: string
             "name": ""
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">DestinyVendorAcceptedItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">Destiny.Definitions.DestinyVendorAcceptedItemDefinition</a>[]
     "acceptedItems": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">DestinyVendorAcceptedItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">Destiny.Definitions.DestinyVendorAcceptedItemDefinition</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
             "acceptedInventoryBucketHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
             "destinationInventoryBucketHash": 0
         }
     ],

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Milestones DestinyPublicMilestoneQuest | schemas | BungieNetPlatform</title>
+	<title>Destiny.Milestones.DestinyPublicMilestoneQuest | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -80,6 +80,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyPublicMilestoneQuest/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -95,50 +96,50 @@
 <tbody>
 <tr>
 <td>questItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32</td>
 <td>Quests are defined as Items in content.  As such, this is the hash identifier <br/>of the DestinyInventoryItemDefinition that represents this quest.  It will have pointers to all of the steps<br/>in the quest, and display information for the quest (title, description, icon etc)<br/>Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setData<br/>property, and themselves are Items with their own renderable data.</td>
 </tr>
 <tr>
 <td>activity</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">DestinyPublicMilestoneActivity</a></td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a></td>
 <td>A milestone need not have an active activity, but if there is one it will be returned here,<br/>along with any variant and additional information.</td>
 </tr>
 <tr>
 <td>challenges</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]</td>
 <td>For the given quest there could be 0-to-Many challenges: mini quests<br/>that you can perform in the course of doing this quest, that may grant you rewards and benefits.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
     "questItemHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">DestinyPublicMilestoneActivity</a>
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
     "activity": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
         "activityHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:integer:uint32[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
         "modifierHashes": [
            // Type: integer:uint32
             0
         ],
-        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
         "variants": [
-           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>
+           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
             {
                 // Type: integer:uint32
                 "activityHash": 0
             }
         ]
     },
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]
     "challenges": [
-       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>
+       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
             "objectiveHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
             "activityHash": 0
         }
     ]

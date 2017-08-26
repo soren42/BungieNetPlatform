@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny Definitions Milestones DestinyMilestoneQuestRewardsDefinition | schemas | BungieNetPlatform</title>
+	<title>Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardsDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -85,6 +85,7 @@ to track.  We're going to simplify this contract as a result.  However, this als
 opportunity to potentially put more than just item information into the reward data if we're able
 to mine it out in the future.  Remember this if you come back and ask &quot;why are quest reward items
 nested inside of their own class?&quot;</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -100,22 +101,22 @@ nested inside of their own class?&quot;</p>
 <tbody>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]</td>
 <td>The items that represent your reward for completing the quest.<br/><br/>Be warned, these could be &quot;dummy&quot; items: items that are only used to<br/>render a good-looking in-game tooltip, but aren't the actual items themselves.<br/><br/>For instance, when experience is given there's often a dummy item representing &quot;experience&quot;,<br/>with quantity being the amount of experience you got.  We don't have a programmatic association<br/>between those and whatever Progression is actually getting that experience... yet.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>[]
     "items": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">Destiny.Definitions.Milestones.DestinyMilestoneQuestRewardItem</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable
             "vendorHash": 0,
             // Type: integer:int32:nullable
             "vendorItemIndex": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

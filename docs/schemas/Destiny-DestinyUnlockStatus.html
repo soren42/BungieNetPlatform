@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny DestinyUnlockStatus | schemas | BungieNetPlatform</title>
+	<title>Destiny.DestinyUnlockStatus | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503722730">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 <p>Indicates the status of an &quot;Unlock Flag&quot; on a Character or Profile.</p>
 <p>These are individual bits of state that can be either set or not set, and sometimes provide interesting
 human-readable information in their related DestinyUnlockDefinition.</p>
+<h2>Schema</h2>
 <ul>
 <li><strong>Type:</strong> object</li>
 </ul>
@@ -98,7 +99,7 @@ human-readable information in their related DestinyUnlockDefinition.</p>
 <tbody>
 <tr>
 <td>unlockHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the Unlock Flag.  Use to lookup DestinyUnlockDefinition for static data.<br/>Not all unlocks have human readable data - in fact, most don't.  But when they do, it can be very useful to show.<br/>Even if they don't have human readable data, you might be able to infer the meaning of an unlock flag<br/>with a bit of experimentation...</td>
 </tr>
 <tr>
@@ -110,7 +111,7 @@ human-readable information in their related DestinyUnlockDefinition.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32
     "unlockHash": 0,
     // Type: boolean
     "isSet": false
