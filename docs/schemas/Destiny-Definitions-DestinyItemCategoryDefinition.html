@@ -136,17 +136,17 @@ see more categories that you wish would be added!</p>
 </tr>
 <tr>
 <td>grantDestinyItemType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>:Enum</td>
 <td>If an item belongs to this category, it will also receive this item type.<br/>This is now how DestinyItemType is populated for items: it used to be an even jankier process,<br/>but that's a story that requires more alcohol.</td>
 </tr>
 <tr>
 <td>grantDestinySubType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>:Enum</td>
 <td>If an item belongs to this category, it will also receive this subtype enum value.<br/><br/>I know what you're thinking - what if it belongs to multiple categories that provide sub-types?<br/><br/>The last one processed wins, as is the case with all of these &quot;grant&quot; enums.  Now you can see<br/>one reason why we moved away from these enums... but they're so convenient when they work, aren't they?</td>
 </tr>
 <tr>
 <td>grantDestinyClass</td>
-<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum</td>
 <td>If an item belongs to this category, it will also get this class restriction enum value.<br/><br/>See the other &quot;grant&quot;-prefixed properties on this definition for my color commentary.</td>
 </tr>
 <tr>
@@ -194,11 +194,11 @@ see more categories that you wish would be added!</p>
     "itemTypeRegexNot": "",
     // Type: string
     "originBucketIdentifier": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>:Enum
     "grantDestinyItemType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>:Enum
     "grantDestinySubType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum
     "grantDestinyClass": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]
     "groupedCategoryHashes": [

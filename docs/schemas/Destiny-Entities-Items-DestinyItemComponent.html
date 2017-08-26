@@ -113,12 +113,12 @@ don't feel worthwhile to put in their own component.</p>
 </tr>
 <tr>
 <td>bindStatus</td>
-<td><a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a></td>
+<td><a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>:Enum</td>
 <td>If the item is bound to a location, it will be specified in this enum.</td>
 </tr>
 <tr>
 <td>location</td>
-<td><a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a></td>
+<td><a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>:Enum</td>
 <td>An easy reference for where the item is located.  Redundant if you got the item<br/>from an Inventory, but useful when making detail calls on specific items.</td>
 </tr>
 <tr>
@@ -128,7 +128,7 @@ don't feel worthwhile to put in their own component.</p>
 </tr>
 <tr>
 <td>transferStatus</td>
-<td><a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a></td>
+<td><a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>:Enum</td>
 <td>If there is a known error state that would cause this item to not be transferable, this Flags enum will<br/>indicate all of those error states.  Otherwise, it will be 0 (CanTransfer).</td>
 </tr>
 <tr>
@@ -138,7 +138,7 @@ don't feel worthwhile to put in their own component.</p>
 </tr>
 <tr>
 <td>state</td>
-<td><a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a></td>
+<td><a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>:Enum</td>
 <td>A flags enumeration indicating the states of the item: whether it's tracked or locked for example.</td>
 </tr>
 </tbody>
@@ -151,17 +151,17 @@ don't feel worthwhile to put in their own component.</p>
     "itemInstanceId": 0,
     // Type: integer:int32
     "quantity": 0,
-    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>
+    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>:Enum
     "bindStatus": 0,
-    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>
+    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>:Enum
     "location": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
     "bucketHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>
+    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>:Enum
     "transferStatus": 0,
     // Type: boolean
     "lockable": false,
-    // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>
+    // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>:Enum
     "state": 0
 }
 </code></pre>

@@ -103,7 +103,7 @@ definition.inventory.isInstanceItem property.</p>
 <tbody>
 <tr>
 <td>damageType</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a></td>
+<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum</td>
 <td>If the item has a damage type, this is the item's current damage type.</td>
 </tr>
 <tr>
@@ -148,14 +148,14 @@ definition.inventory.isInstanceItem property.</p>
 </tr>
 <tr>
 <td>cannotEquipReason</td>
-<td><a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a></td>
+<td><a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a>:Enum</td>
 <td>If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip<br/>the item.  You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum
     "damageType": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
     "damageTypeHash": 0,
@@ -183,7 +183,7 @@ definition.inventory.isInstanceItem property.</p>
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a>
+    // Type: <a href="../../docs/schemas/Destiny-EquipFailureReason">Destiny.EquipFailureReason</a>:Enum
     "cannotEquipReason": 0
 }
 </code></pre>

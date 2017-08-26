@@ -103,7 +103,7 @@ but hey you do you.</p>
 </tr>
 <tr>
 <td>membershipType</td>
-<td><a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a></td>
+<td><a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum</td>
 <td>membershipType tells you the platform on which the character plays.<br/>Examine the BungieMembershipType enumeration for possible values.</td>
 </tr>
 <tr>
@@ -153,17 +153,17 @@ but hey you do you.</p>
 </tr>
 <tr>
 <td>raceType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a>:Enum</td>
 <td>Mostly for historical purposes at this point, this is an enumeration for the character's race.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this<br/>was too convenient to remove.</td>
 </tr>
 <tr>
 <td>classType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum</td>
 <td>Mostly for historical purposes at this point, this is an enumeration for the character's class.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this<br/>was too convenient to remove.</td>
 </tr>
 <tr>
 <td>genderType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>:Enum</td>
 <td>Mostly for historical purposes at this point, this is an enumeration for the character's Gender.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this<br/>was too convenient to remove.  And yeah, it's an enumeration and not a boolean.  Fight me.</td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@ but hey you do you.</p>
 <pre><code class="javascript">{
     // Type: integer:int64
     "membershipId": 0,
-    // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+    // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
     "membershipType": 0,
     // Type: integer:int64
     "characterId": 0,
@@ -224,11 +224,11 @@ but hey you do you.</p>
     "genderHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyClassDefinition">Destiny.Definitions.DestinyClassDefinition</a>:integer:uint32
     "classHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyRace">Destiny.DestinyRace</a>:Enum
     "raceType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum
     "classType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>:Enum
     "genderType": 0,
     // Type: string
     "emblemPath": "",

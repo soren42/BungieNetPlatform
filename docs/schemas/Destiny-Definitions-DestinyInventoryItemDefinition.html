@@ -278,22 +278,22 @@ terms: but an actual instance of an item can vary widely from these generic defi
 </tr>
 <tr>
 <td>specialItemType</td>
-<td><a href="../../docs/schemas/Destiny-SpecialItemType">Destiny.SpecialItemType</a></td>
+<td><a href="../../docs/schemas/Destiny-SpecialItemType">Destiny.SpecialItemType</a>:Enum</td>
 <td>In Destiny 1, we identified some items as having particular categories that we'd like to know about<br/>for various internal logic purposes.  These are defined in SpecialItemType, and while these days<br/>the itemCategoryHashes are the preferred way of identifying types, we have retained this enum<br/>for its convenience.</td>
 </tr>
 <tr>
 <td>itemType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>:Enum</td>
 <td>A value indicating the &quot;base&quot; the of the item.  This enum is a useful but dramatic oversimplification<br/>of what it means for an item to have a &quot;Type&quot;.  Still, it's handy in many situations.<br/><br/>itemCategoryHashes are the preferred way of identifying types, we have retained this enum<br/>for its convenience.</td>
 </tr>
 <tr>
 <td>itemSubType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>:Enum</td>
 <td>A value indicating the &quot;sub-type&quot; of the item.  For instance, where an item might have an<br/>itemType value &quot;Weapon&quot;, this will be something more specific like &quot;Auto Rifle&quot;.<br/><br/>itemCategoryHashes are the preferred way of identifying types, we have retained this enum<br/>for its convenience.</td>
 </tr>
 <tr>
 <td>classType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum</td>
 <td>We run a similarly weak-sauce algorithm to try and determine whether an item is restricted to a specific<br/>class.  If we find it to be restricted in such a way, we set this classType property to match<br/>the class' enumeration value so that users can easily identify class restricted items.<br/><br/>If you see a mis-classed item, please inform the developers in the Bungie API forum.</td>
 </tr>
 <tr>
@@ -308,12 +308,12 @@ terms: but an actual instance of an item can vary widely from these generic defi
 </tr>
 <tr>
 <td>damageTypes</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum[]</td>
 <td>This is the list of all damage types that we know ahead of time the item can take on.<br/>Unfortunately, this does not preclude the possibility of something funky happening<br/>to give the item a damage type that cannot be predicted beforehand: for example,<br/>if some designer decides to create arbitrary non-reusable plugs that cause damage type<br/>to change.<br/><br/>This damage type prediction will only use the following to determine potential damage types:<br/><br/>- Intrinsic perks<br/><br/>- Talent Node perks<br/><br/>- Known, reusable plugs for sockets</td>
 </tr>
 <tr>
 <td>defaultDamageType</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a></td>
+<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum</td>
 <td>If the item has a damage type that could be considered to be default, it will be populated here.<br/><br/>For various upsetting reasons, it's surprisingly cumbersome to figure this out.  I hope you're happy.</td>
 </tr>
 <tr>
@@ -434,7 +434,7 @@ terms: but an actual instance of an item can vary widely from these generic defi
         "isInstanceItem": false,
         // Type: string
         "tierTypeName": "",
-        // Type: <a href="../../docs/schemas/Destiny-TierType">Destiny.TierType</a>
+        // Type: <a href="../../docs/schemas/Destiny-TierType">Destiny.TierType</a>:Enum
         "tierType": 0
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockDefinition">Destiny.Definitions.DestinyItemSetBlockDefinition</a>
@@ -488,7 +488,7 @@ terms: but an actual instance of an item can vary widely from these generic defi
         "uniqueLabelHash": 0,
         // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">Destiny.Definitions.DestinyEquipmentSlotDefinition</a>:integer:uint32
         "equipmentSlotTypeHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">Destiny.EquippingItemBlockAttributes</a>
+        // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">Destiny.EquippingItemBlockAttributes</a>:Enum
         "attributes": 0,
         // Type: string[]
         "displayStrings": [
@@ -652,7 +652,7 @@ terms: but an actual instance of an item can vary widely from these generic defi
                 ]
             }
         ],
-        // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+        // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
         "exclusive": 0
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition">Destiny.Definitions.DestinyItemObjectiveBlockDefinition</a>
@@ -781,7 +781,7 @@ terms: but an actual instance of an item can vary widely from these generic defi
         "itemDetailString": "",
         // Type: string
         "buildName": "",
-        // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
+        // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum
         "hudDamageType": 0,
         // Type: string
         "hudIcon": ""
@@ -841,13 +841,13 @@ terms: but an actual instance of an item can vary widely from these generic defi
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-SpecialItemType">Destiny.SpecialItemType</a>
+    // Type: <a href="../../docs/schemas/Destiny-SpecialItemType">Destiny.SpecialItemType</a>:Enum
     "specialItemType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>:Enum
     "itemType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>:Enum
     "itemSubType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum
     "classType": 0,
     // Type: boolean
     "equippable": false,
@@ -856,12 +856,12 @@ terms: but an actual instance of an item can vary widely from these generic defi
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum[]
     "damageTypes": [
-       // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
+       // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum
     "defaultDamageType": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
     "defaultDamageTypeHash": 0,

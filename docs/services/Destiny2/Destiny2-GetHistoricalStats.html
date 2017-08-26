@@ -115,7 +115,7 @@
 </tr>
 <tr>
 <td>membershipType</td>
-<td><a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a></td>
+<td><a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum</td>
 <td>Yes</td>
 <td>A valid non-BungieNet membership type.</td>
 </tr>
@@ -146,19 +146,19 @@
 </tr>
 <tr>
 <td>groups</td>
-<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">Destiny.HistoricalStats.Definitions.DestinyStatsGroupType</a>[]</td>
+<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">Destiny.HistoricalStats.Definitions.DestinyStatsGroupType</a>:Enum[]</td>
 <td>No</td>
 <td>Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals</td>
 </tr>
 <tr>
 <td>modes</td>
-<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>[]</td>
+<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum[]</td>
 <td>No</td>
 <td>Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.</td>
 </tr>
 <tr>
 <td>periodType</td>
-<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a></td>
+<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a>:Enum</td>
 <td>No</td>
 <td>Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity</td>
 </tr>
@@ -297,7 +297,7 @@
                         "referenceId": 0,
                         // Type: integer:int64
                         "instanceId": 0,
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
                         "mode": 0,
                         // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
                         "activityTypeHashOverride": 0,
@@ -346,7 +346,7 @@
                         "referenceId": 0,
                         // Type: integer:int64
                         "instanceId": 0,
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
                         "mode": 0,
                         // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
                         "activityTypeHashOverride": 0,
@@ -385,7 +385,7 @@
             ]
         }
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

@@ -122,7 +122,7 @@
 </tr>
 <tr>
 <td>refundPolicy</td>
-<td><a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>:Enum</td>
 <td>If this item can be refunded, this is the policy for what will be refundd, how, and in what time period.</td>
 </tr>
 <tr>
@@ -177,12 +177,12 @@
 </tr>
 <tr>
 <td>visibilityScope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum</td>
 <td>The most restrictive scope that determines whether the item is available in the Vendor's inventory.<br/>See DestinyGatingScope's documentation for more information.<br/><br/>This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel<br/>and maximumLevel properties).</td>
 </tr>
 <tr>
 <td>purchasableScope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a></td>
+<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum</td>
 <td>Similar to visibilityScope, it represents the most restrictive scope that determines whether the item can be purchased.<br/>It will at least be as restrictive as visibilityScope, but could be more restrictive if the item has additional<br/>purchase requirements beyond whether it is merely visible or not.<br/><br/>See DestinyGatingScope's documentation for more information.</td>
 </tr>
 </tbody>
@@ -212,7 +212,7 @@
             "quantity": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>:Enum
     "refundPolicy": 0,
     // Type: integer:int32
     "refundTimeLimit": 0,
@@ -245,9 +245,9 @@
     "displayCategory": "",
     // Type: integer:uint32
     "inventoryBucketHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum
     "visibilityScope": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum
     "purchasableScope": 0
 }
 </code></pre>

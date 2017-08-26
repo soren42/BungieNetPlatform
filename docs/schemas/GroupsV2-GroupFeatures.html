@@ -106,12 +106,12 @@
 </tr>
 <tr>
 <td>capabilities</td>
-<td><a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a></td>
+<td><a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>membershipTypes</td>
-<td><a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>[]</td>
+<td><a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum[]</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -126,7 +126,7 @@
 </tr>
 <tr>
 <td>hostGuidedGamePermissionOverride</td>
-<td><a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a></td>
+<td><a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>:Enum</td>
 <td>Minimum Member Level allowed to host guided games<br/><br/>Always Allowed: Founder, Acting Founder, Admin<br/><br/>Allowed Overrides: None, Member, Beginner<br/><br/>Default is Member for clans, None for groups, although this means nothing for groups.</td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@
 </tr>
 <tr>
 <td>joinLevel</td>
-<td><a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a></td>
+<td><a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>:Enum</td>
 <td>Level to join a member at when accepting an invite, application, or joining an open clan<br/><br/>Default is Beginner.</td>
 </tr>
 </tbody>
@@ -147,22 +147,22 @@
     "maximumMembers": 0,
     // Type: integer:int32
     "maximumMembershipsOfGroupType": 0,
-    // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>:Enum
     "capabilities": 0,
-    // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>[]
+    // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum[]
     "membershipTypes": [
-       // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+       // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
         0
     ],
     // Type: boolean
     "invitePermissionOverride": false,
     // Type: boolean
     "updateCulturePermissionOverride": false,
-    // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>:Enum
     "hostGuidedGamePermissionOverride": 0,
     // Type: boolean
     "updateBannerPermissionOverride": false,
-    // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>:Enum
     "joinLevel": 0
 }
 </code></pre>
