@@ -111,7 +111,22 @@ the latest version of the content manifest databases before using this data.</p>
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>[]&gt;
-    "kioskItems": {}
+    "kioskItems": {
+        "0": [
+           // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">Destiny.Components.Kiosks.DestinyKioskItem</a>
+            {
+                // Type: integer:int32
+                "index": 0,
+                // Type: boolean
+                "canAcquire": false,
+                // Type: integer:int32[]
+                "failureIndexes": [
+                   // Type: integer:int32
+                    0
+                ]
+            }
+        ]
+    }
 }
 </code></pre>
 <h2>References</h2>

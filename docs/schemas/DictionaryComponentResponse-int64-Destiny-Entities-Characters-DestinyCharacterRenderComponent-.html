@@ -108,7 +108,74 @@
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: Dictionary<integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">Destiny.Entities.Characters.DestinyCharacterRenderComponent</a>&gt;
-    "data": {},
+    "data": {
+        "0": {
+            // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+            "customDyes": [
+               // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+                {
+                    // Type: integer:uint32
+                    "channelHash": 0,
+                    // Type: integer:uint32
+                    "dyeHash": 0
+                }
+            ],
+            // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a>
+            "customization": {
+                // Type: integer:uint32
+                "personality": 0,
+                // Type: integer:uint32
+                "face": 0,
+                // Type: integer:uint32
+                "skinColor": 0,
+                // Type: integer:uint32
+                "lipColor": 0,
+                // Type: integer:uint32
+                "eyeColor": 0,
+                // Type: integer:uint32[]
+                "hairColors": [
+                   // Type: integer:uint32
+                    0
+                ],
+                // Type: integer:uint32[]
+                "featureColors": [
+                   // Type: integer:uint32
+                    0
+                ],
+                // Type: integer:uint32
+                "decalColor": 0,
+                // Type: boolean
+                "wearHelmet": false,
+                // Type: integer:int32
+                "hairIndex": 0,
+                // Type: integer:int32
+                "featureIndex": 0,
+                // Type: integer:int32
+                "decalIndex": 0
+            },
+            // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a>
+            "peerView": {
+                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>[]
+                "equipment": [
+                   // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>
+                    {
+                        // Type: integer:uint32
+                        "itemHash": 0,
+                        // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+                        "dyes": [
+                           // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+                            {
+                                // Type: integer:uint32
+                                "channelHash": 0,
+                                // Type: integer:uint32
+                                "dyeHash": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
     // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
     "privacy": 0
 }

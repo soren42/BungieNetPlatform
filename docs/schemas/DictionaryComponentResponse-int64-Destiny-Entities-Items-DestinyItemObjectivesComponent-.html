@@ -108,7 +108,26 @@
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: Dictionary<integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">Destiny.Entities.Items.DestinyItemObjectivesComponent</a>&gt;
-    "data": {},
+    "data": {
+        "0": {
+            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+            "objectives": [
+               // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                {
+                    // Type: integer:uint32
+                    "objectiveHash": 0,
+                    // Type: integer:uint32:nullable
+                    "destinationHash": 0,
+                    // Type: integer:uint32:nullable
+                    "activityHash": 0,
+                    // Type: integer:int32:nullable
+                    "progress": 0,
+                    // Type: boolean
+                    "complete": false
+                }
+            ]
+        }
+    },
     // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
     "privacy": 0
 }

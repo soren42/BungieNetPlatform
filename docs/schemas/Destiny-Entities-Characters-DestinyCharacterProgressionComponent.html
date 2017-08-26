@@ -125,11 +125,194 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
-    "progressions": {},
+    "progressions": {
+        "0": {
+            // Type: integer:uint32
+            "progressionHash": 0,
+            // Type: integer:int32
+            "dailyProgress": 0,
+            // Type: integer:int32
+            "dailyLimit": 0,
+            // Type: integer:int32
+            "weeklyProgress": 0,
+            // Type: integer:int32
+            "weeklyLimit": 0,
+            // Type: integer:int32
+            "currentProgress": 0,
+            // Type: integer:int32
+            "level": 0,
+            // Type: integer:int32
+            "levelCap": 0,
+            // Type: integer:int32
+            "stepIndex": 0,
+            // Type: integer:int32
+            "progressToNextLevel": 0,
+            // Type: integer:int32
+            "nextLevelAt": 0
+        }
+    },
     // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>&gt;
-    "factions": {},
+    "factions": {
+        "0": {
+            // Type: integer:uint32
+            "factionHash": 0,
+            // Type: integer:uint32
+            "progressionHash": 0,
+            // Type: integer:int32
+            "dailyProgress": 0,
+            // Type: integer:int32
+            "dailyLimit": 0,
+            // Type: integer:int32
+            "weeklyProgress": 0,
+            // Type: integer:int32
+            "weeklyLimit": 0,
+            // Type: integer:int32
+            "currentProgress": 0,
+            // Type: integer:int32
+            "level": 0,
+            // Type: integer:int32
+            "levelCap": 0,
+            // Type: integer:int32
+            "stepIndex": 0,
+            // Type: integer:int32
+            "progressToNextLevel": 0,
+            // Type: integer:int32
+            "nextLevelAt": 0
+        }
+    },
     // Type: Dictionary<integer:uint32,<a href="../../docs/responses/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>&gt;
-    "milestones": {},
+    "milestones": {
+        "0": {
+            // Type: integer:uint32
+            "milestoneHash": 0,
+            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>[]
+            "availableQuests": [
+               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>
+                {
+                    // Type: integer:uint32
+                    "questItemHash": 0,
+                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
+                    "status": {
+                        // Type: integer:uint32
+                        "questHash": 0,
+                        // Type: integer:uint32
+                        "stepHash": 0,
+                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+                        "stepObjectives": [
+                           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                            {
+                                // Type: integer:uint32
+                                "objectiveHash": 0,
+                                // Type: integer:uint32:nullable
+                                "destinationHash": 0,
+                                // Type: integer:uint32:nullable
+                                "activityHash": 0,
+                                // Type: integer:int32:nullable
+                                "progress": 0,
+                                // Type: boolean
+                                "complete": false
+                            }
+                        ],
+                        // Type: boolean
+                        "tracked": false,
+                        // Type: integer:int64
+                        "itemInstanceId": 0,
+                        // Type: boolean
+                        "completed": false,
+                        // Type: boolean
+                        "redeemed": false,
+                        // Type: boolean
+                        "started": false,
+                        // Type: integer:uint32:nullable
+                        "vendorHash": 0
+                    },
+                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
+                    "activity": {
+                        // Type: integer:uint32
+                        "activityHash": 0,
+                        // Type: integer:uint32[]
+                        "modifierHashes": [
+                           // Type: integer:uint32
+                            0
+                        ],
+                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
+                        "variants": [
+                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+                            {
+                                // Type: integer:uint32
+                                "activityHash": 0,
+                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+                                "completionStatus": {
+                                    // Type: boolean
+                                    "completed": false,
+                                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+                                    "phases": [
+                                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+                                        {
+                                            // Type: boolean
+                                            "complete": false
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]
+                    "challenges": [
+                       // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>
+                        {
+                            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                            "objective": {
+                                // Type: integer:uint32
+                                "objectiveHash": 0,
+                                // Type: integer:uint32:nullable
+                                "destinationHash": 0,
+                                // Type: integer:uint32:nullable
+                                "activityHash": 0,
+                                // Type: integer:int32:nullable
+                                "progress": 0,
+                                // Type: boolean
+                                "complete": false
+                            }
+                        }
+                    ]
+                }
+            ],
+            // Type: Dictionary&lt;string,number:float&gt;
+            "values": {
+                "key": 0
+            },
+            // Type: integer:uint32[]
+            "vendorHashes": [
+               // Type: integer:uint32
+                0
+            ],
+            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>[]
+            "rewards": [
+               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>
+                {
+                    // Type: integer:uint32
+                    "rewardCategoryHash": 0,
+                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>[]
+                    "entries": [
+                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>
+                        {
+                            // Type: integer:uint32
+                            "rewardEntryHash": 0,
+                            // Type: boolean
+                            "earned": false,
+                            // Type: boolean
+                            "redeemed": false
+                        }
+                    ]
+                }
+            ],
+            // Type: string:date-time:nullable
+            "startDate": "",
+            // Type: string:date-time:nullable
+            "endDate": ""
+        }
+    },
     // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>[]
     "quests": [
        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
@@ -169,7 +352,23 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
         }
     ],
     // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;
-    "uninstancedItemObjectives": {}
+    "uninstancedItemObjectives": {
+        "0": [
+           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+            {
+                // Type: integer:uint32
+                "objectiveHash": 0,
+                // Type: integer:uint32:nullable
+                "destinationHash": 0,
+                // Type: integer:uint32:nullable
+                "activityHash": 0,
+                // Type: integer:int32:nullable
+                "progress": 0,
+                // Type: boolean
+                "complete": false
+            }
+        ]
+    }
 }
 </code></pre>
 <h2>References</h2>

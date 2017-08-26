@@ -102,7 +102,42 @@
 PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
     // Type: Dictionary<string,<a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition">Destiny.HistoricalStats.Definitions.DestinyHistoricalStatsDefinition</a>&gt;
-    "Response": {},
+    "Response": {
+        "key": {
+            // Type: string
+            "statId": "",
+            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">Destiny.HistoricalStats.Definitions.DestinyStatsGroupType</a>
+            "group": 0,
+            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a>[]
+            "periodTypes": [
+               // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a>
+                0
+            ],
+            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>[]
+            "modes": [
+               // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>
+                0
+            ],
+            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType">Destiny.HistoricalStats.Definitions.DestinyStatsCategoryType</a>
+            "category": 0,
+            // Type: string
+            "statName": "",
+            // Type: string
+            "statDescription": "",
+            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-UnitType">Destiny.HistoricalStats.Definitions.UnitType</a>
+            "unitType": 0,
+            // Type: string
+            "iconImage": "",
+            // Type: integer:int32:nullable
+            "mergeMethod": 0,
+            // Type: string
+            "unitLabel": "",
+            // Type: integer:int32
+            "weight": 0,
+            // Type: integer:uint32:nullable
+            "medalTierHash": 0
+        }
+    },
     // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
     "ErrorCode": 0,
     // Type: integer:int32
@@ -112,7 +147,9 @@ PlatformErrorCode: 200</p>
     // Type: string
     "Message": "",
     // Type: Dictionary&lt;string,string&gt;
-    "MessageData": {},
+    "MessageData": {
+        "key": ""
+    },
     // Type: object
 }
 </code></pre>

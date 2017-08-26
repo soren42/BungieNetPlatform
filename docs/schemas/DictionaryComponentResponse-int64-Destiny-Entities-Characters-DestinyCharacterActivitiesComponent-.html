@@ -108,7 +108,42 @@
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: Dictionary<integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterActivitiesComponent">Destiny.Entities.Characters.DestinyCharacterActivitiesComponent</a>&gt;
-    "data": {},
+    "data": {
+        "0": {
+            // Type: string:date-time
+            "dateActivityStarted": "",
+            // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>[]
+            "availableActivities": [
+               // Type: <a href="../../docs/schemas/Destiny-DestinyActivity">Destiny.DestinyActivity</a>
+                {
+                    // Type: integer:uint32
+                    "activityHash": 0,
+                    // Type: boolean
+                    "isNew": false,
+                    // Type: boolean
+                    "canLead": false,
+                    // Type: boolean
+                    "canJoin": false,
+                    // Type: boolean
+                    "isCompleted": false,
+                    // Type: boolean
+                    "isVisible": false,
+                    // Type: integer:int32:nullable
+                    "displayLevel": 0,
+                    // Type: integer:int32:nullable
+                    "recommendedLight": 0,
+                    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">Destiny.DestinyActivityDifficultyTier</a>
+                    "difficultyTier": 0
+                }
+            ],
+            // Type: integer:uint32
+            "currentActivityHash": 0,
+            // Type: integer:uint32
+            "currentActivityModeHash": 0,
+            // Type: integer:uint32
+            "lastCompletedStoryHash": 0
+        }
+    },
     // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
     "privacy": 0
 }

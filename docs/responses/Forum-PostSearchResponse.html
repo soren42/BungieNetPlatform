@@ -296,7 +296,32 @@
                     // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
                     "clanInfo": {
                         // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
-                        "d2ClanProgressions": {},
+                        "d2ClanProgressions": {
+                            "0": {
+                                // Type: integer:uint32
+                                "progressionHash": 0,
+                                // Type: integer:int32
+                                "dailyProgress": 0,
+                                // Type: integer:int32
+                                "dailyLimit": 0,
+                                // Type: integer:int32
+                                "weeklyProgress": 0,
+                                // Type: integer:int32
+                                "weeklyLimit": 0,
+                                // Type: integer:int32
+                                "currentProgress": 0,
+                                // Type: integer:int32
+                                "level": 0,
+                                // Type: integer:int32
+                                "levelCap": 0,
+                                // Type: integer:int32
+                                "stepIndex": 0,
+                                // Type: integer:int32
+                                "progressToNextLevel": 0,
+                                // Type: integer:int32
+                                "nextLevelAt": 0
+                            }
+                        },
                         // Type: string
                         "clanCallsign": "",
                         // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
@@ -448,7 +473,32 @@
                     // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
                     "clanInfo": {
                         // Type: Dictionary<integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
-                        "d2ClanProgressions": {},
+                        "d2ClanProgressions": {
+                            "0": {
+                                // Type: integer:uint32
+                                "progressionHash": 0,
+                                // Type: integer:int32
+                                "dailyProgress": 0,
+                                // Type: integer:int32
+                                "dailyLimit": 0,
+                                // Type: integer:int32
+                                "weeklyProgress": 0,
+                                // Type: integer:int32
+                                "weeklyLimit": 0,
+                                // Type: integer:int32
+                                "currentProgress": 0,
+                                // Type: integer:int32
+                                "level": 0,
+                                // Type: integer:int32
+                                "levelCap": 0,
+                                // Type: integer:int32
+                                "stepIndex": 0,
+                                // Type: integer:int32
+                                "progressToNextLevel": 0,
+                                // Type: integer:int32
+                                "nextLevelAt": 0
+                            }
+                        },
                         // Type: string
                         "clanCallsign": "",
                         // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
@@ -475,9 +525,81 @@
                 // Type: integer:int32
                 "groupJoinInviteCount": 0,
                 // Type: Dictionary<<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupMember">GroupsV2.GroupMember</a>&gt;
-                "currentUserMemberMap": {},
+                "currentUserMemberMap": {
+                    "0": {
+                        // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>
+                        "memberType": 0,
+                        // Type: boolean
+                        "isOnline": false,
+                        // Type: integer:int64
+                        "groupId": 0,
+                        // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        "destinyUserInfo": {
+                            // Type: string
+                            "supplementalDisplayName": "",
+                            // Type: string
+                            "iconPath": "",
+                            // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+                            "membershipType": 0,
+                            // Type: integer:int64
+                            "membershipId": 0,
+                            // Type: string
+                            "displayName": ""
+                        },
+                        // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        "bungieNetUserInfo": {
+                            // Type: string
+                            "supplementalDisplayName": "",
+                            // Type: string
+                            "iconPath": "",
+                            // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+                            "membershipType": 0,
+                            // Type: integer:int64
+                            "membershipId": 0,
+                            // Type: string
+                            "displayName": ""
+                        },
+                        // Type: string:date-time
+                        "joinDate": ""
+                    }
+                },
                 // Type: Dictionary<<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>,<a href="../../docs/schemas/GroupsV2-GroupPotentialMember">GroupsV2.GroupPotentialMember</a>&gt;
-                "currentUserPotentialMemberMap": {}
+                "currentUserPotentialMemberMap": {
+                    "0": {
+                        // Type: <a href="../../docs/schemas/GroupsV2-GroupPotentialMemberStatus">GroupsV2.GroupPotentialMemberStatus</a>
+                        "potentialStatus": 0,
+                        // Type: integer:int64
+                        "groupId": 0,
+                        // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        "destinyUserInfo": {
+                            // Type: string
+                            "supplementalDisplayName": "",
+                            // Type: string
+                            "iconPath": "",
+                            // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+                            "membershipType": 0,
+                            // Type: integer:int64
+                            "membershipId": 0,
+                            // Type: string
+                            "displayName": ""
+                        },
+                        // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                        "bungieNetUserInfo": {
+                            // Type: string
+                            "supplementalDisplayName": "",
+                            // Type: string
+                            "iconPath": "",
+                            // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>
+                            "membershipType": 0,
+                            // Type: integer:int64
+                            "membershipId": 0,
+                            // Type: string
+                            "displayName": ""
+                        },
+                        // Type: string:date-time
+                        "joinDate": ""
+                    }
+                }
             }
         ],
         // Type: <a href="../../docs/schemas/Tags-Models-Contracts-TagResponse">Tags.Models.Contracts.TagResponse</a>[]
@@ -694,7 +816,9 @@
     // Type: string
     "Message": "",
     // Type: Dictionary&lt;string,string&gt;
-    "MessageData": {},
+    "MessageData": {
+        "key": ""
+    },
     // Type: object
 }
 </code></pre>

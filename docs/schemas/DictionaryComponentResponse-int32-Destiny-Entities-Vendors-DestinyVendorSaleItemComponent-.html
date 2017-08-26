@@ -108,7 +108,48 @@
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: Dictionary<integer:int32,<a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">Destiny.Entities.Vendors.DestinyVendorSaleItemComponent</a>&gt;
-    "data": {},
+    "data": {
+        "0": {
+            // Type: integer:int32
+            "vendorItemIndex": 0,
+            // Type: integer:uint32
+            "itemHash": 0,
+            // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">Destiny.VendorItemStatus</a>
+            "saleStatus": 0,
+            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+            "costs": [
+               // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                {
+                    // Type: integer:uint32
+                    "itemHash": 0,
+                    // Type: integer:int64:nullable
+                    "itemInstanceId": 0,
+                    // Type: integer:int32
+                    "quantity": 0
+                }
+            ],
+            // Type: integer:uint32[]
+            "requiredUnlocks": [
+               // Type: integer:uint32
+                0
+            ],
+            // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>[]
+            "unlockStatuses": [
+               // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">Destiny.DestinyUnlockStatus</a>
+                {
+                    // Type: integer:uint32
+                    "unlockHash": 0,
+                    // Type: boolean
+                    "isSet": false
+                }
+            ],
+            // Type: integer:int32[]
+            "failureIndexes": [
+               // Type: integer:int32
+                0
+            ]
+        }
+    },
     // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>
     "privacy": 0
 }
