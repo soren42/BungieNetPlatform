@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,8 @@
 <p>All damage types that are possible in the game are defined here, along with localized info and icons as needed.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> DamageTypes</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,7 +98,7 @@
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>The description of the damage type, icon etc...</td>
 </tr>
 <tr>
@@ -112,7 +113,7 @@
 </tr>
 <tr>
 <td>enumValue</td>
-<td><a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum</td>
 <td>We have an enumeration for damage types for quick reference.  This is the current definition's damage type enum value.</td>
 </tr>
 <tr>
@@ -128,13 +129,13 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -149,7 +150,7 @@
     "transparentIconPath": "",
     // Type: boolean
     "showIcon": false,
-    // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
     "enumValue": 0,
     // Type: integer:uint32
     "hash": 0,

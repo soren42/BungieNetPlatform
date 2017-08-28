@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A subclass of DestinyItemQuantity, that provides not just the item and its quantity
-but also information that BNet can - at some point - use internally to provide
-more robust runtime information about the item's qualities.</p>
-<p>If you want it, please ask!  We're just out of time to wire it up right now.
-Or a clever person just may do it with our existing endpoints.</p>
+<p>A subclass of DestinyItemQuantity, that provides not just the item and its quantity but also information that BNet can - at some point - use internally to provide more robust runtime information about the item's qualities.<br/><br/>If you want it, please ask!  We're just out of time to wire it up right now. Or a clever person just may do it with our existing endpoints.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,23 +97,23 @@ Or a clever person just may do it with our existing endpoints.</p>
 <tbody>
 <tr>
 <td>vendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable</td>
-<td>The quest reward item <em>may</em> be associated with a vendor.  If so,<br/>this is that vendor.  Use this hash to look up the DestinyVendorDefinition.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td>The quest reward item <em>may</em> be associated with a vendor.  If so, this is that vendor.  Use this hash to look up the DestinyVendorDefinition.</td>
 </tr>
 <tr>
 <td>vendorItemIndex</td>
 <td>integer:int32:nullable</td>
-<td>The quest reward item <em>may</em> be associated with a vendor.  If so,<br/>this is the index of the item being sold, which we can use at runtime<br/>to find instanced item information for the reward item.</td>
+<td>The quest reward item <em>may</em> be associated with a vendor.  If so, this is the index of the item being sold, which we can use at runtime to find instanced item information for the reward item.</td>
 </tr>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier for the item in question.  Use it to look up the item's DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64:nullable</td>
-<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID.<br/>Normally, this will be null.</td>
+<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.</td>
 </tr>
 <tr>
 <td>quantity</td>
@@ -128,11 +124,11 @@ Or a clever person just may do it with our existing endpoints.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32:nullable
     "vendorHash": 0,
     // Type: integer:int32:nullable
     "vendorItemIndex": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
     "itemHash": 0,
     // Type: integer:int64:nullable
     "itemInstanceId": 0,

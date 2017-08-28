@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,17 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyEquipmentSlotDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Characters can not only have Inventory buckets (containers of items that are generally matched by their type or
-functionality), they can also have Equipment Slots.</p>
-<p>The Equipment Slot is an indicator that the related bucket can have instanced items equipped
-on the character.  For instance, the Primary Weapon bucket has an Equipment Slot that determines
-whether you can equip primary weapons, and holds the association between its slot and the inventory bucket
-from which it can have items equipped.</p>
-<p>An Equipment Slot must have a related Inventory Bucket, but not
-all inventory buckets must have Equipment Slots.</p>
+<p>Characters can not only have Inventory buckets (containers of items that are generally matched by their type or functionality), they can also have Equipment Slots.<br/><br/>The Equipment Slot is an indicator that the related bucket can have instanced items equipped on the character.  For instance, the Primary Weapon bucket has an Equipment Slot that determines whether you can equip primary weapons, and holds the association between its slot and the inventory bucket from which it can have items equipped.<br/><br/>An Equipment Slot must have a related Inventory Bucket, but not all inventory buckets must have Equipment Slots.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -104,23 +97,23 @@ all inventory buckets must have Equipment Slots.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>equipmentCategoryHash</td>
 <td>integer:uint32</td>
-<td>These technically point to &quot;Equipment Category Definitions&quot;.  But don't get excited.  There's<br/>nothing of significant value in those definitions, so I didn't bother to expose them.  You can use the<br/>hash here to group equipment slots by common functionality, which serves the same purpose as if we had<br/>the Equipment Category definitions exposed.</td>
+<td>These technically point to &quot;Equipment Category Definitions&quot;.  But don't get excited.  There's nothing of significant value in those definitions, so I didn't bother to expose them.  You can use the hash here to group equipment slots by common functionality, which serves the same purpose as if we had the Equipment Category definitions exposed.</td>
 </tr>
 <tr>
 <td>bucketTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The inventory bucket that owns this equipment slot.</td>
 </tr>
 <tr>
 <td>applyCustomArtDyes</td>
 <td>boolean</td>
-<td>If True, equipped items should have their custom art dyes applied when rendering the item.<br/>Otherwise, custom art dyes on an item should be ignored if the item is equipped in this slot.</td>
+<td>If True, equipped items should have their custom art dyes applied when rendering the item. Otherwise, custom art dyes on an item should be ignored if the item is equipped in this slot.</td>
 </tr>
 <tr>
 <td>hash</td>
@@ -135,13 +128,13 @@ all inventory buckets must have Equipment Slots.</p>
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -154,7 +147,7 @@ all inventory buckets must have Equipment Slots.</p>
     },
     // Type: integer:uint32
     "equipmentCategoryHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32
     "bucketTypeHash": 0,
     // Type: boolean
     "applyCustomArtDyes": false,

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,19 +80,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyRewardSourceDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a heuristically-determined &quot;item source&quot; according to Bungie.net.
-These item sources are non-canonical: we apply a combination of special configuration
-and often-fragile heuristics to attempt to discern whether an item should be part of a given
-&quot;source,&quot; but we have known cases of false positives and negatives due to our imperfect heuristics.</p>
-<p>Still, they provide a decent approximation for people trying to figure out how an item can be obtained.
-DestinyInventoryItemDefinition refers to sources in the sourceDatas.sourceHashes property for all sources
-we determined the item could spawn from.</p>
-<p>An example in Destiny 1 of a Source would be &quot;Nightfall&quot;.  If an item has the &quot;Nightfall&quot; source associated
-with it, it's extremely likely that you can earn that item while playing Nightfall, either during play
-or as an after-completion reward.</p>
+<p>Represents a heuristically-determined &quot;item source&quot; according to Bungie.net. These item sources are non-canonical: we apply a combination of special configuration and often-fragile heuristics to attempt to discern whether an item should be part of a given &quot;source,&quot; but we have known cases of false positives and negatives due to our imperfect heuristics.<br/><br/>Still, they provide a decent approximation for people trying to figure out how an item can be obtained. DestinyInventoryItemDefinition refers to sources in the sourceDatas.sourceHashes property for all sources we determined the item could spawn from.<br/><br/>An example in Destiny 1 of a Source would be &quot;Nightfall&quot;.  If an item has the &quot;Nightfall&quot; source associated with it, it's extremely likely that you can earn that item while playing Nightfall, either during play or as an after-completion reward.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> RewardSources</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -106,13 +98,13 @@ or as an after-completion reward.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>category</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceCategory">Destiny.Definitions.DestinyRewardSourceCategory</a>:Enum</td>
-<td>Sources are grouped into categories: common ways that items are provided.<br/>I hope to see this expand in Destiny 2 once we have time to generate accurate <br/>reward source data.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceCategory">DestinyRewardSourceCategory</a>:Enum</td>
+<td>Sources are grouped into categories: common ways that items are provided. I hope to see this expand in Destiny 2 once we have time to generate accurate reward source data.</td>
 </tr>
 <tr>
 <td>hash</td>
@@ -127,13 +119,13 @@ or as an after-completion reward.</p>
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -144,7 +136,7 @@ or as an after-completion reward.</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceCategory">Destiny.Definitions.DestinyRewardSourceCategory</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceCategory">DestinyRewardSourceCategory</a>:Enum
     "category": 0,
     // Type: integer:uint32
     "hash": 0,

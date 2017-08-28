@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Inventory-DestinyInventoryComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A list of minimal information for items in an inventory: be it a character's inventory, or a Profile's inventory.
-(Note that the Vault is a collection of inventory buckets in the Profile's inventory)</p>
-<p>Inventory Items returned here are in a flat list, but importantly they have a bucketHash property that
-indicates the specific inventory bucket that is holding them.  These buckets constitute things like the separate
-sections of the Vault, the user's inventory slots, etc.  See DestinyInventoryBucketDefinition for more info.</p>
+<p>A list of minimal information for items in an inventory: be it a character's inventory, or a Profile's inventory. (Note that the Vault is a collection of inventory buckets in the Profile's inventory)<br/><br/>Inventory Items returned here are in a flat list, but importantly they have a bucketHash property that indicates the specific inventory bucket that is holding them.  These buckets constitute things like the separate sections of the Vault, the user's inventory slots, etc.  See DestinyInventoryBucketDefinition for more info.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,34 +97,34 @@ sections of the Vault, the user's inventory slots, etc.  See DestinyInventoryBuc
 <tbody>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>[]</td>
-<td>The items in this inventory.  If you care to bucket them, use the item's bucketHash property to group<br/>them.</td>
+<td><a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>[]</td>
+<td>The items in this inventory.  If you care to bucket them, use the item's bucketHash property to group them.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>[]
     "items": [
-       // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">Destiny.Entities.Items.DestinyItemComponent</a>
+       // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
             // Type: integer:int32
             "quantity": 0,
-            // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>:Enum
+            // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>:Enum
             "bindStatus": 0,
-            // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>:Enum
+            // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>:Enum
             "location": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32
             "bucketHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>:Enum
+            // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>:Enum
             "transferStatus": 0,
             // Type: boolean
             "lockable": false,
-            // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>:Enum
+            // Type: <a href="../../docs/schemas/Destiny-ItemState">ItemState</a>:Enum
             "state": 0
         }
     ]

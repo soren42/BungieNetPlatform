@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Characters-DestinyCharacterRenderComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Only really useful if you're attempting to render the character's current appearance in 3D,
-this returns a bare minimum of information, pre-aggregated, that you'll need to perform that rendering.
-Note that you need to combine this with other 3D assets and data from our servers.</p>
-<p>Examine the Javascript returned by <a href="https://bungie.net/sharedbundle/spasm">https://bungie.net/sharedbundle/spasm</a> to see how we use this data, but
-be warned: the rabbit hole goes pretty deep.</p>
+<p>Only really useful if you're attempting to render the character's current appearance in 3D, this returns a bare minimum of information, pre-aggregated, that you'll need to perform that rendering. Note that you need to combine this with other 3D assets and data from our servers.<br/><br/>Examine the Javascript returned by <a href="https://bungie.net/sharedbundle/spasm">https://bungie.net/sharedbundle/spasm</a> to see how we use this data, but be warned: the rabbit hole goes pretty deep.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,26 +97,26 @@ be warned: the rabbit hole goes pretty deep.</p>
 <tbody>
 <tr>
 <td>customDyes</td>
-<td><a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]</td>
-<td>Custom dyes, calculated by iterating over the character's equipped items.<br/>Useful for pre-fetching all of the dye data needed from our server.</td>
+<td><a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]</td>
+<td>Custom dyes, calculated by iterating over the character's equipped items. Useful for pre-fetching all of the dye data needed from our server.</td>
 </tr>
 <tr>
 <td>customization</td>
-<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a></td>
-<td>This is actually something that Spasm.js <em>doesn't</em> do right now, and that we don't return assets for yet.<br/>This is the data about what character customization options you picked.  You can combine this with<br/>DestinyCharacterCustomizationOptionDefinition to show some cool info, and hopefully someday to actually<br/>render a user's face in 3D.  We'll see if we ever end up with time for that.</td>
+<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a></td>
+<td>This is actually something that Spasm.js <em>doesn't</em> do right now, and that we don't return assets for yet. This is the data about what character customization options you picked.  You can combine this with DestinyCharacterCustomizationOptionDefinition to show some cool info, and hopefully someday to actually render a user's face in 3D.  We'll see if we ever end up with time for that.</td>
 </tr>
 <tr>
 <td>peerView</td>
-<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a></td>
+<td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a></td>
 <td>A minimal view of:<br/><br/>- Equipped items<br/><br/>- The rendering-related custom options on those equipped items<br/><br/>Combined, that should be enough to render all of the items on the equipped character.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
     "customDyes": [
-       // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+       // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
         {
             // Type: integer:uint32
             "channelHash": 0,
@@ -128,7 +124,7 @@ be warned: the rabbit hole goes pretty deep.</p>
             "dyeHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a>
+    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a>
     "customization": {
         // Type: integer:uint32
         "personality": 0,
@@ -161,17 +157,17 @@ be warned: the rabbit hole goes pretty deep.</p>
         // Type: integer:int32
         "decalIndex": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a>
+    // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a>
     "peerView": {
-        // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>[]
         "equipment": [
-           // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>
+           // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                 "itemHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
                 "dyes": [
-                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
                     {
                         // Type: integer:uint32
                         "channelHash": 0,

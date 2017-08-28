@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The definition of a specific reward, which may be contained in a category of rewards and
-that has optional information about how it is obtained.</p>
+<p>The definition of a specific reward, which may be contained in a category of rewards and that has optional information about how it is obtained.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,7 +98,7 @@ that has optional information about how it is obtained.</p>
 <tr>
 <td>rewardEntryHash</td>
 <td>integer:uint32</td>
-<td>The identifier for this reward entry.  Runtime data will refer to reward entries<br/>by this hash.  Only guaranteed unique within the specific Milestone.</td>
+<td>The identifier for this reward entry.  Runtime data will refer to reward entries by this hash.  Only guaranteed unique within the specific Milestone.</td>
 </tr>
 <tr>
 <td>rewardEntryIdentifier</td>
@@ -108,23 +107,23 @@ that has optional information about how it is obtained.</p>
 </tr>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
 <td>The items you will get as rewards, and how much of it you'll get.</td>
 </tr>
 <tr>
 <td>vendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable</td>
-<td>If this reward is redeemed at a Vendor, this is the hash of the Vendor to go to in order<br/>to redeem the reward.  Use this hash to look up the DestinyVendorDefinition.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td>If this reward is redeemed at a Vendor, this is the hash of the Vendor to go to in order to redeem the reward.  Use this hash to look up the DestinyVendorDefinition.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
-<td>For us to bother returning this info, we should be able to return some kind of information<br/>about why these rewards are grouped together.  This is ideally that information.<br/>Look at how confident I am that this will always remain true.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
+<td>For us to bother returning this info, we should be able to return some kind of information about why these rewards are grouped together.  This is ideally that information. Look at how confident I am that this will always remain true.</td>
 </tr>
 <tr>
 <td>order</td>
 <td>integer:int32</td>
-<td>If you want to follow BNet's ordering of these rewards, use this number within a given category<br/>to order the rewards.  Yeah, I know.  I feel dirty too.</td>
+<td>If you want to follow BNet's ordering of these rewards, use this number within a given category to order the rewards.  Yeah, I know.  I feel dirty too.</td>
 </tr>
 </tbody>
 </table>
@@ -134,11 +133,11 @@ that has optional information about how it is obtained.</p>
     "rewardEntryHash": 0,
     // Type: string
     "rewardEntryIdentifier": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "items": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
@@ -146,9 +145,9 @@ that has optional information about how it is obtained.</p>
             "quantity": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32:nullable
     "vendorHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",

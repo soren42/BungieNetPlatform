@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemSocketEntryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The definition information for a specific socket on an item.
-This will determine how the socket behaves in-game.</p>
+<p>The definition information for a specific socket on an item. This will determine how the socket behaves in-game.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,32 +97,32 @@ This will determine how the socket behaves in-game.</p>
 <tbody>
 <tr>
 <td>socketTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">Destiny.Definitions.Sockets.DestinySocketTypeDefinition</a>:integer:uint32</td>
-<td>All sockets have a type, and this is the hash identifier for this particular type.<br/>Use it to look up the DestinySocketTypeDefinition: read there for more information on<br/>how socket types affect the behavior of the socket.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>All sockets have a type, and this is the hash identifier for this particular type. Use it to look up the DestinySocketTypeDefinition: read there for more information on how socket types affect the behavior of the socket.</td>
 </tr>
 <tr>
 <td>singleInitialItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
-<td>If a valid hash, this is the hash identifier for the DestinyInventoryItemDefinition<br/>representing the Plug that will be initially inserted into the item on item creation.<br/>Otherwise, this Socket will either start without a plug inserted, or will have one randomly<br/>inserted.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>If a valid hash, this is the hash identifier for the DestinyInventoryItemDefinition representing the Plug that will be initially inserted into the item on item creation. Otherwise, this Socket will either start without a plug inserted, or will have one randomly inserted.</td>
 </tr>
 <tr>
 <td>reusablePlugItems</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">Destiny.Definitions.DestinyItemSocketEntryPlugItemDefinition</a>[]</td>
-<td>This is a list of pre-determined plugs that can <em>always</em> be plugged into this socket, without<br/>the character having the plug in their inventory.<br/><br/>If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you<br/>will only be able to choose from one of these reusable plugs.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition[]</td>
+<td>This is a list of pre-determined plugs that can <em>always</em> be plugged into this socket, without the character having the plug in their inventory.<br/><br/>If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">Destiny.Definitions.Sockets.DestinySocketTypeDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:ManifestDefinition:integer:uint32
     "socketTypeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
     "singleInitialItemHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">Destiny.Definitions.DestinyItemSocketEntryPlugItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition[]
     "reusablePlugItems": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">Destiny.Definitions.DestinyItemSocketEntryPlugItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "plugItemHash": 0
         }
     ]

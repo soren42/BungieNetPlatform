@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Progression-DestinyFactionProgression/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Mostly for historical purposes, we segregate Faction progressions from other progressions.
-This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinition
-of the faction related to the progression.</p>
+<p>Mostly for historical purposes, we segregate Faction progressions from other progressions. This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinition of the faction related to the progression.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,12 +97,12 @@ of the faction related to the progression.</p>
 <tbody>
 <tr>
 <td>factionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32</td>
-<td>The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinition<br/>for more rendering info.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinition for more rendering info.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.</td>
 </tr>
 <tr>
@@ -130,7 +128,7 @@ of the faction related to the progression.</p>
 <tr>
 <td>currentProgress</td>
 <td>integer:int32</td>
-<td>This is the total amount of progress obtained overall for this<br/>progression (for instance, the total amount of Character Level experience earned)</td>
+<td>This is the total amount of progress obtained overall for this progression (for instance, the total amount of Character Level experience earned)</td>
 </tr>
 <tr>
 <td>level</td>
@@ -140,17 +138,17 @@ of the faction related to the progression.</p>
 <tr>
 <td>levelCap</td>
 <td>integer:int32</td>
-<td>This is the maximum possible level you can achieve for this progression (for example, the maximum<br/>character level obtainable)</td>
+<td>This is the maximum possible level you can achieve for this progression (for example, the maximum character level obtainable)</td>
 </tr>
 <tr>
 <td>stepIndex</td>
 <td>integer:int32</td>
-<td>Progressions define their levels in &quot;steps&quot;.  Since the last step may be repeatable, the user may<br/>be at a higher level than the actual Step achieved in the progression.  Not necessarily useful, but<br/>potentially interesting for those cruising the API.  Relate this to the &quot;steps&quot; property of the DestinyProgression<br/>to see which step the user is on, if you care about that.  (Note that this is Content Version dependent since<br/>it refers to indexes.)</td>
+<td>Progressions define their levels in &quot;steps&quot;.  Since the last step may be repeatable, the user may be at a higher level than the actual Step achieved in the progression.  Not necessarily useful, but potentially interesting for those cruising the API.  Relate this to the &quot;steps&quot; property of the DestinyProgression to see which step the user is on, if you care about that.  (Note that this is Content Version dependent since it refers to indexes.)</td>
 </tr>
 <tr>
 <td>progressToNextLevel</td>
 <td>integer:int32</td>
-<td>The amount of progression (i.e. &quot;Experience&quot;) needed to reach the next level of this Progression.<br/>Jeez, progression is such an overloaded word.</td>
+<td>The amount of progression (i.e. &quot;Experience&quot;) needed to reach the next level of this Progression. Jeez, progression is such an overloaded word.</td>
 </tr>
 <tr>
 <td>nextLevelAt</td>
@@ -161,9 +159,9 @@ of the faction related to the progression.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32
     "factionHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32
     "progressionHash": 0,
     // Type: integer:int32
     "dailyProgress": 0,

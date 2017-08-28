@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,13 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyInventoryItemStatDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines a specific stat value on an item, and the minimum/maximum range that we could
-compute for the item based on our heuristics for how the item might be generated.</p>
-<p>Not guaranteed to match real-world instances of the item, but should hopefully at least
-be close.  If it's not close, let us know on the Bungie API forums.</p>
+<p>Defines a specific stat value on an item, and the minimum/maximum range that we could compute for the item based on our heuristics for how the item might be generated.<br/><br/>Not guaranteed to match real-world instances of the item, but should hopefully at least be close.  If it's not close, let us know on the Bungie API forums.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -100,13 +97,13 @@ be close.  If it's not close, let us know on the Bungie API forums.</p>
 <tbody>
 <tr>
 <td>statHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash for the DestinyStatDefinition representing this stat.</td>
 </tr>
 <tr>
 <td>value</td>
 <td>integer:int32</td>
-<td>This value represents the stat value assuming the minimum possible roll<br/>but accounting for any mandatory bonuses that should be applied to the stat on item creation.<br/><br/>In Destiny 1, this was different from the &quot;minimum&quot; value because there were certain conditions<br/>where an item could be theoretically lower level/value than the initial roll.  <br/><br/>In Destiny 2, this is not possible unless Talent Grids begin to be used again for these purposes or some other<br/>system change occurs... thus in practice, value and minimum should be the same in Destiny 2.  Good riddance.</td>
+<td>This value represents the stat value assuming the minimum possible roll but accounting for any mandatory bonuses that should be applied to the stat on item creation.<br/><br/>In Destiny 1, this was different from the &quot;minimum&quot; value because there were certain conditions where an item could be theoretically lower level/value than the initial roll.  <br/><br/>In Destiny 2, this is not possible unless Talent Grids begin to be used again for these purposes or some other system change occurs... thus in practice, value and minimum should be the same in Destiny 2.  Good riddance.</td>
 </tr>
 <tr>
 <td>minimum</td>
@@ -122,7 +119,7 @@ be close.  If it's not close, let us know on the Bungie API forums.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
     "statHash": 0,
     // Type: integer:int32
     "value": 0,

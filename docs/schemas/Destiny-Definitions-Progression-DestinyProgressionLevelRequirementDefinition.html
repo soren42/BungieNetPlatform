@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,17 +80,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>These are pre-constructed collections of data that can be used to determine the Level Requirement
-for an item given a Progression to be tested (such as the Character's level).</p>
-<p>For instance, say a character receives a new Auto Rifle, and that Auto Rifle's
-DestinyInventoryItemDefinition.quality.progressionLevelRequirementHash property is pointing
-at one of these DestinyProgressionLevelRequirementDefinitions.  Let's pretend also that the progressionHash
-it is pointing at is the Character Level progression.  In that situation, the character's level will be used
-to interpolate a value in the requirementCurve property.  The value picked up from that interpolation will
-be the required level for the item.</p>
+<p>These are pre-constructed collections of data that can be used to determine the Level Requirement for an item given a Progression to be tested (such as the Character's level).<br/><br/>For instance, say a character receives a new Auto Rifle, and that Auto Rifle's DestinyInventoryItemDefinition.quality.progressionLevelRequirementHash property is pointing at one of these DestinyProgressionLevelRequirementDefinitions.  Let's pretend also that the progressionHash it is pointing at is the Character Level progression.  In that situation, the character's level will be used to interpolate a value in the requirementCurve property.  The value picked up from that interpolation will be the required level for the item.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> ProgressionLevelRequirements</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -104,13 +98,13 @@ be the required level for the item.</p>
 <tbody>
 <tr>
 <td>requirementCurve</td>
-<td><a href="../../docs/schemas/Interpolation-InterpolationPointFloat">Interpolation.InterpolationPointFloat</a>[]</td>
-<td>A curve of level requirements, weighted by the related progressions' level.<br/><br/>Interpolate against this curve with the character's progression level to determine<br/>what the level requirement of the generated item that is using this data will be.</td>
+<td><a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>[]</td>
+<td>A curve of level requirements, weighted by the related progressions' level.<br/><br/>Interpolate against this curve with the character's progression level to determine what the level requirement of the generated item that is using this data will be.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32</td>
-<td>The progression whose level should be used to determine the level requirement.<br/><br/>Look up the DestinyProgressionDefinition with this hash for more information about<br/>the progression in question.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The progression whose level should be used to determine the level requirement.<br/><br/>Look up the DestinyProgressionDefinition with this hash for more information about the progression in question.</td>
 </tr>
 <tr>
 <td>hash</td>
@@ -125,15 +119,15 @@ be the required level for the item.</p>
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">Interpolation.InterpolationPointFloat</a>[]
+    // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>[]
     "requirementCurve": [
-       // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">Interpolation.InterpolationPointFloat</a>
+       // Type: <a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>
         {
             // Type: number:float
             "value": 0,
@@ -141,7 +135,7 @@ be the required level for the item.</p>
             "weight": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32
     "progressionHash": 0,
     // Type: integer:uint32
     "hash": 0,

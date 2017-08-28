@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The base item component, filled with properties that are generally useful to know in any item request or that
-don't feel worthwhile to put in their own component.</p>
+<p>The base item component, filled with properties that are generally useful to know in any item request or that don't feel worthwhile to put in their own component.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,38 +97,38 @@ don't feel worthwhile to put in their own component.</p>
 <tbody>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
-<td>The identifier for the item's definition, which is where most of the useful static information for the item<br/>can be found.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The identifier for the item's definition, which is where most of the useful static information for the item can be found.</td>
 </tr>
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64:nullable</td>
-<td>If the item is instanced, it will have an instance ID.  Lack of an instance ID implies<br/>that the item has no distinct local qualities aside from stack size.</td>
+<td>If the item is instanced, it will have an instance ID.  Lack of an instance ID implies that the item has no distinct local qualities aside from stack size.</td>
 </tr>
 <tr>
 <td>quantity</td>
 <td>integer:int32</td>
-<td>The quantity of the item in this stack.  Note that Instanced items cannot stack.<br/>If an instanced item, this value will always be 1 (as the stack has exactly one item in it)</td>
+<td>The quantity of the item in this stack.  Note that Instanced items cannot stack. If an instanced item, this value will always be 1 (as the stack has exactly one item in it)</td>
 </tr>
 <tr>
 <td>bindStatus</td>
-<td><a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>:Enum</td>
 <td>If the item is bound to a location, it will be specified in this enum.</td>
 </tr>
 <tr>
 <td>location</td>
-<td><a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>:Enum</td>
-<td>An easy reference for where the item is located.  Redundant if you got the item<br/>from an Inventory, but useful when making detail calls on specific items.</td>
+<td><a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>:Enum</td>
+<td>An easy reference for where the item is located.  Redundant if you got the item from an Inventory, but useful when making detail calls on specific items.</td>
 </tr>
 <tr>
 <td>bucketHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier for the specific inventory bucket in which the item is located.</td>
 </tr>
 <tr>
 <td>transferStatus</td>
-<td><a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>:Enum</td>
-<td>If there is a known error state that would cause this item to not be transferable, this Flags enum will<br/>indicate all of those error states.  Otherwise, it will be 0 (CanTransfer).</td>
+<td><a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>:Enum</td>
+<td>If there is a known error state that would cause this item to not be transferable, this Flags enum will indicate all of those error states.  Otherwise, it will be 0 (CanTransfer).</td>
 </tr>
 <tr>
 <td>lockable</td>
@@ -138,30 +137,30 @@ don't feel worthwhile to put in their own component.</p>
 </tr>
 <tr>
 <td>state</td>
-<td><a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-ItemState">ItemState</a>:Enum</td>
 <td>A flags enumeration indicating the states of the item: whether it's tracked or locked for example.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
     "itemHash": 0,
     // Type: integer:int64:nullable
     "itemInstanceId": 0,
     // Type: integer:int32
     "quantity": 0,
-    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">Destiny.ItemBindStatus</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-ItemBindStatus">ItemBindStatus</a>:Enum
     "bindStatus": 0,
-    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">Destiny.ItemLocation</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-ItemLocation">ItemLocation</a>:Enum
     "location": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32
     "bucketHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">Destiny.TransferStatuses</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-TransferStatuses">TransferStatuses</a>:Enum
     "transferStatus": 0,
     // Type: boolean
     "lockable": false,
-    // Type: <a href="../../docs/schemas/Destiny-ItemState">Destiny.ItemState</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-ItemState">ItemState</a>:Enum
     "state": 0
 }
 </code></pre>

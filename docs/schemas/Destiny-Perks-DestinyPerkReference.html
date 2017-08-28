@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Perks-DestinyPerkReference/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The list of perks to display in an item tooltip - and whether or not they have been activated.</p>
-<p>Perks apply a variety of effects to a character, and are generally either intrinsic to the item
-or provided in activated talent nodes or sockets.</p>
+<p>The list of perks to display in an item tooltip - and whether or not they have been activated.<br/><br/>Perks apply a variety of effects to a character, and are generally either intrinsic to the item or provided in activated talent nodes or sockets.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,8 +97,8 @@ or provided in activated talent nodes or sockets.</p>
 <tbody>
 <tr>
 <td>perkHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32</td>
-<td>The hash identifier for the perk, which can be used to look up DestinySandboxPerkDefinition if it exists.<br/>Be warned, perks frequently do not have user-viewable information.  You should examine whether you actually<br/>found a name/description in the perk's definition before you show it to the user.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash identifier for the perk, which can be used to look up DestinySandboxPerkDefinition if it exists. Be warned, perks frequently do not have user-viewable information.  You should examine whether you actually found a name/description in the perk's definition before you show it to the user.</td>
 </tr>
 <tr>
 <td>iconPath</td>
@@ -110,18 +108,18 @@ or provided in activated talent nodes or sockets.</p>
 <tr>
 <td>isActive</td>
 <td>boolean</td>
-<td>Whether this perk is currently active.  (We may return perks that you have not actually activated yet:<br/>these represent perks that you should show in the item's tooltip, but that the user has not yet<br/>activated.)</td>
+<td>Whether this perk is currently active.  (We may return perks that you have not actually activated yet: these represent perks that you should show in the item's tooltip, but that the user has not yet activated.)</td>
 </tr>
 <tr>
 <td>visible</td>
 <td>boolean</td>
-<td>Some perks provide benefits, but aren't visible in the UI.  This value will let you know if this is<br/>perk should be shown in your UI.</td>
+<td>Some perks provide benefits, but aren't visible in the UI.  This value will let you know if this is perk should be shown in your UI.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32
     "perkHash": 0,
     // Type: string
     "iconPath": "",

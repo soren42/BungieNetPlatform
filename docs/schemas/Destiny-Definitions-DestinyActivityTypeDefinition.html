@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,18 +80,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyActivityTypeDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The definition for an Activity Type.</p>
-<p>In Destiny 2, an Activity Type represents a conceptual categorization of Activities.</p>
-<p>These are most commonly used in the game for the subtitle under Activities, but BNet
-uses them extensively to identify and group activities by their common properties.</p>
-<p>Unfortunately, there has been a movement away from providing the richer data in Destiny 2
-that we used to get in Destiny 1 for Activity Types.  For instance, Nightfalls are
-grouped under the same Activity Type as regular Strikes.  </p>
-<p>For this reason, BNet will eventually migrate toward Activity Modes as a better indicator of activity category.
-But for the time being, it is still referred to in many places across our codebase.</p>
+<p>The definition for an Activity Type.<br/><br/>In Destiny 2, an Activity Type represents a conceptual categorization of Activities.<br/><br/>These are most commonly used in the game for the subtitle under Activities, but BNet uses them extensively to identify and group activities by their common properties.<br/><br/>Unfortunately, there has been a movement away from providing the richer data in Destiny 2 that we used to get in Destiny 1 for Activity Types.  For instance, Nightfalls are grouped under the same Activity Type as regular Strikes.  <br/><br/>For this reason, BNet will eventually migrate toward Activity Modes as a better indicator of activity category. But for the time being, it is still referred to in many places across our codebase.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> ActivityTypes</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -105,7 +98,7 @@ But for the time being, it is still referred to in many places across our codeba
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -121,13 +114,13 @@ But for the time being, it is still referred to in many places across our codeba
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",

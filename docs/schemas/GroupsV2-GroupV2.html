@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -106,7 +106,7 @@
 </tr>
 <tr>
 <td>groupType</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupType">GroupsV2.GroupType</a>:Enum</td>
+<td><a href="../../docs/schemas/GroupsV2-GroupType">GroupType</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -171,7 +171,7 @@
 </tr>
 <tr>
 <td>chatSecurity</td>
-<td><a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">GroupsV2.ChatSecuritySetting</a>:Enum</td>
+<td><a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">ChatSecuritySetting</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -186,17 +186,17 @@
 </tr>
 <tr>
 <td>homepage</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupsV2.GroupHomepage</a>:Enum</td>
+<td><a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupHomepage</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>membershipOption</td>
-<td><a href="../../docs/schemas/GroupsV2-MembershipOption">GroupsV2.MembershipOption</a>:Enum</td>
+<td><a href="../../docs/schemas/GroupsV2-MembershipOption">MembershipOption</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>defaultPublicity</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupsV2.GroupPostPublicity</a>:Enum</td>
+<td><a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupPostPublicity</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -236,12 +236,12 @@
 </tr>
 <tr>
 <td>features</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupsV2.GroupFeatures</a></td>
+<td><a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupFeatures</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>clanInfo</td>
-<td><a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a></td>
+<td><a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupV2ClanInfoAndInvestment</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -252,7 +252,7 @@
     "groupId": 0,
     // Type: string
     "name": "",
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupType">GroupsV2.GroupType</a>:Enum
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupType">GroupType</a>:Enum
     "groupType": 0,
     // Type: integer:int64
     "membershipIdCreated": 0,
@@ -281,17 +281,17 @@
     "allowChat": false,
     // Type: boolean
     "isDefaultPostPublic": false,
-    // Type: <a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">GroupsV2.ChatSecuritySetting</a>:Enum
+    // Type: <a href="../../docs/schemas/GroupsV2-ChatSecuritySetting">ChatSecuritySetting</a>:Enum
     "chatSecurity": 0,
     // Type: string
     "locale": "",
     // Type: integer:int32
     "avatarImageIndex": 0,
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupsV2.GroupHomepage</a>:Enum
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupHomepage">GroupHomepage</a>:Enum
     "homepage": 0,
-    // Type: <a href="../../docs/schemas/GroupsV2-MembershipOption">GroupsV2.MembershipOption</a>:Enum
+    // Type: <a href="../../docs/schemas/GroupsV2-MembershipOption">MembershipOption</a>:Enum
     "membershipOption": 0,
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupsV2.GroupPostPublicity</a>:Enum
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupPostPublicity">GroupPostPublicity</a>:Enum
     "defaultPublicity": 0,
     // Type: string
     "theme": "",
@@ -307,13 +307,13 @@
     "enableInvitationMessagingForAdmins": false,
     // Type: string:date-time:nullable
     "banExpireDate": "",
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupsV2.GroupFeatures</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupFeatures">GroupFeatures</a>
     "features": {
         // Type: integer:int32
         "maximumMembers": 0,
         // Type: integer:int32
         "maximumMembershipsOfGroupType": 0,
-        // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">GroupsV2.Capabilities</a>:Enum
+        // Type: <a href="../../docs/schemas/GroupsV2-Capabilities">Capabilities</a>:Enum
         "capabilities": 0,
         // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum[]
         "membershipTypes": [
@@ -324,19 +324,19 @@
         "invitePermissionOverride": false,
         // Type: boolean
         "updateCulturePermissionOverride": false,
-        // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">GroupsV2.HostGuidedGamesPermissionLevel</a>:Enum
+        // Type: <a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">HostGuidedGamesPermissionLevel</a>:Enum
         "hostGuidedGamePermissionOverride": 0,
         // Type: boolean
         "updateBannerPermissionOverride": false,
-        // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">GroupsV2.RuntimeGroupMemberType</a>:Enum
+        // Type: <a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>:Enum
         "joinLevel": 0
     },
-    // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupsV2.GroupV2ClanInfoAndInvestment</a>
+    // Type: <a href="../../docs/schemas/GroupsV2-GroupV2ClanInfoAndInvestment">GroupV2ClanInfoAndInvestment</a>
     "clanInfo": {
-        // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+        // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
         "d2ClanProgressions": {
             "0": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32
                 "progressionHash": 0,
                 // Type: integer:int32
                 "dailyProgress": 0,
@@ -362,7 +362,7 @@
         },
         // Type: string
         "clanCallsign": "",
-        // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">GroupsV2.ClanBanner</a>
+        // Type: <a href="../../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a>
         "clanBannerData": {
             // Type: integer:uint32
             "decalId": 0,

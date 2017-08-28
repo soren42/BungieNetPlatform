@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>This represents an item being sold by the vendor.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +98,12 @@
 <tr>
 <td>vendorItemIndex</td>
 <td>integer:int32</td>
-<td>The index into the DestinyVendorDefinition.saleList.  This is what we use to refer to items<br/>being sold throughout live and definition data.</td>
+<td>The index into the DestinyVendorDefinition.saleList.  This is what we use to refer to items being sold throughout live and definition data.</td>
 </tr>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
-<td>The hash identifier of the item being sold (DestinyInventoryItemDefinition).<br/><br/>Note that a vendor can sell the same item in multiple ways, so don't assume that itemHash is<br/>a unique identifier for this entity.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash identifier of the item being sold (DestinyInventoryItemDefinition).<br/><br/>Note that a vendor can sell the same item in multiple ways, so don't assume that itemHash is a unique identifier for this entity.</td>
 </tr>
 <tr>
 <td>quantity</td>
@@ -113,16 +113,16 @@
 <tr>
 <td>failureIndexes</td>
 <td>integer:int32[]</td>
-<td>An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating<br/>the possible failure strings that can be relevant for this item.</td>
+<td>An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating the possible failure strings that can be relevant for this item.</td>
 </tr>
 <tr>
 <td>currencies</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
-<td>This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place<br/>to check for what the purchaser must pay for the item.  Use this instead of trying to piece together<br/>the price separately.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
+<td>This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item.  Use this instead of trying to piece together the price separately.</td>
 </tr>
 <tr>
 <td>refundPolicy</td>
-<td><a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a>:Enum</td>
 <td>If this item can be refunded, this is the policy for what will be refundd, how, and in what time period.</td>
 </tr>
 <tr>
@@ -132,18 +132,18 @@
 </tr>
 <tr>
 <td>creationLevels</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>[]</td>
-<td>The Default level at which the item will spawn.  Almost always driven by an adjusto these days.<br/>Ideally should be singular.  It's a long story how this ended up as a list, but there is always either<br/>going to be 0:1 of these entities.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">DestinyItemCreationEntryLevelDefinition</a>:Definition[]</td>
+<td>The Default level at which the item will spawn.  Almost always driven by an adjusto these days. Ideally should be singular.  It's a long story how this ended up as a list, but there is always either going to be 0:1 of these entities.</td>
 </tr>
 <tr>
 <td>displayCategoryIndex</td>
 <td>integer:int32</td>
-<td>This is an index specifically into the display category, as opposed to the server-side Categories<br/>(which do not need to match or pair with each other in any way: server side categories are really just<br/>structures for common validation.  Display Category will let us more easily categorize items visually)</td>
+<td>This is an index specifically into the display category, as opposed to the server-side Categories (which do not need to match or pair with each other in any way: server side categories are really just structures for common validation.  Display Category will let us more easily categorize items visually)</td>
 </tr>
 <tr>
 <td>categoryIndex</td>
 <td>integer:int32</td>
-<td>The index into the DestinyVendorDefinition.categories array, so you can find the category associated with<br/>this item.</td>
+<td>The index into the DestinyVendorDefinition.categories array, so you can find the category associated with this item.</td>
 </tr>
 <tr>
 <td>originalCategoryIndex</td>
@@ -162,7 +162,7 @@
 </tr>
 <tr>
 <td>action</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition">Destiny.Definitions.DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition-DestinyVendorSaleItemActionBlockDefinition">DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>:Definition</td>
 <td>The action to be performed when purchasing the item, if it's not just &quot;buy&quot;.</td>
 </tr>
 <tr>
@@ -177,13 +177,13 @@
 </tr>
 <tr>
 <td>visibilityScope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum</td>
-<td>The most restrictive scope that determines whether the item is available in the Vendor's inventory.<br/>See DestinyGatingScope's documentation for more information.<br/><br/>This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel<br/>and maximumLevel properties).</td>
+<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum</td>
+<td>The most restrictive scope that determines whether the item is available in the Vendor's inventory. See DestinyGatingScope's documentation for more information.<br/><br/>This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel and maximumLevel properties).</td>
 </tr>
 <tr>
 <td>purchasableScope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum</td>
-<td>Similar to visibilityScope, it represents the most restrictive scope that determines whether the item can be purchased.<br/>It will at least be as restrictive as visibilityScope, but could be more restrictive if the item has additional<br/>purchase requirements beyond whether it is merely visible or not.<br/><br/>See DestinyGatingScope's documentation for more information.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum</td>
+<td>Similar to visibilityScope, it represents the most restrictive scope that determines whether the item can be purchased. It will at least be as restrictive as visibilityScope, but could be more restrictive if the item has additional purchase requirements beyond whether it is merely visible or not.<br/><br/>See DestinyGatingScope's documentation for more information.</td>
 </tr>
 </tbody>
 </table>
@@ -191,7 +191,7 @@
 <pre><code class="javascript">{
     // Type: integer:int32
     "vendorItemIndex": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
     "itemHash": 0,
     // Type: integer:int32
     "quantity": 0,
@@ -200,11 +200,11 @@
        // Type: integer:int32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "currencies": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
@@ -212,13 +212,13 @@
             "quantity": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a>:Enum
     "refundPolicy": 0,
     // Type: integer:int32
     "refundTimeLimit": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">DestinyItemCreationEntryLevelDefinition</a>:Definition[]
     "creationLevels": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">Destiny.Definitions.DestinyItemCreationEntryLevelDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">DestinyItemCreationEntryLevelDefinition</a>:Definition
         {
             // Type: integer:int32
             "level": 0
@@ -234,7 +234,7 @@
     "minimumLevel": 0,
     // Type: integer:int32
     "maximumLevel": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition">Destiny.Definitions.DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition-DestinyVendorSaleItemActionBlockDefinition">DestinyVendorItemDefinition+DestinyVendorSaleItemActionBlockDefinition</a>:Definition
     "action": {
         // Type: number:float
         "executeSeconds": 0,
@@ -245,9 +245,9 @@
     "displayCategory": "",
     // Type: integer:uint32
     "inventoryBucketHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum
     "visibilityScope": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum
     "purchasableScope": 0
 }
 </code></pre>

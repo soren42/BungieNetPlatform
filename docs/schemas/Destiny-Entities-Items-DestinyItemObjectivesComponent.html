@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemObjectivesComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Items can have objectives and progression.  When you request this block, you will obtain
-information about any Objectives and progression tied to this item.</p>
+<p>Items can have objectives and progression.  When you request this block, you will obtain information about any Objectives and progression tied to this item.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,22 +97,22 @@ information about any Objectives and progression tied to this item.</p>
 <tbody>
 <tr>
 <td>objectives</td>
-<td><a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]</td>
-<td>If the item has a hard association with objectives, your progress on them<br/>will be defined here.  <br/><br/>Objectives are our standard way to describe a series of tasks that have to be completed for a reward.</td>
+<td><a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]</td>
+<td>If the item has a hard association with objectives, your progress on them will be defined here.  <br/><br/>Objectives are our standard way to describe a series of tasks that have to be completed for a reward.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
     "objectives": [
-       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
             "objectiveHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable
             "destinationHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
             "activityHash": 0,
             // Type: integer:int32:nullable
             "progress": 0,

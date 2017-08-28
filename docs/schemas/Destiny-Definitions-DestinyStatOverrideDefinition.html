@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,19 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyStatOverrideDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized text
-associated with stats that are to be shown on the items with which they are associated.</p>
-<p>This defines a specific overridden stat.  You could theoretically check these before
-rendering your stat UI, and for each stat that has an override show these displayProperties
-instead of those on the DestinyStatDefinition.</p>
-<p>Or you could be like us, and skip that for now because the game has yet to actually
-use this feature.  But know that it's here, waiting for a resilliant young designer to
-take up the mantle and make us all look foolish by showing the wrong name for stats.</p>
-<p>Note that, if this gets used, the override will apply only to items using the overriding
-Stat Group.  Other items will still show the default stat's name/description.</p>
+<p>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized text associated with stats that are to be shown on the items with which they are associated.<br/><br/>This defines a specific overridden stat.  You could theoretically check these before rendering your stat UI, and for each stat that has an override show these displayProperties instead of those on the DestinyStatDefinition.<br/><br/>Or you could be like us, and skip that for now because the game has yet to actually use this feature.  But know that it's here, waiting for a resilliant young designer to take up the mantle and make us all look foolish by showing the wrong name for stats.<br/><br/>Note that, if this gets used, the override will apply only to items using the overriding Stat Group.  Other items will still show the default stat's name/description.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -106,21 +97,21 @@ Stat Group.  Other items will still show the default stat's name/description.</p
 <tbody>
 <tr>
 <td>statHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier of the stat whose display properties are being overridden.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>The display properties to show instead of the base DestinyStatDefinition display properties.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
     "statHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,8 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> HistoricalStats</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,22 +102,22 @@
 </tr>
 <tr>
 <td>group</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">Destiny.HistoricalStats.Definitions.DestinyStatsGroupType</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">DestinyStatsGroupType</a>:Enum</td>
 <td>Statistic group</td>
 </tr>
 <tr>
 <td>periodTypes</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a>:Enum[]</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">PeriodType</a>:Enum[]</td>
 <td>Time periods the statistic covers</td>
 </tr>
 <tr>
 <td>modes</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum[]</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]</td>
 <td>Game modes where this statistic can be reported.</td>
 </tr>
 <tr>
 <td>category</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType">Destiny.HistoricalStats.Definitions.DestinyStatsCategoryType</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType">DestinyStatsCategoryType</a>:Enum</td>
 <td>Category for the stat.</td>
 </tr>
 <tr>
@@ -131,7 +132,7 @@
 </tr>
 <tr>
 <td>unitType</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-UnitType">Destiny.HistoricalStats.Definitions.UnitType</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-UnitType">UnitType</a>:Enum</td>
 <td>Unit, if any, for the statistic</td>
 </tr>
 <tr>
@@ -165,25 +166,25 @@
 <pre><code class="javascript">{
     // Type: string
     "statId": "",
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">Destiny.HistoricalStats.Definitions.DestinyStatsGroupType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsGroupType">DestinyStatsGroupType</a>:Enum
     "group": 0,
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a>:Enum[]
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">PeriodType</a>:Enum[]
     "periodTypes": [
-       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">Destiny.HistoricalStats.Definitions.PeriodType</a>:Enum
+       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-PeriodType">PeriodType</a>:Enum
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum[]
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]
     "modes": [
-       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
+       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType">Destiny.HistoricalStats.Definitions.DestinyStatsCategoryType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType">DestinyStatsCategoryType</a>:Enum
     "category": 0,
     // Type: string
     "statName": "",
     // Type: string
     "statDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-UnitType">Destiny.HistoricalStats.Definitions.UnitType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-UnitType">UnitType</a>:Enum
     "unitType": 0,
     // Type: string
     "iconImage": "",

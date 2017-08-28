@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemPreviewBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Items like Sacks or Boxes can have items that it shows in-game when you view details
-that represent the items you can obtain if you use or acquire the item.</p>
-<p>This defines those categories, and gives some insights into that data's source.</p>
+<p>Items like Sacks or Boxes can have items that it shows in-game when you view details that represent the items you can obtain if you use or acquire the item.<br/><br/>This defines those categories, and gives some insights into that data's source.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,36 +97,36 @@ that represent the items you can obtain if you use or acquire the item.</p>
 <tbody>
 <tr>
 <td>previewVendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32</td>
-<td>If the preview data is derived from a fake &quot;Preview&quot; Vendor, this will<br/>be the hash identifier for the DestinyVendorDefinition of that fake vendor.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>If the preview data is derived from a fake &quot;Preview&quot; Vendor, this will be the hash identifier for the DestinyVendorDefinition of that fake vendor.</td>
 </tr>
 <tr>
 <td>previewActionString</td>
 <td>string</td>
-<td>If the preview has an associated action (like &quot;Open&quot;), this will be the localized<br/>string for that action.</td>
+<td>If the preview has an associated action (like &quot;Open&quot;), this will be the localized string for that action.</td>
 </tr>
 <tr>
 <td>derivedItemCategories</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition</a>[]</td>
-<td>This is a list of the items being previewed, categorized in the same way as they are<br/>in the preview UI.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>:Definition[]</td>
+<td>This is a list of the items being previewed, categorized in the same way as they are in the preview UI.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32
     "previewVendorHash": 0,
     // Type: string
     "previewActionString": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>:Definition[]
     "derivedItemCategories": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">Destiny.Definitions.Items.DestinyDerivedItemCategoryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>:Definition
         {
             // Type: string
             "categoryDescription": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition[]
             "items": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition
                 {
                     // Type: integer:uint32:nullable
                     "itemHash": 0,

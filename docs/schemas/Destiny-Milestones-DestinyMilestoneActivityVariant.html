@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>Represents custom data that we know about an individual variant of an activity.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,27 +97,27 @@
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
-<td>The hash for the specific variant of the activity related to this milestone.<br/>You can pull more detailed static info from the DestinyActivityDefinition, such as difficulty level.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash for the specific variant of the activity related to this milestone. You can pull more detailed static info from the DestinyActivityDefinition, such as difficulty level.</td>
 </tr>
 <tr>
 <td>completionStatus</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a></td>
-<td>An OPTIONAL component: if it makes sense to talk about this activity variant in terms of<br/>whether or not it has been completed or what progress you have made in it, this will be returned.<br/>Otherwise, this will be NULL.</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a></td>
+<td>An OPTIONAL component: if it makes sense to talk about this activity variant in terms of whether or not it has been completed or what progress you have made in it, this will be returned. Otherwise, this will be NULL.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
     "activityHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
     "completionStatus": {
         // Type: boolean
         "completed": false,
-        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
         "phases": [
-           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
             {
                 // Type: boolean
                 "complete": false

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>The results of an Equipping operation performed through the Destiny API.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,11 +98,11 @@
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64</td>
-<td>The instance ID of the item in question (all items that can be equipped must, but definition,<br/>be Instanced and thus have an Instance ID that you can use to refer to them)</td>
+<td>The instance ID of the item in question (all items that can be equipped must, but definition, be Instanced and thus have an Instance ID that you can use to refer to them)</td>
 </tr>
 <tr>
 <td>equipStatus</td>
-<td><a href="../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum</td>
+<td><a href="../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum</td>
 <td>A PlatformErrorCodes enum indicating whether it succeeded, and if it failed why.</td>
 </tr>
 </tbody>
@@ -111,7 +111,7 @@
 <pre><code class="javascript">{
     // Type: integer:int64
     "itemInstanceId": 0,
-    // Type: <a href="../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum
+    // Type: <a href="../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum
     "equipStatus": 0
 }
 </code></pre>

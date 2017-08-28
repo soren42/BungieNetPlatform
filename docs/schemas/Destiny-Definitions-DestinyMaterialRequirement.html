@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,19 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyMaterialRequirement/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Many actions relating to items require you to expend materials:</p>
-<ul>
-<li>Activating a talent node</li>
-<li>Inserting a plug into a socket
-The items will refer to material requirements by a materialRequirementsHash in these cases, and this
-is the definition for those requirements in terms of the item required, how much of it is required and other
-interesting info.
-This is one of the rare/strange times where a single contract class is used both in definitions <em>and</em>
-in live data response contracts.  I'm not sure yet whether I regret that.</li>
-</ul>
+<p>Many actions relating to items require you to expend materials: - Activating a talent node - Inserting a plug into a socket The items will refer to material requirements by a materialRequirementsHash in these cases, and this is the definition for those requirements in terms of the item required, how much of it is required and other interesting info. This is one of the rare/strange times where a single contract class is used both in definitions <em>and</em> in live data response contracts.  I'm not sure yet whether I regret that.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -106,7 +97,7 @@ in live data response contracts.  I'm not sure yet whether I regret that.</li>
 <tbody>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier of the material required.  Use it to look up the material's DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
@@ -122,13 +113,13 @@ in live data response contracts.  I'm not sure yet whether I regret that.</li>
 <tr>
 <td>omitFromRequirements</td>
 <td>boolean</td>
-<td>If True, this requirement is &quot;silent&quot;: don't bother showing it in a material requirements display.<br/>I mean, I'm not your mom: I'm not going to tell you you <em>can't</em> show it.  But we won't show it in our UI.</td>
+<td>If True, this requirement is &quot;silent&quot;: don't bother showing it in a material requirements display. I mean, I'm not your mom: I'm not going to tell you you <em>can't</em> show it.  But we won't show it in our UI.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
     "itemHash": 0,
     // Type: boolean
     "deleteOnAction": false,

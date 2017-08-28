@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,15 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyTalentNodeDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Talent Grids on items have Nodes.  These nodes have positions in the talent grid's UI,
-and contain &quot;Steps&quot; (DestinyTalentNodeStepDefinition), one of whom will be the &quot;Current&quot; step.</p>
-<p>The Current Step determines the visual properties of the node, as well as what the node grants
-when it is activated.</p>
-<p>See DestinyTalentGridDefinition for a more complete overview of how Talent Grids work, and how
-they are used in Destiny 2 (and how they were used in Destiny 1).</p>
+<p>Talent Grids on items have Nodes.  These nodes have positions in the talent grid's UI, and contain &quot;Steps&quot; (DestinyTalentNodeStepDefinition), one of whom will be the &quot;Current&quot; step.<br/><br/>The Current Step determines the visual properties of the node, as well as what the node grants when it is activated.<br/><br/>See DestinyTalentGridDefinition for a more complete overview of how Talent Grids work, and how they are used in Destiny 2 (and how they were used in Destiny 1).</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,12 +98,12 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
 <tr>
 <td>nodeIndex</td>
 <td>integer:int32</td>
-<td>The index into the DestinyTalentGridDefinition's &quot;nodes&quot; property where this node<br/>is located.  Used to uniquely identify the node within the Talent Grid.  Note that<br/>this is content version dependent: make sure you have the latest version of content<br/>before trying to use these properties.</td>
+<td>The index into the DestinyTalentGridDefinition's &quot;nodes&quot; property where this node is located.  Used to uniquely identify the node within the Talent Grid.  Note that this is content version dependent: make sure you have the latest version of content before trying to use these properties.</td>
 </tr>
 <tr>
 <td>nodeHash</td>
 <td>integer:uint32</td>
-<td>The hash identifier for the node, which unfortunately is also content version dependent<br/>but can be (and ideally, should be) used instead of the nodeIndex to uniquely identify the node.<br/><br/>The two exist side-by-side for backcompat reasons due to the Great Talent Node Restructuring<br/>of Destiny 1, and I ran out of time to remove one of them and standardize on the other.  Sorry!</td>
+<td>The hash identifier for the node, which unfortunately is also content version dependent but can be (and ideally, should be) used instead of the nodeIndex to uniquely identify the node.<br/><br/>The two exist side-by-side for backcompat reasons due to the Great Talent Node Restructuring of Destiny 1, and I ran out of time to remove one of them and standardize on the other.  Sorry!</td>
 </tr>
 <tr>
 <td>row</td>
@@ -123,42 +118,42 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
 <tr>
 <td>prerequisiteNodeIndexes</td>
 <td>integer:int32[]</td>
-<td>Indexes into the DestinyTalentGridDefinition.nodes property for any nodes<br/>that must be activated before this one is allowed to be activated.<br/><br/>I would have liked to change this to hashes for Destiny 2, but we have run out of time.</td>
+<td>Indexes into the DestinyTalentGridDefinition.nodes property for any nodes that must be activated before this one is allowed to be activated.<br/><br/>I would have liked to change this to hashes for Destiny 2, but we have run out of time.</td>
 </tr>
 <tr>
 <td>binaryPairNodeIndex</td>
 <td>integer:int32</td>
-<td>At one point, Talent Nodes supported the idea of &quot;Binary Pairs&quot;: nodes that overlapped each<br/>other visually, and where activating one deactivated the other.  They ended up not being used,<br/>mostly because Exclusive Sets are <em>almost</em> a superset of this concept, but the potential<br/>for it to be used still exists in theory.<br/><br/>If this is ever used, this will be the index into<br/>the DestinyTalentGridDefinition.nodes property for the node that is the binary pair match<br/>to this node.  Activating one deactivates the other.</td>
+<td>At one point, Talent Nodes supported the idea of &quot;Binary Pairs&quot;: nodes that overlapped each other visually, and where activating one deactivated the other.  They ended up not being used, mostly because Exclusive Sets are <em>almost</em> a superset of this concept, but the potential for it to be used still exists in theory.<br/><br/>If this is ever used, this will be the index into the DestinyTalentGridDefinition.nodes property for the node that is the binary pair match to this node.  Activating one deactivates the other.</td>
 </tr>
 <tr>
 <td>autoUnlocks</td>
 <td>boolean</td>
-<td>If true, this node will automatically unlock when the Talent Grid's level reaches<br/>the required level of the current step of this node.</td>
+<td>If true, this node will automatically unlock when the Talent Grid's level reaches the required level of the current step of this node.</td>
 </tr>
 <tr>
 <td>lastStepRepeats</td>
 <td>boolean</td>
-<td>At one point, Nodes were going to be able to be activated multiple times, changing<br/>the current step and potentially piling on multiple effects from the previously<br/>activated steps.  This property would indicate if the last step could be activated<br/>multiple times.  <br/><br/>This is not currently used, but it isn't out of the question that<br/>this could end up being used again in a theoretical future.</td>
+<td>At one point, Nodes were going to be able to be activated multiple times, changing the current step and potentially piling on multiple effects from the previously activated steps.  This property would indicate if the last step could be activated multiple times.  <br/><br/>This is not currently used, but it isn't out of the question that this could end up being used again in a theoretical future.</td>
 </tr>
 <tr>
 <td>isRandom</td>
 <td>boolean</td>
-<td>If this is true, the node's step is determined randomly rather than<br/>the first step being chosen.</td>
+<td>If this is true, the node's step is determined randomly rather than the first step being chosen.</td>
 </tr>
 <tr>
 <td>randomActivationRequirement</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a></td>
-<td>At one point, you were going to be able to repurchase talent nodes that had random steps,<br/>to &quot;re-roll&quot; the current step of the node (and thus change the properties of your item).<br/>This was to be the activation requirement for performing that re-roll.<br/><br/>The system still exists to do this, as far as I know, so it may yet come back around!</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">DestinyNodeActivationRequirement</a>:Definition</td>
+<td>At one point, you were going to be able to repurchase talent nodes that had random steps, to &quot;re-roll&quot; the current step of the node (and thus change the properties of your item). This was to be the activation requirement for performing that re-roll.<br/><br/>The system still exists to do this, as far as I know, so it may yet come back around!</td>
 </tr>
 <tr>
 <td>isRandomRepurchasable</td>
 <td>boolean</td>
-<td>If this is true, the node can be &quot;re-rolled&quot; to acquire a different random current step.<br/>This is not used, but still exists for a theoretical future of talent grids.</td>
+<td>If this is true, the node can be &quot;re-rolled&quot; to acquire a different random current step. This is not used, but still exists for a theoretical future of talent grids.</td>
 </tr>
 <tr>
 <td>steps</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>[]</td>
-<td>At this point, &quot;steps&quot; have been obfuscated into conceptual entities, aggregating <br/>the underlying notions of &quot;properties&quot; and &quot;true steps&quot;.<br/><br/>If you need to know a step as it truly exists - such as when recreating Node logic when processing<br/>Vendor data - you'll have to use the &quot;realSteps&quot; property below.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">DestinyNodeStepDefinition</a>:Definition[]</td>
+<td>At this point, &quot;steps&quot; have been obfuscated into conceptual entities, aggregating the underlying notions of &quot;properties&quot; and &quot;true steps&quot;.<br/><br/>If you need to know a step as it truly exists - such as when recreating Node logic when processing Vendor data - you'll have to use the &quot;realSteps&quot; property below.</td>
 </tr>
 <tr>
 <td>exclusiveWithNodeHashes</td>
@@ -168,27 +163,27 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
 <tr>
 <td>randomStartProgressionBarAtProgression</td>
 <td>integer:int32</td>
-<td>If the node's step is randomly selected, this is the amount of the Talent Grid's progression experience<br/>at which the progression bar for the node should be shown.</td>
+<td>If the node's step is randomly selected, this is the amount of the Talent Grid's progression experience at which the progression bar for the node should be shown.</td>
 </tr>
 <tr>
 <td>layoutIdentifier</td>
 <td>string</td>
-<td>A string identifier for a custom visual layout to apply to this talent node.  Unfortunately,<br/>we do not have any data for rendering these custom layouts.  It will be up to you to interpret<br/>these strings and change your UI if you want to have custom UI matching these layouts.</td>
+<td>A string identifier for a custom visual layout to apply to this talent node.  Unfortunately, we do not have any data for rendering these custom layouts.  It will be up to you to interpret these strings and change your UI if you want to have custom UI matching these layouts.</td>
 </tr>
 <tr>
 <td>groupHash</td>
 <td>integer:uint32:nullable</td>
-<td>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,<br/>within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes<br/>(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.<br/><br/>See DestinyTalentExclusiveGroup for more information on the details.  This is an identifier for this node's group,<br/>if it is part of one.</td>
+<td>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that, within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes (nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.<br/><br/>See DestinyTalentExclusiveGroup for more information on the details.  This is an identifier for this node's group, if it is part of one.</td>
 </tr>
 <tr>
 <td>loreHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable</td>
-<td>Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip.  This is the hash identifier<br/>of the lore element to show, if there is one to be show.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td>Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip.  This is the hash identifier of the lore element to show, if there is one to be show.</td>
 </tr>
 <tr>
 <td>nodeStyleIdentifier</td>
 <td>string</td>
-<td>Comes from the talent grid node style: this identifier should be used to determine<br/>how to render the node in the UI.</td>
+<td>Comes from the talent grid node style: this identifier should be used to determine how to render the node in the UI.</td>
 </tr>
 <tr>
 <td>ignoreForCompletion</td>
@@ -220,11 +215,11 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
     "lastStepRepeats": false,
     // Type: boolean
     "isRandom": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">DestinyNodeActivationRequirement</a>:Definition
     "randomActivationRequirement": {
         // Type: integer:int32
         "gridLevel": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">Destiny.Definitions.DestinyMaterialRequirementSetDefinition</a>:integer:uint32[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32[]
         "materialRequirementHashes": [
            // Type: integer:uint32
             0
@@ -232,11 +227,11 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
     },
     // Type: boolean
     "isRandomRepurchasable": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">DestinyNodeStepDefinition</a>:Definition[]
     "steps": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">Destiny.Definitions.DestinyNodeStepDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">DestinyNodeStepDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -253,15 +248,15 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
             "nodeStepHash": 0,
             // Type: string
             "interactionDescription": "",
-            // Type: <a href="../../docs/schemas/Destiny-DamageType">Destiny.DamageType</a>:Enum
+            // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
             "damageType": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32:nullable
             "damageTypeHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">Destiny.Definitions.DestinyNodeActivationRequirement</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">DestinyNodeActivationRequirement</a>:Definition
             "activationRequirement": {
                 // Type: integer:int32
                 "gridLevel": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">Destiny.Definitions.DestinyMaterialRequirementSetDefinition</a>:integer:uint32[]
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32[]
                 "materialRequirementHashes": [
                    // Type: integer:uint32
                     0
@@ -273,42 +268,42 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
             "nextStepIndex": 0,
             // Type: boolean
             "isNextStepRandom": false,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32[]
             "perkHashes": [
                // Type: integer:uint32
                 0
             ],
             // Type: integer:int32
             "startProgressionBarAtProgress": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32[]
             "statHashes": [
                // Type: integer:uint32
                 0
             ],
             // Type: boolean
             "affectsQuality": false,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">Destiny.Definitions.DestinyTalentNodeStepGroups</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">DestinyTalentNodeStepGroups</a>:Definition
             "stepGroups": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">Destiny.Definitions.DestinyTalentNodeStepWeaponPerformances</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">DestinyTalentNodeStepWeaponPerformances</a>:Enum
                 "weaponPerformance": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">Destiny.Definitions.DestinyTalentNodeStepImpactEffects</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">DestinyTalentNodeStepImpactEffects</a>:Enum
                 "impactEffects": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">Destiny.Definitions.DestinyTalentNodeStepGuardianAttributes</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">DestinyTalentNodeStepGuardianAttributes</a>:Enum
                 "guardianAttributes": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">Destiny.Definitions.DestinyTalentNodeStepLightAbilities</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">DestinyTalentNodeStepLightAbilities</a>:Enum
                 "lightAbilities": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">Destiny.Definitions.DestinyTalentNodeStepDamageTypes</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">DestinyTalentNodeStepDamageTypes</a>:Enum
                 "damageTypes": 0
             },
             // Type: boolean
             "affectsLevel": false,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">DestinyNodeSocketReplaceResponse</a>:Definition[]
             "socketReplacements": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">Destiny.Definitions.DestinyNodeSocketReplaceResponse</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">DestinyNodeSocketReplaceResponse</a>:Definition
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">Destiny.Definitions.Sockets.DestinySocketTypeDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:ManifestDefinition:integer:uint32
                     "socketTypeHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                     "plugItemHash": 0
                 }
             ]
@@ -325,7 +320,7 @@ they are used in Destiny 2 (and how they were used in Destiny 1).</p>
     "layoutIdentifier": "",
     // Type: integer:uint32:nullable
     "groupHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:ManifestDefinition:integer:uint32:nullable
     "loreHash": 0,
     // Type: string
     "nodeStyleIdentifier": "",

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemStatsComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If you want the stats on an item's instanced data, get this component.</p>
-<p>These are stats like Attack, Defense etc... and <em>not</em> historical stats.</p>
-<p>Note that some stats have additional computation in-game at runtime - for instance,
-Magazine Size - and thus these stats might not be 100% accurate compared to what you see
-in-game for some stats.  I know, it sucks.  I hate it too.</p>
+<p>If you want the stats on an item's instanced data, get this component.<br/><br/>These are stats like Attack, Defense etc... and <em>not</em> historical stats.<br/><br/>Note that some stats have additional computation in-game at runtime - for instance, Magazine Size - and thus these stats might not be 100% accurate compared to what you see in-game for some stats.  I know, it sucks.  I hate it too.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,17 +97,17 @@ in-game for some stats.  I know, it sucks.  I hate it too.</p>
 <tbody>
 <tr>
 <td>stats</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>&gt;</td>
 <td>If the item has stats that it provides (damage, defense, etc...), it will be given here.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">Destiny.DestinyStat</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>&gt;
     "stats": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,

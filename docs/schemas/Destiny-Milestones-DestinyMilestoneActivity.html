@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneActivity/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Sometimes, we know the specific activity that the Milestone wants you to play.
-This entity provides additional information about that Activity and all of its
-variants.  (sometimes there's only one variant, but I think you get the point)</p>
+<p>Sometimes, we know the specific activity that the Milestone wants you to play. This entity provides additional information about that Activity and all of its variants.  (sometimes there's only one variant, but I think you get the point)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,43 +97,43 @@ variants.  (sometimes there's only one variant, but I think you get the point)</
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
-<td>The hash of an arbitrarily chosen variant of this activity.  We'll go ahead and<br/>call that the &quot;canonical&quot; activity, because if you're using this value you should<br/>only use it for properties that are common across the variants: things like the<br/>name of the activity, it's location, etc...<br/>Use this hash to look up the DestinyActivityDefinition of this activity for rendering data.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash of an arbitrarily chosen variant of this activity.  We'll go ahead and call that the &quot;canonical&quot; activity, because if you're using this value you should only use it for properties that are common across the variants: things like the name of the activity, it's location, etc... Use this hash to look up the DestinyActivityDefinition of this activity for rendering data.</td>
 </tr>
 <tr>
 <td>modifierHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
-<td>If the activity has modifiers, this will be the list of modifiers that all variants<br/>have in common.  Perform lookups against<br/>DestinyActivityModifierDefinition which defines the modifier being applied to get<br/>at the modifier data.<br/>Note that, in the DestiyActivityDefinition, you will see many more modifiers than this<br/>being referred to: those are all <em>possible</em> modifiers for the activity, not the active ones.<br/>Use only the active ones to match what's really live.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td>If the activity has modifiers, this will be the list of modifiers that all variants have in common.  Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data. Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all <em>possible</em> modifiers for the activity, not the active ones. Use only the active ones to match what's really live.</td>
 </tr>
 <tr>
 <td>variants</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]</td>
-<td>If you want more than just name/location/etc... you're going to have to dig into<br/>and show the variants of the conceptual activity.  These will differ in seemingly<br/>arbitrary ways, like difficulty level and modifiers applied.  Show it in whatever<br/>way tickles your fancy.</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]</td>
+<td>If you want more than just name/location/etc... you're going to have to dig into and show the variants of the conceptual activity.  These will differ in seemingly arbitrary ways, like difficulty level and modifiers applied.  Show it in whatever way tickles your fancy.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
     "activityHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]
     "modifierHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]
     "variants": [
-       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
             "activityHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
             "completionStatus": {
                 // Type: boolean
                 "completed": false,
-                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
                 "phases": [
-                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
                     {
                         // Type: boolean
                         "complete": false

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>If defined, the item has at least one socket.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,17 +98,17 @@
 <tr>
 <td>detail</td>
 <td>string</td>
-<td>This was supposed to be a string that would give per-item details about sockets.<br/>In practice, it turns out that all this ever has is the localized word &quot;details&quot;.<br/>... that's lame, but perhaps it will become something cool in the future.</td>
+<td>This was supposed to be a string that would give per-item details about sockets. In practice, it turns out that all this ever has is the localized word &quot;details&quot;. ... that's lame, but perhaps it will become something cool in the future.</td>
 </tr>
 <tr>
 <td>socketEntries</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">Destiny.Definitions.DestinyItemSocketEntryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a>:Definition[]</td>
 <td>Each socket on an item is defined here.  Check inside for more info.</td>
 </tr>
 <tr>
 <td>socketCategories</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">Destiny.Definitions.DestinyItemSocketCategoryDefinition</a>[]</td>
-<td>A convenience property, that refers to the sockets in the &quot;sockets&quot; property, pre-grouped<br/>by category and ordered in the manner that they should be grouped in the UI.<br/>You could form this yourself with the existing data, but why would you want to?  Enjoy life man.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition[]</td>
+<td>A convenience property, that refers to the sockets in the &quot;sockets&quot; property, pre-grouped by category and ordered in the manner that they should be grouped in the UI. You could form this yourself with the existing data, but why would you want to?  Enjoy life man.</td>
 </tr>
 </tbody>
 </table>
@@ -116,29 +116,29 @@
 <pre><code class="javascript">{
     // Type: string
     "detail": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">Destiny.Definitions.DestinyItemSocketEntryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a>:Definition[]
     "socketEntries": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">Destiny.Definitions.DestinyItemSocketEntryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">Destiny.Definitions.Sockets.DestinySocketTypeDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:ManifestDefinition:integer:uint32
             "socketTypeHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "singleInitialItemHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">Destiny.Definitions.DestinyItemSocketEntryPlugItemDefinition</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition[]
             "reusablePlugItems": [
-               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">Destiny.Definitions.DestinyItemSocketEntryPlugItemDefinition</a>
+               // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                     "plugItemHash": 0
                 }
             ]
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">Destiny.Definitions.DestinyItemSocketCategoryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition[]
     "socketCategories": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">Destiny.Definitions.DestinyItemSocketCategoryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">Destiny.Definitions.DestinyItemSocketCategoryDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition:integer:uint32
             "socketCategoryHash": 0,
             // Type: integer:int32[]
             "socketIndexes": [

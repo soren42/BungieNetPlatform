@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneRewardEntry/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The character-specific data for a milestone's reward entry.  See DestinyMilestoneDefinition for
-more information about Reward Entries.</p>
+<p>The character-specific data for a milestone's reward entry.  See DestinyMilestoneDefinition for more information about Reward Entries.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,7 +98,7 @@ more information about Reward Entries.</p>
 <tr>
 <td>rewardEntryHash</td>
 <td>integer:uint32</td>
-<td>The identifier for the reward entry in question.  It is important to look up the related<br/>DestinyMilestoneRewardEntryDefinition to get the static details about the reward, which<br/>you can do by looking up the milestone's DestinyMilestoneDefinition and examining the<br/>DestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data.</td>
+<td>The identifier for the reward entry in question.  It is important to look up the related DestinyMilestoneRewardEntryDefinition to get the static details about the reward, which you can do by looking up the milestone's DestinyMilestoneDefinition and examining the DestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data.</td>
 </tr>
 <tr>
 <td>earned</td>
@@ -109,7 +108,7 @@ more information about Reward Entries.</p>
 <tr>
 <td>redeemed</td>
 <td>boolean</td>
-<td>If TRUE, the player has redeemed/picked up/obtained this reward.<br/>Feel free to alias this to &quot;gotTheShinyBauble&quot; in your own codebase.</td>
+<td>If TRUE, the player has redeemed/picked up/obtained this reward. Feel free to alias this to &quot;gotTheShinyBauble&quot; in your own codebase.</td>
 </tr>
 </tbody>
 </table>

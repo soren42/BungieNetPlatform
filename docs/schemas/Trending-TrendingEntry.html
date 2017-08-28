@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>The list entry view for trending items.  Returns just enough to show the item on the trending page.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -108,12 +108,12 @@
 <tr>
 <td>identifier</td>
 <td>string</td>
-<td>We don't know whether the identifier will be a string, a uint, or a long... so we're going to cast it all to a string.<br/>But either way, we need any trending item created to have a single unique identifier for its type.</td>
+<td>We don't know whether the identifier will be a string, a uint, or a long... so we're going to cast it all to a string. But either way, we need any trending item created to have a single unique identifier for its type.</td>
 </tr>
 <tr>
 <td>entityType</td>
-<td><a href="../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>:Enum</td>
-<td>An enum - unfortunately - dictating all of the possible kinds of trending items that you might get in your result set,<br/>in case you want to do custom rendering or call to get the details of the item.</td>
+<td><a href="../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum</td>
+<td>An enum - unfortunately - dictating all of the possible kinds of trending items that you might get in your result set, in case you want to do custom rendering or call to get the details of the item.</td>
 </tr>
 <tr>
 <td>displayName</td>
@@ -148,17 +148,17 @@
 <tr>
 <td>webmVideo</td>
 <td>string</td>
-<td>If this is populated, the entry has a related WebM video to show.<br/>I am 100% certain I am going to regret putting this directly on TrendingEntry,<br/>but it will work so yolo</td>
+<td>If this is populated, the entry has a related WebM video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo</td>
 </tr>
 <tr>
 <td>mp4Video</td>
 <td>string</td>
-<td>If this is populated, the entry has a related MP4 video to show.<br/>I am 100% certain I am going to regret putting this directly on TrendingEntry,<br/>but it will work so yolo</td>
+<td>If this is populated, the entry has a related MP4 video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo</td>
 </tr>
 <tr>
 <td>featureImage</td>
 <td>string</td>
-<td>If isFeatured, this image will be populated with whatever the featured image is.<br/>Note that this will likely be a very large image, so don't use it all the time.</td>
+<td>If isFeatured, this image will be populated with whatever the featured image is. Note that this will likely be a very large image, so don't use it all the time.</td>
 </tr>
 </tbody>
 </table>
@@ -170,7 +170,7 @@
     "isFeatured": false,
     // Type: string
     "identifier": "",
-    // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>:Enum
+    // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum
     "entityType": 0,
     // Type: string
     "displayName": "",

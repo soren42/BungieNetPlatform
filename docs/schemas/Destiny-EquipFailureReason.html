@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>The reasons why an item cannot be equipped, if any.  Many flags can be set, or &quot;None&quot; if</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> integer</li>
+<li><strong>Type:</strong> Enum</li>
 <li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
@@ -109,18 +109,25 @@
 <tr>
 <td>ItemUniqueEquipRestricted</td>
 <td>2</td>
-<td>This item is part of a &quot;unique set&quot;, and you can't have more than one item of that same set type equipped at once.</td>
+<td>This item is part of a &quot;unique set&quot;, and you can't have more than one item of that same set type equipped at once. For instance, if you already have an Exotic Weapon equipped, you can't equip a second one in another weapon slot.</td>
+</tr>
+<tr>
+<td>ItemFailedUnlockCheck</td>
+<td>4</td>
+<td>This item has state-based gating that prevents it from being equipped in certain circumstances.  For instance, an item might be for Warlocks only and you're a Titan, or it might require you to have beaten some special quest that you haven't beaten yet.  Use the additional failure data passed on the item itself to get more information about what the specific failure case was (See DestinyInventoryItemDefinition and DestinyItemInstanceComponent)</td>
+</tr>
+<tr>
+<td>ItemFailedLevelCheck</td>
+<td>8</td>
+<td>This item requires you to have reached a specific character level in order to equip it, and you haven't reached that level yet.</td>
+</tr>
+<tr>
+<td>ItemNotOnCharacter</td>
+<td>16</td>
+<td>This item can't be equipped on the character requested, because it must be in that character's inventory first. Transfer the item to the character you want to equip it before you attempt to equip it.</td>
 </tr>
 </tbody>
 </table>
-<p>For instance, if you already have an Exotic Weapon equipped, you can't equip a second one in another weapon slot.
-ItemFailedUnlockCheck | 4 | This item has state-based gating that prevents it from being equipped in certain circumstances.  For instance, an item
-might be for Warlocks only and you're a Titan, or it might require you to have beaten some special quest that you haven't
-beaten yet.  Use the additional failure data passed on the item itself to get more information about what the specific
-failure case was (See DestinyInventoryItemDefinition and DestinyItemInstanceComponent)
-ItemFailedLevelCheck | 8 | This item requires you to have reached a specific character level in order to equip it, and you haven't reached that level yet.
-ItemNotOnCharacter | 16 | This item can't be equipped on the character requested, because it must be in that character's inventory first.
-Transfer the item to the character you want to equip it before you attempt to equip it.</p>
 <h2>References</h2>
 <ol>
 <li><a href="https://bungie-net.github.io/multi/schema_Destiny-EquipFailureReason.html#schema_Destiny-EquipFailureReason">https://bungie-net.github.io/multi/schema_Destiny-EquipFailureReason.html#schema_Destiny-EquipFailureReason</a></li>

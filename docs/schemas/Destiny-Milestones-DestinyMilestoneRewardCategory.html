@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneRewardCategory/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a category of &quot;summary&quot; rewards that can be earned for the Milestone regardless of
-specific quest rewards that can be earned.</p>
+<p>Represents a category of &quot;summary&quot; rewards that can be earned for the Milestone regardless of specific quest rewards that can be earned.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,11 +98,11 @@ specific quest rewards that can be earned.</p>
 <tr>
 <td>rewardCategoryHash</td>
 <td>integer:uint32</td>
-<td>Look up the relevant DestinyMilestoneDefinition, and then use rewardCategoryHash to look up the<br/>category info in DestinyMilestoneDefinition.rewards.</td>
+<td>Look up the relevant DestinyMilestoneDefinition, and then use rewardCategoryHash to look up the category info in DestinyMilestoneDefinition.rewards.</td>
 </tr>
 <tr>
 <td>entries</td>
-<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>[]</td>
 <td>The individual reward entries for this category, and their status.</td>
 </tr>
 </tbody>
@@ -112,9 +111,9 @@ specific quest rewards that can be earned.</p>
 <pre><code class="javascript">{
     // Type: integer:uint32
     "rewardCategoryHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>[]
     "entries": [
-       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>
+       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>
         {
             // Type: integer:uint32
             "rewardEntryHash": 0,

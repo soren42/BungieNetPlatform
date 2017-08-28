@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyLocationReleaseDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time for
-a given Location.</p>
+<p>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time for a given Location.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,7 +97,7 @@ a given Location.</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>Sadly, these don't appear to be populated anymore (ever?)</td>
 </tr>
 <tr>
@@ -108,12 +107,12 @@ a given Location.</p>
 </tr>
 <tr>
 <td>destinationHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The Destination being pointed to by this location.</td>
 </tr>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The Activity being pointed to by this location.</td>
 </tr>
 <tr>
@@ -124,26 +123,26 @@ a given Location.</p>
 <tr>
 <td>activityGraphNodeHash</td>
 <td>integer:uint32</td>
-<td>The Activity Graph Node being pointed to by this location.  (Remember that<br/>Activity Graph Node hashes are only unique within an Activity Graph: so use the combination<br/>to find the node being spoken of)</td>
+<td>The Activity Graph Node being pointed to by this location.  (Remember that Activity Graph Node hashes are only unique within an Activity Graph: so use the combination to find the node being spoken of)</td>
 </tr>
 <tr>
 <td>activityBubbleName</td>
 <td>integer:uint32</td>
-<td>The Activity Bubble within the Destination.  Look this up in the DestinyDestinationDefinition's<br/>bubbles and bubbleSettings properties.</td>
+<td>The Activity Bubble within the Destination.  Look this up in the DestinyDestinationDefinition's bubbles and bubbleSettings properties.</td>
 </tr>
 <tr>
 <td>activityPathBundle</td>
 <td>integer:uint32</td>
-<td>If we had map information, this would tell us something cool about the path this location wants<br/>you to take.  I wish we had map information.</td>
+<td>If we had map information, this would tell us something cool about the path this location wants you to take.  I wish we had map information.</td>
 </tr>
 <tr>
 <td>activityPathDestination</td>
 <td>integer:uint32</td>
-<td>If we had map information, this would tell us about path information related to destination<br/>on the map.  Sad.  Maybe you can do something cool with it.  Go to town man.</td>
+<td>If we had map information, this would tell us about path information related to destination on the map.  Sad.  Maybe you can do something cool with it.  Go to town man.</td>
 </tr>
 <tr>
 <td>navPointType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">Destiny.DestinyActivityNavPointType</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">DestinyActivityNavPointType</a>:Enum</td>
 <td>The type of Nav Point that this represents.  See the enumeration for more info.</td>
 </tr>
 <tr>
@@ -155,7 +154,7 @@ a given Location.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -168,9 +167,9 @@ a given Location.</p>
     },
     // Type: integer:uint32
     "spawnPoint": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32
     "destinationHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
     "activityHash": 0,
     // Type: integer:uint32
     "activityGraphHash": 0,
@@ -182,7 +181,7 @@ a given Location.</p>
     "activityPathBundle": 0,
     // Type: integer:uint32
     "activityPathDestination": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">Destiny.DestinyActivityNavPointType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityNavPointType">DestinyActivityNavPointType</a>:Enum
     "navPointType": 0,
     // Type: integer:int32[]
     "worldPosition": [

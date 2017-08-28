@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyUnlockExpressionDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Where the sausage gets made.  Unlock Expressions are the foundation of the game's gating
-mechanics and investment-related restrictions.  They can test Unlock Flags and Unlock Values
-for certain states, using a sufficient amount of logical operators such that
-unlock expressions are effectively Turing complete.</p>
-<p>Use UnlockExpressionParser to evaluate expressions using an IUnlockContext parsed from Babel.</p>
+<p>Where the sausage gets made.  Unlock Expressions are the foundation of the game's gating mechanics and investment-related restrictions.  They can test Unlock Flags and Unlock Values for certain states, using a sufficient amount of logical operators such that unlock expressions are effectively Turing complete.<br/><br/>Use UnlockExpressionParser to evaluate expressions using an IUnlockContext parsed from Babel.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,14 +97,14 @@ unlock expressions are effectively Turing complete.</p>
 <tbody>
 <tr>
 <td>scope</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum</td>
-<td>A shortcut for determining the most restrictive gating that this expression performs.<br/>See the DestinyGatingScope enum's documentation for more details.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum</td>
+<td>A shortcut for determining the most restrictive gating that this expression performs. See the DestinyGatingScope enum's documentation for more details.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">Destiny.DestinyGatingScope</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum
     "scope": 0
 }
 </code></pre>

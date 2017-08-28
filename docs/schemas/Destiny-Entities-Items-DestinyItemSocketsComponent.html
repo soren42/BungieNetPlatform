@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemSocketsComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Instanced items can have sockets, which are slots on the item where plugs can be inserted.</p>
-<p>Sockets are a bit complex: be sure to examine the documentation on the DestinyInventoryItemDefinition's
-&quot;socket&quot; block and elsewhere on these objects for more details.</p>
+<p>Instanced items can have sockets, which are slots on the item where plugs can be inserted.<br/><br/>Sockets are a bit complex: be sure to examine the documentation on the DestinyInventoryItemDefinition's &quot;socket&quot; block and elsewhere on these objects for more details.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,18 +97,18 @@
 <tbody>
 <tr>
 <td>sockets</td>
-<td><a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">Destiny.Entities.Items.DestinyItemSocketState</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>[]</td>
 <td>The list of all sockets on the item, and their status information.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">Destiny.Entities.Items.DestinyItemSocketState</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>[]
     "sockets": [
-       // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">Destiny.Entities.Items.DestinyItemSocketState</a>
+       // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable
             "plugHash": 0,
             // Type: boolean
             "isEnabled": false,
@@ -119,7 +117,7 @@
                // Type: integer:int32
                 0
             ],
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32[]
             "reusablePlugHashes": [
                // Type: integer:uint32
                 0

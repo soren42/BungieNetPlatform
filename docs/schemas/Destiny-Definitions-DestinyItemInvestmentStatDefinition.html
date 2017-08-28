@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,15 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemInvestmentStatDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a &quot;raw&quot; investment stat, before calculated stats are calculated
-and before any DestinyStatGroupDefinition is applied to transform the stat
-into something closer to what you see in-game.</p>
-<p>Because these won't match what you see in-game, consider carefully whether
-you really want to use these stats.  I have left them in case someone
-can do something useful or interesting with the pre-processed statistics.</p>
+<p>Represents a &quot;raw&quot; investment stat, before calculated stats are calculated and before any DestinyStatGroupDefinition is applied to transform the stat into something closer to what you see in-game.<br/><br/>Because these won't match what you see in-game, consider carefully whether you really want to use these stats.  I have left them in case someone can do something useful or interesting with the pre-processed statistics.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -102,19 +97,19 @@ can do something useful or interesting with the pre-processed statistics.</p>
 <tbody>
 <tr>
 <td>statTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier for the DestinyStatDefinition defining this stat.</td>
 </tr>
 <tr>
 <td>value</td>
 <td>integer:int32</td>
-<td>The raw &quot;Investment&quot; value for the stat, before transformations are performed<br/>to turn this raw stat into stats that are displayed in the game UI.</td>
+<td>The raw &quot;Investment&quot; value for the stat, before transformations are performed to turn this raw stat into stats that are displayed in the game UI.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
     "statTypeHash": 0,
     // Type: integer:int32
     "value": 0

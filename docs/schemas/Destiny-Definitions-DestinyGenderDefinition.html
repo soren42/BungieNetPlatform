@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyGenderDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Gender is a social construct, and as such we have definitions for Genders.  Right now there happens
-to only be two, but we'll see what the future holds.</p>
+<p>Gender is a social construct, and as such we have definitions for Genders.  Right now there happens to only be two, but we'll see what the future holds.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> Genders</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +98,12 @@ to only be two, but we'll see what the future holds.</p>
 <tbody>
 <tr>
 <td>genderType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>:Enum</td>
-<td>This is a quick reference enumeration for all of the currently defined Genders.  We use the enumeration<br/>for quicker lookups in related data, like DestinyClassDefinition.genderedClassNames.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum</td>
+<td>This is a quick reference enumeration for all of the currently defined Genders.  We use the enumeration for quicker lookups in related data, like DestinyClassDefinition.genderedClassNames.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -119,15 +119,15 @@ to only be two, but we'll see what the future holds.</p>
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGender">Destiny.DestinyGender</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum
     "genderType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",

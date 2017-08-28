@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> List</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,7 +96,7 @@
 <tbody>
 <tr>
 <td>results</td>
-<td><a href="../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>[]</td>
+<td><a href="../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>[]</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@
 </tr>
 <tr>
 <td>query</td>
-<td><a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a></td>
+<td><a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -122,15 +122,15 @@
 <tr>
 <td>useTotalResults</td>
 <td>boolean</td>
-<td>If useTotalResults is true, then totalResults represents an accurate count.<br/><br/>If False, it does not, and may be estimated/only the size of the current page.<br/><br/>Either way, you should probably always only trust hasMore.<br/><br/>This is a long-held historical throwback to when we used to do paging with known total results.<br/>Those queries toasted our database, and we were left to hastily alter our endpoints and create backward-<br/>compatible shims, of which useTotalResults is one.</td>
+<td>If useTotalResults is true, then totalResults represents an accurate count.<br/><br/>If False, it does not, and may be estimated/only the size of the current page.<br/><br/>Either way, you should probably always only trust hasMore.<br/><br/>This is a long-held historical throwback to when we used to do paging with known total results. Those queries toasted our database, and we were left to hastily alter our endpoints and create backward- compatible shims, of which useTotalResults is one.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>[]
+    // Type: <a href="../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>[]
     "results": [
-       // Type: <a href="../../docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>
+       // Type: <a href="../../docs/schemas/Trending-TrendingEntry">TrendingEntry</a>
         {
             // Type: number:double
             "weight": 0,
@@ -138,7 +138,7 @@
             "isFeatured": false,
             // Type: string
             "identifier": "",
-            // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>:Enum
+            // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum
             "entityType": 0,
             // Type: string
             "displayName": "",
@@ -164,7 +164,7 @@
     "totalResults": 0,
     // Type: boolean
     "hasMore": false,
-    // Type: <a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
+    // Type: <a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
     "query": {
         // Type: integer:int32
         "itemsPerPage": 0,

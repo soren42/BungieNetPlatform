@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,21 +96,21 @@
 <tbody>
 <tr>
 <td>destinyMemberships</td>
-<td><a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>[]</td>
-<td>this allows you to see destiny memberships that are visible and linked to this account <br/>(regardless of whether or not they have characters on the world server)</td>
+<td><a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>[]</td>
+<td>this allows you to see destiny memberships that are visible and linked to this account (regardless of whether or not they have characters on the world server)</td>
 </tr>
 <tr>
 <td>bungieNetUser</td>
-<td><a href="../../docs/schemas/User-GeneralUser">User.GeneralUser</a></td>
+<td><a href="../../docs/schemas/User-GeneralUser">GeneralUser</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>[]
+    // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>[]
     "destinyMemberships": [
-       // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+       // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
         {
             // Type: string
             "supplementalDisplayName": "",
@@ -124,7 +124,7 @@
             "displayName": ""
         }
     ],
-    // Type: <a href="../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
+    // Type: <a href="../../docs/schemas/User-GeneralUser">GeneralUser</a>
     "bungieNetUser": {
         // Type: integer:int64
         "membershipId": 0,
@@ -152,15 +152,15 @@
         "lastUpdate": "",
         // Type: integer:int64:nullable
         "legacyPortalUID": 0,
-        // Type: <a href="../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+        // Type: <a href="../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
         "context": {
             // Type: boolean
             "isFollowing": false,
-            // Type: <a href="../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+            // Type: <a href="../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
             "ignoreStatus": {
                 // Type: boolean
                 "isIgnored": false,
-                // Type: <a href="../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>:Enum
+                // Type: <a href="../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>:Enum
                 "ignoreFlags": 0
             },
             // Type: string:date-time:nullable

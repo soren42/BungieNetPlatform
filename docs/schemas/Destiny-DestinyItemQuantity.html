@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-DestinyItemQuantity/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Used in a number of Destiny contracts to return data about an item stack and its quantity.
-Can optionally return an itemInstanceId if the item is instanced - in which case, the quantity returned
-will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
+<p>Used in a number of Destiny contracts to return data about an item stack and its quantity. Can optionally return an itemInstanceId if the item is instanced - in which case, the quantity returned will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,13 +97,13 @@ will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
 <tbody>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier for the item in question.  Use it to look up the item's DestinyInventoryItemDefinition.</td>
 </tr>
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64:nullable</td>
-<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID.<br/>Normally, this will be null.</td>
+<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.</td>
 </tr>
 <tr>
 <td>quantity</td>
@@ -116,7 +114,7 @@ will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
     "itemHash": 0,
     // Type: integer:int64:nullable
     "itemInstanceId": 0,

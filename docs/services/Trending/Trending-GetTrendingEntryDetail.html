@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -109,7 +109,7 @@
 </tr>
 <tr>
 <td>trendingEntryType</td>
-<td><a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>:Enum</td>
+<td><a href="../../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum</td>
 <td>Yes</td>
 <td>The type of entity to be returned.</td>
 </tr>
@@ -123,15 +123,15 @@
 <h3>Response</h3>
 <p>PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/schemas/Trending-TrendingDetail">Trending.TrendingDetail</a>
+    // Type: <a href="../../../docs/schemas/Trending-TrendingDetail">TrendingDetail</a>
     "Response": {
         // Type: string
         "identifier": "",
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>:Enum
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum
         "entityType": 0,
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryNews">Trending.TrendingEntryNews</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryNews">TrendingEntryNews</a>
         "news": {
-            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
+            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">ContentItemPublicContract</a>
             "article": {
                 // Type: integer:int64
                 "contentId": 0,
@@ -151,7 +151,7 @@
                 "minimumAge": 0,
                 // Type: string
                 "ratingImagePath": "",
-                // Type: <a href="../../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
+                // Type: <a href="../../../docs/schemas/User-GeneralUser">GeneralUser</a>
                 "author": {
                     // Type: integer:int64
                     "membershipId": 0,
@@ -179,15 +179,15 @@
                     "lastUpdate": "",
                     // Type: integer:int64:nullable
                     "legacyPortalUID": 0,
-                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
                     "context": {
                         // Type: boolean
                         "isFollowing": false,
-                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                         "ignoreStatus": {
                             // Type: boolean
                             "isIgnored": false,
-                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>:Enum
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>:Enum
                             "ignoreFlags": 0
                         },
                         // Type: string:date-time:nullable
@@ -232,9 +232,9 @@
                 "properties": {
                     "{string}": {}
                 },
-                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>[]
                 "representations": [
-                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>
                     {
                         // Type: string
                         "name": "",
@@ -249,7 +249,7 @@
                    // Type: string
                     ""
                 ],
-                // Type: <a href="../../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+                // Type: <a href="../../../docs/schemas/Content-CommentSummary">CommentSummary</a>
                 "commentSummary": {
                     // Type: integer:int64
                     "topicId": 0,
@@ -258,9 +258,9 @@
                 }
             }
         },
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntrySupportArticle">Trending.TrendingEntrySupportArticle</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntrySupportArticle">TrendingEntrySupportArticle</a>
         "support": {
-            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">Content.ContentItemPublicContract</a>
+            // Type: <a href="../../../docs/schemas/Content-ContentItemPublicContract">ContentItemPublicContract</a>
             "article": {
                 // Type: integer:int64
                 "contentId": 0,
@@ -280,7 +280,7 @@
                 "minimumAge": 0,
                 // Type: string
                 "ratingImagePath": "",
-                // Type: <a href="../../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
+                // Type: <a href="../../../docs/schemas/User-GeneralUser">GeneralUser</a>
                 "author": {
                     // Type: integer:int64
                     "membershipId": 0,
@@ -308,15 +308,15 @@
                     "lastUpdate": "",
                     // Type: integer:int64:nullable
                     "legacyPortalUID": 0,
-                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+                    // Type: <a href="../../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
                     "context": {
                         // Type: boolean
                         "isFollowing": false,
-                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+                        // Type: <a href="../../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
                         "ignoreStatus": {
                             // Type: boolean
                             "isIgnored": false,
-                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>:Enum
+                            // Type: <a href="../../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>:Enum
                             "ignoreFlags": 0
                         },
                         // Type: string:date-time:nullable
@@ -361,9 +361,9 @@
                 "properties": {
                     "{string}": {}
                 },
-                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+                // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>[]
                 "representations": [
-                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+                   // Type: <a href="../../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>
                     {
                         // Type: string
                         "name": "",
@@ -378,7 +378,7 @@
                    // Type: string
                     ""
                 ],
-                // Type: <a href="../../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+                // Type: <a href="../../../docs/schemas/Content-CommentSummary">CommentSummary</a>
                 "commentSummary": {
                     // Type: integer:int64
                     "topicId": 0,
@@ -387,32 +387,32 @@
                 }
             }
         },
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyItem">Trending.TrendingEntryDestinyItem</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyItem">TrendingEntryDestinyItem</a>
         "destinyItem": {
             // Type: integer:uint32
             "itemHash": 0
         },
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyActivity">Trending.TrendingEntryDestinyActivity</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyActivity">TrendingEntryDestinyActivity</a>
         "destinyActivity": {
             // Type: integer:uint32
             "activityHash": 0,
-            // Type: <a href="../../../docs/schemas/Destiny-Activities-DestinyPublicActivityStatus">Destiny.Activities.DestinyPublicActivityStatus</a>
+            // Type: <a href="../../../docs/schemas/Destiny-Activities-DestinyPublicActivityStatus">DestinyPublicActivityStatus</a>
             "status": {
-                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32[]
                 "challengeObjectiveHashes": [
                    // Type: integer:uint32
                     0
                 ],
-                // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]
                 "modifierHashes": [
                    // Type: integer:uint32
                     0
                 ],
-                // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
                 "rewardTooltipItems": [
-                   // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                     {
-                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
@@ -422,7 +422,7 @@
                 ]
             }
         },
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyRitual">Trending.TrendingEntryDestinyRitual</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryDestinyRitual">TrendingEntryDestinyRitual</a>
         "destinyRitual": {
             // Type: string
             "image": "",
@@ -436,41 +436,41 @@
             "dateStart": "",
             // Type: string:date-time:nullable
             "dateEnd": "",
-            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">Destiny.Milestones.DestinyPublicMilestone</a>
+            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestone">DestinyPublicMilestone</a>
             "milestoneDetails": {
-                // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
+                // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32
                 "milestoneHash": 0,
-                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">DestinyPublicMilestoneQuest</a>[]
                 "availableQuests": [
-                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">Destiny.Milestones.DestinyPublicMilestoneQuest</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest">DestinyPublicMilestoneQuest</a>
                     {
-                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
+                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32
                         "questItemHash": 0,
-                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">DestinyPublicMilestoneActivity</a>
                         "activity": {
-                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
                             "activityHash": 0,
-                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]
                             "modifierHashes": [
                                // Type: integer:uint32
                                 0
                             ],
-                            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>[]
+                            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>[]
                             "variants": [
-                               // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
+                               // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>
                                 {
                                     // Type: integer:uint32
                                     "activityHash": 0
                                 }
                             ]
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>[]
+                        // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>[]
                         "challenges": [
-                           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">Destiny.Milestones.DestinyPublicMilestoneChallenge</a>
+                           // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>
                             {
-                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
                                 "objectiveHash": 0,
-                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
                                 "activityHash": 0
                             }
                         ]
@@ -486,7 +486,7 @@
                 // Type: string:date-time:nullable
                 "endDate": ""
             },
-            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContent">Destiny.Milestones.DestinyMilestoneContent</a>
+            // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContent">DestinyMilestoneContent</a>
             "eventContent": {
                 // Type: string
                 "about": "",
@@ -497,13 +497,13 @@
                    // Type: string
                     ""
                 ],
-                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>[]
+                // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>[]
                 "itemCategories": [
-                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">Destiny.Milestones.DestinyMilestoneContentItemCategory</a>
+                   // Type: <a href="../../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>
                     {
                         // Type: string
                         "title": "",
-                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
+                        // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32[]
                         "itemHashes": [
                            // Type: integer:uint32
                             0
@@ -512,7 +512,7 @@
                 ]
             }
         },
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityCreation">Trending.TrendingEntryCommunityCreation</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityCreation">TrendingEntryCommunityCreation</a>
         "creation": {
             // Type: string
             "media": "",
@@ -529,7 +529,7 @@
             // Type: integer:int32
             "upvotes": 0
         },
-        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityStream">Trending.TrendingEntryCommunityStream</a>
+        // Type: <a href="../../../docs/schemas/Trending-TrendingEntryCommunityStream">TrendingEntryCommunityStream</a>
         "stream": {
             // Type: string
             "image": "",
@@ -537,11 +537,11 @@
             "title": "",
             // Type: string
             "partnershipIdentifier": "",
-            // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>:Enum
+            // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">PartnershipType</a>:Enum
             "partnershipType": 0
         }
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

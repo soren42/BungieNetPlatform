@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-DestinyActivity/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents the &quot;Live&quot; data that we can obtain about a Character's status with a specific Activity.
-This will tell you whether the character can participate in the activity, as well as some other
-basic mutable information.  </p>
-<p>Meant to be combined with static DestinyActivityDefinition data for a full
-picture of the Activity.</p>
+<p>Represents the &quot;Live&quot; data that we can obtain about a Character's status with a specific Activity. This will tell you whether the character can participate in the activity, as well as some other basic mutable information.  <br/><br/>Meant to be combined with static DestinyActivityDefinition data for a full picture of the Activity.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,7 +97,7 @@ picture of the Activity.</p>
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier of the Activity.  Use this to look up the DestinyActivityDefinition of the activity.</td>
 </tr>
 <tr>
@@ -122,7 +118,7 @@ picture of the Activity.</p>
 <tr>
 <td>isCompleted</td>
 <td>boolean</td>
-<td>If true, we both have the ability to know that the user has completed this activity and<br/>they have completed it.  Unfortunately, we can't necessarily know this for all activities.  As such,<br/>this should probably only be used if you already know in advance which specific activities you wish to check.</td>
+<td>If true, we both have the ability to know that the user has completed this activity and they have completed it.  Unfortunately, we can't necessarily know this for all activities.  As such, this should probably only be used if you already know in advance which specific activities you wish to check.</td>
 </tr>
 <tr>
 <td>isVisible</td>
@@ -141,14 +137,14 @@ picture of the Activity.</p>
 </tr>
 <tr>
 <td>difficultyTier</td>
-<td><a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">Destiny.DestinyActivityDifficultyTier</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">DestinyActivityDifficultyTier</a>:Enum</td>
 <td>A DestinyActivityDifficultyTier enum value indicating the difficulty of the activity.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
     "activityHash": 0,
     // Type: boolean
     "isNew": false,
@@ -164,7 +160,7 @@ picture of the Activity.</p>
     "displayLevel": 0,
     // Type: integer:int32:nullable
     "recommendedLight": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">Destiny.DestinyActivityDifficultyTier</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityDifficultyTier">DestinyActivityDifficultyTier</a>:Enum
     "difficultyTier": 0
 }
 </code></pre>

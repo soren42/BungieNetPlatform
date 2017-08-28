@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyProgressionStepDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinition
-for caveats).</p>
+<p>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinition for caveats).</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,21 +98,21 @@ for caveats).</p>
 <tr>
 <td>stepName</td>
 <td>string</td>
-<td>Very rarely, Progressions will have localized text describing the Level of the progression.<br/>This will be that localized text, if it exists.  Otherwise, the standard appears to be<br/>to simply show the level numerically.</td>
+<td>Very rarely, Progressions will have localized text describing the Level of the progression. This will be that localized text, if it exists.  Otherwise, the standard appears to be to simply show the level numerically.</td>
 </tr>
 <tr>
 <td>displayEffectType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">Destiny.DestinyProgressionStepDisplayEffect</a>:Enum</td>
-<td>This appears to be, when you &quot;level up&quot;, whether a visual effect will display and on what entity.<br/>See DestinyProgressionStepDisplayEffect for slightly more info.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">DestinyProgressionStepDisplayEffect</a>:Enum</td>
+<td>This appears to be, when you &quot;level up&quot;, whether a visual effect will display and on what entity. See DestinyProgressionStepDisplayEffect for slightly more info.</td>
 </tr>
 <tr>
 <td>progressTotal</td>
 <td>integer:int32</td>
-<td>The total amount of progression points/&quot;experience&quot; you will need to initially reach this step.<br/>If this is the last step and the progression is repeating indefinitely (DestinyProgressionDefinition.repeatLastStep),<br/>this will also be the progress needed to level it up further by repeating this step again.</td>
+<td>The total amount of progression points/&quot;experience&quot; you will need to initially reach this step. If this is the last step and the progression is repeating indefinitely (DestinyProgressionDefinition.repeatLastStep), this will also be the progress needed to level it up further by repeating this step again.</td>
 </tr>
 <tr>
 <td>rewardItems</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
 <td>A listing of items rewarded as a result of reaching this level.</td>
 </tr>
 </tbody>
@@ -122,15 +121,15 @@ for caveats).</p>
 <pre><code class="javascript">{
     // Type: string
     "stepName": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">Destiny.DestinyProgressionStepDisplayEffect</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">DestinyProgressionStepDisplayEffect</a>:Enum
     "displayEffectType": 0,
     // Type: integer:int32
     "progressTotal": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "rewardItems": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

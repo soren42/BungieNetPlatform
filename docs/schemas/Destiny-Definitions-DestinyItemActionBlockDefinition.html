@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemActionBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined here
-if you care.</p>
+<p>If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined here if you care.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -114,7 +113,7 @@ if you care.</p>
 <tr>
 <td>overlayScreenName</td>
 <td>string</td>
-<td>If the action has an overlay screen associated with it, this is the name of that screen.<br/>Unfortunately, we cannot return the screen's data itself.</td>
+<td>If the action has an overlay screen associated with it, this is the name of that screen. Unfortunately, we cannot return the screen's data itself.</td>
 </tr>
 <tr>
 <td>overlayIcon</td>
@@ -128,13 +127,13 @@ if you care.</p>
 </tr>
 <tr>
 <td>requiredItems</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>[]</td>
-<td>If the action requires other items to exist or be destroyed, this is<br/>the list of those items and requirements.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>:Definition[]</td>
+<td>If the action requires other items to exist or be destroyed, this is the list of those items and requirements.</td>
 </tr>
 <tr>
 <td>progressionRewards</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>[]</td>
-<td>If performing this action earns you Progression, this is the list of progressions and values granted<br/>for those progressions by performing this action.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>:Definition[]</td>
+<td>If performing this action earns you Progression, this is the list of progressions and values granted for those progressions by performing this action.</td>
 </tr>
 <tr>
 <td>actionTypeLabel</td>
@@ -144,12 +143,12 @@ if you care.</p>
 <tr>
 <td>requiredLocation</td>
 <td>string</td>
-<td>Theoretically, an item could have a localized string for a hint about the location in which<br/>the action should be performed.  In practice, no items yet have this property.</td>
+<td>Theoretically, an item could have a localized string for a hint about the location in which the action should be performed.  In practice, no items yet have this property.</td>
 </tr>
 <tr>
 <td>requiredCooldownHash</td>
 <td>integer:uint32</td>
-<td>The identifier hash for the Cooldown associated with this action.  We have not pulled this data yet<br/>for you to have more data to use for cooldowns.</td>
+<td>The identifier hash for the Cooldown associated with this action.  We have not pulled this data yet for you to have more data to use for cooldowns.</td>
 </tr>
 <tr>
 <td>deleteOnAction</td>
@@ -164,7 +163,7 @@ if you care.</p>
 <tr>
 <td>useOnAcquire</td>
 <td>boolean</td>
-<td>If true, this action will be performed as soon as you earn this item.<br/>Some rewards work this way, providing you a single item to pick up from<br/>a reward-granting vendor in-game and then immediately consuming itself<br/>to provide you multiple items.</td>
+<td>If true, this action will be performed as soon as you earn this item. Some rewards work this way, providing you a single item to pick up from a reward-granting vendor in-game and then immediately consuming itself to provide you multiple items.</td>
 </tr>
 </tbody>
 </table>
@@ -182,23 +181,23 @@ if you care.</p>
     "overlayIcon": "",
     // Type: integer:int32
     "requiredCooldownSeconds": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>:Definition[]
     "requiredItems": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">Destiny.Definitions.DestinyItemActionRequiredItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>:Definition
         {
             // Type: integer:int32
             "count": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: boolean
             "deleteOnAction": false
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>:Definition[]
     "progressionRewards": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">Destiny.Definitions.DestinyProgressionRewardDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">Destiny.Definitions.DestinyProgressionMappingDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a>:Definition:integer:uint32
             "progressionMappingHash": 0,
             // Type: integer:int32
             "amount": 0,

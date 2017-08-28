@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemSetBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Primarily for Quests, this is the definition of properties related to the item if it is a quest
-and its various quest steps.</p>
+<p>Primarily for Quests, this is the definition of properties related to the item if it is a quest and its various quest steps.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,13 +97,13 @@ and its various quest steps.</p>
 <tbody>
 <tr>
 <td>itemList</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">Destiny.Definitions.DestinyItemSetBlockEntryDefinition</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">DestinyItemSetBlockEntryDefinition</a>:Definition[]</td>
 <td>A collection of hashes of set items, for items such as Quest Metadata items that possess this data.</td>
 </tr>
 <tr>
 <td>requireOrderedSetItemAdd</td>
 <td>boolean</td>
-<td>If true, items in the set can only be added in increasing order, and adding an item will remove any previous item.<br/>For Quests, this is by necessity true.  Only one quest step is present at a time, and previous steps are removed<br/>as you advance in the quest.</td>
+<td>If true, items in the set can only be added in increasing order, and adding an item will remove any previous item. For Quests, this is by necessity true.  Only one quest step is present at a time, and previous steps are removed as you advance in the quest.</td>
 </tr>
 <tr>
 <td>setIsFeatured</td>
@@ -120,13 +119,13 @@ and its various quest steps.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">Destiny.Definitions.DestinyItemSetBlockEntryDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">DestinyItemSetBlockEntryDefinition</a>:Definition[]
     "itemList": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">Destiny.Definitions.DestinyItemSetBlockEntryDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">DestinyItemSetBlockEntryDefinition</a>:Definition
         {
             // Type: integer:int32
             "trackingValue": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0
         }
     ],

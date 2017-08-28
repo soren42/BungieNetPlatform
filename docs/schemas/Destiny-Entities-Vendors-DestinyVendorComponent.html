@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>This component contains essential/summary information about the vendor.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,13 +97,13 @@
 <tbody>
 <tr>
 <td>vendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The unique identifier for the vendor.  Use it to look up their DestinyVendorDefinition.</td>
 </tr>
 <tr>
 <td>ackState</td>
-<td><a href="../../docs/schemas/User-AckState">User.AckState</a></td>
-<td>Long ago, we thought it would be a good idea to have special UI that showed whether or not<br/>you've seen a Vendor's inventory after cycling.  <br/><br/>For now, we don't have that UI anymore.  This property<br/>still exists for historical purposes.  Don't worry about it.</td>
+<td><a href="../../docs/schemas/User-AckState">AckState</a></td>
+<td>Long ago, we thought it would be a good idea to have special UI that showed whether or not you've seen a Vendor's inventory after cycling.  <br/><br/>For now, we don't have that UI anymore.  This property still exists for historical purposes.  Don't worry about it.</td>
 </tr>
 <tr>
 <td>nextRefreshDate</td>
@@ -122,16 +122,16 @@
 </tr>
 <tr>
 <td>progression</td>
-<td><a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a></td>
-<td>If the Vendor has a related Reputation, this is the Progression data that represents the character's<br/>Reputation level with this Vendor.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a></td>
+<td>If the Vendor has a related Reputation, this is the Progression data that represents the character's Reputation level with this Vendor.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32
     "vendorHash": 0,
-    // Type: <a href="../../docs/schemas/User-AckState">User.AckState</a>
+    // Type: <a href="../../docs/schemas/User-AckState">AckState</a>
     "ackState": {
         // Type: boolean
         "needsAck": false,
@@ -144,9 +144,9 @@
     "enabled": false,
     // Type: boolean
     "canPurchase": false,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>
+    // Type: <a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
     "progression": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32
         "progressionHash": 0,
         // Type: integer:int32
         "dailyProgress": 0,

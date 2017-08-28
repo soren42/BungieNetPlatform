@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,13 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyTalentNodeCategory/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>An artificial construct provided by Bungie.Net, where we attempt to group talent nodes
-by functionality.</p>
-<p>This is a single set of references to Talent Nodes that share a common
-trait or purpose.</p>
+<p>An artificial construct provided by Bungie.Net, where we attempt to group talent nodes by functionality.<br/><br/>This is a single set of references to Talent Nodes that share a common trait or purpose.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,22 +98,22 @@ trait or purpose.</p>
 <tr>
 <td>identifier</td>
 <td>string</td>
-<td>Mostly just for debug purposes, but if you find it useful you can have it.<br/>This is BNet's manually created identifier for this category.</td>
+<td>Mostly just for debug purposes, but if you find it useful you can have it. This is BNet's manually created identifier for this category.</td>
 </tr>
 <tr>
 <td>isLoreDriven</td>
 <td>boolean</td>
-<td>If true, we found the localized content in a related DestinyLoreDefinition<br/>instead of local BNet localization files.  This is mostly for ease of my own future investigations.</td>
+<td>If true, we found the localized content in a related DestinyLoreDefinition instead of local BNet localization files.  This is mostly for ease of my own future investigations.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
-<td>Will contain at least the &quot;name&quot;, which will be the title of the category.<br/>We will likely not have description and an icon yet, but I'm going to keep my options<br/>open.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
+<td>Will contain at least the &quot;name&quot;, which will be the title of the category. We will likely not have description and an icon yet, but I'm going to keep my options open.</td>
 </tr>
 <tr>
 <td>nodeHashes</td>
 <td>integer:uint32[]</td>
-<td>The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition)<br/>in this Talent Grid that are part of this Category.</td>
+<td>The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category.</td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +123,7 @@ trait or purpose.</p>
     "identifier": "",
     // Type: boolean
     "isLoreDriven": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>The most essential summary information about a Profile (in Destiny 1, we called these &quot;Accounts&quot;).</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,8 +97,8 @@
 <tbody>
 <tr>
 <td>userInfo</td>
-<td><a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a></td>
-<td>If you need to render the Profile (their platform name, icon, etc...) somewhere, this property contains<br/>that information.</td>
+<td><a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a></td>
+<td>If you need to render the Profile (their platform name, icon, etc...) somewhere, this property contains that information.</td>
 </tr>
 <tr>
 <td>dateLastPlayed</td>
@@ -107,7 +107,7 @@
 </tr>
 <tr>
 <td>versionsOwned</td>
-<td><a href="../../docs/schemas/Destiny-DestinyGameVersions">Destiny.DestinyGameVersions</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyGameVersions">DestinyGameVersions</a>:Enum</td>
 <td>If you want to know what expansions they own, this will contain that data.</td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+    // Type: <a href="../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
     "userInfo": {
         // Type: string
         "supplementalDisplayName": "",
@@ -134,7 +134,7 @@
     },
     // Type: string:date-time
     "dateLastPlayed": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyGameVersions">Destiny.DestinyGameVersions</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyGameVersions">DestinyGameVersions</a>:Enum
     "versionsOwned": 0,
     // Type: integer:int64[]
     "characterIds": [

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyObjectiveStatEntryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines the conditions under which stat modifications will be applied to a Character while
-participating in an objective.</p>
+<p>Defines the conditions under which stat modifications will be applied to a Character while participating in an objective.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,26 +97,26 @@ participating in an objective.</p>
 <tbody>
 <tr>
 <td>stat</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition</td>
 <td>The stat being modified, and the value used.</td>
 </tr>
 <tr>
 <td>style</td>
-<td><a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum</td>
 <td>Whether it will be applied as long as the objective is active, when it's completed, or until it's completed.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">Destiny.Definitions.DestinyItemInvestmentStatDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition
     "stat": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
         "statTypeHash": 0,
         // Type: integer:int32
         "value": 0
     },
-    // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum
     "style": 0
 }
 </code></pre>

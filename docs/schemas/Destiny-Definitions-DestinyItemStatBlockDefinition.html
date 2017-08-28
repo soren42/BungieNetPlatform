@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,20 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemStatBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Information about the item's calculated stats, with as much data as we can find for the stats
-without having an actual instance of the item.</p>
-<p>Note that this means the entire concept of providing these stats is fundamentally insufficient:
-we cannot predict with 100% accuracy the conditions under which an item can spawn, so we use various
-heuristics to attempt to simulate the conditions as accurately as possible.  Actual stats for
-items in-game can and will vary, but these should at least be useful base points for comparison
-and display.</p>
-<p>It is also worth noting that some stats, like Magazine size, have further calculations performed on them
-by scripts in-game and on the game servers that BNet does not have access to.  We cannot know how those stats
-are further transformed, and thus some stats will be inaccurate even on instances of items in BNet vs. how
-they appear in-game.  This is a known limitation of our item statistics, without any planned fix.</p>
+<p>Information about the item's calculated stats, with as much data as we can find for the stats without having an actual instance of the item.<br/><br/>Note that this means the entire concept of providing these stats is fundamentally insufficient: we cannot predict with 100% accuracy the conditions under which an item can spawn, so we use various heuristics to attempt to simulate the conditions as accurately as possible.  Actual stats for items in-game can and will vary, but these should at least be useful base points for comparison and display.<br/><br/>It is also worth noting that some stats, like Magazine size, have further calculations performed on them by scripts in-game and on the game servers that BNet does not have access to.  We cannot know how those stats are further transformed, and thus some stats will be inaccurate even on instances of items in BNet vs. how they appear in-game.  This is a known limitation of our item statistics, without any planned fix.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -107,34 +97,34 @@ they appear in-game.  This is a known limitation of our item statistics, without
 <tbody>
 <tr>
 <td>statGroupHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">Destiny.Definitions.DestinyStatGroupDefinition</a>:integer:uint32:nullable</td>
-<td>If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this will<br/>be the identifier for that definition.<br/><br/>If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.stats<br/>property, you don't have to worry about statGroupHash and how it alters stats: the already altered<br/>stats are provided to you.  But if you want to see how the sausage gets made, or perform computations<br/>yourself, this is valuable information.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">DestinyStatGroupDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td>If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this will be the identifier for that definition.<br/><br/>If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.stats property, you don't have to worry about statGroupHash and how it alters stats: the already altered stats are provided to you.  But if you want to see how the sausage gets made, or perform computations yourself, this is valuable information.</td>
 </tr>
 <tr>
 <td>stats</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">Destiny.Definitions.DestinyInventoryItemStatDefinition</a>&gt;</td>
-<td>If you are looking for precomputed values for the stats on a weapon, this is where they are stored.<br/>Technically these are the &quot;Display&quot; stat values.  Please see DestinyStatsDefinition for what<br/>Display Stat Values means, it's a very long story... but essentially these are the closest values<br/>BNet can get to the item stats that you see in-game.<br/> <br/>These stats are keyed by the DestinyStatDefinition's hash identifier for the stat<br/>that's found on the item.</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;</td>
+<td>If you are looking for precomputed values for the stats on a weapon, this is where they are stored. Technically these are the &quot;Display&quot; stat values.  Please see DestinyStatsDefinition for what Display Stat Values means, it's a very long story... but essentially these are the closest values BNet can get to the item stats that you see in-game. These stats are keyed by the DestinyStatDefinition's hash identifier for the stat that's found on the item.</td>
 </tr>
 <tr>
 <td>hasDisplayableStats</td>
 <td>boolean</td>
-<td>A quick and lazy way to determine whether any stat other than the &quot;primary&quot; stat is actually<br/>visible on the item.  Items often have stats that we return in case people find them useful, but<br/>they're not part of the &quot;Stat Group&quot; and thus we wouldn't display them in our UI.  If this is False,<br/>then we're not going to display any of these stats other than the primary one.</td>
+<td>A quick and lazy way to determine whether any stat other than the &quot;primary&quot; stat is actually visible on the item.  Items often have stats that we return in case people find them useful, but they're not part of the &quot;Stat Group&quot; and thus we wouldn't display them in our UI.  If this is False, then we're not going to display any of these stats other than the primary one.</td>
 </tr>
 <tr>
 <td>primaryBaseStatHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
-<td>This stat is determined to be the &quot;primary&quot; stat, and can be looked up in the stats or any<br/>other stat collection related to the item.<br/><br/>Use this hash to look up the stat's value using DestinyInventoryItemDefinition.stats.stats,<br/>and the renderable data for the primary stat in the related DestinyStatDefinition.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>This stat is determined to be the &quot;primary&quot; stat, and can be looked up in the stats or any other stat collection related to the item.<br/><br/>Use this hash to look up the stat's value using DestinyInventoryItemDefinition.stats.stats, and the renderable data for the primary stat in the related DestinyStatDefinition.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">Destiny.Definitions.DestinyStatGroupDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">DestinyStatGroupDefinition</a>:ManifestDefinition:integer:uint32:nullable
     "statGroupHash": 0,
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">Destiny.Definitions.DestinyInventoryItemStatDefinition</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
     "stats": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -146,7 +136,7 @@ they appear in-game.  This is a known limitation of our item statistics, without
     },
     // Type: boolean
     "hasDisplayableStats": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
     "primaryBaseStatHash": 0
 }
 </code></pre>

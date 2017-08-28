@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyRewardSourceCategory/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>BNet's custom categorization of reward sources.  We took a look at the existing
-ways that items could be spawned, and tried to make high-level categorizations of
-them.  This needs to be re-evaluated for Destiny 2.</p>
+<p>BNet's custom categorization of reward sources.  We took a look at the existing ways that items could be spawned, and tried to make high-level categorizations of them.  This needs to be re-evaluated for Destiny 2.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> integer</li>
+<li><strong>Type:</strong> Enum</li>
 <li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
@@ -106,16 +104,20 @@ them.  This needs to be re-evaluated for Destiny 2.</p>
 <tr>
 <td>Activity</td>
 <td>1</td>
-<td>The source is directly related to the rewards gained by playing an activity or</td>
+<td>The source is directly related to the rewards gained by playing an activity or set of activities.  This currently includes Quests and other action in-game.</td>
+</tr>
+<tr>
+<td>Vendor</td>
+<td>2</td>
+<td>This source is directly related to items that Vendors sell.</td>
+</tr>
+<tr>
+<td>Aggregate</td>
+<td>3</td>
+<td>This source is a custom aggregation of items that can be earned in many ways, but that share some other property in common that is useful to share.  For instance, in Destiny 1 we would make &quot;Reward Sources&quot; for every game expansion: that way, you could search reward sources to see what items became available with any given Expansion.</td>
 </tr>
 </tbody>
 </table>
-<p>set of activities.  This currently includes Quests and other action in-game.
-Vendor | 2 | This source is directly related to items that Vendors sell.
-Aggregate | 3 | This source is a custom aggregation of items that can be earned in many ways, but that
-share some other property in common that is useful to share.  For instance, in Destiny 1
-we would make &quot;Reward Sources&quot; for every game expansion: that way, you could search
-reward sources to see what items became available with any given Expansion.</p>
 <h2>References</h2>
 <ol>
 <li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyRewardSourceCategory.html#schema_Destiny-Definitions-DestinyRewardSourceCategory">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyRewardSourceCategory.html#schema_Destiny-Definitions-DestinyRewardSourceCategory</a></li>

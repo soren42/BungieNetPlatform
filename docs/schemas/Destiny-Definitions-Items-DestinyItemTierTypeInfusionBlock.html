@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,12 +97,12 @@
 <tr>
 <td>baseQualityTransferRatio</td>
 <td>number:float</td>
-<td>The default portion of quality that will transfer from the infuser to the infusee item.<br/>(InfuserQuality - InfuseeQuality) * baseQualityTransferRatio = base quality transferred.</td>
+<td>The default portion of quality that will transfer from the infuser to the infusee item. (InfuserQuality - InfuseeQuality) * baseQualityTransferRatio = base quality transferred.</td>
 </tr>
 <tr>
 <td>minimumQualityIncrement</td>
 <td>integer:int32</td>
-<td>As long as InfuserQuality &gt; InfuseeQuality, the amount of quality bestowed is guaranteed<br/>to be at least this value, even if the transferRatio would dictate that it should be less.<br/>The total amount of quality that ends up in the Infusee cannot exceed the Infuser's quality however<br/>(for instance, if you infuse a 300 item with a 301 item and the minimum quality increment<br/>is 10, the infused item will not end up with 310 quality)</td>
+<td>As long as InfuserQuality &gt; InfuseeQuality, the amount of quality bestowed is guaranteed to be at least this value, even if the transferRatio would dictate that it should be less. The total amount of quality that ends up in the Infusee cannot exceed the Infuser's quality however (for instance, if you infuse a 300 item with a 301 item and the minimum quality increment is 10, the infused item will not end up with 310 quality)</td>
 </tr>
 </tbody>
 </table>

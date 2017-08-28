@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Items-DestinyItemTierTypeDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines the tier type of an item.  Mostly this provides human readable properties for types
-like Common, Rare, etc...</p>
-<p>It also provides some base data for infusion that could be useful.</p>
+<p>Defines the tier type of an item.  Mostly this provides human readable properties for types like Common, Rare, etc...<br/><br/>It also provides some base data for infusion that could be useful.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> ItemTierTypes</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,12 +98,12 @@ like Common, Rare, etc...</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>infusionProcess</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">Destiny.Definitions.Items.DestinyItemTierTypeInfusionBlock</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">DestinyItemTierTypeInfusionBlock</a>:Definition</td>
 <td>If this tier defines infusion properties, they will be contained here.</td>
 </tr>
 <tr>
@@ -120,13 +119,13 @@ like Common, Rare, etc...</p>
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -137,7 +136,7 @@ like Common, Rare, etc...</p>
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">Destiny.Definitions.Items.DestinyItemTierTypeInfusionBlock</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">DestinyItemTierTypeInfusionBlock</a>:Definition
     "infusionProcess": {
         // Type: number:float
         "baseQualityTransferRatio": 0,

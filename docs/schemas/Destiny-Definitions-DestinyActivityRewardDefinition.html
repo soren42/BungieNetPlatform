@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyActivityRewardDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Activities can refer to one or more sets of tooltip-friendly reward data.  These are the definitions
-for those tooltip friendly rewards.</p>
+<p>Activities can refer to one or more sets of tooltip-friendly reward data.  These are the definitions for those tooltip friendly rewards.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,8 +102,8 @@ for those tooltip friendly rewards.</p>
 </tr>
 <tr>
 <td>rewardItems</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
-<td>The &quot;Items provided&quot; in the reward.  This is almost always a pointer to a DestinyInventoryItemDefintion<br/>for an item that you can't actually earn in-game, but that has name/description/icon information for<br/>the vague concept of the rewards you will receive.  This is because the actual reward generation is<br/>non-deterministic and extremely complicated, so the best the game can do is tell you what you'll get<br/>in vague terms.  And so too shall we.<br/><br/>Interesting trivia: you actually <em>do</em> earn these items when you complete the activity.  They go into a single-slot<br/>bucket on your profile, which is how you see the pop-ups of these rewards when you complete an activity that match<br/>these &quot;dummy&quot; items.  You can even see them if you look at the last one you earned in your<br/>profile-level inventory through the BNet API!  Who said reading documentation is a waste of time?</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
+<td>The &quot;Items provided&quot; in the reward.  This is almost always a pointer to a DestinyInventoryItemDefintion for an item that you can't actually earn in-game, but that has name/description/icon information for the vague concept of the rewards you will receive.  This is because the actual reward generation is non-deterministic and extremely complicated, so the best the game can do is tell you what you'll get in vague terms.  And so too shall we.<br/><br/>Interesting trivia: you actually <em>do</em> earn these items when you complete the activity.  They go into a single-slot bucket on your profile, which is how you see the pop-ups of these rewards when you complete an activity that match these &quot;dummy&quot; items.  You can even see them if you look at the last one you earned in your profile-level inventory through the BNet API!  Who said reading documentation is a waste of time?</td>
 </tr>
 </tbody>
 </table>
@@ -112,11 +111,11 @@ for those tooltip friendly rewards.</p>
 <pre><code class="javascript">{
     // Type: string
     "rewardText": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "rewardItems": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

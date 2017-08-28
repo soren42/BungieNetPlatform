@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -117,48 +117,48 @@
 <h3>Response</h3>
 <p>PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportData">Destiny.HistoricalStats.DestinyPostGameCarnageReportData</a>
+    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportData">DestinyPostGameCarnageReportData</a>
     "Response": {
         // Type: string:date-time
         "period": "",
-        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity">Destiny.HistoricalStats.DestinyHistoricalStatsActivity</a>
+        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity">DestinyHistoricalStatsActivity</a>
         "activityDetails": {
-            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
             "referenceId": 0,
             // Type: integer:int64
             "instanceId": 0,
-            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
+            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
             "mode": 0,
-            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
+            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:ManifestDefinition:integer:uint32
             "activityTypeHashOverride": 0,
             // Type: boolean
             "isPrivate": false
         },
-        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry">Destiny.HistoricalStats.DestinyPostGameCarnageReportEntry</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry">DestinyPostGameCarnageReportEntry</a>[]
         "entries": [
-           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry">Destiny.HistoricalStats.DestinyPostGameCarnageReportEntry</a>
+           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry">DestinyPostGameCarnageReportEntry</a>
             {
                 // Type: integer:int32
                 "standing": 0,
-                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>
                 "score": {
                     // Type: string
                     "statId": "",
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "basic": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "pga": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "weighted": {
                         // Type: number:double
                         "value": 0,
@@ -166,9 +166,9 @@
                         "displayValue": ""
                     }
                 },
-                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPlayer">Destiny.HistoricalStats.DestinyPlayer</a>
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPlayer">DestinyPlayer</a>
                 "player": {
-                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                     "destinyUserInfo": {
                         // Type: string
                         "supplementalDisplayName": "",
@@ -187,7 +187,7 @@
                     "characterLevel": 0,
                     // Type: integer:int32
                     "lightLevel": 0,
-                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                    // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                     "bungieNetUserInfo": {
                         // Type: string
                         "supplementalDisplayName": "",
@@ -207,26 +207,26 @@
                 },
                 // Type: integer:int64
                 "characterId": 0,
-                // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>&gt;
+                // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>&gt;
                 "values": {
                     "{string}": {
                         // Type: string
                         "statId": "",
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "basic": {
                             // Type: number:double
                             "value": 0,
                             // Type: string
                             "displayValue": ""
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "pga": {
                             // Type: number:double
                             "value": 0,
                             // Type: string
                             "displayValue": ""
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "weighted": {
                             // Type: number:double
                             "value": 0,
@@ -235,34 +235,34 @@
                         }
                     }
                 },
-                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportExtendedData">Destiny.HistoricalStats.DestinyPostGameCarnageReportExtendedData</a>
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportExtendedData">DestinyPostGameCarnageReportExtendedData</a>
                 "extended": {
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">Destiny.HistoricalStats.DestinyHistoricalWeaponStats</a>[]
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">DestinyHistoricalWeaponStats</a>[]
                     "weapons": [
-                       // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">Destiny.HistoricalStats.DestinyHistoricalWeaponStats</a>
+                       // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalWeaponStats">DestinyHistoricalWeaponStats</a>
                         {
-                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                             "referenceId": 0,
-                            // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>&gt;
+                            // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
-                                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                                     "basic": {
                                         // Type: number:double
                                         "value": 0,
                                         // Type: string
                                         "displayValue": ""
                                     },
-                                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                                     "pga": {
                                         // Type: number:double
                                         "value": 0,
                                         // Type: string
                                         "displayValue": ""
                                     },
-                                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                                     "weighted": {
                                         // Type: number:double
                                         "value": 0,
@@ -273,26 +273,26 @@
                             }
                         }
                     ],
-                    // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>&gt;
+                    // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>&gt;
                     "values": {
                         "{string}": {
                             // Type: string
                             "statId": "",
-                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                             "basic": {
                                 // Type: number:double
                                 "value": 0,
                                 // Type: string
                                 "displayValue": ""
                             },
-                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                             "pga": {
                                 // Type: number:double
                                 "value": 0,
                                 // Type: string
                                 "displayValue": ""
                             },
-                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                             "weighted": {
                                 // Type: number:double
                                 "value": 0,
@@ -304,31 +304,31 @@
                 }
             }
         ],
-        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportTeamEntry">Destiny.HistoricalStats.DestinyPostGameCarnageReportTeamEntry</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportTeamEntry">DestinyPostGameCarnageReportTeamEntry</a>[]
         "teams": [
-           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportTeamEntry">Destiny.HistoricalStats.DestinyPostGameCarnageReportTeamEntry</a>
+           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPostGameCarnageReportTeamEntry">DestinyPostGameCarnageReportTeamEntry</a>
             {
                 // Type: integer:int32
                 "teamId": 0,
-                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>
                 "standing": {
                     // Type: string
                     "statId": "",
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "basic": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "pga": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "weighted": {
                         // Type: number:double
                         "value": 0,
@@ -336,25 +336,25 @@
                         "displayValue": ""
                     }
                 },
-                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>
                 "score": {
                     // Type: string
                     "statId": "",
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "basic": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "pga": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "weighted": {
                         // Type: number:double
                         "value": 0,
@@ -367,7 +367,7 @@
             }
         ]
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

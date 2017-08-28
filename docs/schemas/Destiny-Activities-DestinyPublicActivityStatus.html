@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Activities-DestinyPublicActivityStatus/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents the public-facing status of an activity: any data about what is currently active in the
-Activity, regardless of an individual character's progress in it.</p>
+<p>Represents the public-facing status of an activity: any data about what is currently active in the Activity, regardless of an individual character's progress in it.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,38 +97,38 @@ Activity, regardless of an individual character's progress in it.</p>
 <tbody>
 <tr>
 <td>challengeObjectiveHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32[]</td>
 <td>Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions.</td>
 </tr>
 <tr>
 <td>modifierHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]</td>
 <td>The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.</td>
 </tr>
 <tr>
 <td>rewardTooltipItems</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]</td>
-<td>If the activity itself provides any specific &quot;mock&quot; rewards, this will be the items and their quantity.<br/><br/>Why &quot;mock&quot;, you ask?  Because these are the rewards as they are represented in the tooltip of the Activity.<br/><br/>These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of <br/>what you will get for a reward rather than the specific items you may obtain.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
+<td>If the activity itself provides any specific &quot;mock&quot; rewards, this will be the items and their quantity.<br/><br/>Why &quot;mock&quot;, you ask?  Because these are the rewards as they are represented in the tooltip of the Activity.<br/><br/>These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32[]
     "challengeObjectiveHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]
     "modifierHashes": [
        // Type: integer:uint32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "rewardTooltipItems": [
-       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+       // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> List</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,29 +96,29 @@
 <tbody>
 <tr>
 <td>data</td>
-<td><a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">Destiny.Entities.Profiles.DestinyVendorReceiptsComponent</a></td>
+<td><a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">DestinyVendorReceiptsComponent</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>privacy</td>
-<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>:Enum</td>
+<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">Destiny.Entities.Profiles.DestinyVendorReceiptsComponent</a>
+    // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">DestinyVendorReceiptsComponent</a>
     "data": {
-        // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">Destiny.Vendors.DestinyVendorReceipt</a>[]
+        // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">DestinyVendorReceipt</a>[]
         "receipts": [
-           // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">Destiny.Vendors.DestinyVendorReceipt</a>
+           // Type: <a href="../../docs/schemas/Destiny-Vendors-DestinyVendorReceipt">DestinyVendorReceipt</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
                 "currencyPaid": [
-                   // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                   // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
@@ -126,9 +126,9 @@
                         "quantity": 0
                     }
                 ],
-                // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">Destiny.DestinyItemQuantity</a>
+                // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                 "itemReceived": {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -139,7 +139,7 @@
                 "licenseUnlockHash": 0,
                 // Type: integer:int64
                 "purchasedByCharacterId": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">Destiny.DestinyVendorItemRefundPolicy</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-DestinyVendorItemRefundPolicy">DestinyVendorItemRefundPolicy</a>:Enum
                 "refundPolicy": 0,
                 // Type: integer:int32
                 "sequenceNumber": 0,
@@ -150,7 +150,7 @@
             }
         ]
     },
-    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>:Enum
+    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
     "privacy": 0
 }
 </code></pre>

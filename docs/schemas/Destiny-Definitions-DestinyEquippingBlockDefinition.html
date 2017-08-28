@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyEquippingBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Items that can be equipped define this block.  It contains information we need to
-understand how and when the item can be equipped.</p>
+<p>Items that can be equipped define this block.  It contains information we need to understand how and when the item can be equipped.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,13 +97,13 @@ understand how and when the item can be equipped.</p>
 <tbody>
 <tr>
 <td>gearsetItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
 <td>If the item is part of a gearset, this is a reference to that gearset item.</td>
 </tr>
 <tr>
 <td>uniqueLabel</td>
 <td>string</td>
-<td>If defined, this is the label used to check if the item has other items of<br/>matching types already equipped.  <br/><br/>For instance, when you aren't allowed to<br/>equip more than one Exotic Weapon, that's because all exotic weapons have<br/>identical uniqueLabels and the game checks the to-be-equipped item's uniqueLabel<br/>vs. all other already equipped items (other than the item in the slot that's<br/>about to be occupied).</td>
+<td>If defined, this is the label used to check if the item has other items of matching types already equipped.  <br/><br/>For instance, when you aren't allowed to equip more than one Exotic Weapon, that's because all exotic weapons have identical uniqueLabels and the game checks the to-be-equipped item's uniqueLabel vs. all other already equipped items (other than the item in the slot that's about to be occupied).</td>
 </tr>
 <tr>
 <td>uniqueLabelHash</td>
@@ -113,32 +112,32 @@ understand how and when the item can be equipped.</p>
 </tr>
 <tr>
 <td>equipmentSlotTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">Destiny.Definitions.DestinyEquipmentSlotDefinition</a>:integer:uint32</td>
-<td>An equipped item <em>must</em> be equipped in an Equipment Slot.  This is the hash identifier<br/>of the DestinyEquipmentSlotDefinition into which it must be equipped.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:Definition:integer:uint32</td>
+<td>An equipped item <em>must</em> be equipped in an Equipment Slot.  This is the hash identifier of the DestinyEquipmentSlotDefinition into which it must be equipped.</td>
 </tr>
 <tr>
 <td>attributes</td>
-<td><a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">Destiny.EquippingItemBlockAttributes</a>:Enum</td>
-<td>These are custom attributes on the equippability of the item.<br/><br/>For now, this can only be &quot;equip on acquire&quot;, which would mean that the item<br/>will be automatically equipped as soon as you pick it up.</td>
+<td><a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a>:Enum</td>
+<td>These are custom attributes on the equippability of the item.<br/><br/>For now, this can only be &quot;equip on acquire&quot;, which would mean that the item will be automatically equipped as soon as you pick it up.</td>
 </tr>
 <tr>
 <td>displayStrings</td>
 <td>string[]</td>
-<td>These are strings that represent the possible Game/Account/Character state failure conditions<br/>that can occur when trying to equip the item.  They match up one-to-one with requiredUnlockExpressions.</td>
+<td>These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item.  They match up one-to-one with requiredUnlockExpressions.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable
     "gearsetItemHash": 0,
     // Type: string
     "uniqueLabel": "",
     // Type: integer:uint32
     "uniqueLabelHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">Destiny.Definitions.DestinyEquipmentSlotDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:Definition:integer:uint32
     "equipmentSlotTypeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">Destiny.EquippingItemBlockAttributes</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a>:Enum
     "attributes": 0,
     // Type: string[]
     "displayStrings": [

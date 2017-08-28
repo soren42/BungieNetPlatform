@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,13 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Challenges-DestinyChallengeStatus/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents the status and other related information for a challenge that is - or was - available
-to a player.  </p>
-<p>A challenge is a bonus objective, generally tacked onto Quests or Activities, that
-provide additional variations on play.</p>
+<p>Represents the status and other related information for a challenge that is - or was - available to a player.  <br/><br/>A challenge is a bonus objective, generally tacked onto Quests or Activities, that provide additional variations on play.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -100,20 +97,20 @@ provide additional variations on play.</p>
 <tbody>
 <tr>
 <td>objective</td>
-<td><a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a></td>
+<td><a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a></td>
 <td>The progress - including completion status - of the active challenge.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
     "objective": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
         "objectiveHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable
         "destinationHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
         "activityHash": 0,
         // Type: integer:int32:nullable
         "progress": 0,

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,15 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyProgressionRewardDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Inventory Items can reward progression when actions are performed on them.  A common example
-of this in Destiny 1 was Bounties, which would reward Experience on your Character and the like
-when you completed the bounty.</p>
-<p>Note that this maps to a DestinyProgressionMappingDefinition, and <em>not</em> a DestinyProgressionDefinition
-directly.  This is apparently so that multiple progressions can be granted progression points/experience
-at the same time.</p>
+<p>Inventory Items can reward progression when actions are performed on them.  A common example of this in Destiny 1 was Bounties, which would reward Experience on your Character and the like when you completed the bounty.<br/><br/>Note that this maps to a DestinyProgressionMappingDefinition, and <em>not</em> a DestinyProgressionDefinition directly.  This is apparently so that multiple progressions can be granted progression points/experience at the same time.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -102,8 +97,8 @@ at the same time.</p>
 <tbody>
 <tr>
 <td>progressionMappingHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">Destiny.Definitions.DestinyProgressionMappingDefinition</a>:integer:uint32</td>
-<td>The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions<br/>for which experience should be applied.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a>:Definition:integer:uint32</td>
+<td>The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions for which experience should be applied.</td>
 </tr>
 <tr>
 <td>amount</td>
@@ -119,7 +114,7 @@ at the same time.</p>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">Destiny.Definitions.DestinyProgressionMappingDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a>:Definition:integer:uint32
     "progressionMappingHash": 0,
     // Type: integer:int32
     "amount": 0,

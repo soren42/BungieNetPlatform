@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyObjectivePerkEntryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines the conditions under which an intrinsic perk is applied while participating in an Objective.</p>
-<p>These perks will generally not be benefit-granting perks, but rather a perk that modifies gameplay
-in some interesting way.</p>
+<p>Defines the conditions under which an intrinsic perk is applied while participating in an Objective.<br/><br/>These perks will generally not be benefit-granting perks, but rather a perk that modifies gameplay in some interesting way.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,21 +97,21 @@ in some interesting way.</p>
 <tbody>
 <tr>
 <td>perkHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier of the DestinySandboxPerkDefinition that will be applied to the character.</td>
 </tr>
 <tr>
 <td>style</td>
-<td><a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>:Enum</td>
-<td>An enumeration indicating whether it will be applied as long as the Objective is active, when it's completed,<br/>or until it's completed.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum</td>
+<td>An enumeration indicating whether it will be applied as long as the Objective is active, when it's completed, or until it's completed.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32
     "perkHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">Destiny.DestinyObjectiveGrantStyle</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum
     "style": 0
 }
 </code></pre>

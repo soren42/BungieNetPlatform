@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemSocketCategoryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Sockets are grouped into categories in the UI.  These define which category
-and which sockets are under that category.</p>
+<p>Sockets are grouped into categories in the UI.  These define which category and which sockets are under that category.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,19 +97,19 @@ and which sockets are under that category.</p>
 <tbody>
 <tr>
 <td>socketCategoryHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">Destiny.Definitions.DestinyItemSocketCategoryDefinition</a>:integer:uint32</td>
-<td>The hash for the Socket Category: a quick way to go get the header display information for the category.<br/>Use it to look up DestinyItemSocketCategoryDefinition info.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition:integer:uint32</td>
+<td>The hash for the Socket Category: a quick way to go get the header display information for the category. Use it to look up DestinyItemSocketCategoryDefinition info.</td>
 </tr>
 <tr>
 <td>socketIndexes</td>
 <td>integer:int32[]</td>
-<td>Use these indexes to look up the sockets in the &quot;sockets.socketEntries&quot; property on the item definition.<br/>These are the indexes under the category, in game-rendered order.</td>
+<td>Use these indexes to look up the sockets in the &quot;sockets.socketEntries&quot; property on the item definition. These are the indexes under the category, in game-rendered order.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">Destiny.Definitions.DestinyItemSocketCategoryDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition:integer:uint32
     "socketCategoryHash": 0,
     // Type: integer:int32[]
     "socketIndexes": [

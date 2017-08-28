@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,14 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Vendors-DestinyVendorCategoriesComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A vendor can have many categories of items that they sell.  This component will return the category information
-for available items, as well as the index into those items in the user's sale item list.</p>
-<p>Note that, since both the category and items are indexes, this data is Content Version dependent.  Be sure to check
-that your content is up to date before using this data.  This is an unfortunate, but permanent, limitation of
-Vendor data.</p>
+<p>A vendor can have many categories of items that they sell.  This component will return the category information for available items, as well as the index into those items in the user's sale item list.<br/><br/>Note that, since both the category and items are indexes, this data is Content Version dependent.  Be sure to check that your content is up to date before using this data.  This is an unfortunate, but permanent, limitation of Vendor data.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,16 +97,16 @@ Vendor data.</p>
 <tbody>
 <tr>
 <td>categories</td>
-<td><a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategory">Destiny.Entities.Vendors.DestinyVendorCategory</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategory">DestinyVendorCategory</a>[]</td>
 <td>The list of categories for items that the vendor sells, in rendering order.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategory">Destiny.Entities.Vendors.DestinyVendorCategory</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategory">DestinyVendorCategory</a>[]
     "categories": [
-       // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategory">Destiny.Entities.Vendors.DestinyVendorCategory</a>
+       // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategory">DestinyVendorCategory</a>
         {
             // Type: integer:int32
             "categoryIndex": 0,

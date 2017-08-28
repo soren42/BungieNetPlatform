@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,18 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A shortcut for the fact that some items have a &quot;Preview Vendor&quot;</p>
-<ul>
-<li>See DestinyInventoryItemDefinition.preview.previewVendorHash - that is intended
-to be used to show what items you can get as a result of acquiring or using this item.</li>
-</ul>
-<p>A common example of this in Destiny 1 was Eververse &quot;Boxes,&quot; which could have many possible items.
-This &quot;Preview Vendor&quot; is not a vendor you can actually see in the game, but it defines categories and sale items for all of the possible
-items you could get from the Box so that the game can show them to you.  We summarize that info here
-so that you don't have to do that Vendor lookup and aggregation manually.</p>
+<p>A shortcut for the fact that some items have a &quot;Preview Vendor&quot; - See DestinyInventoryItemDefinition.preview.previewVendorHash - that is intended to be used to show what items you can get as a result of acquiring or using this item.<br/><br/>A common example of this in Destiny 1 was Eververse &quot;Boxes,&quot; which could have many possible items. This &quot;Preview Vendor&quot; is not a vendor you can actually see in the game, but it defines categories and sale items for all of the possible items you could get from the Box so that the game can show them to you.  We summarize that info here so that you don't have to do that Vendor lookup and aggregation manually.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -106,12 +98,12 @@ so that you don't have to do that Vendor lookup and aggregation manually.</p>
 <tr>
 <td>categoryDescription</td>
 <td>string</td>
-<td>The localized string for the category title.  This will be something describing<br/>the items you can get as a group, or your likelihood/the quantity you'll get.</td>
+<td>The localized string for the category title.  This will be something describing the items you can get as a group, or your likelihood/the quantity you'll get.</td>
 </tr>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>[]</td>
-<td>This is the list of all of the items for this category and the basic properties we'll<br/>know about them.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition[]</td>
+<td>This is the list of all of the items for this category and the basic properties we'll know about them.</td>
 </tr>
 </tbody>
 </table>
@@ -119,9 +111,9 @@ so that you don't have to do that Vendor lookup and aggregation manually.</p>
 <pre><code class="javascript">{
     // Type: string
     "categoryDescription": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition[]
     "items": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">Destiny.Definitions.Items.DestinyDerivedItemDefinition</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition
         {
             // Type: integer:uint32:nullable
             "itemHash": 0,

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,52 +96,52 @@
 <tbody>
 <tr>
 <td>activities</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">Destiny.HistoricalStats.DestinyHistoricalStatsPeriodGroup</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">DestinyHistoricalStatsPeriodGroup</a>[]</td>
 <td>List of activities, the most recent activity first.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">Destiny.HistoricalStats.DestinyHistoricalStatsPeriodGroup</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">DestinyHistoricalStatsPeriodGroup</a>[]
     "activities": [
-       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">Destiny.HistoricalStats.DestinyHistoricalStatsPeriodGroup</a>
+       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">DestinyHistoricalStatsPeriodGroup</a>
         {
             // Type: string:date-time
             "period": "",
-            // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity">Destiny.HistoricalStats.DestinyHistoricalStatsActivity</a>
+            // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity">DestinyHistoricalStatsActivity</a>
             "activityDetails": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
                 "referenceId": 0,
                 // Type: integer:int64
                 "instanceId": 0,
-                // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
+                // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
                 "mode": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:ManifestDefinition:integer:uint32
                 "activityTypeHashOverride": 0,
                 // Type: boolean
                 "isPrivate": false
             },
-            // Type: Dictionary&lt;string,<a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>&gt;
+            // Type: Dictionary&lt;string,<a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>&gt;
             "values": {
                 "{string}": {
                     // Type: string
                     "statId": "",
-                    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "basic": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "pga": {
                         // Type: number:double
                         "value": 0,
                         // Type: string
                         "displayValue": ""
                     },
-                    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                     "weighted": {
                         // Type: number:double
                         "value": 0,

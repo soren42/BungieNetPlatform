@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> List</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,7 +96,7 @@
 <tbody>
 <tr>
 <td>results</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">Destiny.Definitions.DestinyEntitySearchResultItem</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">DestinyEntitySearchResultItem</a>:Definition[]</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@
 </tr>
 <tr>
 <td>query</td>
-<td><a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a></td>
+<td><a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -122,21 +122,21 @@
 <tr>
 <td>useTotalResults</td>
 <td>boolean</td>
-<td>If useTotalResults is true, then totalResults represents an accurate count.<br/><br/>If False, it does not, and may be estimated/only the size of the current page.<br/><br/>Either way, you should probably always only trust hasMore.<br/><br/>This is a long-held historical throwback to when we used to do paging with known total results.<br/>Those queries toasted our database, and we were left to hastily alter our endpoints and create backward-<br/>compatible shims, of which useTotalResults is one.</td>
+<td>If useTotalResults is true, then totalResults represents an accurate count.<br/><br/>If False, it does not, and may be estimated/only the size of the current page.<br/><br/>Either way, you should probably always only trust hasMore.<br/><br/>This is a long-held historical throwback to when we used to do paging with known total results. Those queries toasted our database, and we were left to hastily alter our endpoints and create backward- compatible shims, of which useTotalResults is one.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">Destiny.Definitions.DestinyEntitySearchResultItem</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">DestinyEntitySearchResultItem</a>:Definition[]
     "results": [
-       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">Destiny.Definitions.DestinyEntitySearchResultItem</a>
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">DestinyEntitySearchResultItem</a>:Definition
         {
             // Type: integer:uint32
             "hash": 0,
             // Type: string
             "entityType": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
             "displayProperties": {
                 // Type: string
                 "description": "",
@@ -155,7 +155,7 @@
     "totalResults": 0,
     // Type: boolean
     "hasMore": false,
-    // Type: <a href="../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
+    // Type: <a href="../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
     "query": {
         // Type: integer:int32
         "itemsPerPage": 0,

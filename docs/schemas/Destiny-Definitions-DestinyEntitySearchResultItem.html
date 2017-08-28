@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>An individual Destiny Entity returned from the entity search.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,22 +98,22 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The hash identifier of the entity.  You will use this to look up the DestinyDefinition<br/>relevant for the entity found.</td>
+<td>The hash identifier of the entity.  You will use this to look up the DestinyDefinition relevant for the entity found.</td>
 </tr>
 <tr>
 <td>entityType</td>
 <td>string</td>
-<td>The type of entity, returned as a string matching the DestinyDefinition's contract class name.<br/>You'll have to have your own mapping from class names to actually looking up those definitions<br/>in the manifest databases.</td>
+<td>The type of entity, returned as a string matching the DestinyDefinition's contract class name. You'll have to have your own mapping from class names to actually looking up those definitions in the manifest databases.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
-<td>Basic display properties on the entity, so you don't have to look up the definition to show<br/>basic results for the item.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
+<td>Basic display properties on the entity, so you don't have to look up the definition to show basic results for the item.</td>
 </tr>
 <tr>
 <td>weight</td>
 <td>number:double</td>
-<td>The ranking value for sorting that we calculated using our relevance formula.  This<br/>will hopefully get better with time and iteration.</td>
+<td>The ranking value for sorting that we calculated using our relevance formula.  This will hopefully get better with time and iteration.</td>
 </tr>
 </tbody>
 </table>
@@ -123,7 +123,7 @@
     "hash": 0,
     // Type: string
     "entityType": "",
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",

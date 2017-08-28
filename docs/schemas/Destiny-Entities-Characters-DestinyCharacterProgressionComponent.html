@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Characters-DestinyCharacterProgressionComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This component returns anything that could be considered &quot;Progression&quot; on a user: data
-where the user is gaining levels, reputation, completions, rewards, etc...</p>
+<p>This component returns anything that could be considered &quot;Progression&quot; on a user: data where the user is gaining levels, reputation, completions, rewards, etc...</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,37 +97,37 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
 <tbody>
 <tr>
 <td>progressions</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;</td>
 <td>A Dictionary of all known progressions for the Character, keyed by the Progression's hash.<br/><br/>Not all progressions have user-facing data, but those who do will have that data contained in the DestinyProgressionDefinition.</td>
 </tr>
 <tr>
 <td>factions</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>&gt;</td>
-<td>A dictionary of all known Factions, keyed by the Faction's hash.  It contains data about this character's<br/>status with the faction.</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">DestinyFactionProgression</a>&gt;</td>
+<td>A dictionary of all known Factions, keyed by the Faction's hash.  It contains data about this character's status with the faction.</td>
 </tr>
 <tr>
 <td>milestones</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>&gt;</td>
-<td>Milestones are related to the simple progressions shown in the game, but return additional and<br/>hopefully helpful information for users about the specifics of the Milestone's status.</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Milestones-DestinyMilestone">DestinyMilestone</a>&gt;</td>
+<td>Milestones are related to the simple progressions shown in the game, but return additional and hopefully helpful information for users about the specifics of the Milestone's status.</td>
 </tr>
 <tr>
 <td>quests</td>
-<td><a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>[]</td>
-<td>If the user has any active quests, the quests' statuses will be returned here.<br/><br/>Note that quests have been largely supplanted by Milestones, but that doesn't mean that<br/>they won't make a comeback independent of milestones at some point.</td>
+<td><a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>[]</td>
+<td>If the user has any active quests, the quests' statuses will be returned here.<br/><br/>Note that quests have been largely supplanted by Milestones, but that doesn't mean that they won't make a comeback independent of milestones at some point.</td>
 </tr>
 <tr>
 <td>uninstancedItemObjectives</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;</td>
-<td>Sometimes, you have items in your inventory that don't have instances, but still have<br/>Objective information.  This provides you that objective information for uninstanced<br/>items.  <br/><br/>This dictionary is keyed by the item's hash: which you can use to look up the<br/>name and description for the overall task(s) implied by the objective.<br/>The value is the list of objectives for this item, and their statuses.</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]&gt;</td>
+<td>Sometimes, you have items in your inventory that don't have instances, but still have Objective information.  This provides you that objective information for uninstanced items.  <br/><br/>This dictionary is keyed by the item's hash: which you can use to look up the name and description for the overall task(s) implied by the objective. The value is the list of objectives for this item, and their statuses.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">Destiny.DestinyProgression</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>&gt;
     "progressions": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32
             "progressionHash": 0,
             // Type: integer:int32
             "dailyProgress": 0,
@@ -152,12 +151,12 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
             "nextLevelAt": 0
         }
     },
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Progression-DestinyFactionProgression">DestinyFactionProgression</a>&gt;
     "factions": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32
             "factionHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32
             "progressionHash": 0,
             // Type: integer:int32
             "dailyProgress": 0,
@@ -181,32 +180,32 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
             "nextLevelAt": 0
         }
     },
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Milestones-DestinyMilestone">Destiny.Milestones.DestinyMilestone</a>&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Milestones-DestinyMilestone">DestinyMilestone</a>&gt;
     "milestones": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32
             "milestoneHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>[]
             "availableQuests": [
-               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">Destiny.Milestones.DestinyMilestoneQuest</a>
+               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                     "questItemHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
+                    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>
                     "status": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                         "questHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                         "stepHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+                        // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
                         "stepObjectives": [
-                           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
                             {
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
                                 "objectiveHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable
                                 "destinationHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
                                 "activityHash": 0,
                                 // Type: integer:int32:nullable
                                 "progress": 0,
@@ -227,28 +226,28 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
                         // Type: integer:uint32:nullable
                         "vendorHash": 0
                     },
-                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
+                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">DestinyMilestoneActivity</a>
                     "activity": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
                         "activityHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]
                         "modifierHashes": [
                            // Type: integer:uint32
                             0
                         ],
-                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>[]
+                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]
                         "variants": [
-                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+                           // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>
                             {
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
                                 "activityHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">Destiny.Milestones.DestinyMilestoneActivityCompletionStatus</a>
+                                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
                                 "completionStatus": {
                                     // Type: boolean
                                     "completed": false,
-                                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>[]
+                                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
                                     "phases": [
-                                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">Destiny.Milestones.DestinyMilestoneActivityPhase</a>
+                                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
                                         {
                                             // Type: boolean
                                             "complete": false
@@ -258,17 +257,17 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
                             }
                         ]
                     },
-                    // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>[]
                     "challenges": [
-                       // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">Destiny.Challenges.DestinyChallengeStatus</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>
                         {
-                            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+                            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
                             "objective": {
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
                                 "objectiveHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable
                                 "destinationHash": 0,
-                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
                                 "activityHash": 0,
                                 // Type: integer:int32:nullable
                                 "progress": 0,
@@ -283,20 +282,20 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
             "values": {
                 "{string}": 0
             },
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32[]
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32[]
             "vendorHashes": [
                // Type: integer:uint32
                 0
             ],
-            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>[]
             "rewards": [
-               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">Destiny.Milestones.DestinyMilestoneRewardCategory</a>
+               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>
                 {
                     // Type: integer:uint32
                     "rewardCategoryHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>[]
+                    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>[]
                     "entries": [
-                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">Destiny.Milestones.DestinyMilestoneRewardEntry</a>
+                       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry">DestinyMilestoneRewardEntry</a>
                         {
                             // Type: integer:uint32
                             "rewardEntryHash": 0,
@@ -314,23 +313,23 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
             "endDate": ""
         }
     },
-    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>[]
     "quests": [
-       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">Destiny.Quests.DestinyQuestStatus</a>
+       // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "questHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
             "stepHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
             "stepObjectives": [
-               // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+               // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
                     "objectiveHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable
                     "destinationHash": 0,
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
                     "activityHash": 0,
                     // Type: integer:int32:nullable
                     "progress": 0,
@@ -352,16 +351,16 @@ where the user is gaining levels, reputation, completions, rewards, etc...</p>
             "vendorHash": 0
         }
     ],
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>[]&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]&gt;
     "uninstancedItemObjectives": {
         "0": [
-           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">Destiny.Quests.DestinyObjectiveProgress</a>
+           // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
                 "objectiveHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable
                 "destinationHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable
                 "activityHash": 0,
                 // Type: integer:int32:nullable
                 "progress": 0,

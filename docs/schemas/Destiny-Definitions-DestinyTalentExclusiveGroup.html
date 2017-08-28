@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyTalentExclusiveGroup/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,
-within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes
-(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.</p>
+<p>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that, within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes (nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -104,13 +102,13 @@ within the group, many nodes can be activated.  But the act of activating any no
 </tr>
 <tr>
 <td>loreHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
 <td>If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.</td>
 </tr>
 <tr>
 <td>nodeHashes</td>
 <td>integer:uint32[]</td>
-<td>A quick reference of the talent nodes that are part of this group, by their Talent Node hashes.<br/>(See DestinyTalentNodeDefinition.nodeHash)</td>
+<td>A quick reference of the talent nodes that are part of this group, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)</td>
 </tr>
 <tr>
 <td>opposingGroupHashes</td>
@@ -120,7 +118,7 @@ within the group, many nodes can be activated.  But the act of activating any no
 <tr>
 <td>opposingNodeHashes</td>
 <td>integer:uint32[]</td>
-<td>A quick reference of Nodes that will be deactivated if any node in this group is activated, by<br/>their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)</td>
+<td>A quick reference of Nodes that will be deactivated if any node in this group is activated, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)</td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +126,7 @@ within the group, many nodes can be activated.  But the act of activating any no
 <pre><code class="javascript">{
     // Type: integer:uint32
     "groupHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:ManifestDefinition:integer:uint32:nullable
     "loreHash": 0,
     // Type: integer:uint32[]
     "nodeHashes": [

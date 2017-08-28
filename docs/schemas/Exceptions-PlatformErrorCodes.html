@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> integer</li>
+<li><strong>Type:</strong> Enum</li>
 <li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
@@ -2483,147 +2483,690 @@
 <tr>
 <td>DestinyCharacterNotInTower</td>
 <td>1634</td>
-<td>Note: This is one of those holdovers from Destiny 1.  We didn't change the enum because I am lazy,</td>
+<td>Note: This is one of those holdovers from Destiny 1.  We didn't change the enum because I am lazy, but in Destiny 2 this would read &quot;DestinyCharacterNotInSocialSpace&quot;</td>
+</tr>
+<tr>
+<td>DestinyCharacterNotLoggedIn</td>
+<td>1635</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyDefinitionsNotLoaded</td>
+<td>1636</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyInventoryFull</td>
+<td>1637</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyItemFailedLevelCheck</td>
+<td>1638</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyItemFailedUnlockCheck</td>
+<td>1639</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyItemUnequippable</td>
+<td>1640</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyItemUniqueEquipRestricted</td>
+<td>1641</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyNoRoomInDestination</td>
+<td>1642</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyServiceFailure</td>
+<td>1643</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyServiceRetired</td>
+<td>1644</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyTransferFailed</td>
+<td>1645</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyTransferNotFoundForSourceBucket</td>
+<td>1646</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyUnexpectedResultInVendorTransferCheck</td>
+<td>1647</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyUniquenessViolation</td>
+<td>1648</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyErrorDeserializationFailure</td>
+<td>1649</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyValidAccountTicketRequired</td>
+<td>1650</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyShardRelayClientTimeout</td>
+<td>1651</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyShardRelayProxyTimeout</td>
+<td>1652</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyPGCRNotFound</td>
+<td>1653</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyAccountMustBeOffline</td>
+<td>1654</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyCanOnlyEquipInGame</td>
+<td>1655</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyCannotPerformActionOnEquippedItem</td>
+<td>1656</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyQuestAlreadyCompleted</td>
+<td>1657</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyQuestAlreadyTracked</td>
+<td>1658</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyTrackableQuestsFull</td>
+<td>1659</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyItemNotTransferrable</td>
+<td>1660</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyVendorPurchaseNotAllowed</td>
+<td>1661</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyContentVersionMismatch</td>
+<td>1662</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyItemActionForbidden</td>
+<td>1663</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyRefundInvalid</td>
+<td>1664</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyPrivacyRestriction</td>
+<td>1665</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyActionInsufficientPrivileges</td>
+<td>1666</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyInvalidClaimException</td>
+<td>1667</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyLegacyPlatformRestricted</td>
+<td>1668</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyLegacyPlatformInUse</td>
+<td>1669</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyLegacyPlatformInaccessible</td>
+<td>1670</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyCannotPerformActionAtThisLocation</td>
+<td>1671</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DestinyThrottledByGameServer</td>
+<td>1672</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbInvalidRequest</td>
+<td>1800</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbRedirectMismatch</td>
+<td>1801</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbAccessDenied</td>
+<td>1802</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbUnsupportedResponseType</td>
+<td>1803</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbInvalidScope</td>
+<td>1804</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbUnsupportedGrantType</td>
+<td>1805</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>FbInvalidGrant</td>
+<td>1806</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationExpired</td>
+<td>1900</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationUnknownType</td>
+<td>1901</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationInvalidResponseStatus</td>
+<td>1902</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationInvalidType</td>
+<td>1903</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationAlreadyPending</td>
+<td>1904</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationInsufficientPermission</td>
+<td>1905</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationInvalidCode</td>
+<td>1906</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationInvalidTargetState</td>
+<td>1907</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationCannotBeReactivated</td>
+<td>1908</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationNoRecipients</td>
+<td>1910</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationGroupCannotSendToSelf</td>
+<td>1911</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationTooManyRecipients</td>
+<td>1912</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationInvalid</td>
+<td>1913</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>InvitationNotFound</td>
+<td>1914</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenInvalid</td>
+<td>2000</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenBadFormat</td>
+<td>2001</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenAlreadyClaimed</td>
+<td>2002</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenAlreadyClaimedSelf</td>
+<td>2003</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenThrottling</td>
+<td>2004</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenUnknownRedemptionFailure</td>
+<td>2005</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenPurchaseClaimFailedAfterTokenClaimed</td>
+<td>2006</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenUserAlreadyOwnsOffer</td>
+<td>2007</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenInvalidOfferKey</td>
+<td>2008</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenEmailNotValidated</td>
+<td>2009</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenProvisioningBadVendorOrOffer</td>
+<td>2010</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenPurchaseHistoryUnknownError</td>
+<td>2011</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenThrottleStateUnknownError</td>
+<td>2012</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenUserAgeNotVerified</td>
+<td>2013</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenExceededOfferMaximum</td>
+<td>2014</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenNoAvailableUnlocks</td>
+<td>2015</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenMarketplaceInvalidPlatform</td>
+<td>2016</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenNoMarketplaceCodesFound</td>
+<td>2017</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenOfferNotAvailableForRedemption</td>
+<td>2018</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenUnlockPartialFailure</td>
+<td>2019</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenMarketplaceInvalidRegion</td>
+<td>2020</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenOfferExpired</td>
+<td>2021</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFExceededMaximumReferrals</td>
+<td>2022</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFDuplicateBond</td>
+<td>2023</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFNoValidVeteranDestinyMembershipsFound</td>
+<td>2024</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFNotAValidVeteranUser</td>
+<td>2025</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFCodeAlreadyClaimedOrNotFound</td>
+<td>2026</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFMismatchedDestinyMembershipType</td>
+<td>2027</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFUnableToAccessPurchaseHistory</td>
+<td>2028</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFUnableToCreateBond</td>
+<td>2029</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFUnableToFindBond</td>
+<td>2030</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFUnableToRemoveBond</td>
+<td>2031</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFCannotBondToSelf</td>
+<td>2032</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFInvalidPlatform</td>
+<td>2033</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFGenerateThrottled</td>
+<td>2034</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFUnableToCreateBondVersionMismatch</td>
+<td>2035</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFUnableToRemoveBondVersionMismatch</td>
+<td>2036</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RAFRedeemThrottled</td>
+<td>2037</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>NoAvailableDiscountCode</td>
+<td>2038</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DiscountAlreadyClaimed</td>
+<td>2039</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DiscountClaimFailure</td>
+<td>2040</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DiscountConfigurationFailure</td>
+<td>2041</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DiscountGenerationFailure</td>
+<td>2042</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DiscountAlreadyExists</td>
+<td>2043</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenRequiresCredentialXuid</td>
+<td>2044</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TokenRequiresCredentialPsnid</td>
+<td>2045</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>OfferRequired</td>
+<td>2046</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApiExceededMaxKeys</td>
+<td>2100</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApiInvalidOrExpiredKey</td>
+<td>2101</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApiKeyMissingFromRequest</td>
+<td>2102</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationDisabled</td>
+<td>2103</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationExceededMax</td>
+<td>2104</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationDisallowedByScope</td>
+<td>2105</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>AuthorizationCodeInvalid</td>
+<td>2106</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>OriginHeaderDoesNotMatchKey</td>
+<td>2107</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>AccessNotPermittedByApplicationScope</td>
+<td>2108</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationNameIsTaken</td>
+<td>2109</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>RefreshTokenNotYetValid</td>
+<td>2110</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>AccessTokenHasExpired</td>
+<td>2111</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationTokenFormatNotValid</td>
+<td>2112</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationNotConfiguredForBungieAuth</td>
+<td>2113</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ApplicationNotConfiguredForOAuth</td>
+<td>2114</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>OAuthAccessTokenExpired</td>
+<td>2115</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipInvalidType</td>
+<td>2200</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipValidationError</td>
+<td>2201</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipValidationTimeout</td>
+<td>2202</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipAccessFailure</td>
+<td>2203</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipAccountInvalid</td>
+<td>2204</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipGetAccountInfoFailure</td>
+<td>2205</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipDisabled</td>
+<td>2206</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PartnershipAlreadyExists</td>
+<td>2207</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>CommunityStreamingUnavailable</td>
+<td>2300</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TwitchNotLinked</td>
+<td>2500</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TwitchAccountNotFound</td>
+<td>2501</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TwitchCouldNotLoadDestinyInfo</td>
+<td>2502</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TrendingCategoryNotFound</td>
+<td>2600</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TrendingEntryTypeNotSupported</td>
+<td>2601</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
-<p>but in Destiny 2 this would read &quot;DestinyCharacterNotInSocialSpace&quot;
-DestinyCharacterNotLoggedIn | 1635 | &nbsp;
-DestinyDefinitionsNotLoaded | 1636 | &nbsp;
-DestinyInventoryFull | 1637 | &nbsp;
-DestinyItemFailedLevelCheck | 1638 | &nbsp;
-DestinyItemFailedUnlockCheck | 1639 | &nbsp;
-DestinyItemUnequippable | 1640 | &nbsp;
-DestinyItemUniqueEquipRestricted | 1641 | &nbsp;
-DestinyNoRoomInDestination | 1642 | &nbsp;
-DestinyServiceFailure | 1643 | &nbsp;
-DestinyServiceRetired | 1644 | &nbsp;
-DestinyTransferFailed | 1645 | &nbsp;
-DestinyTransferNotFoundForSourceBucket | 1646 | &nbsp;
-DestinyUnexpectedResultInVendorTransferCheck | 1647 | &nbsp;
-DestinyUniquenessViolation | 1648 | &nbsp;
-DestinyErrorDeserializationFailure | 1649 | &nbsp;
-DestinyValidAccountTicketRequired | 1650 | &nbsp;
-DestinyShardRelayClientTimeout | 1651 | &nbsp;
-DestinyShardRelayProxyTimeout | 1652 | &nbsp;
-DestinyPGCRNotFound | 1653 | &nbsp;
-DestinyAccountMustBeOffline | 1654 | &nbsp;
-DestinyCanOnlyEquipInGame | 1655 | &nbsp;
-DestinyCannotPerformActionOnEquippedItem | 1656 | &nbsp;
-DestinyQuestAlreadyCompleted | 1657 | &nbsp;
-DestinyQuestAlreadyTracked | 1658 | &nbsp;
-DestinyTrackableQuestsFull | 1659 | &nbsp;
-DestinyItemNotTransferrable | 1660 | &nbsp;
-DestinyVendorPurchaseNotAllowed | 1661 | &nbsp;
-DestinyContentVersionMismatch | 1662 | &nbsp;
-DestinyItemActionForbidden | 1663 | &nbsp;
-DestinyRefundInvalid | 1664 | &nbsp;
-DestinyPrivacyRestriction | 1665 | &nbsp;
-DestinyActionInsufficientPrivileges | 1666 | &nbsp;
-DestinyInvalidClaimException | 1667 | &nbsp;
-DestinyLegacyPlatformRestricted | 1668 | &nbsp;
-DestinyLegacyPlatformInUse | 1669 | &nbsp;
-DestinyLegacyPlatformInaccessible | 1670 | &nbsp;
-DestinyCannotPerformActionAtThisLocation | 1671 | &nbsp;
-DestinyThrottledByGameServer | 1672 | &nbsp;
-FbInvalidRequest | 1800 | &nbsp;
-FbRedirectMismatch | 1801 | &nbsp;
-FbAccessDenied | 1802 | &nbsp;
-FbUnsupportedResponseType | 1803 | &nbsp;
-FbInvalidScope | 1804 | &nbsp;
-FbUnsupportedGrantType | 1805 | &nbsp;
-FbInvalidGrant | 1806 | &nbsp;
-InvitationExpired | 1900 | &nbsp;
-InvitationUnknownType | 1901 | &nbsp;
-InvitationInvalidResponseStatus | 1902 | &nbsp;
-InvitationInvalidType | 1903 | &nbsp;
-InvitationAlreadyPending | 1904 | &nbsp;
-InvitationInsufficientPermission | 1905 | &nbsp;
-InvitationInvalidCode | 1906 | &nbsp;
-InvitationInvalidTargetState | 1907 | &nbsp;
-InvitationCannotBeReactivated | 1908 | &nbsp;
-InvitationNoRecipients | 1910 | &nbsp;
-InvitationGroupCannotSendToSelf | 1911 | &nbsp;
-InvitationTooManyRecipients | 1912 | &nbsp;
-InvitationInvalid | 1913 | &nbsp;
-InvitationNotFound | 1914 | &nbsp;
-TokenInvalid | 2000 | &nbsp;
-TokenBadFormat | 2001 | &nbsp;
-TokenAlreadyClaimed | 2002 | &nbsp;
-TokenAlreadyClaimedSelf | 2003 | &nbsp;
-TokenThrottling | 2004 | &nbsp;
-TokenUnknownRedemptionFailure | 2005 | &nbsp;
-TokenPurchaseClaimFailedAfterTokenClaimed | 2006 | &nbsp;
-TokenUserAlreadyOwnsOffer | 2007 | &nbsp;
-TokenInvalidOfferKey | 2008 | &nbsp;
-TokenEmailNotValidated | 2009 | &nbsp;
-TokenProvisioningBadVendorOrOffer | 2010 | &nbsp;
-TokenPurchaseHistoryUnknownError | 2011 | &nbsp;
-TokenThrottleStateUnknownError | 2012 | &nbsp;
-TokenUserAgeNotVerified | 2013 | &nbsp;
-TokenExceededOfferMaximum | 2014 | &nbsp;
-TokenNoAvailableUnlocks | 2015 | &nbsp;
-TokenMarketplaceInvalidPlatform | 2016 | &nbsp;
-TokenNoMarketplaceCodesFound | 2017 | &nbsp;
-TokenOfferNotAvailableForRedemption | 2018 | &nbsp;
-TokenUnlockPartialFailure | 2019 | &nbsp;
-TokenMarketplaceInvalidRegion | 2020 | &nbsp;
-TokenOfferExpired | 2021 | &nbsp;
-RAFExceededMaximumReferrals | 2022 | &nbsp;
-RAFDuplicateBond | 2023 | &nbsp;
-RAFNoValidVeteranDestinyMembershipsFound | 2024 | &nbsp;
-RAFNotAValidVeteranUser | 2025 | &nbsp;
-RAFCodeAlreadyClaimedOrNotFound | 2026 | &nbsp;
-RAFMismatchedDestinyMembershipType | 2027 | &nbsp;
-RAFUnableToAccessPurchaseHistory | 2028 | &nbsp;
-RAFUnableToCreateBond | 2029 | &nbsp;
-RAFUnableToFindBond | 2030 | &nbsp;
-RAFUnableToRemoveBond | 2031 | &nbsp;
-RAFCannotBondToSelf | 2032 | &nbsp;
-RAFInvalidPlatform | 2033 | &nbsp;
-RAFGenerateThrottled | 2034 | &nbsp;
-RAFUnableToCreateBondVersionMismatch | 2035 | &nbsp;
-RAFUnableToRemoveBondVersionMismatch | 2036 | &nbsp;
-RAFRedeemThrottled | 2037 | &nbsp;
-NoAvailableDiscountCode | 2038 | &nbsp;
-DiscountAlreadyClaimed | 2039 | &nbsp;
-DiscountClaimFailure | 2040 | &nbsp;
-DiscountConfigurationFailure | 2041 | &nbsp;
-DiscountGenerationFailure | 2042 | &nbsp;
-DiscountAlreadyExists | 2043 | &nbsp;
-TokenRequiresCredentialXuid | 2044 | &nbsp;
-TokenRequiresCredentialPsnid | 2045 | &nbsp;
-OfferRequired | 2046 | &nbsp;
-ApiExceededMaxKeys | 2100 | &nbsp;
-ApiInvalidOrExpiredKey | 2101 | &nbsp;
-ApiKeyMissingFromRequest | 2102 | &nbsp;
-ApplicationDisabled | 2103 | &nbsp;
-ApplicationExceededMax | 2104 | &nbsp;
-ApplicationDisallowedByScope | 2105 | &nbsp;
-AuthorizationCodeInvalid | 2106 | &nbsp;
-OriginHeaderDoesNotMatchKey | 2107 | &nbsp;
-AccessNotPermittedByApplicationScope | 2108 | &nbsp;
-ApplicationNameIsTaken | 2109 | &nbsp;
-RefreshTokenNotYetValid | 2110 | &nbsp;
-AccessTokenHasExpired | 2111 | &nbsp;
-ApplicationTokenFormatNotValid | 2112 | &nbsp;
-ApplicationNotConfiguredForBungieAuth | 2113 | &nbsp;
-ApplicationNotConfiguredForOAuth | 2114 | &nbsp;
-OAuthAccessTokenExpired | 2115 | &nbsp;
-PartnershipInvalidType | 2200 | &nbsp;
-PartnershipValidationError | 2201 | &nbsp;
-PartnershipValidationTimeout | 2202 | &nbsp;
-PartnershipAccessFailure | 2203 | &nbsp;
-PartnershipAccountInvalid | 2204 | &nbsp;
-PartnershipGetAccountInfoFailure | 2205 | &nbsp;
-PartnershipDisabled | 2206 | &nbsp;
-PartnershipAlreadyExists | 2207 | &nbsp;
-CommunityStreamingUnavailable | 2300 | &nbsp;
-TwitchNotLinked | 2500 | &nbsp;
-TwitchAccountNotFound | 2501 | &nbsp;
-TwitchCouldNotLoadDestinyInfo | 2502 | &nbsp;
-TrendingCategoryNotFound | 2600 | &nbsp;
-TrendingEntryTypeNotSupported | 2601 | &nbsp; </p>
 <h2>References</h2>
 <ol>
 <li><a href="https://bungie-net.github.io/multi/schema_Exceptions-PlatformErrorCodes.html#schema_Exceptions-PlatformErrorCodes">https://bungie-net.github.io/multi/schema_Exceptions-PlatformErrorCodes.html#schema_Exceptions-PlatformErrorCodes</a></li>

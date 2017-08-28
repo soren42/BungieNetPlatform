@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,13 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemPerksComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Instanced items can have perks: benefits that the item bestows.</p>
-<p>These are related to DestinySandboxPerkDefinition, and sometimes - but not always - have human readable info.
-When they do, they are the icons and text that you see in an item's tooltip.</p>
-<p>Talent Grids, Sockets, and the item itself can apply Perks, which are then summarized here for your convenience.</p>
+<p>Instanced items can have perks: benefits that the item bestows.<br/><br/>These are related to DestinySandboxPerkDefinition, and sometimes - but not always - have human readable info. When they do, they are the icons and text that you see in an item's tooltip.<br/><br/>Talent Grids, Sockets, and the item itself can apply Perks, which are then summarized here for your convenience.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -100,18 +97,18 @@ When they do, they are the icons and text that you see in an item's tooltip.</p>
 <tbody>
 <tr>
 <td>perks</td>
-<td><a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">Destiny.Perks.DestinyPerkReference</a>[]</td>
+<td><a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>[]</td>
 <td>The list of perks to display in an item tooltip - and whether or not they have been activated.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">Destiny.Perks.DestinyPerkReference</a>[]
+    // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>[]
     "perks": [
-       // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">Destiny.Perks.DestinyPerkReference</a>
+       // Type: <a href="../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32
             "perkHash": 0,
             // Type: string
             "iconPath": "",

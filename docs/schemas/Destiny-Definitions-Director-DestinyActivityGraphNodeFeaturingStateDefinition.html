@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,11 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Nodes can have different visual states.  This object represents a single visual state (&quot;highlight type&quot;)
-that a node can be in, and the unlock expression condition to determine whether it should be set.</p>
+<p>Nodes can have different visual states.  This object represents a single visual state (&quot;highlight type&quot;) that a node can be in, and the unlock expression condition to determine whether it should be set.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,14 +97,14 @@ that a node can be in, and the unlock expression condition to determine whether 
 <tbody>
 <tr>
 <td>highlightType</td>
-<td><a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">Destiny.ActivityGraphNodeHighlightType</a>:Enum</td>
-<td>The node can be highlighted in a variety of ways - the game iterates through these and finds<br/>the first FeaturingState that is valid at the present moment given the Game, Account, and Character<br/>state, and renders the node in that state.  See the ActivityGraphNodeHighlightType enum for possible<br/>values.</td>
+<td><a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a>:Enum</td>
+<td>The node can be highlighted in a variety of ways - the game iterates through these and finds the first FeaturingState that is valid at the present moment given the Game, Account, and Character state, and renders the node in that state.  See the ActivityGraphNodeHighlightType enum for possible values.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">Destiny.ActivityGraphNodeHighlightType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a>:Enum
     "highlightType": 0
 }
 </code></pre>

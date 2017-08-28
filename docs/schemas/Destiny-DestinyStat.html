@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>Represents a stat on an item <em>or</em> Character (NOT a Historical Stat, but a physical attribute stat like Attack, Defense etc...)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,7 +97,7 @@
 <tbody>
 <tr>
 <td>statHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The hash identifier for the Stat.  Use it to look up the DestinyStatDefinition for static data about the stat.</td>
 </tr>
 <tr>
@@ -108,13 +108,13 @@
 <tr>
 <td>maximumValue</td>
 <td>integer:int32</td>
-<td>The highest possible value for the stat, if we were able to compute it.  (I wouldn't necessarily trust this<br/>value right now.  I would like to improve its calculation in later iterations of the API.  Consider this<br/>a placeholder for desired future functionality)</td>
+<td>The highest possible value for the stat, if we were able to compute it.  (I wouldn't necessarily trust this value right now.  I would like to improve its calculation in later iterations of the API.  Consider this a placeholder for desired future functionality)</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
     "statHash": 0,
     // Type: integer:int32
     "value": 0,

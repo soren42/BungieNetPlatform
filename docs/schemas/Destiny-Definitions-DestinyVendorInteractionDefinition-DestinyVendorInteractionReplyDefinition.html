@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition | BungieNetPlatform</title>
+	<title>Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition | BungieNetPlatform</title>
 	<meta charset='utf-8'>
 	<meta name="viewport" content="initial-scale=1, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,14 +18,14 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
 
 <div class="wrap">
 <!-- HEADER -->
-<!-- docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition.html | Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition -->
+<!-- docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition-DestinyVendorInteractionReplyDefinition.html | Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition -->
 <header id="top" class="navbar">
 	<div class="container">
 		<div class="navbar-header">
@@ -65,7 +65,7 @@
 </header>
 <div id="header">
 	<div class="container">
-		<h1>Destiny.Definitions.DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</h1>
+		<h1>Destiny.Definitions.DestinyVendorInteractionDefinition+DestinyVendorInteractionReplyDefinition</h1>
 		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
 
 		<!--<section id="downloads">
@@ -78,11 +78,11 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyVendorInteractionDefinition-DestinyVendorInteractionReplyDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -95,42 +95,35 @@
 </thead>
 <tbody>
 <tr>
-<td>choiceDescription</td>
+<td>itemRewardsSelection</td>
+<td><a href="../../docs/schemas/Destiny-DestinyVendorInteractionRewardSelection">DestinyVendorInteractionRewardSelection</a>:Enum</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>reply</td>
 <td>string</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td>description</td>
-<td>string</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>icon</td>
-<td>string</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
+<td>replyType</td>
+<td><a href="../../docs/schemas/Destiny-DestinyVendorReplyType">DestinyVendorReplyType</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
+    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorInteractionRewardSelection">DestinyVendorInteractionRewardSelection</a>:Enum
+    "itemRewardsSelection": 0,
     // Type: string
-    "choiceDescription": "",
-    // Type: string
-    "description": "",
-    // Type: string
-    "icon": "",
-    // Type: string
-    "title": ""
+    "reply": "",
+    // Type: <a href="../../docs/schemas/Destiny-DestinyVendorReplyType">DestinyVendorReplyType</a>:Enum
+    "replyType": 0
 }
 </code></pre>
 <h2>References</h2>
 <ol>
-<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition.html#schema_Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition.html#schema_Destiny-Definitions-DestinyVendorCategoryEntryDefinition+DestinyVendorCategoryOverlayDefinition</a></li>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorInteractionDefinition-DestinyVendorInteractionReplyDefinition.html#schema_Destiny-Definitions-DestinyVendorInteractionDefinition-DestinyVendorInteractionReplyDefinition">https://bungie-net.github.io/multi/schema_Destiny-Definitions-DestinyVendorInteractionDefinition-DestinyVendorInteractionReplyDefinition.html#schema_Destiny-Definitions-DestinyVendorInteractionDefinition-DestinyVendorInteractionReplyDefinition</a></li>
 </ol>
 		</div>
 	</div>

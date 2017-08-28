@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a variant on an activity for a Milestone: a specific difficulty tier, or a specific activity variant for example.</p>
-<p>These will often have more specific details, such as an associated Guided Game, progression steps, tier-specific rewards,
-and custom values.</p>
+<p>Represents a variant on an activity for a Milestone: a specific difficulty tier, or a specific activity variant for example.<br/><br/>These will often have more specific details, such as an associated Guided Game, progression steps, tier-specific rewards, and custom values.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,19 +97,19 @@ and custom values.</p>
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
-<td>The hash to use for looking up the variant Activity's definition (DestinyActivityDefinition),<br/>where you can find its distinguishing characteristics such as difficulty level and recommended<br/>light level.  <br/><br/>Frequently, that will be the only distinguishing characteristics in practice, which<br/>is somewhat of a bummer.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash to use for looking up the variant Activity's definition (DestinyActivityDefinition), where you can find its distinguishing characteristics such as difficulty level and recommended light level.  <br/><br/>Frequently, that will be the only distinguishing characteristics in practice, which is somewhat of a bummer.</td>
 </tr>
 <tr>
 <td>order</td>
 <td>integer:int32</td>
-<td>If you care to do so, render the variants in the order prescribed by this value.<br/><br/>When you combine live Milestone data with the definition, the order becomes more useful<br/>because you'll be cross-referencing between the definition and live data.</td>
+<td>If you care to do so, render the variants in the order prescribed by this value.<br/><br/>When you combine live Milestone data with the definition, the order becomes more useful because you'll be cross-referencing between the definition and live data.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
     "activityHash": 0,
     // Type: integer:int32
     "order": 0

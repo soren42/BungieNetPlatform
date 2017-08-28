@@ -187,7 +187,6 @@ a[name] {
 #content .inner h5,
 #content .inner h6 {
   color: #f2c161;
-  text-transform: uppercase;
 }
 #content .inner h2 {
   font-size: 1.3em;
@@ -201,6 +200,8 @@ a[name] {
 #content .inner h6 {
   color: #fff;
   font-size: 1em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.1);
 }
 #content .inner ul {
   margin-top: 10px;

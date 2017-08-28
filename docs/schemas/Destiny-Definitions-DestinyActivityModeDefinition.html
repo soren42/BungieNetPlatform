@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,8 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> ActivityModes</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,7 +97,7 @@
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -106,12 +107,12 @@
 </tr>
 <tr>
 <td>modeType</td>
-<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>activityModeCategory</td>
-<td><a href="../../docs/schemas/Destiny-DestinyActivityModeCategory">Destiny.DestinyActivityModeCategory</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyActivityModeCategory">DestinyActivityModeCategory</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -126,13 +127,13 @@
 </tr>
 <tr>
 <td>activityModeMappings</td>
-<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum&gt;</td>
+<td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum&gt;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>display</td>
 <td>boolean</td>
-<td>If FALSE, we want to ignore this type when we're showing activity modes in BNet UI.  It will still be returned in case<br/>3rd parties want to use it for any purpose.</td>
+<td>If FALSE, we want to ignore this type when we're showing activity modes in BNet UI.  It will still be returned in case 3rd parties want to use it for any purpose.</td>
 </tr>
 <tr>
 <td>order</td>
@@ -152,13 +153,13 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -171,9 +172,9 @@
     },
     // Type: string
     "pgcrImage": "",
-    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
     "modeType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityModeCategory">Destiny.DestinyActivityModeCategory</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyActivityModeCategory">DestinyActivityModeCategory</a>:Enum
     "activityModeCategory": 0,
     // Type: integer:uint32[]
     "parentHashes": [
@@ -182,7 +183,7 @@
     ],
     // Type: string
     "friendlyName": "",
-    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum&gt;
+    // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum&gt;
     "activityModeMappings": {
         "0": 0
     },

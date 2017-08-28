@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -109,13 +109,13 @@
 </tr>
 <tr>
 <td>partnershipType</td>
-<td><a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>:Enum</td>
+<td><a href="../../../docs/schemas/Partnerships-PartnershipType">PartnershipType</a>:Enum</td>
 <td>Yes</td>
 <td>The type of partnership for which the status should be returned.</td>
 </tr>
 <tr>
 <td>sort</td>
-<td><a href="../../../docs/schemas/Community-CommunityStatusSort">Community.CommunityStatusSort</a>:Enum</td>
+<td><a href="../../../docs/schemas/Community-CommunityStatusSort">CommunityStatusSort</a>:Enum</td>
 <td>Yes</td>
 <td>The sort mode.</td>
 </tr>
@@ -131,9 +131,9 @@
 <pre><code class="javascript">{
     // Type: <a href="../../../docs/schemas/SearchResult-Community-CommunityLiveStatus-">SearchResult&lt;Community.CommunityLiveStatus&gt;</a>
     "Response": {
-        // Type: <a href="../../../docs/schemas/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>[]
+        // Type: <a href="../../../docs/schemas/Community-CommunityLiveStatus">CommunityLiveStatus</a>[]
         "results": [
-           // Type: <a href="../../../docs/schemas/Community-CommunityLiveStatus">Community.CommunityLiveStatus</a>
+           // Type: <a href="../../../docs/schemas/Community-CommunityLiveStatus">CommunityLiveStatus</a>
             {
                 // Type: string:date-time
                 "dateStatusUpdated": "",
@@ -141,7 +141,7 @@
                 "url": "",
                 // Type: string
                 "partnershipIdentifier": "",
-                // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">Partnerships.PartnershipType</a>:Enum
+                // Type: <a href="../../../docs/schemas/Partnerships-PartnershipType">PartnershipType</a>:Enum
                 "partnershipType": 0,
                 // Type: string
                 "thumbnail": "",
@@ -151,7 +151,7 @@
                 "thumbnailLarge": "",
                 // Type: integer:int64
                 "destinyCharacterId": 0,
-                // Type: <a href="../../../docs/schemas/User-UserInfoCard">User.UserInfoCard</a>
+                // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
                 "userInfo": {
                     // Type: string
                     "supplementalDisplayName": "",
@@ -196,7 +196,7 @@
         "totalResults": 0,
         // Type: boolean
         "hasMore": false,
-        // Type: <a href="../../../docs/schemas/Queries-PagedQuery">Queries.PagedQuery</a>
+        // Type: <a href="../../../docs/schemas/Queries-PagedQuery">PagedQuery</a>
         "query": {
             // Type: integer:int32
             "itemsPerPage": 0,
@@ -210,7 +210,7 @@
         // Type: boolean
         "useTotalResults": false
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

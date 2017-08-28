@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,19 +80,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemCategoryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>In an attempt to categorize items by type, usage, and other interesting properties, we created
-DestinyItemCategoryDefinition: information about types that is assembled using a set of heuristics
-that examine the properties of an item such as what inventory bucket it's in, its item type name,
-and whether it has or is missing certain blocks of data.</p>
-<p>This heuristic is imperfect, however.  If you find an item miscategorized, let us know on the Bungie
-API forums!</p>
-<p>We then populate all of the categories that we think an item belongs to in its
-DestinyInventoryItemDefinition.itemCategoryHashes property.  You can use that to provide
-your own custom item filtering, sorting, aggregating... go nuts on it!  And let us know if you
-see more categories that you wish would be added!</p>
+<p>In an attempt to categorize items by type, usage, and other interesting properties, we created DestinyItemCategoryDefinition: information about types that is assembled using a set of heuristics that examine the properties of an item such as what inventory bucket it's in, its item type name, and whether it has or is missing certain blocks of data.<br/><br/>This heuristic is imperfect, however.  If you find an item miscategorized, let us know on the Bungie API forums!<br/><br/>We then populate all of the categories that we think an item belongs to in its DestinyInventoryItemDefinition.itemCategoryHashes property.  You can use that to provide your own custom item filtering, sorting, aggregating... go nuts on it!  And let us know if you see more categories that you wish would be added!</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
+<li><strong>Mobile Manifest:</strong> ItemCategories</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -106,23 +98,23 @@ see more categories that you wish would be added!</p>
 <tbody>
 <tr>
 <td>displayProperties</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a></td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>visible</td>
 <td>boolean</td>
-<td>If True, this category should be visible in UI.  Sometimes we make categories that we<br/>don't think are interesting externally.  It's up to you if you want to skip on showing them.</td>
+<td>If True, this category should be visible in UI.  Sometimes we make categories that we don't think are interesting externally.  It's up to you if you want to skip on showing them.</td>
 </tr>
 <tr>
 <td>shortTitle</td>
 <td>string</td>
-<td>A shortened version of the title.  The reason why we have this is because the Armory in German<br/>had titles that were too long to display in our UI, so these were localized abbreviated versions<br/>of those categories.  The property still exists today, even though the Armory doesn't exist for D2... yet.</td>
+<td>A shortened version of the title.  The reason why we have this is because the Armory in German had titles that were too long to display in our UI, so these were localized abbreviated versions of those categories.  The property still exists today, even though the Armory doesn't exist for D2... yet.</td>
 </tr>
 <tr>
 <td>itemTypeRegex</td>
 <td>string</td>
-<td>The janky regular expression we used against the item type to try and discern whether<br/>the item belongs to this category.</td>
+<td>The janky regular expression we used against the item type to try and discern whether the item belongs to this category.</td>
 </tr>
 <tr>
 <td>itemTypeRegexNot</td>
@@ -136,23 +128,23 @@ see more categories that you wish would be added!</p>
 </tr>
 <tr>
 <td>grantDestinyItemType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>:Enum</td>
-<td>If an item belongs to this category, it will also receive this item type.<br/>This is now how DestinyItemType is populated for items: it used to be an even jankier process,<br/>but that's a story that requires more alcohol.</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemType">DestinyItemType</a>:Enum</td>
+<td>If an item belongs to this category, it will also receive this item type. This is now how DestinyItemType is populated for items: it used to be an even jankier process, but that's a story that requires more alcohol.</td>
 </tr>
 <tr>
 <td>grantDestinySubType</td>
-<td><a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>:Enum</td>
-<td>If an item belongs to this category, it will also receive this subtype enum value.<br/><br/>I know what you're thinking - what if it belongs to multiple categories that provide sub-types?<br/><br/>The last one processed wins, as is the case with all of these &quot;grant&quot; enums.  Now you can see<br/>one reason why we moved away from these enums... but they're so convenient when they work, aren't they?</td>
+<td><a href="../../docs/schemas/Destiny-DestinyItemSubType">DestinyItemSubType</a>:Enum</td>
+<td>If an item belongs to this category, it will also receive this subtype enum value.<br/><br/>I know what you're thinking - what if it belongs to multiple categories that provide sub-types?<br/><br/>The last one processed wins, as is the case with all of these &quot;grant&quot; enums.  Now you can see one reason why we moved away from these enums... but they're so convenient when they work, aren't they?</td>
 </tr>
 <tr>
 <td>grantDestinyClass</td>
-<td><a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum</td>
+<td><a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>:Enum</td>
 <td>If an item belongs to this category, it will also get this class restriction enum value.<br/><br/>See the other &quot;grant&quot;-prefixed properties on this definition for my color commentary.</td>
 </tr>
 <tr>
 <td>groupedCategoryHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]</td>
-<td>If this category is a &quot;parent&quot; category of other categories, those children will have their<br/>hashes listed in rendering order here, and can be looked up using these hashes against<br/>DestinyItemCategoryDefinition.<br/><br/>In this way, you can build up a visual hierarchy of item categories.  That's what we did,<br/>and you can do it too.  I believe in you.  Yes, you, Carl.<br/><br/>(I hope someone named Carl reads this someday)</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">DestinyItemCategoryDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td>If this category is a &quot;parent&quot; category of other categories, those children will have their hashes listed in rendering order here, and can be looked up using these hashes against DestinyItemCategoryDefinition.<br/><br/>In this way, you can build up a visual hierarchy of item categories.  That's what we did, and you can do it too.  I believe in you.  Yes, you, Carl.<br/><br/>(I hope someone named Carl reads this someday)</td>
 </tr>
 <tr>
 <td>hash</td>
@@ -167,13 +159,13 @@ see more categories that you wish would be added!</p>
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is<br/>not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">Destiny.Definitions.Common.DestinyDisplayPropertiesDefinition</a>
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
     "displayProperties": {
         // Type: string
         "description": "",
@@ -194,13 +186,13 @@ see more categories that you wish would be added!</p>
     "itemTypeRegexNot": "",
     // Type: string
     "originBucketIdentifier": "",
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">Destiny.DestinyItemType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">DestinyItemType</a>:Enum
     "grantDestinyItemType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">Destiny.DestinyItemSubType</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">DestinyItemSubType</a>:Enum
     "grantDestinySubType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">Destiny.DestinyClass</a>:Enum
+    // Type: <a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>:Enum
     "grantDestinyClass": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">DestinyItemCategoryDefinition</a>:ManifestDefinition:integer:uint32[]
     "groupedCategoryHashes": [
        // Type: integer:uint32
         0

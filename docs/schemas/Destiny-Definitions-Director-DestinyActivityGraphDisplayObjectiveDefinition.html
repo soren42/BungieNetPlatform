@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 <p>When a Graph needs to show active Objectives, this defines those objectives as well as an identifier.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,11 +98,11 @@
 <tr>
 <td>id</td>
 <td>integer:uint32</td>
-<td>$NOTE $amola 2017-01-19 This field is apparently something that CUI uses to manually wire up objectives<br/>to display info.  I am unsure how it works.</td>
+<td>$NOTE $amola 2017-01-19 This field is apparently something that CUI uses to manually wire up objectives to display info.  I am unsure how it works.</td>
 </tr>
 <tr>
 <td>objectiveHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32</td>
 <td>The objective being shown on the map.</td>
 </tr>
 </tbody>
@@ -111,7 +111,7 @@
 <pre><code class="javascript">{
     // Type: integer:uint32
     "id": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
     "objectiveHash": 0
 }
 </code></pre>

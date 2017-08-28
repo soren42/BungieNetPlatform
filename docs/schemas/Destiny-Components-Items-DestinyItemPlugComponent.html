@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,13 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Components-Items-DestinyItemPlugComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Plugs are non-instanced items that can provide Stat and Perk benefits when socketed into an instanced item.
-Items have Sockets, and Plugs are inserted into Sockets.</p>
-<p>This component finds all items that are considered &quot;Plugs&quot; in your inventory, and return information about
-the plug aside from any specific Socket into which it could be inserted.</p>
+<p>Plugs are non-instanced items that can provide Stat and Perk benefits when socketed into an instanced item. Items have Sockets, and Plugs are inserted into Sockets.<br/><br/>This component finds all items that are considered &quot;Plugs&quot; in your inventory, and return information about the plug aside from any specific Socket into which it could be inserted.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -101,12 +98,12 @@ the plug aside from any specific Socket into which it could be inserted.</p>
 <tr>
 <td>insertFailIndexes</td>
 <td>integer:int32[]</td>
-<td>If the plug cannot be inserted for some reason, this will have the indexes into the plug item definition's <br/>plug.insertionRules property, so you can show the reasons why it can't be inserted.<br/><br/>This list will be empty if the plug can be inserted.</td>
+<td>If the plug cannot be inserted for some reason, this will have the indexes into the plug item definition's plug.insertionRules property, so you can show the reasons why it can't be inserted.<br/><br/>This list will be empty if the plug can be inserted.</td>
 </tr>
 <tr>
 <td>enableFailIndexes</td>
 <td>integer:int32[]</td>
-<td>If a plug is not enabled, this will be populated with indexes into the plug item definition's <br/>plug.enabledRules property, so that you can show the reasons why it is not enabled.<br/><br/>This list will be empty if the plug is enabled.</td>
+<td>If a plug is not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.<br/><br/>This list will be empty if the plug is enabled.</td>
 </tr>
 </tbody>
 </table>

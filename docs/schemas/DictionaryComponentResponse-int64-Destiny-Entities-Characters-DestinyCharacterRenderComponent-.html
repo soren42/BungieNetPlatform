@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Dictionary</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -96,24 +96,24 @@
 <tbody>
 <tr>
 <td>data</td>
-<td>Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">Destiny.Entities.Characters.DestinyCharacterRenderComponent</a>&gt;</td>
+<td>Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">DestinyCharacterRenderComponent</a>&gt;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>privacy</td>
-<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>:Enum</td>
+<td><a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">Destiny.Entities.Characters.DestinyCharacterRenderComponent</a>&gt;
+    // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">DestinyCharacterRenderComponent</a>&gt;
     "data": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+            // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
             "customDyes": [
-               // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+               // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
                 {
                     // Type: integer:uint32
                     "channelHash": 0,
@@ -121,7 +121,7 @@
                     "dyeHash": 0
                 }
             ],
-            // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">Destiny.Character.DestinyCharacterCustomization</a>
+            // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a>
             "customization": {
                 // Type: integer:uint32
                 "personality": 0,
@@ -154,17 +154,17 @@
                 // Type: integer:int32
                 "decalIndex": 0
             },
-            // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">Destiny.Character.DestinyCharacterPeerView</a>
+            // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a>
             "peerView": {
-                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>[]
+                // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>[]
                 "equipment": [
-                   // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">Destiny.Character.DestinyItemPeerView</a>
+                   // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
                         "itemHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>[]
+                        // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
                         "dyes": [
-                           // Type: <a href="../../docs/schemas/Destiny-DyeReference">Destiny.DyeReference</a>
+                           // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
                             {
                                 // Type: integer:uint32
                                 "channelHash": 0,
@@ -177,7 +177,7 @@
             }
         }
     },
-    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">Components.ComponentPrivacySetting</a>:Enum
+    // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
     "privacy": 0
 }
 </code></pre>

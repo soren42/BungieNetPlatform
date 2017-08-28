@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -80,12 +80,10 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyActivityGraphListEntryDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Destinations and Activities may have default Activity Graphs that should be shown
-when you bring up the Director and are playing in either.</p>
-<p>This contract defines the graph referred to and the gating for when it is relevant.</p>
+<p>Destinations and Activities may have default Activity Graphs that should be shown when you bring up the Director and are playing in either.<br/><br/>This contract defines the graph referred to and the gating for when it is relevant.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -99,14 +97,14 @@ when you bring up the Director and are playing in either.</p>
 <tbody>
 <tr>
 <td>activityGraphHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">Destiny.Definitions.Director.DestinyActivityGraphDefinition</a>:integer:uint32</td>
-<td>The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening<br/>the director.</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">DestinyActivityGraphDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td>The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening the director.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">Destiny.Definitions.Director.DestinyActivityGraphDefinition</a>:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">DestinyActivityGraphDefinition</a>:ManifestDefinition:integer:uint32
     "activityGraphHash": 0
 }
 </code></pre>

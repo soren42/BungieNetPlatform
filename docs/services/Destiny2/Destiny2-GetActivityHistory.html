@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -140,7 +140,7 @@
 </tr>
 <tr>
 <td>mode</td>
-<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum</td>
+<td><a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum</td>
 <td>No</td>
 <td>A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.</td>
 </tr>
@@ -158,47 +158,47 @@
 <h3>Response</h3>
 <p>PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyActivityHistoryResults">Destiny.HistoricalStats.DestinyActivityHistoryResults</a>
+    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyActivityHistoryResults">DestinyActivityHistoryResults</a>
     "Response": {
-        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">Destiny.HistoricalStats.DestinyHistoricalStatsPeriodGroup</a>[]
+        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">DestinyHistoricalStatsPeriodGroup</a>[]
         "activities": [
-           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">Destiny.HistoricalStats.DestinyHistoricalStatsPeriodGroup</a>
+           // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup">DestinyHistoricalStatsPeriodGroup</a>
             {
                 // Type: string:date-time
                 "period": "",
-                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity">Destiny.HistoricalStats.DestinyHistoricalStatsActivity</a>
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity">DestinyHistoricalStatsActivity</a>
                 "activityDetails": {
-                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
                     "referenceId": 0,
                     // Type: integer:int64
                     "instanceId": 0,
-                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">Destiny.HistoricalStats.Definitions.DestinyActivityModeType</a>:Enum
+                    // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
                     "mode": 0,
-                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
+                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:ManifestDefinition:integer:uint32
                     "activityTypeHashOverride": 0,
                     // Type: boolean
                     "isPrivate": false
                 },
-                // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">Destiny.HistoricalStats.DestinyHistoricalStatsValue</a>&gt;
+                // Type: Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>&gt;
                 "values": {
                     "{string}": {
                         // Type: string
                         "statId": "",
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "basic": {
                             // Type: number:double
                             "value": 0,
                             // Type: string
                             "displayValue": ""
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "pga": {
                             // Type: number:double
                             "value": 0,
                             // Type: string
                             "displayValue": ""
                         },
-                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">Destiny.HistoricalStats.DestinyHistoricalStatsValuePair</a>
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
                         "weighted": {
                             // Type: number:double
                             "value": 0,
@@ -210,7 +210,7 @@
             }
         ]
     },
-    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>:Enum
+    // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum
     "ErrorCode": 0,
     // Type: integer:int32
     "ThrottleSeconds": 0,

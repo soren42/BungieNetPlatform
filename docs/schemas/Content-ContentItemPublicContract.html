@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503724823">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> object</li>
+<li><strong>Type:</strong> Class</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -141,7 +141,7 @@
 </tr>
 <tr>
 <td>author</td>
-<td><a href="../../docs/schemas/User-GeneralUser">User.GeneralUser</a></td>
+<td><a href="../../docs/schemas/User-GeneralUser">GeneralUser</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -152,11 +152,11 @@
 <tr>
 <td>properties</td>
 <td>Dictionary&lt;string,object&gt;</td>
-<td>Firehose content is really a collection of metadata and &quot;properties&quot;, which are<br/>the potentially-but-not-strictly localizable data that comprises the meat of<br/>whatever content is being shown.<br/><br/>As Cole Porter would have crooned, &quot;Anything Goes&quot; with Firehose properties.<br/>They are most often strings, but they can theoretically be anything.  They are JSON<br/>encoded, and could be JSON structures, simple strings, numbers etc...  The Content Type<br/>of the item (cType) will describe the properties, and thus how they ought to be deserialized.</td>
+<td>Firehose content is really a collection of metadata and &quot;properties&quot;, which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown.<br/><br/>As Cole Porter would have crooned, &quot;Anything Goes&quot; with Firehose properties. They are most often strings, but they can theoretically be anything.  They are JSON encoded, and could be JSON structures, simple strings, numbers etc...  The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.</td>
 </tr>
 <tr>
 <td>representations</td>
-<td><a href="../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]</td>
+<td><a href="../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>[]</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -166,7 +166,7 @@
 </tr>
 <tr>
 <td>commentSummary</td>
-<td><a href="../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a></td>
+<td><a href="../../docs/schemas/Content-CommentSummary">CommentSummary</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -191,7 +191,7 @@
     "minimumAge": 0,
     // Type: string
     "ratingImagePath": "",
-    // Type: <a href="../../docs/schemas/User-GeneralUser">User.GeneralUser</a>
+    // Type: <a href="../../docs/schemas/User-GeneralUser">GeneralUser</a>
     "author": {
         // Type: integer:int64
         "membershipId": 0,
@@ -219,15 +219,15 @@
         "lastUpdate": "",
         // Type: integer:int64:nullable
         "legacyPortalUID": 0,
-        // Type: <a href="../../docs/schemas/User-UserToUserContext">User.UserToUserContext</a>
+        // Type: <a href="../../docs/schemas/User-UserToUserContext">UserToUserContext</a>
         "context": {
             // Type: boolean
             "isFollowing": false,
-            // Type: <a href="../../docs/schemas/Ignores-IgnoreResponse">Ignores.IgnoreResponse</a>
+            // Type: <a href="../../docs/schemas/Ignores-IgnoreResponse">IgnoreResponse</a>
             "ignoreStatus": {
                 // Type: boolean
                 "isIgnored": false,
-                // Type: <a href="../../docs/schemas/Ignores-IgnoreStatus">Ignores.IgnoreStatus</a>:Enum
+                // Type: <a href="../../docs/schemas/Ignores-IgnoreStatus">IgnoreStatus</a>:Enum
                 "ignoreFlags": 0
             },
             // Type: string:date-time:nullable
@@ -272,9 +272,9 @@
     "properties": {
         "{string}": {}
     },
-    // Type: <a href="../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>[]
+    // Type: <a href="../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>[]
     "representations": [
-       // Type: <a href="../../docs/schemas/Content-ContentRepresentation">Content.ContentRepresentation</a>
+       // Type: <a href="../../docs/schemas/Content-ContentRepresentation">ContentRepresentation</a>
         {
             // Type: string
             "name": "",
@@ -289,7 +289,7 @@
        // Type: string
         ""
     ],
-    // Type: <a href="../../docs/schemas/Content-CommentSummary">Content.CommentSummary</a>
+    // Type: <a href="../../docs/schemas/Content-CommentSummary">CommentSummary</a>
     "commentSummary": {
         // Type: integer:int64
         "topicId": 0,
