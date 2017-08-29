@@ -7,10 +7,18 @@ define('BASEPATH', dirname(dirname(__DIR__)));
 
 define('CACHEPATH', BUILDERPATH.'/cache');
 define('DATAPATH', BUILDERPATH.'/data');
-//define('PAGESPATH', BASEPATH.'/gh-pages');
-//define('WIKIPATH', BASEPATH.'/wiki');
+define('WIKIPATH', dirname(BUILDERPATH).'/wiki-docs');
+
+define('PAGESPATH', BASEPATH.'/gh-pages');
+define('DOCSPATH', PAGESPATH.'/docs');
 
 define('BUNGIE_URL', 'https://www.bungie.net');
+define('BUNGIE_API_VERSION', 2);
+
+define('BR', '<br/>');
+define('LN', "\n");
+define('SCHEMA_URL_REGEX', '/[<>\.,\[\]\+]/'); // Wiki Schema URL > Filepath
+define('SCHEMA_URL_REGEX_API', '/[<>\.,\+]/'); // Official Schema URL > Filepath
 
 if (!file_exists(CACHEPATH)) mkdir(CACHEPATH);
 if (!file_exists(DATAPATH)) mkdir(DATAPATH);
@@ -19,8 +27,6 @@ if (file_exists('../api-key.php')) include('../api-key.php');
 if (!defined('API_KEY')) define('API_KEY', '{insert-api-key}');
 
 ini_set('max_execution_time', 300);
-
-define('BUNGIE_API_VERSION', 2);
 
 header('Content-Type: text/plain');
 

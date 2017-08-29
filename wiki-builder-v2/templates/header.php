@@ -39,7 +39,7 @@
 		</div>
 		<nav id="top-nav" class="collapse navbar-collapse">
 			<?php
-			$navbar = parseMarkdown(BASEPATH.'/wiki/_Sidebar.md');
+			$navbar = parseMarkdown(WIKIPATH.'/_Sidebar.md');
 			$navbar = preg_replace('/<ul>/', '<ul class="nav navbar-nav">', $navbar, 1);
 			$navbar = str_replace('docs/Home.html', $root, $navbar);
 			$navbar = preg_replace('/<a href="[^"]+">Home<\/a>/', '<li><a href="'.$root.'">Home</a>', $navbar);

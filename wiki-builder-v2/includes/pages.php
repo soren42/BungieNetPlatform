@@ -2,11 +2,6 @@
 
 require_once('parsedown-master/Parsedown.php');
 
-define('WIKIPATH', BASEPATH.'/wiki');
-define('PAGESPATH', BASEPATH.'/gh-pages');
-define('DOCSPATH', PAGESPATH.'/docs');
-define('LN', "\n");
-
 function emptyDocs($str) {
 	if (is_file($str)) {
 		@unlink($str);
@@ -26,7 +21,7 @@ function findSchema($pageName, $schemaTypeOverride='') {
 	foreach($openapi->components as $schemaType => $schemas) {
 		if ($schemaTypeOverride && $schemaTypeOverride != $schemaType) continue;
 		foreach($schemas as $schemaId => $schema) {
-			$schemaName = preg_replace('/[\<\>\.,\[\]]/', '-', $schemaId);
+			$schemaName = preg_replace(SCHEMA_URL_REGEX, '-', $schemaId);
 			if ($schemaName == $pageName) {
 				return '#/components/'.$schemaType.'/'.$schemaId;
 			}
@@ -196,7 +191,6 @@ function buildPage($page) {
 //	}
 
 	//echo json_encode($page, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
-
 	$content = parseMarkdown($markdownPath);
 
 	ob_start();
@@ -208,13 +202,22 @@ function buildPage($page) {
 	$footer = ob_get_clean();
 
 	$html = $header
-		.'<a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/'.pathinfo($page['path'], PATHINFO_FILENAME).'/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a>'
+		.'<a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki-docs'.str_replace(WIKIPATH.'/', '', $page['path']).'" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a>'
 		.$content.LN
 		.$footer
 	;
 
+	$oldDocPath = str_replace('/docs/', '/docs-old/', $docPath);
+
 	if (!file_exists(dirname($docPath))) mkdir(dirname($docPath), 0777, true);
-	file_put_contents($docPath, $html);
+
+	if (!file_exists($oldDocPath) || file_get_contents($oldDocPath) != $html) {
+		echo 'Updated: '.str_replace(DOCSPATH, '', $docPath).LN;
+		file_put_contents($docPath, $html);
+		//touch($docPath, filemtime($markdownPath));
+	} else {
+		rename($oldDocPath, $docPath);
+	}
 
 	// Add page to the sitemap
 	$sitemap[] = array('uri' => '/'.str_replace('.html', '', str_replace('index', '', $baseUri)), 'modified' => filemtime($docPath));
@@ -227,8 +230,6 @@ function buildPage($page) {
 		$searchHeaders[] = $headerMatch[1];
 	}
 	$searchData[] = array('path' => $baseUri, 'headers' => $searchHeaders);
-
-	echo 'Updated: '.$page['path'].LN;
 }
 
 // Rename current docs folder
@@ -243,7 +244,7 @@ $pages = getMarkdownPages(WIKIPATH);
 
 // Build pages
 foreach($pages as $page) {
-	echo json_encode($page, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
+	//echo json_encode($page, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 	buildPage($page);
 }
 

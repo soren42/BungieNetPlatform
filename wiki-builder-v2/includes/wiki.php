@@ -1,7 +1,6 @@
 <?php
 
-define('WIKIPATH', BASEPATH.'/wiki');
-define('LN', "\n");
+require_once('parsedown-master/Parsedown.php');
 
 $wikiBuilderInfo = '<span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>'.LN.LN;
 
@@ -41,7 +40,7 @@ function buildTableRow($columns) {
 function buildParameterTable($schema, $openapi, $versionPrefix) {
 	$markdown = buildTableHeader(array('Name', 'Schema', 'Required', 'Description'));
 	foreach($schema as $key => $schemaObject) {
-		$schemaString = buildSchemaString($schemaObject->schema, $versionPrefix);
+		$schemaString = buildSchemaString($schemaObject->schema);
 		$markdown .= buildTableRow(array(
 			isset($schemaObject->name) ? $schemaObject->name : $key,
 			$schemaString,
@@ -93,12 +92,12 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 	if (isset($schema->{'$ref'})) {
 		$ref = $schema->{'$ref'};
 		$refPath = explode('/', $ref);
-		if (!$openapi->{$refPath[1]} || !isset($openapi->{$refPath[1]}->{$refPath[2]}) || !isset($openapi->{$refPath[1]}->{$refPath[2]}->{$refPath[3]})) {
+		if (!isset($openapi->components->{$refPath[2]}->{$refPath[3]})) {
 			echo 'MissingReference: '.$ref.LN;
 		} else if (isset($schemaCache[$ref])) {
 			$result = $schemaCache[$ref];
 		} else {
-			$component = $openapi->{$refPath[1]}->{$refPath[2]}->{$refPath[3]};
+			$component = $openapi->components->{$refPath[2]}->{$refPath[3]};
 			//echo $indent.'[$ref:'.$ref.']: '.json_encode($component, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 			$result = buildSchema($component, $openapi, $versionPrefix, false, $depth+1);
 			//buildSchemeComments($result, $component, $openapi, $versionPrefix);
@@ -117,7 +116,7 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 					//echo $indent.'[$content:'.$contentType.']: '.json_encode($content, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 					$result = buildSchema($content->schema, $openapi, $versionPrefix, $comments, $depth+1);
 					$resultComments = array();
-					buildSchemaComments($resultComments, $content->schema, $openapi, $versionPrefix);
+					buildSchemaComments($resultComments, $content->schema);
 					$resultType = gettype($result);
 					switch($resultType) {
 						case 'object':
@@ -160,7 +159,7 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 					foreach($schema->properties as $propertyName => $property) {
 						//echo $indent.'[$property:'.$propertyName.']: '.json_encode($property, JSON_UNESCAPED_SLASHES).LN;
 						$propertyResult = buildSchema($property, $openapi, $versionPrefix, $comments, $depth+1);
-						buildSchemaComments($result, $property, $openapi, $versionPrefix);
+						buildSchemaComments($result, $property);
 						$result->{$propertyName} = $propertyResult;
 					}
 				}
@@ -175,8 +174,8 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 
 					//echo 'DictionaryKey['.$dictionaryKey.']: '.json_encode($schema->{'x-dictionary-key'}, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 					//echo 'DictionaryKey: '.$dictionaryKey.LN;//.': '.json_encode($dictionaryValue, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
-					//buildSchemaComments($result, $schema->{'x-dictionary-key'}, $openapi, $versionPrefix);
-					//buildSchemaComments($result, $schema->additionalProperties, $openapi, $versionPrefix);
+					//buildSchemaComments($result, $schema->{'x-dictionary-key'});
+					//buildSchemaComments($result, $schema->additionalProperties);
 					if (!isset($schema->additionalProperties)) {
 						//echo 'MissingAdditionalProperties: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 					}
@@ -185,7 +184,7 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 				break;
 			case 'array':
 				$result = array();
-				buildSchemaComments($result, $schema->items, $openapi, $versionPrefix);
+				buildSchemaComments($result, $schema->items);
 				$result[] = buildSchema($schema->items, $openapi, $versionPrefix, $comments, $depth+1);
 				break;
 			default:
@@ -216,9 +215,9 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 	return $result;
 }
 
-function buildSchemaComments(&$result, $schema, $openapi, $versionPrefix) {
+function buildSchemaComments(&$result, $schema) {
 	$schemaStrings = array(
-		'// Type: '.buildSchemaString($schema, $versionPrefix)
+		'// Type: '.buildSchemaString($schema)
 	);
 	if (isset($schema->description)) {
 //		foreach(explode("\r\n", $schema->description) as $line) {
@@ -244,15 +243,15 @@ function buildSchemaComments(&$result, $schema, $openapi, $versionPrefix) {
 			}
 			break;
 		default:
-			echo 'UnknownResultType: '.$resultType.LN;
+			echo 'UnknownSchemaCommentType: '.$resultType.LN;
 			break;
 	}
 
 	//$result[] = $schemaString;
-	//$result = array_merge(array('//'.buildSchemaString($schema, $versionPrefix)), $result);
+	//$result = array_merge(array('//'.buildSchemaString($schema)), $result);
 }
 
-function buildSchemaString($schema, $versionPrefix) {
+function buildSchemaString($schema) {
 	global $openapi;
 
 	$result = '';
@@ -264,7 +263,7 @@ function buildSchemaString($schema, $versionPrefix) {
 		foreach($schema->content as $contentType => $content) {
 			switch($contentType) {
 				case 'application/json':
-					$result = buildSchemaString($content->schema, $versionPrefix);
+					$result = buildSchemaString($content->schema);
 					break;
 				default:
 					echo 'UnknownContentType: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
@@ -277,31 +276,30 @@ function buildSchemaString($schema, $versionPrefix) {
 		$ref = $schema->{'$ref'};
 		$refPath = explode('/', $ref);
 		$refName = @end($refPath);
-		$shortName = $refName;
-		if (strpos($shortName, '<') === false) {
-			//$shortName = @end(explode('.', $shortName));
-		} else {
-			//$shortName = preg_replace('/(<[^,]+,)[^>]+\.([^>]+>)/', '$1$2', $shortName); // Dictionary<int32,Object.Object.Object>
-			//$shortName = preg_replace('/(<)[^>,]+\.([^>\,]+>)/', '$1$2', $shortName); // List<User.Models.UserAlias>
-		}
-		if ($refPath[2] != 'schemas' && isset($openapi->components->schemas->{$refName})) {
-			//echo 'SchemaResponseConflict: '.$ref.LN;
-			$refName .= 'Response';
-		}
-		$refFilepath = preg_replace('/[\<\>\.,\[\]]/', '-', $refName);
-		$result = '[['.str_replace('[]', '&#91;&#93;', htmlspecialchars($shortName)).'|'.$refFilepath.']]';
-		//$result = '['.$ref.']';
-
-		if (isset($openapi->{$refPath[1]}) && isset($openapi->{$refPath[1]}->{$refPath[2]}) && isset($openapi->{$refPath[1]}->{$refPath[2]}->{$refPath[3]})) {
-			$schemaRef = $openapi->{$refPath[1]}->{$refPath[2]}->{$refPath[3]};
-			if (isset($schemaRef->enum)) $result .= ':Enum';
-			//echo json_encode($schemaRef, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
+		$shortName = getSchemaReferenceShortName($ref);
+		$result = '['.$ref.']';
+		if (isset($openapi->components->{$refPath[2]}->{$refName})) {
+			$schema = $openapi->components->{$refPath[2]}->{$refName};
+			$refFilepath = preg_replace(SCHEMA_URL_REGEX, '-', $refName);
+			$refType = $refPath[2] == 'schemas' ? getSchemaReferenceType($ref) : 'Response';
+			switch($refType) {
+				case 'Definition':
+					$result = '[['.$shortName.'|'.$refFilepath.']]:'.(isset($schema->{'x-mobile-manifest-name'}) ? 'Manifest' : '').'Definition';
+					break;
+				case 'Enum':
+					$result = '[['.$shortName.'|'.$refFilepath.']]:Enum';
+					break;
+				case 'Class':
+				default:
+					$result = '[['.$shortName.'|'.$refFilepath.']]';
+					break;
+			}
 		}
 	}
 	else if (isset($schema->allOf)) {
 		$result = array();
 		foreach($schema->allOf as $of) {
-			$result[] = buildSchemaString($of, $versionPrefix);
+			$result[] = buildSchemaString($of);
 		}
 		$result = implode(', ', $result);
 	}
@@ -310,14 +308,14 @@ function buildSchemaString($schema, $versionPrefix) {
 			case 'object':
 				$result = $schema->type;
 				if (isset($schema->{'x-dictionary-key'})) {
-					$dictionaryKey = buildSchemaString($schema->{'x-dictionary-key'}, $versionPrefix);
+					$dictionaryKey = buildSchemaString($schema->{'x-dictionary-key'});
 					if (isset($schema->{'x-mapped-definition'})) {
-						$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'}, $versionPrefix);
+						$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'});
 						$dictionaryKey = $mappedDefinition.':'.$dictionaryKey;
 					}
 					$result = 'Dictionary&lt;'
 						.$dictionaryKey.','
-						.buildSchemaString($schema->additionalProperties, $versionPrefix).'&gt;'
+						.buildSchemaString($schema->additionalProperties).'&gt;'
 					;
 				}
 				break;
@@ -329,14 +327,14 @@ function buildSchemaString($schema, $versionPrefix) {
 				if (isset($schema->nullable)) $result .= ':nullable';
 				break;
 			case 'array':
-				$result = buildSchemaString($schema->items, $versionPrefix).'[]';
+				$result = buildSchemaString($schema->items).'[]';
 				break;
 			default:
 				echo 'UnknownSchemaType: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 				break;
 		}
 		if ($schema->type != 'object' && isset($schema->{'x-mapped-definition'})) {
-			$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'}, $versionPrefix);
+			$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'});
 			//echo json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 			//echo $mappedDefinition.LN;
 			//echo $result.LN;
@@ -347,6 +345,104 @@ function buildSchemaString($schema, $versionPrefix) {
 		echo 'UnknownSchemaString: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 	}
 	return $result;
+}
+
+function buildSchemaStringFromRef($ref) {
+	$schema = (object)array(
+		'$ref' => $ref
+	);
+	return buildSchemaString($schema);
+}
+
+function getSchemaReferenceType($ref) {
+	global $openapi;
+	$refPath = explode('/', $ref);
+	$schemaId = end($refPath);
+	if (!isset($openapi->components->schemas->{$schemaId})) {
+		return 'MissingReference';
+	}
+	$schema = $openapi->components->schemas->{$schemaId};
+	if (isset($schema->enum)) {
+		return 'Enum';
+	}
+	else if (strpos($schemaId, '[]') !== false) {
+		return 'Array';
+	}
+	else if (strpos($schemaId, '<') !== false || strpos($schemaId, 'Of') !== false) {
+		return 'Generic';
+	}
+	else if (strpos($schemaId, 'Definitions') !== false) {
+		return 'Definition';
+	}
+	return 'Class';
+}
+function getSchemaReferenceShortName($ref) {
+	global $openapi;
+
+	$refPath = explode('/', $ref);
+	$refName = @end($refPath);
+
+	$refType = $refPath[2] == 'schemas' ? getSchemaReferenceType($ref) : 'Response';
+
+	$shortName = htmlspecialchars($refName);
+	switch($refType) {
+		case 'Definition':
+		case 'Class':
+		case 'Enum':
+			$shortName = @end(explode('.', $refName));
+			break;
+		case 'Array':
+			$shortName = @end(explode('.', explode('[', $refName)[0])).'[]';
+			break;
+		case 'Generic':
+			if (strpos($refName, 'And') !== false) {
+				$key = preg_replace('/.+Of(.+)And.+/', '$1', $refName);//buildSchemaString($schema->properties->data->{'x-dictionary-key'});
+				$value = preg_replace('/.+Of.+And(.+)/', '$1', $refName);//buildSchemaString($schema->properties->data->additionalProperties);
+				$shortName = explode('Of', $refName)[0].htmlspecialchars('<'.$key.','.$value.'>');
+			}
+			else {
+				$key = preg_replace('/.+Of(.+)/', '$1', $refName);
+				$shortName = explode('Of', $refName)[0].htmlspecialchars('<'.$key.'>');
+			}
+			break;
+	}
+	$shortName = str_replace('[]', '&#91;&#93;', $shortName);
+	return $shortName;
+}
+
+function getSchemaReferenceScope($ref) {
+	$refPath = explode('/', $ref);
+	$refName = @end($refPath);
+
+	$refType = $refPath[2] == 'schemas' ? getSchemaReferenceType($ref) : 'Response';
+
+	$scope = '';
+	switch($refType) {
+		case 'Definition':
+		case 'Class':
+		case 'Enum':
+		case 'Array':
+			$refNamePath = explode('.', $refName);
+			$scope = implode('.', array_slice($refNamePath, 0, count($refNamePath)-1));
+			break;
+	}
+	return $scope;
+}
+
+function truncateDescription($description) {
+	if (count(explode("\r\n", $description)) > 1) {
+		$description = explode("\r\n", $description)[0].' (truncated)';
+	}
+	$description = htmlspecialchars($description);
+	return $description;
+}
+
+function cleanDescription($description) {
+	$description = htmlspecialchars($description);
+	$description = str_replace("\r\n\r\n", '<br/><br/>', $description);
+	$description = preg_replace('/\s*\r\n\s*/', ' ', $description);
+	//$description = str_replace('<br/><br/>', "\r\n\r\n", $description);
+	return $description;
 }
 
 function buildEndpoints($openapi, $version) {
@@ -453,7 +549,7 @@ function buildEndpoints($openapi, $version) {
 			$requestMarkdown = strtoupper($method).' '.$serverUrl.$path;
 			$requestMarkdown .= LN;
 			if (isset($endpointMethod->requestBody)) {
-				//$requestMarkdown .= 'Schema: '.buildSchemaString($endpointMethod->requestBody, $versionPrefix).LN;
+				//$requestMarkdown .= 'Schema: '.buildSchemaString($endpointMethod->requestBody).LN;
 				$requestMarkdown .= '```javascript'.LN;
 				$requestMarkdown .= buildSchema($endpointMethod->requestBody, $openapi, $versionPrefix, true).LN;
 				$requestMarkdown .= '```'.LN;
@@ -464,7 +560,7 @@ function buildEndpoints($openapi, $version) {
 			$responseMarkdown = '';
 			if (isset($endpointMethod->responses)) {
 				foreach($endpointMethod->responses as $code => $response) {
-					//$responseMarkdown .= 'Schema: '.buildSchemaString($response, $versionPrefix).LN;
+					//$responseMarkdown .= 'Schema: '.buildSchemaString($response).LN;
 					$responseMarkdown .= 'PlatformErrorCode: '.$code.LN;
 					$responseMarkdown .= '```javascript'.LN;
 					$responseMarkdown .= buildSchema($response, $openapi, $versionPrefix, true).LN;
@@ -501,13 +597,6 @@ function buildEndpoints($openapi, $version) {
 	updateWikiPage($endpointsPath, $endpointsMarkdown);
 }
 
-function buildSchemaStringFromRef($ref, $verionPrefix) {
-	$schema = (object)array(
-		'$ref' => $ref
-	);
-	return buildSchemaString($schema, $verionPrefix);
-}
-
 function buildComponents($openapi, $version) {
 	global $wikiBuilderInfo, $platformlibDesc;
 
@@ -516,108 +605,19 @@ function buildComponents($openapi, $version) {
 	$componentsPath = WIKIPATH.'/'.$versionPrefix.'/Components.md';
 	$componentsMarkdown = '';
 
-	// Schema Components
-	$componentsMarkdown .= '## <a name="Schemas"></a>Schemas'.LN;
-//	$componentsMarkdown .= buildTableHeader(array(
-//		'Name',
-//		//'Type',
-//		'Description'
-//	));
-
-	$groups = array();
-
-	foreach($openapi->components->schemas as $schemaId => $schema) {
-		if (strpos($schemaId, '<') !== false) {
-			echo $schemaId.LN;
-		}
-		else if (strpos($schemaId, '+') !== false) {
-			echo $schemaId.LN;
-		}
-		else if (strpos($schemaId, '[') !== false) {
-			echo $schemaId.LN;
-		}
-		else {
-			preg_match_all('/[^<\.\+>]+/', $schemaId, $matches);
-			$matches = $matches[0];
-
-			$schemaPath = implode('.', array_slice($matches, 0, count($matches)-1));
-			$schemaName = end($matches);
-
-			//echo $schemaId.LN;
-			//echo json_encode($matches, JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT).LN;
-			//echo $schemaPath.' | '.$schemaName.LN;
-			if (!isset($groups[$schemaPath])) $groups[$schemaPath] = array();
-			$groups[$schemaPath][] = array('id' => $schemaId, 'name' => $schemaName);
-		}
-	}
-
-	ksort($groups);
-
-	foreach($groups as $groupId => $group) {
-		if ($groupId) $componentsMarkdown .= '### '.$groupId.LN;
-		$componentsMarkdown .= buildTableHeader(array(
-			'Name',
-			//'Type',
-			'Description'
-		));
-//		foreach($group as $component) {
-//			$schema = $openapi->components->schemas->{$component['id']};
-//			$schemaName = buildSchemaStringFromRef('#/components/schemas/'.$component['id'], $versionPrefix);
-//			$componentsMarkdown .= buildTableRow(array(
-//				$schemaName,
-//				isset($schema->description) ? str_replace("\r\n", '<br/>', $schema->description) : ''
-//			));
-//		}
-		$componentsMarkdown .= LN;
-	}
-
-	echo json_encode($groups, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
-
-//	foreach($openapi->components->schemas as $schemaId => $schema) {
-//		$schemaName = buildSchemaStringFromRef('#/components/schemas/'.$schemaId, $versionPrefix);
-//		$componentsMarkdown .= buildTableRow(array(
-//			//'[#/components/schemas/'.$schemaId.']',
-//			$schemaName,
-//			//'[['.str_replace('[]', '&#91;&#93;', htmlspecialchars($schemaId)).'|'.preg_replace('/[\<\>\.,\[\]]/', '-', $schemaId).']]',
-//			//buildSchemaString($schema,$versionPrefix),
-//			isset($schema->description) ? explode("\r\n", $schema->description)[0].(strpos($schema->description, "\r\n") !== false ? ' (truncated)' : '') : ''
-//		));
-//
-//		buildComponentSchemaPage('#/components/schemas/'.$schemaId, $openapi, $versionPrefix);
-//	}
-//	$componentsMarkdown .= LN;
-
-	// Response Components
-//	$componentsMarkdown .= '## <a name="Responses"></a>Responses'.LN;
-//	$componentsMarkdown .= buildTableHeader(array('Name', 'Response Type', 'Type', 'Description'));
-//	foreach($openapi->components->responses as $responseId => $response) {
-//		$schemaName = buildSchemaStringFromRef('#/components/responses/'.$responseId, $versionPrefix);
-//		$componentsMarkdown .= buildTableRow(array(
-//			//'[#/components/responses/'.$responseId.']',
-//			$schemaName,
-//			//'[['.str_replace('[]', '&#91;&#93;', htmlspecialchars($responseId)).'|'.preg_replace('/[\<\>\.,\[\]]/', '-', $responseId).']]',
-//			implode(', ', array_keys((array)$response->content)),
-//			buildSchemaString($response,$versionPrefix),
-//			isset($response->description) ? explode("\r\n", $response->description)[0].(strpos($response->description, "\r\n") !== false ? ' (truncated)' : '') : ''
-//		));
-//
-//		buildComponentSchemaPage('#/components/responses/'.$responseId, $openapi, $versionPrefix);
-//	}
-//	$componentsMarkdown .= LN;
-
 	// Header Components
 	$componentsMarkdown .= '## <a name="Headers"></a>Headers'.LN;
 	$componentsMarkdown .= buildParameterTable($openapi->components->headers, $openapi, $versionPrefix);
 	$componentsMarkdown .= LN;
 
 	// Security Schema Components
-	$componentsMarkdown .= '## <a name="SecuritySchemas"></a>Security Schemas'.LN;
+	$componentsMarkdown .= '## <a name="Security"></a>Security'.LN;
 	$componentsMarkdown .= buildTableHeader(array('Name', 'Type', 'Description'));
 
 	$securitySchemasPath = WIKIPATH.'/'.$versionPrefix.'/SecuritySchemas.md';
 	$securitySchemasMarkdown = '';
 	foreach($openapi->components->securitySchemes as $schemaKey => $schema) {
-		$componentsMarkdown .= buildTableRow(array($schemaKey, $schema->type, $schema->description));
+		$componentsMarkdown .= buildTableRow(array('[['.$schemaKey.'|SecuritySchemas#'.$schemaKey.']]', $schema->type, $schema->description));
 
 		$securitySchemasMarkdown .= '## <a name="'.$schemaKey.'"></a>'.$schemaKey.LN;
 		$securitySchemasMarkdown .= $schema->description.LN.LN;
@@ -630,15 +630,16 @@ function buildComponents($openapi, $version) {
 			case 'oauth2':
 				$securitySchemasMarkdown .= LN;
 				foreach($schema->flows as $flowId => $flow) {
-					$securitySchemasMarkdown .= '### <a name="'.$schemaKey.'-'.$flowId.'"></a>'.LN;
-					$securitySchemasMarkdown .= '* **Authorization URL:** '.$flow->authorizationUrl.LN;
-					$securitySchemasMarkdown .= '* **Token URL:** '.$flow->tokenUrl.LN;
-					$securitySchemasMarkdown .= '* **Refresh URL:** '.$flow->refreshUrl.LN;
-					$securitySchemasMarkdown .= '* **Scopes:**'.LN;
-					$securitySchemasMarkdown .= buildTableHeader(array('Name', 'Description'));
+					$securitySchemasMarkdown .= '### <a name="'.$schemaKey.'-'.$flowId.'"></a>'.$flowId.LN;
+					$securitySchemasMarkdown .= '> * **Authorization URL:** '.$flow->authorizationUrl.LN;
+					$securitySchemasMarkdown .= '> * **Token URL:** '.$flow->tokenUrl.LN;
+					$securitySchemasMarkdown .= '> * **Refresh URL:** '.$flow->refreshUrl.LN;
+					$securitySchemasMarkdown .= '> * **Scopes:**'.LN.LN;
+					$securitySchemasMarkdown .= '> '.buildTableHeader(array('Name', 'Description'));
 					foreach($flow->scopes as $scopeName => $scopeDescription) {
-						$securitySchemasMarkdown .= buildTableRow(array($scopeName, str_replace("\r\n", '', $scopeDescription)));
+						$securitySchemasMarkdown .= '> '.buildTableRow(array($scopeName, str_replace("\r\n", '', $scopeDescription)));
 					}
+					$securitySchemasMarkdown .= LN;
 				}
 				break;
 			default:
@@ -648,6 +649,99 @@ function buildComponents($openapi, $version) {
 		$securitySchemasMarkdown .= LN;
 	}
 	updateWikiPage($securitySchemasPath, $securitySchemasMarkdown);
+
+	// Schema Components
+	$componentsMarkdown .= '## <a name="Schemas"></a>Schemas'.LN;
+
+	// Sort Schemas by ID
+	$schemaIds = array_keys((array)$openapi->components->schemas);
+	sort($schemaIds);
+
+	$groups = array(
+		'Definition' => array(),
+		'Enum' => array(),
+		'Class' => array(),
+		'Array' => array(),
+		'Generic' => array()
+	);
+
+	foreach($schemaIds as $schemaId) {
+		$refType = getSchemaReferenceType($schemaId);
+		if (!isset($groups[$refType])) $groups[$refType] = array();
+		$groups[$refType][] = $schemaId;
+	}
+
+	foreach($groups as $groupId => $components) {
+		$componentsMarkdown .= '## <a name="Schemas-'.$groupId.'"></a>'.$groupId.($groupId == 'Generic' ? ' Class' : '').' Schemas'.LN;
+
+		usort($components, function($a, $b) {
+			return strcasecmp(getSchemaReferenceShortName('#/components/schemas/'.$a), getSchemaReferenceShortName('#/components/schemas/'.$b));
+		});
+
+		switch($groupId) {
+			case 'Definition':
+
+				$componentsMarkdown .= buildTableHeader(array(
+					'Name',
+					'Manifest',
+					'Description'
+				));
+				foreach($components as $schemaId) {
+					$ref = '#/components/schemas/'.$schemaId;
+					$schema = $openapi->components->schemas->{$schemaId};
+					$schemaDescription = isset($schema->description) ? $schema->description : '';
+
+					$componentsMarkdown .= buildTableRow(array(
+						explode(':', buildSchemaStringFromRef($ref))[0],
+						isset($schema->{'x-mobile-manifest-name'}) ? $schema->{'x-mobile-manifest-name'} : '',
+						'Scope: <i>'.getSchemaReferenceScope($ref).'</i>'.BR//.truncateDescription($schemaDescription)
+					));
+
+					buildComponentSchemaPage('#/components/schemas/'.$schemaId, $openapi, $versionPrefix);
+				}
+				break;
+			default:
+				$componentsMarkdown .= buildTableHeader(array(
+					'Name',
+					'Description'
+				));
+				foreach($components as $schemaId) {
+					$ref = '#/components/schemas/'.$schemaId;
+					$schema = $openapi->components->schemas->{$schemaId};
+					$schemaDescription = isset($schema->description) ? $schema->description : '';
+
+					$componentsMarkdown .= buildTableRow(array(
+						explode(':', buildSchemaStringFromRef('#/components/schemas/'.$schemaId))[0],
+						'Scope: <i>'.getSchemaReferenceScope($ref).'</i>'.BR//truncateDescription($schemaDescription)
+					));
+
+					buildComponentSchemaPage('#/components/schemas/'.$schemaId, $openapi, $versionPrefix);
+				}
+				break;
+		}
+		$componentsMarkdown .= LN;
+	}
+
+	//echo json_encode($groups, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
+
+	// Response Components
+	//$componentsMarkdown .= '## <a name="Responses"></a>Responses'.LN;
+	//$componentsMarkdown .= buildTableHeader(array('Name', 'Response Type', 'Type', 'Description'));
+	//foreach($openapi->components->responses as $responseId => $response) {
+	//	$schemaName = buildSchemaStringFromRef('#/components/responses/'.$responseId);
+	//	$componentsMarkdown .= buildTableRow(array(
+	//		//'[#/components/responses/'.$responseId.']',
+	//		$schemaName,
+	//		//'[['.str_replace('[]', '&#91;&#93;', htmlspecialchars($responseId)).'|'.preg_replace('/[\<\>\.,\[\]]/', '-', $responseId).']]',
+	//		implode(', ', array_keys((array)$response->content)),
+	//		buildSchemaString($response),
+	//		isset($response->description) ? explode("\r\n", $response->description)[0].(strpos($response->description, "\r\n") !== false ? ' (truncated)' : '') : ''
+	//	));
+	//
+	//	buildComponentSchemaPage('#/components/responses/'.$responseId, $openapi, $versionPrefix);
+	//}
+	//$componentsMarkdown .= LN;
+
 	updateWikiPage($componentsPath, $componentsMarkdown);
 }
 
@@ -662,23 +756,25 @@ function buildComponentSchemaPage($ref, $openapi, $versionPrefix) {
 		$refName .= 'Response';
 	}
 
-	$schemaPath = WIKIPATH.'/'.$versionPrefix.'/'.$refPath[2].'/'.preg_replace('/[\<\>\.,\[\]]/', '-', $refName).'.md';
+	$schemaPath = WIKIPATH.'/'.$versionPrefix.'/'.$refPath[2].'/'.preg_replace(SCHEMA_URL_REGEX, '-', $refName).'.md';
 
 	$schemaMarkdown = '';
 
 	$schemaMarkdown .= '## Info'.LN;
-	if (isset($schema->description)) $schemaMarkdown .= $schema->description.LN;
+	if (isset($schema->description)) $schemaMarkdown .= cleanDescription($schema->description).LN;
 	$schemaMarkdown .= LN;
 
 	$schemaMarkdown .= '## Schema'.LN;
 
 	checkSchemaType($schema);
-	if (isset($schema->type)) $schemaMarkdown .= '* **Type:** '.$schema->type.LN;
+	if (isset($schema->type)) $schemaMarkdown .= '* **Type:** '.getSchemaReferenceType($ref).LN;
 	if (isset($schema->format)) $schemaMarkdown .= '* **Format:** '.$schema->format.LN;
+	if (isset($schema->{'x-mobile-manifest-name'})) $schemaMarkdown .= '* **Mobile Manifest:** '.$schema->{'x-mobile-manifest-name'}.LN;
 	if (isset($schema->items)) {
-		$schemaMarkdown .= '* **Array Contents:** '.buildSchemaString($schema->items, $versionPrefix).LN;
+		$schemaMarkdown .= '* **Array Contents:** '.buildSchemaString($schema->items).LN;
 	}
-	if (isset($schema->{'x-mapped-definition'})) $schemaMarkdown .= '* **Mapped Definition:** '.buildSchemaString($schema->{'x-mapped-definition'}, $versionPrefix).LN;
+	if (isset($schema->{'x-mapped-definition'})) $schemaMarkdown .= '* **Mapped Definition:** '.buildSchemaString($schema->{'x-mapped-definition'}).LN;
+	if (isset($schema->{'x-destiny-component-type-dependency'})) $schemaMarkdown .= '* **Component Type Dependency:** '.$schema->{'x-destiny-component-type-dependency'}.LN;
 	//$schemaMarkdown .= json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 	$schemaMarkdown .= LN;
 
@@ -690,8 +786,8 @@ function buildComponentSchemaPage($ref, $openapi, $versionPrefix) {
 		foreach($schema->properties as $propertyId => $property) {
 			$schemaMarkdown .= buildTableRow(array(
 				$propertyId,
-				buildSchemaString($property, $versionPrefix),
-				isset($property->description) ? str_replace("\r\n", '<br/>', $property->description) : ''
+				buildSchemaString($property),
+				isset($property->description) ? cleanDescription($property->description) : ''
 			));
 		}
 		$schemaMarkdown .= LN;
@@ -705,7 +801,11 @@ function buildComponentSchemaPage($ref, $openapi, $versionPrefix) {
 		$schemaMarkdown .= '## Enum Values'.LN;
 		$schemaMarkdown .= buildTableHeader(array('Identifier', 'Value', 'Description'));
 		foreach($schema->{'x-enum-values'} as $enum) {
-			$schemaMarkdown .= buildTableRow(array($enum->identifier, $enum->numericValue, isset($enum->description) ? $enum->description : ''));
+			$schemaMarkdown .= buildTableRow(array(
+				$enum->identifier,
+				$enum->numericValue,
+				isset($enum->description) ? cleanDescription($enum->description) : '')
+			);
 		}
 		$schemaMarkdown .= LN;
 	}
@@ -726,7 +826,7 @@ function buildComponentSchemaPage($ref, $openapi, $versionPrefix) {
 	}
 
 	$schemaMarkdown .= '## References'.LN;
-	$refName = 'schema_'.preg_replace('/[\<\>\.,]/', '-', $schemaId);
+	$refName = 'schema_'.preg_replace(SCHEMA_URL_REGEX_API, '-', $schemaId);
 	$refs = array(
 		'https://bungie-net.github.io/multi/'.$refName.'.html#'.$refName
 	);
