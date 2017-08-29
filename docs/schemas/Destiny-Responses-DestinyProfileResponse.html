@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Responses-DestinyProfileResponse/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Responses-DestinyProfileResponse.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>The response for GetDestinyProfile, with components for character and item-level data.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,74 +98,74 @@
 <tbody>
 <tr>
 <td>vendorReceipts</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyVendorReceiptsComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyVendorReceiptsComponent&gt;</a></td>
-<td>Recent, refundable purchases you have made from vendors.  When will you use it?  Couldn't say...<br/><br/>COMPONENT TYPE: VendorReceipts</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyVendorReceiptsComponent">SingleComponentResponse&lt;DestinyVendorReceiptsComponent&gt;</a></td>
+<td>Recent, refundable purchases you have made from vendors.  When will you use it?  Couldn't say... COMPONENT TYPE: VendorReceipts</td>
 </tr>
 <tr>
 <td>profileInventory</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
-<td>The profile-level inventory of the Destiny Profile.<br/><br/>COMPONENT TYPE: ProfileInventories</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyInventoryComponent">SingleComponentResponse&lt;DestinyInventoryComponent&gt;</a></td>
+<td>The profile-level inventory of the Destiny Profile. COMPONENT TYPE: ProfileInventories</td>
 </tr>
 <tr>
 <td>profileCurrencies</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
-<td>The profile-level currencies owned by the Destiny Profile.<br/><br/>COMPONENT TYPE: ProfileCurrencies</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyInventoryComponent">SingleComponentResponse&lt;DestinyInventoryComponent&gt;</a></td>
+<td>The profile-level currencies owned by the Destiny Profile. COMPONENT TYPE: ProfileCurrencies</td>
 </tr>
 <tr>
 <td>profile</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyProfileComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyProfileComponent&gt;</a></td>
-<td>The basic information about the Destiny Profile (formerly &quot;Account&quot;).<br/><br/>COMPONENT TYPE: Profiles</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyProfileComponent">SingleComponentResponse&lt;DestinyProfileComponent&gt;</a></td>
+<td>The basic information about the Destiny Profile (formerly &quot;Account&quot;). COMPONENT TYPE: Profiles</td>
 </tr>
 <tr>
 <td>profileKiosks</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Components-Kiosks-DestinyKiosksComponent-">SingleComponentResponse&lt;Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a></td>
-<td>Items available from Kiosks that are available Profile-wide (i.e. across all characters)<br/><br/>This component returns information about what Kiosk items are available to you on a <em>Profile</em> level.  It is theoretically possible for Kiosks to have items gated by specific Character as well. If you ever have those, you will find them on the characterKiosks property.<br/><br/>COMPONENT TYPE: Kiosks</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyKiosksComponent">SingleComponentResponse&lt;DestinyKiosksComponent&gt;</a></td>
+<td>Items available from Kiosks that are available Profile-wide (i.e. across all characters) This component returns information about what Kiosk items are available to you on a <em>Profile</em>level.  It is theoretically possible for Kiosks to have items gated by specific Character as well.If you ever have those, you will find them on the characterKiosks property. COMPONENT TYPE: Kiosks</td>
 </tr>
 <tr>
 <td>characters</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterComponent&gt;</a></td>
-<td>Basic information about each character, keyed by the CharacterId.<br/><br/>COMPONENT TYPE: Characters</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterComponent&gt;</a></td>
+<td>Basic information about each character, keyed by the CharacterId. COMPONENT TYPE: Characters</td>
 </tr>
 <tr>
 <td>characterInventories</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
-<td>The character-level non-equipped inventory items, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterInventories</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyInventoryComponent">DictionaryComponentResponse&lt;int64,DestinyInventoryComponent&gt;</a></td>
+<td>The character-level non-equipped inventory items, keyed by the Character's Id. COMPONENT TYPE: CharacterInventories</td>
 </tr>
 <tr>
 <td>characterProgressions</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterProgressionComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterProgressionComponent&gt;</a></td>
-<td>Character-level progression data, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterProgressions</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterProgressionComponent&gt;</a></td>
+<td>Character-level progression data, keyed by the Character's Id. COMPONENT TYPE: CharacterProgressions</td>
 </tr>
 <tr>
 <td>characterRenderData</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterRenderComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterRenderComponent&gt;</a></td>
-<td>Character rendering data - a minimal set of info needed to render a character in 3D - keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterRenderData</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterRenderComponent&gt;</a></td>
+<td>Character rendering data - a minimal set of info needed to render a character in 3D - keyed by the Character's Id. COMPONENT TYPE: CharacterRenderData</td>
 </tr>
 <tr>
 <td>characterActivities</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterActivitiesComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterActivitiesComponent&gt;</a></td>
-<td>Character activity data - the activities available to this character and its status, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterActivities</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterActivitiesComponent&gt;</a></td>
+<td>Character activity data - the activities available to this character and its status, keyed by the Character's Id. COMPONENT TYPE: CharacterActivities</td>
 </tr>
 <tr>
 <td>characterEquipment</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a></td>
-<td>The character's equipped items, keyed by the Character's Id.<br/><br/>COMPONENT TYPE: CharacterEquipment</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyInventoryComponent">DictionaryComponentResponse&lt;int64,DestinyInventoryComponent&gt;</a></td>
+<td>The character's equipped items, keyed by the Character's Id. COMPONENT TYPE: CharacterEquipment</td>
 </tr>
 <tr>
 <td>characterKiosks</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Components-Kiosks-DestinyKiosksComponent-">DictionaryComponentResponse&lt;int64,Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a></td>
-<td>Items available from Kiosks that are available to a specific character as opposed to the account as a whole. It must be combined with data from the profileKiosks property to get a full picture of the character's available items to check out of a kiosk.<br/><br/>This component returns information about what Kiosk items are available to you on a <em>Character</em> level.  Usually, kiosk items will be earned for the entire Profile (all characters) at once. To find those, look in the profileKiosks property.<br/><br/>COMPONENT TYPE: Kiosks</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyKiosksComponent">DictionaryComponentResponse&lt;int64,DestinyKiosksComponent&gt;</a></td>
+<td>Items available from Kiosks that are available to a specific character as opposed to the account as a whole.It must be combined with data from the profileKiosks property to get a full picture of the character's availableitems to check out of a kiosk. This component returns information about what Kiosk items are available to you on a <em>Character</em>level.  Usually, kiosk items will be earned for the entire Profile (all characters) at once.To find those, look in the profileKiosks property. COMPONENT TYPE: Kiosks</td>
 </tr>
 <tr>
 <td>itemComponents</td>
-<td><a href="../../docs/schemas/DestinyItemComponentSet-int64-">DestinyItemComponentSet&lt;int64&gt;</a></td>
-<td>Information about instanced items across all returned characters, keyed by the item's instance ID.<br/><br/>COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]</td>
+<td><a href="../../docs/schemas/DestinyItemComponentSetOfint64">DestinyItemComponentSet&lt;int64&gt;</a></td>
+<td>Information about instanced items across all returned characters, keyed by the item's instance ID. COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyVendorReceiptsComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyVendorReceiptsComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyVendorReceiptsComponent">SingleComponentResponse&lt;DestinyVendorReceiptsComponent&gt;</a>
     "vendorReceipts": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyVendorReceiptsComponent">DestinyVendorReceiptsComponent</a>
         "data": {
@@ -211,7 +212,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyInventoryComponent">SingleComponentResponse&lt;DestinyInventoryComponent&gt;</a>
     "profileInventory": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>
         "data": {
@@ -243,7 +244,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Inventory-DestinyInventoryComponent-">SingleComponentResponse&lt;Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyInventoryComponent">SingleComponentResponse&lt;DestinyInventoryComponent&gt;</a>
     "profileCurrencies": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>
         "data": {
@@ -275,7 +276,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Profiles-DestinyProfileComponent-">SingleComponentResponse&lt;Destiny.Entities.Profiles.DestinyProfileComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyProfileComponent">SingleComponentResponse&lt;DestinyProfileComponent&gt;</a>
     "profile": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Profiles-DestinyProfileComponent">DestinyProfileComponent</a>
         "data": {
@@ -305,7 +306,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Components-Kiosks-DestinyKiosksComponent-">SingleComponentResponse&lt;Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyKiosksComponent">SingleComponentResponse&lt;DestinyKiosksComponent&gt;</a>
     "profileKiosks": {
         // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">DestinyKiosksComponent</a>
         "data": {
@@ -330,7 +331,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterComponent&gt;</a>
     "characters": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterComponent">DestinyCharacterComponent</a>&gt;
         "data": {
@@ -405,7 +406,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyInventoryComponent">DictionaryComponentResponse&lt;int64,DestinyInventoryComponent&gt;</a>
     "characterInventories": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>&gt;
         "data": {
@@ -439,7 +440,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterProgressionComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterProgressionComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterProgressionComponent&gt;</a>
     "characterProgressions": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterProgressionComponent">DestinyCharacterProgressionComponent</a>&gt;
         "data": {
@@ -694,7 +695,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterRenderComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterRenderComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterRenderComponent&gt;</a>
     "characterRenderData": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent">DestinyCharacterRenderComponent</a>&gt;
         "data": {
@@ -768,7 +769,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Characters-DestinyCharacterActivitiesComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Characters.DestinyCharacterActivitiesComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent">DictionaryComponentResponse&lt;int64,DestinyCharacterActivitiesComponent&gt;</a>
     "characterActivities": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Characters-DestinyCharacterActivitiesComponent">DestinyCharacterActivitiesComponent</a>&gt;
         "data": {
@@ -810,7 +811,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Inventory-DestinyInventoryComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Inventory.DestinyInventoryComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyInventoryComponent">DictionaryComponentResponse&lt;int64,DestinyInventoryComponent&gt;</a>
     "characterEquipment": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Inventory-DestinyInventoryComponent">DestinyInventoryComponent</a>&gt;
         "data": {
@@ -844,7 +845,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Components-Kiosks-DestinyKiosksComponent-">DictionaryComponentResponse&lt;int64,Destiny.Components.Kiosks.DestinyKiosksComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyKiosksComponent">DictionaryComponentResponse&lt;int64,DestinyKiosksComponent&gt;</a>
     "characterKiosks": {
         // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKiosksComponent">DestinyKiosksComponent</a>&gt;
         "data": {
@@ -871,9 +872,9 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DestinyItemComponentSet-int64-">DestinyItemComponentSet&lt;int64&gt;</a>
+    // Type: <a href="../../docs/schemas/DestinyItemComponentSetOfint64">DestinyItemComponentSet&lt;int64&gt;</a>
     "itemComponents": {
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemInstanceComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemInstanceComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent">DictionaryComponentResponse&lt;int64,DestinyItemInstanceComponent&gt;</a>
         "instances": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>&gt;
             "data": {
@@ -913,7 +914,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemObjectivesComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemObjectivesComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent">DictionaryComponentResponse&lt;int64,DestinyItemObjectivesComponent&gt;</a>
         "objectives": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">DestinyItemObjectivesComponent</a>&gt;
             "data": {
@@ -939,7 +940,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemPerksComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemPerksComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemPerksComponent">DictionaryComponentResponse&lt;int64,DestinyItemPerksComponent&gt;</a>
         "perks": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemPerksComponent">DestinyItemPerksComponent</a>&gt;
             "data": {
@@ -963,7 +964,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemRenderComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemRenderComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemRenderComponent">DictionaryComponentResponse&lt;int64,DestinyItemRenderComponent&gt;</a>
         "renderData": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemRenderComponent">DestinyItemRenderComponent</a>&gt;
             "data": {
@@ -979,7 +980,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemStatsComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemStatsComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemStatsComponent">DictionaryComponentResponse&lt;int64,DestinyItemStatsComponent&gt;</a>
         "stats": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemStatsComponent">DestinyItemStatsComponent</a>&gt;
             "data": {
@@ -1000,7 +1001,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemSocketsComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemSocketsComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent">DictionaryComponentResponse&lt;int64,DestinyItemSocketsComponent&gt;</a>
         "sockets": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketsComponent">DestinyItemSocketsComponent</a>&gt;
             "data": {
@@ -1030,7 +1031,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int64-Destiny-Entities-Items-DestinyItemTalentGridComponent-">DictionaryComponentResponse&lt;int64,Destiny.Entities.Items.DestinyItemTalentGridComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent">DictionaryComponentResponse&lt;int64,DestinyItemTalentGridComponent&gt;</a>
         "talentGrids": {
             // Type: Dictionary&lt;integer:int64,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemTalentGridComponent">DestinyItemTalentGridComponent</a>&gt;
             "data": {
@@ -1132,7 +1133,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-uint32-Destiny-Components-Items-DestinyItemPlugComponent-">DictionaryComponentResponse&lt;uint32,Destiny.Components.Items.DestinyItemPlugComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent">DictionaryComponentResponse&lt;uint32,DestinyItemPlugComponent&gt;</a>
         "plugStates": {
             // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Items-DestinyItemPlugComponent">DestinyItemPlugComponent</a>&gt;
             "data": {

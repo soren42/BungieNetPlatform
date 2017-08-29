@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Quests-DestinyQuestStatus/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Quests-DestinyQuestStatus.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Data regarding the progress of a Quest for a specific character. Quests are composed of multiple steps, each with potentially multiple objectives: this QuestStatus will return Objective data for the <em>currently active</em> step in this quest.</p>
+<p>Data regarding the progress of a Quest for a specific character.Quests are composed of multiple steps, each with potentially multiple objectives:this QuestStatus will return Objective data for the <em>currently active</em> step in this quest.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,17 +99,17 @@
 <tr>
 <td>questHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The hash identifier for the Quest Item.  (Note: Quests are defined as Items, and thus you would use this to look up the quest's DestinyInventoryItemDefinition). For information on all steps in the quest, you can then examine its DestinyInventoryItemDefinition.setData property for Quest Steps (which are <em>also</em> items). You can use the Item Definition to display human readable data about the overall quest.</td>
+<td>The hash identifier for the Quest Item.  (Note: Quests are defined as Items, and thus you woulduse this to look up the quest's DestinyInventoryItemDefinition).For information on all steps in the quest, you can then examine its DestinyInventoryItemDefinition.setDataproperty for Quest Steps (which are <em>also</em> items).You can use the Item Definition to display human readable data about the overall quest.</td>
 </tr>
 <tr>
 <td>stepHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The hash identifier of the current Quest Step, which is also a DestinyInventoryItemDefinition.  You can use this to get human readable data about the current step and what to do in that step.</td>
+<td>The hash identifier of the current Quest Step, which is also a DestinyInventoryItemDefinition.  You can usethis to get human readable data about the current step and what to do in that step.</td>
 </tr>
 <tr>
 <td>stepObjectives</td>
 <td><a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]</td>
-<td>A step can have multiple objectives.  This will give you the progress for each objective in the current step, in the order in which they are rendered in-game.</td>
+<td>A step can have multiple objectives.  This will give you the progress for each objective in the current step,in the order in which they are rendered in-game.</td>
 </tr>
 <tr>
 <td>tracked</td>
@@ -118,12 +119,12 @@
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64</td>
-<td>The current Quest Step will be an instanced item in the player's inventory.  If you care about that, this is the instance ID of that item.</td>
+<td>The current Quest Step will be an instanced item in the player's inventory.  If you care about that,this is the instance ID of that item.</td>
 </tr>
 <tr>
 <td>completed</td>
 <td>boolean</td>
-<td>Whether or not the whole quest has been completed, regardless of whether or not you have redeemed the rewards for the quest.</td>
+<td>Whether or not the whole quest has been completed, regardless of whether or notyou have redeemed the rewards for the quest.</td>
 </tr>
 <tr>
 <td>redeemed</td>

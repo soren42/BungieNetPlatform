@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyRaceDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyRaceDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>In Destiny, &quot;Races&quot; are really more like &quot;Species&quot;.  Sort of.  I mean, are the Awoken a separate species from humans?  I'm not sure.  But either way, they're defined here.  You'll see Exo, Awoken, and Human as examples of these Species.  Players will choose one for their character.</p>
+<p>In Destiny, &quot;Races&quot; are really more like &quot;Species&quot;.  Sort of.  I mean, are the Awoken a separate species fromhumans?  I'm not sure.  But either way, they're defined here.  You'll see Exo, Awoken, and Human as examplesof these Species.  Players will choose one for their character.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> Races</li>
 </ul>
 <h2>Properties</h2>
@@ -104,17 +104,17 @@
 <tr>
 <td>raceType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>:Enum</td>
-<td>An enumeration defining the existing, known Races/Species for player characters.  This value will be the enum value matching this definition.</td>
+<td>An enumeration defining the existing, known Races/Species for player characters.  This valuewill be the enum value matching this definition.</td>
 </tr>
 <tr>
 <td>genderedRaceNames</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum,string&gt;</td>
-<td>A localized string referring to the singular form of the Race's name when referred to in gendered form. Keyed by the DestinyGender.</td>
+<td>A localized string referring to the singular form of the Race's name when referred to in gendered form.Keyed by the DestinyGender.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -124,7 +124,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

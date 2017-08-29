@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyLocationReleaseDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyLocationReleaseDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time for a given Location.</p>
+<p>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time fora given Location.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -123,22 +124,22 @@
 <tr>
 <td>activityGraphNodeHash</td>
 <td>integer:uint32</td>
-<td>The Activity Graph Node being pointed to by this location.  (Remember that Activity Graph Node hashes are only unique within an Activity Graph: so use the combination to find the node being spoken of)</td>
+<td>The Activity Graph Node being pointed to by this location.  (Remember thatActivity Graph Node hashes are only unique within an Activity Graph: so use the combinationto find the node being spoken of)</td>
 </tr>
 <tr>
 <td>activityBubbleName</td>
 <td>integer:uint32</td>
-<td>The Activity Bubble within the Destination.  Look this up in the DestinyDestinationDefinition's bubbles and bubbleSettings properties.</td>
+<td>The Activity Bubble within the Destination.  Look this up in the DestinyDestinationDefinition'sbubbles and bubbleSettings properties.</td>
 </tr>
 <tr>
 <td>activityPathBundle</td>
 <td>integer:uint32</td>
-<td>If we had map information, this would tell us something cool about the path this location wants you to take.  I wish we had map information.</td>
+<td>If we had map information, this would tell us something cool about the path this location wantsyou to take.  I wish we had map information.</td>
 </tr>
 <tr>
 <td>activityPathDestination</td>
 <td>integer:uint32</td>
-<td>If we had map information, this would tell us about path information related to destination on the map.  Sad.  Maybe you can do something cool with it.  Go to town man.</td>
+<td>If we had map information, this would tell us about path information related to destinationon the map.  Sad.  Maybe you can do something cool with it.  Go to town man.</td>
 </tr>
 <tr>
 <td>navPointType</td>

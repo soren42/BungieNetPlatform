@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneContent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestoneContent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents localized, extended content related to Milestones. This is intentionally returned by a separate endpoint and not with Character-level Milestone data because we do not put localized data into standard Destiny responses, both for brevity of response and for caching purposes.  If you really need this data, hit the Milestone Content endpoint.</p>
+<p>Represents localized, extended content related to Milestones.This is intentionally returned by a separate endpoint and not with Character-level Milestone databecause we do not put localized data into standard Destiny responses, both for brevity of responseand for caching purposes.  If you really need this data, hit the Milestone Content endpoint.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -113,7 +114,7 @@
 <tr>
 <td>itemCategories</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneContentItemCategory">DestinyMilestoneContentItemCategory</a>[]</td>
-<td>If DPS has defined items related to this Milestone, they can categorize those items in the Firehose. That data will then be returned as item categories here.</td>
+<td>If DPS has defined items related to this Milestone, they can categorize those items in the Firehose.That data will then be returned as item categories here.</td>
 </tr>
 </tbody>
 </table>

@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyProgressionDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyProgressionDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A &quot;Progression&quot; in Destiny is best explained by an example.<br/><br/>A Character's &quot;Level&quot; is a progression: it has Experience that can be earned, levels that can be gained, and is evaluated and displayed at various points in the game.  A Character's &quot;Faction Reputation&quot; is also a progression for much the same reason.<br/><br/>Progression is used by a variety of systems, and the definition of a Progression will generally only be useful if combining with live data (such as a character's DestinyCharacterProgressionComponent.progressions property, which holds that character's live Progression states).<br/><br/>Fundamentally, a Progression measures your &quot;Level&quot; by evaluating the thresholds in its Steps (one step per level, except for the last step which can be repeated indefinitely for &quot;Levels&quot; that have no ceiling) against the total earned &quot;progression points&quot;/experience. (for simplicity purposes, we will henceforth refer to earned progression points as experience, though it need not be a mechanic that in any way resembles Experience in a traditional sense).<br/><br/>Earned experience is calculated in a variety of ways, determined by the Progression's scope.  These go from looking up a stored value to performing exceedingly obtuse calculations.  This is why we provide live data in DestinyCharacterProgressionComponent.progressions, so you don't have to worry about those.</p>
+<p>A &quot;Progression&quot; in Destiny is best explained by an example. A Character's &quot;Level&quot; is a progression:it has Experience that can be earned, levels that can be gained, and is evaluated and displayed atvarious points in the game.  A Character's &quot;Faction Reputation&quot; is also a progression for much the same reason. Progression is used by a variety of systems, and the definition of a Progression will generally only be useful if combining with live data (such as a character's DestinyCharacterProgressionComponent.progressionsproperty, which holds that character's live Progression states). Fundamentally, a Progression measures your &quot;Level&quot; by evaluating the thresholds in its Steps (one step per level, exceptfor the last step which can be repeated indefinitely for &quot;Levels&quot; that have no ceiling) against the total earned&quot;progression points&quot;/experience. (for simplicity purposes, we will henceforth refer to earned progression points asexperience, though it need not be a mechanic that in any way resembles Experience in a traditional sense). Earned experience is calculated in a variety of ways, determined by the Progression's scope.  These go fromlooking up a stored value to performing exceedingly obtuse calculations.  This is why we provide live datain DestinyCharacterProgressionComponent.progressions, so you don't have to worry about those.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> Progressions</li>
 </ul>
 <h2>Properties</h2>
@@ -104,7 +104,7 @@
 <tr>
 <td>scope</td>
 <td><a href="../../docs/schemas/Destiny-DestinyProgressionScope">DestinyProgressionScope</a>:Enum</td>
-<td>The &quot;Scope&quot; of the progression indicates the source of the progression's live data.<br/><br/>See the DestinyProgressionScope enum for more info: but essentially, a Progression can either be backed by a stored value, or it can be a calculated derivative of other values.</td>
+<td>The &quot;Scope&quot; of the progression indicates the source of the progression's live data. See the DestinyProgressionScope enum for more info: but essentially, a Progression can either bebacked by a stored value, or it can be a calculated derivative of other values.</td>
 </tr>
 <tr>
 <td>repeatLastStep</td>
@@ -114,27 +114,27 @@
 <tr>
 <td>source</td>
 <td>string</td>
-<td>If there's a description of how to earn this progression in the local config, this will be that localized description.</td>
+<td>If there's a description of how to earn this progression in the local config, this willbe that localized description.</td>
 </tr>
 <tr>
 <td>steps</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">DestinyProgressionStepDefinition</a>:Definition[]</td>
-<td>Progressions are divided into Steps, which roughly equate to &quot;Levels&quot; in the traditional sense of a Progression.  Notably, the last step can be repeated indefinitely if repeatLastStep is true, meaning that the calculation for your level is not as simple as comparing your current progress to the max progress of the steps.  <br/><br/>These and more calculations are done for you if you grab live character progression data, such as in the DestinyCharacterProgressionComponent.</td>
+<td>Progressions are divided into Steps, which roughly equate to &quot;Levels&quot; in the traditionalsense of a Progression.  Notably, the last step can be repeated indefinitely if repeatLastStepis true, meaning that the calculation for your level is not as simple as comparing your currentprogress to the max progress of the steps. These and more calculations are done for you ifyou grab live character progression data, such as in the DestinyCharacterProgressionComponent.</td>
 </tr>
 <tr>
 <td>visible</td>
 <td>boolean</td>
-<td>If true, the Progression is something worth showing to users.<br/><br/>If false, BNet isn't going to show it.  But that doesn't mean you can't.  We're all friends here.</td>
+<td>If true, the Progression is something worth showing to users. If false, BNet isn't going to show it.  But that doesn't mean you can't.  We're all friends here.</td>
 </tr>
 <tr>
 <td>factionHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
-<td>If the value exists, this is the hash identifier for the Faction that owns this Progression.<br/><br/>This is purely for convenience, if you're looking at a progression and want to know if and who it's related to in terms of Faction Reputation.</td>
+<td>If the value exists, this is the hash identifier for the Faction that owns this Progression. This is purely for convenience, if you're looking at a progression and want to know if and whoit's related to in terms of Faction Reputation.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -144,7 +144,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

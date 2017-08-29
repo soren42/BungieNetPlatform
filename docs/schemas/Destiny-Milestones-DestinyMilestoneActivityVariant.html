@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneActivityVariant/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>Represents custom data that we know about an individual variant of an activity.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +99,12 @@
 <tr>
 <td>activityHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The hash for the specific variant of the activity related to this milestone. You can pull more detailed static info from the DestinyActivityDefinition, such as difficulty level.</td>
+<td>The hash for the specific variant of the activity related to this milestone.You can pull more detailed static info from the DestinyActivityDefinition, such as difficulty level.</td>
 </tr>
 <tr>
 <td>completionStatus</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a></td>
-<td>An OPTIONAL component: if it makes sense to talk about this activity variant in terms of whether or not it has been completed or what progress you have made in it, this will be returned. Otherwise, this will be NULL.</td>
+<td>An OPTIONAL component: if it makes sense to talk about this activity variant in terms ofwhether or not it has been completed or what progress you have made in it, this will be returned.Otherwise, this will be NULL.</td>
 </tr>
 </tbody>
 </table>

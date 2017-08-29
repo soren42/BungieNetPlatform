@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyStatGroupDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyStatGroupDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>When an inventory item (DestinyInventoryItemDefinition) has Stats (such as Attack Power), the item will refer to a Stat Group.  This definition enumerates the properties used to transform the item's &quot;Investment&quot; stats into &quot;Display&quot; stats.<br/><br/>See DestinyStatDefinition's documentation for information about the transformation of Stats, and the meaning of an Investment vs. a Display stat.<br/><br/>If you don't want to do these calculations on your own, fear not: pulling live data from the BNet endpoints will return display stat values pre-computed and ready for you to use. I highly recommend this approach, saves a lot of time and also accounts for certain stat modifiers that can't easily be accounted for without live data (such as stat modifiers on Talent Grids and Socket Plugs)</p>
+<p>When an inventory item (DestinyInventoryItemDefinition) has Stats (such as Attack Power),the item will refer to a Stat Group.  This definition enumerates the properties used totransform the item's &quot;Investment&quot; stats into &quot;Display&quot; stats. See DestinyStatDefinition's documentation for information about the transformationof Stats, and the meaning of an Investment vs. a Display stat. If you don't want to do these calculations on your own, fear not: pulling live data fromthe BNet endpoints will return display stat values pre-computed and ready for you to use.I highly recommend this approach, saves a lot of time and also accounts for certain statmodifiers that can't easily be accounted for without live data (such as stat modifiers onTalent Grids and Socket Plugs)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> StatGroups</li>
 </ul>
 <h2>Properties</h2>
@@ -99,27 +99,27 @@
 <tr>
 <td>maximumValue</td>
 <td>integer:int32</td>
-<td>The maximum possible value that any stat in this group can be transformed into.<br/><br/>This is used by stats that <em>don't</em> have scaledStats entries below, but that still need to be displayed as a progress bar, in which case this is used as the upper bound for said progress bar.  (the lower bound is always 0)</td>
+<td>The maximum possible value that any stat in this group can be transformed into. This is used by stats that <em>don't</em> have scaledStats entries below, but thatstill need to be displayed as a progress bar, in which case this is usedas the upper bound for said progress bar.  (the lower bound is always 0)</td>
 </tr>
 <tr>
 <td>uiPosition</td>
 <td>integer:int32</td>
-<td>This apparently indicates the position of the stats in the UI?  I've returned it in case anyone can use it, but it's not of any use to us on BNet.  Something's being lost in translation with this value.</td>
+<td>This apparently indicates the position of the stats in the UI?  I've returned itin case anyone can use it, but it's not of any use to us on BNet.  Something's beinglost in translation with this value.</td>
 </tr>
 <tr>
 <td>scaledStats</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a>:Definition[]</td>
-<td>Any stat that requires scaling to be transformed from an &quot;Investment&quot; stat to a &quot;Display&quot; stat will have an entry in this list.  For more information on what those types of stats mean and the transformation process, see DestinyStatDefinition.<br/><br/>In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead. But I'm going to leave it be because <a href="After Apple Picking">After Apple Picking</a>.</td>
+<td>Any stat that requires scaling to be transformed from an &quot;Investment&quot; stat to a &quot;Display&quot;stat will have an entry in this list.  For more information on what those types of statsmean and the transformation process, see DestinyStatDefinition. In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead.But I'm going to leave it be because <a href="After Apple Picking">After Apple Picking</a>.</td>
 </tr>
 <tr>
 <td>overrides</td>
 <td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">DestinyStatOverrideDefinition</a>:Definition&gt;</td>
-<td>The game has the ability to override, based on the stat group, what the localized text is that is displayed for Stats being shown on the item.<br/><br/>Mercifully, no Stat Groups use this feature currently.  If they start using them, we'll all need to start using them (and those of you who are more prudent than I am can go ahead and start pre-checking for this.)</td>
+<td>The game has the ability to override, based on the stat group, what the localized text isthat is displayed for Stats being shown on the item. Mercifully, no Stat Groups use this feature currently.  If they start using them,we'll all need to start using them (and those of you who are more prudent than I amcan go ahead and start pre-checking for this.)</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -129,7 +129,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

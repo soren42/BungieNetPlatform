@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Responses-DestinyItemResponse/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Responses-DestinyItemResponse.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The response object for retrieving an individual instanced item.  None of these components are relevant for an item that doesn't have an &quot;itemInstanceId&quot;: for those, get your information from the DestinyInventoryDefinition.</p>
+<p>The response object for retrieving an individual instanced item.  None of these components are relevantfor an item that doesn't have an &quot;itemInstanceId&quot;: for those, get your information from the DestinyInventoryDefinition.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -102,43 +103,43 @@
 </tr>
 <tr>
 <td>item</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemComponent&gt;</a></td>
-<td>Common data for the item relevant to its non-instanced properties.<br/><br/>COMPONENT TYPE: ItemCommonData</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemComponent">SingleComponentResponse&lt;DestinyItemComponent&gt;</a></td>
+<td>Common data for the item relevant to its non-instanced properties. COMPONENT TYPE: ItemCommonData</td>
 </tr>
 <tr>
 <td>instance</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemInstanceComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemInstanceComponent&gt;</a></td>
-<td>Basic instance data for the item.<br/><br/>COMPONENT TYPE: ItemInstances</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemInstanceComponent">SingleComponentResponse&lt;DestinyItemInstanceComponent&gt;</a></td>
+<td>Basic instance data for the item. COMPONENT TYPE: ItemInstances</td>
 </tr>
 <tr>
 <td>objectives</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemObjectivesComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemObjectivesComponent&gt;</a></td>
-<td>Information specifically about the item's objectives.<br/><br/>COMPONENT TYPE: ItemObjectives</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemObjectivesComponent">SingleComponentResponse&lt;DestinyItemObjectivesComponent&gt;</a></td>
+<td>Information specifically about the item's objectives. COMPONENT TYPE: ItemObjectives</td>
 </tr>
 <tr>
 <td>perks</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemPerksComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemPerksComponent&gt;</a></td>
-<td>Information specifically about the perks currently active on the item.<br/><br/>COMPONENT TYPE: ItemPerks</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemPerksComponent">SingleComponentResponse&lt;DestinyItemPerksComponent&gt;</a></td>
+<td>Information specifically about the perks currently active on the item. COMPONENT TYPE: ItemPerks</td>
 </tr>
 <tr>
 <td>renderData</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemRenderComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemRenderComponent&gt;</a></td>
-<td>Information about how to render the item in 3D.<br/><br/>COMPONENT TYPE: ItemRenderData</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemRenderComponent">SingleComponentResponse&lt;DestinyItemRenderComponent&gt;</a></td>
+<td>Information about how to render the item in 3D. COMPONENT TYPE: ItemRenderData</td>
 </tr>
 <tr>
 <td>stats</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemStatsComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemStatsComponent&gt;</a></td>
-<td>Information about the computed stats of the item: power, defense, etc...<br/><br/>COMPONENT TYPE: ItemStats</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemStatsComponent">SingleComponentResponse&lt;DestinyItemStatsComponent&gt;</a></td>
+<td>Information about the computed stats of the item: power, defense, etc... COMPONENT TYPE: ItemStats</td>
 </tr>
 <tr>
 <td>talentGrid</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemTalentGridComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemTalentGridComponent&gt;</a></td>
-<td>Information about the talent grid attached to the item.  Talent nodes can provide a variety of benefits and abilities, and in Destiny 2 are used almost exclusively for the character's &quot;Builds&quot;.<br/><br/>COMPONENT TYPE: ItemTalentGrids</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemTalentGridComponent">SingleComponentResponse&lt;DestinyItemTalentGridComponent&gt;</a></td>
+<td>Information about the talent grid attached to the item.  Talent nodes can provide a variety ofbenefits and abilities, and in Destiny 2 are used almost exclusively for the character's &quot;Builds&quot;. COMPONENT TYPE: ItemTalentGrids</td>
 </tr>
 <tr>
 <td>sockets</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemSocketsComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemSocketsComponent&gt;</a></td>
-<td>Information about the sockets of the item: which are currently active, what potential sockets you could have and the stats/abilities/perks you can gain from them.<br/><br/>COMPONENT TYPE: ItemSockets</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyItemSocketsComponent">SingleComponentResponse&lt;DestinyItemSocketsComponent&gt;</a></td>
+<td>Information about the sockets of the item: which are currently active, what potential socketsyou could have and the stats/abilities/perks you can gain from them. COMPONENT TYPE: ItemSockets</td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +147,7 @@
 <pre><code class="javascript">{
     // Type: integer:int64:nullable
     "characterId": 0,
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemComponent">SingleComponentResponse&lt;DestinyItemComponent&gt;</a>
     "item": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemComponent">DestinyItemComponent</a>
         "data": {
@@ -172,7 +173,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemInstanceComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemInstanceComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemInstanceComponent">SingleComponentResponse&lt;DestinyItemInstanceComponent&gt;</a>
     "instance": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>
         "data": {
@@ -210,7 +211,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemObjectivesComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemObjectivesComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemObjectivesComponent">SingleComponentResponse&lt;DestinyItemObjectivesComponent&gt;</a>
     "objectives": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">DestinyItemObjectivesComponent</a>
         "data": {
@@ -234,7 +235,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemPerksComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemPerksComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemPerksComponent">SingleComponentResponse&lt;DestinyItemPerksComponent&gt;</a>
     "perks": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemPerksComponent">DestinyItemPerksComponent</a>
         "data": {
@@ -256,7 +257,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemRenderComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemRenderComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemRenderComponent">SingleComponentResponse&lt;DestinyItemRenderComponent&gt;</a>
     "renderData": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemRenderComponent">DestinyItemRenderComponent</a>
         "data": {
@@ -270,7 +271,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemStatsComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemStatsComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemStatsComponent">SingleComponentResponse&lt;DestinyItemStatsComponent&gt;</a>
     "stats": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemStatsComponent">DestinyItemStatsComponent</a>
         "data": {
@@ -289,7 +290,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemTalentGridComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemTalentGridComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemTalentGridComponent">SingleComponentResponse&lt;DestinyItemTalentGridComponent&gt;</a>
     "talentGrid": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemTalentGridComponent">DestinyItemTalentGridComponent</a>
         "data": {
@@ -389,7 +390,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Items-DestinyItemSocketsComponent-">SingleComponentResponse&lt;Destiny.Entities.Items.DestinyItemSocketsComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyItemSocketsComponent">SingleComponentResponse&lt;DestinyItemSocketsComponent&gt;</a>
     "sockets": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketsComponent">DestinyItemSocketsComponent</a>
         "data": {

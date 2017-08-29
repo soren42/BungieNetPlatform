@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyVendorAcceptedItemDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If you ever wondered how the Vault works, here it is.<br/><br/>The Vault is merely a set of inventory buckets that exist on your Profile/Account level. When you transfer items in the Vault, the game is using the Vault Vendor's DestinyVendorAcceptedItemDefinitions to see where the appropriate destination bucket is for the source bucket from whence your item is moving. If it finds such an entry, it transfers the item to the other bucket.<br/><br/>The mechanics for Postmaster works similarly, which is also a vendor.  All driven by Accepted Items.</p>
+<p>If you ever wondered how the Vault works, here it is. The Vault is merely a set of inventory buckets that exist on your Profile/Account level.When you transfer items in the Vault, the game is using the Vault Vendor's DestinyVendorAcceptedItemDefinitionsto see where the appropriate destination bucket is for the source bucket from whence your item is moving.If it finds such an entry, it transfers the item to the other bucket. The mechanics for Postmaster works similarly, which is also a vendor.  All driven by Accepted Items.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +98,12 @@
 <tr>
 <td>acceptedInventoryBucketHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The &quot;source&quot; bucket for a transfer.  When a user wants to transfer an item, the appropriate DestinyVendorDefinition's acceptedItems property is evaluated, looking for an entry where acceptedInventoryBucketHash matches the bucket that the item being transferred is currently located.  If it exists, the item will be transferred into whatever bucket is defined by destinationInventoryBucketHash.</td>
+<td>The &quot;source&quot; bucket for a transfer.  When a user wants to transfer an item, the appropriate DestinyVendorDefinition'sacceptedItems property is evaluated, looking for an entry where acceptedInventoryBucketHash matchesthe bucket that the item being transferred is currently located.  If it exists, the item will betransferred into whatever bucket is defined by destinationInventoryBucketHash.</td>
 </tr>
 <tr>
 <td>destinationInventoryBucketHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>This is the bucket where the item being transferred will be put, given that it was being transferred <em>from</em> the bucket defined in acceptedInventoryBucketHash.</td>
+<td>This is the bucket where the item being transferred will be put, given that it was beingtransferred <em>from</em> the bucket defined in acceptedInventoryBucketHash.</td>
 </tr>
 </tbody>
 </table>

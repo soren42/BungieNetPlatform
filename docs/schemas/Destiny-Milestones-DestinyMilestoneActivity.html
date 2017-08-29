@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneActivity/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestoneActivity.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Sometimes, we know the specific activity that the Milestone wants you to play. This entity provides additional information about that Activity and all of its variants.  (sometimes there's only one variant, but I think you get the point)</p>
+<p>Sometimes, we know the specific activity that the Milestone wants you to play.This entity provides additional information about that Activity and all of itsvariants.  (sometimes there's only one variant, but I think you get the point)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,17 +99,17 @@
 <tr>
 <td>activityHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The hash of an arbitrarily chosen variant of this activity.  We'll go ahead and call that the &quot;canonical&quot; activity, because if you're using this value you should only use it for properties that are common across the variants: things like the name of the activity, it's location, etc... Use this hash to look up the DestinyActivityDefinition of this activity for rendering data.</td>
+<td>The hash of an arbitrarily chosen variant of this activity.  We'll go ahead andcall that the &quot;canonical&quot; activity, because if you're using this value you shouldonly use it for properties that are common across the variants: things like thename of the activity, it's location, etc...Use this hash to look up the DestinyActivityDefinition of this activity for rendering data.</td>
 </tr>
 <tr>
 <td>modifierHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>If the activity has modifiers, this will be the list of modifiers that all variants have in common.  Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data. Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all <em>possible</em> modifiers for the activity, not the active ones. Use only the active ones to match what's really live.</td>
+<td>If the activity has modifiers, this will be the list of modifiers that all variantshave in common.  Perform lookups againstDestinyActivityModifierDefinition which defines the modifier being applied to getat the modifier data.Note that, in the DestiyActivityDefinition, you will see many more modifiers than thisbeing referred to: those are all <em>possible</em> modifiers for the activity, not the active ones.Use only the active ones to match what's really live.</td>
 </tr>
 <tr>
 <td>variants</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]</td>
-<td>If you want more than just name/location/etc... you're going to have to dig into and show the variants of the conceptual activity.  These will differ in seemingly arbitrary ways, like difficulty level and modifiers applied.  Show it in whatever way tickles your fancy.</td>
+<td>If you want more than just name/location/etc... you're going to have to dig intoand show the variants of the conceptual activity.  These will differ in seeminglyarbitrary ways, like difficulty level and modifiers applied.  Show it in whateverway tickles your fancy.</td>
 </tr>
 </tbody>
 </table>

@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Progression-DestinyFactionProgression/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Progression-DestinyFactionProgression.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Mostly for historical purposes, we segregate Faction progressions from other progressions. This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinition of the faction related to the progression.</p>
+<p>Mostly for historical purposes, we segregate Faction progressions from other progressions.This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinitionof the faction related to the progression.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,7 +99,7 @@
 <tr>
 <td>factionHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinition for more rendering info.</td>
+<td>The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinitionfor more rendering info.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
@@ -128,7 +129,7 @@
 <tr>
 <td>currentProgress</td>
 <td>integer:int32</td>
-<td>This is the total amount of progress obtained overall for this progression (for instance, the total amount of Character Level experience earned)</td>
+<td>This is the total amount of progress obtained overall for thisprogression (for instance, the total amount of Character Level experience earned)</td>
 </tr>
 <tr>
 <td>level</td>
@@ -138,17 +139,17 @@
 <tr>
 <td>levelCap</td>
 <td>integer:int32</td>
-<td>This is the maximum possible level you can achieve for this progression (for example, the maximum character level obtainable)</td>
+<td>This is the maximum possible level you can achieve for this progression (for example, the maximumcharacter level obtainable)</td>
 </tr>
 <tr>
 <td>stepIndex</td>
 <td>integer:int32</td>
-<td>Progressions define their levels in &quot;steps&quot;.  Since the last step may be repeatable, the user may be at a higher level than the actual Step achieved in the progression.  Not necessarily useful, but potentially interesting for those cruising the API.  Relate this to the &quot;steps&quot; property of the DestinyProgression to see which step the user is on, if you care about that.  (Note that this is Content Version dependent since it refers to indexes.)</td>
+<td>Progressions define their levels in &quot;steps&quot;.  Since the last step may be repeatable, the user maybe at a higher level than the actual Step achieved in the progression.  Not necessarily useful, butpotentially interesting for those cruising the API.  Relate this to the &quot;steps&quot; property of the DestinyProgressionto see which step the user is on, if you care about that.  (Note that this is Content Version dependent sinceit refers to indexes.)</td>
 </tr>
 <tr>
 <td>progressToNextLevel</td>
 <td>integer:int32</td>
-<td>The amount of progression (i.e. &quot;Experience&quot;) needed to reach the next level of this Progression. Jeez, progression is such an overloaded word.</td>
+<td>The amount of progression (i.e. &quot;Experience&quot;) needed to reach the next level of this Progression.Jeez, progression is such an overloaded word.</td>
 </tr>
 <tr>
 <td>nextLevelAt</td>

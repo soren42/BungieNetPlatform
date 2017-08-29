@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-DestinyUnlockValueUIStyle/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-DestinyUnlockValueUIStyle.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If you're showing an unlock value in the UI, this is the format in which it should be shown.  You'll have to build your own algorithms on the client side to determine how best to render these options.</p>
+<p>If you're showing an unlock value in the UI, this is the formatin which it should be shown.  You'll have to build your own algorithms on the clientside to determine how best to render these options.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Enum</li>
+<li><strong>Schema Type:</strong> Enum</li>
+<li><strong>Type:</strong> integer</li>
 <li><strong>Format:</strong> int32</li>
 </ul>
 <h2>Enum Values</h2>
@@ -104,7 +105,7 @@
 <tr>
 <td>Fraction</td>
 <td>1</td>
-<td>Show the number as a fractional value.  For this to make sense, the value being displayed should have a comparable upper bound, like the progress to the next level of a Progression.</td>
+<td>Show the number as a fractional value.  For this to make sense, the value being displayedshould have a comparable upper bound, like the progress to the next level of a Progression.</td>
 </tr>
 <tr>
 <td>Checkbox</td>
@@ -114,17 +115,17 @@
 <tr>
 <td>Percentage</td>
 <td>3</td>
-<td>Show the number as a percentage.  For this to make sense, the value being displayed should have a comparable upper bound, like the progress to the next level of a Progression.</td>
+<td>Show the number as a percentage.  For this to make sense, the value being displayedshould have a comparable upper bound, like the progress to the next level of a Progression.</td>
 </tr>
 <tr>
 <td>DateTime</td>
 <td>4</td>
-<td>Show the number as a date and time.  The number will be the number of seconds since the Unix Epoch (January 1st, 1970 at midnight UTC).  It'll be up to you to convert this into a date and time format understandable to the user in their time zone.</td>
+<td>Show the number as a date and time.  The number will be the number of seconds sincethe Unix Epoch (January 1st, 1970 at midnight UTC).  It'll be up to you to convertthis into a date and time format understandable to the user in their time zone.</td>
 </tr>
 <tr>
 <td>FractionFloat</td>
 <td>5</td>
-<td>Show the number as a floating point value that represents a fraction, where 0 is min and 1 is max. For this to make sense, the value being displayed should have a comparable upper bound, like the progress to the next level of a Progression.</td>
+<td>Show the number as a floating point value that represents a fraction, where 0 is min and 1 is max.For this to make sense, the value being displayedshould have a comparable upper bound, like the progress to the next level of a Progression.</td>
 </tr>
 <tr>
 <td>Integer</td>
@@ -139,7 +140,7 @@
 <tr>
 <td>Hidden</td>
 <td>8</td>
-<td>Don't bother showing the value at all, it's not easily human-interpretable, and used for some internal purpose.</td>
+<td>Don't bother showing the value at all, it's not easily human-interpretable, and usedfor some internal purpose.</td>
 </tr>
 </tbody>
 </table>

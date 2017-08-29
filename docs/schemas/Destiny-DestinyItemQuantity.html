@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-DestinyItemQuantity/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-DestinyItemQuantity.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Used in a number of Destiny contracts to return data about an item stack and its quantity. Can optionally return an itemInstanceId if the item is instanced - in which case, the quantity returned will be 1.  If it's not... uh, let me know okay?  Thanks.</p>
+<p>Used in a number of Destiny contracts to return data about an item stack and its quantity.Can optionally return an itemInstanceId if the item is instanced - in which case, the quantity returnedwill be 1.  If it's not... uh, let me know okay?  Thanks.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,7 +104,7 @@
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64:nullable</td>
-<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.</td>
+<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID.Normally, this will be null.</td>
 </tr>
 <tr>
 <td>quantity</td>

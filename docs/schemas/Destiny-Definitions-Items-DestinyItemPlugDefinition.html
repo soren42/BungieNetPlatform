@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Items-DestinyItemPlugDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Items-DestinyItemPlugDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If an item is a Plug, its DestinyInventoryItemDefinition.plug property will be populated with an instance of one of these bad boys.<br/><br/>This gives information about when it can be inserted, what the plug's category is (and thus whether it is compatible with a socket... see DestinySocketTypeDefinition for information about Plug Categories and socket compatibility), whether it is enabled and other Plug info.</p>
+<p>If an item is a Plug, its DestinyInventoryItemDefinition.plug property will be populatedwith an instance of one of these bad boys. This gives information about when it can be inserted, what the plug's categoryis (and thus whether it is compatible with a socket... see DestinySocketTypeDefinitionfor information about Plug Categories and socket compatibility), whether it is enabledand other Plug info.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,17 +99,17 @@
 <tr>
 <td>insertionRules</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>:Definition[]</td>
-<td>The rules around when this plug can be inserted into a socket, aside from the socket's individual restrictions.<br/><br/>The live data DestinyItemPlugComponent.insertFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.</td>
+<td>The rules around when this plug can be inserted into a socket, asidefrom the socket's individual restrictions. The live data DestinyItemPlugComponent.insertFailIndexes will be an index intothis array, so you can pull out the failure strings appropriate for the user.</td>
 </tr>
 <tr>
 <td>plugCategoryIdentifier</td>
 <td>string</td>
-<td>The string identifier for the plug's category.  Use the socket's DestinySocketTypeDefinition.plugWhitelist to determine whether this plug can be inserted into the socket.</td>
+<td>The string identifier for the plug's category.  Use the socket's DestinySocketTypeDefinition.plugWhitelistto determine whether this plug can be inserted into the socket.</td>
 </tr>
 <tr>
 <td>plugCategoryHash</td>
 <td>integer:uint32</td>
-<td>The hash for the plugCategoryIdentifier.  You can use this instead if you wish: I put both in the definition for debugging purposes.</td>
+<td>The hash for the plugCategoryIdentifier.  You can use this instead if you wish: I put both in the definitionfor debugging purposes.</td>
 </tr>
 <tr>
 <td>onActionRecreateSelf</td>
@@ -118,22 +119,22 @@
 <tr>
 <td>insertionMaterialRequirementHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32</td>
-<td>If inserting this plug requires materials, this is the hash identifier for looking up the DestinyMaterialRequirementSetDefinition for those requirements.</td>
+<td>If inserting this plug requires materials, this is the hash identifier for looking up theDestinyMaterialRequirementSetDefinition for those requirements.</td>
 </tr>
 <tr>
 <td>previewItemOverrideHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>In the game, if you're inspecting a plug item directly, this will be the item shown with the plug attached.  Look up the DestinyInventoryItemDefinition for this hash for the item.</td>
+<td>In the game, if you're inspecting a plug item directly, this will be the item shownwith the plug attached.  Look up the DestinyInventoryItemDefinition for this hash for the item.</td>
 </tr>
 <tr>
 <td>enabledMaterialRequirementHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32</td>
-<td>It's not enough for the plug to be inserted.  It has to be enabled as well. For it to be enabled, it may require materials. This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements, if there is one.</td>
+<td>It's not enough for the plug to be inserted.  It has to be enabled as well.For it to be enabled, it may require materials.This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements,if there is one.</td>
 </tr>
 <tr>
 <td>enabledRules</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>:Definition[]</td>
-<td>The rules around whether the plug, once inserted, is enabled and providing its benefits.<br/><br/>The live data DestinyItemPlugComponent.enableFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.</td>
+<td>The rules around whether the plug, once inserted, is enabled and providing its benefits. The live data DestinyItemPlugComponent.enableFailIndexes will be an index intothis array, so you can pull out the failure strings appropriate for the user.</td>
 </tr>
 </tbody>
 </table>

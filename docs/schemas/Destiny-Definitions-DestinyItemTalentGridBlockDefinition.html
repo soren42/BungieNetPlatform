@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemTalentGridBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyItemTalentGridBlockDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This defines information that can only come from a talent grid on an item. Items mostly have negligible talent grid data these days, but instanced items still retain grids as a source for some of this common information.<br/><br/>Builds/Subclasses are the only items left that still have talent grids with meaningful Nodes.</p>
+<p>This defines information that can only come from a talent grid on an item.Items mostly have negligible talent grid data these days, but instanced items still retaingrids as a source for some of this common information. Builds/Subclasses are the only items left that still have talent grids with meaningfulNodes.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,12 +104,12 @@
 <tr>
 <td>itemDetailString</td>
 <td>string</td>
-<td>This is meant to be a subtitle for looking at the talent grid. In practice, somewhat frustratingly, this always merely says the localized word for &quot;Details&quot;.  Great.  Maybe it'll have more if talent grids ever get used for more than builds and subclasses again.</td>
+<td>This is meant to be a subtitle for looking at the talent grid.In practice, somewhat frustratingly, this always merely says the localized wordfor &quot;Details&quot;.  Great.  Maybe it'll have more if talent grids ever get usedfor more than builds and subclasses again.</td>
 </tr>
 <tr>
 <td>buildName</td>
 <td>string</td>
-<td>A shortcut string identifier for the &quot;build&quot; in question, if this talent grid has an associated build.  Doesn't map to anything we can expose at the moment.</td>
+<td>A shortcut string identifier for the &quot;build&quot; in question, if this talent gridhas an associated build.  Doesn't map to anything we can expose at the moment.</td>
 </tr>
 <tr>
 <td>hudDamageType</td>
@@ -118,7 +119,7 @@
 <tr>
 <td>hudIcon</td>
 <td>string</td>
-<td>If the talent grid has a special icon that's shown in the game UI (like builds, funny that), this is the identifier for that icon. Sadly, we don't actually get that icon right now.  I'll be looking to replace this with a path to the actual icon itself.</td>
+<td>If the talent grid has a special icon that's shown in the game UI (like builds, funny that),this is the identifier for that icon.Sadly, we don't actually get that icon right now.  I'll be looking to replace thiswith a path to the actual icon itself.</td>
 </tr>
 </tbody>
 </table>

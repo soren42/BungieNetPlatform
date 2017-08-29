@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Quests-DestinyObjectiveProgress/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Quests-DestinyObjectiveProgress.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Returns data about a character's status with a given Objective. Combine with DestinyObjectiveDefinition static data for display purposes.</p>
+<p>Returns data about a character's status with a given Objective.Combine with DestinyObjectiveDefinition static data for display purposes.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,17 +104,17 @@
 <tr>
 <td>destinationHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
-<td>If the Objective has a Destination associated with it, this is the unique identifier of the Destination being referred to. Use to look up the DestinyDestinationDefinition in static data. This will give localized data about <em>where</em> in the universe the objective should be achieved.</td>
+<td>If the Objective has a Destination associated with it, this is the unique identifier of the Destination being referred to.Use to look up the DestinyDestinationDefinition in static data.This will give localized data about <em>where</em> in the universe the objective should be achieved.</td>
 </tr>
 <tr>
 <td>activityHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
-<td>If the Objective has an Activity associated with it, this is the unique identifier of the Activity being referred to. Use to look up the DestinyActivityDefinition in static data. This will give localized data about <em>what</em> you should be playing for the objective to be achieved.</td>
+<td>If the Objective has an Activity associated with it, this is the unique identifier of the Activity being referred to.Use to look up the DestinyActivityDefinition in static data.This will give localized data about <em>what</em> you should be playing for the objective to be achieved.</td>
 </tr>
 <tr>
 <td>progress</td>
 <td>integer:int32:nullable</td>
-<td>If progress has been made, and the progress can be measured numerically, this will be the value of that progress. You can compare it to the DestinyObjectiveDefinition.completionValue property for current vs. upper bounds, and use DestinyObjectiveDefinition.valueStyle to determine how this should be rendered. Note that progress, in Destiny 2, need not be a literal numeric progression.  It could be one of a number of possible values, even a Timestamp.  Always examine DestinyObjectiveDefinition.valueStyle before rendering progress.</td>
+<td>If progress has been made, and the progress can be measured numerically, this will be the value of that progress.You can compare it to the DestinyObjectiveDefinition.completionValue property for current vs. upper bounds,and use DestinyObjectiveDefinition.valueStyle to determine how this should be rendered.Note that progress, in Destiny 2, need not be a literal numeric progression.  It could be one of a number ofpossible values, even a Timestamp.  Always examine DestinyObjectiveDefinition.valueStyle before renderingprogress.</td>
 </tr>
 <tr>
 <td>complete</td>

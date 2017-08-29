@@ -78,12 +78,14 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Characters-DestinyCharacterActivitiesComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Characters-DestinyCharacterActivitiesComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This component holds activity data for a character.  It will tell you about the character's current activity status, as well as activities that are available to the user.</p>
+<p>This component holds activity data for a character.  It will tell you about the character's current activity status,as well as activities that are available to the user.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
+<li><strong>Component Type Dependency:</strong> CharacterActivities</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -108,12 +110,12 @@
 <tr>
 <td>currentActivityHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>If the user is in an activity, this will be the hash of the Activity being played. Note that you must combine this info with currentActivityModeHash to get a real picture of what the user is doing right now.  For instance, PVP &quot;Activities&quot; are just maps: it's the ActivityMode that determines what type of PVP game they're playing.</td>
+<td>If the user is in an activity, this will be the hash of the Activity being played.Note that you must combine this info with currentActivityModeHash to get a real picture of whatthe user is doing right now.  For instance, PVP &quot;Activities&quot; are just maps: it's the ActivityModethat determines what type of PVP game they're playing.</td>
 </tr>
 <tr>
 <td>currentActivityModeHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">DestinyActivityModeDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>If the user is in an activity, this will be the hash of the activity mode being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.</td>
+<td>If the user is in an activity, this will be the hash of the activity mode being played.Combine with currentActivityHash to give a person a full picture of what they're doing right now.</td>
 </tr>
 <tr>
 <td>lastCompletedStoryHash</td>

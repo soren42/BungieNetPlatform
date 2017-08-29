@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Sources-DestinyItemSourceDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Properties of a DestinyInventoryItemDefinition that store all of the information we were able to discern about how the item spawns, and where you can find the item.<br/><br/>Items will have many of these sources, one per level at which it spawns, to try and give more granular data about where items spawn for specific level ranges.</p>
+<p>Properties of a DestinyInventoryItemDefinition that store all of the informationwe were able to discern about how the item spawns, and where you can find the item. Items will have many of these sources, one per level at which it spawns, to tryand give more granular data about where items spawn for specific level ranges.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +99,12 @@
 <tr>
 <td>level</td>
 <td>integer:int32</td>
-<td>The level at which the item spawns.  Essentially the Primary Key for this source data: there will be multiple of these source entries per item that has source data, grouped by the level at which the item spawns.</td>
+<td>The level at which the item spawns.  Essentially the Primary Keyfor this source data: there will be multiple of these source entries per item thathas source data, grouped by the level at which the item spawns.</td>
 </tr>
 <tr>
 <td>minQuality</td>
 <td>integer:int32</td>
-<td>The minimum Quality at which the item spawns for this level.  Examine DestinyInventoryItemDefinition for more information about what Quality means.  Just don't ask Phaedrus about it, he'll never stop talking and you'll have to write a book about it.</td>
+<td>The minimum Quality at which the item spawns for this level.  Examine DestinyInventoryItemDefinitionfor more information about what Quality means.  Just don't ask Phaedrus about it,he'll never stop talking and you'll have to write a book about it.</td>
 </tr>
 <tr>
 <td>maxQuality</td>
@@ -113,12 +114,12 @@
 <tr>
 <td>minLevelRequired</td>
 <td>integer:int32</td>
-<td>The minimum Character Level required for equipping the item when the item spawns at the item level defined on this DestinyItemSourceDefinition, as far as we saw in our processing.</td>
+<td>The minimum Character Level required for equipping the item when the item spawns at the item leveldefined on this DestinyItemSourceDefinition, as far as we saw in our processing.</td>
 </tr>
 <tr>
 <td>maxLevelRequired</td>
 <td>integer:int32</td>
-<td>The maximum Character Level required for equipping the item when the item spawns at the item level defined on this DestinyItemSourceDefinition, as far as we saw in our processing.</td>
+<td>The maximum Character Level required for equipping the item when the item spawns at the item leveldefined on this DestinyItemSourceDefinition, as far as we saw in our processing.</td>
 </tr>
 <tr>
 <td>computedStats</td>

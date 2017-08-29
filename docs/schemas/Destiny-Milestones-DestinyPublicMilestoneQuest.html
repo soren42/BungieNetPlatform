@@ -78,11 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyPublicMilestoneQuest/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyPublicMilestoneQuest.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,17 +98,17 @@
 <tr>
 <td>questItemHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>Quests are defined as Items in content.  As such, this is the hash identifier of the DestinyInventoryItemDefinition that represents this quest.  It will have pointers to all of the steps in the quest, and display information for the quest (title, description, icon etc) Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setData property, and themselves are Items with their own renderable data.</td>
+<td>Quests are defined as Items in content.  As such, this is the hash identifier of the DestinyInventoryItemDefinition that represents this quest.  It will have pointers to all of the stepsin the quest, and display information for the quest (title, description, icon etc)Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setDataproperty, and themselves are Items with their own renderable data.</td>
 </tr>
 <tr>
 <td>activity</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">DestinyPublicMilestoneActivity</a></td>
-<td>A milestone need not have an active activity, but if there is one it will be returned here, along with any variant and additional information.</td>
+<td>A milestone need not have an active activity, but if there is one it will be returned here,along with any variant and additional information.</td>
 </tr>
 <tr>
 <td>challenges</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge">DestinyPublicMilestoneChallenge</a>[]</td>
-<td>For the given quest there could be 0-to-Many challenges: mini quests that you can perform in the course of doing this quest, that may grant you rewards and benefits.</td>
+<td>For the given quest there could be 0-to-Many challenges: mini queststhat you can perform in the course of doing this quest, that may grant you rewards and benefits.</td>
 </tr>
 </tbody>
 </table>

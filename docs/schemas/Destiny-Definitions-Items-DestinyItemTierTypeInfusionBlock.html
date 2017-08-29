@@ -78,11 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,12 +98,12 @@
 <tr>
 <td>baseQualityTransferRatio</td>
 <td>number:float</td>
-<td>The default portion of quality that will transfer from the infuser to the infusee item. (InfuserQuality - InfuseeQuality) * baseQualityTransferRatio = base quality transferred.</td>
+<td>The default portion of quality that will transfer from the infuser to the infusee item.(InfuserQuality - InfuseeQuality) * baseQualityTransferRatio = base quality transferred.</td>
 </tr>
 <tr>
 <td>minimumQualityIncrement</td>
 <td>integer:int32</td>
-<td>As long as InfuserQuality &gt; InfuseeQuality, the amount of quality bestowed is guaranteed to be at least this value, even if the transferRatio would dictate that it should be less. The total amount of quality that ends up in the Infusee cannot exceed the Infuser's quality however (for instance, if you infuse a 300 item with a 301 item and the minimum quality increment is 10, the infused item will not end up with 310 quality)</td>
+<td>As long as InfuserQuality &gt; InfuseeQuality, the amount of quality bestowed is guaranteedto be at least this value, even if the transferRatio would dictate that it should be less.The total amount of quality that ends up in the Infusee cannot exceed the Infuser's quality however(for instance, if you infuse a 300 item with a 301 item and the minimum quality incrementis 10, the infused item will not end up with 310 quality)</td>
 </tr>
 </tbody>
 </table>

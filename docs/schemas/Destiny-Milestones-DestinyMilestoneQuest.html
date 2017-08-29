@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneQuest/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestoneQuest.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If a Milestone has one or more Quests, this will contain the live information for the character's status with one of those quests.</p>
+<p>If a Milestone has one or more Quests, this will contain the live information for the character's status withone of those quests.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,7 +99,7 @@
 <tr>
 <td>questItemHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>Quests are defined as Items in content.  As such, this is the hash identifier of the DestinyInventoryItemDefinition that represents this quest.  It will have pointers to all of the steps in the quest, and display information for the quest (title, description, icon etc) Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setData property, and themselves are Items with their own renderable data.</td>
+<td>Quests are defined as Items in content.  As such, this is the hash identifier of the DestinyInventoryItemDefinition that represents this quest.  It will have pointers to all of the stepsin the quest, and display information for the quest (title, description, icon etc)Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setDataproperty, and themselves are Items with their own renderable data.</td>
 </tr>
 <tr>
 <td>status</td>
@@ -108,12 +109,12 @@
 <tr>
 <td>activity</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">DestinyMilestoneActivity</a></td>
-<td><em>IF</em> the Milestone has an active Activity that can give you greater details about what you need to do, it will be returned here. Remember to associate this with the DestinyMilestoneDefinition's activities to get details about the activity, including what specific quest it is related to if you have multiple quests to choose from.</td>
+<td><em>IF</em> the Milestone has an active Activity that can give you greater detailsabout what you need to do, it will be returned here.Remember to associate this with the DestinyMilestoneDefinition's activitiesto get details about the activity, including what specific quest it is related to if youhave multiple quests to choose from.</td>
 </tr>
 <tr>
 <td>challenges</td>
 <td><a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>[]</td>
-<td>The activities referred to by this quest can have many associated challenges. They are all contained here, with activityHashes so that you can associate them with the specific activity variants in which they can be found. In retrospect, I probably should have put these under the specific Activity Variants, but it's too late to change it now. Theoretically, a quest without Activities can still have Challenges, which is why this is on a higher level than activity/variants, but it probably should have been in both places.  That may come as a later revision.</td>
+<td>The activities referred to by this quest can have many associated challenges.They are all contained here, with activityHashes so that you can associate them withthe specific activity variants in which they can be found.In retrospect, I probably should have put these under the specific Activity Variants,but it's too late to change it now.Theoretically, a quest without Activities can still have Challenges, which is whythis is on a higher level than activity/variants, but it probably should have beenin both places.  That may come as a later revision.</td>
 </tr>
 </tbody>
 </table>

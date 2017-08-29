@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyPublicMilestoneActivity/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A milestone may have one or more conceptual Activities associated with it, and each of those conceptual activities could have a variety of variants, modes, tiers, what-have-you. Our attempts to determine what qualifies as a conceptual activity are, unfortunately, janky.  So if you see missing modes or modes that don't seem appropriate to you, let us know and I'll buy you a beer if we ever meet up in person.</p>
+<p>A milestone may have one or more conceptual Activities associated with it, and each of those conceptualactivities could have a variety of variants, modes, tiers, what-have-you.Our attempts to determine what qualifies as a conceptual activity are, unfortunately, janky.  So ifyou see missing modes or modes that don't seem appropriate to you, let us know and I'll buy you a beerif we ever meet up in person.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,12 +104,12 @@
 <tr>
 <td>modifierHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>The activity may have 0-to-many modifiers: if it does, this will contain the hashes to the DestinyActivityModifierDefinition that defines the modifier being applied.</td>
+<td>The activity may have 0-to-many modifiers: if it does, this will contain the hashesto the DestinyActivityModifierDefinition that defines the modifier being applied.</td>
 </tr>
 <tr>
 <td>variants</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">DestinyPublicMilestoneActivityVariant</a>[]</td>
-<td>Every relevant variation of this conceptual activity, including the conceptual activity itself, have variants defined here.</td>
+<td>Every relevant variation of this conceptual activity, including the conceptual activity itself,have variants defined here.</td>
 </tr>
 </tbody>
 </table>

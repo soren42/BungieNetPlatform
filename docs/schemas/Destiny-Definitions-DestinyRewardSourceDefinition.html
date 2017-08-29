@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyRewardSourceDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyRewardSourceDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a heuristically-determined &quot;item source&quot; according to Bungie.net. These item sources are non-canonical: we apply a combination of special configuration and often-fragile heuristics to attempt to discern whether an item should be part of a given &quot;source,&quot; but we have known cases of false positives and negatives due to our imperfect heuristics.<br/><br/>Still, they provide a decent approximation for people trying to figure out how an item can be obtained. DestinyInventoryItemDefinition refers to sources in the sourceDatas.sourceHashes property for all sources we determined the item could spawn from.<br/><br/>An example in Destiny 1 of a Source would be &quot;Nightfall&quot;.  If an item has the &quot;Nightfall&quot; source associated with it, it's extremely likely that you can earn that item while playing Nightfall, either during play or as an after-completion reward.</p>
+<p>Represents a heuristically-determined &quot;item source&quot; according to Bungie.net.These item sources are non-canonical: we apply a combination of special configurationand often-fragile heuristics to attempt to discern whether an item should be part of a given&quot;source,&quot; but we have known cases of false positives and negatives due to our imperfect heuristics. Still, they provide a decent approximation for people trying to figure out how an item can be obtained.DestinyInventoryItemDefinition refers to sources in the sourceDatas.sourceHashes property for all sourceswe determined the item could spawn from. An example in Destiny 1 of a Source would be &quot;Nightfall&quot;.  If an item has the &quot;Nightfall&quot; source associatedwith it, it's extremely likely that you can earn that item while playing Nightfall, either during playor as an after-completion reward.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> RewardSources</li>
 </ul>
 <h2>Properties</h2>
@@ -104,12 +104,12 @@
 <tr>
 <td>category</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceCategory">DestinyRewardSourceCategory</a>:Enum</td>
-<td>Sources are grouped into categories: common ways that items are provided. I hope to see this expand in Destiny 2 once we have time to generate accurate reward source data.</td>
+<td>Sources are grouped into categories: common ways that items are provided.I hope to see this expand in Destiny 2 once we have time to generate accurate reward source data.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -119,7 +119,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

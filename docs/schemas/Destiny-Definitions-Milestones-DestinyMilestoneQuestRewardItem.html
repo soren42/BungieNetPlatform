@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A subclass of DestinyItemQuantity, that provides not just the item and its quantity but also information that BNet can - at some point - use internally to provide more robust runtime information about the item's qualities.<br/><br/>If you want it, please ask!  We're just out of time to wire it up right now. Or a clever person just may do it with our existing endpoints.</p>
+<p>A subclass of DestinyItemQuantity, that provides not just the item and its quantitybut also information that BNet can - at some point - use internally to providemore robust runtime information about the item's qualities. If you want it, please ask!  We're just out of time to wire it up right now.Or a clever person just may do it with our existing endpoints.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +99,12 @@
 <tr>
 <td>vendorHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
-<td>The quest reward item <em>may</em> be associated with a vendor.  If so, this is that vendor.  Use this hash to look up the DestinyVendorDefinition.</td>
+<td>The quest reward item <em>may</em> be associated with a vendor.  If so,this is that vendor.  Use this hash to look up the DestinyVendorDefinition.</td>
 </tr>
 <tr>
 <td>vendorItemIndex</td>
 <td>integer:int32:nullable</td>
-<td>The quest reward item <em>may</em> be associated with a vendor.  If so, this is the index of the item being sold, which we can use at runtime to find instanced item information for the reward item.</td>
+<td>The quest reward item <em>may</em> be associated with a vendor.  If so,this is the index of the item being sold, which we can use at runtimeto find instanced item information for the reward item.</td>
 </tr>
 <tr>
 <td>itemHash</td>
@@ -113,7 +114,7 @@
 <tr>
 <td>itemInstanceId</td>
 <td>integer:int64:nullable</td>
-<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.</td>
+<td>If this quantity is referring to a specific instance of an item, this will have the item's instance ID.Normally, this will be null.</td>
 </tr>
 <tr>
 <td>quantity</td>

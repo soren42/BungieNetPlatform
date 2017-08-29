@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Responses-DestinyVendorResponse/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Responses-DestinyVendorResponse.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>A response containing all of the components for a vendor.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,29 +98,29 @@
 <tbody>
 <tr>
 <td>vendor</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Vendors-DestinyVendorComponent-">SingleComponentResponse&lt;Destiny.Entities.Vendors.DestinyVendorComponent&gt;</a></td>
-<td>The base properties of the vendor.<br/><br/>COMPONENT TYPE: Vendors</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyVendorComponent">SingleComponentResponse&lt;DestinyVendorComponent&gt;</a></td>
+<td>The base properties of the vendor. COMPONENT TYPE: Vendors</td>
 </tr>
 <tr>
 <td>categories</td>
-<td><a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Vendors-DestinyVendorCategoriesComponent-">SingleComponentResponse&lt;Destiny.Entities.Vendors.DestinyVendorCategoriesComponent&gt;</a></td>
-<td>Categories that the vendor has available, and references to the sales therein.<br/><br/>COMPONENT TYPE: VendorCategories</td>
+<td><a href="../../docs/schemas/SingleComponentResponseOfDestinyVendorCategoriesComponent">SingleComponentResponse&lt;DestinyVendorCategoriesComponent&gt;</a></td>
+<td>Categories that the vendor has available, and references to the sales therein. COMPONENT TYPE: VendorCategories</td>
 </tr>
 <tr>
 <td>sales</td>
-<td><a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Vendors-DestinyVendorSaleItemComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent&gt;</a></td>
-<td>Sales, keyed by the vendorItemIndex of the item being sold.<br/><br/>COMPONENT TYPE: VendorSales</td>
+<td><a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent">DictionaryComponentResponse&lt;int32,DestinyVendorSaleItemComponent&gt;</a></td>
+<td>Sales, keyed by the vendorItemIndex of the item being sold. COMPONENT TYPE: VendorSales</td>
 </tr>
 <tr>
 <td>items</td>
-<td><a href="../../docs/schemas/DestinyItemComponentSet-int32-">DestinyItemComponentSet&lt;int32&gt;</a></td>
-<td>Item components, keyed by the vendorItemIndex of the active sale items.<br/><br/>COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]</td>
+<td><a href="../../docs/schemas/DestinyItemComponentSetOfint32">DestinyItemComponentSet&lt;int32&gt;</a></td>
+<td>Item components, keyed by the vendorItemIndex of the active sale items. COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Vendors-DestinyVendorComponent-">SingleComponentResponse&lt;Destiny.Entities.Vendors.DestinyVendorComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyVendorComponent">SingleComponentResponse&lt;DestinyVendorComponent&gt;</a>
     "vendor": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorComponent">DestinyVendorComponent</a>
         "data": {
@@ -167,7 +168,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/SingleComponentResponse-Destiny-Entities-Vendors-DestinyVendorCategoriesComponent-">SingleComponentResponse&lt;Destiny.Entities.Vendors.DestinyVendorCategoriesComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/SingleComponentResponseOfDestinyVendorCategoriesComponent">SingleComponentResponse&lt;DestinyVendorCategoriesComponent&gt;</a>
     "categories": {
         // Type: <a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorCategoriesComponent">DestinyVendorCategoriesComponent</a>
         "data": {
@@ -188,7 +189,7 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Vendors-DestinyVendorSaleItemComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Vendors.DestinyVendorSaleItemComponent&gt;</a>
+    // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent">DictionaryComponentResponse&lt;int32,DestinyVendorSaleItemComponent&gt;</a>
     "sales": {
         // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">DestinyVendorSaleItemComponent</a>&gt;
         "data": {
@@ -236,9 +237,9 @@
         // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
         "privacy": 0
     },
-    // Type: <a href="../../docs/schemas/DestinyItemComponentSet-int32-">DestinyItemComponentSet&lt;int32&gt;</a>
+    // Type: <a href="../../docs/schemas/DestinyItemComponentSetOfint32">DestinyItemComponentSet&lt;int32&gt;</a>
     "items": {
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemInstanceComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemInstanceComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent">DictionaryComponentResponse&lt;int32,DestinyItemInstanceComponent&gt;</a>
         "instances": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>&gt;
             "data": {
@@ -278,7 +279,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemObjectivesComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemObjectivesComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent">DictionaryComponentResponse&lt;int32,DestinyItemObjectivesComponent&gt;</a>
         "objectives": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">DestinyItemObjectivesComponent</a>&gt;
             "data": {
@@ -304,7 +305,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemPerksComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemPerksComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemPerksComponent">DictionaryComponentResponse&lt;int32,DestinyItemPerksComponent&gt;</a>
         "perks": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemPerksComponent">DestinyItemPerksComponent</a>&gt;
             "data": {
@@ -328,7 +329,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemRenderComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemRenderComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemRenderComponent">DictionaryComponentResponse&lt;int32,DestinyItemRenderComponent&gt;</a>
         "renderData": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemRenderComponent">DestinyItemRenderComponent</a>&gt;
             "data": {
@@ -344,7 +345,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemStatsComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemStatsComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemStatsComponent">DictionaryComponentResponse&lt;int32,DestinyItemStatsComponent&gt;</a>
         "stats": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemStatsComponent">DestinyItemStatsComponent</a>&gt;
             "data": {
@@ -365,7 +366,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemSocketsComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemSocketsComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent">DictionaryComponentResponse&lt;int32,DestinyItemSocketsComponent&gt;</a>
         "sockets": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketsComponent">DestinyItemSocketsComponent</a>&gt;
             "data": {
@@ -395,7 +396,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-int32-Destiny-Entities-Items-DestinyItemTalentGridComponent-">DictionaryComponentResponse&lt;int32,Destiny.Entities.Items.DestinyItemTalentGridComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent">DictionaryComponentResponse&lt;int32,DestinyItemTalentGridComponent&gt;</a>
         "talentGrids": {
             // Type: Dictionary&lt;integer:int32,<a href="../../docs/schemas/Destiny-Entities-Items-DestinyItemTalentGridComponent">DestinyItemTalentGridComponent</a>&gt;
             "data": {
@@ -497,7 +498,7 @@
             // Type: <a href="../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
             "privacy": 0
         },
-        // Type: <a href="../../docs/schemas/DictionaryComponentResponse-uint32-Destiny-Components-Items-DestinyItemPlugComponent-">DictionaryComponentResponse&lt;uint32,Destiny.Components.Items.DestinyItemPlugComponent&gt;</a>
+        // Type: <a href="../../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent">DictionaryComponentResponse&lt;uint32,DestinyItemPlugComponent&gt;</a>
         "plugStates": {
             // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Components-Items-DestinyItemPlugComponent">DestinyItemPlugComponent</a>&gt;
             "data": {

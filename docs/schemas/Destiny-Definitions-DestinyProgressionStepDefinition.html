@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyProgressionStepDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyProgressionStepDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinition for caveats).</p>
+<p>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinitionfor caveats).</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,17 +99,17 @@
 <tr>
 <td>stepName</td>
 <td>string</td>
-<td>Very rarely, Progressions will have localized text describing the Level of the progression. This will be that localized text, if it exists.  Otherwise, the standard appears to be to simply show the level numerically.</td>
+<td>Very rarely, Progressions will have localized text describing the Level of the progression.This will be that localized text, if it exists.  Otherwise, the standard appears to beto simply show the level numerically.</td>
 </tr>
 <tr>
 <td>displayEffectType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyProgressionStepDisplayEffect">DestinyProgressionStepDisplayEffect</a>:Enum</td>
-<td>This appears to be, when you &quot;level up&quot;, whether a visual effect will display and on what entity. See DestinyProgressionStepDisplayEffect for slightly more info.</td>
+<td>This appears to be, when you &quot;level up&quot;, whether a visual effect will display and on what entity.See DestinyProgressionStepDisplayEffect for slightly more info.</td>
 </tr>
 <tr>
 <td>progressTotal</td>
 <td>integer:int32</td>
-<td>The total amount of progression points/&quot;experience&quot; you will need to initially reach this step. If this is the last step and the progression is repeating indefinitely (DestinyProgressionDefinition.repeatLastStep), this will also be the progress needed to level it up further by repeating this step again.</td>
+<td>The total amount of progression points/&quot;experience&quot; you will need to initially reach this step.If this is the last step and the progression is repeating indefinitely (DestinyProgressionDefinition.repeatLastStep),this will also be the progress needed to level it up further by repeating this step again.</td>
 </tr>
 <tr>
 <td>rewardItems</td>

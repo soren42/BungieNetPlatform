@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyClassDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyClassDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines a Character Class in Destiny 2.  These are types of characters you can play, like Titan, Warlock, and Hunter.</p>
+<p>Defines a Character Class in Destiny 2.  These are types of characters you can play, likeTitan, Warlock, and Hunter.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> Classes</li>
 </ul>
 <h2>Properties</h2>
@@ -99,7 +99,7 @@
 <tr>
 <td>classType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>:Enum</td>
-<td>In Destiny 1, we added a convenience Enumeration for referring to classes.  We've kept it, though mostly for posterity.  This is the enum value for this definition's class.</td>
+<td>In Destiny 1, we added a convenience Enumeration for referring to classes.  We've kept it,though mostly for posterity.  This is the enum value for this definition's class.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
@@ -109,7 +109,7 @@
 <tr>
 <td>genderedClassNames</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum,string&gt;</td>
-<td>A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.</td>
+<td>A localized string referring to the singular form of the Class's name when referred to in gendered form.Keyed by the DestinyGender.</td>
 </tr>
 <tr>
 <td>mentorVendorHash</td>
@@ -119,7 +119,7 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -129,7 +129,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

@@ -78,11 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GroupsV2-GroupResponse/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/GroupsV2-GroupResponse.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -127,12 +128,12 @@
 <tr>
 <td>currentUserMemberMap</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum,<a href="../../docs/schemas/GroupsV2-GroupMember">GroupMember</a>&gt;</td>
-<td>This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once.  As such, this returns the highest member type available.</td>
+<td>This property will be populated if the authenticated user is a member of the group. Note that because ofaccount linking, a user can sometimes be part of a clan more than once.  As such, this returns thehighest member type available.</td>
 </tr>
 <tr>
 <td>currentUserPotentialMemberMap</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum,<a href="../../docs/schemas/GroupsV2-GroupPotentialMember">GroupPotentialMember</a>&gt;</td>
-<td>This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join. Note that because of account linking, a user can sometimes be part of a clan more than once.</td>
+<td>This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join.Note that because of account linking, a user can sometimes be part of a clan more than once.</td>
 </tr>
 </tbody>
 </table>

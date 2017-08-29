@@ -78,12 +78,14 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Vendors-DestinyVendorComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Vendors-DestinyVendorComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>This component contains essential/summary information about the vendor.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
+<li><strong>Component Type Dependency:</strong> Vendors</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,7 +105,7 @@
 <tr>
 <td>ackState</td>
 <td><a href="../../docs/schemas/User-AckState">AckState</a></td>
-<td>Long ago, we thought it would be a good idea to have special UI that showed whether or not you've seen a Vendor's inventory after cycling.  <br/><br/>For now, we don't have that UI anymore.  This property still exists for historical purposes.  Don't worry about it.</td>
+<td>Long ago, we thought it would be a good idea to have special UI that showed whether or notyou've seen a Vendor's inventory after cycling. For now, we don't have that UI anymore.  This propertystill exists for historical purposes.  Don't worry about it.</td>
 </tr>
 <tr>
 <td>nextRefreshDate</td>
@@ -113,17 +115,17 @@
 <tr>
 <td>enabled</td>
 <td>boolean</td>
-<td>If True, the Vendor is currently accessible.  <br/><br/>If False, they may not actually be visible in the world at the moment.</td>
+<td>If True, the Vendor is currently accessible. If False, they may not actually be visible in the world at the moment.</td>
 </tr>
 <tr>
 <td>canPurchase</td>
 <td>boolean</td>
-<td>If True, you can purchase from the Vendor.<br/><br/>Theoretically, Vendors can be restricted from selling items.  In practice, none do that (yet?).</td>
+<td>If True, you can purchase from the Vendor. Theoretically, Vendors can be restricted from selling items.  In practice, none do that (yet?).</td>
 </tr>
 <tr>
 <td>progression</td>
 <td><a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a></td>
-<td>If the Vendor has a related Reputation, this is the Progression data that represents the character's Reputation level with this Vendor.</td>
+<td>If the Vendor has a related Reputation, this is the Progression data that represents the character'sReputation level with this Vendor.</td>
 </tr>
 </tbody>
 </table>

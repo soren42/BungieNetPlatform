@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyPublicMilestoneChallenge/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyPublicMilestoneChallenge.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A Milestone can have many Challenges.  Challenges are just extra Objectives that provide a fun way to mix-up play and provide extra rewards.</p>
+<p>A Milestone can have many Challenges.  Challenges are just extra Objectives that providea fun way to mix-up play and provide extra rewards.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,12 +99,12 @@
 <tr>
 <td>objectiveHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The objective for the Challenge, which should have human-readable data about what needs to be done to accomplish the objective.  Use this hash to look up the DestinyObjectiveDefinition.</td>
+<td>The objective for the Challenge, which should have human-readable data about whatneeds to be done to accomplish the objective.  Use this hash to look up the DestinyObjectiveDefinition.</td>
 </tr>
 <tr>
 <td>activityHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
-<td>IF the Objective is related to a specific Activity, this will be that activity's hash. Use it to look up the DestinyActivityDefinition for additional data to show.</td>
+<td>IF the Objective is related to a specific Activity, this will be that activity's hash.Use it to look up the DestinyActivityDefinition for additional data to show.</td>
 </tr>
 </tbody>
 </table>

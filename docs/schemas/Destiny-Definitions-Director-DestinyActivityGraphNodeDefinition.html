@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This is the position and other data related to nodes in the activity graph that you can click to launch activities.  An Activity Graph node will only have one active Activity at a time, which will determine the activity to be launched (and, unless overrideDisplay information is provided, will also determine the tooltip and other UI related to the node)</p>
+<p>This is the position and other data related to nodes in the activity graph that you can clickto launch activities.  An Activity Graph node will only have one active Activity at a time,which will determine the activity to be launched (and, unless overrideDisplay information is provided,will also determine the tooltip and other UI related to the node)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -113,12 +114,12 @@
 <tr>
 <td>featuringStates</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>:Definition[]</td>
-<td>The node may have various visual accents placed on it, or styles applied.  These are the list of possible styles that the Node can have.  The game iterates through each, looking for the first one that passes a check of the required game/character/account state in order to show that style, and then renders the node in that style.</td>
+<td>The node may have various visual accents placed on it, or styles applied.  These are the list of possible stylesthat the Node can have.  The game iterates through each, looking for the first one that passes a check of the requiredgame/character/account state in order to show that style, and then renders the node in that style.</td>
 </tr>
 <tr>
 <td>activities</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>:Definition[]</td>
-<td>The node may have various possible activities that could be active for it, however only one may be active at a time.  See the DestinyActivityGraphNodeActivityDefinition for details.</td>
+<td>The node may have various possible activities that could be active for it, however only one may be activeat a time.  See the DestinyActivityGraphNodeActivityDefinition for details.</td>
 </tr>
 </tbody>
 </table>

@@ -78,11 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/GroupsV2-GroupFeatures/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/GroupsV2-GroupFeatures.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -102,7 +103,7 @@
 <tr>
 <td>maximumMembershipsOfGroupType</td>
 <td>integer:int32</td>
-<td>Maximum number of groups of this type a typical membership may join. For example, a user may join about 50 General groups with their Bungie.net account.  They may join one clan per Destiny membership.</td>
+<td>Maximum number of groups of this type a typical membership may join. For example,a user may join about 50 General groups with their Bungie.net account.  They mayjoin one clan per Destiny membership.</td>
 </tr>
 <tr>
 <td>capabilities</td>
@@ -117,27 +118,27 @@
 <tr>
 <td>invitePermissionOverride</td>
 <td>boolean</td>
-<td>Minimum Member Level allowed to invite new members to group<br/><br/>Always Allowed: Founder, Acting Founder<br/><br/>True means admins have this power, false means they don't<br/><br/>Default is false for clans, true for groups.</td>
+<td>Minimum Member Level allowed to invite new members to group Always Allowed: Founder, Acting Founder True means admins have this power, false means they don't Default is false for clans, true for groups.</td>
 </tr>
 <tr>
 <td>updateCulturePermissionOverride</td>
 <td>boolean</td>
-<td>Minimum Member Level allowed to update group culture<br/><br/>Always Allowed: Founder, Acting Founder<br/><br/>True means admins have this power, false means they don't<br/><br/>Default is false for clans, true for groups.</td>
+<td>Minimum Member Level allowed to update group culture Always Allowed: Founder, Acting Founder True means admins have this power, false means they don't Default is false for clans, true for groups.</td>
 </tr>
 <tr>
 <td>hostGuidedGamePermissionOverride</td>
 <td><a href="../../docs/schemas/GroupsV2-HostGuidedGamesPermissionLevel">HostGuidedGamesPermissionLevel</a>:Enum</td>
-<td>Minimum Member Level allowed to host guided games<br/><br/>Always Allowed: Founder, Acting Founder, Admin<br/><br/>Allowed Overrides: None, Member, Beginner<br/><br/>Default is Member for clans, None for groups, although this means nothing for groups.</td>
+<td>Minimum Member Level allowed to host guided games Always Allowed: Founder, Acting Founder, Admin Allowed Overrides: None, Member, Beginner Default is Member for clans, None for groups, although this means nothing for groups.</td>
 </tr>
 <tr>
 <td>updateBannerPermissionOverride</td>
 <td>boolean</td>
-<td>Minimum Member Level allowed to update banner<br/><br/>Always Allowed: Founder, Acting Founder<br/><br/>True means admins have this power, false means they don't<br/><br/>Default is false for clans, true for groups.</td>
+<td>Minimum Member Level allowed to update banner Always Allowed: Founder, Acting Founder True means admins have this power, false means they don't Default is false for clans, true for groups.</td>
 </tr>
 <tr>
 <td>joinLevel</td>
 <td><a href="../../docs/schemas/GroupsV2-RuntimeGroupMemberType">RuntimeGroupMemberType</a>:Enum</td>
-<td>Level to join a member at when accepting an invite, application, or joining an open clan<br/><br/>Default is Beginner.</td>
+<td>Level to join a member at when accepting an invite, application, or joining an open clan Default is Beginner.</td>
 </tr>
 </tbody>
 </table>

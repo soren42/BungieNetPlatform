@@ -78,12 +78,14 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Characters-DestinyCharacterComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Characters-DestinyCharacterComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This component contains base properties of the character.  You'll probably want to always request this component, but hey you do you.</p>
+<p>This component contains base properties of the character.  You'll probably want to always request this component,but hey you do you.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
+<li><strong>Component Type Dependency:</strong> Characters</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,7 +105,7 @@
 <tr>
 <td>membershipType</td>
 <td><a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum</td>
-<td>membershipType tells you the platform on which the character plays. Examine the BungieMembershipType enumeration for possible values.</td>
+<td>membershipType tells you the platform on which the character plays.Examine the BungieMembershipType enumeration for possible values.</td>
 </tr>
 <tr>
 <td>characterId</td>
@@ -123,17 +125,17 @@
 <tr>
 <td>minutesPlayedTotal</td>
 <td>integer:int64</td>
-<td>If this value is 525,600, then they played Destiny for a year.  Or they're a very dedicated Rent fan. Note that this includes idle time, not just time spent actually in activities shooting things.</td>
+<td>If this value is 525,600, then they played Destiny for a year.  Or they're a very dedicated Rent fan.Note that this includes idle time, not just time spent actually in activities shooting things.</td>
 </tr>
 <tr>
 <td>light</td>
 <td>integer:int32</td>
-<td>The user's calculated &quot;Light Level&quot;.  Light level is an indicator of your power that mostly matters in the end game, once you've reached the maximum character level: it's a level that's dependent on the average Attack/Defense power of your items.</td>
+<td>The user's calculated &quot;Light Level&quot;.  Light level is an indicator of your power that mostly matters inthe end game, once you've reached the maximum character level: it's a level that's dependent on the averageAttack/Defense power of your items.</td>
 </tr>
 <tr>
 <td>stats</td>
 <td>Dictionary&lt;integer:uint32,integer:int32&gt;</td>
-<td>Your character's stats, such as Agility, Resilience, etc... <em>not</em> historical stats.<br/><br/>You'll have to call a different endpoint for those.</td>
+<td>Your character's stats, such as Agility, Resilience, etc... <em>not</em> historical stats. You'll have to call a different endpoint for those.</td>
 </tr>
 <tr>
 <td>raceHash</td>
@@ -153,27 +155,27 @@
 <tr>
 <td>raceType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>:Enum</td>
-<td>Mostly for historical purposes at this point, this is an enumeration for the character's race.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.</td>
+<td>Mostly for historical purposes at this point, this is an enumeration for the character's race. It'll be preferable in the general case to look up the related definition: but for some people thiswas too convenient to remove.</td>
 </tr>
 <tr>
 <td>classType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>:Enum</td>
-<td>Mostly for historical purposes at this point, this is an enumeration for the character's class.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.</td>
+<td>Mostly for historical purposes at this point, this is an enumeration for the character's class. It'll be preferable in the general case to look up the related definition: but for some people thiswas too convenient to remove.</td>
 </tr>
 <tr>
 <td>genderType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum</td>
-<td>Mostly for historical purposes at this point, this is an enumeration for the character's Gender.<br/><br/>It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.  And yeah, it's an enumeration and not a boolean.  Fight me.</td>
+<td>Mostly for historical purposes at this point, this is an enumeration for the character's Gender. It'll be preferable in the general case to look up the related definition: but for some people thiswas too convenient to remove.  And yeah, it's an enumeration and not a boolean.  Fight me.</td>
 </tr>
 <tr>
 <td>emblemPath</td>
 <td>string</td>
-<td>A shortcut path to the user's currently equipped emblem image.  If you're just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition.</td>
+<td>A shortcut path to the user's currently equipped emblem image.  If you're just showing summaryinfo for a user, this is more convenient than examining their equipped emblem and looking up the definition.</td>
 </tr>
 <tr>
 <td>emblemBackgroundPath</td>
 <td>string</td>
-<td>A shortcut path to the user's currently equipped emblem background image.  If you're just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition.</td>
+<td>A shortcut path to the user's currently equipped emblem background image.  If you're just showing summaryinfo for a user, this is more convenient than examining their equipped emblem and looking up the definition.</td>
 </tr>
 <tr>
 <td>emblemHash</td>
@@ -183,7 +185,7 @@
 <tr>
 <td>levelProgression</td>
 <td><a href="../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a></td>
-<td>The progression that indicates your character's level.  Not their light level, but their character level: you know, the thing you max out a couple hours in and then ignore for the sake of light level.</td>
+<td>The progression that indicates your character's level.  Not their light level, but theircharacter level: you know, the thing you max out a couple hours in and then ignore forthe sake of light level.</td>
 </tr>
 <tr>
 <td>baseCharacterLevel</td>
@@ -193,7 +195,7 @@
 <tr>
 <td>percentToNextLevel</td>
 <td>number:float</td>
-<td>A number between 0 and 100, indicating the whole and fractional % remaining to get to the next character level.</td>
+<td>A number between 0 and 100, indicating the whole and fractional % remaining to get tothe next character level.</td>
 </tr>
 </tbody>
 </table>

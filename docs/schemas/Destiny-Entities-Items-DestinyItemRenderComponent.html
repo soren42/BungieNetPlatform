@@ -78,12 +78,14 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemRenderComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Items-DestinyItemRenderComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Many items can be rendered in 3D.  When you request this block, you will obtain the custom data needed to render this specific instance of the item.</p>
+<p>Many items can be rendered in 3D.  When you request this block, you will obtainthe custom data needed to render this specific instance of the item.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
+<li><strong>Component Type Dependency:</strong> ItemRenderData</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,7 +105,7 @@
 <tr>
 <td>artRegions</td>
 <td>Dictionary&lt;integer:int32,integer:int32&gt;</td>
-<td>A dictionary for rendering gear components, with:<br/><br/>key = Art Arrangement Region Index<br/><br/>value = The chosen Arrangement Index for the Region, based on the value of a stat on the item used for making the choice.</td>
+<td>A dictionary for rendering gear components, with: key = Art Arrangement Region Index value = The chosen Arrangement Index for the Region, based on the value of a stat on the item used for making the choice.</td>
 </tr>
 </tbody>
 </table>

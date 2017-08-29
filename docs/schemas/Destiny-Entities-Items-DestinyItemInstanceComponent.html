@@ -78,12 +78,14 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemInstanceComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>If an item is &quot;instanced&quot;, this will contain information about the item's instance that doesn't fit easily into other components.  One might say this is the &quot;essential&quot; instance data for the item.<br/><br/>Items are instanced if they require information or state that can vary.  For instance, weapons are Instanced: they are given a unique identifier, uniquely generated stats, and can have their properties altered.  Non-instanced items have none of these things: for instance, Glimmer has no unique properties aside from how much of it you own.<br/><br/>You can tell from an item's definition whether it will be instanced or not by looking at the DestinyInventoryItemDefinition's definition.inventory.isInstanceItem property.</p>
+<p>If an item is &quot;instanced&quot;, this will contain information about the item's instance that doesn't fit easilyinto other components.  One might say this is the &quot;essential&quot; instance data for the item. Items are instanced if they require information or state that can vary.  For instance, weapons are Instanced:they are given a unique identifier, uniquely generated stats, and can have their properties altered.  Non-instanceditems have none of these things: for instance, Glimmer has no unique properties aside from how much of it you own. You can tell from an item's definition whether it will be instanced or not by looking at the DestinyInventoryItemDefinition'sdefinition.inventory.isInstanceItem property.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
+<li><strong>Component Type Dependency:</strong> ItemInstances</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -108,7 +110,7 @@
 <tr>
 <td>primaryStat</td>
 <td><a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a></td>
-<td>The item stat that we consider to be &quot;primary&quot; for the item.  For instance, this would be &quot;Attack&quot; for Weapons or &quot;Defense&quot; for armor.</td>
+<td>The item stat that we consider to be &quot;primary&quot; for the item.  For instance, this would be &quot;Attack&quot; forWeapons or &quot;Defense&quot; for armor.</td>
 </tr>
 <tr>
 <td>itemLevel</td>
@@ -128,7 +130,7 @@
 <tr>
 <td>canEquip</td>
 <td>boolean</td>
-<td>If this is an equippable item, you can check it here.  There are permanent as well as transitory reasons why an item might not be able to be equipped: check cannotEquipReason for details.</td>
+<td>If this is an equippable item, you can check it here.  There are permanent as well as transitory reasonswhy an item might not be able to be equipped: check cannotEquipReason for details.</td>
 </tr>
 <tr>
 <td>equipRequiredLevel</td>
@@ -138,12 +140,12 @@
 <tr>
 <td>unlockHashesRequiredToEquip</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>Sometimes, there are limitations to equipping that are represented by character-level flags called &quot;unlocks&quot;.<br/><br/>This is a list of flags that they need in order to equip the item that the character has not met. Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.</td>
+<td>Sometimes, there are limitations to equipping that are represented by character-level flags called &quot;unlocks&quot;. This is a list of flags that they need in order to equip the item that the character has not met.Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.</td>
 </tr>
 <tr>
 <td>cannotEquipReason</td>
 <td><a href="../../docs/schemas/Destiny-EquipFailureReason">EquipFailureReason</a>:Enum</td>
-<td>If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip the item.  You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.</td>
+<td>If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equipthe item.  You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.</td>
 </tr>
 </tbody>
 </table>

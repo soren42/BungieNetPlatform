@@ -78,7 +78,7 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny2-GetLeaderboards/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/services/Destiny2/Destiny2-GetLeaderboards.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
 <p>Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus.  PREVIEW: This endpoint has not yet been implemented.  It is being returned for a preview of future functionality, and for public comment/suggestion/preparation.</p>
 <ul>
@@ -152,10 +152,88 @@
 <h3>Response</h3>
 <p>PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;string,Dictionary&lt;string,[#/components/schemas/Destiny.HistoricalStats.DestinyLeaderboard]&gt;&gt;
+    // Type: Dictionary&lt;string,Dictionary&lt;string,<a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyLeaderboard">DestinyLeaderboard</a>&gt;&gt;
     "Response": {
         "{string}": {
-            "{string}": null
+            "{string}": {
+                // Type: string
+                "statId": "",
+                // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyLeaderboardEntry">DestinyLeaderboardEntry</a>[]
+                "entries": [
+                   // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyLeaderboardEntry">DestinyLeaderboardEntry</a>
+                    {
+                        // Type: integer:int32
+                        "rank": 0,
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyPlayer">DestinyPlayer</a>
+                        "player": {
+                            // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
+                            "destinyUserInfo": {
+                                // Type: string
+                                "supplementalDisplayName": "",
+                                // Type: string
+                                "iconPath": "",
+                                // Type: <a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
+                                "membershipType": 0,
+                                // Type: integer:int64
+                                "membershipId": 0,
+                                // Type: string
+                                "displayName": ""
+                            },
+                            // Type: string
+                            "characterClass": "",
+                            // Type: integer:int32
+                            "characterLevel": 0,
+                            // Type: integer:int32
+                            "lightLevel": 0,
+                            // Type: <a href="../../../docs/schemas/User-UserInfoCard">UserInfoCard</a>
+                            "bungieNetUserInfo": {
+                                // Type: string
+                                "supplementalDisplayName": "",
+                                // Type: string
+                                "iconPath": "",
+                                // Type: <a href="../../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
+                                "membershipType": 0,
+                                // Type: integer:int64
+                                "membershipId": 0,
+                                // Type: string
+                                "displayName": ""
+                            },
+                            // Type: string
+                            "clanName": "",
+                            // Type: string
+                            "clanTag": ""
+                        },
+                        // Type: integer:int64
+                        "characterId": 0,
+                        // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValue">DestinyHistoricalStatsValue</a>
+                        "value": {
+                            // Type: string
+                            "statId": "",
+                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
+                            "basic": {
+                                // Type: number:double
+                                "value": 0,
+                                // Type: string
+                                "displayValue": ""
+                            },
+                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
+                            "pga": {
+                                // Type: number:double
+                                "value": 0,
+                                // Type: string
+                                "displayValue": ""
+                            },
+                            // Type: <a href="../../../docs/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsValuePair">DestinyHistoricalStatsValuePair</a>
+                            "weighted": {
+                                // Type: number:double
+                                "value": 0,
+                                // Type: string
+                                "displayValue": ""
+                            }
+                        }
+                    }
+                ]
+            }
         }
     },
     // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum

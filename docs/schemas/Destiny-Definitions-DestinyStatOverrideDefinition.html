@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyStatOverrideDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyStatOverrideDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized text associated with stats that are to be shown on the items with which they are associated.<br/><br/>This defines a specific overridden stat.  You could theoretically check these before rendering your stat UI, and for each stat that has an override show these displayProperties instead of those on the DestinyStatDefinition.<br/><br/>Or you could be like us, and skip that for now because the game has yet to actually use this feature.  But know that it's here, waiting for a resilliant young designer to take up the mantle and make us all look foolish by showing the wrong name for stats.<br/><br/>Note that, if this gets used, the override will apply only to items using the overriding Stat Group.  Other items will still show the default stat's name/description.</p>
+<p>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized textassociated with stats that are to be shown on the items with which they are associated. This defines a specific overridden stat.  You could theoretically check these beforerendering your stat UI, and for each stat that has an override show these displayPropertiesinstead of those on the DestinyStatDefinition. Or you could be like us, and skip that for now because the game has yet to actuallyuse this feature.  But know that it's here, waiting for a resilliant young designer totake up the mantle and make us all look foolish by showing the wrong name for stats. Note that, if this gets used, the override will apply only to items using the overridingStat Group.  Other items will still show the default stat's name/description.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">

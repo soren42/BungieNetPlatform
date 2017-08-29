@@ -78,12 +78,14 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemObjectivesComponent/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Items can have objectives and progression.  When you request this block, you will obtain information about any Objectives and progression tied to this item.</p>
+<p>Items can have objectives and progression.  When you request this block, you will obtaininformation about any Objectives and progression tied to this item.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
+<li><strong>Component Type Dependency:</strong> ItemObjectives</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,7 +100,7 @@
 <tr>
 <td>objectives</td>
 <td><a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]</td>
-<td>If the item has a hard association with objectives, your progress on them will be defined here.  <br/><br/>Objectives are our standard way to describe a series of tasks that have to be completed for a reward.</td>
+<td>If the item has a hard association with objectives, your progress on themwill be defined here. Objectives are our standard way to describe a series of tasks that have to be completed for a reward.</td>
 </tr>
 </tbody>
 </table>

@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The actual activity to be redirected to when you click on the node. Note that a node can have many Activities attached to it: but only one will be active at any given time.  The list of Node Activities will be traversed, and the first one found to be active will be displayed.  This way, a node can layer multiple variants of an activity on top of each other. For instance, one node can control the weekly Crucible Playlist.  There are multiple possible playlists, but only one is active for the week.</p>
+<p>The actual activity to be redirected to when you click on the node.Note that a node can have many Activities attached to it: but only one will be active at anygiven time.  The list of Node Activities will be traversed, and the first one found to be activewill be displayed.  This way, a node can layer multiple variants of an activity on top of each other.For instance, one node can control the weekly Crucible Playlist.  There are multiple possible playlists,but only one is active for the week.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -103,7 +104,7 @@
 <tr>
 <td>activityHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The activity that will be activated if the user clicks on this node.  Controls all activity-related information displayed on the node if it is active (the text shown in the tooltip etc)</td>
+<td>The activity that will be activated if the user clicks on this node.  Controls all activity-relatedinformation displayed on the node if it is active (the text shown in the tooltip etc)</td>
 </tr>
 </tbody>
 </table>

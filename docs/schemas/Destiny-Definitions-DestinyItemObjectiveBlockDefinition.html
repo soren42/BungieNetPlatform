@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyItemObjectiveBlockDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>An item can have objectives on it.  In practice, these are the exclusive purview of &quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest.<br/><br/>Quest steps have 1:M objectives that we end up processing and returning in live data as DestinyQuestStatus data, and other useful information.</p>
+<p>An item can have objectives on it.  In practice, these are the exclusive purview of&quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest. Quest steps have 1:M objectives that we end up processing and returning in live data as DestinyQuestStatusdata, and other useful information.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,17 +99,17 @@
 <tr>
 <td>objectiveHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in the order that they should be rendered.</td>
+<td>The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in theorder that they should be rendered.</td>
 </tr>
 <tr>
 <td>displayActivityHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>For every entry in objectiveHashes, there is a corresponding entry in this array at the same index.  If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index.  Otherwise, it will be invalid (0).</td>
+<td>For every entry in objectiveHashes, there is a corresponding entry in this arrayat the same index.  If the objective is meant to be associated with a specific DestinyActivityDefinition,there will be a valid hash at that index.  Otherwise, it will be invalid (0).</td>
 </tr>
 <tr>
 <td>requireFullObjectiveCompletion</td>
 <td>boolean</td>
-<td>If True, all objectives must be completed for the step to be completed. If False, any one objective can be completed for the step to be completed.</td>
+<td>If True, all objectives must be completed for the step to be completed.If False, any one objective can be completed for the step to be completed.</td>
 </tr>
 <tr>
 <td>questlineItemHash</td>

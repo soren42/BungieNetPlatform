@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestoneRewardEntry/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestoneRewardEntry.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The character-specific data for a milestone's reward entry.  See DestinyMilestoneDefinition for more information about Reward Entries.</p>
+<p>The character-specific data for a milestone's reward entry.  See DestinyMilestoneDefinition formore information about Reward Entries.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,7 +99,7 @@
 <tr>
 <td>rewardEntryHash</td>
 <td>integer:uint32</td>
-<td>The identifier for the reward entry in question.  It is important to look up the related DestinyMilestoneRewardEntryDefinition to get the static details about the reward, which you can do by looking up the milestone's DestinyMilestoneDefinition and examining the DestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data.</td>
+<td>The identifier for the reward entry in question.  It is important to look up the relatedDestinyMilestoneRewardEntryDefinition to get the static details about the reward, whichyou can do by looking up the milestone's DestinyMilestoneDefinition and examining theDestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data.</td>
 </tr>
 <tr>
 <td>earned</td>
@@ -108,7 +109,7 @@
 <tr>
 <td>redeemed</td>
 <td>boolean</td>
-<td>If TRUE, the player has redeemed/picked up/obtained this reward. Feel free to alias this to &quot;gotTheShinyBauble&quot; in your own codebase.</td>
+<td>If TRUE, the player has redeemed/picked up/obtained this reward.Feel free to alias this to &quot;gotTheShinyBauble&quot; in your own codebase.</td>
 </tr>
 </tbody>
 </table>

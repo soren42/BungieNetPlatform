@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone. Even just typing this description, I already regret it.</p>
+<p>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone.Even just typing this description, I already regret it.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,27 +99,27 @@
 <tr>
 <td>questItemHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The item representing this Milestone quest.  Use this hash to look up the DestinyInventoryItemDefinition for the quest to find its steps and human readable data.</td>
+<td>The item representing this Milestone quest.  Use this hash to look up the DestinyInventoryItemDefinitionfor the quest to find its steps and human readable data.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
-<td>The individual quests may have different definitions from the overall milestone: if there's a specific active quest, use these displayProperties instead of that of the overall DestinyMilestoneDefinition.</td>
+<td>The individual quests may have different definitions from the overall milestone: if there's a specific activequest, use these displayProperties instead of that of the overall DestinyMilestoneDefinition.</td>
 </tr>
 <tr>
 <td>overrideImage</td>
 <td>string</td>
-<td>If populated, this image can be shown instead of the generic milestone's image when this quest is live, or it can be used to show a background image for the quest itself that differs from that of the Activity or the Milestone.</td>
+<td>If populated, this image can be shown instead of the generic milestone's image when this quest is live,or it can be used to show a background image for the quest itself that differs from that of the Activityor the Milestone.</td>
 </tr>
 <tr>
 <td>questRewards</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a>:Definition</td>
-<td>The rewards you will get for completing this quest, as best as we could extract them from our data.  Sometimes, it'll be a decent amount of data.  Sometimes, it's going to be sucky.  Sorry.</td>
+<td>The rewards you will get for completing this quest, as best as we could extract them fromour data.  Sometimes, it'll be a decent amount of data.  Sometimes, it's going to be sucky.  Sorry.</td>
 </tr>
 <tr>
 <td>activities</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a>:Definition&gt;</td>
-<td>The full set of all possible &quot;conceptual activities&quot; that are related to this Milestone. Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities. Keyed by the Conceptual Activity Hash.  Use the key to look up DestinyActivityDefinition.</td>
+<td>The full set of all possible &quot;conceptual activities&quot; that are related to this Milestone.Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities.Keyed by the Conceptual Activity Hash.  Use the key to look up DestinyActivityDefinition.</td>
 </tr>
 </tbody>
 </table>

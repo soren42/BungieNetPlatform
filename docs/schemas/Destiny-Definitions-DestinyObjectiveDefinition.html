@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyObjectiveDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyObjectiveDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines an &quot;Objective&quot;.<br/><br/>An objective is a specific task you should accomplish in the game.  These are referred to by:<br/><br/>- Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives)<br/><br/>- Challenges (which are Objectives defined on an DestinyActivityDefintion)<br/><br/>- Milestones (which refer to Objectives that are defined on both Quest Steps and Activities)<br/><br/>- Anything else that the designers decide to do later.<br/><br/>Objectives have progress, a notion of having been Completed, human readable data describing the task to be accomplished, and a lot of optional tack-on data that can enhance the information provided about the task.</p>
+<p>Defines an &quot;Objective&quot;. An objective is a specific task you should accomplish in the game.  These are referred to by: - Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives) - Challenges (which are Objectives defined on an DestinyActivityDefintion) - Milestones (which refer to Objectives that are defined on both Quest Steps and Activities) - Anything else that the designers decide to do later. Objectives have progress, a notion of having been Completed, human readable data describing the taskto be accomplished, and a lot of optional tack-on data that can enhance the information provided aboutthe task.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> Objectives</li>
 </ul>
 <h2>Properties</h2>
@@ -99,17 +99,17 @@
 <tr>
 <td>displayProperties</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
-<td>Ideally, this should tell you what your task is.  I'm not going to lie to you though.  Sometimes this doesn't have useful information at all.  Which sucks, but there's nothing either of us can do about it.</td>
+<td>Ideally, this should tell you what your task is.  I'm not going to lie to you though.  Sometimesthis doesn't have useful information at all.  Which sucks, but there's nothing either of us can doabout it.</td>
 </tr>
 <tr>
 <td>completionValue</td>
 <td>integer:int32</td>
-<td>The value that the unlock value defined in unlockValueHash must reach in order for the objective to be considered Completed.  Used in calculating progress and completion status.</td>
+<td>The value that the unlock value defined in unlockValueHash must reach in order forthe objective to be considered Completed.  Used in calculating progress and completion status.</td>
 </tr>
 <tr>
 <td>locationHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished, if there is a location defined.  Look up the DestinyLocationDefinition for this hash for that additional location info.</td>
+<td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished,if there is a location defined.  Look up the DestinyLocationDefinition for this hash for thatadditional location info.</td>
 </tr>
 <tr>
 <td>allowNegativeValue</td>
@@ -119,17 +119,17 @@
 <tr>
 <td>allowValueChangeWhenCompleted</td>
 <td>boolean</td>
-<td>If true, you can effectively &quot;un-complete&quot; this objective if you lose progress after crossing the completion threshold.  <br/><br/>If False, once you complete the task it will remain completed forever by locking the value.</td>
+<td>If true, you can effectively &quot;un-complete&quot; this objective if you lose progress aftercrossing the completion threshold. If False, once you complete the task it will remaincompleted forever by locking the value.</td>
 </tr>
 <tr>
 <td>isCountingDownward</td>
 <td>boolean</td>
-<td>If true, completion means having an unlock value less than or equal to the completionValue.<br/><br/>If False, completion means having an unlock value greater than or equal to the completionValue.</td>
+<td>If true, completion means having an unlock value less than or equal to the completionValue. If False, completion means having an unlock value greater than or equal to the completionValue.</td>
 </tr>
 <tr>
 <td>valueStyle</td>
 <td><a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a>:Enum</td>
-<td>The UI style applied to the objective.  It's an enum, take a look at DestinyUnlockValueUIStyle for details of the possible styles.  Use this info as you wish to customize your UI.</td>
+<td>The UI style applied to the objective.  It's an enum, take a look at DestinyUnlockValueUIStyle for detailsof the possible styles.  Use this info as you wish to customize your UI.</td>
 </tr>
 <tr>
 <td>progressDescription</td>
@@ -149,7 +149,7 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -159,7 +159,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

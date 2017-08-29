@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Entities-Items-DestinyItemSocketState/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Items-DestinyItemSocketState.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The status of a given item's socket.  (which plug is inserted, if any: whether it is enabled, what &quot;reusable&quot; plugs can be inserted, etc...)</p>
+<p>The status of a given item's socket.  (which plug is inserted, if any: whether it is enabled, what &quot;reusable&quot;plugs can be inserted, etc...)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,22 +99,22 @@
 <tr>
 <td>plugHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
-<td>The currently active plug, if any.<br/><br/>Note that, because all plugs are statically defined, its effect on stats and perks can be statically determined using the plug item's definition.  The stats and perks can be taken at face value on the plug item as the stats and perks it will provide to the user/item.</td>
+<td>The currently active plug, if any. Note that, because all plugs are statically defined, its effect on stats and perks can bestatically determined using the plug item's definition.  The stats and perks can be taken at facevalue on the plug item as the stats and perks it will provide to the user/item.</td>
 </tr>
 <tr>
 <td>isEnabled</td>
 <td>boolean</td>
-<td>Even if a plug is inserted, it doesn't mean it's enabled.<br/><br/>This flag indicates whether the plug is active and providing its benefits.</td>
+<td>Even if a plug is inserted, it doesn't mean it's enabled. This flag indicates whether the plug is active and providing its benefits.</td>
 </tr>
 <tr>
 <td>enableFailIndexes</td>
 <td>integer:int32[]</td>
-<td>If a plug is inserted but not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.</td>
+<td>If a plug is inserted but not enabled, this will be populated with indexes into the plug item definition's plug.enabledRulesproperty, so that you can show the reasons why it is not enabled.</td>
 </tr>
 <tr>
 <td>reusablePlugHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>If the item supports reusable plugs, this is the list of plug item hashes that are currently allowed to be used for this socket.  (sometimes restrictions may cause reusable plugs defined on the item definition to not be valid, so you should trust the instanced reusablePlugHashes list rather than the definition's list)<br/><br/>A Reusable Plug is a plug that you can <em>always</em> insert into this socket, regardless of whether or not you have the plug in your inventory.  In practice, a socket will <em>either</em> have reusable plugs <em>or</em> it will allow for plugs in your inventory to be inserted.  See DestinyInventoryItemDefinition.socket for more info.</td>
+<td>If the item supports reusable plugs, this is the list of plug item hashes that are currentlyallowed to be used for this socket.  (sometimes restrictions may cause reusable plugs defined on the item definition to not be valid, so you should trust the instanced reusablePlugHashes listrather than the definition's list) A Reusable Plug is a plug that you can <em>always</em> insert into this socket, regardless of whether or notyou have the plug in your inventory.  In practice, a socket will <em>either</em> have reusable plugs <em>or</em>it will allow for plugs in your inventory to be inserted.  See DestinyInventoryItemDefinition.socketfor more info.</td>
 </tr>
 </tbody>
 </table>

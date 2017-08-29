@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>These are pre-constructed collections of data that can be used to determine the Level Requirement for an item given a Progression to be tested (such as the Character's level).<br/><br/>For instance, say a character receives a new Auto Rifle, and that Auto Rifle's DestinyInventoryItemDefinition.quality.progressionLevelRequirementHash property is pointing at one of these DestinyProgressionLevelRequirementDefinitions.  Let's pretend also that the progressionHash it is pointing at is the Character Level progression.  In that situation, the character's level will be used to interpolate a value in the requirementCurve property.  The value picked up from that interpolation will be the required level for the item.</p>
+<p>These are pre-constructed collections of data that can be used to determine the Level Requirementfor an item given a Progression to be tested (such as the Character's level). For instance, say a character receives a new Auto Rifle, and that Auto Rifle'sDestinyInventoryItemDefinition.quality.progressionLevelRequirementHash property is pointingat one of these DestinyProgressionLevelRequirementDefinitions.  Let's pretend also that the progressionHashit is pointing at is the Character Level progression.  In that situation, the character's level will be usedto interpolate a value in the requirementCurve property.  The value picked up from that interpolation willbe the required level for the item.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> ProgressionLevelRequirements</li>
 </ul>
 <h2>Properties</h2>
@@ -99,17 +99,17 @@
 <tr>
 <td>requirementCurve</td>
 <td><a href="../../docs/schemas/Interpolation-InterpolationPointFloat">InterpolationPointFloat</a>[]</td>
-<td>A curve of level requirements, weighted by the related progressions' level.<br/><br/>Interpolate against this curve with the character's progression level to determine what the level requirement of the generated item that is using this data will be.</td>
+<td>A curve of level requirements, weighted by the related progressions' level. Interpolate against this curve with the character's progression level to determinewhat the level requirement of the generated item that is using this data will be.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">DestinyProgressionDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The progression whose level should be used to determine the level requirement.<br/><br/>Look up the DestinyProgressionDefinition with this hash for more information about the progression in question.</td>
+<td>The progression whose level should be used to determine the level requirement. Look up the DestinyProgressionDefinition with this hash for more information aboutthe progression in question.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -119,7 +119,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

@@ -78,12 +78,13 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Milestones-DestinyMilestone/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestone.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a runtime instance of a user's milestone status. Live Milestone data should be combined with DestinyMilestoneDefinition data to show the user a picture of what is available for them to do in the game, and their status in regards to said &quot;things to do.&quot; Consider it a big, wonky to-do list, or Advisors 3.0 for those who remember the Destiny 1 API.</p>
+<p>Represents a runtime instance of a user's milestone status.Live Milestone data should be combined with DestinyMilestoneDefinition data to show the usera picture of what is available for them to do in the game, and their status in regards to said &quot;things to do.&quot;Consider it a big, wonky to-do list, or Advisors 3.0 for those who remember the Destiny 1 API.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Class</li>
+<li><strong>Schema Type:</strong> Class</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -98,37 +99,37 @@
 <tr>
 <td>milestoneHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">DestinyMilestoneDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>The unique identifier for the Milestone.  Use it to look up the DestinyMilestoneDefinition, so you can combine the other data in this contract with static definition data.</td>
+<td>The unique identifier for the Milestone.  Use it to look up the DestinyMilestoneDefinition, soyou can combine the other data in this contract with static definition data.</td>
 </tr>
 <tr>
 <td>availableQuests</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>[]</td>
-<td>Indicates what quests are available for this Milestone. Usually this will be only a single Quest, but some quests have multiple available that you can choose from at any given time. All possible quests for a milestone can be found in the DestinyMilestoneDefinition, but they must be combined with this Live data to determine which one(s) are actually active right now. It is possible for Milestones to not have any quests.</td>
+<td>Indicates what quests are available for this Milestone.Usually this will be only a single Quest, but some quests have multiple available that youcan choose from at any given time.All possible quests for a milestone can be found in the DestinyMilestoneDefinition, but they mustbe combined with this Live data to determine which one(s) are actually active right now.It is possible for Milestones to not have any quests.</td>
 </tr>
 <tr>
 <td>values</td>
 <td>Dictionary&lt;string,number:float&gt;</td>
-<td>Milestones may have arbitrary key/value pairs associated with them, for data that users will want to know about but that doesn't fit neatly into any of the common components such as Quests. A good example of this would be - if this existed in Destiny 1 - the number of wins you currently have on your Trials of Osiris ticket. Looking in the DestinyMilestoneDefinition, you can use the string identifier of this dictionary to look up more info about the value, including localized string content for displaying the value.  The value in the dictionary is the floating point number.  The definition will tell you how to format this number.</td>
+<td>Milestones may have arbitrary key/value pairs associated with them, for data that users willwant to know about but that doesn't fit neatly into any of the common components such as Quests.A good example of this would be - if this existed in Destiny 1 - the number of wins you currently haveon your Trials of Osiris ticket.Looking in the DestinyMilestoneDefinition,you can use the string identifier of this dictionary to look up more info about the value, includinglocalized string content for displaying the value.  The value in the dictionary is the floating pointnumber.  The definition will tell you how to format this number.</td>
 </tr>
 <tr>
 <td>vendorHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32[]</td>
-<td>A milestone may have one or more active vendors that are &quot;related&quot; to it (that provide rewards, or that are the initiators of the Milestone).  I already regret this, even as I'm typing it. You see, sometimes a milestone may be directly correlated with a set of vendors that provide varying tiers of rewards.  The player may not be able to interact with one or more of those vendors.  This will return the hashes of the Vendors that the player <em>can</em> interact with, allowing you to show their current inventory as rewards or related items to the Milestone or its activities.</td>
+<td>A milestone may have one or more active vendors that are &quot;related&quot; to it (that provide rewards, or thatare the initiators of the Milestone).  I already regret this, even as I'm typing it.You see, sometimes a milestone may be directly correlated with a set of vendors that provide varying tiersof rewards.  The player may not be able to interact with one or more of those vendors.  This will returnthe hashes of the Vendors that the player <em>can</em> interact with, allowing you to show their current inventoryas rewards or related items to the Milestone or its activities.</td>
 </tr>
 <tr>
 <td>rewards</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>[]</td>
-<td>If the entity to which this component is attached has known active Rewards for the player, this will detail information about those rewards, keyed by the RewardEntry Hash. (See DestinyMilestoneDefinition for more information about Reward Entries) Note that these rewards are not for the Quests related to the Milestone.  Think of these as &quot;overview/checklist&quot; rewards that may be provided for Milestones that may provide rewards for performing a variety of tasks that aren't under a specific Quest.</td>
+<td>If the entity to which this component is attached has known active Rewards for the player, this will detailinformation about those rewards, keyed by the RewardEntry Hash. (See DestinyMilestoneDefinition formore information about Reward Entries)Note that these rewards are not for the Quests related to the Milestone.  Think of these as &quot;overview/checklist&quot;rewards that may be provided for Milestones that may provide rewards for performing a variety of tasks thataren't under a specific Quest.</td>
 </tr>
 <tr>
 <td>startDate</td>
 <td>string:date-time:nullable</td>
-<td>If known, this is the date when the event last began or refreshed.  It will only be populated for events with fixed and repeating start and end dates.</td>
+<td>If known, this is the date when the event last began or refreshed.  It will only be populated for events with fixedand repeating start and end dates.</td>
 </tr>
 <tr>
 <td>endDate</td>
 <td>string:date-time:nullable</td>
-<td>If known, this is the date when the event will next end or repeat.  It will only be populated for events with fixed and repeating start and end dates.</td>
+<td>If known, this is the date when the event will next end or repeat.  It will only be populated for events with fixedand repeating start and end dates.</td>
 </tr>
 </tbody>
 </table>

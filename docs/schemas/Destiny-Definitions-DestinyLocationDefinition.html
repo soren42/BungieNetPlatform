@@ -78,12 +78,12 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki/Destiny-Definitions-DestinyLocationDefinition/_edit" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyLocationDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>A &quot;Location&quot; is a sort of shortcut for referring to a specific combination of Activity, Destination, Place, and even Bubble or NavPoint within a space.<br/><br/>Most of this data isn't intrinsically useful to us, but Objectives refer to locations, and through that we can at least infer the Activity, Destination, and Place being referred to by the Objective.</p>
+<p>A &quot;Location&quot; is a sort of shortcut for referring to a specificcombination of Activity, Destination, Place, and even Bubble or NavPoint withina space. Most of this data isn't intrinsically useful to us, but Objectives refer tolocations, and through that we can at least infer the Activity, Destination, and Placebeing referred to by the Objective.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Definition</li>
 <li><strong>Mobile Manifest:</strong> Locations</li>
 </ul>
 <h2>Properties</h2>
@@ -99,17 +99,17 @@
 <tr>
 <td>vendorHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32</td>
-<td>If the location has a Vendor on it, this is the hash identifier for that Vendor. Look them up with DestinyVendorDefinition.</td>
+<td>If the location has a Vendor on it, this is the hash identifier for that Vendor.Look them up with DestinyVendorDefinition.</td>
 </tr>
 <tr>
 <td>locationReleases</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationReleaseDefinition">DestinyLocationReleaseDefinition</a>:Definition[]</td>
-<td>A Location may refer to different specific spots in the world based on the world's current state. This is a list of those potential spots, and the data we can use at runtime to determine which one of the spots is the currently valid one.</td>
+<td>A Location may refer to different specific spots in the world based on the world's current state.This is a list of those potential spots, and the data we can use at runtime to determinewhich one of the spots is the currently valid one.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally.<br/><br/>When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -119,7 +119,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
 </tr>
 </tbody>
 </table>

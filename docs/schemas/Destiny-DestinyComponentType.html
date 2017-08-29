@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Destiny.DestinyComponentType | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1503802821">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/schemas/Destiny-DestinyComponentType.html | Destiny.DestinyComponentType -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../../">Home</a></li>
+<li><a href="../../docs/Changelog">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="../../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../../docs/API-Details">API Details</a></li>
+<li><a href="../../docs/Manifest">Manifest</a></li>
+<li><a href="../../docs/Authentication">Authentication</a></li>
+<li><a href="../../docs/Past-Authentication">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Endpoints">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Destiny.DestinyComponentType</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-DestinyComponentType.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<h2>Info</h2>
+<h2>Schema</h2>
+<ul>
+<li><strong>Schema Type:</strong> Enum</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Format:</strong> int32</li>
+</ul>
+<h2>Enum Values</h2>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Identifier</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Profiles</td>
+<td>100</td>
+<td>Profiles is the most basic component, only relevant when calling GetProfile.This returns basic information about the profile, which is almost nothing: a listof characterIds, some information about the last time you logged in, and that mostsobering statistic: how long you've played.</td>
+</tr>
+<tr>
+<td>VendorReceipts</td>
+<td>101</td>
+<td>Only applicable for GetProfile, this will return information about receipts for refundablevendor items.</td>
+</tr>
+<tr>
+<td>ProfileInventories</td>
+<td>102</td>
+<td>Asking for this will get you the profile-level inventories, such as your Vault buckets(yeah, the Vault is really inventory buckets located on your Profile)</td>
+</tr>
+<tr>
+<td>ProfileCurrencies</td>
+<td>103</td>
+<td>This will get you a summary of items on your Profile that we consider to be &quot;currencies&quot;,such as Glimmer.  I mean, if there's Glimmer in Destiny 2.  I didn't say there was Glimmer.</td>
+</tr>
+<tr>
+<td>Characters</td>
+<td>200</td>
+<td>This will get you summary info about each of the characters in the profile.</td>
+</tr>
+<tr>
+<td>CharacterInventories</td>
+<td>201</td>
+<td>This will get you information about any non-equipped items on the character or character(s)in question, if you're allowed to see it.  You have to either be authenticated as that user,or that user must allow anonymous viewing of their non-equipped items in Bungie.Net settingsto actually get results.</td>
+</tr>
+<tr>
+<td>CharacterProgressions</td>
+<td>202</td>
+<td>This will get you information about the progression (faction, experience, etc... &quot;levels&quot;)relevant to each character, if you are the currently authenticated user or the user haselected to allow anonymous viewing of its progression info.</td>
+</tr>
+<tr>
+<td>CharacterRenderData</td>
+<td>203</td>
+<td>This will get you just enough information to be able to render the character in 3Dif you have written a 3D rendering library for Destiny Characters, or &quot;borrowed&quot; ours.It's okay, I won't tell anyone if you're using it.  I'm no snitch.(actually, we don't care if you use it - go to town)</td>
+</tr>
+<tr>
+<td>CharacterActivities</td>
+<td>204</td>
+<td>This will return info about activities that a user can see and gating on it, if you are the currently authenticated user or the user haselected to allow anonymous viewing of its progression info.Note that the data returned by this can be unfortunately problematic and relatively unreliable insome cases.  We'll eventually work on making it more consistently reliable.</td>
+</tr>
+<tr>
+<td>CharacterEquipment</td>
+<td>205</td>
+<td>This will return info about the equipped items on the character(s).  Everyone can see this.</td>
+</tr>
+<tr>
+<td>ItemInstances</td>
+<td>300</td>
+<td>This will return basic info about instanced items - whether they can be equipped, theirtracked status, and some info commonly needed in many places (current damage type,primary stat value, etc)</td>
+</tr>
+<tr>
+<td>ItemObjectives</td>
+<td>301</td>
+<td>Items can have Objectives (DestinyObjectiveDefinition) bound to them.  If they do, this willreturn info for items that have such bound objectives.</td>
+</tr>
+<tr>
+<td>ItemPerks</td>
+<td>302</td>
+<td>Items can have perks (DestinyPerkDefinition).  If they do, this will return info forwhat perks are active on items.</td>
+</tr>
+<tr>
+<td>ItemRenderData</td>
+<td>303</td>
+<td>If you just want to render the weapon, this is just enough info to do that rendering.</td>
+</tr>
+<tr>
+<td>ItemStats</td>
+<td>304</td>
+<td>Items can have stats, like rate of fire.  Asking for this component will returnrequested item's stats if they have stats.</td>
+</tr>
+<tr>
+<td>ItemSockets</td>
+<td>305</td>
+<td>Items can have sockets, where plugs can be inserted.  Asking for this component willreturn all info relevant to the sockets on items that have them.</td>
+</tr>
+<tr>
+<td>ItemTalentGrids</td>
+<td>306</td>
+<td>Items can have talent grids, though that matters a lot less frequently than it used to.Asking for this component will return all relevant info about activated Nodes and Stepson this talent grid, like the good ol' days.</td>
+</tr>
+<tr>
+<td>ItemCommonData</td>
+<td>307</td>
+<td>Items that <em>aren't</em> instanced still have important information you need to know:how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition,whether they're locked, etc... Both instanced and non-instanced items will have these properties.</td>
+</tr>
+<tr>
+<td>ItemPlugStates</td>
+<td>308</td>
+<td>Items that are &quot;Plugs&quot; can be inserted into sockets.  This returns statuses about those plugsand why they can/can't be inserted.  I hear you giggling, there's nothing funny about inserting plugs.Get your head out of the gutter and pay attention!</td>
+</tr>
+<tr>
+<td>Vendors</td>
+<td>400</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VendorCategories</td>
+<td>401</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VendorSales</td>
+<td>402</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Kiosks</td>
+<td>500</td>
+<td>Asking for this component will return you the account's Kiosk statuses: that is, what items have been filledout/acquired.  But only if you are the currently authenticated user or the user haselected to allow anonymous viewing of its progression info.</td>
+</tr>
+</tbody>
+</table>
+<h2>References</h2>
+<ol>
+<li><a href="https://bungie-net.github.io/multi/schema_Destiny-DestinyComponentType.html#schema_Destiny-DestinyComponentType">https://bungie-net.github.io/multi/schema_Destiny-DestinyComponentType.html#schema_Destiny-DestinyComponentType</a></li>
+</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../../js/main.js?1458004654"></script>
+</body>
+</html>
