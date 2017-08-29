@@ -4,7 +4,8 @@
 The definition information for a specific socket on an item.This will determine how the socket behaves in-game.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

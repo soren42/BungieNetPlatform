@@ -4,7 +4,8 @@
 The actual activity to be redirected to when you click on the node.Note that a node can have many Activities attached to it: but only one will be active at anygiven time.  The list of Node Activities will be traversed, and the first one found to be activewill be displayed.  This way, a node can layer multiple variants of an activity on top of each other.For instance, one node can control the weekly Crucible Playlist.  There are multiple possible playlists,but only one is active for the week.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

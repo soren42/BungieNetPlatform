@@ -4,7 +4,8 @@
 If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined hereif you care.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

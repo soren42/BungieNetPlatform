@@ -4,7 +4,8 @@
 A Vendor Interaction is a dialog shown by the vendor other than sale items or transfer screens.The vendor is showing you something, and asking you to reply to it by choosing an option or reward.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

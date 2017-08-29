@@ -4,7 +4,8 @@
 Represents the &quot;Live&quot; data that we can obtain about a Character's status with a specific Activity.This will tell you whether the character can participate in the activity, as well as some otherbasic mutable information. Meant to be combined with static DestinyActivityDefinition data for a fullpicture of the Activity.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

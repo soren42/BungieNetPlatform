@@ -4,7 +4,8 @@
 These properties are an attempt to categorize talent node steps by certain common properties.  Seethe related enumerations for the type of properties being categorized.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

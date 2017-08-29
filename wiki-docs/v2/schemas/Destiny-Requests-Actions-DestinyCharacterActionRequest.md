@@ -3,7 +3,7 @@
 ## Info
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
 
 ## Properties
 Name | Type | Description

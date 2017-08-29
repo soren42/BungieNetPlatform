@@ -4,7 +4,8 @@
 The definition of a category of rewards, that contains many individual rewards.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

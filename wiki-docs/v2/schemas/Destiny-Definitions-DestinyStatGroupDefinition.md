@@ -4,7 +4,7 @@
 When an inventory item (DestinyInventoryItemDefinition) has Stats (such as Attack Power),the item will refer to a Stat Group.  This definition enumerates the properties used totransform the item's &quot;Investment&quot; stats into &quot;Display&quot; stats. See DestinyStatDefinition's documentation for information about the transformationof Stats, and the meaning of an Investment vs. a Display stat. If you don't want to do these calculations on your own, fear not: pulling live data fromthe BNet endpoints will return display stat values pre-computed and ready for you to use.I highly recommend this approach, saves a lot of time and also accounts for certain statmodifiers that can't easily be accounted for without live data (such as stat modifiers onTalent Grids and Socket Plugs)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** StatGroups
 
 ## Properties

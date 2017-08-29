@@ -4,7 +4,8 @@
 Defines the conditions under which stat modifications will be applied to a Character whileparticipating in an objective.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

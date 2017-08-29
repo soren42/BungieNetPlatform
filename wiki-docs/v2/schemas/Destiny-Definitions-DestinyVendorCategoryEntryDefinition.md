@@ -4,7 +4,7 @@
 This is the definition for a single Vendor Category, into which Sale Items are grouped.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

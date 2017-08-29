@@ -3,7 +3,8 @@
 ## Info
 
 ## Schema
-* **Type:** Generic
+* **Schema Type:** Generic Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

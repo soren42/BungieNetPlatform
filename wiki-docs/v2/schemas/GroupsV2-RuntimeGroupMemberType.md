@@ -4,7 +4,8 @@
 The member levels used by all V2 Groups API.  Individual group types use their own mappings in theirnative storage (general uses BnetDbGroupMemberType and D2 clans use ClanMemberLevel), but they are all translatedto this in the runtime api.  These runtime values should NEVER be stored anywhere, so the values can be changed as necessary.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

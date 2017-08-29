@@ -4,7 +4,8 @@
 If an item has a related gearset, this is the list of items in that set, and an unlock expressionthat evaluates to a number representing the progress toward gearset completion (a very rare use forunlock expressions!)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

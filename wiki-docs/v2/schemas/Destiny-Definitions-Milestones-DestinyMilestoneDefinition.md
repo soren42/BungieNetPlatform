@@ -4,7 +4,7 @@
 Milestones are an in-game concept where they're attempting to tell you what you can do next in-game. If that sounds a lot like Advisors in Destiny 1, it is!  So we threw out Advisors in the Destiny 2API and tacked all of the data we would have put on Advisors onto Milestones instead. Each Milestone represents something going on in the game right now: - A &quot;ritual activity&quot; you can perform, like nightfall - A &quot;special event&quot; that may have activities related to it, like Taco Tuesday (there's no Taco Tuesday in Destiny 2) - A checklist you can fulfill, like helping your Clan complete all of its weekly objectives - A tutorial quest you can play through, like the introduction to the Crucible. Most of these milestones appear in game as well.  Some of them are BNet only, because we're so extra.  You're welcome.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Milestones
 
 ## Properties

@@ -4,7 +4,8 @@
 This defines information that can only come from a talent grid on an item.Items mostly have negligible talent grid data these days, but instanced items still retaingrids as a source for some of this common information. Builds/Subclasses are the only items left that still have talent grids with meaningfulNodes.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

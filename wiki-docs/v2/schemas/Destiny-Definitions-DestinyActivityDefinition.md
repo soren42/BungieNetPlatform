@@ -4,7 +4,7 @@
 The static data about Activities in Destiny 2. Note that an Activity must be combined with an ActivityMode to know - from a Gameplay perspective -what the user is &quot;Playing&quot;. In most PvE activities, this is fairly straightforward.  A Story Activity can only be played in the StoryActivity Mode. However, in PvP activities, the Activity alone only tells you the map being played, or the Playlist that the userchose to enter.  You'll need to know the Activity Mode they're playing to know that they're playing Mode X on Map Y. Activity Definitions tell a great deal of information about what *could* be relevant to a user: what rewards theycan earn, what challenges could be performed, what modifiers could be applied.  To figure out which of these propertiesis actually live, you'll need to combine the definition with &quot;Live&quot; data from one of the Destiny endpoints. Activities also have Activity Types, but unfortunately in Destiny 2 these are even less reliable of a source ofinformation than they were in Destiny 1.  I will be looking into ways to provide more reliable sources for type informationas time goes on, but for now we're going to have to deal with the limitations.  See DestinyActivityTypeDefinitionfor more information.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Activities
 
 ## Properties

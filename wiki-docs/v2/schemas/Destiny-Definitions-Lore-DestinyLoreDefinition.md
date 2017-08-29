@@ -4,7 +4,7 @@
 These are definitions for in-game &quot;Lore,&quot; meant to be narrative enhancements of the game experience. DestinyInventoryItemDefinitions for interesting items point to these definitions, but nothing's stoppingyou from scraping all of these and doing something cool with them.  If they end up having cool data.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Lore
 
 ## Properties

@@ -4,7 +4,8 @@
 The reasons why an item cannot be equipped, if any.  Many flags can be set, or &quot;None&quot; if
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

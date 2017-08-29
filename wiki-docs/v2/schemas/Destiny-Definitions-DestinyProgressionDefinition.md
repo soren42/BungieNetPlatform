@@ -4,7 +4,7 @@
 A &quot;Progression&quot; in Destiny is best explained by an example. A Character's &quot;Level&quot; is a progression:it has Experience that can be earned, levels that can be gained, and is evaluated and displayed atvarious points in the game.  A Character's &quot;Faction Reputation&quot; is also a progression for much the same reason. Progression is used by a variety of systems, and the definition of a Progression will generally only be useful if combining with live data (such as a character's DestinyCharacterProgressionComponent.progressionsproperty, which holds that character's live Progression states). Fundamentally, a Progression measures your &quot;Level&quot; by evaluating the thresholds in its Steps (one step per level, exceptfor the last step which can be repeated indefinitely for &quot;Levels&quot; that have no ceiling) against the total earned&quot;progression points&quot;/experience. (for simplicity purposes, we will henceforth refer to earned progression points asexperience, though it need not be a mechanic that in any way resembles Experience in a traditional sense). Earned experience is calculated in a variety of ways, determined by the Progression's scope.  These go fromlooking up a stored value to performing exceedingly obtuse calculations.  This is why we provide live datain DestinyCharacterProgressionComponent.progressions, so you don't have to worry about those.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Progressions
 
 ## Properties

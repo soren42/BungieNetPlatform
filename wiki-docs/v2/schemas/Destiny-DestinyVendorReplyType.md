@@ -4,7 +4,8 @@
 This determines the type of reply that a Vendor will have during an Interaction.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

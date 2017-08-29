@@ -4,7 +4,8 @@
 When a vendor provides services, this is the localized name of those services.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

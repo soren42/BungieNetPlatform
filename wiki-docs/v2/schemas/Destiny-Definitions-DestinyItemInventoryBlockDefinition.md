@@ -4,7 +4,8 @@
 If the item can exist in an inventory - the overwhelming majority of them can and do -then this is the basic properties regarding the item's relationship with the inventory.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

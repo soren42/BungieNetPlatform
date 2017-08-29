@@ -4,7 +4,8 @@
 If an item is a Plug, its DestinyInventoryItemDefinition.plug property will be populatedwith an instance of one of these bad boys. This gives information about when it can be inserted, what the plug's categoryis (and thus whether it is compatible with a socket... see DestinySocketTypeDefinitionfor information about Plug Categories and socket compatibility), whether it is enabledand other Plug info.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

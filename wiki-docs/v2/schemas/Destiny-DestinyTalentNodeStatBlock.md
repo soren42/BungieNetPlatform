@@ -4,7 +4,8 @@
 This property has some history.  A talent grid can provide stats on both the item it's related to andthe character equipping the item.  This returns data about those stat bonuses.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

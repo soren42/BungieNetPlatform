@@ -4,7 +4,8 @@
 Returns data about a character's status with a given Objective.Combine with DestinyObjectiveDefinition static data for display purposes.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

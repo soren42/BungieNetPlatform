@@ -3,7 +3,8 @@
 ## Info
 
 ## Schema
-* **Type:** Array
+* **Schema Type:** Array
+* **Type:** array
 * **Array Contents:** [[BungieMembershipType|BungieMembershipType]]:Enum
 
 ## Example

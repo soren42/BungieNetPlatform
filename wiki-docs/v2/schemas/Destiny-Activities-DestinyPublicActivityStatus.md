@@ -4,7 +4,8 @@
 Represents the public-facing status of an activity: any data about what is currently active in theActivity, regardless of an individual character's progress in it.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

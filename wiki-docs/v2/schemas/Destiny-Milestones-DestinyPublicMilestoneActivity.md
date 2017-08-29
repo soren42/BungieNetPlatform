@@ -4,7 +4,8 @@
 A milestone may have one or more conceptual Activities associated with it, and each of those conceptualactivities could have a variety of variants, modes, tiers, what-have-you.Our attempts to determine what qualifies as a conceptual activity are, unfortunately, janky.  So ifyou see missing modes or modes that don't seem appropriate to you, let us know and I'll buy you a beerif we ever meet up in person.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

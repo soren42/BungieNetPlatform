@@ -4,7 +4,8 @@
 The definition of a specific reward, which may be contained in a category of rewards andthat has optional information about how it is obtained.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

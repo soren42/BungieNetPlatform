@@ -4,7 +4,8 @@
 All the partnership info that's fit to expose externally, if we care to do so.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 This represents an item being sold by the vendor.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 Represents a variant of an activity that's relevant to a milestone.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

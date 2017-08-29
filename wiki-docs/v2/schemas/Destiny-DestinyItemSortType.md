@@ -4,7 +4,8 @@
 Determines how items are sorted in an inventory bucket.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

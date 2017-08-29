@@ -4,7 +4,8 @@
 This component contains essential/summary information about the vendor.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** Vendors
 
 ## Properties

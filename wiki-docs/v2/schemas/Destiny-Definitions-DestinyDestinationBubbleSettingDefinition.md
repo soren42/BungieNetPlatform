@@ -4,7 +4,7 @@
 Human readable data about the bubble.  Combine with DestinyBubbleDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

@@ -3,7 +3,8 @@
 ## Info
 
 ## Schema
-* **Type:** Array
+* **Schema Type:** Array
+* **Type:** array
 * **Array Contents:** [[PeriodType|Destiny-HistoricalStats-Definitions-PeriodType]]:Enum
 
 ## Example

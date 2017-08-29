@@ -4,7 +4,8 @@
 This is the position and other data related to nodes in the activity graph that you can clickto launch activities.  An Activity Graph node will only have one active Activity at a time,which will determine the activity to be launched (and, unless overrideDisplay information is provided,will also determine the tooltip and other UI related to the node)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

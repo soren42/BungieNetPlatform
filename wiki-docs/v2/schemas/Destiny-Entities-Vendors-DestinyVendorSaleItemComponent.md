@@ -4,7 +4,8 @@
 Request this component if you want the details about an item being sold in relation to the charactermaking the request: whether the character can buy it,whether they can afford it, and other data related to purchasing the item. Note that if you want instance, stats, etc... data for the item, you'll have to request additional components such asItemInstances, ItemPerks etc... and acquire them from the DestinyVendorResponse's &quot;items&quot; property.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** VendorSales
 
 ## Properties

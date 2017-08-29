@@ -4,7 +4,7 @@
 An overly complicated wrapper for the item level at which the item should spawn.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

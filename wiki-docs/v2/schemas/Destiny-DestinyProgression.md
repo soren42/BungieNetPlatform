@@ -4,7 +4,8 @@
 Information about a current character's status with a Progression.A progression is a value that can increase with activity and has levels.Think Character Level and Reputation Levels.Combine this &quot;live&quot; data with the related DestinyProgressionDefinition for a full pictureof the Progression.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

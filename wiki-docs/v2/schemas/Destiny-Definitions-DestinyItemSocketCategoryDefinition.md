@@ -4,7 +4,8 @@
 Sockets are grouped into categories in the UI.  These define which categoryand which sockets are under that category.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

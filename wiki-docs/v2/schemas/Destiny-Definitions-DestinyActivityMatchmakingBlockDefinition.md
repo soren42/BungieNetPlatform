@@ -4,7 +4,8 @@
 Information about matchmaking and party size for the activity.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized textassociated with stats that are to be shown on the items with which they are associated. This defines a specific overridden stat.  You could theoretically check these beforerendering your stat UI, and for each stat that has an override show these displayPropertiesinstead of those on the DestinyStatDefinition. Or you could be like us, and skip that for now because the game has yet to actuallyuse this feature.  But know that it's here, waiting for a resilliant young designer totake up the mantle and make us all look foolish by showing the wrong name for stats. Note that, if this gets used, the override will apply only to items using the overridingStat Group.  Other items will still show the default stat's name/description.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 There are many Progressions in Destiny (think Character Level, or Reputation).These are the various &quot;Scopes&quot; of Progressions, which affect many things:* Where/if they are stored* How they are calculated* Where they can be used in other game logic
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

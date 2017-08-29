@@ -3,7 +3,8 @@
 ## Info
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** byte
 
 ## Enum Values

@@ -4,7 +4,8 @@
 Represents this player's personal completion status for the Activity under a Milestone, if theactivity has trackable completion and progress information. (most activities won't, or the conceptwon't apply.  For instance, it makes sense to talk about a tier of a raid as being Completed or havingprogress, but it doesn't make sense to talk about a Crucible Playlist in those terms.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

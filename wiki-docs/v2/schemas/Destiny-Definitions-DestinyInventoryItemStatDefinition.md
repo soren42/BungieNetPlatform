@@ -4,7 +4,8 @@
 Defines a specific stat value on an item, and the minimum/maximum range that we couldcompute for the item based on our heuristics for how the item might be generated. Not guaranteed to match real-world instances of the item, but should hopefully at leastbe close.  If it's not close, let us know on the Bungie API forums.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

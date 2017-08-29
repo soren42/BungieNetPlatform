@@ -4,7 +4,8 @@
 DestinyManifest is the external-facing contract for just the properties needed by those calling the Destiny Platform.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

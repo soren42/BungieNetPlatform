@@ -4,7 +4,8 @@
 An enumeration representing the potential difficulty levels of an activity.Their names are... more qualitative than quantitative.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

@@ -4,7 +4,8 @@
 The known entity types that you can have returned from Trending.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

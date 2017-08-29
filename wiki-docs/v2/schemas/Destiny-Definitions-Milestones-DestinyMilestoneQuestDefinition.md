@@ -4,7 +4,8 @@
 Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone.Even just typing this description, I already regret it.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

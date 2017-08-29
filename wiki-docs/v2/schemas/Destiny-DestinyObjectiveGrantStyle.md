@@ -4,7 +4,8 @@
 Some Objectives provide perks, generally as part of providing some kind of interesting modifierfor a Challenge or Quest.  This indicates when the Perk is granted.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

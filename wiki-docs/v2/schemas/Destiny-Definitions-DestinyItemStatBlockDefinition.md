@@ -4,7 +4,8 @@
 Information about the item's calculated stats, with as much data as we can find for the statswithout having an actual instance of the item. Note that this means the entire concept of providing these stats is fundamentally insufficient:we cannot predict with 100% accuracy the conditions under which an item can spawn, so we use variousheuristics to attempt to simulate the conditions as accurately as possible.  Actual stats for items in-game can and will vary, but these should at least be useful base points for comparisonand display. It is also worth noting that some stats, like Magazine size, have further calculations performed on themby scripts in-game and on the game servers that BNet does not have access to.  We cannot know how those statsare further transformed, and thus some stats will be inaccurate even on instances of items in BNet vs. howthey appear in-game.  This is a known limitation of our item statistics, without any planned fix.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

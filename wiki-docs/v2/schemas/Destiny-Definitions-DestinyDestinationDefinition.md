@@ -4,7 +4,7 @@
 On to one of the more confusing subjects of the API.  What is a Destination, and whatis the relationship between it, Activities, Locations, and Places? A &quot;Destination&quot; is a specific region/city/area of a larger &quot;Place&quot;.For instance, a Place might be Earth where a Destination might be Bellevue, Washington.(Please, pick a more interesting destination if you come to visit Earth).
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Destinations
 
 ## Properties

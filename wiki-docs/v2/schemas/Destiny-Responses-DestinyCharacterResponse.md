@@ -4,7 +4,8 @@
 The response contract for GetDestinyCharacter, with components that can be returned for characterand item-level data.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

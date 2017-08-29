@@ -4,7 +4,8 @@
 This appears to be information used when rendering rewards.  We don't currently use it on BNet.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

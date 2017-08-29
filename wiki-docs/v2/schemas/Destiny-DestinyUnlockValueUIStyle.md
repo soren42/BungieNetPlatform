@@ -4,7 +4,8 @@
 If you're showing an unlock value in the UI, this is the formatin which it should be shown.  You'll have to build your own algorithms on the clientside to determine how best to render these options.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

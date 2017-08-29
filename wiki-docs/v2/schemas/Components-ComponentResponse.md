@@ -4,7 +4,7 @@
 The base class for any component-returning object that may need to indicateinformation about the state of the component being returned.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
 
 ## Properties
 Name | Type | Description

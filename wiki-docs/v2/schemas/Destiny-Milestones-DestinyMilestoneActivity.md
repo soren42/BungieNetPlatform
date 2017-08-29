@@ -4,7 +4,8 @@
 Sometimes, we know the specific activity that the Milestone wants you to play.This entity provides additional information about that Activity and all of itsvariants.  (sometimes there's only one variant, but I think you get the point)
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

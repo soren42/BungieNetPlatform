@@ -4,7 +4,8 @@
 The details of an overlay prompt to show to a user.  They are all fairlyself-explanatory localized strings that can be shown.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

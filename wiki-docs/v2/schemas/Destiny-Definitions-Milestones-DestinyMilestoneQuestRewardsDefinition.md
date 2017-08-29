@@ -4,7 +4,8 @@
 If rewards are given in a quest - as opposed to overall in the entire Milestone - there's way lessto track.  We're going to simplify this contract as a result.  However, this also gives us theopportunity to potentially put more than just item information into the reward data if we're ableto mine it out in the future.  Remember this if you come back and ask &quot;why are quest reward itemsnested inside of their own class?&quot;
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

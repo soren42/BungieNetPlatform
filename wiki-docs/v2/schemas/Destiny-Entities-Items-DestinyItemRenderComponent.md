@@ -4,7 +4,8 @@
 Many items can be rendered in 3D.  When you request this block, you will obtainthe custom data needed to render this specific instance of the item.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** ItemRenderData
 
 ## Properties

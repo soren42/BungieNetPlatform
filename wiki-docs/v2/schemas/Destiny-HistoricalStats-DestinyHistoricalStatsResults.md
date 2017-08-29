@@ -3,7 +3,8 @@
 ## Info
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Example
 ```javascript

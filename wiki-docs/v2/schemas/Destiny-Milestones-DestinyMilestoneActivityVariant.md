@@ -4,7 +4,8 @@
 Represents custom data that we know about an individual variant of an activity.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

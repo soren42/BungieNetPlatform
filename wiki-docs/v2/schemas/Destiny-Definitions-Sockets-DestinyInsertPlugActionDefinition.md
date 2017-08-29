@@ -4,7 +4,7 @@
 Data related to what happens while a plug is being inserted, mostly for UI purposes.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

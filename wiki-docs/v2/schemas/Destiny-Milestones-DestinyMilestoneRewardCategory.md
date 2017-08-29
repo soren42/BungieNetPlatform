@@ -4,7 +4,8 @@
 Represents a category of &quot;summary&quot; rewards that can be earned for the Milestone regardless ofspecific quest rewards that can be earned.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

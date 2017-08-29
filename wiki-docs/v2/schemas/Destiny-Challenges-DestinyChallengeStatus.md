@@ -4,7 +4,8 @@
 Represents the status and other related information for a challenge that is - or was - availableto a player. A challenge is a bonus objective, generally tacked onto Quests or Activities, thatprovide additional variations on play.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

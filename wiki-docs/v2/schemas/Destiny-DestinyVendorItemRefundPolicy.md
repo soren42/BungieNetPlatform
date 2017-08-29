@@ -4,7 +4,8 @@
 The action that happens when the user attempts to refund an item.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

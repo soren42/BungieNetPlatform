@@ -4,7 +4,8 @@
 Raw data about the customization options chosen for a character's face and appearance. You can look up the relevant class/race/gender combo in DestinyCharacterCustomizationOptionDefinitionfor the character, and then look up these values within the CustomizationOptions foundto pull some data about their choices.  Warning: not all of that data is meaningful.  Some data hasuseful icons.  Others have nothing, and are only meant for 3D rendering purposes (which we sadlydo not expose yet)
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

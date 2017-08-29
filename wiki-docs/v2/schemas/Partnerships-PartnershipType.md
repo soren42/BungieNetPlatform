@@ -4,7 +4,8 @@
 Representing external partners to which BNet users can link accounts, but thatare not Account System credentials: partnerships that BNet uses exclusively for data.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

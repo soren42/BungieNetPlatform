@@ -4,7 +4,8 @@
 The character-specific data for a milestone's reward entry.  See DestinyMilestoneDefinition formore information about Reward Entries.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

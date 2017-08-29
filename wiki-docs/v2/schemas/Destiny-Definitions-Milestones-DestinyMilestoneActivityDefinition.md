@@ -4,7 +4,7 @@
 Milestones can have associated activities which provide additional information about the context, challenges, modifiers, state etc...related to this Milestone. Information we need to be able to return that data is defined here, along with Tier data to establisha relationship between a conceptual Activity and its difficulty levels and variants.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

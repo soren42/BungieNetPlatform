@@ -4,7 +4,8 @@
 Primarily for Quests, this is the definition of properties related to the item if it is a questand its various quest steps.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

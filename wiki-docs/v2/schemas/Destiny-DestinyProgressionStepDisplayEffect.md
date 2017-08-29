@@ -4,7 +4,8 @@
 If progression is earned, this determines whether the progression shows visual effects onthe character or its item - or neither.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

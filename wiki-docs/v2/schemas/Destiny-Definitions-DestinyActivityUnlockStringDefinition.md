@@ -4,7 +4,8 @@
 Represents a status string that could be conditionally displayed about an activity.Note that externally, you can only see the strings themselves.  Internally we combine this informationwith server state to determine which strings should be shown.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

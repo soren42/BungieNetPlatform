@@ -4,7 +4,8 @@
 The localized properties of the requirementsDisplay, allowing information about the requirement oritem being featured to be seen.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

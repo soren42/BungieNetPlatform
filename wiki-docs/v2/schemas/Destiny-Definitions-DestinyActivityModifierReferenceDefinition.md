@@ -4,7 +4,8 @@
 A reference to an Activity Modifier from another entity, such as an Activity(for now, just Activities). This defines some
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

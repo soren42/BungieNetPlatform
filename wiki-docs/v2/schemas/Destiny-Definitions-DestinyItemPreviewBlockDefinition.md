@@ -4,7 +4,8 @@
 Items like Sacks or Boxes can have items that it shows in-game when you view detailsthat represent the items you can obtain if you use or acquire the item. This defines those categories, and gives some insights into that data's source.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

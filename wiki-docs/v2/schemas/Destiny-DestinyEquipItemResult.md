@@ -4,7 +4,8 @@
 The results of an Equipping operation performed through the Destiny API.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

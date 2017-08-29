@@ -4,7 +4,7 @@
 These are pre-constructed collections of data that can be used to determine the Level Requirementfor an item given a Progression to be tested (such as the Character's level). For instance, say a character receives a new Auto Rifle, and that Auto Rifle'sDestinyInventoryItemDefinition.quality.progressionLevelRequirementHash property is pointingat one of these DestinyProgressionLevelRequirementDefinitions.  Let's pretend also that the progressionHashit is pointing at is the Character Level progression.  In that situation, the character's level will be usedto interpolate a value in the requirementCurve property.  The value picked up from that interpolation willbe the required level for the item.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** ProgressionLevelRequirements
 
 ## Properties

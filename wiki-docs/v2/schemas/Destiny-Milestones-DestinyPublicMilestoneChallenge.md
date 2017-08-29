@@ -4,7 +4,8 @@
 A Milestone can have many Challenges.  Challenges are just extra Objectives that providea fun way to mix-up play and provide extra rewards.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

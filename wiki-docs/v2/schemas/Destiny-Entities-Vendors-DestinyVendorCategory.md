@@ -4,7 +4,8 @@
 Information about the category and items currently sold in that category.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

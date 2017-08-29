@@ -4,7 +4,7 @@
 Represents a reference to a Challenge, which for now is just an Objective.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,7 @@
 Display Categories are different from &quot;categories&quot; in that these are specifically for visual groupingand display of categories in Vendor UI.  The &quot;categories&quot; structure is for validation of the containeditems, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will beno meaningful relationship between the two.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

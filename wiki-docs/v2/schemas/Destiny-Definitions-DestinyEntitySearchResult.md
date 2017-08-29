@@ -4,7 +4,8 @@
 The results of a search for Destiny content.  This will be improved on over time,I've been doing some experimenting to see what might be useful.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

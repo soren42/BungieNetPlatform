@@ -4,7 +4,8 @@
 Many Destiny*Definition contracts - the &quot;first order&quot; entities of Destinythat have their own tables in the Manifest Database - also have displayableinformation.  This is the base class for that display information.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

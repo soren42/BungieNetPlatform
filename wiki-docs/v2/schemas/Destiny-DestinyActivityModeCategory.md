@@ -4,7 +4,8 @@
 Activity Modes are grouped into a few possible broad categories.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

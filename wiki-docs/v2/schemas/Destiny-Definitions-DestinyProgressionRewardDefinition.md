@@ -4,7 +4,8 @@
 Inventory Items can reward progression when actions are performed on them.  A common exampleof this in Destiny 1 was Bounties, which would reward Experience on your Character and the like when you completed the bounty. Note that this maps to a DestinyProgressionMappingDefinition, and *not* a DestinyProgressionDefinitiondirectly.  This is apparently so that multiple progressions can be granted progression points/experienceat the same time.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

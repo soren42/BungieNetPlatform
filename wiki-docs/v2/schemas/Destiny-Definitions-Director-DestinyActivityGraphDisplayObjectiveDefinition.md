@@ -4,7 +4,8 @@
 When a Graph needs to show active Objectives, this defines those objectives as well as an identifier.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

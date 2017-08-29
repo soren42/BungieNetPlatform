@@ -4,7 +4,7 @@
 Provides common properties for destiny definitions.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

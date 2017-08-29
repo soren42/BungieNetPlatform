@@ -4,7 +4,8 @@
 This describes links between the current graph and others, as well as when that link is relevant.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

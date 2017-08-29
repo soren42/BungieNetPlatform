@@ -4,7 +4,8 @@
 Whether you can transfer an item, and why not if you can't.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

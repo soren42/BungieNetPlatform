@@ -4,7 +4,8 @@
 Compare this sackType to the sack identifier in the DestinyInventoryItemDefinition.vendorSackTypeproperty of items.  If they match, show this sack with this interaction.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

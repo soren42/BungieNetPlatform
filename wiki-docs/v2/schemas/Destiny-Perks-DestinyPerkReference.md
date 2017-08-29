@@ -4,7 +4,8 @@
 The list of perks to display in an item tooltip - and whether or not they have been activated. Perks apply a variety of effects to a character, and are generally either intrinsic to the itemor provided in activated talent nodes or sockets.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 This Enumeration further classifies items by more specific categorizations thanDestinyItemType.  The &quot;Sub-Type&quot; is where we classify and categorize items one step furtherin specificity: &quot;Auto Rifle&quot; instead of just &quot;Weapon&quot; for example, or &quot;Vanguard Bounty&quot; instead ofmerely &quot;Bounty&quot;. These sub-types are provided for historical compatibility with Destiny 1, but an ideal alternative isto use DestinyItemCategoryDefinitions and the DestinyItemDefinition.itemCategories property instead.Item Categories allow for arbitrary hierarchies of specificity, and for items to belong to multiple categoriesacross multiple hierarchies simultaneously.  For this enum, we pick a single type as a &quot;best guess&quot; fit. NOTE: This is not all of the item types available, and some of these are holdovers from Destiny 1 that may ormay not still exist.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

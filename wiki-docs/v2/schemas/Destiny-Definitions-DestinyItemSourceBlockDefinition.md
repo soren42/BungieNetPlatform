@@ -4,7 +4,8 @@
 Data about an item's &quot;sources&quot;: ways that the item can be obtained.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

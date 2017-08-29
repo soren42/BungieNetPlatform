@@ -4,7 +4,7 @@
 If a vendor can ever end up performing actions, these are the properties that will be relatedto those actions.  I'm not going to bother documenting this yet, as it is unused and unclear ifit will ever be used... but in case it is ever populated and someone finds it useful, it is defined here.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

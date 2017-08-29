@@ -4,7 +4,7 @@
 Defines the tier type of an item.  Mostly this provides human readable properties for typeslike Common, Rare, etc... It also provides some base data for infusion that could be useful.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** ItemTierTypes
 
 ## Properties

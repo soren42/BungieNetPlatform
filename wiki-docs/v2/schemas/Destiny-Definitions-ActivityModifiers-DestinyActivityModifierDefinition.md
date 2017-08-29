@@ -4,7 +4,7 @@
 Modifiers - in Destiny 1, these were referred to as &quot;Skulls&quot; - are changes that can be appliedto an Activity.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** ActivityModifiers
 
 ## Properties

@@ -4,7 +4,8 @@
 Represents a &quot;raw&quot; investment stat, before calculated stats are calculatedand before any DestinyStatGroupDefinition is applied to transform the statinto something closer to what you see in-game. Because these won't match what you see in-game, consider carefully whetheryou really want to use these stats.  I have left them in case someonecan do something useful or interesting with the pre-processed statistics.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

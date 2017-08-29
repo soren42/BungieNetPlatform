@@ -4,7 +4,8 @@
 This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinitionfor caveats).
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

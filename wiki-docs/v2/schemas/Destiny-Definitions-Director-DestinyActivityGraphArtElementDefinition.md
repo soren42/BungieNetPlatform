@@ -4,7 +4,7 @@
 These Art Elements are meant to represent one-off visual effects overlaid on the map.Currently, we do not have a pipeline to import the assets for these overlays, so this infoexists as a placeholder for when such a pipeline exists (if it ever will)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

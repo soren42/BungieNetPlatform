@@ -4,7 +4,8 @@
 The definition for an &quot;inventory flyout&quot;: a UI screen where we show youpart of an otherwise hidden vendor inventory: like the Vault inventory buckets.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

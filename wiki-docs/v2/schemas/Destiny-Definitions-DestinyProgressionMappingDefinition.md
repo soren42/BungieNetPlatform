@@ -4,7 +4,7 @@
 Aggregations of multiple progressions. These are used to apply rewards to multiple progressionsat once.  They can sometimes have human readable data as well, but only extremely sporadically.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

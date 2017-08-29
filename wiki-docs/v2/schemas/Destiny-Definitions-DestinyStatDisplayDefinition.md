@@ -4,7 +4,7 @@
 Describes the way that an Item Stat (see DestinyStatDefinition) is transformedusing the DestinyStatGroupDefinition related to that item.  See both of the aforementioneddefinitions for more information about the stages of stat transformation. This represents the transformation of a stat into a &quot;Display&quot; stat (the closest valuethat BNet can get to the in-game display value of the stat)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

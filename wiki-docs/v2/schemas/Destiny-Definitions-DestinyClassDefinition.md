@@ -4,7 +4,7 @@
 Defines a Character Class in Destiny 2.  These are types of characters you can play, likeTitan, Warlock, and Hunter.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Classes
 
 ## Properties

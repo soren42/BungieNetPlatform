@@ -4,7 +4,8 @@
 Indicates the status of an &quot;Unlock Flag&quot; on a Character or Profile. These are individual bits of state that can be either set or not set, and sometimes provide interestinghuman-readable information in their related DestinyUnlockDefinition.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

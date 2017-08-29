@@ -4,7 +4,8 @@
 Represents localized, extended content related to Milestones.This is intentionally returned by a separate endpoint and not with Character-level Milestone databecause we do not put localized data into standard Destiny responses, both for brevity of responseand for caching purposes.  If you really need this data, hit the Milestone Content endpoint.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

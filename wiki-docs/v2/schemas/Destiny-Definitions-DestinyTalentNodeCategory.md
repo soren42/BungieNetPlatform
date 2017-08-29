@@ -4,7 +4,8 @@
 An artificial construct provided by Bungie.Net, where we attempt to group talent nodesby functionality. This is a single set of references to Talent Nodes that share a commontrait or purpose.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

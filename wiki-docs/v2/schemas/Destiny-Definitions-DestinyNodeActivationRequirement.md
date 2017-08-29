@@ -4,7 +4,7 @@
 Talent nodes have requirements that must be met before they can be activated. This describes the material costs, the Level of the Talent Grid's progressionrequired, and other conditional information that limits whether a talent node can beactivated.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

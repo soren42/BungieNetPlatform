@@ -4,7 +4,8 @@
 When a Vendor Interaction provides rewards, they'll either let you choose one or let you haveall of them.  This determines which it will be.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

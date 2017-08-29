@@ -4,7 +4,8 @@
 If the Milestone or a component has vendors whose inventories could/should be displayed that are relevant to it,this will return the vendor in question. It also contains information we need to determine whether that vendoris actually relevant at the moment, given the user's current state.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

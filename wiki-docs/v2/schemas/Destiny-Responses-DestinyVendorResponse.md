@@ -4,7 +4,8 @@
 A response containing all of the components for a vendor.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

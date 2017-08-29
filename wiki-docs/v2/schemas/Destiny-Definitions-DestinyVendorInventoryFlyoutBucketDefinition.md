@@ -4,7 +4,8 @@
 Information about a single inventory bucket in a vendor flyout UI and how it is shown.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 Used for setting the guided game permission level override (admins and founders can always host guided games).
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

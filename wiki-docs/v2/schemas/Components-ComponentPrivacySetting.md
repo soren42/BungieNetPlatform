@@ -4,7 +4,8 @@
 A set of flags for reason(s) why the component populatedin the way that it did.  Inspect the individual flags for the reasons.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

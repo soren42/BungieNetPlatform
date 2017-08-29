@@ -4,7 +4,8 @@
 Well, we're here in Destiny 2, and Talent Grids are unfortunately still around. The good news is that they're pretty much only being used for certain base informationon items and for Builds/Subclasses.  The bad news is that they still suck.If you really want this information, grab this component. An important note is that talent grids are defined as such: A Grid has 1:M Nodes, which has 1:M Steps. Any given node can only have a single stepactive at one time, which represents the actual visual contents and effects of the Node(for instance, if you see a &quot;Super Cool Bonus&quot; node, the actual icon and text for the nodeis coming from the current Step of that node). Nodes can be grouped into exclusivity sets*and* as of D2, exclusivity groups (which are collections of exclusivity sets that affecteach other). See DestinyTalentGridDefinition for more information.  Brace yourself, the water's coldout there in the deep end.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** ItemTalentGrids
 
 ## Properties

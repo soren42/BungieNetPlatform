@@ -4,7 +4,8 @@
 The definition of a known, reusable plug that can be applied to a socket.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

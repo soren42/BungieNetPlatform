@@ -4,7 +4,8 @@
 Defines a particular entry in an ItemSet (AKA a particular Quest Step in a Quest)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

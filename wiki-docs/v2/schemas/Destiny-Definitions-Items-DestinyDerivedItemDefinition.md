@@ -4,7 +4,8 @@
 This is a reference to, and summary data for, a specific item thatyou can get as a result of Using or Acquiring some other Item (For example,this could be summary information for an Emote that you can get by opening an an Eververse Box)See DestinyDerivedItemCategoryDefinition for more information.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

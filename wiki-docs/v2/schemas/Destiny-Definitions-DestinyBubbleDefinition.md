@@ -4,7 +4,7 @@
 Basic identifying data about the bubble.  Combine with DestinyDestinationBubbleSettingDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

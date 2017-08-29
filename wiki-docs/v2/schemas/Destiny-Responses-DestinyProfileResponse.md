@@ -4,7 +4,8 @@
 The response for GetDestinyProfile, with components for character and item-level data.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

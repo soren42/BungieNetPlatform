@@ -4,7 +4,8 @@
 If a Milestone has one or more Quests, this will contain the live information for the character's status withone of those quests.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

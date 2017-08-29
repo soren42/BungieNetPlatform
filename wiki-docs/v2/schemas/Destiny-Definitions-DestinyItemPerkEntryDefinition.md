@@ -4,7 +4,8 @@
 An intrinsic perk on an item, and the requirements for it to be activated.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

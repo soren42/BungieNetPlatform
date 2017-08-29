@@ -4,7 +4,8 @@
 An item's &quot;Quality&quot; determines its calculated stats.  The Level at which the item spawnsis combined with its &quot;qualityLevel&quot; along with some additional calculations to determinethe value of those stats. In Destiny 2, most items don't have default item levels and quality, making this propertyless useful: these apparently are almost always determined by the complex mechanisms ofthe Reward system rather than statically.  They are still provided here in case theyare still useful for people.  This also contains some information about Infusion.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

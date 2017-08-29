@@ -4,7 +4,8 @@
 This component returns anything that could be considered &quot;Progression&quot; on a user: datawhere the user is gaining levels, reputation, completions, rewards, etc...
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** CharacterProgressions
 
 ## Properties

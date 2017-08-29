@@ -4,7 +4,8 @@
 The same as GroupV2ClanInfo, but includes any investment data.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

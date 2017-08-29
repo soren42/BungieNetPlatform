@@ -4,7 +4,8 @@
 An individual Destiny Entity returned from the entity search.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

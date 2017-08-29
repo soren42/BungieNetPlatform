@@ -4,7 +4,8 @@
 This Block defines the rendering data associated with the item, if any.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

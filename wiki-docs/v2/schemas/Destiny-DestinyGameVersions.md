@@ -4,7 +4,8 @@
 A flags enumeration indicating the versions of the game that a given user has purchased.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

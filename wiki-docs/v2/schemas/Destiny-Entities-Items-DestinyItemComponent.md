@@ -4,7 +4,8 @@
 The base item component, filled with properties that are generally useful to know in any item request or thatdon't feel worthwhile to put in their own component.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

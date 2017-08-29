@@ -4,7 +4,7 @@
 Characters can not only have Inventory buckets (containers of items that are generally matched by their type orfunctionality), they can also have Equipment Slots. The Equipment Slot is an indicator that the related bucket can have instanced items equippedon the character.  For instance, the Primary Weapon bucket has an Equipment Slot that determineswhether you can equip primary weapons, and holds the association between its slot and the inventory bucketfrom which it can have items equipped. An Equipment Slot must have a related Inventory Bucket, but notall inventory buckets must have Equipment Slots.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

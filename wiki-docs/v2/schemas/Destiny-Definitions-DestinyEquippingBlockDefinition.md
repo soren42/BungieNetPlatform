@@ -4,7 +4,7 @@
 Items that can be equipped define this block.  It contains information we need tounderstand how and when the item can be equipped.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

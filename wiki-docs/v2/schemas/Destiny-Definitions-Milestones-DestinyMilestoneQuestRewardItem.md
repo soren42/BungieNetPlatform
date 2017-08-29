@@ -4,7 +4,8 @@
 A subclass of DestinyItemQuantity, that provides not just the item and its quantitybut also information that BNet can - at some point - use internally to providemore robust runtime information about the item's qualities. If you want it, please ask!  We're just out of time to wire it up right now.Or a clever person just may do it with our existing endpoints.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

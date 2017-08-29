@@ -4,7 +4,7 @@
 A shortcut for the fact that some items have a &quot;Preview Vendor&quot;- See DestinyInventoryItemDefinition.preview.previewVendorHash - that is intendedto be used to show what items you can get as a result of acquiring or using this item. A common example of this in Destiny 1 was Eververse &quot;Boxes,&quot; which could have many possible items.This &quot;Preview Vendor&quot; is not a vendor you can actually see in the game, but it defines categories and sale items for all of the possibleitems you could get from the Box so that the game can show them to you.  We summarize that info hereso that you don't have to do that Vendor lookup and aggregation manually.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

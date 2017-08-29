@@ -4,7 +4,8 @@
 BNet's custom categorization of reward sources.  We took a look at the existingways that items could be spawned, and tried to make high-level categorizations ofthem.  This needs to be re-evaluated for Destiny 2.
 
 ## Schema
-* **Type:** Enum
+* **Schema Type:** Enum
+* **Type:** integer
 * **Format:** int32
 
 ## Enum Values

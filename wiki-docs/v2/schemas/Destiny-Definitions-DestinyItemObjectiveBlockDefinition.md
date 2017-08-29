@@ -4,7 +4,8 @@
 An item can have objectives on it.  In practice, these are the exclusive purview of&quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest. Quest steps have 1:M objectives that we end up processing and returning in live data as DestinyQuestStatusdata, and other useful information.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

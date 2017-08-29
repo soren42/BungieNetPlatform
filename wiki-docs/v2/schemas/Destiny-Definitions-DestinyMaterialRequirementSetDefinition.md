@@ -4,7 +4,7 @@
 Represent a set of material requirements: Items that either need to be owned or need to be consumedin order to perform an action. A variety of other entities refer to these as gatekeepers and paymentsfor actions that can be performed in game.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

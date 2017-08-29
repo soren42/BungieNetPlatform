@@ -4,7 +4,7 @@
 Defines an &quot;Objective&quot;. An objective is a specific task you should accomplish in the game.  These are referred to by: - Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives) - Challenges (which are Objectives defined on an DestinyActivityDefintion) - Milestones (which refer to Objectives that are defined on both Quest Steps and Activities) - Anything else that the designers decide to do later. Objectives have progress, a notion of having been Completed, human readable data describing the taskto be accomplished, and a lot of optional tack-on data that can enhance the information provided aboutthe task.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Objectives
 
 ## Properties

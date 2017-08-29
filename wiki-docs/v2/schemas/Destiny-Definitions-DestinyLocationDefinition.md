@@ -4,7 +4,7 @@
 A &quot;Location&quot; is a sort of shortcut for referring to a specificcombination of Activity, Destination, Place, and even Bubble or NavPoint withina space. Most of this data isn't intrinsically useful to us, but Objectives refer tolocations, and through that we can at least infer the Activity, Destination, and Placebeing referred to by the Objective.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Locations
 
 ## Properties

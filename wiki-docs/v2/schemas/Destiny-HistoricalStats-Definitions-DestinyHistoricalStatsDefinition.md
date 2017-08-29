@@ -3,7 +3,8 @@
 ## Info
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 * **Mobile Manifest:** HistoricalStats
 
 ## Properties

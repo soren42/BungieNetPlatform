@@ -4,7 +4,7 @@
 This contract contains clan-specific group information.  It does not include any investment data.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 Not terribly useful, some basic cooldown interaction info.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

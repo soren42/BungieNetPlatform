@@ -4,7 +4,8 @@
 The list entry view for trending items.  Returns just enough to show the item on the trending page.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

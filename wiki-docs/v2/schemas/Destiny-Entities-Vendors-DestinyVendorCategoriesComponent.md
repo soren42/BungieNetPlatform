@@ -4,7 +4,8 @@
 A vendor can have many categories of items that they sell.  This component will return the category informationfor available items, as well as the index into those items in the user's sale item list. Note that, since both the category and items are indexes, this data is Content Version dependent.  Be sure to checkthat your content is up to date before using this data.  This is an unfortunate, but permanent, limitation ofVendor data.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** VendorCategories
 
 ## Properties

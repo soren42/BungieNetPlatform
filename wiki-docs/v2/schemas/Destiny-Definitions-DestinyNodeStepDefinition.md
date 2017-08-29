@@ -4,7 +4,7 @@
 This defines the properties of a &quot;Talent Node Step&quot;.  When you see a talent nodein game, the actual visible properties that you see (its icon, description, theperks and stats it provides) are not provided by the Node itself, but rather by the currently active Step on the node. When a Talent Node is activated, the currently active step's benefits are conferredupon the item and character. The currently active step on talent nodes are determined when an item is first instantiated.  Sometimes it is random, sometimes it is more deterministic(particularly when a node has only a single step). Note that, when dealing with Talent Node Steps, you must ensure that you havethe latest version of content.  stepIndex and nodeStepHash - two ways ofidentifying the step within a node - are both content version dependent, and thusare subject to change between content updates.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

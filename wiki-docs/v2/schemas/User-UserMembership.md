@@ -4,7 +4,7 @@
 Very basic info about a user as returned by the Account server.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
 
 ## Properties
 Name | Type | Description

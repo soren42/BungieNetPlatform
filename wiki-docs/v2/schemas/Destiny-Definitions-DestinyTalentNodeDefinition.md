@@ -4,7 +4,8 @@
 Talent Grids on items have Nodes.  These nodes have positions in the talent grid's UI,and contain &quot;Steps&quot; (DestinyTalentNodeStepDefinition), one of whom will be the &quot;Current&quot; step. The Current Step determines the visual properties of the node, as well as what the node grantswhen it is activated. See DestinyTalentGridDefinition for a more complete overview of how Talent Grids work, and howthey are used in Destiny 2 (and how they were used in Destiny 1).
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

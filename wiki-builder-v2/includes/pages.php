@@ -202,7 +202,7 @@ function buildPage($page) {
 	$footer = ob_get_clean();
 
 	$html = $header
-		.'<a href="https://github.com/DestinyDevs/BungieNetPlatform/wiki-docs'.str_replace(WIKIPATH.'/', '', $page['path']).'" target="_blank" class="edit-link"><i class="fa fa-pencil"></i> Edit Wiki</a>'
+		.'<a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs'.str_replace(WIKIPATH.'/', '', $page['path']).'" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a>'
 		.$content.LN
 		.$footer
 	;

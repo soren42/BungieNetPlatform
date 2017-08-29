@@ -4,7 +4,8 @@
 A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time fora given Location.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

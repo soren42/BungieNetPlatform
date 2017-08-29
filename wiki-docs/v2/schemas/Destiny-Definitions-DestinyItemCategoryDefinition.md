@@ -4,7 +4,7 @@
 In an attempt to categorize items by type, usage, and other interesting properties, we createdDestinyItemCategoryDefinition: information about types that is assembled using a set of heuristicsthat examine the properties of an item such as what inventory bucket it's in, its item type name,and whether it has or is missing certain blocks of data. This heuristic is imperfect, however.  If you find an item miscategorized, let us know on the BungieAPI forums! We then populate all of the categories that we think an item belongs to in its DestinyInventoryItemDefinition.itemCategoryHashes property.  You can use that to provideyour own custom item filtering, sorting, aggregating... go nuts on it!  And let us know if yousee more categories that you wish would be added!
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** ItemCategories
 
 ## Properties

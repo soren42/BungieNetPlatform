@@ -4,7 +4,8 @@
 A minimal view of a character's equipped items, for the purpose of rendering a summaryscreen or showing the character in 3D.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

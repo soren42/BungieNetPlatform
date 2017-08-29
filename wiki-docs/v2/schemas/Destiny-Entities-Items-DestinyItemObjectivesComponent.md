@@ -4,7 +4,8 @@
 Items can have objectives and progression.  When you request this block, you will obtaininformation about any Objectives and progression tied to this item.
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** ItemObjectives
 
 ## Properties

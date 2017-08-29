@@ -4,7 +4,7 @@
 These definitions represent Factions in the game.  Factions have ended up unilaterally beingrelated to Vendors that represent them, but that need not necessarily be the case. A Faction is really just an entity that has a related progression for which a character can gainexperience.  In Destiny 1, Dead Orbit was an example of a Faction: there happens to be a Vendor that representsDead Orbit (and indeed, DestinyVendorDefinition.factionHash defines to this relationship), butDead Orbit could theoretically exist without the Vendor that provides rewards.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 * **Mobile Manifest:** Factions
 
 ## Properties

@@ -4,7 +4,7 @@
 As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,8 @@
 Properties of a DestinyInventoryItemDefinition that store all of the informationwe were able to discern about how the item spawns, and where you can find the item. Items will have many of these sources, one per level at which it spawns, to tryand give more granular data about where items spawn for specific level ranges.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

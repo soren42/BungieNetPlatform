@@ -4,7 +4,8 @@
 Activities can refer to one or more sets of tooltip-friendly reward data.  These are the definitionsfor those tooltip friendly rewards.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

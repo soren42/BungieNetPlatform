@@ -4,7 +4,8 @@
 The list of indexes into the Talent Grid's &quot;nodes&quot; property for nodes in thisexclusive set. (See DestinyTalentNodeDefinition.nodeIndex)
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

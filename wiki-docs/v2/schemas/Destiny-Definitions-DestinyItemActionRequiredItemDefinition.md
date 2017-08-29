@@ -4,7 +4,8 @@
 The definition of an item and quantity required in a character's inventory in order toperform an action.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

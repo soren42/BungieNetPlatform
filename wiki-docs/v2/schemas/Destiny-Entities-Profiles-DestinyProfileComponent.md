@@ -4,7 +4,8 @@
 The most essential summary information about a Profile (in Destiny 1, we called these &quot;Accounts&quot;).
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 * **Component Type Dependency:** Profiles
 
 ## Properties

@@ -4,7 +4,8 @@
 If defined, the item has at least one socket.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

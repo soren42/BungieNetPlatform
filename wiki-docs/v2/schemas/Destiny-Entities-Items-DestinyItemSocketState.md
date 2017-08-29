@@ -4,7 +4,8 @@
 The status of a given item's socket.  (which plug is inserted, if any: whether it is enabled, what &quot;reusable&quot;plugs can be inserted, etc...)
 
 ## Schema
-* **Type:** Class
+* **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

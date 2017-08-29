@@ -4,7 +4,8 @@
 Nodes can have different visual states.  This object represents a single visual state (&quot;highlight type&quot;)that a node can be in, and the unlock expression condition to determine whether it should be set.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -4,7 +4,7 @@
 Defines a plug &quot;Category&quot; that is allowed to be plugged into a socket of this type. This should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash,which indicates the plug item's category.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
 
 ## Properties
 Name | Type | Description

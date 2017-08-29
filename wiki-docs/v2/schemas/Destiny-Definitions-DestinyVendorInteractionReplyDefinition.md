@@ -4,7 +4,8 @@
 When the interaction is replied to, Reward sites will fire and items potentially selected based onwhether the given unlock expression is TRUE. You can potentially choose one from multiple replies when replying to an interaction: this is howyou get either/or rewards from vendors.
 
 ## Schema
-* **Type:** Definition
+* **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description
