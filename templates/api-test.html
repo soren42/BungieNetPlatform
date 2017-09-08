@@ -54,35 +54,32 @@
 		</div>
 	</div>
 
-	<fieldset ng-show="hasParams(endpoint.path)">
+	<fieldset ng-show="endpoint.path.length>0">
 		<legend>URL Parameters</legend>
-		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.path">
-			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
+		<div class="form-group" ng-repeat="paramField in endpoint.path">
+			<label class="col-sm-3 control-label">{{paramField.name}}</label>
 			<div class="col-sm-9">
-				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="params.path[paramFieldName]" ng-required="true" placeholder="{{paramField.desc}}">
-				<select ng-if="paramField.link" class="form-control" ng-model="params.path[paramFieldName]" ng-required="true" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+				<div param-field="paramField"></div>
 			</div>
 		</div>
 	</fieldset>
 
-	<fieldset ng-show="hasParams(endpoint.params)">
+	<fieldset ng-show="endpoint.query.length>0">
 		<legend>Query Parameters</legend>
-		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.params">
-			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
+		<div class="form-group" ng-repeat="paramField in endpoint.query">
+			<label class="col-sm-3 control-label">{{paramField.name}}</label>
 			<div class="col-sm-9">
-				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="params.query[paramFieldName]" placeholder="{{paramField.desc}}">
-				<select ng-if="paramField.link" class="form-control" ng-model="params.query[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+				<div param-field="paramField"></div>
 			</div>
 		</div>
 	</fieldset>
 
-	<fieldset ng-show="hasParams(endpoint.post)">
+	<fieldset ng-show="endpoint.post.length>0">
 		<legend>JSON POST Parameters</legend>
-		<div class="form-group" ng-repeat="(paramFieldName, paramField) in endpoint.post">
-			<label class="col-sm-3 control-label">{{paramFieldName}}</label>
+		<div class="form-group" ng-repeat="paramField in endpoint.post">
+			<label class="col-sm-3 control-label">{{paramField.name}}</label>
 			<div class="col-sm-9">
-				<input ng-if="!paramField.link" type="text" class="form-control" ng-model="params.json[paramFieldName]" placeholder="{{paramField.desc}}">
-				<select ng-if="paramField.link" class="form-control" ng-model="params.json[paramFieldName]" ng-options="paramOptionValue as paramOptionKey+' ('+paramOptionValue+')' for (paramOptionKey, paramOptionValue) in fieldOptions(paramField.link)"></select>
+				<div param-field="paramField"></div>
 			</div>
 		</div>
 	</fieldset>

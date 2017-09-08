@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -104,7 +105,7 @@
 </tr>
 <tr>
 <td>damageTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable</td>
 <td>The current damage type's hash, so you can look up localized info and icons for it.</td>
 </tr>
 <tr>
@@ -139,7 +140,7 @@
 </tr>
 <tr>
 <td>unlockHashesRequiredToEquip</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]</td>
 <td>Sometimes, there are limitations to equipping that are represented by character-level flags called &quot;unlocks&quot;. This is a list of flags that they need in order to equip the item that the character has not met.Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.</td>
 </tr>
 <tr>
@@ -153,11 +154,11 @@
 <pre><code class="javascript">{
     // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
     "damageType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
     "damageTypeHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
     "primaryStat": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
         "statHash": 0,
         // Type: integer:int32
         "value": 0,
@@ -174,7 +175,7 @@
     "canEquip": false,
     // Type: integer:int32
     "equipRequiredLevel": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:ManifestDefinition:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]
     "unlockHashesRequiredToEquip": [
        // Type: integer:uint32
         0

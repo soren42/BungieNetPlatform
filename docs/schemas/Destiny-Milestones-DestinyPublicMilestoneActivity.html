@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -98,12 +99,12 @@
 <tbody>
 <tr>
 <td>activityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The hash identifier of the activity that's been chosen to be considered the canonical &quot;conceptual&quot; activity definition.  This may have many variants, defined herein.</td>
 </tr>
 <tr>
 <td>modifierHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
 <td>The activity may have 0-to-many modifiers: if it does, this will contain the hashesto the DestinyActivityModifierDefinition that defines the modifier being applied.</td>
 </tr>
 <tr>
@@ -115,9 +116,9 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
     "modifierHashes": [
        // Type: integer:uint32
         0

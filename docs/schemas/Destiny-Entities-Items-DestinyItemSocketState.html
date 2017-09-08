@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -98,7 +99,7 @@
 <tbody>
 <tr>
 <td>plugHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable</td>
 <td>The currently active plug, if any. Note that, because all plugs are statically defined, its effect on stats and perks can bestatically determined using the plug item's definition.  The stats and perks can be taken at facevalue on the plug item as the stats and perks it will provide to the user/item.</td>
 </tr>
 <tr>
@@ -113,14 +114,14 @@
 </tr>
 <tr>
 <td>reusablePlugHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]</td>
 <td>If the item supports reusable plugs, this is the list of plug item hashes that are currentlyallowed to be used for this socket.  (sometimes restrictions may cause reusable plugs defined on the item definition to not be valid, so you should trust the instanced reusablePlugHashes listrather than the definition's list) A Reusable Plug is a plug that you can <em>always</em> insert into this socket, regardless of whether or notyou have the plug in your inventory.  In practice, a socket will <em>either</em> have reusable plugs <em>or</em>it will allow for plugs in your inventory to be inserted.  See DestinyInventoryItemDefinition.socketfor more info.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
     "plugHash": 0,
     // Type: boolean
     "isEnabled": false,
@@ -129,7 +130,7 @@
        // Type: integer:int32
         0
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
     "reusablePlugHashes": [
        // Type: integer:uint32
         0

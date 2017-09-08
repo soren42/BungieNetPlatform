@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Definitions | BungieNetPlatform</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="BungieNetPlatform : A community run wiki for the Bungie.net Platform APIs.">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+
+	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1503802821">
+</head>
+
+<body>
+
+<div class="wrap">
+<!-- HEADER -->
+<!-- docs/Definitions.html | Definitions -->
+<header id="top" class="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#top-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="../" class="navbar-brand">BungieNetPlatform</a>
+		</div>
+		<nav id="top-nav" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+<li><li><a href="../">Home</a></li>
+<li><a href="../docs/Changelog">Changelog</a></li>
+<li><a href="#">Guides</a>
+<ul>
+<li><a href="../docs/Getting-Started">Getting Started</a></li>
+<li><a href="../docs/API-Details">API Details</a></li>
+<li><a href="../docs/Manifest">Manifest</a></li>
+<li><a href="../docs/Authentication">Authentication</a></li>
+<li><a href="../docs/Past-Authentication">Past Authentication</a></li>
+</ul></li>
+<li><a href="#">References</a>
+<ul>
+<li><a href="../docs/Components">Components</a></li>
+<li><a href="../docs/Definitions">Definitions</a></li>
+<li><a href="../docs/Endpoints">Endpoints</a></li>
+</ul></li>
+</ul>			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="wiki-search" ng-controller="SearchCtrl" wiki-search></div>
+	</div>
+</header>
+<div id="header">
+	<div class="container">
+		<h1>Definitions</h1>
+		<h2>A community run wiki for the Bungie.net Platform APIs.</h2>
+
+		<!--<section id="downloads">
+		  <a class="zip_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/zipball/master">Download this project as a .zip file</a>
+		  <a class="tar_download_link" href="https://github.com/DestinyDevs/BungieNetPlatform/tarball/master">Download this project as a tar.gz file</a>
+		</section>-->
+	</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	<div class="container">
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/Definitions.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
+<table class="table table-bordered parameters">
+<thead>
+<tr>
+<th>Name</th>
+<th>Manifest</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityChallengeDefinition">DestinyActivityChallengeDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Represents a reference to a Challenge, which for now is just an Objective.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">DestinyActivityGraphArtElementDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>These Art Elements are meant to represent one-off visual effects overlaid on the map.Currently, we do not have a pipeline to import the assets for these overlays, so this infoexists as a placeholder for when such a pipeline exists (if it ever will)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">DestinyActivityGraphConnectionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>Nodes on a graph can be visually connected: this appears to be the information about which nodes to link.It appears to lack more detailed information, such as the path for that linking.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">DestinyActivityGraphDisplayObjectiveDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>When a Graph needs to show active Objectives, this defines those objectives as well as an identifier.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">DestinyActivityGraphDisplayProgressionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>When a Graph needs to show active Progressions, this defines those objectives as well as an identifier.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Destinations and Activities may have default Activity Graphs that should be shownwhen you bring up the Director and are playing in either. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>The actual activity to be redirected to when you click on the node.Note that a node can have many Activities attached to it: but only one will be active at anygiven time.  The list of Node Activities will be traversed, and the first one found to be activewill be displayed.  This way, a node can layer multiple variants of an activity on top of each other.For instance, one node can control the weekly Crucible Playlist.  There are multiple possible playlists,but only one is active for the week.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">DestinyActivityGraphNodeDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>This is the position and other data related to nodes in the activity graph that you can clickto launch activities.  An Activity Graph node will only have one active Activity at a time,which will determine the activity to be launched (and, unless overrideDisplay information is provided,will also determine the tooltip and other UI related to the node)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>Nodes can have different visual states.  This object represents a single visual state (&quot;highlight type&quot;)that a node can be in, and the unlock expression condition to determine whether it should be set.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityGuidedBlockDefinition">DestinyActivityGuidedBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Guided Game information for this activity.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityMatchmakingBlockDefinition">DestinyActivityMatchmakingBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Information about matchmaking and party size for the activity.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityModifierReferenceDefinition">DestinyActivityModifierReferenceDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>A reference to an Activity Modifier from another entity, such as an Activity(for now, just Activities). (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityRewardDefinition">DestinyActivityRewardDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Activities can refer to one or more sets of tooltip-friendly reward data.  These are the definitionsfor those tooltip friendly rewards.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyActivityUnlockStringDefinition">DestinyActivityUnlockStringDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Represents a status string that could be conditionally displayed about an activity.Note that externally, you can only see the strings themselves.  Internally we combine this informationwith server state to determine which strings should be shown.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Animations-DestinyAnimationReference">DestinyAnimationReference</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Animations</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyBubbleDefinition">DestinyBubbleDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Basic identifying data about the bubble.  Combine with DestinyDestinationBubbleSettingDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyDefinition">DestinyDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Provides common properties for destiny definitions.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Items</i><br/>A shortcut for the fact that some items have a &quot;Preview Vendor&quot;- See DestinyInventoryItemDefinition.preview.previewVendorHash - that is intendedto be used to show what items you can get as a result of acquiring or using this item. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Items</i><br/>This is a reference to, and summary data for, a specific item thatyou can get as a result of Using or Acquiring some other Item (For example,this could be summary information for an Emote that you can get by opening an an Eververse Box)See DestinyDerivedItemCategoryDefinition for more information.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyDestinationBubbleSettingDefinition">DestinyDestinationBubbleSettingDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Human readable data about the bubble.  Combine with DestinyBubbleDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyDisplayCategoryDefinition">DestinyDisplayCategoryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Display Categories are different from &quot;categories&quot; in that these are specifically for visual groupingand display of categories in Vendor UI.  The &quot;categories&quot; structure is for validation of the containeditems, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will beno meaningful relationship between the two.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Common</i><br/>Many Destiny*Definition contracts - the &quot;first order&quot; entities of Destinythat have their own tables in the Manifest Database - also have displayableinformation.  This is the base class for that display information.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyEntitySearchResult">DestinyEntitySearchResult</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The results of a search for Destiny content.  This will be improved on over time,I've been doing some experimenting to see what might be useful.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyEntitySearchResultItem">DestinyEntitySearchResultItem</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>An individual Destiny Entity returned from the entity search.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Characters can not only have Inventory buckets (containers of items that are generally matched by their type orfunctionality), they can also have Equipment Slots. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyEquippingBlockDefinition">DestinyEquippingBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Items that can be equipped define this block.  It contains information we need tounderstand how and when the item can be equipped.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyGearArtArrangementReference">DestinyGearArtArrangementReference</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Sockets-DestinyInsertPlugActionDefinition">DestinyInsertPlugActionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Sockets</i><br/>Data related to what happens while a plug is being inserted, mostly for UI purposes.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Defines a specific stat value on an item, and the minimum/maximum range that we couldcompute for the item based on our heuristics for how the item might be generated. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemActionBlockDefinition">DestinyItemActionBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined hereif you care.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The definition of an item and quantity required in a character's inventory in order toperform an action.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemCreationEntryLevelDefinition">DestinyItemCreationEntryLevelDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>An overly complicated wrapper for the item level at which the item should spawn.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemGearsetBlockDefinition">DestinyItemGearsetBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>If an item has a related gearset, this is the list of items in that set, and an unlock expressionthat evaluates to a number representing the progress toward gearset completion (a very rare use forunlock expressions!)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemInventoryBlockDefinition">DestinyItemInventoryBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>If the item can exist in an inventory - the overwhelming majority of them can and do -then this is the basic properties regarding the item's relationship with the inventory.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Represents a &quot;raw&quot; investment stat, before calculated stats are calculatedand before any DestinyStatGroupDefinition is applied to transform the statinto something closer to what you see in-game. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition">DestinyItemObjectiveBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>An item can have objectives on it.  In practice, these are the exclusive purview of&quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemPerkEntryDefinition">DestinyItemPerkEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>An intrinsic perk on an item, and the requirements for it to be activated.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Items-DestinyItemPlugDefinition">DestinyItemPlugDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Items</i><br/>If an item is a Plug, its DestinyInventoryItemDefinition.plug property will be populatedwith an instance of one of these bad boys. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemPreviewBlockDefinition">DestinyItemPreviewBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Items like Sacks or Boxes can have items that it shows in-game when you view detailsthat represent the items you can obtain if you use or acquire the item. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemQualityBlockDefinition">DestinyItemQualityBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>An item's &quot;Quality&quot; determines its calculated stats.  The Level at which the item spawnsis combined with its &quot;qualityLevel&quot; along with some additional calculations to determinethe value of those stats. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSackBlockDefinition">DestinyItemSackBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Some items are &quot;sacks&quot; - they can be &quot;opened&quot; to produce other items.This is information related to its sack status, mostly UI strings.Engrams are an example of items that are considered to be &quot;Sacks&quot;.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSetBlockDefinition">DestinyItemSetBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Primarily for Quests, this is the definition of properties related to the item if it is a questand its various quest steps.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">DestinyItemSetBlockEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Defines a particular entry in an ItemSet (AKA a particular Quest Step in a Quest)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSocketBlockDefinition">DestinyItemSocketBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>If defined, the item has at least one socket.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Sockets are grouped into categories in the UI.  These define which categoryand which sockets are under that category.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The definition information for a specific socket on an item.This will determine how the socket behaves in-game.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The definition of a known, reusable plug that can be applied to a socket.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSourceBlockDefinition">DestinyItemSourceBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Data about an item's &quot;sources&quot;: ways that the item can be obtained.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">DestinyItemSourceDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Sources</i><br/>Properties of a DestinyInventoryItemDefinition that store all of the informationwe were able to discern about how the item spawns, and where you can find the item. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemStatBlockDefinition">DestinyItemStatBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Information about the item's calculated stats, with as much data as we can find for the statswithout having an actual instance of the item. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemSummaryBlockDefinition">DestinyItemSummaryBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This appears to be information used when rendering rewards.  We don't currently use it on BNet.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemTalentGridBlockDefinition">DestinyItemTalentGridBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This defines information that can only come from a talent grid on an item.Items mostly have negligible talent grid data these days, but instanced items still retaingrids as a source for some of this common information. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock">DestinyItemTierTypeInfusionBlock</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Items</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemTranslationBlockDefinition">DestinyItemTranslationBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This Block defines the rendering data associated with the item, if any.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyItemValueBlockDefinition">DestinyItemValueBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This defines an item's &quot;Value&quot;.Unfortunately, this appears to be used in different ways depending on the way that the item itselfis used. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphDefinition">DestinyLinkedGraphDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/>This describes links between the current graph and others, as well as when that link is relevant.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Director-DestinyLinkedGraphEntryDefinition">DestinyLinkedGraphEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Director</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyLocationReleaseDefinition">DestinyLocationReleaseDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time fora given Location.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Many actions relating to items require you to expend materials:- Activating a talent node- Inserting a plug into a socketThe items will refer to material requirements by a materialRequirementsHash in these cases, and thisis the definition for those requirements in terms of the item required, how much of it is required and otherinteresting info.This is one of the rare/strange times where a single contract class is used both in definitions <em>and</em>in live data response contracts.  I'm not sure yet whether I regret that.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Represent a set of material requirements: Items that either need to be owned or need to be consumedin order to perform an action. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>Milestones can have associated activities which provide additional information about the context, challenges, modifiers, state etc...related to this Milestone.   (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>Represents a variant on an activity for a Milestone: a specific difficulty tier, or a specific activity variant for example. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition">DestinyMilestoneQuestDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone.Even just typing this description, I already regret it.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>A subclass of DestinyItemQuantity, that provides not just the item and its quantitybut also information that BNet can - at some point - use internally to providemore robust runtime information about the item's qualities. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>If rewards are given in a quest - as opposed to overall in the entire Milestone - there's way lessto track.  We're going to simplify this contract as a result.  However, this also gives us theopportunity to potentially put more than just item information into the reward data if we're ableto mine it out in the future.  Remember this if you come back and ask &quot;why are quest reward itemsnested inside of their own class?&quot;</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition">DestinyMilestoneRewardCategoryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>The definition of a category of rewards, that contains many individual rewards.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition">DestinyMilestoneRewardEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>The definition of a specific reward, which may be contained in a category of rewards andthat has optional information about how it is obtained.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition">DestinyMilestoneValueDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>The definition for information related to a key/value pair that is relevant for a particular Milestone orcomponent within the Milestone.   (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition">DestinyMilestoneVendorDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Milestones</i><br/>If the Milestone or a component has vendors whose inventories could/should be displayed that are relevant to it,this will return the vendor in question.   (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyNodeActivationRequirement">DestinyNodeActivationRequirement</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Talent nodes have requirements that must be met before they can be activated. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyNodeSocketReplaceResponse">DestinyNodeSocketReplaceResponse</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This is a bit of an odd duck.  Apparently, if talent nodes steps have this data, the game will go through onstep activation and alter the first Socket it finds on the item that has a type matching the givensocket type, inserting the indicated plug item.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyNodeStepDefinition">DestinyNodeStepDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This defines the properties of a &quot;Talent Node Step&quot;.  When you see a talent nodein game, the actual visible properties that you see (its icon, description, theperks and stats it provides) are not provided by the Node itself, but rather by the currently active Step on the node. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Defines the conditions under which an intrinsic perk is applied while participating in an Objective. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">DestinyObjectiveStatEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Defines the conditions under which stat modifications will be applied to a Character whileparticipating in an objective.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Items</i><br/>Dictates a rule around whether the plug is enabled or insertable. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition">DestinyPlugWhitelistEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Sockets</i><br/>Defines a plug &quot;Category&quot; that is allowed to be plugged into a socket of this type. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Common</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyProgressionDisplayPropertiesDefinition">DestinyProgressionDisplayPropertiesDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Aggregations of multiple progressions. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Inventory Items can reward progression when actions are performed on them.  A common exampleof this in Destiny 1 was Bounties, which would reward Experience on your Character and the like when you completed the bounty. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">DestinyProgressionStepDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinitionfor caveats).</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Describes the way that an Item Stat (see DestinyStatDefinition) is transformedusing the DestinyStatGroupDefinition related to that item.  See both of the aforementioneddefinitions for more information about the stages of stat transformation. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">DestinyStatOverrideDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized textassociated with stats that are to be shown on the items with which they are associated. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyTalentExclusiveGroup">DestinyTalentExclusiveGroup</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyTalentNodeCategory">DestinyTalentNodeCategory</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>An artificial construct provided by Bungie.Net, where we attempt to group talent nodesby functionality. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyTalentNodeDefinition">DestinyTalentNodeDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Talent Grids on items have Nodes.  These nodes have positions in the talent grid's UI,and contain &quot;Steps&quot; (DestinyTalentNodeStepDefinition), one of whom will be the &quot;Current&quot; step. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyTalentNodeExclusiveSetDefinition">DestinyTalentNodeExclusiveSetDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The list of indexes into the Talent Grid's &quot;nodes&quot; property for nodes in thisexclusive set. (See DestinyTalentNodeDefinition.nodeIndex)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">DestinyTalentNodeStepGroups</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>These properties are an attempt to categorize talent node steps by certain common properties.  Seethe related enumerations for the type of properties being categorized.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyUnlockExpressionDefinition">DestinyUnlockExpressionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Where the sausage gets made.  Unlock Expressions are the foundation of the game's gatingmechanics and investment-related restrictions.  They can test Unlock Flags and Unlock Valuesfor certain states, using a sufficient amount of logical operators such thatunlock expressions are effectively Turing complete. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorAcceptedItemDefinition">DestinyVendorAcceptedItemDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>If you ever wondered how the Vault works, here it is. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorActionDefinition">DestinyVendorActionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>If a vendor can ever end up performing actions, these are the properties that will be relatedto those actions.  I'm not going to bother documenting this yet, as it is unused and unclear ifit will ever be used... but in case it is ever populated and someone finds it useful, it is defined here.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">DestinyVendorCategoryEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This is the definition for a single Vendor Category, into which Sale Items are grouped.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorCategoryOverlayDefinition">DestinyVendorCategoryOverlayDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The details of an overlay prompt to show to a user.  They are all fairlyself-explanatory localized strings that can be shown.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition">DestinyVendorDisplayPropertiesDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorInteractionDefinition">DestinyVendorInteractionDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>A Vendor Interaction is a dialog shown by the vendor other than sale items or transfer screens.The vendor is showing you something, and asking you to reply to it by choosing an option or reward.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorInteractionReplyDefinition">DestinyVendorInteractionReplyDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>When the interaction is replied to, Reward sites will fire and items potentially selected based onwhether the given unlock expression is TRUE. (truncated)</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorInteractionSackEntryDefinition">DestinyVendorInteractionSackEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Compare this sackType to the sack identifier in the DestinyInventoryItemDefinition.vendorSackTypeproperty of items.  If they match, show this sack with this interaction.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition">DestinyVendorInventoryFlyoutBucketDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Information about a single inventory bucket in a vendor flyout UI and how it is shown.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition">DestinyVendorInventoryFlyoutDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The definition for an &quot;inventory flyout&quot;: a UI screen where we show youpart of an otherwise hidden vendor inventory: like the Vault inventory buckets.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">DestinyVendorItemDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>This represents an item being sold by the vendor.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition">DestinyVendorRequirementDisplayEntryDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>The localized properties of the requirementsDisplay, allowing information about the requirement oritem being featured to be seen.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorSaleItemActionBlockDefinition">DestinyVendorSaleItemActionBlockDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>Not terribly useful, some basic cooldown interaction info.</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyVendorServiceDefinition">DestinyVendorServiceDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions</i><br/>When a vendor provides services, this is the localized name of those services.</td>
+</tr>
+</tbody>
+</table>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER  -->
+<footer id="footer">
+	<div class="container">
+		<p class="copyright">BungieNetPlatform maintained by <a href="https://github.com/DestinyDevs">DestinyDevs</a>.<br/>This is a community run wiki and is not offically supported by <a href="https://www.bungie.net">Bungie</a>.</p>
+	</div>
+</footer>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script src="../js/main.js?1458004654"></script>
+</body>
+</html>

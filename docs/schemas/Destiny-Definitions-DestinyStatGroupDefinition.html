@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>When an inventory item (DestinyInventoryItemDefinition) has Stats (such as Attack Power),the item will refer to a Stat Group.  This definition enumerates the properties used totransform the item's &quot;Investment&quot; stats into &quot;Display&quot; stats. See DestinyStatDefinition's documentation for information about the transformationof Stats, and the meaning of an Investment vs. a Display stat. If you don't want to do these calculations on your own, fear not: pulling live data fromthe BNet endpoints will return display stat values pre-computed and ready for you to use.I highly recommend this approach, saves a lot of time and also accounts for certain statmodifiers that can't easily be accounted for without live data (such as stat modifiers onTalent Grids and Socket Plugs)</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> StatGroups</li>
 </ul>
 <h2>Properties</h2>
@@ -143,7 +144,7 @@
     "scaledStats": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "maximumValue": 0,
@@ -164,7 +165,7 @@
     // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyStatOverrideDefinition">DestinyStatOverrideDefinition</a>:Definition&gt;
     "overrides": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
             // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
             "displayProperties": {

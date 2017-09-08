@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>A &quot;Location&quot; is a sort of shortcut for referring to a specificcombination of Activity, Destination, Place, and even Bubble or NavPoint withina space. Most of this data isn't intrinsically useful to us, but Objectives refer tolocations, and through that we can at least infer the Activity, Destination, and Placebeing referred to by the Objective.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> Locations</li>
 </ul>
 <h2>Properties</h2>
@@ -98,7 +99,7 @@
 <tbody>
 <tr>
 <td>vendorHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32</td>
 <td>If the location has a Vendor on it, this is the hash identifier for that Vendor.Look them up with DestinyVendorDefinition.</td>
 </tr>
 <tr>
@@ -125,7 +126,7 @@
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
     "vendorHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationReleaseDefinition">DestinyLocationReleaseDefinition</a>:Definition[]
     "locationReleases": [
@@ -144,9 +145,9 @@
             },
             // Type: integer:uint32
             "spawnPoint": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32
             "destinationHash": 0,
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0,
             // Type: integer:uint32
             "activityGraphHash": 0,

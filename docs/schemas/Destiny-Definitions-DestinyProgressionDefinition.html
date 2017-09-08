@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>A &quot;Progression&quot; in Destiny is best explained by an example. A Character's &quot;Level&quot; is a progression:it has Experience that can be earned, levels that can be gained, and is evaluated and displayed atvarious points in the game.  A Character's &quot;Faction Reputation&quot; is also a progression for much the same reason. Progression is used by a variety of systems, and the definition of a Progression will generally only be useful if combining with live data (such as a character's DestinyCharacterProgressionComponent.progressionsproperty, which holds that character's live Progression states). Fundamentally, a Progression measures your &quot;Level&quot; by evaluating the thresholds in its Steps (one step per level, exceptfor the last step which can be repeated indefinitely for &quot;Levels&quot; that have no ceiling) against the total earned&quot;progression points&quot;/experience. (for simplicity purposes, we will henceforth refer to earned progression points asexperience, though it need not be a mechanic that in any way resembles Experience in a traditional sense). Earned experience is calculated in a variety of ways, determined by the Progression's scope.  These go fromlooking up a stored value to performing exceedingly obtuse calculations.  This is why we provide live datain DestinyCharacterProgressionComponent.progressions, so you don't have to worry about those.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> Progressions</li>
 </ul>
 <h2>Properties</h2>
@@ -128,7 +129,7 @@
 </tr>
 <tr>
 <td>factionHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32:nullable</td>
 <td>If the value exists, this is the hash identifier for the Faction that owns this Progression. This is purely for convenience, if you're looking at a progression and want to know if and whoit's related to in terms of Faction Reputation.</td>
 </tr>
 <tr>
@@ -183,7 +184,7 @@
             "rewardItems": [
                // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -195,7 +196,7 @@
     ],
     // Type: boolean
     "visible": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">DestinyFactionDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32:nullable
     "factionHash": 0,
     // Type: integer:uint32
     "hash": 0,

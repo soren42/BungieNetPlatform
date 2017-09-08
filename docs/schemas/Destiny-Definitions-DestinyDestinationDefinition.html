@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>On to one of the more confusing subjects of the API.  What is a Destination, and whatis the relationship between it, Activities, Locations, and Places? A &quot;Destination&quot; is a specific region/city/area of a larger &quot;Place&quot;.For instance, a Place might be Earth where a Destination might be Bellevue, Washington.(Please, pick a more interesting destination if you come to visit Earth).</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> Destinations</li>
 </ul>
 <h2>Properties</h2>
@@ -103,12 +104,12 @@
 </tr>
 <tr>
 <td>placeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">DestinyPlaceDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32</td>
 <td>The place that &quot;owns&quot; this Destination.  Use this hash to look up the DestinyPlaceDefinition.</td>
 </tr>
 <tr>
 <td>defaultFreeroamActivityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>If this Destination has a default Free-Roam activity, this is the hash for that Activity.Use it to look up the DestinyActivityDefintion.</td>
 </tr>
 <tr>
@@ -156,15 +157,15 @@
         // Type: boolean
         "hasIcon": false
     },
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">DestinyPlaceDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32
     "placeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "defaultFreeroamActivityHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>:Definition[]
     "activityGraphEntries": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">DestinyActivityGraphDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">Destiny.Definitions.Director.DestinyActivityGraphDefinition</a>:integer:uint32
             "activityGraphHash": 0
         }
     ],

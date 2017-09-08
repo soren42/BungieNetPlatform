@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>Defines an &quot;Objective&quot;. An objective is a specific task you should accomplish in the game.  These are referred to by: - Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives) - Challenges (which are Objectives defined on an DestinyActivityDefintion) - Milestones (which refer to Objectives that are defined on both Quest Steps and Activities) - Anything else that the designers decide to do later. Objectives have progress, a notion of having been Completed, human readable data describing the taskto be accomplished, and a lot of optional tack-on data that can enhance the information provided aboutthe task.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> Objectives</li>
 </ul>
 <h2>Properties</h2>
@@ -108,7 +109,7 @@
 </tr>
 <tr>
 <td>locationHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">Destiny.Definitions.DestinyLocationDefinition</a>:integer:uint32</td>
 <td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished,if there is a location defined.  Look up the DestinyLocationDefinition for this hash for thatadditional location info.</td>
 </tr>
 <tr>
@@ -178,7 +179,7 @@
     },
     // Type: integer:int32
     "completionValue": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">DestinyLocationDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">Destiny.Definitions.DestinyLocationDefinition</a>:integer:uint32
     "locationHash": 0,
     // Type: boolean
     "allowNegativeValue": false,
@@ -192,7 +193,7 @@
     "progressDescription": "",
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a>:Definition
     "perks": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
         "perkHash": 0,
         // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum
         "style": 0
@@ -201,7 +202,7 @@
     "stats": {
         // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition
         "stat": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statTypeHash": 0,
             // Type: integer:int32
             "value": 0

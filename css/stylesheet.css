@@ -340,6 +340,11 @@ a[name] {
 #api-test .alert strong {
   color: inherit;
 }
+#api-test .param-field-type {
+  display: block;
+  padding: 10px 0 0;
+  font-size: 0.9em;
+}
 @media (min-width: 768px) {
   #api-test .form-group * + * + * {
     padding-left: 0;

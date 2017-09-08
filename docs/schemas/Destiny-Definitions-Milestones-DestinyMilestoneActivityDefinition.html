@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -84,6 +85,7 @@
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Type:</strong> object</li>
 </ul>
 <h2>Properties</h2>
 <table class="table table-bordered parameters">
@@ -97,24 +99,24 @@
 <tbody>
 <tr>
 <td>conceptualActivityHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
 <td>The &quot;Conceptual&quot; activity hash.  Basically, we picked the lowest level activityand are treating it as the canonical definition of the activity for rendering purposes. If you care about the specific difficulty modes and variations, use the activities under&quot;Variants&quot;.</td>
 </tr>
 <tr>
 <td>variants</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>:Definition&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>:Definition&gt;</td>
 <td>A milestone-referenced activity can have many variants, such as Tiers or alternative modes of play. Even if there is only a single variant, the details for these are represented within as a variant definition. It is assumed that, if this DestinyMilestoneActivityDefinition is active, then all variants should be active. If a Milestone could ever split the variants' active status conditionally, they should all have their own DestinyMilestoneActivityDefinition instead!  The potential duplication will be worth it for the obviousness of processingand use.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "conceptualActivityHash": 0,
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>:Definition&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition">DestinyMilestoneActivityVariantDefinition</a>:Definition&gt;
     "variants": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0,
             // Type: integer:int32
             "order": 0

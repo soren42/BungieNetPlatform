@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -104,7 +105,7 @@
 </tr>
 <tr>
 <td>itemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
 <td>The hash of the item being sold, as a quick shortcut for looking up the DestinyInventoryItemDefinitionof the sale item.</td>
 </tr>
 <tr>
@@ -119,7 +120,7 @@
 </tr>
 <tr>
 <td>requiredUnlocks</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]</td>
 <td>If you can't buy the item due to a complex character state, these will be hashes forDestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlockshave human readable information: it is not guaranteed that Unlocks will have human readable strings, andyour application will have to handle that) Prefer using failureIndexes instead.  These are provided for informational purposes, but have largelybeen supplanted by failureIndexes.</td>
 </tr>
 <tr>
@@ -138,7 +139,7 @@
 <pre><code class="javascript">{
     // Type: integer:int32
     "vendorItemIndex": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "itemHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">VendorItemStatus</a>:Enum
     "saleStatus": 0,
@@ -146,7 +147,7 @@
     "costs": [
        // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
@@ -154,7 +155,7 @@
             "quantity": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:ManifestDefinition:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]
     "requiredUnlocks": [
        // Type: integer:uint32
         0
@@ -163,7 +164,7 @@
     "unlockStatuses": [
        // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">DestinyUnlockDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32
             "unlockHash": 0,
             // Type: boolean
             "isSet": false

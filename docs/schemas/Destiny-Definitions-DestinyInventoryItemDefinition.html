@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>So much of what you see in Destiny is actually an Item used in a new and creative way.This is the definition for Items in Destiny, which started off as just entities that could existin your Inventory but ended up being the backing data for so much more: quests, reward previews,slots, and subclasses. In practice, you will want to associate this data with &quot;live&quot; item datafrom a Bungie.Net Platform call: these definitions describe the item in generic, non-instancedterms: but an actual instance of an item can vary widely from these generic definitions.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> Items</li>
 </ul>
 <h2>Properties</h2>
@@ -238,12 +239,12 @@
 </tr>
 <tr>
 <td>loreHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable</td>
 <td>If the item has any related Lore (DestinyLoreDefinition), this will be the hash identifier you can useto look up the lore definition.</td>
 </tr>
 <tr>
 <td>summaryItemHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable</td>
 <td>There are times when the game will show you a &quot;summary/vague&quot; version of an item - such as a description of its typerepresented as a DestinyInventoryItemDefinition - rather than display the item itself. This happens sometimes when summarizing possible rewards in a tooltip.  This is the item displayed instead, ifit exists.</td>
 </tr>
 <tr>
@@ -268,7 +269,7 @@
 </tr>
 <tr>
 <td>itemCategoryHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">DestinyItemCategoryDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]</td>
 <td>BNet attempts to make a more formal definition of item &quot;Categories&quot;, as defined by DestinyItemCategoryDefinition.  This is a list of all Categories that we were able toalgorithmically determine that this item is a member of.  (for instance, that it's a &quot;Weapon&quot;,that it's an &quot;Auto Rifle&quot;, etc...) The algorithm for these is, unfortunately, volatile.  If you believe you see a miscategorizeditem, please let us know on the Bungie API forums.</td>
 </tr>
 <tr>
@@ -298,7 +299,7 @@
 </tr>
 <tr>
 <td>damageTypeHashes</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32[]</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32[]</td>
 <td>Theoretically, an item can have many possible damage types.  In <em>practice</em>, this is not true,but just in case weapons start being made that have multiple (for instance, an item where a sockethas reusable plugs for every possible damage type that you can choose from freely), this fieldwill return all of the possible damage types that are available to the weapon by default.</td>
 </tr>
 <tr>
@@ -313,7 +314,7 @@
 </tr>
 <tr>
 <td>defaultDamageTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable</td>
 <td>Similar to defaultDamageType, but represented as the hash identifier for a DestinyDamageTypeDefinition. I will likely regret leaving in the enumeration versions of these properties, but for now they'revery convenient.</td>
 </tr>
 <tr>
@@ -382,7 +383,7 @@
             {
                 // Type: integer:int32
                 "count": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                 "itemHash": 0,
                 // Type: boolean
                 "deleteOnAction": false
@@ -419,11 +420,11 @@
         "stackUniqueLabel": "",
         // Type: integer:int32
         "maxStackSize": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
         "bucketTypeHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">DestinyInventoryBucketDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
         "recoveryBucketTypeHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeDefinition">DestinyItemTierTypeDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeDefinition">Destiny.Definitions.Items.DestinyItemTierTypeDefinition</a>:integer:uint32
         "tierTypeHash": 0,
         // Type: boolean
         "isInstanceItem": false,
@@ -440,7 +441,7 @@
             {
                 // Type: integer:int32
                 "trackingValue": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                 "itemHash": 0
             }
         ],
@@ -453,12 +454,12 @@
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemStatBlockDefinition">DestinyItemStatBlockDefinition</a>:Definition
     "stats": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">DestinyStatGroupDefinition</a>:ManifestDefinition:integer:uint32:nullable
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">Destiny.Definitions.DestinyStatGroupDefinition</a>:integer:uint32:nullable
         "statGroupHash": 0,
-        // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
+        // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
         "stats": {
             "0": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                 "statHash": 0,
                 // Type: integer:int32
                 "value": 0,
@@ -470,12 +471,12 @@
         },
         // Type: boolean
         "hasDisplayableStats": false,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
         "primaryBaseStatHash": 0
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquippingBlockDefinition">DestinyEquippingBlockDefinition</a>:Definition
     "equippingBlock": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
         "gearsetItemHash": 0,
         // Type: string
         "uniqueLabel": "",
@@ -542,7 +543,7 @@
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemPreviewBlockDefinition">DestinyItemPreviewBlockDefinition</a>:Definition
     "preview": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
         "previewVendorHash": 0,
         // Type: string
         "previewActionString": "",
@@ -586,7 +587,7 @@
         "infusionCategoryName": "",
         // Type: integer:uint32
         "infusionCategoryHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition">DestinyProgressionLevelRequirementDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition">Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition</a>:integer:uint32
         "progressionLevelRequirementHash": 0
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemValueBlockDefinition">DestinyItemValueBlockDefinition</a>:Definition
@@ -595,7 +596,7 @@
         "itemValue": [
            // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                 "itemHash": 0,
                 // Type: integer:int64:nullable
                 "itemInstanceId": 0,
@@ -608,7 +609,7 @@
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSourceBlockDefinition">DestinyItemSourceBlockDefinition</a>:Definition
     "sourceData": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:ManifestDefinition:integer:uint32[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">Destiny.Definitions.DestinyRewardSourceDefinition</a>:integer:uint32[]
         "sourceHashes": [
            // Type: integer:uint32
             0
@@ -630,7 +631,7 @@
                 // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
                 "computedStats": {
                     "0": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
                         "statHash": 0,
                         // Type: integer:int32
                         "value": 0,
@@ -640,7 +641,7 @@
                         "maximum": 0
                     }
                 },
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">DestinyRewardSourceDefinition</a>:ManifestDefinition:integer:uint32[]
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">Destiny.Definitions.DestinyRewardSourceDefinition</a>:integer:uint32[]
                 "sourceHashes": [
                    // Type: integer:uint32
                     0
@@ -652,19 +653,19 @@
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition">DestinyItemObjectiveBlockDefinition</a>:Definition
     "objectives": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]
         "objectiveHashes": [
            // Type: integer:uint32
             0
         ],
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">DestinyActivityDefinition</a>:ManifestDefinition:integer:uint32[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32[]
         "displayActivityHashes": [
            // Type: integer:uint32
             0
         ],
         // Type: boolean
         "requireFullObjectiveCompletion": false,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
         "questlineItemHash": 0,
         // Type: string
         "narrative": "",
@@ -693,7 +694,7 @@
         "onActionRecreateSelf": false,
         // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32
         "insertionMaterialRequirementHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
         "previewItemOverrideHash": 0,
         // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32
         "enabledMaterialRequirementHash": 0,
@@ -710,7 +711,7 @@
     "gearset": {
         // Type: integer:int32
         "trackingValueMax": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32[]
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
         "itemList": [
            // Type: integer:uint32
             0
@@ -735,15 +736,15 @@
         "socketEntries": [
            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a>:Definition
             {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">DestinySocketTypeDefinition</a>:ManifestDefinition:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">Destiny.Definitions.Sockets.DestinySocketTypeDefinition</a>:integer:uint32
                 "socketTypeHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                 "singleInitialItemHash": 0,
                 // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition[]
                 "reusablePlugItems": [
                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition
                     {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                         "plugItemHash": 0
                     }
                 ]
@@ -770,7 +771,7 @@
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemTalentGridBlockDefinition">DestinyItemTalentGridBlockDefinition</a>:Definition
     "talentGrid": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">DestinyTalentGridDefinition</a>:ManifestDefinition:integer:uint32
+        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32
         "talentGridHash": 0,
         // Type: string
         "itemDetailString": "",
@@ -785,7 +786,7 @@
     "investmentStats": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statTypeHash": 0,
             // Type: integer:int32
             "value": 0
@@ -797,13 +798,13 @@
         {
             // Type: string
             "requirementDisplayString": "",
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">DestinySandboxPerkDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
             "perkHash": 0
         }
     ],
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">DestinyLoreDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable
     "loreHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
     "summaryItemHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Animations-DestinyAnimationReference">DestinyAnimationReference</a>:Definition[]
     "animations": [
@@ -831,7 +832,7 @@
     ],
     // Type: boolean
     "nonTransferrable": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">DestinyItemCategoryDefinition</a>:ManifestDefinition:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]
     "itemCategoryHashes": [
        // Type: integer:uint32
         0
@@ -846,7 +847,7 @@
     "classType": 0,
     // Type: boolean
     "equippable": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32[]
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32[]
     "damageTypeHashes": [
        // Type: integer:uint32
         0
@@ -858,7 +859,7 @@
     ],
     // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
     "defaultDamageType": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">DestinyDamageTypeDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
     "defaultDamageTypeHash": 0,
     // Type: integer:uint32
     "hash": 0,

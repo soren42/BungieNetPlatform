@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -98,12 +99,12 @@
 <tbody>
 <tr>
 <td>statGroupHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">DestinyStatGroupDefinition</a>:ManifestDefinition:integer:uint32:nullable</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">Destiny.Definitions.DestinyStatGroupDefinition</a>:integer:uint32:nullable</td>
 <td>If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this willbe the identifier for that definition. If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.statsproperty, you don't have to worry about statGroupHash and how it alters stats: the already alteredstats are provided to you.  But if you want to see how the sausage gets made, or perform computationsyourself, this is valuable information.</td>
 </tr>
 <tr>
 <td>stats</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;</td>
 <td>If you are looking for precomputed values for the stats on a weapon, this is where they are stored.Technically these are the &quot;Display&quot; stat values.  Please see DestinyStatsDefinition for whatDisplay Stat Values means, it's a very long story... but essentially these are the closest valuesBNet can get to the item stats that you see in-game. These stats are keyed by the DestinyStatDefinition's hash identifier for the statthat's found on the item.</td>
 </tr>
 <tr>
@@ -113,19 +114,19 @@
 </tr>
 <tr>
 <td>primaryBaseStatHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
 <td>This stat is determined to be the &quot;primary&quot; stat, and can be looked up in the stats or anyother stat collection related to the item. Use this hash to look up the stat's value using DestinyInventoryItemDefinition.stats.stats,and the renderable data for the primary stat in the related DestinyStatDefinition.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">DestinyStatGroupDefinition</a>:ManifestDefinition:integer:uint32:nullable
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">Destiny.Definitions.DestinyStatGroupDefinition</a>:integer:uint32:nullable
     "statGroupHash": 0,
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
     "stats": {
         "0": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -137,7 +138,7 @@
     },
     // Type: boolean
     "hasDisplayableStats": false,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">DestinyStatDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
     "primaryBaseStatHash": 0
 }
 </code></pre>

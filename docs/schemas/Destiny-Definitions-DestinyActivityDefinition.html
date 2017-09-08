@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -83,7 +84,7 @@
 <p>The static data about Activities in Destiny 2. Note that an Activity must be combined with an ActivityMode to know - from a Gameplay perspective -what the user is &quot;Playing&quot;. In most PvE activities, this is fairly straightforward.  A Story Activity can only be played in the StoryActivity Mode. However, in PvP activities, the Activity alone only tells you the map being played, or the Playlist that the userchose to enter.  You'll need to know the Activity Mode they're playing to know that they're playing Mode X on Map Y. Activity Definitions tell a great deal of information about what <em>could</em> be relevant to a user: what rewards theycan earn, what challenges could be performed, what modifiers could be applied.  To figure out which of these propertiesis actually live, you'll need to combine the definition with &quot;Live&quot; data from one of the Destiny endpoints. Activities also have Activity Types, but unfortunately in Destiny 2 these are even less reliable of a source ofinformation than they were in Destiny 1.  I will be looking into ways to provide more reliable sources for type informationas time goes on, but for now we're going to have to deal with the limitations.  See DestinyActivityTypeDefinitionfor more information.</p>
 <h2>Schema</h2>
 <ul>
-<li><strong>Schema Type:</strong> Definition</li>
+<li><strong>Schema Type:</strong> Manifest Definition</li>
 <li><strong>Mobile Manifest:</strong> Activities</li>
 </ul>
 <h2>Properties</h2>
@@ -123,17 +124,17 @@
 </tr>
 <tr>
 <td>destinationHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the Destination on which this Activity is played.  Use it to look upthe DestinyDestinationDefinition for human readable info about the destination.A Destination can be thought of as a more specific location than a &quot;Place&quot;.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
 </tr>
 <tr>
 <td>placeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">DestinyPlaceDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the &quot;Place&quot; on which this Activity is played.  Use it to look upthe DestinyPlaceDefinition for human readable info about the Place.A Place is the largest-scoped concept for location information.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
 </tr>
 <tr>
 <td>activityTypeHash</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:ManifestDefinition:integer:uint32</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32</td>
 <td>The hash identifier for the Activity Type of this Activity.  You may use it to look upthe DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists andmany PVP Map Activities will map to generic Activity Types.  You'll have to use your knowledgeof the Activity Mode being played to get more specific information about what the user is playing.</td>
 </tr>
 <tr>
@@ -234,11 +235,11 @@
     "activityLevel": 0,
     // Type: integer:int32
     "activityLightLevel": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">DestinyDestinationDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32
     "destinationHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">DestinyPlaceDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32
     "placeHash": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">DestinyActivityTypeDefinition</a>:ManifestDefinition:integer:uint32
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
     "activityTypeHash": 0,
     // Type: integer:int32
     "tier": 0,
@@ -254,7 +255,7 @@
             "rewardItems": [
                // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
                 {
-                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">DestinyInventoryItemDefinition</a>:ManifestDefinition:integer:uint32
+                    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -268,7 +269,7 @@
     "modifiers": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModifierReferenceDefinition">DestinyActivityModifierReferenceDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">DestinyActivityModifierDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32
             "activityModifierHash": 0
         }
     ],
@@ -278,7 +279,7 @@
     "challenges": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityChallengeDefinition">DestinyActivityChallengeDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">DestinyObjectiveDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
             "objectiveHash": 0
         }
     ],
@@ -294,7 +295,7 @@
     "activityGraphList": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>:Definition
         {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">DestinyActivityGraphDefinition</a>:ManifestDefinition:integer:uint32
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition">Destiny.Definitions.Director.DestinyActivityGraphDefinition</a>:integer:uint32
             "activityGraphHash": 0
         }
     ],

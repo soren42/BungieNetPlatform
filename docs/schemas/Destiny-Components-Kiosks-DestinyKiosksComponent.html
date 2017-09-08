@@ -52,6 +52,7 @@
 <li><a href="#">References</a>
 <ul>
 <li><a href="../../docs/Components">Components</a></li>
+<li><a href="../../docs/Definitions">Definitions</a></li>
 <li><a href="../../docs/Endpoints">Endpoints</a></li>
 </ul></li>
 </ul>			<ul class="nav navbar-nav navbar-right">
@@ -99,14 +100,14 @@
 <tbody>
 <tr>
 <td>kioskItems</td>
-<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;</td>
+<td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;</td>
 <td>A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinitionfor the relevant kiosk vendor), and whose value is a list of all the items that the user can &quot;see&quot; inthe Kiosk, and any other interesting metadata.</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
-    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">DestinyVendorDefinition</a>:ManifestDefinition:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
+    // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>[]&gt;
     "kioskItems": {
         "0": [
            // Type: <a href="../../docs/schemas/Destiny-Components-Kiosks-DestinyKioskItem">DestinyKioskItem</a>
