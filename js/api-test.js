@@ -48,7 +48,7 @@ angular.module('api-test', [])
 					if (isUndefined == undefined) isUndefined = false;
 
 					var paramField = scope.paramField;
-					console.log('UpdateValue', value, paramField);
+					//console.log('UpdateValue', value, paramField);
 					if (scope.paramModel !== undefined) {
 						if (isUndefined && scope.paramModel[scope.paramModelId] != undefined) return;
 						scope.paramModel[scope.paramModelId] = value;
@@ -70,7 +70,7 @@ angular.module('api-test', [])
 						value = scope.$parent.params[paramField.in][paramField.name];
 					}
 
-					console.log('GetValue', value, defaultValue);
+					//console.log('GetValue', value, defaultValue);
 
 					if (paramField.schema && paramField.schema.type == 'array') {
 						if (value == undefined) value = [value];
@@ -96,7 +96,9 @@ angular.module('api-test', [])
 						//console.log('ParamFieldSchema', schema);
 						if (schema.$ref) {
 							var ref = schema.$ref.split('/');
-							var schemaRef = OpenApi.components.schemas[ref[ref.length-1]];
+							var refId = ref[ref.length-1];
+							var schemaRef = OpenApi.components.schemas[refId];
+							schemaRef.name = refId;
 							//console.log('ParamFieldSchemaRef', schemaRef);
 							schema = schemaRef;
 						}
@@ -115,7 +117,7 @@ angular.module('api-test', [])
 										//if (enumInfo.numericValue == '-1') defaultValue = '-1';
 									}
 									html += '</select>';
-									typeName = 'Enum / '+typeName;
+									typeName = '<a href="schemas/'+schema.name.replace(/[\.\[\]<>]/g, '-')+'" target="_blank">'+schema.name+' (Enum)</a> / '+typeName;
 
 									scope.updateValue(defaultValue, true);
 								} else {
