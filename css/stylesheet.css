@@ -345,6 +345,24 @@ a[name] {
   padding: 10px 0 0;
   font-size: 0.9em;
 }
+#api-test .param-field-rows {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+}
+#api-test .param-field-row {
+  margin-bottom: 10px;
+}
+#api-test .param-field-row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#api-test .param-field-row .btn {
+  float: right;
+}
+#api-test .param-field-row > div {
+  margin-right: 80px;
+}
 @media (min-width: 768px) {
   #api-test .form-group * + * + * {
     padding-left: 0;

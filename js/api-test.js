@@ -44,13 +44,17 @@ angular.module('api-test', [])
 			},
 			link: function(scope, elem, attrs) {
 
-				scope.updateValue = function(value) {
+				scope.updateValue = function(value, isUndefined) {
+					if (isUndefined == undefined) isUndefined = false;
+
 					var paramField = scope.paramField;
 					console.log('UpdateValue', value, paramField);
 					if (scope.paramModel !== undefined) {
+						if (isUndefined && scope.paramModel[scope.paramModelId] != undefined) return;
 						scope.paramModel[scope.paramModelId] = value;
 
 					} else if (paramField.in && paramField.name) {
+						if (isUndefined && scope.$parent.params[paramField.in][paramField.name] != undefined) return;
 						scope.$parent.params[paramField.in][paramField.name] = value;
 					}
 				};
@@ -88,14 +92,14 @@ angular.module('api-test', [])
 									for (var i=0; i<schema['x-enum-values'].length; i++) {
 										var enumInfo = schema['x-enum-values'][i];
 										html += '<option value="'+enumInfo.numericValue+'">'+enumInfo.identifier+' ['+enumInfo.numericValue+']</option>';
-										if (enumInfo.numericValue == '-1') defaultValue = '-1';
+										//if (enumInfo.numericValue == '-1') defaultValue = '-1';
 									}
 									html += '</select>';
 									typeName = 'Enum / '+typeName;
 
-									scope.updateValue(defaultValue);
+									scope.updateValue(defaultValue, true);
 								} else {
-									html = '<input type="number" ng-model="'+paramFieldModel+'" placeholder="" class="form-control"'+(paramField.required ? ' required' : '')+' />';
+									html = '<input type="text" ng-model="'+paramFieldModel+'" placeholder="" class="form-control"'+(paramField.required ? ' required' : '')+' />';
 								}
 								break;
 							case 'boolean':
@@ -104,7 +108,7 @@ angular.module('api-test', [])
 							case 'array':
 								html = '<div class="param-field-rows">'
 									+'<div class="param-field-row" ng-repeat="arrayRow in array track by $index">'
-										+'<a class="btn btn-remove" ng-click="removeRow(arrayRow)">Remove</a>'
+										+'<a class="btn btn-danger" ng-click="removeRow(arrayRow)">Remove</a>'
 										+'<div param-field="arrayField" param-model="array" param-model-id="$index"></div>'
 									+'</div>'
 								+'</div>';
@@ -114,7 +118,7 @@ angular.module('api-test', [])
 								console.log('ParamFieldSchemaRef', schemaRef);
 
 								scope.arrayField = {schema: schema.items};
-								scope.array = [''];
+								scope.array = [undefined];
 								scope.addRow = function() {
 									scope.array.push('');
 								};
