@@ -59,13 +59,33 @@ angular.module('api-test', [])
 					}
 				};
 
+				scope.getValue = function(defaultValue) {
+					var paramField = scope.paramField;
+
+					var value = defaultValue;
+
+					if (scope.paramModel !== undefined) {
+						value = scope.paramModel[scope.paramModelId];
+					} else if (paramField.in && paramField.name) {
+						value = scope.$parent.params[paramField.in][paramField.name];
+					}
+
+					console.log('GetValue', value, defaultValue);
+
+					if (paramField.schema && paramField.schema.type == 'array') {
+						if (value == undefined) value = [value];
+						if (typeof value == 'string') value = value.split(',');
+					}
+					return value;
+				};
+
 				scope.$watch('paramField', function(paramField) {
-					console.log('ParamField', paramField);
+					//console.log('ParamField', paramField);
 
 					var paramFieldModel = '$parent.params.'+paramField.in+'.'+paramField.name;
 
 					if (scope.paramModel !== undefined) {
-						console.log('ParamFieldModel', attrs.paramModel, scope.paramModel);
+						//console.log('ParamFieldModel', attrs.paramModel, scope.paramModel);
 						paramFieldModel = 'paramModel['+scope.paramModelId+']';
 					}
 
@@ -73,11 +93,11 @@ angular.module('api-test', [])
 
 					if (paramField.schema) {
 						var schema = paramField.schema;
-						console.log('ParamFieldSchema', schema);
+						//console.log('ParamFieldSchema', schema);
 						if (schema.$ref) {
 							var ref = schema.$ref.split('/');
 							var schemaRef = OpenApi.components.schemas[ref[ref.length-1]];
-							console.log('ParamFieldSchemaRef', schemaRef);
+							//console.log('ParamFieldSchemaRef', schemaRef);
 							schema = schemaRef;
 						}
 
@@ -115,19 +135,19 @@ angular.module('api-test', [])
 
 								//var ref = schema.$ref.split('/');
 								//var schemaRef = OpenApi.components.schemas[ref[ref.length-1]];
-								console.log('ParamFieldSchemaRef', schemaRef);
+								//console.log('ParamFieldSchemaRef', schemaRef);
 
 								scope.arrayField = {schema: schema.items};
-								scope.array = [undefined];
+								scope.array = scope.getValue([undefined]);
 								scope.addRow = function() {
-									scope.array.push('');
+									scope.array.push(undefined);
 								};
 								scope.removeRow = function(row) {
 									scope.array.splice(scope.array.indexOf(row), 1);
 								};
 
 								scope.$watch('array', function(array) {
-									console.log('ParamFieldArrayChanged', array);
+									//console.log('ParamFieldArrayChanged', array);
 									scope.updateValue(array.join(','));
 								}, true);
 
@@ -404,10 +424,8 @@ angular.module('api-test', [])
 
 			if (!hasDefaults) return;
 
-			var defaults = share[2];
-
 			for (var j = 2; j < share.length; j++) {
-				var type = defaults.slice(0, 1);
+				var type = share[j].slice(0, 1);
 				var paramData = false;
 				switch (type) {
 					case 'p': paramData = $scope.params.path; break;
@@ -416,7 +434,7 @@ angular.module('api-test', [])
 				}
 				if (!paramData) return;
 
-				var params = defaults.slice(2).split(',');
+				var params = share[j].slice(2).split(',');
 				for (var k = 0; k < params.length; k++) {
 					var param = params[k].split('=');
 					var paramKey = param[0];
@@ -428,6 +446,8 @@ angular.module('api-test', [])
 					paramData[paramKey] = paramValue;
 				}
 			}
+
+			console.log('ShareDefaults', JSON.stringify($scope.params));
 		};
 		$scope.loadShare = function (share) {
 			if (!share) return;
@@ -584,7 +604,7 @@ angular.module('api-test', [])
 
 			var params = $scope.params;
 
-			console.log('BuildRequest', params);
+			//console.log('BuildRequest', params);
 
 			var url = bnetBase/*'/Platform'*/ + $scope.endpoint.endpoint;
 
@@ -610,6 +630,8 @@ angular.module('api-test', [])
 				withCredentials: true,
 				headers: headers
 			};
+
+			//console.log('BuildOptions', options);
 
 			// Legacy code
 			if (params.json != undefined && Object.keys(params.json).length > 0) {

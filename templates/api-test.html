@@ -45,7 +45,7 @@
 		<label class="col-sm-2 control-label">Endpoint</label>
 		<div class="col-sm-10">
 			<select class="form-control" ng-model="endpoint" ng-options="endpoint.name group by endpoint.service for endpoint in endpoints"></select>
-			<a href="{{service}}/{{endpoint.name}}" class="read-more" target="_blank">{{endpoint.name}} Documentation</a>
+			<a href="services/{{service}}/{{endpoint.name}}" class="read-more" target="_blank">{{endpoint.name}} Documentation</a>
 			<ul class="endpoint-info">
 				<li><strong>URI:</strong> {{endpoint.endpoint}}</li>
 				<li><strong>Method:</strong> {{endpoint.method}}</li>
