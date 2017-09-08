@@ -402,7 +402,7 @@ angular.module('api-test', [])
 
 			var defaults = share[2];
 
-			//for (var j = 1; j < share.length; j++) {
+			for (var j = 2; j < share.length; j++) {
 				var type = defaults.slice(0, 1);
 				var paramData = false;
 				switch (type) {
@@ -423,7 +423,7 @@ angular.module('api-test', [])
 					//console.log('Param['+paramKey+']', paramValue);
 					paramData[paramKey] = paramValue;
 				}
-			//}
+			}
 		};
 		$scope.loadShare = function (share) {
 			if (!share) return;
