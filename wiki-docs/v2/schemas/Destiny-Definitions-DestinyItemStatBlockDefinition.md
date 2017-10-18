@@ -10,20 +10,20 @@ Information about the item's calculated stats, with as much data as we can find 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-statGroupHash | [[DestinyStatGroupDefinition|Destiny-Definitions-DestinyStatGroupDefinition]]:ManifestDefinition:integer:uint32:nullable | If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this willbe the identifier for that definition. If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.statsproperty, you don't have to worry about statGroupHash and how it alters stats: the already alteredstats are provided to you.  But if you want to see how the sausage gets made, or perform computationsyourself, this is valuable information.
-stats | Dictionary&lt;[[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt; | If you are looking for precomputed values for the stats on a weapon, this is where they are stored.Technically these are the &quot;Display&quot; stat values.  Please see DestinyStatsDefinition for whatDisplay Stat Values means, it's a very long story... but essentially these are the closest valuesBNet can get to the item stats that you see in-game. These stats are keyed by the DestinyStatDefinition's hash identifier for the statthat's found on the item.
+statGroupHash | [[Destiny.Definitions.DestinyStatGroupDefinition|Destiny-Definitions-DestinyStatGroupDefinition]]:integer:uint32:nullable | If the item's stats are meant to be modified by a DestinyStatGroupDefinition, this willbe the identifier for that definition. If you are using live data or precomputed stats data on the DestinyInventoryItemDefinition.stats.statsproperty, you don't have to worry about statGroupHash and how it alters stats: the already alteredstats are provided to you.  But if you want to see how the sausage gets made, or perform computationsyourself, this is valuable information.
+stats | Dictionary&lt;[[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt; | If you are looking for precomputed values for the stats on a weapon, this is where they are stored.Technically these are the &quot;Display&quot; stat values.  Please see DestinyStatsDefinition for whatDisplay Stat Values means, it's a very long story... but essentially these are the closest valuesBNet can get to the item stats that you see in-game. These stats are keyed by the DestinyStatDefinition's hash identifier for the statthat's found on the item.
 hasDisplayableStats | boolean | A quick and lazy way to determine whether any stat other than the &quot;primary&quot; stat is actuallyvisible on the item.  Items often have stats that we return in case people find them useful, butthey're not part of the &quot;Stat Group&quot; and thus we wouldn't display them in our UI.  If this is False,then we're not going to display any of these stats other than the primary one.
-primaryBaseStatHash | [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32 | This stat is determined to be the &quot;primary&quot; stat, and can be looked up in the stats or anyother stat collection related to the item. Use this hash to look up the stat's value using DestinyInventoryItemDefinition.stats.stats,and the renderable data for the primary stat in the related DestinyStatDefinition.
+primaryBaseStatHash | [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32 | This stat is determined to be the &quot;primary&quot; stat, and can be looked up in the stats or anyother stat collection related to the item. Use this hash to look up the stat's value using DestinyInventoryItemDefinition.stats.stats,and the renderable data for the primary stat in the related DestinyStatDefinition.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyStatGroupDefinition|Destiny-Definitions-DestinyStatGroupDefinition]]:ManifestDefinition:integer:uint32:nullable
+    // Type: [[Destiny.Definitions.DestinyStatGroupDefinition|Destiny-Definitions-DestinyStatGroupDefinition]]:integer:uint32:nullable
     "statGroupHash": 0,
-    // Type: Dictionary&lt;[[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt;
+    // Type: Dictionary&lt;[[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt;
     "stats": {
         "0": {
-            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -35,7 +35,7 @@ primaryBaseStatHash | [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDef
     },
     // Type: boolean
     "hasDisplayableStats": false,
-    // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
     "primaryBaseStatHash": 0
 }
 

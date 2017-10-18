@@ -11,12 +11,12 @@ A Kiosk is a Vendor (DestinyVendorDefinition) that sells items based on whether 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-kioskItems | Dictionary&lt;[[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32,[[DestinyKioskItem|Destiny-Components-Kiosks-DestinyKioskItem]][]&gt; | A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinitionfor the relevant kiosk vendor), and whose value is a list of all the items that the user can &quot;see&quot; inthe Kiosk, and any other interesting metadata.
+kioskItems | Dictionary&lt;[[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32,[[DestinyKioskItem|Destiny-Components-Kiosks-DestinyKioskItem]][]&gt; | A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinitionfor the relevant kiosk vendor), and whose value is a list of all the items that the user can &quot;see&quot; inthe Kiosk, and any other interesting metadata.
 
 ## Example
 ```javascript
 {
-    // Type: Dictionary&lt;[[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32,[[DestinyKioskItem|Destiny-Components-Kiosks-DestinyKioskItem]][]&gt;
+    // Type: Dictionary&lt;[[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32,[[DestinyKioskItem|Destiny-Components-Kiosks-DestinyKioskItem]][]&gt;
     "kioskItems": {
         "0": [
            // Type: [[DestinyKioskItem|Destiny-Components-Kiosks-DestinyKioskItem]]

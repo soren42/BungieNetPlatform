@@ -4,7 +4,7 @@
 In Destiny, &quot;Races&quot; are really more like &quot;Species&quot;.  Sort of.  I mean, are the Awoken a separate species fromhumans?  I'm not sure.  But either way, they're defined here.  You'll see Exo, Awoken, and Human as examplesof these Species.  Players will choose one for their character.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Races
 
 ## Properties

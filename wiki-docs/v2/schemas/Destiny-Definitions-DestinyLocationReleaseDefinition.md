@@ -12,8 +12,8 @@ Name | Type | Description
 ---- | ---- | -----------
 displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | Sadly, these don't appear to be populated anymore (ever?)
 spawnPoint | integer:uint32 | If we had map information, this spawnPoint would be interesting.  But sadly, we don't have that info.
-destinationHash | [[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:ManifestDefinition:integer:uint32 | The Destination being pointed to by this location.
-activityHash | [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32 | The Activity being pointed to by this location.
+destinationHash | [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32 | The Destination being pointed to by this location.
+activityHash | [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32 | The Activity being pointed to by this location.
 activityGraphHash | integer:uint32 | The Activity Graph being pointed to by this location.
 activityGraphNodeHash | integer:uint32 | The Activity Graph Node being pointed to by this location.  (Remember thatActivity Graph Node hashes are only unique within an Activity Graph: so use the combinationto find the node being spoken of)
 activityBubbleName | integer:uint32 | The Activity Bubble within the Destination.  Look this up in the DestinyDestinationDefinition'sbubbles and bubbleSettings properties.
@@ -38,9 +38,9 @@ worldPosition | integer:int32[] | Looks like it should be the position on the ma
     },
     // Type: integer:uint32
     "spawnPoint": 0,
-    // Type: [[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32
     "destinationHash": 0,
-    // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
     "activityHash": 0,
     // Type: integer:uint32
     "activityGraphHash": 0,

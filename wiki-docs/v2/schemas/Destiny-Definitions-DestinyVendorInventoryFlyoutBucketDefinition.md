@@ -11,7 +11,7 @@ Information about a single inventory bucket in a vendor flyout UI and how it is 
 Name | Type | Description
 ---- | ---- | -----------
 collapsible | boolean | If true, the inventory bucket should be able to be collapsed visually.
-inventoryBucketHash | [[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:ManifestDefinition:integer:uint32 | The inventory bucket whose contents should be shown.
+inventoryBucketHash | [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32 | The inventory bucket whose contents should be shown.
 sortItemsBy | [[DestinyItemSortType|Destiny-DestinyItemSortType]]:Enum | The methodology to use for sorting items from the flyout.
 
 ## Example
@@ -19,7 +19,7 @@ sortItemsBy | [[DestinyItemSortType|Destiny-DestinyItemSortType]]:Enum | The met
 {
     // Type: boolean
     "collapsible": false,
-    // Type: [[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
     "inventoryBucketHash": 0,
     // Type: [[DestinyItemSortType|Destiny-DestinyItemSortType]]:Enum
     "sortItemsBy": 0

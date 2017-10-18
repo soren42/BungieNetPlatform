@@ -21,13 +21,13 @@ teams | [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyP
     "period": "",
     // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
     "activityDetails": {
-        // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
         "referenceId": 0,
         // Type: integer:int64
         "instanceId": 0,
         // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
         "mode": 0,
-        // Type: [[DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
         "activityTypeHashOverride": 0,
         // Type: boolean
         "isPrivate": false
@@ -139,7 +139,7 @@ teams | [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyP
                 "weapons": [
                    // Type: [[DestinyHistoricalWeaponStats|Destiny-HistoricalStats-DestinyHistoricalWeaponStats]]
                     {
-                        // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                         "referenceId": 0,
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                         "values": {

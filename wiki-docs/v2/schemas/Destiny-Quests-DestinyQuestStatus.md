@@ -10,8 +10,8 @@ Data regarding the progress of a Quest for a specific character.Quests are compo
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-questHash | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the Quest Item.  (Note: Quests are defined as Items, and thus you woulduse this to look up the quest's DestinyInventoryItemDefinition).For information on all steps in the quest, you can then examine its DestinyInventoryItemDefinition.setDataproperty for Quest Steps (which are *also* items).You can use the Item Definition to display human readable data about the overall quest.
-stepHash | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the current Quest Step, which is also a DestinyInventoryItemDefinition.  You can usethis to get human readable data about the current step and what to do in that step.
+questHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier for the Quest Item.  (Note: Quests are defined as Items, and thus you woulduse this to look up the quest's DestinyInventoryItemDefinition).For information on all steps in the quest, you can then examine its DestinyInventoryItemDefinition.setDataproperty for Quest Steps (which are *also* items).You can use the Item Definition to display human readable data about the overall quest.
+stepHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the current Quest Step, which is also a DestinyInventoryItemDefinition.  You can usethis to get human readable data about the current step and what to do in that step.
 stepObjectives | [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][] | A step can have multiple objectives.  This will give you the progress for each objective in the current step,in the order in which they are rendered in-game.
 tracked | boolean | Whether or not the quest is tracked
 itemInstanceId | integer:int64 | The current Quest Step will be an instanced item in the player's inventory.  If you care about that,this is the instance ID of that item.
@@ -23,19 +23,19 @@ vendorHash | integer:uint32:nullable | If the quest has a related Vendor that yo
 ## Example
 ```javascript
 {
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
     "questHash": 0,
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
     "stepHash": 0,
     // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][]
     "stepObjectives": [
        // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]]
         {
-            // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
             "objectiveHash": 0,
-            // Type: [[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:ManifestDefinition:integer:uint32:nullable
+            // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32:nullable
             "destinationHash": 0,
-            // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32:nullable
+            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
             "activityHash": 0,
             // Type: integer:int32:nullable
             "progress": 0,

@@ -34,11 +34,11 @@ PlatformErrorCode: 200
 {
     // Type: [[DestinyVendorResponse|Destiny-Responses-DestinyVendorResponse]]
     "Response": {
-        // Type: [[SingleComponentResponse&lt;DestinyVendorComponent&gt;|SingleComponentResponseOfDestinyVendorComponent]]
+        // Type: [[SingleComponentResponseOfDestinyVendorComponent|SingleComponentResponseOfDestinyVendorComponent]]
         "vendor": {
             // Type: [[DestinyVendorComponent|Destiny-Entities-Vendors-DestinyVendorComponent]]
             "data": {
-                // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
                 "vendorHash": 0,
                 // Type: [[AckState|User-AckState]]
                 "ackState": {
@@ -55,7 +55,7 @@ PlatformErrorCode: 200
                 "canPurchase": false,
                 // Type: [[DestinyProgression|Destiny-DestinyProgression]]
                 "progression": {
-                    // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
                     "progressionHash": 0,
                     // Type: integer:int32
                     "dailyProgress": 0,
@@ -82,7 +82,7 @@ PlatformErrorCode: 200
             // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
             "privacy": 0
         },
-        // Type: [[SingleComponentResponse&lt;DestinyVendorCategoriesComponent&gt;|SingleComponentResponseOfDestinyVendorCategoriesComponent]]
+        // Type: [[SingleComponentResponseOfDestinyVendorCategoriesComponent|SingleComponentResponseOfDestinyVendorCategoriesComponent]]
         "categories": {
             // Type: [[DestinyVendorCategoriesComponent|Destiny-Entities-Vendors-DestinyVendorCategoriesComponent]]
             "data": {
@@ -103,14 +103,14 @@ PlatformErrorCode: 200
             // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
             "privacy": 0
         },
-        // Type: [[DictionaryComponentResponse&lt;int32,DestinyVendorSaleItemComponent&gt;|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]]
+        // Type: [[DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]]
         "sales": {
             // Type: Dictionary&lt;integer:int32,[[DestinyVendorSaleItemComponent|Destiny-Entities-Vendors-DestinyVendorSaleItemComponent]]&gt;
             "data": {
                 "0": {
                     // Type: integer:int32
                     "vendorItemIndex": 0,
-                    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "itemHash": 0,
                     // Type: [[VendorItemStatus|Destiny-VendorItemStatus]]:Enum
                     "saleStatus": 0,
@@ -118,7 +118,7 @@ PlatformErrorCode: 200
                     "costs": [
                        // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
                         {
-                            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                             "itemHash": 0,
                             // Type: integer:int64:nullable
                             "itemInstanceId": 0,
@@ -126,7 +126,7 @@ PlatformErrorCode: 200
                             "quantity": 0
                         }
                     ],
-                    // Type: [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32[]
+                    // Type: [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32[]
                     "requiredUnlocks": [
                        // Type: integer:uint32
                         0
@@ -135,7 +135,7 @@ PlatformErrorCode: 200
                     "unlockStatuses": [
                        // Type: [[DestinyUnlockStatus|Destiny-DestinyUnlockStatus]]
                         {
-                            // Type: [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32
+                            // Type: [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32
                             "unlockHash": 0,
                             // Type: boolean
                             "isSet": false
@@ -151,20 +151,20 @@ PlatformErrorCode: 200
             // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
             "privacy": 0
         },
-        // Type: [[DestinyItemComponentSet&lt;int32&gt;|DestinyItemComponentSetOfint32]]
+        // Type: [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]]
         "items": {
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemInstanceComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent|DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent]]
             "instances": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemInstanceComponent|Destiny-Entities-Items-DestinyItemInstanceComponent]]&gt;
                 "data": {
                     "0": {
                         // Type: [[DamageType|Destiny-DamageType]]:Enum
                         "damageType": 0,
-                        // Type: [[DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:ManifestDefinition:integer:uint32:nullable
+                        // Type: [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable
                         "damageTypeHash": 0,
                         // Type: [[DestinyStat|Destiny-DestinyStat]]
                         "primaryStat": {
-                            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                             "statHash": 0,
                             // Type: integer:int32
                             "value": 0,
@@ -181,7 +181,7 @@ PlatformErrorCode: 200
                         "canEquip": false,
                         // Type: integer:int32
                         "equipRequiredLevel": 0,
-                        // Type: [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32[]
+                        // Type: [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32[]
                         "unlockHashesRequiredToEquip": [
                            // Type: integer:uint32
                             0
@@ -193,7 +193,7 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemObjectivesComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent|DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent]]
             "objectives": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemObjectivesComponent|Destiny-Entities-Items-DestinyItemObjectivesComponent]]&gt;
                 "data": {
@@ -202,11 +202,11 @@ PlatformErrorCode: 200
                         "objectives": [
                            // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]]
                             {
-                                // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32
+                                // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
                                 "objectiveHash": 0,
-                                // Type: [[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:ManifestDefinition:integer:uint32:nullable
+                                // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32:nullable
                                 "destinationHash": 0,
-                                // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32:nullable
+                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
                                 "activityHash": 0,
                                 // Type: integer:int32:nullable
                                 "progress": 0,
@@ -219,7 +219,7 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemPerksComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemPerksComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemPerksComponent|DictionaryComponentResponseOfint32AndDestinyItemPerksComponent]]
             "perks": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemPerksComponent|Destiny-Entities-Items-DestinyItemPerksComponent]]&gt;
                 "data": {
@@ -228,7 +228,7 @@ PlatformErrorCode: 200
                         "perks": [
                            // Type: [[DestinyPerkReference|Destiny-Perks-DestinyPerkReference]]
                             {
-                                // Type: [[DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:ManifestDefinition:integer:uint32
+                                // Type: [[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:integer:uint32
                                 "perkHash": 0,
                                 // Type: string
                                 "iconPath": "",
@@ -243,7 +243,7 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemRenderComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemRenderComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemRenderComponent|DictionaryComponentResponseOfint32AndDestinyItemRenderComponent]]
             "renderData": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemRenderComponent|Destiny-Entities-Items-DestinyItemRenderComponent]]&gt;
                 "data": {
@@ -259,15 +259,15 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemStatsComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemStatsComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemStatsComponent|DictionaryComponentResponseOfint32AndDestinyItemStatsComponent]]
             "stats": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemStatsComponent|Destiny-Entities-Items-DestinyItemStatsComponent]]&gt;
                 "data": {
                     "0": {
-                        // Type: Dictionary&lt;[[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32,[[DestinyStat|Destiny-DestinyStat]]&gt;
+                        // Type: Dictionary&lt;[[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32,[[DestinyStat|Destiny-DestinyStat]]&gt;
                         "stats": {
                             "0": {
-                                // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                                 "statHash": 0,
                                 // Type: integer:int32
                                 "value": 0,
@@ -280,7 +280,7 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemSocketsComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent|DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent]]
             "sockets": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemSocketsComponent|Destiny-Entities-Items-DestinyItemSocketsComponent]]&gt;
                 "data": {
@@ -289,7 +289,7 @@ PlatformErrorCode: 200
                         "sockets": [
                            // Type: [[DestinyItemSocketState|Destiny-Entities-Items-DestinyItemSocketState]]
                             {
-                                // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32:nullable
+                                // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32:nullable
                                 "plugHash": 0,
                                 // Type: boolean
                                 "isEnabled": false,
@@ -298,7 +298,7 @@ PlatformErrorCode: 200
                                    // Type: integer:int32
                                     0
                                 ],
-                                // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32[]
+                                // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32[]
                                 "reusablePlugHashes": [
                                    // Type: integer:uint32
                                     0
@@ -310,12 +310,12 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;int32,DestinyItemTalentGridComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent]]
+            // Type: [[DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent|DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent]]
             "talentGrids": {
                 // Type: Dictionary&lt;integer:int32,[[DestinyItemTalentGridComponent|Destiny-Entities-Items-DestinyItemTalentGridComponent]]&gt;
                 "data": {
                     "0": {
-                        // Type: [[DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]]:ManifestDefinition:integer:uint32
+                        // Type: [[Destiny.Definitions.DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]]:integer:uint32
                         "talentGridHash": 0,
                         // Type: [[DestinyTalentNode|Destiny-DestinyTalentNode]][]
                         "nodes": [
@@ -335,7 +335,7 @@ PlatformErrorCode: 200
                                 "materialsToUpgrade": [
                                    // Type: [[DestinyMaterialRequirement|Destiny-Definitions-DestinyMaterialRequirement]]:Definition
                                     {
-                                        // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                                         "itemHash": 0,
                                         // Type: boolean
                                         "deleteOnAction": false,
@@ -357,7 +357,7 @@ PlatformErrorCode: 200
                                     "currentStepStats": [
                                        // Type: [[DestinyStat|Destiny-DestinyStat]]
                                         {
-                                            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                                            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                                             "statHash": 0,
                                             // Type: integer:int32
                                             "value": 0,
@@ -369,7 +369,7 @@ PlatformErrorCode: 200
                                     "nextStepStats": [
                                        // Type: [[DestinyStat|Destiny-DestinyStat]]
                                         {
-                                            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                                            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                                             "statHash": 0,
                                             // Type: integer:int32
                                             "value": 0,
@@ -384,7 +384,7 @@ PlatformErrorCode: 200
                         "isGridComplete": false,
                         // Type: [[DestinyProgression|Destiny-DestinyProgression]]
                         "gridProgression": {
-                            // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+                            // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
                             "progressionHash": 0,
                             // Type: integer:int32
                             "dailyProgress": 0,
@@ -412,7 +412,7 @@ PlatformErrorCode: 200
                 // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
                 "privacy": 0
             },
-            // Type: [[DictionaryComponentResponse&lt;uint32,DestinyItemPlugComponent&gt;|DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent]]
+            // Type: [[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent]]
             "plugStates": {
                 // Type: Dictionary&lt;integer:uint32,[[DestinyItemPlugComponent|Destiny-Components-Items-DestinyItemPlugComponent]]&gt;
                 "data": {

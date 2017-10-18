@@ -227,7 +227,7 @@ if (!file_exists($dataPath)) mkdir($dataPath, 0777, true);
 // Build Search Data
 $searchDataPath = $dataPath.'/search.json';
 if (!file_exists(dirname($searchDataPath))) mkdir(dirname($searchDataPath), 0777, true);
-file_put_contents($searchDataPath, json_encode($searchData));
+file_put_contents($searchDataPath, json_encode($searchData, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
 
 // Build Sitemap
 $sitemapXml = '<?xml version="1.0" encoding="utf-8"?>'.LN

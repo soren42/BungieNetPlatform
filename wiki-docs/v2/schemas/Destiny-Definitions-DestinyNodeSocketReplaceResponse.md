@@ -5,19 +5,20 @@ This is a bit of an odd duck.  Apparently, if talent nodes steps have this data,
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-socketTypeHash | [[DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the socket type to find amidst the item's sockets (the item to which thistalent grid is attached).  See DestinyInventoryItemDefinition.sockets.socketEntries to findthe socket type of sockets on the item in question.
-plugItemHash | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the plug item that will be inserted into the socket found.
+socketTypeHash | [[Destiny.Definitions.Sockets.DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]]:integer:uint32 | The hash identifier of the socket type to find amidst the item's sockets (the item to which thistalent grid is attached).  See DestinyInventoryItemDefinition.sockets.socketEntries to findthe socket type of sockets on the item in question.
+plugItemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the plug item that will be inserted into the socket found.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.Sockets.DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]]:integer:uint32
     "socketTypeHash": 0,
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
     "plugItemHash": 0
 }
 

@@ -5,6 +5,7 @@ Display Categories are different from &quot;categories&quot; in that these are s
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

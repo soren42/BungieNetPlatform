@@ -4,7 +4,7 @@
 Represents a Map View in the director: be them overview views, destination views, or other. They have nodes which map to activities, and other various visual elements that we (or others) mayor may not be able to use. Activity graphs, most importantly, have nodes which can have activities in various states ofplayability. Unfortunately, activity graphs are combined at runtime with Game UI-only assets such as fragments ofmap images, various in-game special effects, decals etc... that we don't get in these definitions. If we end up having time, we may end up trying to manually populate those here: but the last time we tried that,before the lead-up to D1, it proved to be unmaintainable as the game's content changed.  So don't bet the farmon us providing that content in this definition.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** ActivityGraphs
 
 ## Properties
@@ -63,7 +63,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
                 {
                     // Type: integer:uint32
                     "nodeActivityId": 0,
-                    // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
                     "activityHash": 0
                 }
             ]
@@ -100,7 +100,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
         {
             // Type: integer:uint32
             "id": 0,
-            // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
             "objectiveHash": 0
         }
     ],

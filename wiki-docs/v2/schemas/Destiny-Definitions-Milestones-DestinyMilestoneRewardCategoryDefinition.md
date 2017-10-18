@@ -45,7 +45,7 @@ order | integer:int32 | If you want to use BNet's recommended order for renderin
             "items": [
                // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
                 {
-                    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -53,7 +53,7 @@ order | integer:int32 | If you want to use BNet's recommended order for renderin
                     "quantity": 0
                 }
             ],
-            // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32:nullable
+            // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32:nullable
             "vendorHash": 0,
             // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
             "displayProperties": {

@@ -4,7 +4,7 @@
 Unlock Flags are small bits (literally, a bit, as in a boolean value) that the game serveruses for an extremely wide range of state checks, progress storage, and other interestingtidbits of information.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Unlocks
 
 ## Properties

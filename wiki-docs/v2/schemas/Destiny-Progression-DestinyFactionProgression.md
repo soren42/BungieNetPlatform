@@ -10,8 +10,8 @@ Mostly for historical purposes, we segregate Faction progressions from other pro
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-factionHash | [[DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinitionfor more rendering info.
-progressionHash | [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.
+factionHash | [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32 | The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinitionfor more rendering info.
+progressionHash | [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32 | The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.
 dailyProgress | integer:int32 | The amount of progress earned today for this progression.
 dailyLimit | integer:int32 | If this progression has a daily limit, this is that limit.
 weeklyProgress | integer:int32 | The amount of progress earned toward this progression in the current week.
@@ -26,9 +26,9 @@ nextLevelAt | integer:int32 | The total amount of progression (i.e. &quot;Experi
 ## Example
 ```javascript
 {
-    // Type: [[DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32
     "factionHash": 0,
-    // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
     "progressionHash": 0,
     // Type: integer:int32
     "dailyProgress": 0,

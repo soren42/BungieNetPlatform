@@ -19,12 +19,12 @@ status | [[DestinyPublicActivityStatus|Destiny-Activities-DestinyPublicActivityS
     "activityHash": 0,
     // Type: [[DestinyPublicActivityStatus|Destiny-Activities-DestinyPublicActivityStatus]]
     "status": {
-        // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32[]
+        // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32[]
         "challengeObjectiveHashes": [
            // Type: integer:uint32
             0
         ],
-        // Type: [[DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:ManifestDefinition:integer:uint32[]
+        // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32[]
         "modifierHashes": [
            // Type: integer:uint32
             0
@@ -33,7 +33,7 @@ status | [[DestinyPublicActivityStatus|Destiny-Activities-DestinyPublicActivityS
         "rewardTooltipItems": [
            // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
             {
-                // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                 "itemHash": 0,
                 // Type: integer:int64:nullable
                 "itemInstanceId": 0,

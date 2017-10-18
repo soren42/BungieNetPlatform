@@ -10,13 +10,13 @@ Defines the conditions under which an intrinsic perk is applied while participat
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-perkHash | [[DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the DestinySandboxPerkDefinition that will be applied to the character.
+perkHash | [[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:integer:uint32 | The hash identifier of the DestinySandboxPerkDefinition that will be applied to the character.
 style | [[DestinyObjectiveGrantStyle|Destiny-DestinyObjectiveGrantStyle]]:Enum | An enumeration indicating whether it will be applied as long as the Objective is active, when it's completed,or until it's completed.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:integer:uint32
     "perkHash": 0,
     // Type: [[DestinyObjectiveGrantStyle|Destiny-DestinyObjectiveGrantStyle]]:Enum
     "style": 0

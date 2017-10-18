@@ -10,13 +10,13 @@ Represents a &quot;raw&quot; investment stat, before calculated stats are calcul
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-statTypeHash | [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the DestinyStatDefinition defining this stat.
+statTypeHash | [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32 | The hash identifier for the DestinyStatDefinition defining this stat.
 value | integer:int32 | The raw &quot;Investment&quot; value for the stat, before transformations are performedto turn this raw stat into stats that are displayed in the game UI.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
     "statTypeHash": 0,
     // Type: integer:int32
     "value": 0

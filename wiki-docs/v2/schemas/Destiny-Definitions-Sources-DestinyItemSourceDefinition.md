@@ -16,7 +16,7 @@ maxQuality | integer:int32 | The maximum quality at which the item spawns for th
 minLevelRequired | integer:int32 | The minimum Character Level required for equipping the item when the item spawns at the item leveldefined on this DestinyItemSourceDefinition, as far as we saw in our processing.
 maxLevelRequired | integer:int32 | The maximum Character Level required for equipping the item when the item spawns at the item leveldefined on this DestinyItemSourceDefinition, as far as we saw in our processing.
 computedStats | Dictionary&lt;integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt; | The stats computed for this level/quality range.
-sourceHashes | [[DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]]:ManifestDefinition:integer:uint32[] | The DestinyRewardSourceDefinitions found that can spawn the item at this level.
+sourceHashes | [[Destiny.Definitions.DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]]:integer:uint32[] | The DestinyRewardSourceDefinitions found that can spawn the item at this level.
 
 ## Example
 ```javascript
@@ -34,7 +34,7 @@ sourceHashes | [[DestinyRewardSourceDefinition|Destiny-Definitions-DestinyReward
     // Type: Dictionary&lt;integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt;
     "computedStats": {
         "0": {
-            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -44,7 +44,7 @@ sourceHashes | [[DestinyRewardSourceDefinition|Destiny-Definitions-DestinyReward
             "maximum": 0
         }
     },
-    // Type: [[DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]]:ManifestDefinition:integer:uint32[]
+    // Type: [[Destiny.Definitions.DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]]:integer:uint32[]
     "sourceHashes": [
        // Type: integer:uint32
         0

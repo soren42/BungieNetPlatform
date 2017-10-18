@@ -34,6 +34,8 @@ if (isset($_GET['wiki'])) {
 	include('includes/wiki.php');
 } else if (isset($_GET['pages'])) {
 	include('includes/pages.php');
-} else {
+} else if (isset($_GET['update'])) {
 	include('includes/update.php');
+} else {
+	include('includes/manifest.php');
 }

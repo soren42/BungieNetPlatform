@@ -4,7 +4,7 @@
 Milestones are an in-game concept where they're attempting to tell you what you can do next in-game. If that sounds a lot like Advisors in Destiny 1, it is!  So we threw out Advisors in the Destiny 2API and tacked all of the data we would have put on Advisors onto Milestones instead. Each Milestone represents something going on in the game right now: - A &quot;ritual activity&quot; you can perform, like nightfall - A &quot;special event&quot; that may have activities related to it, like Taco Tuesday (there's no Taco Tuesday in Destiny 2) - A checklist you can fulfill, like helping your Clan complete all of its weekly objectives - A tutorial quest you can play through, like the introduction to the Crucible. Most of these milestones appear in game as well.  Some of them are BNet only, because we're so extra.  You're welcome.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Milestones
 
 ## Properties
@@ -55,7 +55,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     // Type: Dictionary&lt;integer:uint32,[[DestinyMilestoneQuestDefinition|Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition]]:Definition&gt;
     "quests": {
         "0": {
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "questItemHash": 0,
             // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
             "displayProperties": {
@@ -76,11 +76,11 @@ redacted | boolean | If this is true, then there is an entity with this identifi
                 "items": [
                    // Type: [[DestinyMilestoneQuestRewardItem|Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem]]:Definition
                     {
-                        // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32:nullable
+                        // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32:nullable
                         "vendorHash": 0,
                         // Type: integer:int32:nullable
                         "vendorItemIndex": 0,
-                        // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                         "itemHash": 0,
                         // Type: integer:int64:nullable
                         "itemInstanceId": 0,
@@ -89,15 +89,15 @@ redacted | boolean | If this is true, then there is an entity with this identifi
                     }
                 ]
             },
-            // Type: Dictionary&lt;[[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32,[[DestinyMilestoneActivityDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition]]:Definition&gt;
+            // Type: Dictionary&lt;[[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32,[[DestinyMilestoneActivityDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition]]:Definition&gt;
             "activities": {
                 "0": {
-                    // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
                     "conceptualActivityHash": 0,
-                    // Type: Dictionary&lt;[[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32,[[DestinyMilestoneActivityVariantDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition]]:Definition&gt;
+                    // Type: Dictionary&lt;[[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32,[[DestinyMilestoneActivityVariantDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition]]:Definition&gt;
                     "variants": {
                         "0": {
-                            // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
                             "activityHash": 0,
                             // Type: integer:int32
                             "order": 0
@@ -136,7 +136,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
                     "items": [
                        // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
                         {
-                            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                             "itemHash": 0,
                             // Type: integer:int64:nullable
                             "itemInstanceId": 0,
@@ -144,7 +144,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
                             "quantity": 0
                         }
                     ],
-                    // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32:nullable
+                    // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32:nullable
                     "vendorHash": 0,
                     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
                     "displayProperties": {
@@ -169,7 +169,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "vendors": [
        // Type: [[DestinyMilestoneVendorDefinition|Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition]]:Definition
         {
-            // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
             "vendorHash": 0
         }
     ],

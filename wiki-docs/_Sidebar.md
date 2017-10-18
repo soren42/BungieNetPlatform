@@ -8,4 +8,5 @@
   * [[Past Authentication|Past-Authentication]]
 * [[References|#]]
   * [[Components]]
+  * [[Definitions]]
   * [[Endpoints]]

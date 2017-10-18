@@ -67,7 +67,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                 "equipment": [
                    // Type: [[DestinyItemPeerView|Destiny-Character-DestinyItemPeerView]]
                     {
-                        // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                         "itemHash": 0,
                         // Type: [[DyeReference|Destiny-DyeReference]][]
                         "dyes": [

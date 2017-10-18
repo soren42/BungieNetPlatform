@@ -21,7 +21,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         "perks": [
            // Type: [[DestinyPerkReference|Destiny-Perks-DestinyPerkReference]]
             {
-                // Type: [[DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:integer:uint32
                 "perkHash": 0,
                 // Type: string
                 "iconPath": "",

@@ -10,13 +10,13 @@ Stat Groups (DestinyStatGroupDefinition) has the ability to override the localiz
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-statHash | [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the stat whose display properties are being overridden.
+statHash | [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32 | The hash identifier of the stat whose display properties are being overridden.
 displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | The display properties to show instead of the base DestinyStatDefinition display properties.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
     "statHash": 0,
     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
     "displayProperties": {

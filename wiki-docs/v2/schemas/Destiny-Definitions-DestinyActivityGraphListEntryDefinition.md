@@ -10,12 +10,12 @@ Destinations and Activities may have default Activity Graphs that should be show
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-activityGraphHash | [[DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the DestinyActivityGraphDefinition that should be shown when openingthe director.
+activityGraphHash | [[Destiny.Definitions.Director.DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:integer:uint32 | The hash identifier of the DestinyActivityGraphDefinition that should be shown when openingthe director.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.Director.DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:integer:uint32
     "activityGraphHash": 0
 }
 

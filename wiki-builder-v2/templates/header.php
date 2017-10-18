@@ -48,7 +48,7 @@
 			?>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/wiki">View on GitHub</a>
+					<a id="forkme_banner" href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs">View on GitHub</a>
 				</li>
 			</ul>
 		</nav>

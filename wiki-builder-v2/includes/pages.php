@@ -81,14 +81,16 @@ function getMarkdownPages($path, $root='') {
 			}
 			else if ($pageParts[0] == 'services') {
 				$pageParts = array_slice($pageParts, 1);
+				//echo '<pre>'.json_encode($pageParts, JSON_PRETTY_PRINT).'</pre>';
 				foreach($openapi->paths as $endpointPath => $endpoint) {
-					$endpointName = $endpoint->summary;
+					$endpointName = str_replace('.', '-', $endpoint->summary);
 					$endpointPath = preg_replace('/[\<\>\.,\[\]]/', '-', $endpointName);
 					//echo $endpointPath.LN;
 					//echo implode('.', $pageParts).LN;
 					//echo $endpoint->summary.LN;
 					//$endpointName = str_replace('.md', '', implode('.', $pageParts));
-					if ($endpoint->summary == $endpointName) {
+					//echo $endpoint->summary.' | '.$endpointName.' | '.$pageName."\n";
+					if ($pageName == $endpointName) {
 						$page['name'] = $endpoint->summary;
 						$page['endpoint'] = $endpointPath;
 						break;
@@ -229,7 +231,11 @@ function buildPage($page) {
 	foreach($headerMatches as $headerMatch) {
 		$searchHeaders[] = $headerMatch[1];
 	}
-	$searchData[] = array('path' => $baseUri, 'headers' => $searchHeaders);
+	$searchData[] = array(
+		'path' => $baseUri,
+		'title' => $page_title,
+		'headers' => $searchHeaders
+	);
 }
 
 // Rename current docs folder
@@ -254,7 +260,7 @@ emptyDocs(DOCSPATH.'-old');
 // Build Search Data
 $searchDataPath = PAGESPATH.'/data/search.json';
 if (!file_exists(dirname($searchDataPath))) mkdir(dirname($searchDataPath), 0777, true);
-file_put_contents($searchDataPath, json_encode($searchData));
+file_put_contents($searchDataPath, json_encode($searchData, JSON_UNESCAPED_SLASHES));
 
 // Build Sitemap
 $sitemapXml = '<?xml version="1.0" encoding="utf-8"?>'.LN

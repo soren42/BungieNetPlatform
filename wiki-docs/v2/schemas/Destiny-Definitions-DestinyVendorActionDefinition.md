@@ -5,6 +5,7 @@ If a vendor can ever end up performing actions, these are the properties that wi
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

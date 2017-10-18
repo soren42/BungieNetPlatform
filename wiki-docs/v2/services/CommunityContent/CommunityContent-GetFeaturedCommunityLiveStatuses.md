@@ -31,7 +31,7 @@ GET https://bungie.net/Platform/CommunityContent/Live/Featured/{partnershipType}
 PlatformErrorCode: 200
 ```javascript
 {
-    // Type: [[SearchResult&lt;CommunityLiveStatus&gt;|SearchResultOfCommunityLiveStatus]]
+    // Type: [[SearchResultOfCommunityLiveStatus|SearchResultOfCommunityLiveStatus]]
     "Response": {
         // Type: [[CommunityLiveStatus|Community-CommunityLiveStatus]][]
         "results": [

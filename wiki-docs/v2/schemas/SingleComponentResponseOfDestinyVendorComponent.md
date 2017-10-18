@@ -17,7 +17,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
 {
     // Type: [[DestinyVendorComponent|Destiny-Entities-Vendors-DestinyVendorComponent]]
     "data": {
-        // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
         "vendorHash": 0,
         // Type: [[AckState|User-AckState]]
         "ackState": {
@@ -34,7 +34,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         "canPurchase": false,
         // Type: [[DestinyProgression|Destiny-DestinyProgression]]
         "progression": {
-            // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
             "progressionHash": 0,
             // Type: integer:int32
             "dailyProgress": 0,

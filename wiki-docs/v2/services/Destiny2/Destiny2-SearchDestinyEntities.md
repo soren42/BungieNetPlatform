@@ -37,7 +37,7 @@ PlatformErrorCode: 200
            // Type: string
             ""
         ],
-        // Type: [[SearchResult&lt;DestinyEntitySearchResultItem&gt;|SearchResultOfDestinyEntitySearchResultItem]]
+        // Type: [[SearchResultOfDestinyEntitySearchResultItem|SearchResultOfDestinyEntitySearchResultItem]]
         "results": {
             // Type: [[DestinyEntitySearchResultItem|Destiny-Definitions-DestinyEntitySearchResultItem]]:Definition[]
             "results": [

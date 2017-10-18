@@ -10,14 +10,14 @@ Items like Sacks or Boxes can have items that it shows in-game when you view det
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-previewVendorHash | [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32 | If the preview data is derived from a fake &quot;Preview&quot; Vendor, this willbe the hash identifier for the DestinyVendorDefinition of that fake vendor.
+previewVendorHash | [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32 | If the preview data is derived from a fake &quot;Preview&quot; Vendor, this willbe the hash identifier for the DestinyVendorDefinition of that fake vendor.
 previewActionString | string | If the preview has an associated action (like &quot;Open&quot;), this will be the localizedstring for that action.
 derivedItemCategories | [[DestinyDerivedItemCategoryDefinition|Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition]]:Definition[] | This is a list of the items being previewed, categorized in the same way as they arein the preview UI.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
     "previewVendorHash": 0,
     // Type: string
     "previewActionString": "",

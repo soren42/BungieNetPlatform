@@ -25,7 +25,7 @@ GET https://bungie.net/Platform/Destiny2/Stats/Definition/
 PlatformErrorCode: 200
 ```javascript
 {
-    // Type: Dictionary&lt;string,[[DestinyHistoricalStatsDefinition|Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition]]:ManifestDefinition&gt;
+    // Type: Dictionary&lt;string,[[Destiny.HistoricalStats.Definitions.DestinyHistoricalStatsDefinition|Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition]]&gt;
     "Response": {
         "{string}": {
             // Type: string

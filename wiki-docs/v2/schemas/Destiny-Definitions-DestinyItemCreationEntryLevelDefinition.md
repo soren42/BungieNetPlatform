@@ -5,6 +5,7 @@ An overly complicated wrapper for the item level at which the item should spawn.
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

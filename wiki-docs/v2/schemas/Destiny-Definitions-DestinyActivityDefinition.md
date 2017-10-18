@@ -4,7 +4,7 @@
 The static data about Activities in Destiny 2. Note that an Activity must be combined with an ActivityMode to know - from a Gameplay perspective -what the user is &quot;Playing&quot;. In most PvE activities, this is fairly straightforward.  A Story Activity can only be played in the StoryActivity Mode. However, in PvP activities, the Activity alone only tells you the map being played, or the Playlist that the userchose to enter.  You'll need to know the Activity Mode they're playing to know that they're playing Mode X on Map Y. Activity Definitions tell a great deal of information about what *could* be relevant to a user: what rewards theycan earn, what challenges could be performed, what modifiers could be applied.  To figure out which of these propertiesis actually live, you'll need to combine the definition with &quot;Live&quot; data from one of the Destiny endpoints. Activities also have Activity Types, but unfortunately in Destiny 2 these are even less reliable of a source ofinformation than they were in Destiny 1.  I will be looking into ways to provide more reliable sources for type informationas time goes on, but for now we're going to have to deal with the limitations.  See DestinyActivityTypeDefinitionfor more information.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Activities
 
 ## Properties
@@ -15,9 +15,9 @@ releaseIcon | string | If the activity has an icon associated with a specific re
 releaseTime | integer:int32 | If the activity will not be visible until a specific and known time, this will bethe seconds since the Epoch when it will become visible.
 activityLevel | integer:int32 | The difficulty level of the activity.
 activityLightLevel | integer:int32 | The recommended light level for this activity.
-destinationHash | [[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the Destination on which this Activity is played.  Use it to look upthe DestinyDestinationDefinition for human readable info about the destination.A Destination can be thought of as a more specific location than a &quot;Place&quot;.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.
-placeHash | [[DestinyPlaceDefinition|Destiny-Definitions-DestinyPlaceDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the &quot;Place&quot; on which this Activity is played.  Use it to look upthe DestinyPlaceDefinition for human readable info about the Place.A Place is the largest-scoped concept for location information.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.
-activityTypeHash | [[DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the Activity Type of this Activity.  You may use it to look upthe DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists andmany PVP Map Activities will map to generic Activity Types.  You'll have to use your knowledgeof the Activity Mode being played to get more specific information about what the user is playing.
+destinationHash | [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32 | The hash identifier for the Destination on which this Activity is played.  Use it to look upthe DestinyDestinationDefinition for human readable info about the destination.A Destination can be thought of as a more specific location than a &quot;Place&quot;.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.
+placeHash | [[Destiny.Definitions.DestinyPlaceDefinition|Destiny-Definitions-DestinyPlaceDefinition]]:integer:uint32 | The hash identifier for the &quot;Place&quot; on which this Activity is played.  Use it to look upthe DestinyPlaceDefinition for human readable info about the Place.A Place is the largest-scoped concept for location information.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.
+activityTypeHash | [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32 | The hash identifier for the Activity Type of this Activity.  You may use it to look upthe DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists andmany PVP Map Activities will map to generic Activity Types.  You'll have to use your knowledgeof the Activity Mode being played to get more specific information about what the user is playing.
 tier | integer:int32 | The difficulty tier of the activity.
 pgcrImage | string | When Activities are completed, we generate a &quot;Post-Game Carnage Report&quot;, or PGCR, with details aboutwhat happened in that activity (how many kills someone got, which team won, etc...)  We use this imageas the background when displaying PGCR information, and often use it when we refer to the Activity in general.
 rewards | [[DestinyActivityRewardDefinition|Destiny-Definitions-DestinyActivityRewardDefinition]]:Definition[] | The expected possible rewards for the activity.  These rewards may or may not be accessible for an individual playerbased on their character state, the account state, and even the game's state overall.  But it is a useful referencefor possible rewards you can earn in the activity.  These match up to rewards displayed when you hover overthe Activity in the in-game Director, and often refer to Placeholder or &quot;Dummy&quot; items: items that tell you what you can earn in vague terms rather than what you'll specifically be earning (partly because the gamedoesn't even know what you'll earn specifically until you roll for it at the end)
@@ -56,11 +56,11 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "activityLevel": 0,
     // Type: integer:int32
     "activityLightLevel": 0,
-    // Type: [[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32
     "destinationHash": 0,
-    // Type: [[DestinyPlaceDefinition|Destiny-Definitions-DestinyPlaceDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyPlaceDefinition|Destiny-Definitions-DestinyPlaceDefinition]]:integer:uint32
     "placeHash": 0,
-    // Type: [[DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
     "activityTypeHash": 0,
     // Type: integer:int32
     "tier": 0,
@@ -76,7 +76,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             "rewardItems": [
                // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
                 {
-                    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -90,7 +90,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "modifiers": [
        // Type: [[DestinyActivityModifierReferenceDefinition|Destiny-Definitions-DestinyActivityModifierReferenceDefinition]]:Definition
         {
-            // Type: [[DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32
             "activityModifierHash": 0
         }
     ],
@@ -100,7 +100,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "challenges": [
        // Type: [[DestinyActivityChallengeDefinition|Destiny-Definitions-DestinyActivityChallengeDefinition]]:Definition
         {
-            // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
             "objectiveHash": 0
         }
     ],
@@ -116,7 +116,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "activityGraphList": [
        // Type: [[DestinyActivityGraphListEntryDefinition|Destiny-Definitions-DestinyActivityGraphListEntryDefinition]]:Definition
         {
-            // Type: [[DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.Director.DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:integer:uint32
             "activityGraphHash": 0
         }
     ],

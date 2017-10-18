@@ -5,149 +5,153 @@ Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
 X-API-Key | string | Yes | When you have registered an Application at https://www.bungie.net/en/Application, you will receive an API key.  You should pass it in via this header with every request.
 
-## <a name="Security"></a>Security
+## <a name="Security"></a>Security (2)
 Name | Type | Description
 ---- | ---- | -----------
 [[apiKey|SecuritySchemas#apiKey]] | apiKey | Every request requires an API key.  To get an API key, register a new application at https://www.bungie.net/en/Application.
 [[oauth2|SecuritySchemas#oauth2]] | oauth2 | For requests that require Authentication, you will need to have your users authenticate via our OAuth mechanisms.  See https://github.com/Bungie-net/api/wiki/OAuth-Documentation for more details.
-## <a name="Schemas"></a>Schemas
+## <a name="Schemas"></a>Schemas (401)
+## <a name="Schemas-ManifestDefinition"></a>Manifest Definition Schemas
+Name | Description
+---- | -----------
+[[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyClassDefinition|Destiny-Definitions-DestinyClassDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyGenderDefinition|Destiny-Definitions-DestinyGenderDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyItemCategoryDefinition|Destiny-Definitions-DestinyItemCategoryDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyLocationDefinition|Destiny-Definitions-DestinyLocationDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyPlaceDefinition|Destiny-Definitions-DestinyPlaceDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyRaceDefinition|Destiny-Definitions-DestinyRaceDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyStatGroupDefinition|Destiny-Definitions-DestinyStatGroupDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Director.DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Items.DestinyItemTierTypeDefinition|Destiny-Definitions-Items-DestinyItemTierTypeDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Lore.DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Sockets.DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]] | Scope: <i></i><br/>
+[[Destiny.HistoricalStats.Definitions.DestinyHistoricalStatsDefinition|Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition]] | Scope: <i></i><br/>
+
 ## <a name="Schemas-Definition"></a>Definition Schemas
 Name | Manifest | Description
 ---- | -------- | -----------
-[[DestinyActivityChallengeDefinition|Destiny-Definitions-DestinyActivityChallengeDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]] | Activities | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityGraphArtElementDefinition|Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphConnectionDefinition|Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]] | ActivityGraphs | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphDisplayObjectiveDefinition|Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphDisplayProgressionDefinition|Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphListEntryDefinition|Destiny-Definitions-DestinyActivityGraphListEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityGraphNodeActivityDefinition|Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphNodeDefinition|Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGraphNodeFeaturingStateDefinition|Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyActivityGuidedBlockDefinition|Destiny-Definitions-DestinyActivityGuidedBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityMatchmakingBlockDefinition|Destiny-Definitions-DestinyActivityMatchmakingBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]] | ActivityModes | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]] | ActivityModifiers | Scope: <i>Destiny.Definitions.ActivityModifiers</i><br/>
-[[DestinyActivityModifierReferenceDefinition|Destiny-Definitions-DestinyActivityModifierReferenceDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityRewardDefinition|Destiny-Definitions-DestinyActivityRewardDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]] | ActivityTypes | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyActivityUnlockStringDefinition|Destiny-Definitions-DestinyActivityUnlockStringDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
+[[DestinyActivityChallengeDefinition|Destiny-Definitions-DestinyActivityChallengeDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Represents a reference to a Challenge, which for now is just an Objective.
+[[DestinyActivityGraphArtElementDefinition|Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>These Art Elements are meant to represent one-off visual effects overlaid on the map.Currently, we do not have a pipeline to import the assets for these overlays, so this infoexists as a placeholder for when such a pipeline exists (if it ever will)
+[[DestinyActivityGraphConnectionDefinition|Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>Nodes on a graph can be visually connected: this appears to be the information about which nodes to link.It appears to lack more detailed information, such as the path for that linking.
+[[DestinyActivityGraphDisplayObjectiveDefinition|Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>When a Graph needs to show active Objectives, this defines those objectives as well as an identifier.
+[[DestinyActivityGraphDisplayProgressionDefinition|Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>When a Graph needs to show active Progressions, this defines those objectives as well as an identifier.
+[[DestinyActivityGraphListEntryDefinition|Destiny-Definitions-DestinyActivityGraphListEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Destinations and Activities may have default Activity Graphs that should be shownwhen you bring up the Director and are playing in either. (truncated)
+[[DestinyActivityGraphNodeActivityDefinition|Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>The actual activity to be redirected to when you click on the node.Note that a node can have many Activities attached to it: but only one will be active at anygiven time.  The list of Node Activities will be traversed, and the first one found to be activewill be displayed.  This way, a node can layer multiple variants of an activity on top of each other.For instance, one node can control the weekly Crucible Playlist.  There are multiple possible playlists,but only one is active for the week.
+[[DestinyActivityGraphNodeDefinition|Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>This is the position and other data related to nodes in the activity graph that you can clickto launch activities.  An Activity Graph node will only have one active Activity at a time,which will determine the activity to be launched (and, unless overrideDisplay information is provided,will also determine the tooltip and other UI related to the node)
+[[DestinyActivityGraphNodeFeaturingStateDefinition|Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>Nodes can have different visual states.  This object represents a single visual state (&quot;highlight type&quot;)that a node can be in, and the unlock expression condition to determine whether it should be set.
+[[DestinyActivityGuidedBlockDefinition|Destiny-Definitions-DestinyActivityGuidedBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Guided Game information for this activity.
+[[DestinyActivityMatchmakingBlockDefinition|Destiny-Definitions-DestinyActivityMatchmakingBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Information about matchmaking and party size for the activity.
+[[DestinyActivityModifierReferenceDefinition|Destiny-Definitions-DestinyActivityModifierReferenceDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>A reference to an Activity Modifier from another entity, such as an Activity(for now, just Activities). (truncated)
+[[DestinyActivityRewardDefinition|Destiny-Definitions-DestinyActivityRewardDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Activities can refer to one or more sets of tooltip-friendly reward data.  These are the definitionsfor those tooltip friendly rewards.
+[[DestinyActivityUnlockStringDefinition|Destiny-Definitions-DestinyActivityUnlockStringDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Represents a status string that could be conditionally displayed about an activity.Note that externally, you can only see the strings themselves.  Internally we combine this informationwith server state to determine which strings should be shown.
 [[DestinyAnimationReference|Destiny-Definitions-Animations-DestinyAnimationReference]] |  | Scope: <i>Destiny.Definitions.Animations</i><br/>
-[[DestinyBubbleDefinition|Destiny-Definitions-DestinyBubbleDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyClassDefinition|Destiny-Definitions-DestinyClassDefinition]] | Classes | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]] | DamageTypes | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyDefinition|Destiny-Definitions-DestinyDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyDerivedItemCategoryDefinition|Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>
-[[DestinyDerivedItemDefinition|Destiny-Definitions-Items-DestinyDerivedItemDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>
-[[DestinyDestinationBubbleSettingDefinition|Destiny-Definitions-DestinyDestinationBubbleSettingDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]] | Destinations | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyDisplayCategoryDefinition|Destiny-Definitions-DestinyDisplayCategoryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]] |  | Scope: <i>Destiny.Definitions.Common</i><br/>
-[[DestinyEntitySearchResult|Destiny-Definitions-DestinyEntitySearchResult]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyEntitySearchResultItem|Destiny-Definitions-DestinyEntitySearchResultItem]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyEquipmentSlotDefinition|Destiny-Definitions-DestinyEquipmentSlotDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyEquippingBlockDefinition|Destiny-Definitions-DestinyEquippingBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]] | Factions | Scope: <i>Destiny.Definitions</i><br/>
+[[DestinyBubbleDefinition|Destiny-Definitions-DestinyBubbleDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Basic identifying data about the bubble.  Combine with DestinyDestinationBubbleSettingDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.
+[[DestinyDefinition|Destiny-Definitions-DestinyDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Provides common properties for destiny definitions.
+[[DestinyDerivedItemCategoryDefinition|Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>A shortcut for the fact that some items have a &quot;Preview Vendor&quot;- See DestinyInventoryItemDefinition.preview.previewVendorHash - that is intendedto be used to show what items you can get as a result of acquiring or using this item. (truncated)
+[[DestinyDerivedItemDefinition|Destiny-Definitions-Items-DestinyDerivedItemDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>This is a reference to, and summary data for, a specific item thatyou can get as a result of Using or Acquiring some other Item (For example,this could be summary information for an Emote that you can get by opening an an Eververse Box)See DestinyDerivedItemCategoryDefinition for more information.
+[[DestinyDestinationBubbleSettingDefinition|Destiny-Definitions-DestinyDestinationBubbleSettingDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Human readable data about the bubble.  Combine with DestinyBubbleDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.
+[[DestinyDisplayCategoryDefinition|Destiny-Definitions-DestinyDisplayCategoryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Display Categories are different from &quot;categories&quot; in that these are specifically for visual groupingand display of categories in Vendor UI.  The &quot;categories&quot; structure is for validation of the containeditems, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will beno meaningful relationship between the two.
+[[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]] |  | Scope: <i>Destiny.Definitions.Common</i><br/>Many Destiny*Definition contracts - the &quot;first order&quot; entities of Destinythat have their own tables in the Manifest Database - also have displayableinformation.  This is the base class for that display information.
+[[DestinyEntitySearchResult|Destiny-Definitions-DestinyEntitySearchResult]] |  | Scope: <i>Destiny.Definitions</i><br/>The results of a search for Destiny content.  This will be improved on over time,I've been doing some experimenting to see what might be useful.
+[[DestinyEntitySearchResultItem|Destiny-Definitions-DestinyEntitySearchResultItem]] |  | Scope: <i>Destiny.Definitions</i><br/>An individual Destiny Entity returned from the entity search.
+[[DestinyEquipmentSlotDefinition|Destiny-Definitions-DestinyEquipmentSlotDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Characters can not only have Inventory buckets (containers of items that are generally matched by their type orfunctionality), they can also have Equipment Slots. (truncated)
+[[DestinyEquippingBlockDefinition|Destiny-Definitions-DestinyEquippingBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Items that can be equipped define this block.  It contains information we need tounderstand how and when the item can be equipped.
 [[DestinyGearArtArrangementReference|Destiny-Definitions-DestinyGearArtArrangementReference]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyGenderDefinition|Destiny-Definitions-DestinyGenderDefinition]] | Genders | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyHistoricalStatsDefinition|Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition]] | HistoricalStats | Scope: <i>Destiny.HistoricalStats.Definitions</i><br/>
-[[DestinyInsertPlugActionDefinition|Destiny-Definitions-Sockets-DestinyInsertPlugActionDefinition]] |  | Scope: <i>Destiny.Definitions.Sockets</i><br/>
-[[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]] | InventoryBuckets | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]] | Items | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemActionBlockDefinition|Destiny-Definitions-DestinyItemActionBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemActionRequiredItemDefinition|Destiny-Definitions-DestinyItemActionRequiredItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemCategoryDefinition|Destiny-Definitions-DestinyItemCategoryDefinition]] | ItemCategories | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemCreationEntryLevelDefinition|Destiny-Definitions-DestinyItemCreationEntryLevelDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemGearsetBlockDefinition|Destiny-Definitions-DestinyItemGearsetBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemInventoryBlockDefinition|Destiny-Definitions-DestinyItemInventoryBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemInvestmentStatDefinition|Destiny-Definitions-DestinyItemInvestmentStatDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemObjectiveBlockDefinition|Destiny-Definitions-DestinyItemObjectiveBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemPerkEntryDefinition|Destiny-Definitions-DestinyItemPerkEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemPlugDefinition|Destiny-Definitions-Items-DestinyItemPlugDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>
-[[DestinyItemPreviewBlockDefinition|Destiny-Definitions-DestinyItemPreviewBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemQualityBlockDefinition|Destiny-Definitions-DestinyItemQualityBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSackBlockDefinition|Destiny-Definitions-DestinyItemSackBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSetBlockDefinition|Destiny-Definitions-DestinyItemSetBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSetBlockEntryDefinition|Destiny-Definitions-DestinyItemSetBlockEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSocketBlockDefinition|Destiny-Definitions-DestinyItemSocketBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSocketEntryDefinition|Destiny-Definitions-DestinyItemSocketEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSocketEntryPlugItemDefinition|Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSourceBlockDefinition|Destiny-Definitions-DestinyItemSourceBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSourceDefinition|Destiny-Definitions-Sources-DestinyItemSourceDefinition]] |  | Scope: <i>Destiny.Definitions.Sources</i><br/>
-[[DestinyItemStatBlockDefinition|Destiny-Definitions-DestinyItemStatBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemSummaryBlockDefinition|Destiny-Definitions-DestinyItemSummaryBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemTalentGridBlockDefinition|Destiny-Definitions-DestinyItemTalentGridBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemTierTypeDefinition|Destiny-Definitions-Items-DestinyItemTierTypeDefinition]] | ItemTierTypes | Scope: <i>Destiny.Definitions.Items</i><br/>
+[[DestinyInsertPlugActionDefinition|Destiny-Definitions-Sockets-DestinyInsertPlugActionDefinition]] |  | Scope: <i>Destiny.Definitions.Sockets</i><br/>Data related to what happens while a plug is being inserted, mostly for UI purposes.
+[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Defines a specific stat value on an item, and the minimum/maximum range that we couldcompute for the item based on our heuristics for how the item might be generated. (truncated)
+[[DestinyItemActionBlockDefinition|Destiny-Definitions-DestinyItemActionBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined hereif you care.
+[[DestinyItemActionRequiredItemDefinition|Destiny-Definitions-DestinyItemActionRequiredItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The definition of an item and quantity required in a character's inventory in order toperform an action.
+[[DestinyItemCreationEntryLevelDefinition|Destiny-Definitions-DestinyItemCreationEntryLevelDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>An overly complicated wrapper for the item level at which the item should spawn.
+[[DestinyItemGearsetBlockDefinition|Destiny-Definitions-DestinyItemGearsetBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>If an item has a related gearset, this is the list of items in that set, and an unlock expressionthat evaluates to a number representing the progress toward gearset completion (a very rare use forunlock expressions!)
+[[DestinyItemInventoryBlockDefinition|Destiny-Definitions-DestinyItemInventoryBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>If the item can exist in an inventory - the overwhelming majority of them can and do -then this is the basic properties regarding the item's relationship with the inventory.
+[[DestinyItemInvestmentStatDefinition|Destiny-Definitions-DestinyItemInvestmentStatDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Represents a &quot;raw&quot; investment stat, before calculated stats are calculatedand before any DestinyStatGroupDefinition is applied to transform the statinto something closer to what you see in-game. (truncated)
+[[DestinyItemObjectiveBlockDefinition|Destiny-Definitions-DestinyItemObjectiveBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>An item can have objectives on it.  In practice, these are the exclusive purview of&quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest. (truncated)
+[[DestinyItemPerkEntryDefinition|Destiny-Definitions-DestinyItemPerkEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>An intrinsic perk on an item, and the requirements for it to be activated.
+[[DestinyItemPlugDefinition|Destiny-Definitions-Items-DestinyItemPlugDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>If an item is a Plug, its DestinyInventoryItemDefinition.plug property will be populatedwith an instance of one of these bad boys. (truncated)
+[[DestinyItemPreviewBlockDefinition|Destiny-Definitions-DestinyItemPreviewBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Items like Sacks or Boxes can have items that it shows in-game when you view detailsthat represent the items you can obtain if you use or acquire the item. (truncated)
+[[DestinyItemQualityBlockDefinition|Destiny-Definitions-DestinyItemQualityBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>An item's &quot;Quality&quot; determines its calculated stats.  The Level at which the item spawnsis combined with its &quot;qualityLevel&quot; along with some additional calculations to determinethe value of those stats. (truncated)
+[[DestinyItemSackBlockDefinition|Destiny-Definitions-DestinyItemSackBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Some items are &quot;sacks&quot; - they can be &quot;opened&quot; to produce other items.This is information related to its sack status, mostly UI strings.Engrams are an example of items that are considered to be &quot;Sacks&quot;.
+[[DestinyItemSetBlockDefinition|Destiny-Definitions-DestinyItemSetBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Primarily for Quests, this is the definition of properties related to the item if it is a questand its various quest steps.
+[[DestinyItemSetBlockEntryDefinition|Destiny-Definitions-DestinyItemSetBlockEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Defines a particular entry in an ItemSet (AKA a particular Quest Step in a Quest)
+[[DestinyItemSocketBlockDefinition|Destiny-Definitions-DestinyItemSocketBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>If defined, the item has at least one socket.
+[[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Sockets are grouped into categories in the UI.  These define which categoryand which sockets are under that category.
+[[DestinyItemSocketEntryDefinition|Destiny-Definitions-DestinyItemSocketEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The definition information for a specific socket on an item.This will determine how the socket behaves in-game.
+[[DestinyItemSocketEntryPlugItemDefinition|Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The definition of a known, reusable plug that can be applied to a socket.
+[[DestinyItemSourceBlockDefinition|Destiny-Definitions-DestinyItemSourceBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Data about an item's &quot;sources&quot;: ways that the item can be obtained.
+[[DestinyItemSourceDefinition|Destiny-Definitions-Sources-DestinyItemSourceDefinition]] |  | Scope: <i>Destiny.Definitions.Sources</i><br/>Properties of a DestinyInventoryItemDefinition that store all of the informationwe were able to discern about how the item spawns, and where you can find the item. (truncated)
+[[DestinyItemStatBlockDefinition|Destiny-Definitions-DestinyItemStatBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Information about the item's calculated stats, with as much data as we can find for the statswithout having an actual instance of the item. (truncated)
+[[DestinyItemSummaryBlockDefinition|Destiny-Definitions-DestinyItemSummaryBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This appears to be information used when rendering rewards.  We don't currently use it on BNet.
+[[DestinyItemTalentGridBlockDefinition|Destiny-Definitions-DestinyItemTalentGridBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This defines information that can only come from a talent grid on an item.Items mostly have negligible talent grid data these days, but instanced items still retaingrids as a source for some of this common information. (truncated)
 [[DestinyItemTierTypeInfusionBlock|Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>
-[[DestinyItemTranslationBlockDefinition|Destiny-Definitions-DestinyItemTranslationBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyItemValueBlockDefinition|Destiny-Definitions-DestinyItemValueBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyLinkedGraphDefinition|Destiny-Definitions-Director-DestinyLinkedGraphDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
+[[DestinyItemTranslationBlockDefinition|Destiny-Definitions-DestinyItemTranslationBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This Block defines the rendering data associated with the item, if any.
+[[DestinyItemValueBlockDefinition|Destiny-Definitions-DestinyItemValueBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This defines an item's &quot;Value&quot;.Unfortunately, this appears to be used in different ways depending on the way that the item itselfis used. (truncated)
+[[DestinyLinkedGraphDefinition|Destiny-Definitions-Director-DestinyLinkedGraphDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>This describes links between the current graph and others, as well as when that link is relevant.
 [[DestinyLinkedGraphEntryDefinition|Destiny-Definitions-Director-DestinyLinkedGraphEntryDefinition]] |  | Scope: <i>Destiny.Definitions.Director</i><br/>
-[[DestinyLocationDefinition|Destiny-Definitions-DestinyLocationDefinition]] | Locations | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyLocationReleaseDefinition|Destiny-Definitions-DestinyLocationReleaseDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]] | Lore | Scope: <i>Destiny.Definitions.Lore</i><br/>
-[[DestinyMaterialRequirement|Destiny-Definitions-DestinyMaterialRequirement]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyMaterialRequirementSetDefinition|Destiny-Definitions-DestinyMaterialRequirementSetDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyMilestoneActivityDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneActivityVariantDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]] | Milestones | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneQuestDefinition|Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneQuestRewardItem|Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneQuestRewardsDefinition|Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneRewardCategoryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneRewardEntryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneValueDefinition|Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyMilestoneVendorDefinition|Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>
-[[DestinyNodeActivationRequirement|Destiny-Definitions-DestinyNodeActivationRequirement]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyNodeSocketReplaceResponse|Destiny-Definitions-DestinyNodeSocketReplaceResponse]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyNodeStepDefinition|Destiny-Definitions-DestinyNodeStepDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]] | Objectives | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyObjectivePerkEntryDefinition|Destiny-Definitions-DestinyObjectivePerkEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyObjectiveStatEntryDefinition|Destiny-Definitions-DestinyObjectiveStatEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyPlaceDefinition|Destiny-Definitions-DestinyPlaceDefinition]] | Places | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyPlugRuleDefinition|Destiny-Definitions-Items-DestinyPlugRuleDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>
-[[DestinyPlugWhitelistEntryDefinition|Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition]] |  | Scope: <i>Destiny.Definitions.Sockets</i><br/>
+[[DestinyLocationReleaseDefinition|Destiny-Definitions-DestinyLocationReleaseDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>A specific &quot;spot&quot; referred to by a location.  Only one of these can be active at a time fora given Location.
+[[DestinyMaterialRequirement|Destiny-Definitions-DestinyMaterialRequirement]] |  | Scope: <i>Destiny.Definitions</i><br/>Many actions relating to items require you to expend materials:- Activating a talent node- Inserting a plug into a socketThe items will refer to material requirements by a materialRequirementsHash in these cases, and thisis the definition for those requirements in terms of the item required, how much of it is required and otherinteresting info.This is one of the rare/strange times where a single contract class is used both in definitions *and*in live data response contracts.  I'm not sure yet whether I regret that.
+[[DestinyMaterialRequirementSetDefinition|Destiny-Definitions-DestinyMaterialRequirementSetDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Represent a set of material requirements: Items that either need to be owned or need to be consumedin order to perform an action. (truncated)
+[[DestinyMilestoneActivityDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>Milestones can have associated activities which provide additional information about the context, challenges, modifiers, state etc...related to this Milestone.   (truncated)
+[[DestinyMilestoneActivityVariantDefinition|Destiny-Definitions-Milestones-DestinyMilestoneActivityVariantDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>Represents a variant on an activity for a Milestone: a specific difficulty tier, or a specific activity variant for example. (truncated)
+[[DestinyMilestoneQuestDefinition|Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone.Even just typing this description, I already regret it.
+[[DestinyMilestoneQuestRewardItem|Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>A subclass of DestinyItemQuantity, that provides not just the item and its quantitybut also information that BNet can - at some point - use internally to providemore robust runtime information about the item's qualities. (truncated)
+[[DestinyMilestoneQuestRewardsDefinition|Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>If rewards are given in a quest - as opposed to overall in the entire Milestone - there's way lessto track.  We're going to simplify this contract as a result.  However, this also gives us theopportunity to potentially put more than just item information into the reward data if we're ableto mine it out in the future.  Remember this if you come back and ask &quot;why are quest reward itemsnested inside of their own class?&quot;
+[[DestinyMilestoneRewardCategoryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardCategoryDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>The definition of a category of rewards, that contains many individual rewards.
+[[DestinyMilestoneRewardEntryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>The definition of a specific reward, which may be contained in a category of rewards andthat has optional information about how it is obtained.
+[[DestinyMilestoneValueDefinition|Destiny-Definitions-Milestones-DestinyMilestoneValueDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>The definition for information related to a key/value pair that is relevant for a particular Milestone orcomponent within the Milestone.   (truncated)
+[[DestinyMilestoneVendorDefinition|Destiny-Definitions-Milestones-DestinyMilestoneVendorDefinition]] |  | Scope: <i>Destiny.Definitions.Milestones</i><br/>If the Milestone or a component has vendors whose inventories could/should be displayed that are relevant to it,this will return the vendor in question.   (truncated)
+[[DestinyNodeActivationRequirement|Destiny-Definitions-DestinyNodeActivationRequirement]] |  | Scope: <i>Destiny.Definitions</i><br/>Talent nodes have requirements that must be met before they can be activated. (truncated)
+[[DestinyNodeSocketReplaceResponse|Destiny-Definitions-DestinyNodeSocketReplaceResponse]] |  | Scope: <i>Destiny.Definitions</i><br/>This is a bit of an odd duck.  Apparently, if talent nodes steps have this data, the game will go through onstep activation and alter the first Socket it finds on the item that has a type matching the givensocket type, inserting the indicated plug item.
+[[DestinyNodeStepDefinition|Destiny-Definitions-DestinyNodeStepDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This defines the properties of a &quot;Talent Node Step&quot;.  When you see a talent nodein game, the actual visible properties that you see (its icon, description, theperks and stats it provides) are not provided by the Node itself, but rather by the currently active Step on the node. (truncated)
+[[DestinyObjectivePerkEntryDefinition|Destiny-Definitions-DestinyObjectivePerkEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Defines the conditions under which an intrinsic perk is applied while participating in an Objective. (truncated)
+[[DestinyObjectiveStatEntryDefinition|Destiny-Definitions-DestinyObjectiveStatEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Defines the conditions under which stat modifications will be applied to a Character whileparticipating in an objective.
+[[DestinyPlugRuleDefinition|Destiny-Definitions-Items-DestinyPlugRuleDefinition]] |  | Scope: <i>Destiny.Definitions.Items</i><br/>Dictates a rule around whether the plug is enabled or insertable. (truncated)
+[[DestinyPlugWhitelistEntryDefinition|Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition]] |  | Scope: <i>Destiny.Definitions.Sockets</i><br/>Defines a plug &quot;Category&quot; that is allowed to be plugged into a socket of this type. (truncated)
 [[DestinyPositionDefinition|Destiny-Definitions-Common-DestinyPositionDefinition]] |  | Scope: <i>Destiny.Definitions.Common</i><br/>
-[[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]] | Progressions | Scope: <i>Destiny.Definitions</i><br/>
 [[DestinyProgressionDisplayPropertiesDefinition|Destiny-Definitions-DestinyProgressionDisplayPropertiesDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]] | ProgressionLevelRequirements | Scope: <i>Destiny.Definitions.Progression</i><br/>
-[[DestinyProgressionMappingDefinition|Destiny-Definitions-DestinyProgressionMappingDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyProgressionRewardDefinition|Destiny-Definitions-DestinyProgressionRewardDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyProgressionStepDefinition|Destiny-Definitions-DestinyProgressionStepDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyRaceDefinition|Destiny-Definitions-DestinyRaceDefinition]] | Races | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]] | RewardSources | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]] | SandboxPerks | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]] | SocketTypes | Scope: <i>Destiny.Definitions.Sockets</i><br/>
-[[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]] | Stats | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyStatDisplayDefinition|Destiny-Definitions-DestinyStatDisplayDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyStatGroupDefinition|Destiny-Definitions-DestinyStatGroupDefinition]] | StatGroups | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyStatOverrideDefinition|Destiny-Definitions-DestinyStatOverrideDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyTalentExclusiveGroup|Destiny-Definitions-DestinyTalentExclusiveGroup]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]] | Talents | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyTalentNodeCategory|Destiny-Definitions-DestinyTalentNodeCategory]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyTalentNodeDefinition|Destiny-Definitions-DestinyTalentNodeDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyTalentNodeExclusiveSetDefinition|Destiny-Definitions-DestinyTalentNodeExclusiveSetDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyTalentNodeStepGroups|Destiny-Definitions-DestinyTalentNodeStepGroups]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]] | Unlocks | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyUnlockExpressionDefinition|Destiny-Definitions-DestinyUnlockExpressionDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorAcceptedItemDefinition|Destiny-Definitions-DestinyVendorAcceptedItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorActionDefinition|Destiny-Definitions-DestinyVendorActionDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorCategoryEntryDefinition|Destiny-Definitions-DestinyVendorCategoryEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]] | Vendors | Scope: <i>Destiny.Definitions</i><br/>
+[[DestinyProgressionMappingDefinition|Destiny-Definitions-DestinyProgressionMappingDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Aggregations of multiple progressions. (truncated)
+[[DestinyProgressionRewardDefinition|Destiny-Definitions-DestinyProgressionRewardDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Inventory Items can reward progression when actions are performed on them.  A common exampleof this in Destiny 1 was Bounties, which would reward Experience on your Character and the like when you completed the bounty. (truncated)
+[[DestinyProgressionStepDefinition|Destiny-Definitions-DestinyProgressionStepDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This defines a single Step in a progression (which roughly equates to a level.  See DestinyProgressionDefinitionfor caveats).
+[[DestinyStatDisplayDefinition|Destiny-Definitions-DestinyStatDisplayDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Describes the way that an Item Stat (see DestinyStatDefinition) is transformedusing the DestinyStatGroupDefinition related to that item.  See both of the aforementioneddefinitions for more information about the stages of stat transformation. (truncated)
+[[DestinyStatOverrideDefinition|Destiny-Definitions-DestinyStatOverrideDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized textassociated with stats that are to be shown on the items with which they are associated. (truncated)
+[[DestinyTalentExclusiveGroup|Destiny-Definitions-DestinyTalentExclusiveGroup]] |  | Scope: <i>Destiny.Definitions</i><br/>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.
+[[DestinyTalentNodeCategory|Destiny-Definitions-DestinyTalentNodeCategory]] |  | Scope: <i>Destiny.Definitions</i><br/>An artificial construct provided by Bungie.Net, where we attempt to group talent nodesby functionality. (truncated)
+[[DestinyTalentNodeDefinition|Destiny-Definitions-DestinyTalentNodeDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Talent Grids on items have Nodes.  These nodes have positions in the talent grid's UI,and contain &quot;Steps&quot; (DestinyTalentNodeStepDefinition), one of whom will be the &quot;Current&quot; step. (truncated)
+[[DestinyTalentNodeExclusiveSetDefinition|Destiny-Definitions-DestinyTalentNodeExclusiveSetDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The list of indexes into the Talent Grid's &quot;nodes&quot; property for nodes in thisexclusive set. (See DestinyTalentNodeDefinition.nodeIndex)
+[[DestinyTalentNodeStepGroups|Destiny-Definitions-DestinyTalentNodeStepGroups]] |  | Scope: <i>Destiny.Definitions</i><br/>These properties are an attempt to categorize talent node steps by certain common properties.  Seethe related enumerations for the type of properties being categorized.
+[[DestinyUnlockExpressionDefinition|Destiny-Definitions-DestinyUnlockExpressionDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Where the sausage gets made.  Unlock Expressions are the foundation of the game's gatingmechanics and investment-related restrictions.  They can test Unlock Flags and Unlock Valuesfor certain states, using a sufficient amount of logical operators such thatunlock expressions are effectively Turing complete. (truncated)
+[[DestinyVendorAcceptedItemDefinition|Destiny-Definitions-DestinyVendorAcceptedItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>If you ever wondered how the Vault works, here it is. (truncated)
+[[DestinyVendorActionDefinition|Destiny-Definitions-DestinyVendorActionDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>If a vendor can ever end up performing actions, these are the properties that will be relatedto those actions.  I'm not going to bother documenting this yet, as it is unused and unclear ifit will ever be used... but in case it is ever populated and someone finds it useful, it is defined here.
+[[DestinyVendorCategoryEntryDefinition|Destiny-Definitions-DestinyVendorCategoryEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This is the definition for a single Vendor Category, into which Sale Items are grouped.
+[[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The details of an overlay prompt to show to a user.  They are all fairlyself-explanatory localized strings that can be shown.
 [[DestinyVendorDisplayPropertiesDefinition|Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorInteractionDefinition|Destiny-Definitions-DestinyVendorInteractionDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorInteractionReplyDefinition|Destiny-Definitions-DestinyVendorInteractionReplyDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorInteractionSackEntryDefinition|Destiny-Definitions-DestinyVendorInteractionSackEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorInventoryFlyoutBucketDefinition|Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorInventoryFlyoutDefinition|Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorItemDefinition|Destiny-Definitions-DestinyVendorItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorRequirementDisplayEntryDefinition|Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorSaleItemActionBlockDefinition|Destiny-Definitions-DestinyVendorSaleItemActionBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
-[[DestinyVendorServiceDefinition|Destiny-Definitions-DestinyVendorServiceDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>
+[[DestinyVendorInteractionDefinition|Destiny-Definitions-DestinyVendorInteractionDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>A Vendor Interaction is a dialog shown by the vendor other than sale items or transfer screens.The vendor is showing you something, and asking you to reply to it by choosing an option or reward.
+[[DestinyVendorInteractionReplyDefinition|Destiny-Definitions-DestinyVendorInteractionReplyDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>When the interaction is replied to, Reward sites will fire and items potentially selected based onwhether the given unlock expression is TRUE. (truncated)
+[[DestinyVendorInteractionSackEntryDefinition|Destiny-Definitions-DestinyVendorInteractionSackEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Compare this sackType to the sack identifier in the DestinyInventoryItemDefinition.vendorSackTypeproperty of items.  If they match, show this sack with this interaction.
+[[DestinyVendorInventoryFlyoutBucketDefinition|Destiny-Definitions-DestinyVendorInventoryFlyoutBucketDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Information about a single inventory bucket in a vendor flyout UI and how it is shown.
+[[DestinyVendorInventoryFlyoutDefinition|Destiny-Definitions-DestinyVendorInventoryFlyoutDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The definition for an &quot;inventory flyout&quot;: a UI screen where we show youpart of an otherwise hidden vendor inventory: like the Vault inventory buckets.
+[[DestinyVendorItemDefinition|Destiny-Definitions-DestinyVendorItemDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This represents an item being sold by the vendor.
+[[DestinyVendorRequirementDisplayEntryDefinition|Destiny-Definitions-DestinyVendorRequirementDisplayEntryDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>The localized properties of the requirementsDisplay, allowing information about the requirement oritem being featured to be seen.
+[[DestinyVendorSaleItemActionBlockDefinition|Destiny-Definitions-DestinyVendorSaleItemActionBlockDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Not terribly useful, some basic cooldown interaction info.
+[[DestinyVendorServiceDefinition|Destiny-Definitions-DestinyVendorServiceDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>When a vendor provides services, this is the localized name of those services.
 
 ## <a name="Schemas-Enum"></a>Enum Schemas
 Name | Description
@@ -382,53 +386,53 @@ Name | Description
 [[DestinyActivityModeType&#91;&#93;|Destiny-HistoricalStats-Definitions-DestinyActivityModeType--]] | Scope: <i>Destiny.HistoricalStats.Definitions</i><br/>
 [[PeriodType&#91;&#93;|Destiny-HistoricalStats-Definitions-PeriodType--]] | Scope: <i>Destiny.HistoricalStats.Definitions</i><br/>
 
-## <a name="Schemas-Generic"></a>Generic Class Schemas
+## <a name="Schemas-GenericClass"></a>Generic Class Schemas
 Name | Description
 ---- | -----------
-[[DestinyItemComponentSet&lt;int32&gt;|DestinyItemComponentSetOfint32]] | Scope: <i></i><br/>
-[[DestinyItemComponentSet&lt;int64&gt;|DestinyItemComponentSetOfint64]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemInstanceComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemObjectivesComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemPerksComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemPerksComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemRenderComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemRenderComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemSocketsComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemStatsComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemStatsComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyItemTalentGridComponent&gt;|DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int32,DestinyVendorSaleItemComponent&gt;|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyCharacterActivitiesComponent&gt;|DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyCharacterComponent&gt;|DictionaryComponentResponseOfint64AndDestinyCharacterComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyCharacterProgressionComponent&gt;|DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyCharacterRenderComponent&gt;|DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyInventoryComponent&gt;|DictionaryComponentResponseOfint64AndDestinyInventoryComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemInstanceComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemObjectivesComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemPerksComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemPerksComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemRenderComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemRenderComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemSocketsComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemStatsComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemStatsComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyItemTalentGridComponent&gt;|DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;int64,DestinyKiosksComponent&gt;|DictionaryComponentResponseOfint64AndDestinyKiosksComponent]] | Scope: <i></i><br/>
-[[DictionaryComponentResponse&lt;uint32,DestinyItemPlugComponent&gt;|DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent]] | Scope: <i></i><br/>
-[[SearchResult&lt;CommunityLiveStatus&gt;|SearchResultOfCommunityLiveStatus]] | Scope: <i></i><br/>
-[[SearchResult&lt;DestinyEntitySearchResultItem&gt;|SearchResultOfDestinyEntitySearchResultItem]] | Scope: <i></i><br/>
-[[SearchResult&lt;PostResponse&gt;|SearchResultOfPostResponse]] | Scope: <i></i><br/>
-[[SearchResult&lt;TrendingEntry&gt;|SearchResultOfTrendingEntry]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyCharacterActivitiesComponent&gt;|SingleComponentResponseOfDestinyCharacterActivitiesComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyCharacterComponent&gt;|SingleComponentResponseOfDestinyCharacterComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyCharacterProgressionComponent&gt;|SingleComponentResponseOfDestinyCharacterProgressionComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyCharacterRenderComponent&gt;|SingleComponentResponseOfDestinyCharacterRenderComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyInventoryComponent&gt;|SingleComponentResponseOfDestinyInventoryComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemComponent&gt;|SingleComponentResponseOfDestinyItemComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemInstanceComponent&gt;|SingleComponentResponseOfDestinyItemInstanceComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemObjectivesComponent&gt;|SingleComponentResponseOfDestinyItemObjectivesComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemPerksComponent&gt;|SingleComponentResponseOfDestinyItemPerksComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemRenderComponent&gt;|SingleComponentResponseOfDestinyItemRenderComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemSocketsComponent&gt;|SingleComponentResponseOfDestinyItemSocketsComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemStatsComponent&gt;|SingleComponentResponseOfDestinyItemStatsComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyItemTalentGridComponent&gt;|SingleComponentResponseOfDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyKiosksComponent&gt;|SingleComponentResponseOfDestinyKiosksComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyProfileComponent&gt;|SingleComponentResponseOfDestinyProfileComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyVendorCategoriesComponent&gt;|SingleComponentResponseOfDestinyVendorCategoriesComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyVendorComponent&gt;|SingleComponentResponseOfDestinyVendorComponent]] | Scope: <i></i><br/>
-[[SingleComponentResponse&lt;DestinyVendorReceiptsComponent&gt;|SingleComponentResponseOfDestinyVendorReceiptsComponent]] | Scope: <i></i><br/>
+[[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]] | Scope: <i></i><br/>
+[[DestinyItemComponentSetOfint64|DestinyItemComponentSetOfint64]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent|DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent|DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemPerksComponent|DictionaryComponentResponseOfint32AndDestinyItemPerksComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemRenderComponent|DictionaryComponentResponseOfint32AndDestinyItemRenderComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent|DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemStatsComponent|DictionaryComponentResponseOfint32AndDestinyItemStatsComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent|DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent|DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyCharacterComponent|DictionaryComponentResponseOfint64AndDestinyCharacterComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent|DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent|DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyInventoryComponent|DictionaryComponentResponseOfint64AndDestinyInventoryComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent|DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent|DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemPerksComponent|DictionaryComponentResponseOfint64AndDestinyItemPerksComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemRenderComponent|DictionaryComponentResponseOfint64AndDestinyItemRenderComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent|DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemStatsComponent|DictionaryComponentResponseOfint64AndDestinyItemStatsComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent|DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfint64AndDestinyKiosksComponent|DictionaryComponentResponseOfint64AndDestinyKiosksComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent]] | Scope: <i></i><br/>
+[[SearchResultOfCommunityLiveStatus|SearchResultOfCommunityLiveStatus]] | Scope: <i></i><br/>
+[[SearchResultOfDestinyEntitySearchResultItem|SearchResultOfDestinyEntitySearchResultItem]] | Scope: <i></i><br/>
+[[SearchResultOfPostResponse|SearchResultOfPostResponse]] | Scope: <i></i><br/>
+[[SearchResultOfTrendingEntry|SearchResultOfTrendingEntry]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyCharacterActivitiesComponent|SingleComponentResponseOfDestinyCharacterActivitiesComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyCharacterComponent|SingleComponentResponseOfDestinyCharacterComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyCharacterProgressionComponent|SingleComponentResponseOfDestinyCharacterProgressionComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyCharacterRenderComponent|SingleComponentResponseOfDestinyCharacterRenderComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyInventoryComponent|SingleComponentResponseOfDestinyInventoryComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemComponent|SingleComponentResponseOfDestinyItemComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemInstanceComponent|SingleComponentResponseOfDestinyItemInstanceComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemObjectivesComponent|SingleComponentResponseOfDestinyItemObjectivesComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemPerksComponent|SingleComponentResponseOfDestinyItemPerksComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemRenderComponent|SingleComponentResponseOfDestinyItemRenderComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemSocketsComponent|SingleComponentResponseOfDestinyItemSocketsComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemStatsComponent|SingleComponentResponseOfDestinyItemStatsComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyItemTalentGridComponent|SingleComponentResponseOfDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyKiosksComponent|SingleComponentResponseOfDestinyKiosksComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyProfileComponent|SingleComponentResponseOfDestinyProfileComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyVendorCategoriesComponent|SingleComponentResponseOfDestinyVendorCategoriesComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyVendorComponent|SingleComponentResponseOfDestinyVendorComponent]] | Scope: <i></i><br/>
+[[SingleComponentResponseOfDestinyVendorReceiptsComponent|SingleComponentResponseOfDestinyVendorReceiptsComponent]] | Scope: <i></i><br/>
 

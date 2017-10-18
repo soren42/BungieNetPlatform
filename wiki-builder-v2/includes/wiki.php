@@ -520,7 +520,7 @@ function buildComponents($openapi, $version) {
 	$componentsMarkdown .= LN;
 
 	// Security Schema Components
-	$componentsMarkdown .= '## <a name="Security"></a>Security'.LN;
+	$componentsMarkdown .= '## <a name="Security"></a>Security ('.count(array_keys((array)$openapi->components->securitySchemes)).')'.LN;
 	$componentsMarkdown .= buildTableHeader(array('Name', 'Type', 'Description'));
 
 	$securitySchemasPath = WIKIPATH.'/'.$versionPrefix.'/SecuritySchemas.md';
@@ -560,20 +560,23 @@ function buildComponents($openapi, $version) {
 	updateWikiPage($securitySchemasPath, $securitySchemasMarkdown);
 
 	// Schema Components
-	$componentsMarkdown .= '## <a name="Schemas"></a>Schemas'.LN;
 
 	// Sort Schemas by ID
 	$schemaIds = array_keys((array)$openapi->components->schemas);
 	sort($schemaIds);
 
+	$componentsMarkdown .= '## <a name="Schemas"></a>Schemas ('.count($schemaIds).')'.LN;
+
 	$groups = array(
+		'ManifestDefinition' => array(),
 		'Definition' => array(),
 		'Enum' => array(),
 		'Class' => array(),
 		'Array' => array(),
-		'Generic' => array()
+		'GenericClass' => array()
 	);
 
+	// Sort them into groups
 	foreach($schemaIds as $schemaId) {
 		$refType = getSchemaReferenceType($schemaId);
 		if (!isset($groups[$refType])) $groups[$refType] = array();
@@ -581,7 +584,7 @@ function buildComponents($openapi, $version) {
 	}
 
 	foreach($groups as $groupId => $components) {
-		$componentsMarkdown .= '## <a name="Schemas-'.$groupId.'"></a>'.$groupId.($groupId == 'Generic' ? ' Class' : '').' Schemas'.LN;
+		$componentsMarkdown .= '## <a name="Schemas-'.$groupId.'"></a>'.preg_replace('/(.)([A-Z])/', '$1 $2', $groupId).' Schemas'.LN;
 
 		usort($components, function($a, $b) {
 			return strcasecmp(getSchemaReferenceShortName('#/components/schemas/'.$a), getSchemaReferenceShortName('#/components/schemas/'.$b));
@@ -590,24 +593,32 @@ function buildComponents($openapi, $version) {
 		switch($groupId) {
 			case 'Definition':
 
-				$componentsMarkdown .= buildTableHeader(array(
+				$definitionsPath = WIKIPATH.'/'.$versionPrefix.'/Definitions.md';
+				$definitionsMarkdown = '';
+
+				$definitionsMarkdown .= buildTableHeader(array(
 					'Name',
 					'Manifest',
 					'Description'
 				));
+
 				foreach($components as $schemaId) {
 					$ref = '#/components/schemas/'.$schemaId;
 					$schema = $openapi->components->schemas->{$schemaId};
 					$schemaDescription = isset($schema->description) ? $schema->description : '';
 
-					$componentsMarkdown .= buildTableRow(array(
+					$definitionsMarkdown .= buildTableRow(array(
 						explode(':', buildSchemaStringFromRef($ref))[0],
 						isset($schema->{'x-mobile-manifest-name'}) ? $schema->{'x-mobile-manifest-name'} : '',
-						'Scope: <i>'.getSchemaReferenceScope($ref).'</i>'.BR//.truncateDescription($schemaDescription)
+						'Scope: <i>'.getSchemaReferenceScope($ref).'</i>'.BR.truncateDescription($schemaDescription)
 					));
 
 					buildComponentSchemaPage('#/components/schemas/'.$schemaId, $openapi, $versionPrefix);
 				}
+
+				$componentsMarkdown .= $definitionsMarkdown;
+
+				updateWikiPage($definitionsPath, $definitionsMarkdown);
 				break;
 			default:
 				$componentsMarkdown .= buildTableHeader(array(
@@ -621,7 +632,7 @@ function buildComponents($openapi, $version) {
 
 					$componentsMarkdown .= buildTableRow(array(
 						explode(':', buildSchemaStringFromRef('#/components/schemas/'.$schemaId))[0],
-						'Scope: <i>'.getSchemaReferenceScope($ref).'</i>'.BR//truncateDescription($schemaDescription)
+						'Scope: <i>'.getSchemaReferenceScope($ref).'</i>'.BR//.truncateDescription($schemaDescription)
 					));
 
 					buildComponentSchemaPage('#/components/schemas/'.$schemaId, $openapi, $versionPrefix);
@@ -677,7 +688,7 @@ function buildComponentSchemaPage($ref, $openapi, $versionPrefix) {
 
 	$schemaType = getSchemaReferenceType($ref);
 
-	$schemaMarkdown .= '* **Schema Type:** '.$schemaType.($schemaType == 'Generic' ? ' Class' : '').LN;
+	$schemaMarkdown .= '* **Schema Type:** '.preg_replace('/(.)([A-Z])/', '$1 $2', $schemaType).LN;
 	if (isset($schema->type)) $schemaMarkdown .= '* **Type:** '.$schema->type.LN;
 	if (isset($schema->format)) $schemaMarkdown .= '* **Format:** '.$schema->format.LN;
 	if (isset($schema->{'x-mobile-manifest-name'})) $schemaMarkdown .= '* **Mobile Manifest:** '.$schema->{'x-mobile-manifest-name'}.LN;

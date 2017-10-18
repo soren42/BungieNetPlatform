@@ -4,7 +4,7 @@
 These are the definitions for Vendors. In Destiny, a Vendor can be a lot of things - some things that you wouldn't expect, and some thingsthat you don't even see directly in the game.  Vendors are the Dolly Levi of the Destiny universe. - Traditional Vendors as you see in game: people who you come up to and who give you quests, rewards, or whoyou can buy things from. - Kiosks/Collections, which are really just Vendors that don't charge currency (or charge some pittance of a currency)and whose gating for purchases revolves more around your character's state. - Previews for rewards or the contents of sacks.  These are implemented as Vendors, where you can't actually purchase fromthem but the items that they have for sale and the categories of sale items reflect the rewards or contents of the sack.This is so that the game could reuse the existing Vendor display UI for rewards and save a bunch of wheel reinvention. - Item Transfer capabilities, like the Vault and Postmaster.  Vendors can have &quot;acceptedItem&quot; buckets that determinethe source and destination buckets for transfers.  When you interact with such a vendor, these buckets are whatgets shown in the UI instead of any items that the Vendor would have for sale.  Yep, the Vault is a vendor. It is pretty much guaranteed that they'll be used for even more features in the future.  They have cometo be seen more as generic categorized containers for items than &quot;vendors&quot; in a traditional sense, forbetter or worse. Where possible and time allows, we'll attempt to split those out into their own moredigestible derived &quot;Definitions&quot;: but often time does not allow that, as you can see from the above waysthat vendors are used which we never split off from Vendor Definitions externally. Since Vendors are so many things to so many parts of the game, the definition is understandably complex.You will want to combine this data with live Vendor information from the API when it is available.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Vendors
 
 ## Properties
@@ -13,10 +13,10 @@ Name | Type | Description
 displayProperties | [[DestinyVendorDisplayPropertiesDefinition|Destiny-Definitions-DestinyVendorDisplayPropertiesDefinition]]:Definition | 
 buyString | string | If the vendor has a custom localized string describing the &quot;buy&quot; action, that isreturned here.
 sellString | string | Ditto for selling.  Not that you can sell items to a vendor anymore.  Will it come back?Who knows.  The string's still there.
-displayItemHash | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32 | If the vendor has an item that should be displayed as the &quot;featured&quot; item, this isthe hash identifier for that DestinyVendorItemDefinition. Apparently this is usually a related currency, like a reputation token.  But it need not be restricted to that.
+displayItemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | If the vendor has an item that should be displayed as the &quot;featured&quot; item, this isthe hash identifier for that DestinyVendorItemDefinition. Apparently this is usually a related currency, like a reputation token.  But it need not be restricted to that.
 inhibitBuying | boolean | If this is true, you aren't allowed to buy whatever the vendor is selling.
 inhibitSelling | boolean | If this is true, you're not allowed to sell whatever the vendor is buying.
-factionHash | [[DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:ManifestDefinition:integer:uint32 | If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition. The game UI and BNet often mine the faction definition for additional elements and details to placeon the screen, such as the faction's Progression status (aka &quot;Reputation&quot;).
+factionHash | [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32 | If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition. The game UI and BNet often mine the faction definition for additional elements and details to placeon the screen, such as the faction's Progression status (aka &quot;Reputation&quot;).
 resetIntervalMinutes | integer:int32 | A number used for calculating the frequency of a vendor's inventory resetting/refreshing. Don't worry about calculating this - we do it on the server side and send you the next refreshdate with the live data.
 resetOffsetMinutes | integer:int32 | Again, used for reset/refreshing of inventory.  Don't worry too much about it.  Unless you want to.
 failureStrings | string[] | If an item can't be purchased from the vendor, there may be many &quot;custom&quot;/game state specific reasons why not. This is a list of localized strings with messages for those custom failures.  The live BNet data will return afailureIndexes property for items that can't be purchased: using those values to index into this array,you can show the user the appropriate failure message for the item that can't be bought.
@@ -78,13 +78,13 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "buyString": "",
     // Type: string
     "sellString": "",
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
     "displayItemHash": 0,
     // Type: boolean
     "inhibitBuying": false,
     // Type: boolean
     "inhibitSelling": false,
-    // Type: [[DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32
     "factionHash": 0,
     // Type: integer:int32
     "resetIntervalMinutes": 0,
@@ -256,7 +256,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             ],
             // Type: integer:int32
             "vendorCategoryIndex": 0,
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "questlineItemHash": 0,
             // Type: [[DestinyVendorInteractionSackEntryDefinition|Destiny-Definitions-DestinyVendorInteractionSackEntryDefinition]]:Definition[]
             "sackInteractionList": [
@@ -314,7 +314,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
                 {
                     // Type: boolean
                     "collapsible": false,
-                    // Type: [[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
                     "inventoryBucketHash": 0,
                     // Type: [[DestinyItemSortType|Destiny-DestinyItemSortType]]:Enum
                     "sortItemsBy": 0
@@ -332,7 +332,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
         {
             // Type: integer:int32
             "vendorItemIndex": 0,
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: integer:int32
             "quantity": 0,
@@ -345,7 +345,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             "currencies": [
                // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
                 {
-                    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "itemHash": 0,
                     // Type: integer:int64:nullable
                     "itemInstanceId": 0,
@@ -404,9 +404,9 @@ redacted | boolean | If this is true, then there is an entity with this identifi
     "acceptedItems": [
        // Type: [[DestinyVendorAcceptedItemDefinition|Destiny-Definitions-DestinyVendorAcceptedItemDefinition]]:Definition
         {
-            // Type: [[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
             "acceptedInventoryBucketHash": 0,
-            // Type: [[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
             "destinationInventoryBucketHash": 0
         }
     ],

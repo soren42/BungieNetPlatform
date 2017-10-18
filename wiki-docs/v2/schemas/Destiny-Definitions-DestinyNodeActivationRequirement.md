@@ -5,6 +5,7 @@ Talent nodes have requirements that must be met before they can be activated. Th
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

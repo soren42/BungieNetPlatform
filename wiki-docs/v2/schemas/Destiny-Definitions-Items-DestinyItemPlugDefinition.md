@@ -15,7 +15,7 @@ plugCategoryIdentifier | string | The string identifier for the plug's category.
 plugCategoryHash | integer:uint32 | The hash for the plugCategoryIdentifier.  You can use this instead if you wish: I put both in the definitionfor debugging purposes.
 onActionRecreateSelf | boolean | If you successfully socket the item, this will determine whether or not you get &quot;refunded&quot; on the plug.
 insertionMaterialRequirementHash | [[DestinyMaterialRequirementSetDefinition|Destiny-Definitions-DestinyMaterialRequirementSetDefinition]]:Definition:integer:uint32 | If inserting this plug requires materials, this is the hash identifier for looking up theDestinyMaterialRequirementSetDefinition for those requirements.
-previewItemOverrideHash | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32 | In the game, if you're inspecting a plug item directly, this will be the item shownwith the plug attached.  Look up the DestinyInventoryItemDefinition for this hash for the item.
+previewItemOverrideHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | In the game, if you're inspecting a plug item directly, this will be the item shownwith the plug attached.  Look up the DestinyInventoryItemDefinition for this hash for the item.
 enabledMaterialRequirementHash | [[DestinyMaterialRequirementSetDefinition|Destiny-Definitions-DestinyMaterialRequirementSetDefinition]]:Definition:integer:uint32 | It's not enough for the plug to be inserted.  It has to be enabled as well.For it to be enabled, it may require materials.This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements,if there is one.
 enabledRules | [[DestinyPlugRuleDefinition|Destiny-Definitions-Items-DestinyPlugRuleDefinition]]:Definition[] | The rules around whether the plug, once inserted, is enabled and providing its benefits. The live data DestinyItemPlugComponent.enableFailIndexes will be an index intothis array, so you can pull out the failure strings appropriate for the user.
 
@@ -38,7 +38,7 @@ enabledRules | [[DestinyPlugRuleDefinition|Destiny-Definitions-Items-DestinyPlug
     "onActionRecreateSelf": false,
     // Type: [[DestinyMaterialRequirementSetDefinition|Destiny-Definitions-DestinyMaterialRequirementSetDefinition]]:Definition:integer:uint32
     "insertionMaterialRequirementHash": 0,
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
     "previewItemOverrideHash": 0,
     // Type: [[DestinyMaterialRequirementSetDefinition|Destiny-Definitions-DestinyMaterialRequirementSetDefinition]]:Definition:integer:uint32
     "enabledMaterialRequirementHash": 0,

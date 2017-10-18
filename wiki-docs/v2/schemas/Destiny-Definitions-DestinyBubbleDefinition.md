@@ -5,6 +5,7 @@ Basic identifying data about the bubble.  Combine with DestinyDestinationBubbleS
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

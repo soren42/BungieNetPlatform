@@ -5,6 +5,7 @@ These Art Elements are meant to represent one-off visual effects overlaid on the
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

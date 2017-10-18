@@ -28,7 +28,7 @@ rewardItems | [[DestinyItemQuantity|Destiny-DestinyItemQuantity]][] | A listing 
     "rewardItems": [
        // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
         {
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

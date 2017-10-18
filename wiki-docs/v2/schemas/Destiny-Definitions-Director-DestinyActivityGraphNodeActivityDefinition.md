@@ -11,14 +11,14 @@ The actual activity to be redirected to when you click on the node.Note that a n
 Name | Type | Description
 ---- | ---- | -----------
 nodeActivityId | integer:uint32 | An identifier for this node activity.  It is only guaranteed to be unique within the Activity Graph.
-activityHash | [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32 | The activity that will be activated if the user clicks on this node.  Controls all activity-relatedinformation displayed on the node if it is active (the text shown in the tooltip etc)
+activityHash | [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32 | The activity that will be activated if the user clicks on this node.  Controls all activity-relatedinformation displayed on the node if it is active (the text shown in the tooltip etc)
 
 ## Example
 ```javascript
 {
     // Type: integer:uint32
     "nodeActivityId": 0,
-    // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
     "activityHash": 0
 }
 

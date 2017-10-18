@@ -28,7 +28,7 @@ GET https://bungie.net/Platform/Trending/Categories/{categoryId}/{pageNumber}/
 PlatformErrorCode: 200
 ```javascript
 {
-    // Type: [[SearchResult&lt;TrendingEntry&gt;|SearchResultOfTrendingEntry]]
+    // Type: [[SearchResultOfTrendingEntry|SearchResultOfTrendingEntry]]
     "Response": {
         // Type: [[TrendingEntry|Trending-TrendingEntry]][]
         "results": [

@@ -14,7 +14,7 @@ itemLevels | integer:int32[] | The &quot;base&quot; defined level of an item.  T
 qualityLevel | integer:int32 | qualityLevel is used in combination with the item's level to calculate stats likeAttack and Defense.  It plays a role in that calculation, but not nearly as large asitemLevel does.
 infusionCategoryName | string | The string identifier for this item's &quot;infusability&quot;, if any. Items that match the same infusionCategoryName are allowed to infuse with each other.
 infusionCategoryHash | integer:uint32 | The hash identifier for the infusion.  It does not map to a Definition entity.
-progressionLevelRequirementHash | [[DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]]:ManifestDefinition:integer:uint32 | An item can refer to pre-set level requirements.  They are defined in DestinyProgressionLevelRequirementDefinition,and you can use this hash to find the appropriate definition.
+progressionLevelRequirementHash | [[Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]]:integer:uint32 | An item can refer to pre-set level requirements.  They are defined in DestinyProgressionLevelRequirementDefinition,and you can use this hash to find the appropriate definition.
 
 ## Example
 ```javascript
@@ -30,7 +30,7 @@ progressionLevelRequirementHash | [[DestinyProgressionLevelRequirementDefinition
     "infusionCategoryName": "",
     // Type: integer:uint32
     "infusionCategoryHash": 0,
-    // Type: [[DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]]:integer:uint32
     "progressionLevelRequirementHash": 0
 }
 

@@ -5,12 +5,13 @@ As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
 groupHash | integer:uint32 | The identifier for this exclusive group.  Only guaranteed unique within the talent grid, not globally.
-loreHash | [[DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:ManifestDefinition:integer:uint32:nullable | If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.
+loreHash | [[Destiny.Definitions.Lore.DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:integer:uint32:nullable | If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.
 nodeHashes | integer:uint32[] | A quick reference of the talent nodes that are part of this group, by their Talent Node hashes.(See DestinyTalentNodeDefinition.nodeHash)
 opposingGroupHashes | integer:uint32[] | A quick reference of Groups whose nodes will be deactivated if any node in this group is activated.
 opposingNodeHashes | integer:uint32[] | A quick reference of Nodes that will be deactivated if any node in this group is activated, bytheir Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
@@ -20,7 +21,7 @@ opposingNodeHashes | integer:uint32[] | A quick reference of Nodes that will be 
 {
     // Type: integer:uint32
     "groupHash": 0,
-    // Type: [[DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:ManifestDefinition:integer:uint32:nullable
+    // Type: [[Destiny.Definitions.Lore.DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:integer:uint32:nullable
     "loreHash": 0,
     // Type: integer:uint32[]
     "nodeHashes": [

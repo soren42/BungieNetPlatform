@@ -10,13 +10,13 @@ Indicates the status of an &quot;Unlock Flag&quot; on a Character or Profile. Th
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-unlockHash | [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the Unlock Flag.  Use to lookup DestinyUnlockDefinition for static data.Not all unlocks have human readable data - in fact, most don't.  But when they do, it can be very useful to show.Even if they don't have human readable data, you might be able to infer the meaning of an unlock flagwith a bit of experimentation...
+unlockHash | [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32 | The hash identifier for the Unlock Flag.  Use to lookup DestinyUnlockDefinition for static data.Not all unlocks have human readable data - in fact, most don't.  But when they do, it can be very useful to show.Even if they don't have human readable data, you might be able to infer the meaning of an unlock flagwith a bit of experimentation...
 isSet | boolean | Whether the unlock flag is set.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32
     "unlockHash": 0,
     // Type: boolean
     "isSet": false

@@ -11,7 +11,7 @@ This represents an item being sold by the vendor.
 Name | Type | Description
 ---- | ---- | -----------
 vendorItemIndex | integer:int32 | The index into the DestinyVendorDefinition.saleList.  This is what we use to refer to itemsbeing sold throughout live and definition data.
-itemHash | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the item being sold (DestinyInventoryItemDefinition). Note that a vendor can sell the same item in multiple ways, so don't assume that itemHash isa unique identifier for this entity.
+itemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the item being sold (DestinyInventoryItemDefinition). Note that a vendor can sell the same item in multiple ways, so don't assume that itemHash isa unique identifier for this entity.
 quantity | integer:int32 | The amount you will recieve of the item described in itemHash if you make the purchase.
 failureIndexes | integer:int32[] | An list of indexes into the DestinyVendorDefinition.failureStrings array, indicatingthe possible failure strings that can be relevant for this item.
 currencies | [[DestinyItemQuantity|Destiny-DestinyItemQuantity]][] | This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one placeto check for what the purchaser must pay for the item.  Use this instead of trying to piece togetherthe price separately.
@@ -34,7 +34,7 @@ purchasableScope | [[DestinyGatingScope|Destiny-DestinyGatingScope]]:Enum | Simi
 {
     // Type: integer:int32
     "vendorItemIndex": 0,
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
     "itemHash": 0,
     // Type: integer:int32
     "quantity": 0,
@@ -47,7 +47,7 @@ purchasableScope | [[DestinyGatingScope|Destiny-DestinyGatingScope]]:Enum | Simi
     "currencies": [
        // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
         {
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,

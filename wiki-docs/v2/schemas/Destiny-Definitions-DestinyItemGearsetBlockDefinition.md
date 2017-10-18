@@ -11,14 +11,14 @@ If an item has a related gearset, this is the list of items in that set, and an 
 Name | Type | Description
 ---- | ---- | -----------
 trackingValueMax | integer:int32 | The maximum possible number of items that can be collected.
-itemList | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32[] | The list of hashes for items in the gearset.  Use them to look up DestinyInventoryItemDefinition entries forthe items in the set.
+itemList | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32[] | The list of hashes for items in the gearset.  Use them to look up DestinyInventoryItemDefinition entries forthe items in the set.
 
 ## Example
 ```javascript
 {
     // Type: integer:int32
     "trackingValueMax": 0,
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32[]
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32[]
     "itemList": [
        // Type: integer:uint32
         0

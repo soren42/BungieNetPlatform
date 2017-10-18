@@ -10,7 +10,7 @@ Represents the &quot;Live&quot; data that we can obtain about a Character's stat
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-activityHash | [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the Activity.  Use this to look up the DestinyActivityDefinition of the activity.
+activityHash | [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32 | The hash identifier of the Activity.  Use this to look up the DestinyActivityDefinition of the activity.
 isNew | boolean | If true, then the activity should have a &quot;new&quot; indicator in the Director UI.
 canLead | boolean | If true, the user is allowed to lead a Fireteam into this activity.
 canJoin | boolean | If true, the user is allowed to join with another Fireteam in this activity.
@@ -23,7 +23,7 @@ difficultyTier | [[DestinyActivityDifficultyTier|Destiny-DestinyActivityDifficul
 ## Example
 ```javascript
 {
-    // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
     "activityHash": 0,
     // Type: boolean
     "isNew": false,

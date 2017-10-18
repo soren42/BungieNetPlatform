@@ -11,7 +11,7 @@ Well, we're here in Destiny 2, and Talent Grids are unfortunately still around. 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-talentGridHash | [[DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]]:ManifestDefinition:integer:uint32 | Most items don't have useful talent grids anymore, but Builds in particular still do. You can use this hash to lookup the DestinyTalentGridDefinition attached to this item,which will be crucial for understanding the node values on the item.
+talentGridHash | [[Destiny.Definitions.DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]]:integer:uint32 | Most items don't have useful talent grids anymore, but Builds in particular still do. You can use this hash to lookup the DestinyTalentGridDefinition attached to this item,which will be crucial for understanding the node values on the item.
 nodes | [[DestinyTalentNode|Destiny-DestinyTalentNode]][] | Detailed information about the individual nodes in the talent grid. A node represents a single visual &quot;pip&quot; in the talent grid or Build detail view,though each node may have multiple &quot;steps&quot; which indicate the actual bonusesand visual representation of that node.
 isGridComplete | boolean | Indicates whether the talent grid on this item is completed, and thus whether it should have a gold border around it. Only will be true if the item actually *has* a talent grid, and only then if it is completed (i.e. every exclusive sethas an activated node, and every non-exclusive set node has been activated)
 gridProgression | [[DestinyProgression|Destiny-DestinyProgression]] | If the item has a progression, it will be detailed here.  A progressionmeans that the item can gain experience.  Thresholds of experience are what determineswhether and when a talent node can be activated.
@@ -19,7 +19,7 @@ gridProgression | [[DestinyProgression|Destiny-DestinyProgression]] | If the ite
 ## Example
 ```javascript
 {
-    // Type: [[DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyTalentGridDefinition|Destiny-Definitions-DestinyTalentGridDefinition]]:integer:uint32
     "talentGridHash": 0,
     // Type: [[DestinyTalentNode|Destiny-DestinyTalentNode]][]
     "nodes": [
@@ -39,7 +39,7 @@ gridProgression | [[DestinyProgression|Destiny-DestinyProgression]] | If the ite
             "materialsToUpgrade": [
                // Type: [[DestinyMaterialRequirement|Destiny-Definitions-DestinyMaterialRequirement]]:Definition
                 {
-                    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "itemHash": 0,
                     // Type: boolean
                     "deleteOnAction": false,
@@ -61,7 +61,7 @@ gridProgression | [[DestinyProgression|Destiny-DestinyProgression]] | If the ite
                 "currentStepStats": [
                    // Type: [[DestinyStat|Destiny-DestinyStat]]
                     {
-                        // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                        // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                         "statHash": 0,
                         // Type: integer:int32
                         "value": 0,
@@ -73,7 +73,7 @@ gridProgression | [[DestinyProgression|Destiny-DestinyProgression]] | If the ite
                 "nextStepStats": [
                    // Type: [[DestinyStat|Destiny-DestinyStat]]
                     {
-                        // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                        // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                         "statHash": 0,
                         // Type: integer:int32
                         "value": 0,
@@ -88,7 +88,7 @@ gridProgression | [[DestinyProgression|Destiny-DestinyProgression]] | If the ite
     "isGridComplete": false,
     // Type: [[DestinyProgression|Destiny-DestinyProgression]]
     "gridProgression": {
-        // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
         "progressionHash": 0,
         // Type: integer:int32
         "dailyProgress": 0,

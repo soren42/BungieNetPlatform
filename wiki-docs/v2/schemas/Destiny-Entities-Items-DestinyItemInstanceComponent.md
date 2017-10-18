@@ -12,14 +12,14 @@ If an item is &quot;instanced&quot;, this will contain information about the ite
 Name | Type | Description
 ---- | ---- | -----------
 damageType | [[DamageType|Destiny-DamageType]]:Enum | If the item has a damage type, this is the item's current damage type.
-damageTypeHash | [[DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:ManifestDefinition:integer:uint32:nullable | The current damage type's hash, so you can look up localized info and icons for it.
+damageTypeHash | [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable | The current damage type's hash, so you can look up localized info and icons for it.
 primaryStat | [[DestinyStat|Destiny-DestinyStat]] | The item stat that we consider to be &quot;primary&quot; for the item.  For instance, this would be &quot;Attack&quot; forWeapons or &quot;Defense&quot; for armor.
 itemLevel | integer:int32 | The Item's &quot;Level&quot; has the most significant bearing on its stats, such as Light and Power.
 quality | integer:int32 | The &quot;Quality&quot; of the item has a lesser - but still impactful - bearing on stats like Light and Power.
 isEquipped | boolean | Is the item currently equipped on the given character?
 canEquip | boolean | If this is an equippable item, you can check it here.  There are permanent as well as transitory reasonswhy an item might not be able to be equipped: check cannotEquipReason for details.
 equipRequiredLevel | integer:int32 | If the item cannot be equipped until you reach a certain level, that level will be reflected here.
-unlockHashesRequiredToEquip | [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32[] | Sometimes, there are limitations to equipping that are represented by character-level flags called &quot;unlocks&quot;. This is a list of flags that they need in order to equip the item that the character has not met.Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.
+unlockHashesRequiredToEquip | [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32[] | Sometimes, there are limitations to equipping that are represented by character-level flags called &quot;unlocks&quot;. This is a list of flags that they need in order to equip the item that the character has not met.Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.
 cannotEquipReason | [[EquipFailureReason|Destiny-EquipFailureReason]]:Enum | If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equipthe item.  You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.
 
 ## Example
@@ -27,11 +27,11 @@ cannotEquipReason | [[EquipFailureReason|Destiny-EquipFailureReason]]:Enum | If 
 {
     // Type: [[DamageType|Destiny-DamageType]]:Enum
     "damageType": 0,
-    // Type: [[DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:ManifestDefinition:integer:uint32:nullable
+    // Type: [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable
     "damageTypeHash": 0,
     // Type: [[DestinyStat|Destiny-DestinyStat]]
     "primaryStat": {
-        // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
         "statHash": 0,
         // Type: integer:int32
         "value": 0,
@@ -48,7 +48,7 @@ cannotEquipReason | [[EquipFailureReason|Destiny-EquipFailureReason]]:Enum | If 
     "canEquip": false,
     // Type: integer:int32
     "equipRequiredLevel": 0,
-    // Type: [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32[]
+    // Type: [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32[]
     "unlockHashesRequiredToEquip": [
        // Type: integer:uint32
         0

@@ -46,7 +46,7 @@ useOnAcquire | boolean | If true, this action will be performed as soon as you e
         {
             // Type: integer:int32
             "count": 0,
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: boolean
             "deleteOnAction": false

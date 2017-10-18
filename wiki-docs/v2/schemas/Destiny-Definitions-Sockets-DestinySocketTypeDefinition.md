@@ -4,7 +4,7 @@
 All Sockets have a &quot;Type&quot;: a set of common properties that determine when the socket allowsPlugs to be inserted, what Categories of Plugs can be inserted, and whether the socket iseven visible at all given the current game/character/account state. See DestinyInventoryItemDefinition for more information about Socketed items and Plugs.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** SocketTypes
 
 ## Properties

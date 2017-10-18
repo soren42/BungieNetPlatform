@@ -4,7 +4,7 @@
 Represents a heuristically-determined &quot;item source&quot; according to Bungie.net.These item sources are non-canonical: we apply a combination of special configurationand often-fragile heuristics to attempt to discern whether an item should be part of a given&quot;source,&quot; but we have known cases of false positives and negatives due to our imperfect heuristics. Still, they provide a decent approximation for people trying to figure out how an item can be obtained.DestinyInventoryItemDefinition refers to sources in the sourceDatas.sourceHashes property for all sourceswe determined the item could spawn from. An example in Destiny 1 of a Source would be &quot;Nightfall&quot;.  If an item has the &quot;Nightfall&quot; source associatedwith it, it's extremely likely that you can earn that item while playing Nightfall, either during playor as an after-completion reward.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** RewardSources
 
 ## Properties

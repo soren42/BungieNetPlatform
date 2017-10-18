@@ -38,7 +38,7 @@ nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock
     "materialsToUpgrade": [
        // Type: [[DestinyMaterialRequirement|Destiny-Definitions-DestinyMaterialRequirement]]:Definition
         {
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: boolean
             "deleteOnAction": false,
@@ -60,7 +60,7 @@ nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock
         "currentStepStats": [
            // Type: [[DestinyStat|Destiny-DestinyStat]]
             {
-                // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                 "statHash": 0,
                 // Type: integer:int32
                 "value": 0,
@@ -72,7 +72,7 @@ nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock
         "nextStepStats": [
            // Type: [[DestinyStat|Destiny-DestinyStat]]
             {
-                // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
                 "statHash": 0,
                 // Type: integer:int32
                 "value": 0,

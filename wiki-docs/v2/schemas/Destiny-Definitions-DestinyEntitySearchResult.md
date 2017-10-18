@@ -11,7 +11,7 @@ The results of a search for Destiny content.  This will be improved on over time
 Name | Type | Description
 ---- | ---- | -----------
 suggestedWords | string[] | A list of suggested words that might make for better search results,based on the text searched for.
-results | [[SearchResult&lt;DestinyEntitySearchResultItem&gt;|SearchResultOfDestinyEntitySearchResultItem]] | The items found that are matches/near matches for the searched-for term,sorted by something vaguely resembling &quot;relevance&quot;.  Hopefully this willget better in the future.
+results | [[SearchResultOfDestinyEntitySearchResultItem|SearchResultOfDestinyEntitySearchResultItem]] | The items found that are matches/near matches for the searched-for term,sorted by something vaguely resembling &quot;relevance&quot;.  Hopefully this willget better in the future.
 
 ## Example
 ```javascript
@@ -21,7 +21,7 @@ results | [[SearchResult&lt;DestinyEntitySearchResultItem&gt;|SearchResultOfDest
        // Type: string
         ""
     ],
-    // Type: [[SearchResult&lt;DestinyEntitySearchResultItem&gt;|SearchResultOfDestinyEntitySearchResultItem]]
+    // Type: [[SearchResultOfDestinyEntitySearchResultItem|SearchResultOfDestinyEntitySearchResultItem]]
     "results": {
         // Type: [[DestinyEntitySearchResultItem|Destiny-Definitions-DestinyEntitySearchResultItem]]:Definition[]
         "results": [

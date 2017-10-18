@@ -53,10 +53,10 @@ function getSchemaReferenceType($ref) {
 		return 'Array';
 	}
 	else if (strpos($schemaId, '<') !== false || strpos($schemaId, 'Of') !== false) {
-		return 'Generic';
+		return 'GenericClass';
 	}
 	else if (strpos($schemaId, 'Definitions') !== false) {
-		return 'Definition';
+		return (isset($schema->{'x-mobile-manifest-name'}) ? 'Manifest': '').'Definition';
 	}
 	return 'Class';
 }

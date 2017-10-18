@@ -4,7 +4,7 @@
 All damage types that are possible in the game are defined here, along with localized info and icons as needed.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** DamageTypes
 
 ## Properties

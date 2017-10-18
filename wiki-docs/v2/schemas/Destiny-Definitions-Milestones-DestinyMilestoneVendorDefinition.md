@@ -10,12 +10,12 @@ If the Milestone or a component has vendors whose inventories could/should be di
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-vendorHash | [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32 | The hash of the vendor whose wares should be shown as associated with the Milestone.
+vendorHash | [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32 | The hash of the vendor whose wares should be shown as associated with the Milestone.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
     "vendorHash": 0
 }
 

@@ -19,11 +19,11 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
     "data": {
         // Type: [[DamageType|Destiny-DamageType]]:Enum
         "damageType": 0,
-        // Type: [[DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:ManifestDefinition:integer:uint32:nullable
+        // Type: [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable
         "damageTypeHash": 0,
         // Type: [[DestinyStat|Destiny-DestinyStat]]
         "primaryStat": {
-            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -40,7 +40,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         "canEquip": false,
         // Type: integer:int32
         "equipRequiredLevel": 0,
-        // Type: [[DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:ManifestDefinition:integer:uint32[]
+        // Type: [[Destiny.Definitions.DestinyUnlockDefinition|Destiny-Definitions-DestinyUnlockDefinition]]:integer:uint32[]
         "unlockHashesRequiredToEquip": [
            // Type: integer:uint32
             0

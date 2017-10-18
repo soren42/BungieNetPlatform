@@ -20,7 +20,7 @@ nextStepStats | [[DestinyStat|Destiny-DestinyStat]][] | This is a holdover from 
     "currentStepStats": [
        // Type: [[DestinyStat|Destiny-DestinyStat]]
         {
-            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,
@@ -32,7 +32,7 @@ nextStepStats | [[DestinyStat|Destiny-DestinyStat]][] | This is a holdover from 
     "nextStepStats": [
        // Type: [[DestinyStat|Destiny-DestinyStat]]
         {
-            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
             "statHash": 0,
             // Type: integer:int32
             "value": 0,

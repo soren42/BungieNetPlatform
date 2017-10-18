@@ -5,11 +5,12 @@ Describes the way that an Item Stat (see DestinyStatDefinition) is transformedus
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-statHash | [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the stat being transformed into a Display stat. Use it to look up the DestinyStatDefinition, or key into a DestinyInventoryItemDefinition'sstats property.
+statHash | [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32 | The hash identifier for the stat being transformed into a Display stat. Use it to look up the DestinyStatDefinition, or key into a DestinyInventoryItemDefinition'sstats property.
 maximumValue | integer:int32 | Regardless of the output of interpolation, this is the maximum possible valuethat the stat can be.  It should also be used as the upper boundfor displaying the stat as a progress bar (the minimum always being 0)
 displayAsNumeric | boolean | If this is true, the stat should be displayed as a number.  Otherwise, display it asa progress bar.  Or, you know, do whatever you want.  There's no displayAsNumericpolice.
 displayInterpolation | [[InterpolationPoint|Interpolation-InterpolationPoint]][] | The interpolation table representing how the Investment Stat is transformed intoa Display Stat. See DestinyStatDefinition for a description of the stages ofstat transformation.
@@ -17,7 +18,7 @@ displayInterpolation | [[InterpolationPoint|Interpolation-InterpolationPoint]][]
 ## Example
 ```javascript
 {
-    // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
     "statHash": 0,
     // Type: integer:int32
     "maximumValue": 0,

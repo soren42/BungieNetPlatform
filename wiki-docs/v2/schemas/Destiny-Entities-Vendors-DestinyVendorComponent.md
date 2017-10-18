@@ -11,7 +11,7 @@ This component contains essential/summary information about the vendor.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-vendorHash | [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32 | The unique identifier for the vendor.  Use it to look up their DestinyVendorDefinition.
+vendorHash | [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32 | The unique identifier for the vendor.  Use it to look up their DestinyVendorDefinition.
 ackState | [[AckState|User-AckState]] | Long ago, we thought it would be a good idea to have special UI that showed whether or notyou've seen a Vendor's inventory after cycling. For now, we don't have that UI anymore.  This propertystill exists for historical purposes.  Don't worry about it.
 nextRefreshDate | string:date-time | The date when this vendor's inventory will next rotate/refresh.
 enabled | boolean | If True, the Vendor is currently accessible. If False, they may not actually be visible in the world at the moment.
@@ -21,7 +21,7 @@ progression | [[DestinyProgression|Destiny-DestinyProgression]] | If the Vendor 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
     "vendorHash": 0,
     // Type: [[AckState|User-AckState]]
     "ackState": {
@@ -38,7 +38,7 @@ progression | [[DestinyProgression|Destiny-DestinyProgression]] | If the Vendor 
     "canPurchase": false,
     // Type: [[DestinyProgression|Destiny-DestinyProgression]]
     "progression": {
-        // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
         "progressionHash": 0,
         // Type: integer:int32
         "dailyProgress": 0,

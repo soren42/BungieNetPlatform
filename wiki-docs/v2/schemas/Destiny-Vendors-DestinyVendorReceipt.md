@@ -26,7 +26,7 @@ expiresOn | string:date-time | The date at which this receipt is rendered invali
     "currencyPaid": [
        // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
         {
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: integer:int64:nullable
             "itemInstanceId": 0,
@@ -36,7 +36,7 @@ expiresOn | string:date-time | The date at which this receipt is rendered invali
     ],
     // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
     "itemReceived": {
-        // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
         "itemHash": 0,
         // Type: integer:int64:nullable
         "itemInstanceId": 0,

@@ -10,7 +10,7 @@ Information about a current character's status with a Progression.A progression 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-progressionHash | [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.
+progressionHash | [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32 | The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.
 dailyProgress | integer:int32 | The amount of progress earned today for this progression.
 dailyLimit | integer:int32 | If this progression has a daily limit, this is that limit.
 weeklyProgress | integer:int32 | The amount of progress earned toward this progression in the current week.
@@ -25,7 +25,7 @@ nextLevelAt | integer:int32 | The total amount of progression (i.e. &quot;Experi
 ## Example
 ```javascript
 {
-    // Type: [[DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
     "progressionHash": 0,
     // Type: integer:int32
     "dailyProgress": 0,

@@ -4,7 +4,7 @@
 Okay, so Activities (DestinyActivityDefinition) take place in Destinations(DestinyDestinationDefinition).  Destinations are part of larger locations known asPlaces (you're reading its documentation right now). Places are more on the planetary scale, like &quot;Earth&quot; and &quot;Your Mom.&quot;
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Places
 
 ## Properties

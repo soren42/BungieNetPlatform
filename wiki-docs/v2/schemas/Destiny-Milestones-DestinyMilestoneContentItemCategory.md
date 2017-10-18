@@ -11,14 +11,14 @@ Part of our dynamic, localized Milestone content is arbitrary categories of item
 Name | Type | Description
 ---- | ---- | -----------
 title | string | 
-itemHashes | [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32[] | 
+itemHashes | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32[] | 
 
 ## Example
 ```javascript
 {
     // Type: string
     "title": "",
-    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32[]
+    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32[]
     "itemHashes": [
        // Type: integer:uint32
         0

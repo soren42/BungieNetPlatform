@@ -15,10 +15,11 @@ Gets aggregated stats for a clan using the same categories as the clan leaderboa
 Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
 groupId | integer:int64 | Yes | Group ID of the clan whose leaderboards you wish to fetch.
-modes | string | Yes | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 
 ### Query String Parameters
-None
+Name | Schema | Required | Description
+---- | ------ | -------- | -----------
+modes | string | No | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 
 ## Example
 ### Request

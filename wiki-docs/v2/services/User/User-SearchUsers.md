@@ -12,14 +12,12 @@ Returns a list of possible users based on the search string
 
 ## Parameters
 ### Path Parameters
-Name | Schema | Required | Description
----- | ------ | -------- | -----------
-search | string | Yes | The search string.
+None
 
 ### Query String Parameters
 Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
-q | string | No | 
+q | string | No | The search string.
 
 ## Example
 ### Request

@@ -5,6 +5,7 @@ This is the definition for a single Vendor Category, into which Sale Items are g
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

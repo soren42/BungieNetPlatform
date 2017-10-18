@@ -20,7 +20,7 @@ categories | [[TrendingCategory|Trending-TrendingCategory]][] |
         {
             // Type: string
             "categoryName": "",
-            // Type: [[SearchResult&lt;TrendingEntry&gt;|SearchResultOfTrendingEntry]]
+            // Type: [[SearchResultOfTrendingEntry|SearchResultOfTrendingEntry]]
             "entries": {
                 // Type: [[TrendingEntry|Trending-TrendingEntry]][]
                 "results": [

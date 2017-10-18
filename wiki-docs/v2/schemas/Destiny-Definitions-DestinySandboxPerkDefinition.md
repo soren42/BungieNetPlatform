@@ -4,7 +4,7 @@
 Perks are modifiers to a character or item that can be applied situationally. - Perks determine a weapons' damage type. - Perks put the Mods in Modifiers (they are literally the entity that bestows the Sandboxbenefit for whatever fluff text about the modifier in the Socket, Plug or Talent Node) - Perks are applied for unique alterations of state in Objectives Anyways, I'm sure you can see why perks are so interesting. What Perks often don't have is human readable information, so we attempt to reverse engineerthat by pulling that data from places that uniquely refer to these perks: namely, Talent Nodesand Plugs.  That only gives us a subset of perks that are human readable, but those perks arethe ones people generally care about anyways.  The others are left as a mystery, their truepurpose mostly unknown and undocumented.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** SandboxPerks
 
 ## Properties

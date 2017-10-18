@@ -5,6 +5,7 @@ Nodes on a graph can be visually connected: this appears to be the information a
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

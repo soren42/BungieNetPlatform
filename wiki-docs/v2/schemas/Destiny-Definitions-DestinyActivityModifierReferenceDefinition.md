@@ -10,12 +10,12 @@ A reference to an Activity Modifier from another entity, such as an Activity(for
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-activityModifierHash | [[DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:ManifestDefinition:integer:uint32 | The hash identifier for the DestinyActivityModifierDefinition referenced by this activity.
+activityModifierHash | [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32 | The hash identifier for the DestinyActivityModifierDefinition referenced by this activity.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32
     "activityModifierHash": 0
 }
 

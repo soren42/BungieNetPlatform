@@ -3,7 +3,7 @@
 ## Info
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** ActivityModes
 
 ## Properties

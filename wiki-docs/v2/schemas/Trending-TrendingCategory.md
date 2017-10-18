@@ -10,7 +10,7 @@
 Name | Type | Description
 ---- | ---- | -----------
 categoryName | string | 
-entries | [[SearchResult&lt;TrendingEntry&gt;|SearchResultOfTrendingEntry]] | 
+entries | [[SearchResultOfTrendingEntry|SearchResultOfTrendingEntry]] | 
 categoryId | string | 
 
 ## Example
@@ -18,7 +18,7 @@ categoryId | string |
 {
     // Type: string
     "categoryName": "",
-    // Type: [[SearchResult&lt;TrendingEntry&gt;|SearchResultOfTrendingEntry]]
+    // Type: [[SearchResultOfTrendingEntry|SearchResultOfTrendingEntry]]
     "entries": {
         // Type: [[TrendingEntry|Trending-TrendingEntry]][]
         "results": [

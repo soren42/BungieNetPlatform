@@ -5,6 +5,7 @@ Defines a plug &quot;Category&quot; that is allowed to be plugged into a socket 
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

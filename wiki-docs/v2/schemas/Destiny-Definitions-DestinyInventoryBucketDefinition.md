@@ -4,7 +4,7 @@
 An Inventory (be it Character or Profile level) is comprised of many Buckets.  An example ofa bucket is &quot;Primary Weapons&quot;, where all of the primary weapons on a character are gathered togetherinto a single visual element in the UI: a subset of the inventory that has a limited number of slots, andin this case also has an associated Equipment Slot for equipping an item in the bucket. Item definitions declare what their &quot;default&quot; bucket is (DestinyInventoryItemDefinition.inventory.bucketTypeHash),and Item instances will tell you which bucket they are currently residing in (DestinyItemComponent.bucketHash).You can use this information along with the DestinyInventoryBucketDefinition to show these items grouped bybucket. You cannot transfer an item to a bucket that is not its Default without going through a Vendor's &quot;accepted items&quot;(DestinyVendorDefinition.acceptedItems).  This is how transfer functionality like the Vault is implemented, as afeature of a Vendor.  See the vendor's acceptedItems property for more details.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** InventoryBuckets
 
 ## Properties

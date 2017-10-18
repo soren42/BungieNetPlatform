@@ -4,7 +4,7 @@
 Gender is a social construct, and as such we have definitions for Genders.  Right now there happensto only be two, but we'll see what the future holds.
 
 ## Schema
-* **Schema Type:** Definition
+* **Schema Type:** Manifest Definition
 * **Mobile Manifest:** Genders
 
 ## Properties

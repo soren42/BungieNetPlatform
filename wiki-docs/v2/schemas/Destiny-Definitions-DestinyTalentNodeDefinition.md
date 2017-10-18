@@ -26,7 +26,7 @@ exclusiveWithNodeHashes | integer:uint32[] | The nodeHash values for nodes that 
 randomStartProgressionBarAtProgression | integer:int32 | If the node's step is randomly selected, this is the amount of the Talent Grid's progression experienceat which the progression bar for the node should be shown.
 layoutIdentifier | string | A string identifier for a custom visual layout to apply to this talent node.  Unfortunately,we do not have any data for rendering these custom layouts.  It will be up to you to interpretthese strings and change your UI if you want to have custom UI matching these layouts.
 groupHash | integer:uint32:nullable | As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;.  These differ from exclusive sets in that,within the group, many nodes can be activated.  But the act of activating any node in the group will cause &quot;opposing&quot; nodes(nodes in groups that are not allowed to be activated at the same time as this group) to deactivate. See DestinyTalentExclusiveGroup for more information on the details.  This is an identifier for this node's group,if it is part of one.
-loreHash | [[DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:ManifestDefinition:integer:uint32:nullable | Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip.  This is the hash identifierof the lore element to show, if there is one to be show.
+loreHash | [[Destiny.Definitions.Lore.DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:integer:uint32:nullable | Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip.  This is the hash identifierof the lore element to show, if there is one to be show.
 nodeStyleIdentifier | string | Comes from the talent grid node style: this identifier should be used to determinehow to render the node in the UI.
 ignoreForCompletion | boolean | Comes from the talent grid node style: if true, then this node should be ignored for determining whether the grid is complete.
 
@@ -89,7 +89,7 @@ ignoreForCompletion | boolean | Comes from the talent grid node style: if true, 
             "interactionDescription": "",
             // Type: [[DamageType|Destiny-DamageType]]:Enum
             "damageType": 0,
-            // Type: [[DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:ManifestDefinition:integer:uint32:nullable
+            // Type: [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable
             "damageTypeHash": 0,
             // Type: [[DestinyNodeActivationRequirement|Destiny-Definitions-DestinyNodeActivationRequirement]]:Definition
             "activationRequirement": {
@@ -107,14 +107,14 @@ ignoreForCompletion | boolean | Comes from the talent grid node style: if true, 
             "nextStepIndex": 0,
             // Type: boolean
             "isNextStepRandom": false,
-            // Type: [[DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:ManifestDefinition:integer:uint32[]
+            // Type: [[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:integer:uint32[]
             "perkHashes": [
                // Type: integer:uint32
                 0
             ],
             // Type: integer:int32
             "startProgressionBarAtProgress": 0,
-            // Type: [[DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:ManifestDefinition:integer:uint32[]
+            // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32[]
             "statHashes": [
                // Type: integer:uint32
                 0
@@ -140,9 +140,9 @@ ignoreForCompletion | boolean | Comes from the talent grid node style: if true, 
             "socketReplacements": [
                // Type: [[DestinyNodeSocketReplaceResponse|Destiny-Definitions-DestinyNodeSocketReplaceResponse]]:Definition
                 {
-                    // Type: [[DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.Sockets.DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]]:integer:uint32
                     "socketTypeHash": 0,
-                    // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "plugItemHash": 0
                 }
             ]
@@ -159,7 +159,7 @@ ignoreForCompletion | boolean | Comes from the talent grid node style: if true, 
     "layoutIdentifier": "",
     // Type: integer:uint32:nullable
     "groupHash": 0,
-    // Type: [[DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:ManifestDefinition:integer:uint32:nullable
+    // Type: [[Destiny.Definitions.Lore.DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]]:integer:uint32:nullable
     "loreHash": 0,
     // Type: string
     "nodeStyleIdentifier": "",

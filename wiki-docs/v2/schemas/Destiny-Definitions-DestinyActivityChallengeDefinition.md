@@ -5,16 +5,17 @@ Represents a reference to a Challenge, which for now is just an Objective.
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-objectiveHash | [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32 | The hash for the Objective that matches this challenge.  Use it to look up the DestinyObjectiveDefinition.
+objectiveHash | [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32 | The hash for the Objective that matches this challenge.  Use it to look up the DestinyObjectiveDefinition.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
     "objectiveHash": 0
 }
 

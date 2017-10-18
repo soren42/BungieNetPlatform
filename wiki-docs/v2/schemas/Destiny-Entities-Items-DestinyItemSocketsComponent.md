@@ -20,7 +20,7 @@ sockets | [[DestinyItemSocketState|Destiny-Entities-Items-DestinyItemSocketState
     "sockets": [
        // Type: [[DestinyItemSocketState|Destiny-Entities-Items-DestinyItemSocketState]]
         {
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32:nullable
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32:nullable
             "plugHash": 0,
             // Type: boolean
             "isEnabled": false,
@@ -29,7 +29,7 @@ sockets | [[DestinyItemSocketState|Destiny-Entities-Items-DestinyItemSocketState
                // Type: integer:int32
                 0
             ],
-            // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32[]
+            // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32[]
             "reusablePlugHashes": [
                // Type: integer:uint32
                 0

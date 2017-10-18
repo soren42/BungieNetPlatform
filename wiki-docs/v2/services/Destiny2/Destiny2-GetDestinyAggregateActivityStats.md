@@ -35,7 +35,7 @@ PlatformErrorCode: 200
         "activities": [
            // Type: [[DestinyAggregateActivityStats|Destiny-HistoricalStats-DestinyAggregateActivityStats]]
             {
-                // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
                 "activityHash": 0,
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                 "values": {

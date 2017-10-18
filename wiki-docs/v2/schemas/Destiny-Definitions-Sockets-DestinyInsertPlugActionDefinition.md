@@ -5,6 +5,7 @@ Data related to what happens while a plug is being inserted, mostly for UI purpo
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

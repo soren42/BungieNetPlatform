@@ -21,7 +21,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         "items": [
            // Type: [[DestinyItemComponent|Destiny-Entities-Items-DestinyItemComponent]]
             {
-                // Type: [[DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                 "itemHash": 0,
                 // Type: integer:int64:nullable
                 "itemInstanceId": 0,
@@ -31,7 +31,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                 "bindStatus": 0,
                 // Type: [[ItemLocation|Destiny-ItemLocation]]:Enum
                 "location": 0,
-                // Type: [[DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:ManifestDefinition:integer:uint32
+                // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
                 "bucketHash": 0,
                 // Type: [[TransferStatuses|Destiny-TransferStatuses]]:Enum
                 "transferStatus": 0,

@@ -10,15 +10,15 @@ A Milestone can have many Challenges.  Challenges are just extra Objectives that
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-objectiveHash | [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32 | The objective for the Challenge, which should have human-readable data about whatneeds to be done to accomplish the objective.  Use this hash to look up the DestinyObjectiveDefinition.
-activityHash | [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32:nullable | IF the Objective is related to a specific Activity, this will be that activity's hash.Use it to look up the DestinyActivityDefinition for additional data to show.
+objectiveHash | [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32 | The objective for the Challenge, which should have human-readable data about whatneeds to be done to accomplish the objective.  Use this hash to look up the DestinyObjectiveDefinition.
+activityHash | [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable | IF the Objective is related to a specific Activity, this will be that activity's hash.Use it to look up the DestinyActivityDefinition for additional data to show.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:ManifestDefinition:integer:uint32
+    // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
     "objectiveHash": 0,
-    // Type: [[DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:ManifestDefinition:integer:uint32:nullable
+    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
     "activityHash": 0
 }
 

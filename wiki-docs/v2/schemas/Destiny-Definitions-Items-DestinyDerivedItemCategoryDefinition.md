@@ -5,6 +5,7 @@ A shortcut for the fact that some items have a &quot;Preview Vendor&quot;- See D
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description

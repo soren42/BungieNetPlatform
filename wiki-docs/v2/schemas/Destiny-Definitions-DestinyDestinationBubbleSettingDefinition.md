@@ -5,6 +5,7 @@ Human readable data about the bubble.  Combine with DestinyBubbleDefinition - se
 
 ## Schema
 * **Schema Type:** Definition
+* **Type:** object
 
 ## Properties
 Name | Type | Description
