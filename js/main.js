@@ -160,7 +160,7 @@ angular.module('wiki-search', [])
 
 			searchCache.push({
 				url: url,
-				title: title,
+				title: searchEntry.title ? searchEntry.title : title,
 				tags: tags
 			});
 		}
@@ -212,7 +212,9 @@ angular.module('wiki-search', [])
 			$scope.searchResults = matches;
 		};
 
-		$document.bind('keypress', function(event) {
+		$document.bind('keydown keypress', function(event) {
+			if (event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
+			//console.log(event);
 			var input = angular.element('#wiki-search input');
 			if ($scope.searchVisible || !angular.element($document[0].activeElement).is('body')) return;
 			input.focus();
