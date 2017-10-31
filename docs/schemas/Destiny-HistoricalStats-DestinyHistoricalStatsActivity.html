@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,6 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-HistoricalStats-DestinyHistoricalStatsActivity.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<p>Summary information about the activity that was played.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -99,27 +100,32 @@
 <tr>
 <td>referenceId</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
-<td>Hash ID that can be looked up in the DestinyActivityTable.</td>
+<td>The unique hash identifier of the DestinyActivityDefinition that was played. If I had this to do over, it'd be named activityHash. Too late now.</td>
+</tr>
+<tr>
+<td>directorActivityHash</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32</td>
+<td>The unique hash identifier of the DestinyActivityDefinition that was played.</td>
 </tr>
 <tr>
 <td>instanceId</td>
 <td>integer:int64</td>
-<td>This value can be used to get additional data about this activity such as who else was playing.</td>
+<td>The unique identifier for this <em>specific</em> match that was played. This value can be used to get additional data about this activity such as who else was playing via the GetPostGameCarnageReport endpoint.</td>
 </tr>
 <tr>
 <td>mode</td>
 <td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum</td>
-<td>Indicates the game mode of the activity.</td>
+<td>Indicates the most specific game mode of the activity that we could find.</td>
 </tr>
 <tr>
-<td>activityTypeHashOverride</td>
-<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32</td>
-<td>Hash ID that can be looked up in the DestinyActivityTypeTable. Prefer this value over the type used by the activity if it is specified.</td>
+<td>modes</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]</td>
+<td>The list of all Activity Modes to which this activity applies, including aggregates. This will let you see, for example, whether the activity was both Clash and part of the Trials of the Nine event.</td>
 </tr>
 <tr>
 <td>isPrivate</td>
 <td>boolean</td>
-<td>Whether or not the match was a private match.</td>
+<td>Whether or not the match was a private match. There's no private matches in Destiny 2... yet... DUN DUN DUNNNN</td>
 </tr>
 </tbody>
 </table>
@@ -127,12 +133,17 @@
 <pre><code class="javascript">{
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "referenceId": 0,
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+    "directorActivityHash": 0,
     // Type: integer:int64
     "instanceId": 0,
     // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
-    "mode": 0,
-    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32
-    "activityTypeHashOverride": 0,
+    "mode": {},
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]
+    "modes": [
+       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
+        0
+    ],
     // Type: boolean
     "isPrivate": false
 }
@@ -157,6 +168,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

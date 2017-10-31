@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Characters-DestinyCharacterRenderComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Only really useful if you're attempting to render the character's current appearance in 3D,this returns a bare minimum of information, pre-aggregated, that you'll need to perform that rendering.Note that you need to combine this with other 3D assets and data from our servers. Examine the Javascript returned by <a href="https://bungie.net/sharedbundle/spasm">https://bungie.net/sharedbundle/spasm</a> to see how we use this data, butbe warned: the rabbit hole goes pretty deep.</p>
+<p>Only really useful if you're attempting to render the character's current appearance in 3D, this returns a bare minimum of information, pre-aggregated, that you'll need to perform that rendering. Note that you need to combine this with other 3D assets and data from our servers. Examine the Javascript returned by <a href="https://bungie.net/sharedbundle/spasm">https://bungie.net/sharedbundle/spasm</a> to see how we use this data, but be warned: the rabbit hole goes pretty deep.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -101,12 +101,12 @@
 <tr>
 <td>customDyes</td>
 <td><a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]</td>
-<td>Custom dyes, calculated by iterating over the character's equipped items.Useful for pre-fetching all of the dye data needed from our server.</td>
+<td>Custom dyes, calculated by iterating over the character's equipped items. Useful for pre-fetching all of the dye data needed from our server.</td>
 </tr>
 <tr>
 <td>customization</td>
 <td><a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a></td>
-<td>This is actually something that Spasm.js <em>doesn't</em> do right now, and that we don't return assets for yet.This is the data about what character customization options you picked.  You can combine this withDestinyCharacterCustomizationOptionDefinition to show some cool info, and hopefully someday to actuallyrender a user's face in 3D.  We'll see if we ever end up with time for that.</td>
+<td>This is actually something that Spasm.js <em>doesn't</em> do right now, and that we don't return assets for yet. This is the data about what character customization options you picked. You can combine this with DestinyCharacterCustomizationOptionDefinition to show some cool info, and hopefully someday to actually render a user's face in 3D. We'll see if we ever end up with time for that.</td>
 </tr>
 <tr>
 <td>peerView</td>
@@ -128,59 +128,9 @@
         }
     ],
     // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterCustomization">DestinyCharacterCustomization</a>
-    "customization": {
-        // Type: integer:uint32
-        "personality": 0,
-        // Type: integer:uint32
-        "face": 0,
-        // Type: integer:uint32
-        "skinColor": 0,
-        // Type: integer:uint32
-        "lipColor": 0,
-        // Type: integer:uint32
-        "eyeColor": 0,
-        // Type: integer:uint32[]
-        "hairColors": [
-           // Type: integer:uint32
-            0
-        ],
-        // Type: integer:uint32[]
-        "featureColors": [
-           // Type: integer:uint32
-            0
-        ],
-        // Type: integer:uint32
-        "decalColor": 0,
-        // Type: boolean
-        "wearHelmet": false,
-        // Type: integer:int32
-        "hairIndex": 0,
-        // Type: integer:int32
-        "featureIndex": 0,
-        // Type: integer:int32
-        "decalIndex": 0
-    },
+    "customization": {},
     // Type: <a href="../../docs/schemas/Destiny-Character-DestinyCharacterPeerView">DestinyCharacterPeerView</a>
-    "peerView": {
-        // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>[]
-        "equipment": [
-           // Type: <a href="../../docs/schemas/Destiny-Character-DestinyItemPeerView">DestinyItemPeerView</a>
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "itemHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
-                "dyes": [
-                   // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
-                    {
-                        // Type: integer:uint32
-                        "channelHash": 0,
-                        // Type: integer:uint32
-                        "dyeHash": 0
-                    }
-                ]
-            }
-        ]
-    }
+    "peerView": {}
 }
 </code></pre>
 <h2>References</h2>
@@ -203,6 +153,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

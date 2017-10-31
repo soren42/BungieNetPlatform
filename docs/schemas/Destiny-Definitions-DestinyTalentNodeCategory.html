@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyTalentNodeCategory.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>An artificial construct provided by Bungie.Net, where we attempt to group talent nodesby functionality. This is a single set of references to Talent Nodes that share a commontrait or purpose.</p>
+<p>An artificial construct provided by Bungie.Net, where we attempt to group talent nodes by functionality. This is a single set of references to Talent Nodes that share a common trait or purpose.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
@@ -100,22 +100,22 @@
 <tr>
 <td>identifier</td>
 <td>string</td>
-<td>Mostly just for debug purposes, but if you find it useful you can have it.This is BNet's manually created identifier for this category.</td>
+<td>Mostly just for debug purposes, but if you find it useful you can have it. This is BNet's manually created identifier for this category.</td>
 </tr>
 <tr>
 <td>isLoreDriven</td>
 <td>boolean</td>
-<td>If true, we found the localized content in a related DestinyLoreDefinitioninstead of local BNet localization files.  This is mostly for ease of my own future investigations.</td>
+<td>If true, we found the localized content in a related DestinyLoreDefinition instead of local BNet localization files. This is mostly for ease of my own future investigations.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
-<td>Will contain at least the &quot;name&quot;, which will be the title of the category.We will likely not have description and an icon yet, but I'm going to keep my optionsopen.</td>
+<td>Will contain at least the &quot;name&quot;, which will be the title of the category. We will likely not have description and an icon yet, but I'm going to keep my options open.</td>
 </tr>
 <tr>
 <td>nodeHashes</td>
 <td>integer:uint32[]</td>
-<td>The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition)in this Talent Grid that are part of this Category.</td>
+<td>The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category.</td>
 </tr>
 </tbody>
 </table>
@@ -126,16 +126,7 @@
     // Type: boolean
     "isLoreDriven": false,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: integer:uint32[]
     "nodeHashes": [
        // Type: integer:uint32
@@ -163,6 +154,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyStatDisplayDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Describes the way that an Item Stat (see DestinyStatDefinition) is transformedusing the DestinyStatGroupDefinition related to that item.  See both of the aforementioneddefinitions for more information about the stages of stat transformation. This represents the transformation of a stat into a &quot;Display&quot; stat (the closest valuethat BNet can get to the in-game display value of the stat)</p>
+<p>Describes the way that an Item Stat (see DestinyStatDefinition) is transformed using the DestinyStatGroupDefinition related to that item. See both of the aforementioned definitions for more information about the stages of stat transformation. This represents the transformation of a stat into a &quot;Display&quot; stat (the closest value that BNet can get to the in-game display value of the stat)</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
@@ -100,22 +100,22 @@
 <tr>
 <td>statHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32</td>
-<td>The hash identifier for the stat being transformed into a Display stat. Use it to look up the DestinyStatDefinition, or key into a DestinyInventoryItemDefinition'sstats property.</td>
+<td>The hash identifier for the stat being transformed into a Display stat. Use it to look up the DestinyStatDefinition, or key into a DestinyInventoryItemDefinition's stats property.</td>
 </tr>
 <tr>
 <td>maximumValue</td>
 <td>integer:int32</td>
-<td>Regardless of the output of interpolation, this is the maximum possible valuethat the stat can be.  It should also be used as the upper boundfor displaying the stat as a progress bar (the minimum always being 0)</td>
+<td>Regardless of the output of interpolation, this is the maximum possible value that the stat can be. It should also be used as the upper bound for displaying the stat as a progress bar (the minimum always being 0)</td>
 </tr>
 <tr>
 <td>displayAsNumeric</td>
 <td>boolean</td>
-<td>If this is true, the stat should be displayed as a number.  Otherwise, display it asa progress bar.  Or, you know, do whatever you want.  There's no displayAsNumericpolice.</td>
+<td>If this is true, the stat should be displayed as a number. Otherwise, display it as a progress bar. Or, you know, do whatever you want. There's no displayAsNumeric police.</td>
 </tr>
 <tr>
 <td>displayInterpolation</td>
 <td><a href="../../docs/schemas/Interpolation-InterpolationPoint">InterpolationPoint</a>[]</td>
-<td>The interpolation table representing how the Investment Stat is transformed intoa Display Stat. See DestinyStatDefinition for a description of the stages ofstat transformation.</td>
+<td>The interpolation table representing how the Investment Stat is transformed into a Display Stat. See DestinyStatDefinition for a description of the stages of stat transformation.</td>
 </tr>
 </tbody>
 </table>
@@ -159,6 +159,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

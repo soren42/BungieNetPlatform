@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Request this component if you want the details about an item being sold in relation to the charactermaking the request: whether the character can buy it,whether they can afford it, and other data related to purchasing the item. Note that if you want instance, stats, etc... data for the item, you'll have to request additional components such asItemInstances, ItemPerks etc... and acquire them from the DestinyVendorResponse's &quot;items&quot; property.</p>
+<p>Request this component if you want the details about an item being sold in relation to the character making the request: whether the character can buy it, whether they can afford it, and other data related to purchasing the item. Note that if you want instance, stats, etc... data for the item, you'll have to request additional components such as ItemInstances, ItemPerks etc... and acquire them from the DestinyVendorResponse's &quot;items&quot; property.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -101,12 +101,12 @@
 <tr>
 <td>vendorItemIndex</td>
 <td>integer:int32</td>
-<td>The index into the DestinyVendorDefinition.itemList property.  Note that this means Vendor data<em>is</em> Content Version dependent: make sure you have the latest content before you use Vendor data,or these indexes may mismatch. Most systems avoid this problem, but Vendors is one area where weare unable to reasonably avoid content dependency at the moment.</td>
+<td>The index into the DestinyVendorDefinition.itemList property. Note that this means Vendor data <em>is</em> Content Version dependent: make sure you have the latest content before you use Vendor data, or these indexes may mismatch. Most systems avoid this problem, but Vendors is one area where we are unable to reasonably avoid content dependency at the moment.</td>
 </tr>
 <tr>
 <td>itemHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
-<td>The hash of the item being sold, as a quick shortcut for looking up the DestinyInventoryItemDefinitionof the sale item.</td>
+<td>The hash of the item being sold, as a quick shortcut for looking up the DestinyInventoryItemDefinition of the sale item.</td>
 </tr>
 <tr>
 <td>saleStatus</td>
@@ -121,17 +121,17 @@
 <tr>
 <td>requiredUnlocks</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]</td>
-<td>If you can't buy the item due to a complex character state, these will be hashes forDestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlockshave human readable information: it is not guaranteed that Unlocks will have human readable strings, andyour application will have to handle that) Prefer using failureIndexes instead.  These are provided for informational purposes, but have largelybeen supplanted by failureIndexes.</td>
+<td>If you can't buy the item due to a complex character state, these will be hashes for DestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlocks have human readable information: it is not guaranteed that Unlocks will have human readable strings, and your application will have to handle that) Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.</td>
 </tr>
 <tr>
 <td>unlockStatuses</td>
 <td><a href="../../docs/schemas/Destiny-DestinyUnlockStatus">DestinyUnlockStatus</a>[]</td>
-<td>If any complex unlock states are checked in determining purchasability, these willbe returned here along with the status of the unlock check. Prefer using failureIndexes instead.  These are provided for informational purposes, but have largelybeen supplanted by failureIndexes.</td>
+<td>If any complex unlock states are checked in determining purchasability, these will be returned here along with the status of the unlock check. Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.</td>
 </tr>
 <tr>
 <td>failureIndexes</td>
 <td>integer:int32[]</td>
-<td>Indexes in to the &quot;failureStrings&quot; lookup table in DestinyVendorDefinition for the given Vendor.Gives some more reliable failure information for why you can't purchase an item. It is preferred to use these over requiredUnlocks and unlockStatuses: the latter are providedmostly in case someone can do something interesting with it that I didn't anticipate.</td>
+<td>Indexes in to the &quot;failureStrings&quot; lookup table in DestinyVendorDefinition for the given Vendor. Gives some more reliable failure information for why you can't purchase an item. It is preferred to use these over requiredUnlocks and unlockStatuses: the latter are provided mostly in case someone can do something interesting with it that I didn't anticipate.</td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "itemHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-VendorItemStatus">VendorItemStatus</a>:Enum
-    "saleStatus": 0,
+    "saleStatus": {},
     // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
     "costs": [
        // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
@@ -197,6 +197,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

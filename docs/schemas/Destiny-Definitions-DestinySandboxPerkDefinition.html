@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,10 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinySandboxPerkDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Perks are modifiers to a character or item that can be applied situationally. - Perks determine a weapons' damage type. - Perks put the Mods in Modifiers (they are literally the entity that bestows the Sandboxbenefit for whatever fluff text about the modifier in the Socket, Plug or Talent Node) - Perks are applied for unique alterations of state in Objectives Anyways, I'm sure you can see why perks are so interesting. What Perks often don't have is human readable information, so we attempt to reverse engineerthat by pulling that data from places that uniquely refer to these perks: namely, Talent Nodesand Plugs.  That only gives us a subset of perks that are human readable, but those perks arethe ones people generally care about anyways.  The others are left as a mystery, their truepurpose mostly unknown and undocumented.</p>
+<p>Perks are modifiers to a character or item that can be applied situationally. - Perks determine a weapons' damage type. - Perks put the Mods in Modifiers (they are literally the entity that bestows the Sandbox benefit for whatever fluff text about the modifier in the Socket, Plug or Talent Node) - Perks are applied for unique alterations of state in Objectives Anyways, I'm sure you can see why perks are so interesting. What Perks often don't have is human readable information, so we attempt to reverse engineer that by pulling that data from places that uniquely refer to these perks: namely, Talent Nodes and Plugs. That only gives us a subset of perks that are human readable, but those perks are the ones people generally care about anyways. The others are left as a mystery, their true purpose mostly unknown and undocumented.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> SandboxPerks</li>
 </ul>
 <h2>Properties</h2>
@@ -100,7 +101,7 @@
 <tr>
 <td>displayProperties</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
-<td>These display properties are by no means guaranteed to be populated.  Usually when it is,it's only because we back-filled them with the displayProperties of some Talent Node orPlug item that happened to be uniquely providing that perk.</td>
+<td>These display properties are by no means guaranteed to be populated. Usually when it is, it's only because we back-filled them with the displayProperties of some Talent Node or Plug item that happened to be uniquely providing that perk.</td>
 </tr>
 <tr>
 <td>perkIdentifier</td>
@@ -110,27 +111,27 @@
 <tr>
 <td>isDisplayable</td>
 <td>boolean</td>
-<td>If true, you can actually show the perk in the UI.  Otherwise, it doesn'thave useful player-facing information.</td>
+<td>If true, you can actually show the perk in the UI. Otherwise, it doesn't have useful player-facing information.</td>
 </tr>
 <tr>
 <td>damageType</td>
 <td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum</td>
-<td>If this perk grants a damage type to a weapon, the damage type will be defined here. Unless you have a compelling reason to use this enum value, use the damageTypeHash insteadto look up the actual DestinyDamageTypeDefinition.</td>
+<td>If this perk grants a damage type to a weapon, the damage type will be defined here. Unless you have a compelling reason to use this enum value, use the damageTypeHash instead to look up the actual DestinyDamageTypeDefinition.</td>
 </tr>
 <tr>
 <td>damageTypeHash</td>
 <td>integer:uint32:nullable</td>
-<td>The hash identifier for looking up the DestinyDamageTypeDefinition, if this perk has a damage type. This is preferred over using the damageType enumeration value, which has been left purely because it isoccasionally convenient.</td>
+<td>The hash identifier for looking up the DestinyDamageTypeDefinition, if this perk has a damage type. This is preferred over using the damageType enumeration value, which has been left purely because it is occasionally convenient.</td>
 </tr>
 <tr>
 <td>perkGroups</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">DestinyTalentNodeStepGroups</a>:Definition</td>
-<td>An old holdover from the original Armory, this was an attempt to group perks by functionality. It is as yet unpopulated, and there will be quite a bit of work needed to restore it to its formerworking order.</td>
+<td>An old holdover from the original Armory, this was an attempt to group perks by functionality. It is as yet unpopulated, and there will be quite a bit of work needed to restore it to its former working order.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -140,44 +141,24 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: string
     "perkIdentifier": "",
     // Type: boolean
     "isDisplayable": false,
     // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
-    "damageType": 0,
+    "damageType": {},
     // Type: integer:uint32:nullable
     "damageTypeHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGroups">DestinyTalentNodeStepGroups</a>:Definition
-    "perkGroups": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepWeaponPerformances">DestinyTalentNodeStepWeaponPerformances</a>:Enum
-        "weaponPerformance": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepImpactEffects">DestinyTalentNodeStepImpactEffects</a>:Enum
-        "impactEffects": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepGuardianAttributes">DestinyTalentNodeStepGuardianAttributes</a>:Enum
-        "guardianAttributes": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepLightAbilities">DestinyTalentNodeStepLightAbilities</a>:Enum
-        "lightAbilities": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentNodeStepDamageTypes">DestinyTalentNodeStepDamageTypes</a>:Enum
-        "damageTypes": 0
-    },
+    "perkGroups": {},
     // Type: integer:uint32
     "hash": 0,
     // Type: integer:int32
@@ -206,6 +187,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

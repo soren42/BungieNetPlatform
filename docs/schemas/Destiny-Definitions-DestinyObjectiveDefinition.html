@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,10 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyObjectiveDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Defines an &quot;Objective&quot;. An objective is a specific task you should accomplish in the game.  These are referred to by: - Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives) - Challenges (which are Objectives defined on an DestinyActivityDefintion) - Milestones (which refer to Objectives that are defined on both Quest Steps and Activities) - Anything else that the designers decide to do later. Objectives have progress, a notion of having been Completed, human readable data describing the taskto be accomplished, and a lot of optional tack-on data that can enhance the information provided aboutthe task.</p>
+<p>Defines an &quot;Objective&quot;. An objective is a specific task you should accomplish in the game. These are referred to by: - Quest Steps (which are DestinyInventoryItemDefinition entities with Objectives) - Challenges (which are Objectives defined on an DestinyActivityDefintion) - Milestones (which refer to Objectives that are defined on both Quest Steps and Activities) - Anything else that the designers decide to do later. Objectives have progress, a notion of having been Completed, human readable data describing the task to be accomplished, and a lot of optional tack-on data that can enhance the information provided about the task.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> Objectives</li>
 </ul>
 <h2>Properties</h2>
@@ -100,17 +101,17 @@
 <tr>
 <td>displayProperties</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
-<td>Ideally, this should tell you what your task is.  I'm not going to lie to you though.  Sometimesthis doesn't have useful information at all.  Which sucks, but there's nothing either of us can doabout it.</td>
+<td>Ideally, this should tell you what your task is. I'm not going to lie to you though. Sometimes this doesn't have useful information at all. Which sucks, but there's nothing either of us can do about it.</td>
 </tr>
 <tr>
 <td>completionValue</td>
 <td>integer:int32</td>
-<td>The value that the unlock value defined in unlockValueHash must reach in order forthe objective to be considered Completed.  Used in calculating progress and completion status.</td>
+<td>The value that the unlock value defined in unlockValueHash must reach in order for the objective to be considered Completed. Used in calculating progress and completion status.</td>
 </tr>
 <tr>
 <td>locationHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">Destiny.Definitions.DestinyLocationDefinition</a>:integer:uint32</td>
-<td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished,if there is a location defined.  Look up the DestinyLocationDefinition for this hash for thatadditional location info.</td>
+<td>OPTIONAL: a hash identifier for the location at which this objective must be accomplished, if there is a location defined. Look up the DestinyLocationDefinition for this hash for that additional location info.</td>
 </tr>
 <tr>
 <td>allowNegativeValue</td>
@@ -120,7 +121,7 @@
 <tr>
 <td>allowValueChangeWhenCompleted</td>
 <td>boolean</td>
-<td>If true, you can effectively &quot;un-complete&quot; this objective if you lose progress aftercrossing the completion threshold. If False, once you complete the task it will remaincompleted forever by locking the value.</td>
+<td>If true, you can effectively &quot;un-complete&quot; this objective if you lose progress after crossing the completion threshold. If False, once you complete the task it will remain completed forever by locking the value.</td>
 </tr>
 <tr>
 <td>isCountingDownward</td>
@@ -130,7 +131,7 @@
 <tr>
 <td>valueStyle</td>
 <td><a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a>:Enum</td>
-<td>The UI style applied to the objective.  It's an enum, take a look at DestinyUnlockValueUIStyle for detailsof the possible styles.  Use this info as you wish to customize your UI.</td>
+<td>The UI style applied to the objective. It's an enum, take a look at DestinyUnlockValueUIStyle for details of the possible styles. Use this info as you wish to customize your UI.</td>
 </tr>
 <tr>
 <td>progressDescription</td>
@@ -150,7 +151,7 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -160,23 +161,14 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: integer:int32
     "completionValue": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyLocationDefinition">Destiny.Definitions.DestinyLocationDefinition</a>:integer:uint32
@@ -188,28 +180,13 @@
     // Type: boolean
     "isCountingDownward": false,
     // Type: <a href="../../docs/schemas/Destiny-DestinyUnlockValueUIStyle">DestinyUnlockValueUIStyle</a>:Enum
-    "valueStyle": 0,
+    "valueStyle": {},
     // Type: string
     "progressDescription": "",
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectivePerkEntryDefinition">DestinyObjectivePerkEntryDefinition</a>:Definition
-    "perks": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
-        "perkHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum
-        "style": 0
-    },
+    "perks": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveStatEntryDefinition">DestinyObjectiveStatEntryDefinition</a>:Definition
-    "stats": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition
-        "stat": {
-            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
-            "statTypeHash": 0,
-            // Type: integer:int32
-            "value": 0
-        },
-        // Type: <a href="../../docs/schemas/Destiny-DestinyObjectiveGrantStyle">DestinyObjectiveGrantStyle</a>:Enum
-        "style": 0
-    },
+    "stats": {},
     // Type: integer:uint32
     "hash": 0,
     // Type: integer:int32
@@ -238,6 +215,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

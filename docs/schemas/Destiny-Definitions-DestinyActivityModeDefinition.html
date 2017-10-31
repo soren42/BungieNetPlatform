@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,9 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyActivityModeDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
+<p>This definition represents an &quot;Activity Mode&quot; as it exists in the Historical Stats endpoints. An individual Activity Mode represents a collection of activities that are played in a certain way. For example, Nightfall Strikes are part of a &quot;Nightfall&quot; activity mode, and any activities played as the PVP mode &quot;Clash&quot; are part of the &quot;Clash activity mode. Activity modes are nested under each other in a hierarchy, so that if you ask for - for example - &quot;AllPvP&quot;, you will get any PVP activities that the user has played, regardless of what specific PVP mode was being played.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> ActivityModes</li>
 </ul>
 <h2>Properties</h2>
@@ -104,37 +106,47 @@
 <tr>
 <td>pgcrImage</td>
 <td>string</td>
-<td>&nbsp;</td>
+<td>If this activity mode has a related PGCR image, this will be the path to said image.</td>
 </tr>
 <tr>
 <td>modeType</td>
 <td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum</td>
-<td>&nbsp;</td>
+<td>The Enumeration value for this Activity Mode. Pass this identifier into Stats endpoints to get aggregate stats for this mode.</td>
 </tr>
 <tr>
 <td>activityModeCategory</td>
 <td><a href="../../docs/schemas/Destiny-DestinyActivityModeCategory">DestinyActivityModeCategory</a>:Enum</td>
-<td>&nbsp;</td>
+<td>The type of play being performed in broad terms (PVP, PVE)</td>
+</tr>
+<tr>
+<td>isTeamBased</td>
+<td>boolean</td>
+<td>If True, this mode has oppositional teams fighting against each other rather than &quot;Free-For-All&quot; or Co-operative modes of play. Note that Aggregate modes are never marked as team based, even if they happen to be team based at the moment. At any time, an aggregate whose subordinates are only team based could be changed so that one or more aren't team based, and then this boolean won't make much sense (the aggregation would become &quot;sometimes team based&quot;). Let's not deal with that right now.</td>
+</tr>
+<tr>
+<td>isAggregateMode</td>
+<td>boolean</td>
+<td>If true, this mode is an aggregation of other, more specific modes rather than being a mode in itself. This includes modes that group Features/Events rather than Gameplay, such as Trials of The Nine: Trials of the Nine being an Event that is interesting to see aggregate data for, but when you play the activities within Trials of the Nine they are more specific activity modes such as Clash.</td>
 </tr>
 <tr>
 <td>parentHashes</td>
 <td>integer:uint32[]</td>
-<td>&nbsp;</td>
+<td>The hash identifiers of the DestinyActivityModeDefinitions that represent all of the &quot;parent&quot; modes for this mode. For instance, the Nightfall Mode is also a member of AllStrikes and AllPvE.</td>
 </tr>
 <tr>
 <td>friendlyName</td>
 <td>string</td>
-<td>&nbsp;</td>
+<td>A Friendly identifier you can use for referring to this Activity Mode. We really only used this in our URLs, so... you know, take that for whatever it's worth.</td>
 </tr>
 <tr>
 <td>activityModeMappings</td>
 <td>Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum&gt;</td>
-<td>&nbsp;</td>
+<td>If this exists, the mode has specific Activities (referred to by the Key) that should instead map to other Activity Modes when they are played. This was useful in D1 for Private Matches, where we wanted to have Private Matches as an activity mode while still referring to the specific mode being played.</td>
 </tr>
 <tr>
 <td>display</td>
 <td>boolean</td>
-<td>If FALSE, we want to ignore this type when we're showing activity modes in BNet UI.  It will still be returned in case3rd parties want to use it for any purpose.</td>
+<td>If FALSE, we want to ignore this type when we're showing activity modes in BNet UI. It will still be returned in case 3rd parties want to use it for any purpose.</td>
 </tr>
 <tr>
 <td>order</td>
@@ -144,7 +156,7 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -154,7 +166,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
@@ -174,9 +186,13 @@
     // Type: string
     "pgcrImage": "",
     // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
-    "modeType": 0,
+    "modeType": {},
     // Type: <a href="../../docs/schemas/Destiny-DestinyActivityModeCategory">DestinyActivityModeCategory</a>:Enum
-    "activityModeCategory": 0,
+    "activityModeCategory": {},
+    // Type: boolean
+    "isTeamBased": false,
+    // Type: boolean
+    "isAggregateMode": false,
     // Type: integer:uint32[]
     "parentHashes": [
        // Type: integer:uint32
@@ -220,6 +236,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

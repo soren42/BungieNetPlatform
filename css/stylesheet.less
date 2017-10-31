@@ -42,6 +42,22 @@ a {
 	}
 }
 
+.btn {
+	background: rgba(255,206,31,0.8) !important;
+	color: #212833 !important;
+	padding: 6px 18px;
+	border-radius: 2px;
+	font-weight: 600;
+	border: none;
+	text-shadow: none;
+	box-shadow: none;
+	font-size: 1em;
+
+	&:hover {
+		background: #ffce1f !important;
+	}
+}
+
 .toggle-collpase {
 	font-size: 0.65em;
 	text-transform: none;
@@ -156,9 +172,18 @@ a {
 	margin-bottom: 30px;
 }
 #content {
+	.row {
+		margin-left: -5px;
+		margin-right: -5px;
+		> div {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
 	.inner {
 		background: fade(rgb(245, 245, 245), 5%);
 		padding: 20px;
+		margin-bottom: 10px;
 		p {
 			margin: 0;
 			+ p {
@@ -433,6 +458,49 @@ a {
 		font-size: inherit;
 	}
 }
+#wiki-apps {
+	padding: 10px 0;
+	margin: 0 -5px;
+	.clear();
+	.app-tile {
+		float: left;
+		width: percentage(1/3);
+		padding: 0 2.5px;
+		margin-bottom: 5px;
+		.app-banner {
+			padding-bottom: 60%;
+			background: fade(#000, 20%) center no-repeat;
+			background-size: cover;
+			cursor: pointer;
+		}
+		.app-tile-name {
+			padding: 10px 10px 5px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+			background: #212833;
+			margin-top: 5px;
+		}
+		.app-links {
+			padding: 0 10px 8px;
+			background: #212833;
+			a {
+				padding: 0 5px;
+			}
+		}
+	}
+	.app-actions {
+		text-align: right;
+		margin-bottom: 10px;
+	}
+}
+.media-tablet-and-down({
+	#wiki-apps {
+		.app-tile {
+			width: percentage(1);
+		}
+	}
+});
 #footer {
 	padding-top: 50px;
 	padding-bottom: 50px;

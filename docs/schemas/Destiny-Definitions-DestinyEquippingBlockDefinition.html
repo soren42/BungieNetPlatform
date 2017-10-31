@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyEquippingBlockDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Items that can be equipped define this block.  It contains information we need tounderstand how and when the item can be equipped.</p>
+<p>Items that can be equipped define this block. It contains information we need to understand how and when the item can be equipped.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
@@ -105,27 +105,27 @@
 <tr>
 <td>uniqueLabel</td>
 <td>string</td>
-<td>If defined, this is the label used to check if the item has other items ofmatching types already equipped. For instance, when you aren't allowed toequip more than one Exotic Weapon, that's because all exotic weapons haveidentical uniqueLabels and the game checks the to-be-equipped item's uniqueLabelvs. all other already equipped items (other than the item in the slot that'sabout to be occupied).</td>
+<td>If defined, this is the label used to check if the item has other items of matching types already equipped. For instance, when you aren't allowed to equip more than one Exotic Weapon, that's because all exotic weapons have identical uniqueLabels and the game checks the to-be-equipped item's uniqueLabel vs. all other already equipped items (other than the item in the slot that's about to be occupied).</td>
 </tr>
 <tr>
 <td>uniqueLabelHash</td>
 <td>integer:uint32</td>
-<td>The hash of that unique label.  Does not point to a specific definition.</td>
+<td>The hash of that unique label. Does not point to a specific definition.</td>
 </tr>
 <tr>
 <td>equipmentSlotTypeHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:Definition:integer:uint32</td>
-<td>An equipped item <em>must</em> be equipped in an Equipment Slot.  This is the hash identifierof the DestinyEquipmentSlotDefinition into which it must be equipped.</td>
+<td>An equipped item <em>must</em> be equipped in an Equipment Slot. This is the hash identifier of the DestinyEquipmentSlotDefinition into which it must be equipped.</td>
 </tr>
 <tr>
 <td>attributes</td>
 <td><a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a>:Enum</td>
-<td>These are custom attributes on the equippability of the item. For now, this can only be &quot;equip on acquire&quot;, which would mean that the itemwill be automatically equipped as soon as you pick it up.</td>
+<td>These are custom attributes on the equippability of the item. For now, this can only be &quot;equip on acquire&quot;, which would mean that the item will be automatically equipped as soon as you pick it up.</td>
 </tr>
 <tr>
 <td>displayStrings</td>
 <td>string[]</td>
-<td>These are strings that represent the possible Game/Account/Character state failure conditionsthat can occur when trying to equip the item.  They match up one-to-one with requiredUnlockExpressions.</td>
+<td>These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item. They match up one-to-one with requiredUnlockExpressions.</td>
 </tr>
 </tbody>
 </table>
@@ -140,7 +140,7 @@
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:Definition:integer:uint32
     "equipmentSlotTypeHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a>:Enum
-    "attributes": 0,
+    "attributes": {},
     // Type: string[]
     "displayStrings": [
        // Type: string
@@ -168,6 +168,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

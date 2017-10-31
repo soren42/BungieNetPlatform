@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -105,22 +105,22 @@
 <tr>
 <td>Profiles</td>
 <td>100</td>
-<td>Profiles is the most basic component, only relevant when calling GetProfile.This returns basic information about the profile, which is almost nothing: a listof characterIds, some information about the last time you logged in, and that mostsobering statistic: how long you've played.</td>
+<td>Profiles is the most basic component, only relevant when calling GetProfile. This returns basic information about the profile, which is almost nothing: a list of characterIds, some information about the last time you logged in, and that most sobering statistic: how long you've played.</td>
 </tr>
 <tr>
 <td>VendorReceipts</td>
 <td>101</td>
-<td>Only applicable for GetProfile, this will return information about receipts for refundablevendor items.</td>
+<td>Only applicable for GetProfile, this will return information about receipts for refundable vendor items.</td>
 </tr>
 <tr>
 <td>ProfileInventories</td>
 <td>102</td>
-<td>Asking for this will get you the profile-level inventories, such as your Vault buckets(yeah, the Vault is really inventory buckets located on your Profile)</td>
+<td>Asking for this will get you the profile-level inventories, such as your Vault buckets (yeah, the Vault is really inventory buckets located on your Profile)</td>
 </tr>
 <tr>
 <td>ProfileCurrencies</td>
 <td>103</td>
-<td>This will get you a summary of items on your Profile that we consider to be &quot;currencies&quot;,such as Glimmer.  I mean, if there's Glimmer in Destiny 2.  I didn't say there was Glimmer.</td>
+<td>This will get you a summary of items on your Profile that we consider to be &quot;currencies&quot;, such as Glimmer. I mean, if there's Glimmer in Destiny 2. I didn't say there was Glimmer.</td>
 </tr>
 <tr>
 <td>Characters</td>
@@ -130,42 +130,42 @@
 <tr>
 <td>CharacterInventories</td>
 <td>201</td>
-<td>This will get you information about any non-equipped items on the character or character(s)in question, if you're allowed to see it.  You have to either be authenticated as that user,or that user must allow anonymous viewing of their non-equipped items in Bungie.Net settingsto actually get results.</td>
+<td>This will get you information about any non-equipped items on the character or character(s) in question, if you're allowed to see it. You have to either be authenticated as that user, or that user must allow anonymous viewing of their non-equipped items in Bungie.Net settings to actually get results.</td>
 </tr>
 <tr>
 <td>CharacterProgressions</td>
 <td>202</td>
-<td>This will get you information about the progression (faction, experience, etc... &quot;levels&quot;)relevant to each character, if you are the currently authenticated user or the user haselected to allow anonymous viewing of its progression info.</td>
+<td>This will get you information about the progression (faction, experience, etc... &quot;levels&quot;) relevant to each character, if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info.</td>
 </tr>
 <tr>
 <td>CharacterRenderData</td>
 <td>203</td>
-<td>This will get you just enough information to be able to render the character in 3Dif you have written a 3D rendering library for Destiny Characters, or &quot;borrowed&quot; ours.It's okay, I won't tell anyone if you're using it.  I'm no snitch.(actually, we don't care if you use it - go to town)</td>
+<td>This will get you just enough information to be able to render the character in 3D if you have written a 3D rendering library for Destiny Characters, or &quot;borrowed&quot; ours. It's okay, I won't tell anyone if you're using it. I'm no snitch. (actually, we don't care if you use it - go to town)</td>
 </tr>
 <tr>
 <td>CharacterActivities</td>
 <td>204</td>
-<td>This will return info about activities that a user can see and gating on it, if you are the currently authenticated user or the user haselected to allow anonymous viewing of its progression info.Note that the data returned by this can be unfortunately problematic and relatively unreliable insome cases.  We'll eventually work on making it more consistently reliable.</td>
+<td>This will return info about activities that a user can see and gating on it, if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info. Note that the data returned by this can be unfortunately problematic and relatively unreliable in some cases. We'll eventually work on making it more consistently reliable.</td>
 </tr>
 <tr>
 <td>CharacterEquipment</td>
 <td>205</td>
-<td>This will return info about the equipped items on the character(s).  Everyone can see this.</td>
+<td>This will return info about the equipped items on the character(s). Everyone can see this.</td>
 </tr>
 <tr>
 <td>ItemInstances</td>
 <td>300</td>
-<td>This will return basic info about instanced items - whether they can be equipped, theirtracked status, and some info commonly needed in many places (current damage type,primary stat value, etc)</td>
+<td>This will return basic info about instanced items - whether they can be equipped, their tracked status, and some info commonly needed in many places (current damage type, primary stat value, etc)</td>
 </tr>
 <tr>
 <td>ItemObjectives</td>
 <td>301</td>
-<td>Items can have Objectives (DestinyObjectiveDefinition) bound to them.  If they do, this willreturn info for items that have such bound objectives.</td>
+<td>Items can have Objectives (DestinyObjectiveDefinition) bound to them. If they do, this will return info for items that have such bound objectives.</td>
 </tr>
 <tr>
 <td>ItemPerks</td>
 <td>302</td>
-<td>Items can have perks (DestinyPerkDefinition).  If they do, this will return info forwhat perks are active on items.</td>
+<td>Items can have perks (DestinyPerkDefinition). If they do, this will return info for what perks are active on items.</td>
 </tr>
 <tr>
 <td>ItemRenderData</td>
@@ -175,27 +175,27 @@
 <tr>
 <td>ItemStats</td>
 <td>304</td>
-<td>Items can have stats, like rate of fire.  Asking for this component will returnrequested item's stats if they have stats.</td>
+<td>Items can have stats, like rate of fire. Asking for this component will return requested item's stats if they have stats.</td>
 </tr>
 <tr>
 <td>ItemSockets</td>
 <td>305</td>
-<td>Items can have sockets, where plugs can be inserted.  Asking for this component willreturn all info relevant to the sockets on items that have them.</td>
+<td>Items can have sockets, where plugs can be inserted. Asking for this component will return all info relevant to the sockets on items that have them.</td>
 </tr>
 <tr>
 <td>ItemTalentGrids</td>
 <td>306</td>
-<td>Items can have talent grids, though that matters a lot less frequently than it used to.Asking for this component will return all relevant info about activated Nodes and Stepson this talent grid, like the good ol' days.</td>
+<td>Items can have talent grids, though that matters a lot less frequently than it used to. Asking for this component will return all relevant info about activated Nodes and Steps on this talent grid, like the good ol' days.</td>
 </tr>
 <tr>
 <td>ItemCommonData</td>
 <td>307</td>
-<td>Items that <em>aren't</em> instanced still have important information you need to know:how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition,whether they're locked, etc... Both instanced and non-instanced items will have these properties.</td>
+<td>Items that <em>aren't</em> instanced still have important information you need to know: how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition, whether they're locked, etc... Both instanced and non-instanced items will have these properties. You will get this automatically with Inventory components - you only need to pass this when calling GetItem on a specific item.</td>
 </tr>
 <tr>
 <td>ItemPlugStates</td>
 <td>308</td>
-<td>Items that are &quot;Plugs&quot; can be inserted into sockets.  This returns statuses about those plugsand why they can/can't be inserted.  I hear you giggling, there's nothing funny about inserting plugs.Get your head out of the gutter and pay attention!</td>
+<td>Items that are &quot;Plugs&quot; can be inserted into sockets. This returns statuses about those plugs and why they can/can't be inserted. I hear you giggling, there's nothing funny about inserting plugs. Get your head out of the gutter and pay attention!</td>
 </tr>
 <tr>
 <td>Vendors</td>
@@ -215,7 +215,7 @@
 <tr>
 <td>Kiosks</td>
 <td>500</td>
-<td>Asking for this component will return you the account's Kiosk statuses: that is, what items have been filledout/acquired.  But only if you are the currently authenticated user or the user haselected to allow anonymous viewing of its progression info.</td>
+<td>Asking for this component will return you the account's Kiosk statuses: that is, what items have been filled out/acquired. But only if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info.</td>
 </tr>
 </tbody>
 </table>
@@ -239,6 +239,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

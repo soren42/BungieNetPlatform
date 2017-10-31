@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,10 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Director-DestinyActivityGraphDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a Map View in the director: be them overview views, destination views, or other. They have nodes which map to activities, and other various visual elements that we (or others) mayor may not be able to use. Activity graphs, most importantly, have nodes which can have activities in various states ofplayability. Unfortunately, activity graphs are combined at runtime with Game UI-only assets such as fragments ofmap images, various in-game special effects, decals etc... that we don't get in these definitions. If we end up having time, we may end up trying to manually populate those here: but the last time we tried that,before the lead-up to D1, it proved to be unmaintainable as the game's content changed.  So don't bet the farmon us providing that content in this definition.</p>
+<p>Represents a Map View in the director: be them overview views, destination views, or other. They have nodes which map to activities, and other various visual elements that we (or others) may or may not be able to use. Activity graphs, most importantly, have nodes which can have activities in various states of playability. Unfortunately, activity graphs are combined at runtime with Game UI-only assets such as fragments of map images, various in-game special effects, decals etc... that we don't get in these definitions. If we end up having time, we may end up trying to manually populate those here: but the last time we tried that, before the lead-up to D1, it proved to be unmaintainable as the game's content changed. So don't bet the farm on us providing that content in this definition.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> ActivityGraphs</li>
 </ul>
 <h2>Properties</h2>
@@ -100,7 +101,7 @@
 <tr>
 <td>nodes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeDefinition">DestinyActivityGraphNodeDefinition</a>:Definition[]</td>
-<td>These represent the visual &quot;nodes&quot; on the map's view.  These are the activities youcan click on in the map.</td>
+<td>These represent the visual &quot;nodes&quot; on the map's view. These are the activities you can click on in the map.</td>
 </tr>
 <tr>
 <td>artElements</td>
@@ -110,17 +111,17 @@
 <tr>
 <td>connections</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">DestinyActivityGraphConnectionDefinition</a>:Definition[]</td>
-<td>Represents connections between graph nodes.  However, it lacks context that we'd need to make good use of it.</td>
+<td>Represents connections between graph nodes. However, it lacks context that we'd need to make good use of it.</td>
 </tr>
 <tr>
 <td>displayObjectives</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayObjectiveDefinition">DestinyActivityGraphDisplayObjectiveDefinition</a>:Definition[]</td>
-<td>Objectives can display on maps, and this is supposedly metadata for that.  I have not had the time toanalyze the details of what is useful within however: we could be missing important data to make this work.Expect this property to be expanded on later if possible.</td>
+<td>Objectives can display on maps, and this is supposedly metadata for that. I have not had the time to analyze the details of what is useful within however: we could be missing important data to make this work. Expect this property to be expanded on later if possible.</td>
 </tr>
 <tr>
 <td>displayProgressions</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphDisplayProgressionDefinition">DestinyActivityGraphDisplayProgressionDefinition</a>:Definition[]</td>
-<td>Progressions can also display on maps, but similarly to displayObjectives we appear to lack some requiredinformation and context right now.  We will have to look into it later and add more data if possible.</td>
+<td>Progressions can also display on maps, but similarly to displayObjectives we appear to lack some required information and context right now. We will have to look into it later and add more data if possible.</td>
 </tr>
 <tr>
 <td>linkedGraphs</td>
@@ -130,7 +131,7 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -140,7 +141,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
@@ -153,31 +154,15 @@
             // Type: integer:uint32
             "nodeId": 0,
             // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
-            "overrideDisplay": {
-                // Type: string
-                "description": "",
-                // Type: string
-                "name": "",
-                // Type: string
-                "icon": "",
-                // Type: boolean
-                "hasIcon": false
-            },
+            "overrideDisplay": {},
             // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a>:Definition
-            "position": {
-                // Type: integer:int32
-                "x": 0,
-                // Type: integer:int32
-                "y": 0,
-                // Type: integer:int32
-                "z": 0
-            },
+            "position": {},
             // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>:Definition[]
             "featuringStates": [
                // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeFeaturingStateDefinition">DestinyActivityGraphNodeFeaturingStateDefinition</a>:Definition
                 {
                     // Type: <a href="../../docs/schemas/Destiny-ActivityGraphNodeHighlightType">ActivityGraphNodeHighlightType</a>:Enum
-                    "highlightType": 0
+                    "highlightType": {}
                 }
             ],
             // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphNodeActivityDefinition">DestinyActivityGraphNodeActivityDefinition</a>:Definition[]
@@ -197,14 +182,7 @@
        // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphArtElementDefinition">DestinyActivityGraphArtElementDefinition</a>:Definition
         {
             // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyPositionDefinition">DestinyPositionDefinition</a>:Definition
-            "position": {
-                // Type: integer:int32
-                "x": 0,
-                // Type: integer:int32
-                "y": 0,
-                // Type: integer:int32
-                "z": 0
-            }
+            "position": {}
         }
     ],
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Director-DestinyActivityGraphConnectionDefinition">DestinyActivityGraphConnectionDefinition</a>:Definition[]
@@ -248,7 +226,7 @@
             // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyUnlockExpressionDefinition">DestinyUnlockExpressionDefinition</a>:Definition
             "unlockExpression": {
                 // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum
-                "scope": 0
+                "scope": {}
             },
             // Type: integer:uint32
             "linkedGraphId": 0,
@@ -292,6 +270,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

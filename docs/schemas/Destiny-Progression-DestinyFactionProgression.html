@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Progression-DestinyFactionProgression.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Mostly for historical purposes, we segregate Faction progressions from other progressions.This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinitionof the faction related to the progression.</p>
+<p>Mostly for historical purposes, we segregate Faction progressions from other progressions. This is just a DestinyProgression with a shortcut for finding the DestinyFactionDefinition of the faction related to the progression.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -100,12 +100,12 @@
 <tr>
 <td>factionHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>:integer:uint32</td>
-<td>The hash identifier of the Faction related to this progression.  Use it to look up the DestinyFactionDefinitionfor more rendering info.</td>
+<td>The hash identifier of the Faction related to this progression. Use it to look up the DestinyFactionDefinition for more rendering info.</td>
 </tr>
 <tr>
 <td>progressionHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32</td>
-<td>The hash identifier of the Progression in question.  Use it to look up the DestinyProgressionDefinition in static data.</td>
+<td>The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data.</td>
 </tr>
 <tr>
 <td>dailyProgress</td>
@@ -130,7 +130,7 @@
 <tr>
 <td>currentProgress</td>
 <td>integer:int32</td>
-<td>This is the total amount of progress obtained overall for thisprogression (for instance, the total amount of Character Level experience earned)</td>
+<td>This is the total amount of progress obtained overall for this progression (for instance, the total amount of Character Level experience earned)</td>
 </tr>
 <tr>
 <td>level</td>
@@ -140,17 +140,17 @@
 <tr>
 <td>levelCap</td>
 <td>integer:int32</td>
-<td>This is the maximum possible level you can achieve for this progression (for example, the maximumcharacter level obtainable)</td>
+<td>This is the maximum possible level you can achieve for this progression (for example, the maximum character level obtainable)</td>
 </tr>
 <tr>
 <td>stepIndex</td>
 <td>integer:int32</td>
-<td>Progressions define their levels in &quot;steps&quot;.  Since the last step may be repeatable, the user maybe at a higher level than the actual Step achieved in the progression.  Not necessarily useful, butpotentially interesting for those cruising the API.  Relate this to the &quot;steps&quot; property of the DestinyProgressionto see which step the user is on, if you care about that.  (Note that this is Content Version dependent sinceit refers to indexes.)</td>
+<td>Progressions define their levels in &quot;steps&quot;. Since the last step may be repeatable, the user may be at a higher level than the actual Step achieved in the progression. Not necessarily useful, but potentially interesting for those cruising the API. Relate this to the &quot;steps&quot; property of the DestinyProgression to see which step the user is on, if you care about that. (Note that this is Content Version dependent since it refers to indexes.)</td>
 </tr>
 <tr>
 <td>progressToNextLevel</td>
 <td>integer:int32</td>
-<td>The amount of progression (i.e. &quot;Experience&quot;) needed to reach the next level of this Progression.Jeez, progression is such an overloaded word.</td>
+<td>The amount of progression (i.e. &quot;Experience&quot;) needed to reach the next level of this Progression. Jeez, progression is such an overloaded word.</td>
 </tr>
 <tr>
 <td>nextLevelAt</td>
@@ -207,6 +207,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

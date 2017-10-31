@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Trending-TrendingEntry.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The list entry view for trending items.  Returns just enough to show the item on the trending page.</p>
+<p>The list entry view for trending items. Returns just enough to show the item on the trending page.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -110,12 +110,12 @@
 <tr>
 <td>identifier</td>
 <td>string</td>
-<td>We don't know whether the identifier will be a string, a uint, or a long... so we're going to cast it all to a string.But either way, we need any trending item created to have a single unique identifier for its type.</td>
+<td>We don't know whether the identifier will be a string, a uint, or a long... so we're going to cast it all to a string. But either way, we need any trending item created to have a single unique identifier for its type.</td>
 </tr>
 <tr>
 <td>entityType</td>
 <td><a href="../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum</td>
-<td>An enum - unfortunately - dictating all of the possible kinds of trending items that you might get in your result set,in case you want to do custom rendering or call to get the details of the item.</td>
+<td>An enum - unfortunately - dictating all of the possible kinds of trending items that you might get in your result set, in case you want to do custom rendering or call to get the details of the item.</td>
 </tr>
 <tr>
 <td>displayName</td>
@@ -150,17 +150,17 @@
 <tr>
 <td>webmVideo</td>
 <td>string</td>
-<td>If this is populated, the entry has a related WebM video to show.I am 100% certain I am going to regret putting this directly on TrendingEntry,but it will work so yolo</td>
+<td>If this is populated, the entry has a related WebM video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo</td>
 </tr>
 <tr>
 <td>mp4Video</td>
 <td>string</td>
-<td>If this is populated, the entry has a related MP4 video to show.I am 100% certain I am going to regret putting this directly on TrendingEntry,but it will work so yolo</td>
+<td>If this is populated, the entry has a related MP4 video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo</td>
 </tr>
 <tr>
 <td>featureImage</td>
 <td>string</td>
-<td>If isFeatured, this image will be populated with whatever the featured image is.Note that this will likely be a very large image, so don't use it all the time.</td>
+<td>If isFeatured, this image will be populated with whatever the featured image is. Note that this will likely be a very large image, so don't use it all the time.</td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@
     // Type: string
     "identifier": "",
     // Type: <a href="../../docs/schemas/Trending-TrendingEntryType">TrendingEntryType</a>:Enum
-    "entityType": 0,
+    "entityType": {},
     // Type: string
     "displayName": "",
     // Type: string
@@ -214,6 +214,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

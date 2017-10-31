@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,10 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyRaceDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>In Destiny, &quot;Races&quot; are really more like &quot;Species&quot;.  Sort of.  I mean, are the Awoken a separate species fromhumans?  I'm not sure.  But either way, they're defined here.  You'll see Exo, Awoken, and Human as examplesof these Species.  Players will choose one for their character.</p>
+<p>In Destiny, &quot;Races&quot; are really more like &quot;Species&quot;. Sort of. I mean, are the Awoken a separate species from humans? I'm not sure. But either way, they're defined here. You'll see Exo, Awoken, and Human as examples of these Species. Players will choose one for their character.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> Races</li>
 </ul>
 <h2>Properties</h2>
@@ -105,17 +106,17 @@
 <tr>
 <td>raceType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>:Enum</td>
-<td>An enumeration defining the existing, known Races/Species for player characters.  This valuewill be the enum value matching this definition.</td>
+<td>An enumeration defining the existing, known Races/Species for player characters. This value will be the enum value matching this definition.</td>
 </tr>
 <tr>
 <td>genderedRaceNames</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum,string&gt;</td>
-<td>A localized string referring to the singular form of the Race's name when referred to in gendered form.Keyed by the DestinyGender.</td>
+<td>A localized string referring to the singular form of the Race's name when referred to in gendered form. Keyed by the DestinyGender.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -125,7 +126,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
@@ -143,7 +144,7 @@
         "hasIcon": false
     },
     // Type: <a href="../../docs/schemas/Destiny-DestinyRace">DestinyRace</a>:Enum
-    "raceType": 0,
+    "raceType": {},
     // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-DestinyGender">DestinyGender</a>:Enum,string&gt;
     "genderedRaceNames": {
         "0": ""
@@ -176,6 +177,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

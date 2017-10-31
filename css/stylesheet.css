@@ -48,6 +48,20 @@ a[name] {
   -o-transform: translateY(-30px);
   transform: translateY(-30px);
 }
+.btn {
+  background: rgba(255, 206, 31, 0.8) !important;
+  color: #212833 !important;
+  padding: 6px 18px;
+  border-radius: 2px;
+  font-weight: 600;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  font-size: 1em;
+}
+.btn:hover {
+  background: #ffce1f !important;
+}
 .toggle-collpase {
   font-size: 0.65em;
   text-transform: none;
@@ -146,9 +160,18 @@ a[name] {
   border-bottom: 2px solid;
   margin-bottom: 30px;
 }
+#content .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+#content .row > div {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 #content .inner {
   background: rgba(245, 245, 245, 0.05);
   padding: 20px;
+  margin-bottom: 10px;
 }
 #content .inner p {
   margin: 0;
@@ -414,6 +437,51 @@ a[name] {
   outline: none;
   box-shadow: none;
   font-size: inherit;
+}
+#wiki-apps {
+  padding: 10px 0;
+  margin: 0 -5px;
+}
+#wiki-apps:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#wiki-apps .app-tile {
+  float: left;
+  width: 33.33333333%;
+  padding: 0 2.5px;
+  margin-bottom: 5px;
+}
+#wiki-apps .app-tile .app-banner {
+  padding-bottom: 60%;
+  background: rgba(0, 0, 0, 0.2) center no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+#wiki-apps .app-tile .app-tile-name {
+  padding: 10px 10px 5px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  background: #212833;
+  margin-top: 5px;
+}
+#wiki-apps .app-tile .app-links {
+  padding: 0 10px 8px;
+  background: #212833;
+}
+#wiki-apps .app-tile .app-links a {
+  padding: 0 5px;
+}
+#wiki-apps .app-actions {
+  text-align: right;
+  margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+  #wiki-apps .app-tile {
+    width: 100%;
+  }
 }
 #footer {
   padding-top: 50px;

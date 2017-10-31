@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-DestinyTalentNode.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>I see you've come to find out more about Talent Nodes.  I'm so sorry.Talent Nodes are the conceptual, visual nodes that appear on Talent Grids.Talent Grids, in Destiny 1, were found on almost every instanced item: they had Nodes that couldbe activated to change the properties of the item.In Destiny 2, Talent Grids only exist for Builds/Subclasses, and while the basic concept is the same(Nodes can be activated once you've gained sufficient Experience on the Item, and provide effects),there are some new concepts from Destiny 1.  Examine DestinyTalentGridDefinition and its subordinatesfor more information.This is the &quot;Live&quot; information for the current status of a Talent Node on a specific item.Talent Nodes have many Steps, but only one can be active at any one time: and it is the Step that determinesboth the visual and the game state-changing properties that the Node provides.  Examine this and DestinyTalentNodeStepDefinitioncarefully.<em>IMPORTANT NOTE</em> Talent Nodes are, unfortunately, Content Version DEPENDENT.  Though they refer to hashes for Nodes and Steps,those hashes are not guaranteed to be immutable across content versions.  This is a source of great exasperation for me,but as a result anyone using Talent Grid data must ensure that the content version of their static contentmatches that of the server responses before showing or making decisions based on talent grid data.</p>
+<p>I see you've come to find out more about Talent Nodes. I'm so sorry. Talent Nodes are the conceptual, visual nodes that appear on Talent Grids. Talent Grids, in Destiny 1, were found on almost every instanced item: they had Nodes that could be activated to change the properties of the item. In Destiny 2, Talent Grids only exist for Builds/Subclasses, and while the basic concept is the same (Nodes can be activated once you've gained sufficient Experience on the Item, and provide effects), there are some new concepts from Destiny 1. Examine DestinyTalentGridDefinition and its subordinates for more information. This is the &quot;Live&quot; information for the current status of a Talent Node on a specific item. Talent Nodes have many Steps, but only one can be active at any one time: and it is the Step that determines both the visual and the game state-changing properties that the Node provides. Examine this and DestinyTalentNodeStepDefinition carefully. <em>IMPORTANT NOTE</em> Talent Nodes are, unfortunately, Content Version DEPENDENT. Though they refer to hashes for Nodes and Steps, those hashes are not guaranteed to be immutable across content versions. This is a source of great exasperation for me, but as a result anyone using Talent Grid data must ensure that the content version of their static content matches that of the server responses before showing or making decisions based on talent grid data.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -100,17 +100,17 @@
 <tr>
 <td>nodeIndex</td>
 <td>integer:int32</td>
-<td>The index of the Talent Node being referred to (an index into DestinyTalentGridDefinition.nodes[]).CONTENT VERSION DEPENDENT.</td>
+<td>The index of the Talent Node being referred to (an index into DestinyTalentGridDefinition.nodes[]). CONTENT VERSION DEPENDENT.</td>
 </tr>
 <tr>
 <td>nodeHash</td>
 <td>integer:uint32</td>
-<td>The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes).Deceptively CONTENT VERSION DEPENDENT.  We have no guarantee of the hash's immutability between content versions.</td>
+<td>The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes). Deceptively CONTENT VERSION DEPENDENT. We have no guarantee of the hash's immutability between content versions.</td>
 </tr>
 <tr>
 <td>state</td>
 <td><a href="../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a>:Enum</td>
-<td>An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why notif neither can be performed.</td>
+<td>An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why not if neither can be performed.</td>
 </tr>
 <tr>
 <td>isActivated</td>
@@ -120,7 +120,7 @@
 <tr>
 <td>stepIndex</td>
 <td>integer:int32</td>
-<td>The currently relevant Step for the node.  It is this step that has rendering data for the nodeand the benefits that are provided if the node is activated.  (the actual rules for benefits providedare extremely complicated in theory, but with how Talent Grids are being used in Destiny 2 you don't have to worryabout a lot of those old Destiny 1 rules.)  This is an index into:DestinyTalentGridDefinition.nodes[nodeIndex].steps[stepIndex]</td>
+<td>The currently relevant Step for the node. It is this step that has rendering data for the node and the benefits that are provided if the node is activated. (the actual rules for benefits provided are extremely complicated in theory, but with how Talent Grids are being used in Destiny 2 you don't have to worry about a lot of those old Destiny 1 rules.) This is an index into: DestinyTalentGridDefinition.nodes[nodeIndex].steps[stepIndex]</td>
 </tr>
 <tr>
 <td>materialsToUpgrade</td>
@@ -130,22 +130,22 @@
 <tr>
 <td>activationGridLevel</td>
 <td>integer:int32</td>
-<td>The progression level required on the Talent Grid in order to be able to activate this talent node.Talent Grids have their own Progression - similar to Character Level, but in this case it is experiencerelated to the item itself.</td>
+<td>The progression level required on the Talent Grid in order to be able to activate this talent node. Talent Grids have their own Progression - similar to Character Level, but in this case it is experience related to the item itself.</td>
 </tr>
 <tr>
 <td>progressPercent</td>
 <td>number:float</td>
-<td>If you want to show a progress bar or circle for how close this talent node is to being activate-able, thisis the percentage to show.  It follows the node's underlying rules about when the progress bar should firstshow up, and when it should be filled.</td>
+<td>If you want to show a progress bar or circle for how close this talent node is to being activate-able, this is the percentage to show. It follows the node's underlying rules about when the progress bar should first show up, and when it should be filled.</td>
 </tr>
 <tr>
 <td>hidden</td>
 <td>boolean</td>
-<td>Whether or not the talent node is actually visible in the game's UI.  Whether you want to show it in your ownUI is up to you!  I'm not gonna tell you who to sock it to.</td>
+<td>Whether or not the talent node is actually visible in the game's UI. Whether you want to show it in your own UI is up to you! I'm not gonna tell you who to sock it to.</td>
 </tr>
 <tr>
 <td>nodeStatsBlock</td>
 <td><a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a></td>
-<td>This property has some history.  A talent grid can provide stats on both the item it's related to andthe character equipping the item.  This returns data about those stat bonuses.</td>
+<td>This property has some history. A talent grid can provide stats on both the item it's related to and the character equipping the item. This returns data about those stat bonuses.</td>
 </tr>
 </tbody>
 </table>
@@ -156,7 +156,7 @@
     // Type: integer:uint32
     "nodeHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a>:Enum
-    "state": 0,
+    "state": {},
     // Type: boolean
     "isActivated": false,
     // Type: integer:int32
@@ -182,32 +182,7 @@
     // Type: boolean
     "hidden": false,
     // Type: <a href="../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a>
-    "nodeStatsBlock": {
-        // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
-        "currentStepStats": [
-           // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
-                "statHash": 0,
-                // Type: integer:int32
-                "value": 0,
-                // Type: integer:int32
-                "maximumValue": 0
-            }
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>[]
-        "nextStepStats": [
-           // Type: <a href="../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
-                "statHash": 0,
-                // Type: integer:int32
-                "value": 0,
-                // Type: integer:int32
-                "maximumValue": 0
-            }
-        ]
-    }
+    "nodeStatsBlock": {}
 }
 </code></pre>
 <h2>References</h2>
@@ -230,6 +205,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

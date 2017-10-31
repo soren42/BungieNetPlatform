@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>An item can have objectives on it.  In practice, these are the exclusive purview of&quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest. Quest steps have 1:M objectives that we end up processing and returning in live data as DestinyQuestStatusdata, and other useful information.</p>
+<p>An item can have objectives on it. In practice, these are the exclusive purview of &quot;Quest Step&quot; items: DestinyInventoryItemDefinitions that represent a specific step in a Quest. Quest steps have 1:M objectives that we end up processing and returning in live data as DestinyQuestStatus data, and other useful information.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
@@ -100,17 +100,17 @@
 <tr>
 <td>objectiveHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]</td>
-<td>The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in theorder that they should be rendered.</td>
+<td>The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in the order that they should be rendered.</td>
 </tr>
 <tr>
 <td>displayActivityHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32[]</td>
-<td>For every entry in objectiveHashes, there is a corresponding entry in this arrayat the same index.  If the objective is meant to be associated with a specific DestinyActivityDefinition,there will be a valid hash at that index.  Otherwise, it will be invalid (0).</td>
+<td>For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).</td>
 </tr>
 <tr>
 <td>requireFullObjectiveCompletion</td>
 <td>boolean</td>
-<td>If True, all objectives must be completed for the step to be completed.If False, any one objective can be completed for the step to be completed.</td>
+<td>If True, all objectives must be completed for the step to be completed. If False, any one objective can be completed for the step to be completed.</td>
 </tr>
 <tr>
 <td>questlineItemHash</td>
@@ -130,7 +130,7 @@
 <tr>
 <td>questTypeIdentifier</td>
 <td>string</td>
-<td>The identifier for the type of quest being performed, if any.  Not associated with any fixed definition, yet.</td>
+<td>The identifier for the type of quest being performed, if any. Not associated with any fixed definition, yet.</td>
 </tr>
 <tr>
 <td>questTypeHash</td>
@@ -185,6 +185,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

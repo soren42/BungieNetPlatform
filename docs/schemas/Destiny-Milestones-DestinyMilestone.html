@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Milestones-DestinyMilestone.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Represents a runtime instance of a user's milestone status.Live Milestone data should be combined with DestinyMilestoneDefinition data to show the usera picture of what is available for them to do in the game, and their status in regards to said &quot;things to do.&quot;Consider it a big, wonky to-do list, or Advisors 3.0 for those who remember the Destiny 1 API.</p>
+<p>Represents a runtime instance of a user's milestone status. Live Milestone data should be combined with DestinyMilestoneDefinition data to show the user a picture of what is available for them to do in the game, and their status in regards to said &quot;things to do.&quot; Consider it a big, wonky to-do list, or Advisors 3.0 for those who remember the Destiny 1 API.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Class</li>
@@ -100,37 +100,42 @@
 <tr>
 <td>milestoneHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>:integer:uint32</td>
-<td>The unique identifier for the Milestone.  Use it to look up the DestinyMilestoneDefinition, soyou can combine the other data in this contract with static definition data.</td>
+<td>The unique identifier for the Milestone. Use it to look up the DestinyMilestoneDefinition, so you can combine the other data in this contract with static definition data.</td>
 </tr>
 <tr>
 <td>availableQuests</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneQuest">DestinyMilestoneQuest</a>[]</td>
-<td>Indicates what quests are available for this Milestone.Usually this will be only a single Quest, but some quests have multiple available that youcan choose from at any given time.All possible quests for a milestone can be found in the DestinyMilestoneDefinition, but they mustbe combined with this Live data to determine which one(s) are actually active right now.It is possible for Milestones to not have any quests.</td>
+<td>Indicates what quests are available for this Milestone. Usually this will be only a single Quest, but some quests have multiple available that you can choose from at any given time. All possible quests for a milestone can be found in the DestinyMilestoneDefinition, but they must be combined with this Live data to determine which one(s) are actually active right now. It is possible for Milestones to not have any quests.</td>
 </tr>
 <tr>
 <td>values</td>
 <td>Dictionary&lt;string,number:float&gt;</td>
-<td>Milestones may have arbitrary key/value pairs associated with them, for data that users willwant to know about but that doesn't fit neatly into any of the common components such as Quests.A good example of this would be - if this existed in Destiny 1 - the number of wins you currently haveon your Trials of Osiris ticket.Looking in the DestinyMilestoneDefinition,you can use the string identifier of this dictionary to look up more info about the value, includinglocalized string content for displaying the value.  The value in the dictionary is the floating pointnumber.  The definition will tell you how to format this number.</td>
+<td>Milestones may have arbitrary key/value pairs associated with them, for data that users will want to know about but that doesn't fit neatly into any of the common components such as Quests. A good example of this would be - if this existed in Destiny 1 - the number of wins you currently have on your Trials of Osiris ticket. Looking in the DestinyMilestoneDefinition, you can use the string identifier of this dictionary to look up more info about the value, including localized string content for displaying the value. The value in the dictionary is the floating point number. The definition will tell you how to format this number.</td>
 </tr>
 <tr>
 <td>vendorHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32[]</td>
-<td>A milestone may have one or more active vendors that are &quot;related&quot; to it (that provide rewards, or thatare the initiators of the Milestone).  I already regret this, even as I'm typing it.You see, sometimes a milestone may be directly correlated with a set of vendors that provide varying tiersof rewards.  The player may not be able to interact with one or more of those vendors.  This will returnthe hashes of the Vendors that the player <em>can</em> interact with, allowing you to show their current inventoryas rewards or related items to the Milestone or its activities.</td>
+<td>A milestone may have one or more active vendors that are &quot;related&quot; to it (that provide rewards, or that are the initiators of the Milestone). I already regret this, even as I'm typing it. [I told you I'd regret this] You see, sometimes a milestone may be directly correlated with a set of vendors that provide varying tiers of rewards. The player may not be able to interact with one or more of those vendors. This will return the hashes of the Vendors that the player <em>can</em> interact with, allowing you to show their current inventory as rewards or related items to the Milestone or its activities. Before we even use it, it's already deprecated! How much of a bummer is that? We need more data.</td>
+</tr>
+<tr>
+<td>vendors</td>
+<td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneVendor">DestinyMilestoneVendor</a>[]</td>
+<td>Replaces vendorHashes, which I knew was going to be trouble the day it walked in the door. This will return not only what Vendors are active and relevant to the activity (in an implied order that you can choose to ignore), but also other data - for example, if the Vendor is featuring a specific item relevant to this event that you should show with them.</td>
 </tr>
 <tr>
 <td>rewards</td>
 <td><a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>[]</td>
-<td>If the entity to which this component is attached has known active Rewards for the player, this will detailinformation about those rewards, keyed by the RewardEntry Hash. (See DestinyMilestoneDefinition formore information about Reward Entries)Note that these rewards are not for the Quests related to the Milestone.  Think of these as &quot;overview/checklist&quot;rewards that may be provided for Milestones that may provide rewards for performing a variety of tasks thataren't under a specific Quest.</td>
+<td>If the entity to which this component is attached has known active Rewards for the player, this will detail information about those rewards, keyed by the RewardEntry Hash. (See DestinyMilestoneDefinition for more information about Reward Entries) Note that these rewards are not for the Quests related to the Milestone. Think of these as &quot;overview/checklist&quot; rewards that may be provided for Milestones that may provide rewards for performing a variety of tasks that aren't under a specific Quest.</td>
 </tr>
 <tr>
 <td>startDate</td>
 <td>string:date-time:nullable</td>
-<td>If known, this is the date when the event last began or refreshed.  It will only be populated for events with fixedand repeating start and end dates.</td>
+<td>If known, this is the date when the event last began or refreshed. It will only be populated for events with fixed and repeating start and end dates.</td>
 </tr>
 <tr>
 <td>endDate</td>
 <td>string:date-time:nullable</td>
-<td>If known, this is the date when the event will next end or repeat.  It will only be populated for events with fixedand repeating start and end dates.</td>
+<td>If known, this is the date when the event will next end or repeat. It will only be populated for events with fixed and repeating start and end dates.</td>
 </tr>
 </tbody>
 </table>
@@ -145,88 +150,15 @@
             // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
             "questItemHash": 0,
             // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyQuestStatus">DestinyQuestStatus</a>
-            "status": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "questHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "stepHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
-                "stepObjectives": [
-                   // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
-                    {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
-                        "objectiveHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
-                        "destinationHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
-                        "activityHash": 0,
-                        // Type: integer:int32:nullable
-                        "progress": 0,
-                        // Type: boolean
-                        "complete": false
-                    }
-                ],
-                // Type: boolean
-                "tracked": false,
-                // Type: integer:int64
-                "itemInstanceId": 0,
-                // Type: boolean
-                "completed": false,
-                // Type: boolean
-                "redeemed": false,
-                // Type: boolean
-                "started": false,
-                // Type: integer:uint32:nullable
-                "vendorHash": 0
-            },
+            "status": {},
             // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">DestinyMilestoneActivity</a>
-            "activity": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
-                "activityHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
-                "modifierHashes": [
-                   // Type: integer:uint32
-                    0
-                ],
-                // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>[]
-                "variants": [
-                   // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">DestinyMilestoneActivityVariant</a>
-                    {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
-                        "activityHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
-                        "completionStatus": {
-                            // Type: boolean
-                            "completed": false,
-                            // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>[]
-                            "phases": [
-                               // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityPhase">DestinyMilestoneActivityPhase</a>
-                                {
-                                    // Type: boolean
-                                    "complete": false
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
+            "activity": {},
             // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>[]
             "challenges": [
                // Type: <a href="../../docs/schemas/Destiny-Challenges-DestinyChallengeStatus">DestinyChallengeStatus</a>
                 {
                     // Type: <a href="../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
-                    "objective": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
-                        "objectiveHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
-                        "destinationHash": 0,
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
-                        "activityHash": 0,
-                        // Type: integer:int32:nullable
-                        "progress": 0,
-                        // Type: boolean
-                        "complete": false
-                    }
+                    "objective": {}
                 }
             ]
         }
@@ -239,6 +171,16 @@
     "vendorHashes": [
        // Type: integer:uint32
         0
+    ],
+    // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneVendor">DestinyMilestoneVendor</a>[]
+    "vendors": [
+       // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneVendor">DestinyMilestoneVendor</a>
+        {
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
+            "vendorHash": 0,
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
+            "previewItemHash": 0
+        }
     ],
     // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneRewardCategory">DestinyMilestoneRewardCategory</a>[]
     "rewards": [
@@ -286,6 +228,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

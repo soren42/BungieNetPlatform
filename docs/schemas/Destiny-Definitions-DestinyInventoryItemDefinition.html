@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,10 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyInventoryItemDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>So much of what you see in Destiny is actually an Item used in a new and creative way.This is the definition for Items in Destiny, which started off as just entities that could existin your Inventory but ended up being the backing data for so much more: quests, reward previews,slots, and subclasses. In practice, you will want to associate this data with &quot;live&quot; item datafrom a Bungie.Net Platform call: these definitions describe the item in generic, non-instancedterms: but an actual instance of an item can vary widely from these generic definitions.</p>
+<p>So much of what you see in Destiny is actually an Item used in a new and creative way. This is the definition for Items in Destiny, which started off as just entities that could exist in your Inventory but ended up being the backing data for so much more: quests, reward previews, slots, and subclasses. In practice, you will want to associate this data with &quot;live&quot; item data from a Bungie.Net Platform call: these definitions describe the item in generic, non-instanced terms: but an actual instance of an item can vary widely from these generic definitions.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> Items</li>
 </ul>
 <h2>Properties</h2>
@@ -105,102 +106,107 @@
 <tr>
 <td>secondaryIcon</td>
 <td>string</td>
-<td>A secondary icon associated with the item.  Currently this is used in very context specificapplications, such as Emblem Nameplates.</td>
+<td>A secondary icon associated with the item. Currently this is used in very context specific applications, such as Emblem Nameplates.</td>
 </tr>
 <tr>
 <td>secondaryOverlay</td>
 <td>string</td>
-<td>Pulled from the secondary icon, this is the &quot;secondary background&quot; of the secondaryicon.  Confusing?  Sure, that's why I call it &quot;overlay&quot; here: because as far as it'sbeen used thus far, it has been for an optional overlay image.  We'll see if that holds up,but at least for now it explains what this image is a bit better.</td>
+<td>Pulled from the secondary icon, this is the &quot;secondary background&quot; of the secondary icon. Confusing? Sure, that's why I call it &quot;overlay&quot; here: because as far as it's been used thus far, it has been for an optional overlay image. We'll see if that holds up, but at least for now it explains what this image is a bit better.</td>
 </tr>
 <tr>
 <td>secondarySpecial</td>
 <td>string</td>
-<td>Pulled from the Secondary Icon, this is the &quot;special&quot; background for the item.For Emblems, this is the background image used on the Details view: but it neednot be limited to that for other types of items.</td>
+<td>Pulled from the Secondary Icon, this is the &quot;special&quot; background for the item. For Emblems, this is the background image used on the Details view: but it need not be limited to that for other types of items.</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td><a href="../../docs/schemas/Destiny-Misc-DestinyColor">DestinyColor</a></td>
+<td>Sometimes, an item will have a background color. Most notably this occurs with Emblems, who use the Background Color for small character nameplates such as the &quot;friends&quot; view you see in-game. There are almost certainly other items that have background color as well, though I have not bothered to investigate what items have it nor what purposes they serve: use it as you will.</td>
 </tr>
 <tr>
 <td>screenshot</td>
 <td>string</td>
-<td>If we were able to acquire an in-game screenshot for the item, the path to that screenshotwill be returned here.  Note that not all items have screenshots: particularly not any non-equippableitems.</td>
+<td>If we were able to acquire an in-game screenshot for the item, the path to that screenshot will be returned here. Note that not all items have screenshots: particularly not any non-equippable items.</td>
 </tr>
 <tr>
 <td>itemTypeDisplayName</td>
 <td>string</td>
-<td>The localized title/name of the item's type.  This can be whatever the designers want, and has no guaranteeof consistency between items.</td>
+<td>The localized title/name of the item's type. This can be whatever the designers want, and has no guarantee of consistency between items.</td>
 </tr>
 <tr>
 <td>itemTypeAndTierDisplayName</td>
 <td>string</td>
-<td>It became a common enough pattern in our UI to show Item Type and Tier combined into a single localizedstring that I'm just going to go ahead and start pre-creating these for items.</td>
+<td>It became a common enough pattern in our UI to show Item Type and Tier combined into a single localized string that I'm just going to go ahead and start pre-creating these for items.</td>
 </tr>
 <tr>
 <td>displaySource</td>
 <td>string</td>
-<td>In theory, it is a localized string telling you about how you can find the item.I really wish this was more consistent.  Many times, it has nothing.  Sometimes, it's instead a more narrative-forwarddescription of the item.  Which is cool, and I wish all properties had that data, but it should really beits own property.</td>
+<td>In theory, it is a localized string telling you about how you can find the item. I really wish this was more consistent. Many times, it has nothing. Sometimes, it's instead a more narrative-forward description of the item. Which is cool, and I wish all properties had that data, but it should really be its own property.</td>
 </tr>
 <tr>
 <td>tooltipStyle</td>
 <td>string</td>
-<td>An identifier that the game UI uses to determine what type of tooltip to show for the item.  These have nocorresponding definitions that BNet can link to: so it'll be up to you to interpret and display your UI differentlyaccording to these styles (or ignore it).</td>
+<td>An identifier that the game UI uses to determine what type of tooltip to show for the item. These have no corresponding definitions that BNet can link to: so it'll be up to you to interpret and display your UI differently according to these styles (or ignore it).</td>
 </tr>
 <tr>
 <td>action</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionBlockDefinition">DestinyItemActionBlockDefinition</a>:Definition</td>
-<td>If the item can be &quot;used&quot;, this block will be non-null, and will have data related to the action performedwhen using the item.  (Guess what?  99% of the time, this action is &quot;dismantle&quot;.  Shocker)</td>
+<td>If the item can be &quot;used&quot;, this block will be non-null, and will have data related to the action performed when using the item. (Guess what? 99% of the time, this action is &quot;dismantle&quot;. Shocker)</td>
 </tr>
 <tr>
 <td>inventory</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemInventoryBlockDefinition">DestinyItemInventoryBlockDefinition</a>:Definition</td>
-<td>If this item can exist in an inventory, this block will be non-null.  In practice,every item that currently exists has one of these blocks.  But note that it is not necessarily guaranteed.</td>
+<td>If this item can exist in an inventory, this block will be non-null. In practice, every item that currently exists has one of these blocks. But note that it is not necessarily guaranteed.</td>
 </tr>
 <tr>
 <td>setData</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockDefinition">DestinyItemSetBlockDefinition</a>:Definition</td>
-<td>If this item is a quest, this block will be non-null.  In practice, I wish I had called this the Questblock, but at the time it wasn't clear to me whether it would end up being used for purposes other than quests.It will contain data about the steps in the quest, and mechanics we can use for displaying and tracking the quest.</td>
+<td>If this item is a quest, this block will be non-null. In practice, I wish I had called this the Quest block, but at the time it wasn't clear to me whether it would end up being used for purposes other than quests. It will contain data about the steps in the quest, and mechanics we can use for displaying and tracking the quest.</td>
 </tr>
 <tr>
 <td>stats</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemStatBlockDefinition">DestinyItemStatBlockDefinition</a>:Definition</td>
-<td>If this item can have stats (such as a weapon, armor, or vehicle), this block will be non-null andpopulated with the stats found on the item.</td>
+<td>If this item can have stats (such as a weapon, armor, or vehicle), this block will be non-null and populated with the stats found on the item.</td>
 </tr>
 <tr>
 <td>equippingBlock</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyEquippingBlockDefinition">DestinyEquippingBlockDefinition</a>:Definition</td>
-<td>If this item can be equipped, this block will be non-null and will be populated with the conditionsunder which it can be equipped.</td>
+<td>If this item can be equipped, this block will be non-null and will be populated with the conditions under which it can be equipped.</td>
 </tr>
 <tr>
 <td>translationBlock</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemTranslationBlockDefinition">DestinyItemTranslationBlockDefinition</a>:Definition</td>
-<td>If this item can be rendered, this block will be non-null and will be populated with renderinginformation.</td>
+<td>If this item can be rendered, this block will be non-null and will be populated with rendering information.</td>
 </tr>
 <tr>
 <td>preview</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemPreviewBlockDefinition">DestinyItemPreviewBlockDefinition</a>:Definition</td>
-<td>If this item can be Used or Acquired to gain other items (for instance, how Eververse Boxescan be consumed to get items from the box), this block will be non-null and will give summary informationfor the items that can be acquired.</td>
+<td>If this item can be Used or Acquired to gain other items (for instance, how Eververse Boxes can be consumed to get items from the box), this block will be non-null and will give summary information for the items that can be acquired.</td>
 </tr>
 <tr>
 <td>quality</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemQualityBlockDefinition">DestinyItemQualityBlockDefinition</a>:Definition</td>
-<td>If this item can have a level or stats, this block will be non-null and will be populatedwith default quality (item level, &quot;quality&quot;, and infusion) data.  See the block for more details, there'soften less upfront information in D2 so you'll want to be aware of how you use quality and item level onthe definition level now.</td>
+<td>If this item can have a level or stats, this block will be non-null and will be populated with default quality (item level, &quot;quality&quot;, and infusion) data. See the block for more details, there's often less upfront information in D2 so you'll want to be aware of how you use quality and item level on the definition level now.</td>
 </tr>
 <tr>
 <td>value</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemValueBlockDefinition">DestinyItemValueBlockDefinition</a>:Definition</td>
-<td>The conceptual &quot;Value&quot; of an item, if any was defined.  See the DestinyItemValueBlockDefinition for more details.</td>
+<td>The conceptual &quot;Value&quot; of an item, if any was defined. See the DestinyItemValueBlockDefinition for more details.</td>
 </tr>
 <tr>
 <td>sourceData</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSourceBlockDefinition">DestinyItemSourceBlockDefinition</a>:Definition</td>
-<td>If this item has a known source, this block will be non-null and populatedwith source information.  Unfortunately, at this time we are not generating sources: that is someaggressively manual work which we didn't have time for, and I'm hoping to get back to at some point in the future.</td>
+<td>If this item has a known source, this block will be non-null and populated with source information. Unfortunately, at this time we are not generating sources: that is some aggressively manual work which we didn't have time for, and I'm hoping to get back to at some point in the future.</td>
 </tr>
 <tr>
 <td>objectives</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition">DestinyItemObjectiveBlockDefinition</a>:Definition</td>
-<td>If this item has Objectives (extra tasks that can be accomplished related to the item... most frequentlywhen the item is a Quest Step and the Objectives need to be completed to move on to the next Quest Step),this block will be non-null and the objectives defined herein.</td>
+<td>If this item has Objectives (extra tasks that can be accomplished related to the item... most frequently when the item is a Quest Step and the Objectives need to be completed to move on to the next Quest Step), this block will be non-null and the objectives defined herein.</td>
 </tr>
 <tr>
 <td>plug</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemPlugDefinition">DestinyItemPlugDefinition</a>:Definition</td>
-<td>If this item <em>is</em> a Plug, this will be non-null and the info defined herein.See DestinyItemPlugDefinition for more information.</td>
+<td>If this item <em>is</em> a Plug, this will be non-null and the info defined herein. See DestinyItemPlugDefinition for more information.</td>
 </tr>
 <tr>
 <td>gearset</td>
@@ -210,12 +216,12 @@
 <tr>
 <td>sack</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSackBlockDefinition">DestinyItemSackBlockDefinition</a>:Definition</td>
-<td>If this item is a &quot;reward sack&quot; that can be opened to provide other items, this will be non-null andthe properties of the sack contained herein.</td>
+<td>If this item is a &quot;reward sack&quot; that can be opened to provide other items, this will be non-null and the properties of the sack contained herein.</td>
 </tr>
 <tr>
 <td>sockets</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketBlockDefinition">DestinyItemSocketBlockDefinition</a>:Definition</td>
-<td>If this item has any Sockets, this will be non-null and the individual sockets on the itemwill be defined herein.</td>
+<td>If this item has any Sockets, this will be non-null and the individual sockets on the item will be defined herein.</td>
 </tr>
 <tr>
 <td>summary</td>
@@ -225,37 +231,37 @@
 <tr>
 <td>talentGrid</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemTalentGridBlockDefinition">DestinyItemTalentGridBlockDefinition</a>:Definition</td>
-<td>If the item has a Talent Grid, this will be non-null and the properties of the grid defined herein.Note that, while many items still have talent grids, the only ones with meaningful Nodes still on themwill be Subclass/&quot;Build&quot; items.</td>
+<td>If the item has a Talent Grid, this will be non-null and the properties of the grid defined herein. Note that, while many items still have talent grids, the only ones with meaningful Nodes still on them will be Subclass/&quot;Build&quot; items.</td>
 </tr>
 <tr>
 <td>investmentStats</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition[]</td>
-<td>If the item has stats, this block will be defined.  It has the &quot;raw&quot; investment stats for the item.These investment stats don't take into account the ways that the items can spawn, nor do they takeinto account any Stat Group transformations.  I have retained them for debugging purposes, but Ido not know how useful people will find them.</td>
+<td>If the item has stats, this block will be defined. It has the &quot;raw&quot; investment stats for the item. These investment stats don't take into account the ways that the items can spawn, nor do they take into account any Stat Group transformations. I have retained them for debugging purposes, but I do not know how useful people will find them.</td>
 </tr>
 <tr>
 <td>perks</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemPerkEntryDefinition">DestinyItemPerkEntryDefinition</a>:Definition[]</td>
-<td>If the item has any <em>intrinsic</em> Perks (Perks that it will provide regardless of Sockets, Talent Grid,and other transitory state), they will be defined here.</td>
+<td>If the item has any <em>intrinsic</em> Perks (Perks that it will provide regardless of Sockets, Talent Grid, and other transitory state), they will be defined here.</td>
 </tr>
 <tr>
 <td>loreHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Lore-DestinyLoreDefinition">Destiny.Definitions.Lore.DestinyLoreDefinition</a>:integer:uint32:nullable</td>
-<td>If the item has any related Lore (DestinyLoreDefinition), this will be the hash identifier you can useto look up the lore definition.</td>
+<td>If the item has any related Lore (DestinyLoreDefinition), this will be the hash identifier you can use to look up the lore definition.</td>
 </tr>
 <tr>
 <td>summaryItemHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable</td>
-<td>There are times when the game will show you a &quot;summary/vague&quot; version of an item - such as a description of its typerepresented as a DestinyInventoryItemDefinition - rather than display the item itself. This happens sometimes when summarizing possible rewards in a tooltip.  This is the item displayed instead, ifit exists.</td>
+<td>There are times when the game will show you a &quot;summary/vague&quot; version of an item - such as a description of its type represented as a DestinyInventoryItemDefinition - rather than display the item itself. This happens sometimes when summarizing possible rewards in a tooltip. This is the item displayed instead, if it exists.</td>
 </tr>
 <tr>
 <td>animations</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Animations-DestinyAnimationReference">DestinyAnimationReference</a>:Definition[]</td>
-<td>If any animations were extracted from game content for this item, these will be the definitionsof those animations.</td>
+<td>If any animations were extracted from game content for this item, these will be the definitions of those animations.</td>
 </tr>
 <tr>
 <td>allowActions</td>
 <td>boolean</td>
-<td>BNet may forbid the execution of actions on this item via the API.  If that is occurring, allowActions will be set to false.</td>
+<td>BNet may forbid the execution of actions on this item via the API. If that is occurring, allowActions will be set to false.</td>
 </tr>
 <tr>
 <td>links</td>
@@ -265,32 +271,32 @@
 <tr>
 <td>nonTransferrable</td>
 <td>boolean</td>
-<td>The intrinsic transferability of an item. I hate that this boolean is negative - but there's a reason. Just because an item is intrinsically transferrable doesn't mean that it can be transferred,and we don't want to imply that this is the only source of that transferability.</td>
+<td>The intrinsic transferability of an item. I hate that this boolean is negative - but there's a reason. Just because an item is intrinsically transferrable doesn't mean that it can be transferred, and we don't want to imply that this is the only source of that transferability.</td>
 </tr>
 <tr>
 <td>itemCategoryHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]</td>
-<td>BNet attempts to make a more formal definition of item &quot;Categories&quot;, as defined by DestinyItemCategoryDefinition.  This is a list of all Categories that we were able toalgorithmically determine that this item is a member of.  (for instance, that it's a &quot;Weapon&quot;,that it's an &quot;Auto Rifle&quot;, etc...) The algorithm for these is, unfortunately, volatile.  If you believe you see a miscategorizeditem, please let us know on the Bungie API forums.</td>
+<td>BNet attempts to make a more formal definition of item &quot;Categories&quot;, as defined by DestinyItemCategoryDefinition. This is a list of all Categories that we were able to algorithmically determine that this item is a member of. (for instance, that it's a &quot;Weapon&quot;, that it's an &quot;Auto Rifle&quot;, etc...) The algorithm for these is, unfortunately, volatile. If you believe you see a miscategorized item, please let us know on the Bungie API forums.</td>
 </tr>
 <tr>
 <td>specialItemType</td>
 <td><a href="../../docs/schemas/Destiny-SpecialItemType">SpecialItemType</a>:Enum</td>
-<td>In Destiny 1, we identified some items as having particular categories that we'd like to know aboutfor various internal logic purposes.  These are defined in SpecialItemType, and while these daysthe itemCategoryHashes are the preferred way of identifying types, we have retained this enumfor its convenience.</td>
+<td>In Destiny 1, we identified some items as having particular categories that we'd like to know about for various internal logic purposes. These are defined in SpecialItemType, and while these days the itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience.</td>
 </tr>
 <tr>
 <td>itemType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyItemType">DestinyItemType</a>:Enum</td>
-<td>A value indicating the &quot;base&quot; the of the item.  This enum is a useful but dramatic oversimplificationof what it means for an item to have a &quot;Type&quot;.  Still, it's handy in many situations. itemCategoryHashes are the preferred way of identifying types, we have retained this enumfor its convenience.</td>
+<td>A value indicating the &quot;base&quot; the of the item. This enum is a useful but dramatic oversimplification of what it means for an item to have a &quot;Type&quot;. Still, it's handy in many situations. itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience.</td>
 </tr>
 <tr>
 <td>itemSubType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyItemSubType">DestinyItemSubType</a>:Enum</td>
-<td>A value indicating the &quot;sub-type&quot; of the item.  For instance, where an item might have anitemType value &quot;Weapon&quot;, this will be something more specific like &quot;Auto Rifle&quot;. itemCategoryHashes are the preferred way of identifying types, we have retained this enumfor its convenience.</td>
+<td>A value indicating the &quot;sub-type&quot; of the item. For instance, where an item might have an itemType value &quot;Weapon&quot;, this will be something more specific like &quot;Auto Rifle&quot;. itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience.</td>
 </tr>
 <tr>
 <td>classType</td>
 <td><a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>:Enum</td>
-<td>We run a similarly weak-sauce algorithm to try and determine whether an item is restricted to a specificclass.  If we find it to be restricted in such a way, we set this classType property to matchthe class' enumeration value so that users can easily identify class restricted items. If you see a mis-classed item, please inform the developers in the Bungie API forum.</td>
+<td>We run a similarly weak-sauce algorithm to try and determine whether an item is restricted to a specific class. If we find it to be restricted in such a way, we set this classType property to match the class' enumeration value so that users can easily identify class restricted items. If you see a mis-classed item, please inform the developers in the Bungie API forum.</td>
 </tr>
 <tr>
 <td>equippable</td>
@@ -300,27 +306,27 @@
 <tr>
 <td>damageTypeHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32[]</td>
-<td>Theoretically, an item can have many possible damage types.  In <em>practice</em>, this is not true,but just in case weapons start being made that have multiple (for instance, an item where a sockethas reusable plugs for every possible damage type that you can choose from freely), this fieldwill return all of the possible damage types that are available to the weapon by default.</td>
+<td>Theoretically, an item can have many possible damage types. In <em>practice</em>, this is not true, but just in case weapons start being made that have multiple (for instance, an item where a socket has reusable plugs for every possible damage type that you can choose from freely), this field will return all of the possible damage types that are available to the weapon by default.</td>
 </tr>
 <tr>
 <td>damageTypes</td>
 <td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum[]</td>
-<td>This is the list of all damage types that we know ahead of time the item can take on.Unfortunately, this does not preclude the possibility of something funky happeningto give the item a damage type that cannot be predicted beforehand: for example,if some designer decides to create arbitrary non-reusable plugs that cause damage typeto change. This damage type prediction will only use the following to determine potential damage types: - Intrinsic perks - Talent Node perks - Known, reusable plugs for sockets</td>
+<td>This is the list of all damage types that we know ahead of time the item can take on. Unfortunately, this does not preclude the possibility of something funky happening to give the item a damage type that cannot be predicted beforehand: for example, if some designer decides to create arbitrary non-reusable plugs that cause damage type to change. This damage type prediction will only use the following to determine potential damage types: - Intrinsic perks - Talent Node perks - Known, reusable plugs for sockets</td>
 </tr>
 <tr>
 <td>defaultDamageType</td>
 <td><a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum</td>
-<td>If the item has a damage type that could be considered to be default, it will be populated here. For various upsetting reasons, it's surprisingly cumbersome to figure this out.  I hope you're happy.</td>
+<td>If the item has a damage type that could be considered to be default, it will be populated here. For various upsetting reasons, it's surprisingly cumbersome to figure this out. I hope you're happy.</td>
 </tr>
 <tr>
 <td>defaultDamageTypeHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable</td>
-<td>Similar to defaultDamageType, but represented as the hash identifier for a DestinyDamageTypeDefinition. I will likely regret leaving in the enumeration versions of these properties, but for now they'revery convenient.</td>
+<td>Similar to defaultDamageType, but represented as the hash identifier for a DestinyDamageTypeDefinition. I will likely regret leaving in the enumeration versions of these properties, but for now they're very convenient.</td>
 </tr>
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -330,7 +336,7 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
@@ -353,6 +359,8 @@
     "secondaryOverlay": "",
     // Type: string
     "secondarySpecial": "",
+    // Type: <a href="../../docs/schemas/Destiny-Misc-DestinyColor">DestinyColor</a>
+    "backgroundColor": {},
     // Type: string
     "screenshot": "",
     // Type: string
@@ -364,424 +372,39 @@
     // Type: string
     "tooltipStyle": "",
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionBlockDefinition">DestinyItemActionBlockDefinition</a>:Definition
-    "action": {
-        // Type: string
-        "verbName": "",
-        // Type: string
-        "verbDescription": "",
-        // Type: boolean
-        "isPositive": false,
-        // Type: string
-        "overlayScreenName": "",
-        // Type: string
-        "overlayIcon": "",
-        // Type: integer:int32
-        "requiredCooldownSeconds": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>:Definition[]
-        "requiredItems": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemActionRequiredItemDefinition">DestinyItemActionRequiredItemDefinition</a>:Definition
-            {
-                // Type: integer:int32
-                "count": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "itemHash": 0,
-                // Type: boolean
-                "deleteOnAction": false
-            }
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>:Definition[]
-        "progressionRewards": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionRewardDefinition">DestinyProgressionRewardDefinition</a>:Definition
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionMappingDefinition">DestinyProgressionMappingDefinition</a>:Definition:integer:uint32
-                "progressionMappingHash": 0,
-                // Type: integer:int32
-                "amount": 0,
-                // Type: boolean
-                "applyThrottles": false
-            }
-        ],
-        // Type: string
-        "actionTypeLabel": "",
-        // Type: string
-        "requiredLocation": "",
-        // Type: integer:uint32
-        "requiredCooldownHash": 0,
-        // Type: boolean
-        "deleteOnAction": false,
-        // Type: boolean
-        "consumeEntireStack": false,
-        // Type: boolean
-        "useOnAcquire": false
-    },
+    "action": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInventoryBlockDefinition">DestinyItemInventoryBlockDefinition</a>:Definition
-    "inventory": {
-        // Type: string
-        "stackUniqueLabel": "",
-        // Type: integer:int32
-        "maxStackSize": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
-        "bucketTypeHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryBucketDefinition">Destiny.Definitions.DestinyInventoryBucketDefinition</a>:integer:uint32
-        "recoveryBucketTypeHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemTierTypeDefinition">Destiny.Definitions.Items.DestinyItemTierTypeDefinition</a>:integer:uint32
-        "tierTypeHash": 0,
-        // Type: boolean
-        "isInstanceItem": false,
-        // Type: string
-        "tierTypeName": "",
-        // Type: <a href="../../docs/schemas/Destiny-TierType">TierType</a>:Enum
-        "tierType": 0
-    },
+    "inventory": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockDefinition">DestinyItemSetBlockDefinition</a>:Definition
-    "setData": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">DestinyItemSetBlockEntryDefinition</a>:Definition[]
-        "itemList": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSetBlockEntryDefinition">DestinyItemSetBlockEntryDefinition</a>:Definition
-            {
-                // Type: integer:int32
-                "trackingValue": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "itemHash": 0
-            }
-        ],
-        // Type: boolean
-        "requireOrderedSetItemAdd": false,
-        // Type: boolean
-        "setIsFeatured": false,
-        // Type: string
-        "setType": ""
-    },
+    "setData": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemStatBlockDefinition">DestinyItemStatBlockDefinition</a>:Definition
-    "stats": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatGroupDefinition">Destiny.Definitions.DestinyStatGroupDefinition</a>:integer:uint32:nullable
-        "statGroupHash": 0,
-        // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
-        "stats": {
-            "0": {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
-                "statHash": 0,
-                // Type: integer:int32
-                "value": 0,
-                // Type: integer:int32
-                "minimum": 0,
-                // Type: integer:int32
-                "maximum": 0
-            }
-        },
-        // Type: boolean
-        "hasDisplayableStats": false,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
-        "primaryBaseStatHash": 0
-    },
+    "stats": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquippingBlockDefinition">DestinyEquippingBlockDefinition</a>:Definition
-    "equippingBlock": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
-        "gearsetItemHash": 0,
-        // Type: string
-        "uniqueLabel": "",
-        // Type: integer:uint32
-        "uniqueLabelHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyEquipmentSlotDefinition">DestinyEquipmentSlotDefinition</a>:Definition:integer:uint32
-        "equipmentSlotTypeHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-EquippingItemBlockAttributes">EquippingItemBlockAttributes</a>:Enum
-        "attributes": 0,
-        // Type: string[]
-        "displayStrings": [
-           // Type: string
-            ""
-        ]
-    },
+    "equippingBlock": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemTranslationBlockDefinition">DestinyItemTranslationBlockDefinition</a>:Definition
-    "translationBlock": {
-        // Type: string
-        "weaponPatternIdentifier": "",
-        // Type: integer:uint32
-        "weaponPatternHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
-        "defaultDyes": [
-           // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
-            {
-                // Type: integer:uint32
-                "channelHash": 0,
-                // Type: integer:uint32
-                "dyeHash": 0
-            }
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
-        "lockedDyes": [
-           // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
-            {
-                // Type: integer:uint32
-                "channelHash": 0,
-                // Type: integer:uint32
-                "dyeHash": 0
-            }
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>[]
-        "customDyes": [
-           // Type: <a href="../../docs/schemas/Destiny-DyeReference">DyeReference</a>
-            {
-                // Type: integer:uint32
-                "channelHash": 0,
-                // Type: integer:uint32
-                "dyeHash": 0
-            }
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyGearArtArrangementReference">DestinyGearArtArrangementReference</a>:Definition[]
-        "arrangements": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyGearArtArrangementReference">DestinyGearArtArrangementReference</a>:Definition
-            {
-                // Type: integer:uint32
-                "classHash": 0,
-                // Type: integer:uint32
-                "artArrangementHash": 0
-            }
-        ],
-        // Type: boolean
-        "hasGeometry": false
-    },
+    "translationBlock": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemPreviewBlockDefinition">DestinyItemPreviewBlockDefinition</a>:Definition
-    "preview": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
-        "previewVendorHash": 0,
-        // Type: string
-        "previewActionString": "",
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>:Definition[]
-        "derivedItemCategories": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemCategoryDefinition">DestinyDerivedItemCategoryDefinition</a>:Definition
-            {
-                // Type: string
-                "categoryDescription": "",
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition[]
-                "items": [
-                   // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyDerivedItemDefinition">DestinyDerivedItemDefinition</a>:Definition
-                    {
-                        // Type: integer:uint32:nullable
-                        "itemHash": 0,
-                        // Type: string
-                        "itemName": "",
-                        // Type: string
-                        "itemDetail": "",
-                        // Type: string
-                        "itemDescription": "",
-                        // Type: string
-                        "iconPath": "",
-                        // Type: integer:int32
-                        "vendorItemIndex": 0
-                    }
-                ]
-            }
-        ]
-    },
+    "preview": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemQualityBlockDefinition">DestinyItemQualityBlockDefinition</a>:Definition
-    "quality": {
-        // Type: integer:int32[]
-        "itemLevels": [
-           // Type: integer:int32
-            0
-        ],
-        // Type: integer:int32
-        "qualityLevel": 0,
-        // Type: string
-        "infusionCategoryName": "",
-        // Type: integer:uint32
-        "infusionCategoryHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition">Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition</a>:integer:uint32
-        "progressionLevelRequirementHash": 0
-    },
+    "quality": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemValueBlockDefinition">DestinyItemValueBlockDefinition</a>:Definition
-    "value": {
-        // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]
-        "itemValue": [
-           // Type: <a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "itemHash": 0,
-                // Type: integer:int64:nullable
-                "itemInstanceId": 0,
-                // Type: integer:int32
-                "quantity": 0
-            }
-        ],
-        // Type: string
-        "valueDescription": ""
-    },
+    "value": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSourceBlockDefinition">DestinyItemSourceBlockDefinition</a>:Definition
-    "sourceData": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">Destiny.Definitions.DestinyRewardSourceDefinition</a>:integer:uint32[]
-        "sourceHashes": [
-           // Type: integer:uint32
-            0
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">DestinyItemSourceDefinition</a>:Definition[]
-        "sources": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-Sources-DestinyItemSourceDefinition">DestinyItemSourceDefinition</a>:Definition
-            {
-                // Type: integer:int32
-                "level": 0,
-                // Type: integer:int32
-                "minQuality": 0,
-                // Type: integer:int32
-                "maxQuality": 0,
-                // Type: integer:int32
-                "minLevelRequired": 0,
-                // Type: integer:int32
-                "maxLevelRequired": 0,
-                // Type: Dictionary&lt;integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemStatDefinition">DestinyInventoryItemStatDefinition</a>:Definition&gt;
-                "computedStats": {
-                    "0": {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
-                        "statHash": 0,
-                        // Type: integer:int32
-                        "value": 0,
-                        // Type: integer:int32
-                        "minimum": 0,
-                        // Type: integer:int32
-                        "maximum": 0
-                    }
-                },
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyRewardSourceDefinition">Destiny.Definitions.DestinyRewardSourceDefinition</a>:integer:uint32[]
-                "sourceHashes": [
-                   // Type: integer:uint32
-                    0
-                ]
-            }
-        ],
-        // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
-        "exclusive": 0
-    },
+    "sourceData": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemObjectiveBlockDefinition">DestinyItemObjectiveBlockDefinition</a>:Definition
-    "objectives": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32[]
-        "objectiveHashes": [
-           // Type: integer:uint32
-            0
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32[]
-        "displayActivityHashes": [
-           // Type: integer:uint32
-            0
-        ],
-        // Type: boolean
-        "requireFullObjectiveCompletion": false,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-        "questlineItemHash": 0,
-        // Type: string
-        "narrative": "",
-        // Type: string
-        "objectiveVerbName": "",
-        // Type: string
-        "questTypeIdentifier": "",
-        // Type: integer:uint32
-        "questTypeHash": 0
-    },
+    "objectives": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyItemPlugDefinition">DestinyItemPlugDefinition</a>:Definition
-    "plug": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>:Definition[]
-        "insertionRules": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>:Definition
-            {
-                // Type: string
-                "failureMessage": ""
-            }
-        ],
-        // Type: string
-        "plugCategoryIdentifier": "",
-        // Type: integer:uint32
-        "plugCategoryHash": 0,
-        // Type: boolean
-        "onActionRecreateSelf": false,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32
-        "insertionMaterialRequirementHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-        "previewItemOverrideHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirementSetDefinition">DestinyMaterialRequirementSetDefinition</a>:Definition:integer:uint32
-        "enabledMaterialRequirementHash": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>:Definition[]
-        "enabledRules": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-Items-DestinyPlugRuleDefinition">DestinyPlugRuleDefinition</a>:Definition
-            {
-                // Type: string
-                "failureMessage": ""
-            }
-        ]
-    },
+    "plug": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemGearsetBlockDefinition">DestinyItemGearsetBlockDefinition</a>:Definition
-    "gearset": {
-        // Type: integer:int32
-        "trackingValueMax": 0,
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
-        "itemList": [
-           // Type: integer:uint32
-            0
-        ]
-    },
+    "gearset": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSackBlockDefinition">DestinyItemSackBlockDefinition</a>:Definition
-    "sack": {
-        // Type: string
-        "detailAction": "",
-        // Type: string
-        "openAction": "",
-        // Type: integer:int32
-        "selectItemCount": 0,
-        // Type: string
-        "vendorSackType": ""
-    },
+    "sack": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketBlockDefinition">DestinyItemSocketBlockDefinition</a>:Definition
-    "sockets": {
-        // Type: string
-        "detail": "",
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a>:Definition[]
-        "socketEntries": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryDefinition">DestinyItemSocketEntryDefinition</a>:Definition
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-Sockets-DestinySocketTypeDefinition">Destiny.Definitions.Sockets.DestinySocketTypeDefinition</a>:integer:uint32
-                "socketTypeHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "singleInitialItemHash": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition[]
-                "reusablePlugItems": [
-                   // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketEntryPlugItemDefinition">DestinyItemSocketEntryPlugItemDefinition</a>:Definition
-                    {
-                        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                        "plugItemHash": 0
-                    }
-                ]
-            }
-        ],
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition[]
-        "socketCategories": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSocketCategoryDefinition">DestinyItemSocketCategoryDefinition</a>:Definition:integer:uint32
-                "socketCategoryHash": 0,
-                // Type: integer:int32[]
-                "socketIndexes": [
-                   // Type: integer:int32
-                    0
-                ]
-            }
-        ]
-    },
+    "sockets": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemSummaryBlockDefinition">DestinyItemSummaryBlockDefinition</a>:Definition
-    "summary": {
-        // Type: integer:int32
-        "sortPriority": 0
-    },
+    "summary": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemTalentGridBlockDefinition">DestinyItemTalentGridBlockDefinition</a>:Definition
-    "talentGrid": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32
-        "talentGridHash": 0,
-        // Type: string
-        "itemDetailString": "",
-        // Type: string
-        "buildName": "",
-        // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
-        "hudDamageType": 0,
-        // Type: string
-        "hudIcon": ""
-    },
+    "talentGrid": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition[]
     "investmentStats": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemInvestmentStatDefinition">DestinyItemInvestmentStatDefinition</a>:Definition
@@ -838,13 +461,13 @@
         0
     ],
     // Type: <a href="../../docs/schemas/Destiny-SpecialItemType">SpecialItemType</a>:Enum
-    "specialItemType": 0,
+    "specialItemType": {},
     // Type: <a href="../../docs/schemas/Destiny-DestinyItemType">DestinyItemType</a>:Enum
-    "itemType": 0,
+    "itemType": {},
     // Type: <a href="../../docs/schemas/Destiny-DestinyItemSubType">DestinyItemSubType</a>:Enum
-    "itemSubType": 0,
+    "itemSubType": {},
     // Type: <a href="../../docs/schemas/Destiny-DestinyClass">DestinyClass</a>:Enum
-    "classType": 0,
+    "classType": {},
     // Type: boolean
     "equippable": false,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32[]
@@ -858,7 +481,7 @@
         0
     ],
     // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
-    "defaultDamageType": 0,
+    "defaultDamageType": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
     "defaultDamageTypeHash": 0,
     // Type: integer:uint32
@@ -889,6 +512,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

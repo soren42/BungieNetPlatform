@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,10 +81,11 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyActivityDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>The static data about Activities in Destiny 2. Note that an Activity must be combined with an ActivityMode to know - from a Gameplay perspective -what the user is &quot;Playing&quot;. In most PvE activities, this is fairly straightforward.  A Story Activity can only be played in the StoryActivity Mode. However, in PvP activities, the Activity alone only tells you the map being played, or the Playlist that the userchose to enter.  You'll need to know the Activity Mode they're playing to know that they're playing Mode X on Map Y. Activity Definitions tell a great deal of information about what <em>could</em> be relevant to a user: what rewards theycan earn, what challenges could be performed, what modifiers could be applied.  To figure out which of these propertiesis actually live, you'll need to combine the definition with &quot;Live&quot; data from one of the Destiny endpoints. Activities also have Activity Types, but unfortunately in Destiny 2 these are even less reliable of a source ofinformation than they were in Destiny 1.  I will be looking into ways to provide more reliable sources for type informationas time goes on, but for now we're going to have to deal with the limitations.  See DestinyActivityTypeDefinitionfor more information.</p>
+<p>The static data about Activities in Destiny 2. Note that an Activity must be combined with an ActivityMode to know - from a Gameplay perspective - what the user is &quot;Playing&quot;. In most PvE activities, this is fairly straightforward. A Story Activity can only be played in the Story Activity Mode. However, in PvP activities, the Activity alone only tells you the map being played, or the Playlist that the user chose to enter. You'll need to know the Activity Mode they're playing to know that they're playing Mode X on Map Y. Activity Definitions tell a great deal of information about what <em>could</em> be relevant to a user: what rewards they can earn, what challenges could be performed, what modifiers could be applied. To figure out which of these properties is actually live, you'll need to combine the definition with &quot;Live&quot; data from one of the Destiny endpoints. Activities also have Activity Types, but unfortunately in Destiny 2 these are even less reliable of a source of information than they were in Destiny 1. I will be looking into ways to provide more reliable sources for type information as time goes on, but for now we're going to have to deal with the limitations. See DestinyActivityTypeDefinition for more information.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Manifest Definition</li>
+<li><strong>Type:</strong> object</li>
 <li><strong>Mobile Manifest:</strong> Activities</li>
 </ul>
 <h2>Properties</h2>
@@ -105,12 +106,12 @@
 <tr>
 <td>releaseIcon</td>
 <td>string</td>
-<td>If the activity has an icon associated with a specific release (such as a DLC),this is the path to that release's icon.</td>
+<td>If the activity has an icon associated with a specific release (such as a DLC), this is the path to that release's icon.</td>
 </tr>
 <tr>
 <td>releaseTime</td>
 <td>integer:int32</td>
-<td>If the activity will not be visible until a specific and known time, this will bethe seconds since the Epoch when it will become visible.</td>
+<td>If the activity will not be visible until a specific and known time, this will be the seconds since the Epoch when it will become visible.</td>
 </tr>
 <tr>
 <td>activityLevel</td>
@@ -125,17 +126,17 @@
 <tr>
 <td>destinationHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32</td>
-<td>The hash identifier for the Destination on which this Activity is played.  Use it to look upthe DestinyDestinationDefinition for human readable info about the destination.A Destination can be thought of as a more specific location than a &quot;Place&quot;.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
+<td>The hash identifier for the Destination on which this Activity is played. Use it to look up the DestinyDestinationDefinition for human readable info about the destination. A Destination can be thought of as a more specific location than a &quot;Place&quot;. For instance, if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
 </tr>
 <tr>
 <td>placeHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyPlaceDefinition">Destiny.Definitions.DestinyPlaceDefinition</a>:integer:uint32</td>
-<td>The hash identifier for the &quot;Place&quot; on which this Activity is played.  Use it to look upthe DestinyPlaceDefinition for human readable info about the Place.A Place is the largest-scoped concept for location information.  For instance,if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
+<td>The hash identifier for the &quot;Place&quot; on which this Activity is played. Use it to look up the DestinyPlaceDefinition for human readable info about the Place. A Place is the largest-scoped concept for location information. For instance, if the &quot;Place&quot; is Earth, the &quot;Destination&quot; would be a specific city or region on Earth.</td>
 </tr>
 <tr>
 <td>activityTypeHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityTypeDefinition">Destiny.Definitions.DestinyActivityTypeDefinition</a>:integer:uint32</td>
-<td>The hash identifier for the Activity Type of this Activity.  You may use it to look upthe DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists andmany PVP Map Activities will map to generic Activity Types.  You'll have to use your knowledgeof the Activity Mode being played to get more specific information about what the user is playing.</td>
+<td>The hash identifier for the Activity Type of this Activity. You may use it to look up the DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists and many PVP Map Activities will map to generic Activity Types. You'll have to use your knowledge of the Activity Mode being played to get more specific information about what the user is playing.</td>
 </tr>
 <tr>
 <td>tier</td>
@@ -145,37 +146,42 @@
 <tr>
 <td>pgcrImage</td>
 <td>string</td>
-<td>When Activities are completed, we generate a &quot;Post-Game Carnage Report&quot;, or PGCR, with details aboutwhat happened in that activity (how many kills someone got, which team won, etc...)  We use this imageas the background when displaying PGCR information, and often use it when we refer to the Activity in general.</td>
+<td>When Activities are completed, we generate a &quot;Post-Game Carnage Report&quot;, or PGCR, with details about what happened in that activity (how many kills someone got, which team won, etc...) We use this image as the background when displaying PGCR information, and often use it when we refer to the Activity in general.</td>
 </tr>
 <tr>
 <td>rewards</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityRewardDefinition">DestinyActivityRewardDefinition</a>:Definition[]</td>
-<td>The expected possible rewards for the activity.  These rewards may or may not be accessible for an individual playerbased on their character state, the account state, and even the game's state overall.  But it is a useful referencefor possible rewards you can earn in the activity.  These match up to rewards displayed when you hover overthe Activity in the in-game Director, and often refer to Placeholder or &quot;Dummy&quot; items: items that tell you what you can earn in vague terms rather than what you'll specifically be earning (partly because the gamedoesn't even know what you'll earn specifically until you roll for it at the end)</td>
+<td>The expected possible rewards for the activity. These rewards may or may not be accessible for an individual player based on their character state, the account state, and even the game's state overall. But it is a useful reference for possible rewards you can earn in the activity. These match up to rewards displayed when you hover over the Activity in the in-game Director, and often refer to Placeholder or &quot;Dummy&quot; items: items that tell you what you can earn in vague terms rather than what you'll specifically be earning (partly because the game doesn't even know what you'll earn specifically until you roll for it at the end)</td>
 </tr>
 <tr>
 <td>modifiers</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModifierReferenceDefinition">DestinyActivityModifierReferenceDefinition</a>:Definition[]</td>
-<td>Activities can have Modifiers, as defined in DestinyActivityModifierDefinition.  These are referencesto the modifiers that <em>can</em> be applied to that activity, along with data that we use to determine ifthat modifier is actually active at any given point in time.</td>
+<td>Activities can have Modifiers, as defined in DestinyActivityModifierDefinition. These are references to the modifiers that <em>can</em> be applied to that activity, along with data that we use to determine if that modifier is actually active at any given point in time.</td>
 </tr>
 <tr>
 <td>isPlaylist</td>
 <td>boolean</td>
-<td>If True, this Activity is actually a Playlist that refers to multiple possible specific Activities and ActivityModes.  For instance, a Crucible Playlist may have references to multiple Activities (Maps) with multiple Activity Modes(specific PvP gameplay modes).  If this is true, refer to the playlistItems property for the specific entriesin the playlist.</td>
+<td>If True, this Activity is actually a Playlist that refers to multiple possible specific Activities and Activity Modes. For instance, a Crucible Playlist may have references to multiple Activities (Maps) with multiple Activity Modes (specific PvP gameplay modes). If this is true, refer to the playlistItems property for the specific entries in the playlist.</td>
 </tr>
 <tr>
 <td>challenges</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityChallengeDefinition">DestinyActivityChallengeDefinition</a>:Definition[]</td>
-<td>An activity can have many Challenges, of which any subset of them may be active for playat any given period of time.  This gives the information about the challenges and datathat we use to understand when they're active and what rewards they provide.Sadly, at the moment there's no central definition for challenges: much like &quot;Skulls&quot; werein Destiny 1, these are defined on individual activities and there can be many duplicates/near duplicatesacross the Destiny 2 ecosystem.  I have it in mind to centralize these in a future revision of the API, butwe are out of time.</td>
+<td>An activity can have many Challenges, of which any subset of them may be active for play at any given period of time. This gives the information about the challenges and data that we use to understand when they're active and what rewards they provide. Sadly, at the moment there's no central definition for challenges: much like &quot;Skulls&quot; were in Destiny 1, these are defined on individual activities and there can be many duplicates/near duplicates across the Destiny 2 ecosystem. I have it in mind to centralize these in a future revision of the API, but we are out of time.</td>
 </tr>
 <tr>
 <td>optionalUnlockStrings</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityUnlockStringDefinition">DestinyActivityUnlockStringDefinition</a>:Definition[]</td>
-<td>If there are status strings related to the activity and based on internal state of the game, account, or character,then this will be the definition of those strings and the states needed in order for the strings to be shown.</td>
+<td>If there are status strings related to the activity and based on internal state of the game, account, or character, then this will be the definition of those strings and the states needed in order for the strings to be shown.</td>
+</tr>
+<tr>
+<td>playlistItems</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityPlaylistItemDefinition">DestinyActivityPlaylistItemDefinition</a>:Definition[]</td>
+<td>Represents all of the possible activities that could be played in the Playlist, along with information that we can use to determine if they are active at the present time.</td>
 </tr>
 <tr>
 <td>activityGraphList</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>:Definition[]</td>
-<td>Unfortunately, in practice this is almost never populated.  In theory, this is supposed to tellwhich Activity Graph to show if you bring up the director while in this activity.</td>
+<td>Unfortunately, in practice this is almost never populated. In theory, this is supposed to tell which Activity Graph to show if you bring up the director while in this activity.</td>
 </tr>
 <tr>
 <td>matchmaking</td>
@@ -185,12 +191,27 @@
 <tr>
 <td>guidedGame</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGuidedBlockDefinition">DestinyActivityGuidedBlockDefinition</a>:Definition</td>
-<td>This block of data, if it exists, provides information about the guided game experience and restrictions for thisactivity.  If it doesn't exist, the game is not able to be played as a guided game.</td>
+<td>This block of data, if it exists, provides information about the guided game experience and restrictions for this activity. If it doesn't exist, the game is not able to be played as a guided game.</td>
 </tr>
 <tr>
-<td>activityModeHash</td>
-<td>integer:uint32</td>
-<td>The Activity Mode for this activity.  Note that if this is a playlist, the specific playlist entry chosenwill determine the actual activity mode that ends up being played.</td>
+<td>directActivityModeHash</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable</td>
+<td>If this activity had an activity mode directly defined on it, this will be the hash of that mode.</td>
+</tr>
+<tr>
+<td>directActivityModeType</td>
+<td>integer:int32:nullable</td>
+<td>If the activity had an activity mode directly defined on it, this will be the enum value of that mode.</td>
+</tr>
+<tr>
+<td>activityModeHashes</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32[]</td>
+<td>The hash identifiers for Activity Modes relevant to this activity.  Note that if this is a playlist, the specific playlist entry chosen will determine the actual activity modes that end up being relevant.</td>
+</tr>
+<tr>
+<td>activityModeTypes</td>
+<td><a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]</td>
+<td>The activity modes - if any - in enum form. Because we can't seem to escape the enums.</td>
 </tr>
 <tr>
 <td>isPvP</td>
@@ -200,7 +221,7 @@
 <tr>
 <td>hash</td>
 <td>integer:uint32</td>
-<td>The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
+<td>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -210,23 +231,14 @@
 <tr>
 <td>redacted</td>
 <td>boolean</td>
-<td>If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!</td>
+<td>If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!</td>
 </tr>
 </tbody>
 </table>
 <h2>Example</h2>
 <pre><code class="javascript">{
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: string
     "releaseIcon": "",
     // Type: integer:int32
@@ -291,6 +303,28 @@
             "displayString": ""
         }
     ],
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityPlaylistItemDefinition">DestinyActivityPlaylistItemDefinition</a>:Definition[]
+    "playlistItems": [
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityPlaylistItemDefinition">DestinyActivityPlaylistItemDefinition</a>:Definition
+        {
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
+            "activityHash": 0,
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable
+            "directActivityModeHash": 0,
+            // Type: integer:int32:nullable
+            "directActivityModeType": 0,
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32[]
+            "activityModeHashes": [
+               // Type: integer:uint32
+                0
+            ],
+            // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]
+            "activityModeTypes": [
+               // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
+                0
+            ]
+        }
+    ],
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>:Definition[]
     "activityGraphList": [
        // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGraphListEntryDefinition">DestinyActivityGraphListEntryDefinition</a>:Definition
@@ -300,29 +334,23 @@
         }
     ],
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityMatchmakingBlockDefinition">DestinyActivityMatchmakingBlockDefinition</a>:Definition
-    "matchmaking": {
-        // Type: boolean
-        "isMatchmade": false,
-        // Type: integer:int32
-        "minParty": 0,
-        // Type: integer:int32
-        "maxParty": 0,
-        // Type: integer:int32
-        "maxPlayers": 0,
-        // Type: boolean
-        "requiresGuardianOath": false
-    },
+    "matchmaking": {},
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityGuidedBlockDefinition">DestinyActivityGuidedBlockDefinition</a>:Definition
-    "guidedGame": {
-        // Type: integer:int32
-        "guidedMaxLobbySize": 0,
-        // Type: integer:int32
-        "guidedMinLobbySize": 0,
-        // Type: integer:int32
-        "guidedDisbandCount": 0
-    },
-    // Type: integer:uint32
-    "activityModeHash": 0,
+    "guidedGame": {},
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable
+    "directActivityModeHash": 0,
+    // Type: integer:int32:nullable
+    "directActivityModeType": 0,
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32[]
+    "activityModeHashes": [
+       // Type: integer:uint32
+        0
+    ],
+    // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum[]
+    "activityModeTypes": [
+       // Type: <a href="../../docs/schemas/Destiny-HistoricalStats-Definitions-DestinyActivityModeType">DestinyActivityModeType</a>:Enum
+        0
+    ],
     // Type: boolean
     "isPvP": false,
     // Type: integer:uint32
@@ -353,6 +381,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

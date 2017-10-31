@@ -221,6 +221,68 @@ angular.module('wiki-search', [])
 		});
 	})
 ;
+
+// Implement Wiki App Search
+angular.module('wiki-apps', [])
+	.controller('AppSearchCtrl', function($scope, $http) {
+		console.log('AppSearchCtrl');
+
+		$scope.apps = [];
+
+		function shuffleArray(array) {
+			for (var i = array.length - 1; i > 0; i--) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+			return array;
+		}
+
+		$http.get('/data/apps.json?'+new Date().getTime()).then(function(response) {
+			//console.log(response.data);
+			var apps = [];
+			for (var i=0; i<response.data.length; i++) {
+				var app = response.data[i];
+				if (app.hide) continue;
+				apps.push(app);
+			}
+			$scope.apps = shuffleArray(apps);
+			//$scope.apps = [response.data[0], response.data[0], response.data[0], response.data[0]];
+		});
+
+
+	})
+	.directive('appEntry', function() {
+		return {
+			scope: {
+				app: '=appEntry'
+			},
+			link: function(scope, elem) {
+				var app = scope.app;
+				console.log(app, elem);
+
+				var links = [];
+
+				function cleanUrl(url, domain) {
+					if (domain !== undefined && url.indexOf(domain) == -1) url = domain+'/'+url;
+					if (url.indexOf('http') == -1) url = 'http://'+url;
+					return url;
+				}
+
+				if (app.website) links.push('<a href="'+cleanUrl(app.website)+'" target="_blank"><span class="fa fa-globe"></span></a>');
+				if (app.twitter) links.push('<a href="'+cleanUrl(app.twitter, 'twitter.com')+'" target="_blank"><span class="fa fa-twitter"></span></a>');
+
+				elem.html(
+					'<div class="app-banner"'+(app.banner ? 'style="background-image: url(/images/'+app.banner+');"' : '')+'></div>'
+					+'<div class="app-tile-name">'+app.name+'</div>'
+					+'<div class="app-links">'+links.join('', links)+'</div>'
+				);
+			}
+		};
+	})
+;
+
 angular.bootstrap().invoke(function($http, $location) {
 	var rootPath = $location.absUrl().split('/docs')[0].replace(/\/+$/, '');
 	var jsonDatas = [
@@ -240,4 +302,6 @@ angular.bootstrap().invoke(function($http, $location) {
 			}
 		});
 	});
+
+	angular.bootstrap(angular.element('#wiki-apps'), ['wiki-apps']);
 });

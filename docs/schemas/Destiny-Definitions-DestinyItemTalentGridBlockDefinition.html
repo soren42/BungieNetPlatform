@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-DestinyItemTalentGridBlockDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>This defines information that can only come from a talent grid on an item.Items mostly have negligible talent grid data these days, but instanced items still retaingrids as a source for some of this common information. Builds/Subclasses are the only items left that still have talent grids with meaningfulNodes.</p>
+<p>This defines information that can only come from a talent grid on an item. Items mostly have negligible talent grid data these days, but instanced items still retain grids as a source for some of this common information. Builds/Subclasses are the only items left that still have talent grids with meaningful Nodes.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
@@ -105,12 +105,12 @@
 <tr>
 <td>itemDetailString</td>
 <td>string</td>
-<td>This is meant to be a subtitle for looking at the talent grid.In practice, somewhat frustratingly, this always merely says the localized wordfor &quot;Details&quot;.  Great.  Maybe it'll have more if talent grids ever get usedfor more than builds and subclasses again.</td>
+<td>This is meant to be a subtitle for looking at the talent grid. In practice, somewhat frustratingly, this always merely says the localized word for &quot;Details&quot;. Great. Maybe it'll have more if talent grids ever get used for more than builds and subclasses again.</td>
 </tr>
 <tr>
 <td>buildName</td>
 <td>string</td>
-<td>A shortcut string identifier for the &quot;build&quot; in question, if this talent gridhas an associated build.  Doesn't map to anything we can expose at the moment.</td>
+<td>A shortcut string identifier for the &quot;build&quot; in question, if this talent grid has an associated build. Doesn't map to anything we can expose at the moment.</td>
 </tr>
 <tr>
 <td>hudDamageType</td>
@@ -120,7 +120,7 @@
 <tr>
 <td>hudIcon</td>
 <td>string</td>
-<td>If the talent grid has a special icon that's shown in the game UI (like builds, funny that),this is the identifier for that icon.Sadly, we don't actually get that icon right now.  I'll be looking to replace thiswith a path to the actual icon itself.</td>
+<td>If the talent grid has a special icon that's shown in the game UI (like builds, funny that), this is the identifier for that icon. Sadly, we don't actually get that icon right now. I'll be looking to replace this with a path to the actual icon itself.</td>
 </tr>
 </tbody>
 </table>
@@ -133,7 +133,7 @@
     // Type: string
     "buildName": "",
     // Type: <a href="../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
-    "hudDamageType": 0,
+    "hudDamageType": {},
     // Type: string
     "hudIcon": ""
 }
@@ -158,6 +158,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>

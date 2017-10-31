@@ -11,14 +11,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1504838745">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestDefinition.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone.Even just typing this description, I already regret it.</p>
+<p>Any data we need to figure out whether this Quest Item is the currently active one for the conceptual Milestone. Even just typing this description, I already regret it.</p>
 <h2>Schema</h2>
 <ul>
 <li><strong>Schema Type:</strong> Definition</li>
@@ -100,27 +100,27 @@
 <tr>
 <td>questItemHash</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32</td>
-<td>The item representing this Milestone quest.  Use this hash to look up the DestinyInventoryItemDefinitionfor the quest to find its steps and human readable data.</td>
+<td>The item representing this Milestone quest. Use this hash to look up the DestinyInventoryItemDefinition for the quest to find its steps and human readable data.</td>
 </tr>
 <tr>
 <td>displayProperties</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition</td>
-<td>The individual quests may have different definitions from the overall milestone: if there's a specific activequest, use these displayProperties instead of that of the overall DestinyMilestoneDefinition.</td>
+<td>The individual quests may have different definitions from the overall milestone: if there's a specific active quest, use these displayProperties instead of that of the overall DestinyMilestoneDefinition.</td>
 </tr>
 <tr>
 <td>overrideImage</td>
 <td>string</td>
-<td>If populated, this image can be shown instead of the generic milestone's image when this quest is live,or it can be used to show a background image for the quest itself that differs from that of the Activityor the Milestone.</td>
+<td>If populated, this image can be shown instead of the generic milestone's image when this quest is live, or it can be used to show a background image for the quest itself that differs from that of the Activity or the Milestone.</td>
 </tr>
 <tr>
 <td>questRewards</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a>:Definition</td>
-<td>The rewards you will get for completing this quest, as best as we could extract them fromour data.  Sometimes, it'll be a decent amount of data.  Sometimes, it's going to be sucky.  Sorry.</td>
+<td>The rewards you will get for completing this quest, as best as we could extract them from our data. Sometimes, it'll be a decent amount of data. Sometimes, it's going to be sucky. Sorry.</td>
 </tr>
 <tr>
 <td>activities</td>
 <td>Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a>:Definition&gt;</td>
-<td>The full set of all possible &quot;conceptual activities&quot; that are related to this Milestone.Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities.Keyed by the Conceptual Activity Hash.  Use the key to look up DestinyActivityDefinition.</td>
+<td>The full set of all possible &quot;conceptual activities&quot; that are related to this Milestone. Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities. Keyed by the Conceptual Activity Hash. Use the key to look up DestinyActivityDefinition.</td>
 </tr>
 </tbody>
 </table>
@@ -129,37 +129,11 @@
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
     "questItemHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition">DestinyDisplayPropertiesDefinition</a>:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: string
     "overrideImage": "",
     // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardsDefinition">DestinyMilestoneQuestRewardsDefinition</a>:Definition
-    "questRewards": {
-        // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>:Definition[]
-        "items": [
-           // Type: <a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneQuestRewardItem">DestinyMilestoneQuestRewardItem</a>:Definition
-            {
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32:nullable
-                "vendorHash": 0,
-                // Type: integer:int32:nullable
-                "vendorItemIndex": 0,
-                // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
-                "itemHash": 0,
-                // Type: integer:int64:nullable
-                "itemInstanceId": 0,
-                // Type: integer:int32
-                "quantity": 0
-            }
-        ]
-    },
+    "questRewards": {},
     // Type: Dictionary&lt;<a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32,<a href="../../docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneActivityDefinition">DestinyMilestoneActivityDefinition</a>:Definition&gt;
     "activities": {
         "0": {
@@ -198,6 +172,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1508320654"></script>
+<script src="../../js/main.js?1509424173"></script>
 </body>
 </html>
