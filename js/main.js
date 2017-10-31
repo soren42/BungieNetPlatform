@@ -224,8 +224,10 @@ angular.module('wiki-search', [])
 
 // Implement Wiki App Search
 angular.module('wiki-apps', [])
-	.controller('AppSearchCtrl', function($scope, $http) {
+	.controller('AppSearchCtrl', function($scope, $http, $location) {
 		console.log('AppSearchCtrl');
+
+		var rootPath = $location.absUrl().split('/docs')[0].replace(/\/+$/, '');
 
 		$scope.apps = [];
 
@@ -239,7 +241,7 @@ angular.module('wiki-apps', [])
 			return array;
 		}
 
-		$http.get('/data/apps.json?'+new Date().getTime()).then(function(response) {
+		$http.get(rootPath+'/data/apps.json?'+new Date().getTime()).then(function(response) {
 			//console.log(response.data);
 			var apps = [];
 			for (var i=0; i<response.data.length; i++) {
