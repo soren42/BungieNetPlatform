@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Properties of a DestinyInventoryItemDefinition that store all of the informationwe were able to discern about how the item spawns, and where you can find the item. Items will have many of these sources, one per level at which it spawns, to tryand give more granular data about where items spawn for specific level ranges.
+Properties of a DestinyInventoryItemDefinition that store all of the information we were able to discern about how the item spawns, and where you can find the item. Items will have many of these sources, one per level at which it spawns, to try and give more granular data about where items spawn for specific level ranges.
 
 ## Schema
 * **Schema Type:** Definition
@@ -10,11 +10,11 @@ Properties of a DestinyInventoryItemDefinition that store all of the information
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-level | integer:int32 | The level at which the item spawns.  Essentially the Primary Keyfor this source data: there will be multiple of these source entries per item thathas source data, grouped by the level at which the item spawns.
-minQuality | integer:int32 | The minimum Quality at which the item spawns for this level.  Examine DestinyInventoryItemDefinitionfor more information about what Quality means.  Just don't ask Phaedrus about it,he'll never stop talking and you'll have to write a book about it.
+level | integer:int32 | The level at which the item spawns. Essentially the Primary Key for this source data: there will be multiple of these source entries per item that has source data, grouped by the level at which the item spawns.
+minQuality | integer:int32 | The minimum Quality at which the item spawns for this level. Examine DestinyInventoryItemDefinition for more information about what Quality means. Just don't ask Phaedrus about it, he'll never stop talking and you'll have to write a book about it.
 maxQuality | integer:int32 | The maximum quality at which the item spawns for this level.
-minLevelRequired | integer:int32 | The minimum Character Level required for equipping the item when the item spawns at the item leveldefined on this DestinyItemSourceDefinition, as far as we saw in our processing.
-maxLevelRequired | integer:int32 | The maximum Character Level required for equipping the item when the item spawns at the item leveldefined on this DestinyItemSourceDefinition, as far as we saw in our processing.
+minLevelRequired | integer:int32 | The minimum Character Level required for equipping the item when the item spawns at the item level defined on this DestinyItemSourceDefinition, as far as we saw in our processing.
+maxLevelRequired | integer:int32 | The maximum Character Level required for equipping the item when the item spawns at the item level defined on this DestinyItemSourceDefinition, as far as we saw in our processing.
 computedStats | Dictionary&lt;integer:uint32,[[DestinyInventoryItemStatDefinition|Destiny-Definitions-DestinyInventoryItemStatDefinition]]:Definition&gt; | The stats computed for this level/quality range.
 sourceHashes | [[Destiny.Definitions.DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]]:integer:uint32[] | The DestinyRewardSourceDefinitions found that can spawn the item at this level.
 

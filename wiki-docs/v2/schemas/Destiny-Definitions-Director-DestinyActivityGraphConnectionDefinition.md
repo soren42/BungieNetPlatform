@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Nodes on a graph can be visually connected: this appears to be the information about which nodes to link.It appears to lack more detailed information, such as the path for that linking.
+Nodes on a graph can be visually connected: this appears to be the information about which nodes to link. It appears to lack more detailed information, such as the path for that linking.
 
 ## Schema
 * **Schema Type:** Definition

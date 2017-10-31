@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Equip a list of items by itemInstanceIds.  You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.  Any items not found on your character will be ignored.
+Equip a list of items by itemInstanceIds. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Any items not found on your character will be ignored.
 
-* **URI:** [[/Destiny2/Actions/Items/EquipItems/|https://bungie.net/Platform/Destiny2/Actions/Items/EquipItems/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Actions/Items/EquipItems/|https://www.bungie.net/Platform/Destiny2/Actions/Items/EquipItems/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** MoveEquipDestinyItems
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Destiny2/Actions/Items/EquipItems/
+POST https://www.bungie.net/Platform/Destiny2/Actions/Items/EquipItems/
 ```javascript
 {
     // Type: integer:int64[]
@@ -49,7 +49,7 @@ PlatformErrorCode: 200
                 // Type: integer:int64
                 "itemInstanceId": 0,
                 // Type: [[PlatformErrorCodes|Exceptions-PlatformErrorCodes]]:Enum
-                "equipStatus": 0
+                "equipStatus": {}
             }
         ]
     },

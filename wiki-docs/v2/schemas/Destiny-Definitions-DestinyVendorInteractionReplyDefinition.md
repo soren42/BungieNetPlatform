@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-When the interaction is replied to, Reward sites will fire and items potentially selected based onwhether the given unlock expression is TRUE. You can potentially choose one from multiple replies when replying to an interaction: this is howyou get either/or rewards from vendors.
+When the interaction is replied to, Reward sites will fire and items potentially selected based on whether the given unlock expression is TRUE. You can potentially choose one from multiple replies when replying to an interaction: this is how you get either/or rewards from vendors.
 
 ## Schema
 * **Schema Type:** Definition
@@ -18,11 +18,11 @@ replyType | [[DestinyVendorReplyType|Destiny-DestinyVendorReplyType]]:Enum | An 
 ```javascript
 {
     // Type: [[DestinyVendorInteractionRewardSelection|Destiny-DestinyVendorInteractionRewardSelection]]:Enum
-    "itemRewardsSelection": 0,
+    "itemRewardsSelection": {},
     // Type: string
     "reply": "",
     // Type: [[DestinyVendorReplyType|Destiny-DestinyVendorReplyType]]:Enum
-    "replyType": 0
+    "replyType": {}
 }
 
 ```

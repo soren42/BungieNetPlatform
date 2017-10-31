@@ -3,8 +3,8 @@
 ## Info
 Gets the post Id for the given content item's comments, if it exists.
 
-* **URI:** [[/Forum/GetTopicForContent/{contentId}/|https://bungie.net/Platform/Forum/GetTopicForContent/{contentId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/GetTopicForContent/{contentId}/|https://www.bungie.net/Platform/Forum/GetTopicForContent/{contentId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Forum/GetTopicForContent/{contentId}/
+GET https://www.bungie.net/Platform/Forum/GetTopicForContent/{contentId}/
 
 ### Response
 PlatformErrorCode: 200

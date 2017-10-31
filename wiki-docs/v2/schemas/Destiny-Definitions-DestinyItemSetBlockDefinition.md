@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Primarily for Quests, this is the definition of properties related to the item if it is a questand its various quest steps.
+Primarily for Quests, this is the definition of properties related to the item if it is a quest and its various quest steps.
 
 ## Schema
 * **Schema Type:** Definition
@@ -11,7 +11,7 @@ Primarily for Quests, this is the definition of properties related to the item i
 Name | Type | Description
 ---- | ---- | -----------
 itemList | [[DestinyItemSetBlockEntryDefinition|Destiny-Definitions-DestinyItemSetBlockEntryDefinition]]:Definition[] | A collection of hashes of set items, for items such as Quest Metadata items that possess this data.
-requireOrderedSetItemAdd | boolean | If true, items in the set can only be added in increasing order, and adding an item will remove any previous item.For Quests, this is by necessity true.  Only one quest step is present at a time, and previous steps are removedas you advance in the quest.
+requireOrderedSetItemAdd | boolean | If true, items in the set can only be added in increasing order, and adding an item will remove any previous item. For Quests, this is by necessity true. Only one quest step is present at a time, and previous steps are removed as you advance in the quest.
 setIsFeatured | boolean | If true, the UI should treat this quest as &quot;featured&quot;
 setType | string | A string identifier we can use to attempt to identify the category of the Quest.
 

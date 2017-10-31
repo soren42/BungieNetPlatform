@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Plugs are non-instanced items that can provide Stat and Perk benefits when socketed into an instanced item.Items have Sockets, and Plugs are inserted into Sockets. This component finds all items that are considered &quot;Plugs&quot; in your inventory, and return information aboutthe plug aside from any specific Socket into which it could be inserted.
+Plugs are non-instanced items that can provide Stat and Perk benefits when socketed into an instanced item. Items have Sockets, and Plugs are inserted into Sockets. This component finds all items that are considered &quot;Plugs&quot; in your inventory, and return information about the plug aside from any specific Socket into which it could be inserted.
 
 ## Schema
 * **Schema Type:** Class

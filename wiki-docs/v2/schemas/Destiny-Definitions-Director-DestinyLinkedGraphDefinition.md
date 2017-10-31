@@ -27,7 +27,7 @@ overview | string |
     // Type: [[DestinyUnlockExpressionDefinition|Destiny-Definitions-DestinyUnlockExpressionDefinition]]:Definition
     "unlockExpression": {
         // Type: [[DestinyGatingScope|Destiny-DestinyGatingScope]]:Enum
-        "scope": 0
+        "scope": {}
     },
     // Type: integer:uint32
     "linkedGraphId": 0,

@@ -20,7 +20,7 @@ minimumAge | integer:int32 |
 ratingImagePath | string | 
 author | [[GeneralUser|User-GeneralUser]] | 
 autoEnglishPropertyFallback | boolean | 
-properties | Dictionary&lt;string,object&gt; | Firehose content is really a collection of metadata and &quot;properties&quot;, which arethe potentially-but-not-strictly localizable data that comprises the meat ofwhatever content is being shown. As Cole Porter would have crooned, &quot;Anything Goes&quot; with Firehose properties.They are most often strings, but they can theoretically be anything.  They are JSONencoded, and could be JSON structures, simple strings, numbers etc...  The Content Typeof the item (cType) will describe the properties, and thus how they ought to be deserialized.
+properties | Dictionary&lt;string,object&gt; | Firehose content is really a collection of metadata and &quot;properties&quot;, which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown. As Cole Porter would have crooned, &quot;Anything Goes&quot; with Firehose properties. They are most often strings, but they can theoretically be anything. They are JSON encoded, and could be JSON structures, simple strings, numbers etc... The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.
 representations | [[ContentRepresentation|Content-ContentRepresentation]][] | 
 tags | string[] | 
 commentSummary | [[CommentSummary|Content-CommentSummary]] | 

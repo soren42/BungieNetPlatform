@@ -10,7 +10,7 @@
 Name | Type | Description
 ---- | ---- | -----------
 needsAck | boolean | Indicates the related item has not been acknowledged.
-ackId | string | Identifier to use when acknowledging the related item.[category]:[entityId]:[targetId]
+ackId | string | Identifier to use when acknowledging the related item. [category]:[entityId]:[targetId]
 
 ## Example
 ```javascript

@@ -120,11 +120,11 @@ clanInfo | [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]
         // Type: boolean
         "updateCulturePermissionOverride": false,
         // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-        "hostGuidedGamePermissionOverride": 0,
+        "hostGuidedGamePermissionOverride": {},
         // Type: boolean
         "updateBannerPermissionOverride": false,
         // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-        "joinLevel": 0
+        "joinLevel": {}
     },
     // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
     "clanInfo": {
@@ -172,7 +172,8 @@ clanInfo | [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]
             // Type: integer:uint32
             "gonfalonDetailId": 0,
             // Type: integer:uint32
-            "gonfalonDetailColorId": 0
+            "gonfalonDetailColorId": 0,
+            // Type: [[ClanBanner|GroupsV2-ClanBanner]]
         }
     }
 }

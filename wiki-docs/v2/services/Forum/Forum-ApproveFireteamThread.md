@@ -3,8 +3,8 @@
 ## Info
 Allows the owner of a fireteam thread to approve all joined members and start a private message conversation with them.
 
-* **URI:** [[/Forum/Recruit/Approve/{topicId}/|https://bungie.net/Platform/Forum/Recruit/Approve/{topicId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/Recruit/Approve/{topicId}/|https://www.bungie.net/Platform/Forum/Recruit/Approve/{topicId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** WriteGroups, BnetWrite
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Forum/Recruit/Approve/{topicId}/
+POST https://www.bungie.net/Platform/Forum/Recruit/Approve/{topicId}/
 
 ### Response
 PlatformErrorCode: 200

@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-A minimal view of a character's equipped items, for the purpose of rendering a summaryscreen or showing the character in 3D.
+A minimal view of a character's equipped items, for the purpose of rendering a summary screen or showing the character in 3D.
 
 ## Schema
 * **Schema Type:** Class

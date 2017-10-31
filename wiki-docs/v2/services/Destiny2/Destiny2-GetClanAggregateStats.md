@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gets aggregated stats for a clan using the same categories as the clan leaderboards.  PREVIEW: This endpoint is still in beta, and may experience rough edges.  The schema is in final form, but there may be bugs that prevent desirable operation.
+Gets aggregated stats for a clan using the same categories as the clan leaderboards. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 
-* **URI:** [[/Destiny2/Stats/AggregateClanStats/{groupId}/|https://bungie.net/Platform/Destiny2/Stats/AggregateClanStats/{groupId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Stats/AggregateClanStats/{groupId}/|https://www.bungie.net/Platform/Destiny2/Stats/AggregateClanStats/{groupId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -23,7 +23,7 @@ modes | string | No | List of game modes for which to get leaderboards. See the 
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Stats/AggregateClanStats/{groupId}/
+GET https://www.bungie.net/Platform/Destiny2/Stats/AggregateClanStats/{groupId}/
 
 ### Response
 PlatformErrorCode: 200
@@ -34,35 +34,11 @@ PlatformErrorCode: 200
        // Type: [[DestinyClanAggregateStat|Destiny-HistoricalStats-DestinyClanAggregateStat]]
         {
             // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-            "mode": 0,
+            "mode": {},
             // Type: string
             "statId": "",
             // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-            "value": {
-                // Type: string
-                "statId": "",
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "basic": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "pga": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "weighted": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                }
-            }
+            "value": {}
         }
     ],
     // Type: [[PlatformErrorCodes|Exceptions-PlatformErrorCodes]]:Enum

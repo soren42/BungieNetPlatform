@@ -4,6 +4,7 @@
 
 ## Schema
 * **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

@@ -10,7 +10,7 @@
 Name | Type | Description
 ---- | ---- | -----------
 maximumMembers | integer:int32 | 
-maximumMembershipsOfGroupType | integer:int32 | Maximum number of groups of this type a typical membership may join. For example,a user may join about 50 General groups with their Bungie.net account.  They mayjoin one clan per Destiny membership.
+maximumMembershipsOfGroupType | integer:int32 | Maximum number of groups of this type a typical membership may join. For example, a user may join about 50 General groups with their Bungie.net account. They may join one clan per Destiny membership.
 capabilities | [[Capabilities|GroupsV2-Capabilities]]:Enum | 
 membershipTypes | [[BungieMembershipType|BungieMembershipType]]:Enum[] | 
 invitePermissionOverride | boolean | Minimum Member Level allowed to invite new members to group Always Allowed: Founder, Acting Founder True means admins have this power, false means they don't Default is false for clans, true for groups.
@@ -38,11 +38,11 @@ joinLevel | [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum | Le
     // Type: boolean
     "updateCulturePermissionOverride": false,
     // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-    "hostGuidedGamePermissionOverride": 0,
+    "hostGuidedGamePermissionOverride": {},
     // Type: boolean
     "updateBannerPermissionOverride": false,
     // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-    "joinLevel": 0
+    "joinLevel": {}
 }
 
 ```

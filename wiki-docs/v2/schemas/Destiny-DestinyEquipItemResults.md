@@ -22,7 +22,7 @@ equipResults | [[DestinyEquipItemResult|Destiny-DestinyEquipItemResult]][] |
             // Type: integer:int64
             "itemInstanceId": 0,
             // Type: [[PlatformErrorCodes|Exceptions-PlatformErrorCodes]]:Enum
-            "equipStatus": 0
+            "equipStatus": {}
         }
     ]
 }

@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Items can have objectives and progression.  When you request this block, you will obtaininformation about any Objectives and progression tied to this item.
+Items can have objectives and progression. When you request this block, you will obtain information about any Objectives and progression tied to this item.
 
 ## Schema
 * **Schema Type:** Class
@@ -11,7 +11,7 @@ Items can have objectives and progression.  When you request this block, you wil
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-objectives | [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][] | If the item has a hard association with objectives, your progress on themwill be defined here. Objectives are our standard way to describe a series of tasks that have to be completed for a reward.
+objectives | [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][] | If the item has a hard association with objectives, your progress on them will be defined here. Objectives are our standard way to describe a series of tasks that have to be completed for a reward.
 
 ## Example
 ```javascript

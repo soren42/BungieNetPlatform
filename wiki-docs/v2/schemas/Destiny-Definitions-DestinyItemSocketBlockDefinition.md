@@ -10,9 +10,9 @@ If defined, the item has at least one socket.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-detail | string | This was supposed to be a string that would give per-item details about sockets.In practice, it turns out that all this ever has is the localized word &quot;details&quot;.... that's lame, but perhaps it will become something cool in the future.
-socketEntries | [[DestinyItemSocketEntryDefinition|Destiny-Definitions-DestinyItemSocketEntryDefinition]]:Definition[] | Each socket on an item is defined here.  Check inside for more info.
-socketCategories | [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]]:Definition[] | A convenience property, that refers to the sockets in the &quot;sockets&quot; property, pre-groupedby category and ordered in the manner that they should be grouped in the UI.You could form this yourself with the existing data, but why would you want to?  Enjoy life man.
+detail | string | This was supposed to be a string that would give per-item details about sockets. In practice, it turns out that all this ever has is the localized word &quot;details&quot;. ... that's lame, but perhaps it will become something cool in the future.
+socketEntries | [[DestinyItemSocketEntryDefinition|Destiny-Definitions-DestinyItemSocketEntryDefinition]]:Definition[] | Each socket on an item is defined here. Check inside for more info.
+socketCategories | [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]]:Definition[] | A convenience property, that refers to the sockets in the &quot;sockets&quot; property, pre-grouped by category and ordered in the manner that they should be grouped in the UI. You could form this yourself with the existing data, but why would you want to? Enjoy life man.
 
 ## Example
 ```javascript
@@ -41,7 +41,7 @@ socketCategories | [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-Des
     "socketCategories": [
        // Type: [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]]:Definition
         {
-            // Type: [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]]:Definition:integer:uint32
+            // Type: [[Destiny.Definitions.Sockets.DestinySocketCategoryDefinition|Destiny-Definitions-Sockets-DestinySocketCategoryDefinition]]:integer:uint32
             "socketCategoryHash": 0,
             // Type: integer:int32[]
             "socketIndexes": [

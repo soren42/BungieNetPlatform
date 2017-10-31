@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Some Objectives provide perks, generally as part of providing some kind of interesting modifierfor a Challenge or Quest.  This indicates when the Perk is granted.
+Some Objectives provide perks, generally as part of providing some kind of interesting modifier for a Challenge or Quest. This indicates when the Perk is granted.
 
 ## Schema
 * **Schema Type:** Enum

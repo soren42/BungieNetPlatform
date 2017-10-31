@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Represents a category of &quot;summary&quot; rewards that can be earned for the Milestone regardless ofspecific quest rewards that can be earned.
+Represents a category of &quot;summary&quot; rewards that can be earned for the Milestone regardless of specific quest rewards that can be earned.
 
 ## Schema
 * **Schema Type:** Class
@@ -10,7 +10,7 @@ Represents a category of &quot;summary&quot; rewards that can be earned for the 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-rewardCategoryHash | integer:uint32 | Look up the relevant DestinyMilestoneDefinition, and then use rewardCategoryHash to look up thecategory info in DestinyMilestoneDefinition.rewards.
+rewardCategoryHash | integer:uint32 | Look up the relevant DestinyMilestoneDefinition, and then use rewardCategoryHash to look up the category info in DestinyMilestoneDefinition.rewards.
 entries | [[DestinyMilestoneRewardEntry|Destiny-Milestones-DestinyMilestoneRewardEntry]][] | The individual reward entries for this category, and their status.
 
 ## Example

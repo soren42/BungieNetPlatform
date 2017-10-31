@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-This appears to be information used when rendering rewards.  We don't currently use it on BNet.
+This appears to be information used when rendering rewards. We don't currently use it on BNet.
 
 ## Schema
 * **Schema Type:** Definition
@@ -10,7 +10,7 @@ This appears to be information used when rendering rewards.  We don't currently 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-sortPriority | integer:int32 | Apparently when rendering an item in a reward, this should be used as a sort priority.We're not doing it presently.
+sortPriority | integer:int32 | Apparently when rendering an item in a reward, this should be used as a sort priority. We're not doing it presently.
 
 ## Example
 ```javascript

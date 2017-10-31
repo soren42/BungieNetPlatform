@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-An enumeration representing the potential difficulty levels of an activity.Their names are... more qualitative than quantitative.
+An enumeration representing the potential difficulty levels of an activity. Their names are... more qualitative than quantitative.
 
 ## Schema
 * **Schema Type:** Enum

@@ -10,7 +10,7 @@ Bare minimum summary information for an item, for the sake of 3D rendering the i
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-itemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the item in question.  Use it to look up the DestinyInventoryItemDefinition of the itemfor static rendering data.
+itemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the item in question. Use it to look up the DestinyInventoryItemDefinition of the item for static rendering data.
 dyes | [[DyeReference|Destiny-DyeReference]][] | The list of dyes that have been applied to this item.
 
 ## Example

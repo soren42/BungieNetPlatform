@@ -3,8 +3,8 @@
 ## Info
 Returns info about community members who are live streaming.
 
-* **URI:** [[/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/|https://bungie.net/Platform/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/|https://www.bungie.net/Platform/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[CommunityContent|Endpoints#CommunityContent]]
 * **Permissions:** None
@@ -21,12 +21,12 @@ sort | [[CommunityStatusSort|Community-CommunityStatusSort]]:Enum | Yes | The so
 ### Query String Parameters
 Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
-modeHash | integer:uint32 | No | The hash of the Activity Mode for which streams should be retrieved.  Don't pass it in or pass 0 to not filter by mode.
-streamLocale | string | No | The locale for streams you'd like to see.  Don't pass this to fall back on your BNet locale.  Pass 'ALL' to not filter by locale.
+modeHash | integer:uint32 | No | The hash of the Activity Mode for which streams should be retrieved. Don't pass it in or pass 0 to not filter by mode.
+streamLocale | string | No | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/
+GET https://www.bungie.net/Platform/CommunityContent/Live/All/{partnershipType}/{sort}/{page}/
 
 ### Response
 PlatformErrorCode: 200
@@ -61,7 +61,7 @@ PlatformErrorCode: 200
                     // Type: string
                     "iconPath": "",
                     // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                    "membershipType": 0,
+                    "membershipType": {},
                     // Type: integer:int64
                     "membershipId": 0,
                     // Type: string

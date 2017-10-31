@@ -20,7 +20,7 @@ function doPostRequest($endpoint, $params=array(), $options=array()) {
 function getManifest() {
 	$manifestCachePath = CACHEPATH.'/manifest.json';
 	$manifestCache = file_exists($manifestCachePath) ? json_decode(file_get_contents($manifestCachePath)) : false;
-	if (!$manifestCache || time()-filemtime($manifestCachePath) > 30*60) {
+	if (!$manifestCache || (!isset($_GET['offline']) && time()-filemtime($manifestCachePath) > 30*60)) {
 		$result = doRequest('/Platform/Destiny2/Manifest/');
 
 		if ($result->ErrorCode == 1) {
@@ -28,6 +28,7 @@ function getManifest() {
 
 			// Manifest change
 			if (!$manifestCache || $manifestCache->mobileWorldContentPaths->en != $manifest->mobileWorldContentPaths->en) {
+				echo 'ManifestChanged: '.$manifest->version.LN;
 				// Remove old database files
 				if ($manifestCache) {
 					$oldDatabaseCachePath = CACHEPATH.'/'.pathinfo($manifestCache->mobileWorldContentPaths->en, PATHINFO_BASENAME);
@@ -37,6 +38,8 @@ function getManifest() {
 
 				$manifestCache = $manifest;
 				file_put_contents($manifestCachePath, json_encode($manifest, JSON_PRETTY_PRINT));
+			} else {
+				echo 'ManifestUpToDate: '.$manifestCache->version.LN;
 			}
 		} else {
 			echo 'ErrorCheckingManifest: '.$result->ErrorCode.' - '.$result->ErrorStatus.LN;

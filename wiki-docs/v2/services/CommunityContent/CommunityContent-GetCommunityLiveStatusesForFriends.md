@@ -3,8 +3,8 @@
 ## Info
 Returns info about community members who are live streaming among your friends.
 
-* **URI:** [[/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/|https://bungie.net/Platform/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/|https://www.bungie.net/Platform/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[CommunityContent|Endpoints#CommunityContent]]
 * **Permissions:** None
@@ -23,7 +23,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/
+GET https://www.bungie.net/Platform/CommunityContent/Live/Friends/{partnershipType}/{sort}/{page}/
 
 ### Response
 PlatformErrorCode: 200
@@ -58,7 +58,7 @@ PlatformErrorCode: 200
                     // Type: string
                     "iconPath": "",
                     // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                    "membershipType": 0,
+                    "membershipType": {},
                     // Type: integer:int64
                     "membershipId": 0,
                     // Type: string

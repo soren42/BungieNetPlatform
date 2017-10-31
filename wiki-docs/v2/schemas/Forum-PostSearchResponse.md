@@ -21,7 +21,7 @@ totalResults | integer:int32 |
 hasMore | boolean | 
 query | [[PagedQuery|Queries-PagedQuery]] | 
 replacementContinuationToken | string | 
-useTotalResults | boolean | If useTotalResults is true, then totalResults represents an accurate count. If False, it does not, and may be estimated/only the size of the current page. Either way, you should probably always only trust hasMore. This is a long-held historical throwback to when we used to do paging with known total results.Those queries toasted our database, and we were left to hastily alter our endpoints and create backward-compatible shims, of which useTotalResults is one.
+useTotalResults | boolean | If useTotalResults is true, then totalResults represents an accurate count. If False, it does not, and may be estimated/only the size of the current page. Either way, you should probably always only trust hasMore. This is a long-held historical throwback to when we used to do paging with known total results. Those queries toasted our database, and we were left to hastily alter our endpoints and create backward- compatible shims, of which useTotalResults is one.
 
 ## Example
 ```javascript
@@ -226,11 +226,11 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                     // Type: boolean
                     "updateCulturePermissionOverride": false,
                     // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-                    "hostGuidedGamePermissionOverride": 0,
+                    "hostGuidedGamePermissionOverride": {},
                     // Type: boolean
                     "updateBannerPermissionOverride": false,
                     // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-                    "joinLevel": 0
+                    "joinLevel": {}
                 },
                 // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
                 "clanInfo": {
@@ -278,7 +278,8 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                         // Type: integer:uint32
                         "gonfalonDetailId": 0,
                         // Type: integer:uint32
-                        "gonfalonDetailColorId": 0
+                        "gonfalonDetailColorId": 0,
+                        // Type: [[ClanBanner|GroupsV2-ClanBanner]]
                     }
                 }
             },
@@ -297,7 +298,7 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                     // Type: string
                     "iconPath": "",
                     // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                    "membershipType": 0,
+                    "membershipType": {},
                     // Type: integer:int64
                     "membershipId": 0,
                     // Type: string
@@ -310,7 +311,7 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                     // Type: string
                     "iconPath": "",
                     // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                    "membershipType": 0,
+                    "membershipType": {},
                     // Type: integer:int64
                     "membershipId": 0,
                     // Type: string
@@ -403,11 +404,11 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                     // Type: boolean
                     "updateCulturePermissionOverride": false,
                     // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-                    "hostGuidedGamePermissionOverride": 0,
+                    "hostGuidedGamePermissionOverride": {},
                     // Type: boolean
                     "updateBannerPermissionOverride": false,
                     // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-                    "joinLevel": 0
+                    "joinLevel": {}
                 },
                 // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
                 "clanInfo": {
@@ -455,7 +456,8 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                         // Type: integer:uint32
                         "gonfalonDetailId": 0,
                         // Type: integer:uint32
-                        "gonfalonDetailColorId": 0
+                        "gonfalonDetailColorId": 0,
+                        // Type: [[ClanBanner|GroupsV2-ClanBanner]]
                     }
                 }
             },
@@ -479,7 +481,7 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -492,7 +494,7 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -516,7 +518,7 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -529,7 +531,7 @@ useTotalResults | boolean | If useTotalResults is true, then totalResults repres
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string

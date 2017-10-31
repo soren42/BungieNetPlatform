@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-The definition of an item and quantity required in a character's inventory in order toperform an action.
+The definition of an item and quantity required in a character's inventory in order to perform an action.
 
 ## Schema
 * **Schema Type:** Definition
@@ -11,8 +11,8 @@ The definition of an item and quantity required in a character's inventory in or
 Name | Type | Description
 ---- | ---- | -----------
 count | integer:int32 | The minimum quantity of the item you have to have.
-itemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the item you need to have.  Use it to look up the DestinyInventoryItemDefinition for more info.
-deleteOnAction | boolean | If true, the item/quantity will be deleted from your inventory when the action is performed.  Otherwise,you'll retain these required items after the action is complete.
+itemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of the item you need to have. Use it to look up the DestinyInventoryItemDefinition for more info.
+deleteOnAction | boolean | If true, the item/quantity will be deleted from your inventory when the action is performed. Otherwise, you'll retain these required items after the action is complete.
 
 ## Example
 ```javascript

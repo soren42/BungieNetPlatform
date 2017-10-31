@@ -33,7 +33,7 @@ categories | [[TrendingCategory|Trending-TrendingCategory]][] |
                         // Type: string
                         "identifier": "",
                         // Type: [[TrendingEntryType|Trending-TrendingEntryType]]:Enum
-                        "entityType": 0,
+                        "entityType": {},
                         // Type: string
                         "displayName": "",
                         // Type: string

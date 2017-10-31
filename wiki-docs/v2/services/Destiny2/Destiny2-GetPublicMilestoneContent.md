@@ -3,8 +3,8 @@
 ## Info
 Gets custom localized content for the milestone of the given hash, if it exists.
 
-* **URI:** [[/Destiny2/Milestones/{milestoneHash}/Content/|https://bungie.net/Platform/Destiny2/Milestones/{milestoneHash}/Content/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Milestones/{milestoneHash}/Content/|https://www.bungie.net/Platform/Destiny2/Milestones/{milestoneHash}/Content/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Milestones/{milestoneHash}/Content/
+GET https://www.bungie.net/Platform/Destiny2/Milestones/{milestoneHash}/Content/
 
 ### Response
 PlatformErrorCode: 200

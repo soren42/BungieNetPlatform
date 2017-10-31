@@ -41,13 +41,27 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                     // Type: integer:int32:nullable
                     "recommendedLight": 0,
                     // Type: [[DestinyActivityDifficultyTier|Destiny-DestinyActivityDifficultyTier]]:Enum
-                    "difficultyTier": 0
+                    "difficultyTier": {}
                 }
             ],
             // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
             "currentActivityHash": 0,
             // Type: [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:uint32
             "currentActivityModeHash": 0,
+            // Type: [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:int32:nullable
+            "currentActivityModeType": 0,
+            // Type: [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:uint32[]
+            "currentActivityModeHashes": [
+               // Type: integer:uint32
+                0
+            ],
+            // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum[]
+            "currentActivityModeTypes": [
+               // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
+                0
+            ],
+            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
+            "currentPlaylistActivityHash": 0,
             // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
             "lastCompletedStoryHash": 0
         }

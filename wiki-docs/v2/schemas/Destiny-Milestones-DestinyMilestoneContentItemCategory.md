@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Part of our dynamic, localized Milestone content is arbitrary categories of items.These are built in our content management system, and thus aren't the same as programmaticallygenerated rewards.
+Part of our dynamic, localized Milestone content is arbitrary categories of items. These are built in our content management system, and thus aren't the same as programmatically generated rewards.
 
 ## Schema
 * **Schema Type:** Class

@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized textassociated with stats that are to be shown on the items with which they are associated. This defines a specific overridden stat.  You could theoretically check these beforerendering your stat UI, and for each stat that has an override show these displayPropertiesinstead of those on the DestinyStatDefinition. Or you could be like us, and skip that for now because the game has yet to actuallyuse this feature.  But know that it's here, waiting for a resilliant young designer totake up the mantle and make us all look foolish by showing the wrong name for stats. Note that, if this gets used, the override will apply only to items using the overridingStat Group.  Other items will still show the default stat's name/description.
+Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized text associated with stats that are to be shown on the items with which they are associated. This defines a specific overridden stat. You could theoretically check these before rendering your stat UI, and for each stat that has an override show these displayProperties instead of those on the DestinyStatDefinition. Or you could be like us, and skip that for now because the game has yet to actually use this feature. But know that it's here, waiting for a resilliant young designer to take up the mantle and make us all look foolish by showing the wrong name for stats. Note that, if this gets used, the override will apply only to items using the overriding Stat Group. Other items will still show the default stat's name/description.
 
 ## Schema
 * **Schema Type:** Definition
@@ -19,16 +19,7 @@ displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Com
     // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
     "statHash": 0,
     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    }
+    "displayProperties": {}
 }
 
 ```

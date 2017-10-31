@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Human readable data about the bubble.  Combine with DestinyBubbleDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.
+Human readable data about the bubble. Combine with DestinyBubbleDefinition - see DestinyDestinationDefinition.bubbleSettings for more information.
 
 ## Schema
 * **Schema Type:** Definition

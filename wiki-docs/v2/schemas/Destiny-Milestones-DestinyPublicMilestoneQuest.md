@@ -9,9 +9,9 @@
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-questItemHash | [[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]:integer:uint32 | Quests are defined as Items in content.  As such, this is the hash identifier of the DestinyInventoryItemDefinition that represents this quest.  It will have pointers to all of the stepsin the quest, and display information for the quest (title, description, icon etc)Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setDataproperty, and themselves are Items with their own renderable data.
-activity | [[DestinyPublicMilestoneActivity|Destiny-Milestones-DestinyPublicMilestoneActivity]] | A milestone need not have an active activity, but if there is one it will be returned here,along with any variant and additional information.
-challenges | [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicMilestoneChallenge]][] | For the given quest there could be 0-to-Many challenges: mini queststhat you can perform in the course of doing this quest, that may grant you rewards and benefits.
+questItemHash | [[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]:integer:uint32 | Quests are defined as Items in content. As such, this is the hash identifier of the DestinyInventoryItemDefinition that represents this quest. It will have pointers to all of the steps in the quest, and display information for the quest (title, description, icon etc) Individual steps will be referred to in the Quest item's DestinyInventoryItemDefinition.setData property, and themselves are Items with their own renderable data.
+activity | [[DestinyPublicMilestoneActivity|Destiny-Milestones-DestinyPublicMilestoneActivity]] | A milestone need not have an active activity, but if there is one it will be returned here, along with any variant and additional information.
+challenges | [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicMilestoneChallenge]][] | For the given quest there could be 0-to-Many challenges: mini quests that you can perform in the course of doing this quest, that may grant you rewards and benefits.
 
 ## Example
 ```javascript
@@ -19,23 +19,7 @@ challenges | [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicM
     // Type: [[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]:integer:uint32
     "questItemHash": 0,
     // Type: [[DestinyPublicMilestoneActivity|Destiny-Milestones-DestinyPublicMilestoneActivity]]
-    "activity": {
-        // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-        "activityHash": 0,
-        // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32[]
-        "modifierHashes": [
-           // Type: integer:uint32
-            0
-        ],
-        // Type: [[DestinyPublicMilestoneActivityVariant|Destiny-Milestones-DestinyPublicMilestoneActivityVariant]][]
-        "variants": [
-           // Type: [[DestinyPublicMilestoneActivityVariant|Destiny-Milestones-DestinyPublicMilestoneActivityVariant]]
-            {
-                // Type: integer:uint32
-                "activityHash": 0
-            }
-        ]
-    },
+    "activity": {},
     // Type: [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicMilestoneChallenge]][]
     "challenges": [
        // Type: [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicMilestoneChallenge]]

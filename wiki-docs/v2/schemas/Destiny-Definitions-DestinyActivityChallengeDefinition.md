@@ -10,7 +10,7 @@ Represents a reference to a Challenge, which for now is just an Objective.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-objectiveHash | [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32 | The hash for the Objective that matches this challenge.  Use it to look up the DestinyObjectiveDefinition.
+objectiveHash | [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32 | The hash for the Objective that matches this challenge. Use it to look up the DestinyObjectiveDefinition.
 
 ## Example
 ```javascript

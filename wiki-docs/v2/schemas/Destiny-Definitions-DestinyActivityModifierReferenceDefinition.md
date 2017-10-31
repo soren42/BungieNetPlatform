@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-A reference to an Activity Modifier from another entity, such as an Activity(for now, just Activities). This defines some
+A reference to an Activity Modifier from another entity, such as an Activity (for now, just Activities). This defines some
 
 ## Schema
 * **Schema Type:** Definition

@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gets activity history stats for indicated character.  PREVIEW: This endpoint is still in beta, and may experience rough edges.  The schema is in final form, but there may be bugs that prevent desirable operation.
+Gets activity history stats for indicated character. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 
-* **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/|https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/|https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -27,7 +27,7 @@ page | integer:int32 | No | Page number to return, starting with 0.
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/
+GET https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/
 
 ### Response
 PlatformErrorCode: 200
@@ -42,44 +42,20 @@ PlatformErrorCode: 200
                 // Type: string:date-time
                 "period": "",
                 // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                "activityDetails": {
-                    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                    "referenceId": 0,
-                    // Type: integer:int64
-                    "instanceId": 0,
-                    // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                    "mode": 0,
-                    // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                    "activityTypeHashOverride": 0,
-                    // Type: boolean
-                    "isPrivate": false
-                },
+                "activityDetails": {},
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                 "values": {
                     "{string}": {
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 }
             }

@@ -3,8 +3,8 @@
 ## Info
 Returns a list of accounts associated with signed in user. This is useful for OAuth implementations that do not give you access to the token response.
 
-* **URI:** [[/User/GetMembershipsForCurrentUser/|https://bungie.net/Platform/User/GetMembershipsForCurrentUser/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/GetMembershipsForCurrentUser/|https://www.bungie.net/Platform/User/GetMembershipsForCurrentUser/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** ReadBasicUserProfile
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/GetMembershipsForCurrentUser/
+GET https://www.bungie.net/Platform/User/GetMembershipsForCurrentUser/
 
 ### Response
 PlatformErrorCode: 200
@@ -36,7 +36,7 @@ PlatformErrorCode: 200
                 // Type: string
                 "iconPath": "",
                 // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                "membershipType": 0,
+                "membershipType": {},
                 // Type: integer:int64
                 "membershipId": 0,
                 // Type: string

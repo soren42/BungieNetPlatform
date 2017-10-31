@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gets aggregate historical stats organized around each character for a given account.  PREVIEW: This endpoint is still in beta, and may experience rough edges.  The schema is in final form, but there may be bugs that prevent desirable operation.
+Gets aggregate historical stats organized around each character for a given account. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 
-* **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/|https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/|https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -20,11 +20,11 @@ membershipType | [[BungieMembershipType|BungieMembershipType]]:Enum | Yes | A va
 ### Query String Parameters
 Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
-groups | [[DestinyStatsGroupType|Destiny-HistoricalStats-Definitions-DestinyStatsGroupType]]:Enum[] | No | Groups of stats to include, otherwise only general stats are returned.  Comma separated list is allowed. Values: General, Weapons, Medals.
+groups | [[DestinyStatsGroupType|Destiny-HistoricalStats-Definitions-DestinyStatsGroupType]]:Enum[] | No | Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/
+GET https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/
 
 ### Response
 PlatformErrorCode: 200
@@ -43,26 +43,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -71,26 +58,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -99,26 +73,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -127,26 +88,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: [[DestinyHistoricalStatsPeriodGroup|Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup]][]
@@ -156,44 +104,20 @@ PlatformErrorCode: 200
                             // Type: string:date-time
                             "period": "",
                             // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                            "activityDetails": {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "referenceId": 0,
-                                // Type: integer:int64
-                                "instanceId": 0,
-                                // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                "mode": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                "activityTypeHashOverride": 0,
-                                // Type: boolean
-                                "isPrivate": false
-                            },
+                            "activityDetails": {},
                             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "basic": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "basic": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "pga": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "pga": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "weighted": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    }
+                                    "weighted": {},
+                                    // Type: integer:int64:nullable
+                                    "activityId": 0
                                 }
                             }
                         }
@@ -205,44 +129,20 @@ PlatformErrorCode: 200
                             // Type: string:date-time
                             "period": "",
                             // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                            "activityDetails": {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "referenceId": 0,
-                                // Type: integer:int64
-                                "instanceId": 0,
-                                // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                "mode": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                "activityTypeHashOverride": 0,
-                                // Type: boolean
-                                "isPrivate": false
-                            },
+                            "activityDetails": {},
                             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "basic": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "basic": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "pga": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "pga": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "weighted": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    }
+                                    "weighted": {},
+                                    // Type: integer:int64:nullable
+                                    "activityId": 0
                                 }
                             }
                         }
@@ -257,26 +157,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -285,26 +172,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -313,26 +187,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -341,26 +202,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: [[DestinyHistoricalStatsPeriodGroup|Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup]][]
@@ -370,44 +218,20 @@ PlatformErrorCode: 200
                         // Type: string:date-time
                         "period": "",
                         // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                        "activityDetails": {
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                            "referenceId": 0,
-                            // Type: integer:int64
-                            "instanceId": 0,
-                            // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                            "mode": 0,
-                            // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                            "activityTypeHashOverride": 0,
-                            // Type: boolean
-                            "isPrivate": false
-                        },
+                        "activityDetails": {},
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                         "values": {
                             "{string}": {
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         }
                     }
@@ -419,44 +243,20 @@ PlatformErrorCode: 200
                         // Type: string:date-time
                         "period": "",
                         // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                        "activityDetails": {
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                            "referenceId": 0,
-                            // Type: integer:int64
-                            "instanceId": 0,
-                            // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                            "mode": 0,
-                            // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                            "activityTypeHashOverride": 0,
-                            // Type: boolean
-                            "isPrivate": false
-                        },
+                        "activityDetails": {},
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                         "values": {
                             "{string}": {
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         }
                     }
@@ -474,26 +274,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -502,26 +289,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -530,26 +304,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -558,26 +319,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: [[DestinyHistoricalStatsPeriodGroup|Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup]][]
@@ -587,44 +335,20 @@ PlatformErrorCode: 200
                             // Type: string:date-time
                             "period": "",
                             // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                            "activityDetails": {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "referenceId": 0,
-                                // Type: integer:int64
-                                "instanceId": 0,
-                                // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                "mode": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                "activityTypeHashOverride": 0,
-                                // Type: boolean
-                                "isPrivate": false
-                            },
+                            "activityDetails": {},
                             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "basic": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "basic": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "pga": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "pga": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "weighted": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    }
+                                    "weighted": {},
+                                    // Type: integer:int64:nullable
+                                    "activityId": 0
                                 }
                             }
                         }
@@ -636,44 +360,20 @@ PlatformErrorCode: 200
                             // Type: string:date-time
                             "period": "",
                             // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                            "activityDetails": {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "referenceId": 0,
-                                // Type: integer:int64
-                                "instanceId": 0,
-                                // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                "mode": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                "activityTypeHashOverride": 0,
-                                // Type: boolean
-                                "isPrivate": false
-                            },
+                            "activityDetails": {},
                             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "basic": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "basic": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "pga": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "pga": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "weighted": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    }
+                                    "weighted": {},
+                                    // Type: integer:int64:nullable
+                                    "activityId": 0
                                 }
                             }
                         }
@@ -688,26 +388,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -716,26 +403,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -744,26 +418,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -772,26 +433,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 },
                 // Type: [[DestinyHistoricalStatsPeriodGroup|Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup]][]
@@ -801,44 +449,20 @@ PlatformErrorCode: 200
                         // Type: string:date-time
                         "period": "",
                         // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                        "activityDetails": {
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                            "referenceId": 0,
-                            // Type: integer:int64
-                            "instanceId": 0,
-                            // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                            "mode": 0,
-                            // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                            "activityTypeHashOverride": 0,
-                            // Type: boolean
-                            "isPrivate": false
-                        },
+                        "activityDetails": {},
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                         "values": {
                             "{string}": {
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         }
                     }
@@ -850,44 +474,20 @@ PlatformErrorCode: 200
                         // Type: string:date-time
                         "period": "",
                         // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                        "activityDetails": {
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                            "referenceId": 0,
-                            // Type: integer:int64
-                            "instanceId": 0,
-                            // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                            "mode": 0,
-                            // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                            "activityTypeHashOverride": 0,
-                            // Type: boolean
-                            "isPrivate": false
-                        },
+                        "activityDetails": {},
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                         "values": {
                             "{string}": {
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         }
                     }
@@ -911,26 +511,13 @@ PlatformErrorCode: 200
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         },
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -939,26 +526,13 @@ PlatformErrorCode: 200
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         },
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -967,26 +541,13 @@ PlatformErrorCode: 200
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         },
                         // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -995,26 +556,13 @@ PlatformErrorCode: 200
                                 // Type: string
                                 "statId": "",
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "basic": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
+                                "pga": {},
                                 // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
+                                "weighted": {},
+                                // Type: integer:int64:nullable
+                                "activityId": 0
                             }
                         },
                         // Type: [[DestinyHistoricalStatsPeriodGroup|Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup]][]
@@ -1024,44 +572,20 @@ PlatformErrorCode: 200
                                 // Type: string:date-time
                                 "period": "",
                                 // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                                "activityDetails": {
-                                    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                    "referenceId": 0,
-                                    // Type: integer:int64
-                                    "instanceId": 0,
-                                    // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                    "mode": 0,
-                                    // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                    "activityTypeHashOverride": 0,
-                                    // Type: boolean
-                                    "isPrivate": false
-                                },
+                                "activityDetails": {},
                                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                                 "values": {
                                     "{string}": {
                                         // Type: string
                                         "statId": "",
                                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                        "basic": {
-                                            // Type: number:double
-                                            "value": 0,
-                                            // Type: string
-                                            "displayValue": ""
-                                        },
+                                        "basic": {},
                                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                        "pga": {
-                                            // Type: number:double
-                                            "value": 0,
-                                            // Type: string
-                                            "displayValue": ""
-                                        },
+                                        "pga": {},
                                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                        "weighted": {
-                                            // Type: number:double
-                                            "value": 0,
-                                            // Type: string
-                                            "displayValue": ""
-                                        }
+                                        "weighted": {},
+                                        // Type: integer:int64:nullable
+                                        "activityId": 0
                                     }
                                 }
                             }
@@ -1073,44 +597,20 @@ PlatformErrorCode: 200
                                 // Type: string:date-time
                                 "period": "",
                                 // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                                "activityDetails": {
-                                    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                    "referenceId": 0,
-                                    // Type: integer:int64
-                                    "instanceId": 0,
-                                    // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                    "mode": 0,
-                                    // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                    "activityTypeHashOverride": 0,
-                                    // Type: boolean
-                                    "isPrivate": false
-                                },
+                                "activityDetails": {},
                                 // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                                 "values": {
                                     "{string}": {
                                         // Type: string
                                         "statId": "",
                                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                        "basic": {
-                                            // Type: number:double
-                                            "value": 0,
-                                            // Type: string
-                                            "displayValue": ""
-                                        },
+                                        "basic": {},
                                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                        "pga": {
-                                            // Type: number:double
-                                            "value": 0,
-                                            // Type: string
-                                            "displayValue": ""
-                                        },
+                                        "pga": {},
                                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                        "weighted": {
-                                            // Type: number:double
-                                            "value": 0,
-                                            // Type: string
-                                            "displayValue": ""
-                                        }
+                                        "weighted": {},
+                                        // Type: integer:int64:nullable
+                                        "activityId": 0
                                     }
                                 }
                             }
@@ -1125,26 +625,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -1153,26 +640,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -1181,26 +655,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -1209,26 +670,13 @@ PlatformErrorCode: 200
                             // Type: string
                             "statId": "",
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "basic": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
+                            "pga": {},
                             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
+                            "weighted": {},
+                            // Type: integer:int64:nullable
+                            "activityId": 0
                         }
                     },
                     // Type: [[DestinyHistoricalStatsPeriodGroup|Destiny-HistoricalStats-DestinyHistoricalStatsPeriodGroup]][]
@@ -1238,44 +686,20 @@ PlatformErrorCode: 200
                             // Type: string:date-time
                             "period": "",
                             // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                            "activityDetails": {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "referenceId": 0,
-                                // Type: integer:int64
-                                "instanceId": 0,
-                                // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                "mode": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                "activityTypeHashOverride": 0,
-                                // Type: boolean
-                                "isPrivate": false
-                            },
+                            "activityDetails": {},
                             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "basic": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "basic": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "pga": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "pga": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "weighted": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    }
+                                    "weighted": {},
+                                    // Type: integer:int64:nullable
+                                    "activityId": 0
                                 }
                             }
                         }
@@ -1287,44 +711,20 @@ PlatformErrorCode: 200
                             // Type: string:date-time
                             "period": "",
                             // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-                            "activityDetails": {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "referenceId": 0,
-                                // Type: integer:int64
-                                "instanceId": 0,
-                                // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-                                "mode": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-                                "activityTypeHashOverride": 0,
-                                // Type: boolean
-                                "isPrivate": false
-                            },
+                            "activityDetails": {},
                             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
                             "values": {
                                 "{string}": {
                                     // Type: string
                                     "statId": "",
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "basic": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "basic": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "pga": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    },
+                                    "pga": {},
                                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                    "weighted": {
-                                        // Type: number:double
-                                        "value": 0,
-                                        // Type: string
-                                        "displayValue": ""
-                                    }
+                                    "weighted": {},
+                                    // Type: integer:int64:nullable
+                                    "activityId": 0
                                 }
                             }
                         }

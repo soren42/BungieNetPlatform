@@ -112,8 +112,12 @@ function getMarkdownPages($path, $root='') {
 }
 
 function parseMarkdown($markdownPath) {
-	global $root;
 	$markdown = file_get_contents($markdownPath);
+	return parseMarkdownText($markdown);
+}
+
+function parseMarkdownText($markdown) {
+	global $root;
 
 	$markdown = preg_replace('/\[([^\]]+)\]\(([^\)]+)\)/', '[[$1|$2]]', $markdown);
 	$markdown = preg_replace('/\[\[([^\]\|]+)\|([^\]]+)\]\]/', '<a href="$2">$1</a>', $markdown);
@@ -195,6 +199,43 @@ function buildPage($page) {
 	//echo json_encode($page, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 	$content = parseMarkdown($markdownPath);
 
+	if ($page_name == 'Home') {
+
+		$changelog = file_get_contents(WIKIPATH.'/Changelog.md');
+		$changes = array();
+		foreach(explode("\n## ", $changelog) as $entryIndex => $entry) {
+			if ($entryIndex == 0) continue;
+			if ($entryIndex > 1) $entry = implode("\n", array_slice(explode("\n", $entry), 0, 2));
+			$changes[] = '### '.str_replace('## ', '### ', $entry);
+			//echo '<pre>['.$entry.']</pre>';
+			//if (count($changes) == 5) break;
+			if (count($changes) == 1) break;
+		}
+
+		$changes [] = LN.'<hr/>'.LN.'Read the [[full changelong|Changelog]].';
+
+		$content .= '</div>'
+			.'<div class="inner">'
+				.'<h2>Changelog</h2>'
+				.parseMarkdownText(implode("\n", $changes))
+			.'</div>'
+			.'<div class="inner">'
+				.'<h2>Community Apps</h2>'
+				.'<p>Cool apps built by the talented Destiny community!</p>'
+				.'<div id="wiki-apps" ng-controller="AppSearchCtrl">'
+					.'<div class="app-actions">'
+						.'<a href="https://goo.gl/forms/eKTqppizDA3vhD8E3" target="_blank" class="btn btn-primary">Submit An App</a>'
+					.'</div>'
+					.'<div class="app-tile" ng-repeat="app in apps track by $index" app-entry="app"></div>'
+				.'</div>'
+			.'</div>'
+//			.'<div class="row">'
+//				.'<div class="col-md-8"><div class="inner">Test</div></div>'
+//				.'<div class="col-md-4"><div class="inner">Test2</div></div>'
+//			.'</div>'
+		;
+	}
+
 	ob_start();
 	include($headerTemplate);
 	$header = ob_get_clean();
@@ -243,7 +284,7 @@ if (file_exists(DOCSPATH) && !file_exists(DOCSPATH.'-old')) rename(DOCSPATH, DOC
 
 $sitemap = array();
 $searchData = array();
-$openapi = json_decode(file_get_contents(CACHEPATH.'/api-master/openapi.json'));
+$openapi = loadOpenApi();
 
 // Find all markdown pages
 $pages = getMarkdownPages(WIKIPATH);

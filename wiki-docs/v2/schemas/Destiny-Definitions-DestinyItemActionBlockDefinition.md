@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined hereif you care.
+If an item can have an action performed on it (like &quot;Dismantle&quot;), it will be defined here if you care.
 
 ## Schema
 * **Schema Type:** Definition
@@ -13,17 +13,17 @@ Name | Type | Description
 verbName | string | Localized text for the verb of the action being performed.
 verbDescription | string | Localized text describing the action being performed.
 isPositive | boolean | The content has this property, however it's not entirely clear how it is used.
-overlayScreenName | string | If the action has an overlay screen associated with it, this is the name of that screen.Unfortunately, we cannot return the screen's data itself.
+overlayScreenName | string | If the action has an overlay screen associated with it, this is the name of that screen. Unfortunately, we cannot return the screen's data itself.
 overlayIcon | string | The icon associated with the overlay screen for the action, if any.
 requiredCooldownSeconds | integer:int32 | The number of seconds to delay before allowing this action to be performed again.
-requiredItems | [[DestinyItemActionRequiredItemDefinition|Destiny-Definitions-DestinyItemActionRequiredItemDefinition]]:Definition[] | If the action requires other items to exist or be destroyed, this isthe list of those items and requirements.
-progressionRewards | [[DestinyProgressionRewardDefinition|Destiny-Definitions-DestinyProgressionRewardDefinition]]:Definition[] | If performing this action earns you Progression, this is the list of progressions and values grantedfor those progressions by performing this action.
+requiredItems | [[DestinyItemActionRequiredItemDefinition|Destiny-Definitions-DestinyItemActionRequiredItemDefinition]]:Definition[] | If the action requires other items to exist or be destroyed, this is the list of those items and requirements.
+progressionRewards | [[DestinyProgressionRewardDefinition|Destiny-Definitions-DestinyProgressionRewardDefinition]]:Definition[] | If performing this action earns you Progression, this is the list of progressions and values granted for those progressions by performing this action.
 actionTypeLabel | string | The internal identifier for the action.
-requiredLocation | string | Theoretically, an item could have a localized string for a hint about the location in whichthe action should be performed.  In practice, no items yet have this property.
-requiredCooldownHash | integer:uint32 | The identifier hash for the Cooldown associated with this action.  We have not pulled this data yetfor you to have more data to use for cooldowns.
+requiredLocation | string | Theoretically, an item could have a localized string for a hint about the location in which the action should be performed. In practice, no items yet have this property.
+requiredCooldownHash | integer:uint32 | The identifier hash for the Cooldown associated with this action. We have not pulled this data yet for you to have more data to use for cooldowns.
 deleteOnAction | boolean | If true, the item is deleted when the action completes.
 consumeEntireStack | boolean | If true, the entire stack is deleted when the action completes.
-useOnAcquire | boolean | If true, this action will be performed as soon as you earn this item.Some rewards work this way, providing you a single item to pick up froma reward-granting vendor in-game and then immediately consuming itselfto provide you multiple items.
+useOnAcquire | boolean | If true, this action will be performed as soon as you earn this item. Some rewards work this way, providing you a single item to pick up from a reward-granting vendor in-game and then immediately consuming itself to provide you multiple items.
 
 ## Example
 ```javascript

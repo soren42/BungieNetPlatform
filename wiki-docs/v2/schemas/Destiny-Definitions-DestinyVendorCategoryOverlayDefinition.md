@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-The details of an overlay prompt to show to a user.  They are all fairlyself-explanatory localized strings that can be shown.
+The details of an overlay prompt to show to a user. They are all fairly self-explanatory localized strings that can be shown.
 
 ## Schema
 * **Schema Type:** Definition

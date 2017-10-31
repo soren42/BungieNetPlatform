@@ -23,7 +23,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
             // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
             "itemHash": 0,
             // Type: [[VendorItemStatus|Destiny-VendorItemStatus]]:Enum
-            "saleStatus": 0,
+            "saleStatus": {},
             // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]][]
             "costs": [
                // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]

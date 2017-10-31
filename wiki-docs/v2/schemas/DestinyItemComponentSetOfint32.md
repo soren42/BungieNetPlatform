@@ -27,18 +27,11 @@ plugStates | [[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|Di
         "data": {
             "0": {
                 // Type: [[DamageType|Destiny-DamageType]]:Enum
-                "damageType": 0,
+                "damageType": {},
                 // Type: [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable
                 "damageTypeHash": 0,
                 // Type: [[DestinyStat|Destiny-DestinyStat]]
-                "primaryStat": {
-                    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                    "statHash": 0,
-                    // Type: integer:int32
-                    "value": 0,
-                    // Type: integer:int32
-                    "maximumValue": 0
-                },
+                "primaryStat": {},
                 // Type: integer:int32
                 "itemLevel": 0,
                 // Type: integer:int32
@@ -55,7 +48,7 @@ plugStates | [[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|Di
                     0
                 ],
                 // Type: [[EquipFailureReason|Destiny-EquipFailureReason]]:Enum
-                "cannotEquipReason": 0
+                "cannotEquipReason": {}
             }
         },
         // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
@@ -194,7 +187,7 @@ plugStates | [[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|Di
                         // Type: integer:uint32
                         "nodeHash": 0,
                         // Type: [[DestinyTalentNodeState|Destiny-DestinyTalentNodeState]]:Enum
-                        "state": 0,
+                        "state": {},
                         // Type: boolean
                         "isActivated": false,
                         // Type: integer:int32
@@ -220,61 +213,13 @@ plugStates | [[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|Di
                         // Type: boolean
                         "hidden": false,
                         // Type: [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock]]
-                        "nodeStatsBlock": {
-                            // Type: [[DestinyStat|Destiny-DestinyStat]][]
-                            "currentStepStats": [
-                               // Type: [[DestinyStat|Destiny-DestinyStat]]
-                                {
-                                    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                                    "statHash": 0,
-                                    // Type: integer:int32
-                                    "value": 0,
-                                    // Type: integer:int32
-                                    "maximumValue": 0
-                                }
-                            ],
-                            // Type: [[DestinyStat|Destiny-DestinyStat]][]
-                            "nextStepStats": [
-                               // Type: [[DestinyStat|Destiny-DestinyStat]]
-                                {
-                                    // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                                    "statHash": 0,
-                                    // Type: integer:int32
-                                    "value": 0,
-                                    // Type: integer:int32
-                                    "maximumValue": 0
-                                }
-                            ]
-                        }
+                        "nodeStatsBlock": {}
                     }
                 ],
                 // Type: boolean
                 "isGridComplete": false,
                 // Type: [[DestinyProgression|Destiny-DestinyProgression]]
-                "gridProgression": {
-                    // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
-                    "progressionHash": 0,
-                    // Type: integer:int32
-                    "dailyProgress": 0,
-                    // Type: integer:int32
-                    "dailyLimit": 0,
-                    // Type: integer:int32
-                    "weeklyProgress": 0,
-                    // Type: integer:int32
-                    "weeklyLimit": 0,
-                    // Type: integer:int32
-                    "currentProgress": 0,
-                    // Type: integer:int32
-                    "level": 0,
-                    // Type: integer:int32
-                    "levelCap": 0,
-                    // Type: integer:int32
-                    "stepIndex": 0,
-                    // Type: integer:int32
-                    "progressToNextLevel": 0,
-                    // Type: integer:int32
-                    "nextLevelAt": 0
-                }
+                "gridProgression": {}
             }
         },
         // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum

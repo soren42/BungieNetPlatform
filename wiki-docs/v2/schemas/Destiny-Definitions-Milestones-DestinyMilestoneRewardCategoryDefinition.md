@@ -10,11 +10,11 @@ The definition of a category of rewards, that contains many individual rewards.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-categoryHash | integer:uint32 | Identifies the reward category.  Only guaranteed unique within this specific component!
-categoryIdentifier | string | The string identifier for the category, if you want to use it for some end.  Guaranteed uniquewithin the specific component.
+categoryHash | integer:uint32 | Identifies the reward category. Only guaranteed unique within this specific component!
+categoryIdentifier | string | The string identifier for the category, if you want to use it for some end. Guaranteed unique within the specific component.
 displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | Hopefully this is obvious by now.
-rewardEntries | Dictionary&lt;integer:uint32,[[DestinyMilestoneRewardEntryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition]]:Definition&gt; | If this milestone can provide rewards, this will define the setsof rewards that can be earned, the conditions under which they can be acquired,internal data that we'll use at runtime to determine whether you'vealready earned or redeemed this set of rewards,and the category that this reward should be placed under.
-order | integer:int32 | If you want to use BNet's recommended order for rendering categories programmatically,use this value and compare it to other categories to determine the order in whichthey should be rendered.  I don't feel great about putting this here, I won't lie.
+rewardEntries | Dictionary&lt;integer:uint32,[[DestinyMilestoneRewardEntryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition]]:Definition&gt; | If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we'll use at runtime to determine whether you've already earned or redeemed this set of rewards, and the category that this reward should be placed under.
+order | integer:int32 | If you want to use BNet's recommended order for rendering categories programmatically, use this value and compare it to other categories to determine the order in which they should be rendered. I don't feel great about putting this here, I won't lie.
 
 ## Example
 ```javascript
@@ -24,16 +24,7 @@ order | integer:int32 | If you want to use BNet's recommended order for renderin
     // Type: string
     "categoryIdentifier": "",
     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: Dictionary&lt;integer:uint32,[[DestinyMilestoneRewardEntryDefinition|Destiny-Definitions-Milestones-DestinyMilestoneRewardEntryDefinition]]:Definition&gt;
     "rewardEntries": {
         "0": {
@@ -56,16 +47,7 @@ order | integer:int32 | If you want to use BNet's recommended order for renderin
             // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32:nullable
             "vendorHash": 0,
             // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
-            "displayProperties": {
-                // Type: string
-                "description": "",
-                // Type: string
-                "name": "",
-                // Type: string
-                "icon": "",
-                // Type: boolean
-                "hasIcon": false
-            },
+            "displayProperties": {},
             // Type: integer:int32
             "order": 0
         }

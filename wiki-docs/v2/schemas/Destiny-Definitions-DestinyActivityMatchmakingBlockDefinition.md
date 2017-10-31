@@ -10,7 +10,7 @@ Information about matchmaking and party size for the activity.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-isMatchmade | boolean | If TRUE, the activity is matchmade.  Otherwise, it requires explicit forming of a party.
+isMatchmade | boolean | If TRUE, the activity is matchmade. Otherwise, it requires explicit forming of a party.
 minParty | integer:int32 | The minimum # of people in the fireteam for the activity to launch.
 maxParty | integer:int32 | The maximum # of people allowed in a Fireteam.
 maxPlayers | integer:int32 | The maximum # of people allowed across all teams in the activity.

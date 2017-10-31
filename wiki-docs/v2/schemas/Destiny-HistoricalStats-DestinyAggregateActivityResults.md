@@ -26,26 +26,13 @@ activities | [[DestinyAggregateActivityStats|Destiny-HistoricalStats-DestinyAggr
                     // Type: string
                     "statId": "",
                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                    "basic": {
-                        // Type: number:double
-                        "value": 0,
-                        // Type: string
-                        "displayValue": ""
-                    },
+                    "basic": {},
                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                    "pga": {
-                        // Type: number:double
-                        "value": 0,
-                        // Type: string
-                        "displayValue": ""
-                    },
+                    "pga": {},
                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                    "weighted": {
-                        // Type: number:double
-                        "value": 0,
-                        // Type: string
-                        "displayValue": ""
-                    }
+                    "weighted": {},
+                    // Type: integer:int64:nullable
+                    "activityId": 0
                 }
             }
         }

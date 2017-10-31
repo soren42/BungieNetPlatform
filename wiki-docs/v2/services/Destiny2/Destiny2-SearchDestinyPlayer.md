@@ -3,8 +3,8 @@
 ## Info
 Returns a list of Destiny memberships given a full Gamertag or PSN ID.
 
-* **URI:** [[/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/|https://bungie.net/Platform/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/|https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -22,7 +22,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/
+GET https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/
 
 ### Response
 PlatformErrorCode: 200
@@ -37,7 +37,7 @@ PlatformErrorCode: 200
             // Type: string
             "iconPath": "",
             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
+            "membershipType": {},
             // Type: integer:int64
             "membershipId": 0,
             // Type: string

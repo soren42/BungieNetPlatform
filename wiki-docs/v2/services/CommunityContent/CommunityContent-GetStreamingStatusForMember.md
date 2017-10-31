@@ -3,8 +3,8 @@
 ## Info
 Gets the Live Streaming status of a particular Account and Membership Type.
 
-* **URI:** [[/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/|https://bungie.net/Platform/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/|https://www.bungie.net/Platform/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[CommunityContent|Endpoints#CommunityContent]]
 * **Permissions:** None
@@ -23,7 +23,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/
+GET https://www.bungie.net/Platform/CommunityContent/Live/Users/{partnershipType}/{membershipType}/{membershipId}/
 
 ### Response
 PlatformErrorCode: 200
@@ -54,7 +54,7 @@ PlatformErrorCode: 200
             // Type: string
             "iconPath": "",
             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
+            "membershipType": {},
             // Type: integer:int64
             "membershipId": 0,
             // Type: string

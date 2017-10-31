@@ -20,57 +20,9 @@ teamName | string | Alpha or Bravo
     // Type: integer:int32
     "teamId": 0,
     // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-    "standing": {
-        // Type: string
-        "statId": "",
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "basic": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "pga": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "weighted": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        }
-    },
+    "standing": {},
     // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-    "score": {
-        // Type: string
-        "statId": "",
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "basic": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "pga": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "weighted": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        }
-    },
+    "score": {},
     // Type: string
     "teamName": ""
 }

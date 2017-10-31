@@ -10,7 +10,7 @@ An intrinsic perk on an item, and the requirements for it to be activated.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-requirementDisplayString | string | If this perk is not active, this is the string to show for whyit's not providing its benefits.
+requirementDisplayString | string | If this perk is not active, this is the string to show for why it's not providing its benefits.
 perkHash | [[Destiny.Definitions.DestinySandboxPerkDefinition|Destiny-Definitions-DestinySandboxPerkDefinition]]:integer:uint32 | A hash identifier for the DestinySandboxPerkDefinition being provided on the item.
 
 ## Example

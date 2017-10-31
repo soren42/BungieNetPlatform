@@ -13,26 +13,15 @@ destinyUserInfo | [[UserInfoCard|User-UserInfoCard]] | Details about the player 
 characterClass | string | Class of the character if applicable and available.
 characterLevel | integer:int32 | Level of the character if available. Zero if it is not available.
 lightLevel | integer:int32 | Light Level of the character if available. Zero if it is not available.
-bungieNetUserInfo | [[UserInfoCard|User-UserInfoCard]] | Details about the player as they are known on BungieNet.  This willbe undefined if the player has marked their credential private, or does not havea BungieNet account.
+bungieNetUserInfo | [[UserInfoCard|User-UserInfoCard]] | Details about the player as they are known on BungieNet. This will be undefined if the player has marked their credential private, or does not have a BungieNet account.
 clanName | string | Current clan name for the player. This value may be null or an empty string if the user does not have a clan.
-clanTag | string | Current clan tag for the player.  This value may be null or an empty string if the user does not have a clan.
+clanTag | string | Current clan tag for the player. This value may be null or an empty string if the user does not have a clan.
 
 ## Example
 ```javascript
 {
     // Type: [[UserInfoCard|User-UserInfoCard]]
-    "destinyUserInfo": {
-        // Type: string
-        "supplementalDisplayName": "",
-        // Type: string
-        "iconPath": "",
-        // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-        "membershipType": 0,
-        // Type: integer:int64
-        "membershipId": 0,
-        // Type: string
-        "displayName": ""
-    },
+    "destinyUserInfo": {},
     // Type: string
     "characterClass": "",
     // Type: integer:int32
@@ -40,18 +29,7 @@ clanTag | string | Current clan tag for the player.  This value may be null or a
     // Type: integer:int32
     "lightLevel": 0,
     // Type: [[UserInfoCard|User-UserInfoCard]]
-    "bungieNetUserInfo": {
-        // Type: string
-        "supplementalDisplayName": "",
-        // Type: string
-        "iconPath": "",
-        // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-        "membershipType": 0,
-        // Type: integer:int64
-        "membershipId": 0,
-        // Type: string
-        "displayName": ""
-    },
+    "bungieNetUserInfo": {},
     // Type: string
     "clanName": "",
     // Type: string

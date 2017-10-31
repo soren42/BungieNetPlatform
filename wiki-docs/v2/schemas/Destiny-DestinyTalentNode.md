@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-I see you've come to find out more about Talent Nodes.  I'm so sorry.Talent Nodes are the conceptual, visual nodes that appear on Talent Grids.Talent Grids, in Destiny 1, were found on almost every instanced item: they had Nodes that couldbe activated to change the properties of the item.In Destiny 2, Talent Grids only exist for Builds/Subclasses, and while the basic concept is the same(Nodes can be activated once you've gained sufficient Experience on the Item, and provide effects),there are some new concepts from Destiny 1.  Examine DestinyTalentGridDefinition and its subordinatesfor more information.This is the &quot;Live&quot; information for the current status of a Talent Node on a specific item.Talent Nodes have many Steps, but only one can be active at any one time: and it is the Step that determinesboth the visual and the game state-changing properties that the Node provides.  Examine this and DestinyTalentNodeStepDefinitioncarefully.*IMPORTANT NOTE* Talent Nodes are, unfortunately, Content Version DEPENDENT.  Though they refer to hashes for Nodes and Steps,those hashes are not guaranteed to be immutable across content versions.  This is a source of great exasperation for me,but as a result anyone using Talent Grid data must ensure that the content version of their static contentmatches that of the server responses before showing or making decisions based on talent grid data.
+I see you've come to find out more about Talent Nodes. I'm so sorry. Talent Nodes are the conceptual, visual nodes that appear on Talent Grids. Talent Grids, in Destiny 1, were found on almost every instanced item: they had Nodes that could be activated to change the properties of the item. In Destiny 2, Talent Grids only exist for Builds/Subclasses, and while the basic concept is the same (Nodes can be activated once you've gained sufficient Experience on the Item, and provide effects), there are some new concepts from Destiny 1. Examine DestinyTalentGridDefinition and its subordinates for more information. This is the &quot;Live&quot; information for the current status of a Talent Node on a specific item. Talent Nodes have many Steps, but only one can be active at any one time: and it is the Step that determines both the visual and the game state-changing properties that the Node provides. Examine this and DestinyTalentNodeStepDefinition carefully. *IMPORTANT NOTE* Talent Nodes are, unfortunately, Content Version DEPENDENT. Though they refer to hashes for Nodes and Steps, those hashes are not guaranteed to be immutable across content versions. This is a source of great exasperation for me, but as a result anyone using Talent Grid data must ensure that the content version of their static content matches that of the server responses before showing or making decisions based on talent grid data.
 
 ## Schema
 * **Schema Type:** Class
@@ -10,16 +10,16 @@ I see you've come to find out more about Talent Nodes.  I'm so sorry.Talent Node
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-nodeIndex | integer:int32 | The index of the Talent Node being referred to (an index into DestinyTalentGridDefinition.nodes[]).CONTENT VERSION DEPENDENT.
-nodeHash | integer:uint32 | The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes).Deceptively CONTENT VERSION DEPENDENT.  We have no guarantee of the hash's immutability between content versions.
-state | [[DestinyTalentNodeState|Destiny-DestinyTalentNodeState]]:Enum | An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why notif neither can be performed.
+nodeIndex | integer:int32 | The index of the Talent Node being referred to (an index into DestinyTalentGridDefinition.nodes[]). CONTENT VERSION DEPENDENT.
+nodeHash | integer:uint32 | The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes). Deceptively CONTENT VERSION DEPENDENT. We have no guarantee of the hash's immutability between content versions.
+state | [[DestinyTalentNodeState|Destiny-DestinyTalentNodeState]]:Enum | An DestinyTalentNodeState enum value indicating the node's state: whether it can be activated or swapped, and why not if neither can be performed.
 isActivated | boolean | If true, the node is activated: it's current step then provides its benefits.
-stepIndex | integer:int32 | The currently relevant Step for the node.  It is this step that has rendering data for the nodeand the benefits that are provided if the node is activated.  (the actual rules for benefits providedare extremely complicated in theory, but with how Talent Grids are being used in Destiny 2 you don't have to worryabout a lot of those old Destiny 1 rules.)  This is an index into:DestinyTalentGridDefinition.nodes[nodeIndex].steps[stepIndex]
+stepIndex | integer:int32 | The currently relevant Step for the node. It is this step that has rendering data for the node and the benefits that are provided if the node is activated. (the actual rules for benefits provided are extremely complicated in theory, but with how Talent Grids are being used in Destiny 2 you don't have to worry about a lot of those old Destiny 1 rules.) This is an index into: DestinyTalentGridDefinition.nodes[nodeIndex].steps[stepIndex]
 materialsToUpgrade | [[DestinyMaterialRequirement|Destiny-Definitions-DestinyMaterialRequirement]]:Definition[] | If the node has material requirements to be activated, this is the list of those requirements.
-activationGridLevel | integer:int32 | The progression level required on the Talent Grid in order to be able to activate this talent node.Talent Grids have their own Progression - similar to Character Level, but in this case it is experiencerelated to the item itself.
-progressPercent | number:float | If you want to show a progress bar or circle for how close this talent node is to being activate-able, thisis the percentage to show.  It follows the node's underlying rules about when the progress bar should firstshow up, and when it should be filled.
-hidden | boolean | Whether or not the talent node is actually visible in the game's UI.  Whether you want to show it in your ownUI is up to you!  I'm not gonna tell you who to sock it to.
-nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock]] | This property has some history.  A talent grid can provide stats on both the item it's related to andthe character equipping the item.  This returns data about those stat bonuses.
+activationGridLevel | integer:int32 | The progression level required on the Talent Grid in order to be able to activate this talent node. Talent Grids have their own Progression - similar to Character Level, but in this case it is experience related to the item itself.
+progressPercent | number:float | If you want to show a progress bar or circle for how close this talent node is to being activate-able, this is the percentage to show. It follows the node's underlying rules about when the progress bar should first show up, and when it should be filled.
+hidden | boolean | Whether or not the talent node is actually visible in the game's UI. Whether you want to show it in your own UI is up to you! I'm not gonna tell you who to sock it to.
+nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock]] | This property has some history. A talent grid can provide stats on both the item it's related to and the character equipping the item. This returns data about those stat bonuses.
 
 ## Example
 ```javascript
@@ -29,7 +29,7 @@ nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock
     // Type: integer:uint32
     "nodeHash": 0,
     // Type: [[DestinyTalentNodeState|Destiny-DestinyTalentNodeState]]:Enum
-    "state": 0,
+    "state": {},
     // Type: boolean
     "isActivated": false,
     // Type: integer:int32
@@ -55,32 +55,7 @@ nodeStatsBlock | [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock
     // Type: boolean
     "hidden": false,
     // Type: [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock]]
-    "nodeStatsBlock": {
-        // Type: [[DestinyStat|Destiny-DestinyStat]][]
-        "currentStepStats": [
-           // Type: [[DestinyStat|Destiny-DestinyStat]]
-            {
-                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                "statHash": 0,
-                // Type: integer:int32
-                "value": 0,
-                // Type: integer:int32
-                "maximumValue": 0
-            }
-        ],
-        // Type: [[DestinyStat|Destiny-DestinyStat]][]
-        "nextStepStats": [
-           // Type: [[DestinyStat|Destiny-DestinyStat]]
-            {
-                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                "statHash": 0,
-                // Type: integer:int32
-                "value": 0,
-                // Type: integer:int32
-                "maximumValue": 0
-            }
-        ]
-    }
+    "nodeStatsBlock": {}
 }
 
 ```

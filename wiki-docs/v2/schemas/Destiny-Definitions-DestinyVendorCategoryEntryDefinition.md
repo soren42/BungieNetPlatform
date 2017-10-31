@@ -12,7 +12,7 @@ Name | Type | Description
 ---- | ---- | -----------
 categoryIndex | integer:int32 | The index of the category in the original category definitions for the vendor.
 categoryId | string | The string identifier of the category.
-categoryHash | integer:uint32 | The hashed identifier for the category.  (note that this is NOT pointing to a DestinyVendorCategoryDefinition,it's confusing but this is a sale item category in a vendor, not a categorization of vendors themselves)
+categoryHash | integer:uint32 | The hashed identifier for the category. (note that this is NOT pointing to a DestinyVendorCategoryDefinition, it's confusing but this is a sale item category in a vendor, not a categorization of vendors themselves)
 quantityAvailable | integer:int32 | The amount of items that will be available when this category is shown.
 showUnavailableItems | boolean | If items aren't up for sale in this category, should we still show them (greyed out)?
 hideIfNoCurrency | boolean | If you don't have the currency required to buy items from this category, should the items be hidden?
@@ -46,16 +46,7 @@ overlay | [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVe
     // Type: string
     "displayTitle": "",
     // Type: [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]]:Definition
-    "overlay": {
-        // Type: string
-        "choiceDescription": "",
-        // Type: string
-        "description": "",
-        // Type: string
-        "icon": "",
-        // Type: string
-        "title": ""
-    }
+    "overlay": {}
 }
 
 ```

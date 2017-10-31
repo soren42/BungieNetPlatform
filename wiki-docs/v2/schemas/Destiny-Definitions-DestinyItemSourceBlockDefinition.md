@@ -11,8 +11,8 @@ Data about an item's &quot;sources&quot;: ways that the item can be obtained.
 Name | Type | Description
 ---- | ---- | -----------
 sourceHashes | [[Destiny.Definitions.DestinyRewardSourceDefinition|Destiny-Definitions-DestinyRewardSourceDefinition]]:integer:uint32[] | The list of hash identifiers for Reward Sources that hint where the item can be found (DestinyRewardSourceDefinition).
-sources | [[DestinyItemSourceDefinition|Destiny-Definitions-Sources-DestinyItemSourceDefinition]]:Definition[] | A collection of details about the stats that were computed for the ways we found that the itemcould be spawned.
-exclusive | [[BungieMembershipType|BungieMembershipType]]:Enum | If we found that this item is exclusive to a specific platform, this will be set to theBungieMembershipType enumeration that matches that platform.
+sources | [[DestinyItemSourceDefinition|Destiny-Definitions-Sources-DestinyItemSourceDefinition]]:Definition[] | A collection of details about the stats that were computed for the ways we found that the item could be spawned.
+exclusive | [[BungieMembershipType|BungieMembershipType]]:Enum | If we found that this item is exclusive to a specific platform, this will be set to the BungieMembershipType enumeration that matches that platform.
 
 ## Example
 ```javascript
@@ -57,7 +57,7 @@ exclusive | [[BungieMembershipType|BungieMembershipType]]:Enum | If we found tha
         }
     ],
     // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-    "exclusive": 0
+    "exclusive": {}
 }
 
 ```

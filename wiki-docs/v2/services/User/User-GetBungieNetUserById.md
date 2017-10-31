@@ -3,8 +3,8 @@
 ## Info
 Loads a bungienet user by membership id.
 
-* **URI:** [[/User/GetBungieNetUserById/{id}/|https://bungie.net/Platform/User/GetBungieNetUserById/{id}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/GetBungieNetUserById/{id}/|https://www.bungie.net/Platform/User/GetBungieNetUserById/{id}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/GetBungieNetUserById/{id}/
+GET https://www.bungie.net/Platform/User/GetBungieNetUserById/{id}/
 
 ### Response
 PlatformErrorCode: 200

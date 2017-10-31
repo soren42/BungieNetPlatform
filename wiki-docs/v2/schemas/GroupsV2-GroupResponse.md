@@ -15,8 +15,8 @@ alliedIds | integer:int64[] |
 parentGroup | [[GroupV2|GroupsV2-GroupV2]] | 
 allianceStatus | [[GroupAllianceStatus|GroupsV2-GroupAllianceStatus]]:Enum | 
 groupJoinInviteCount | integer:int32 | 
-currentUserMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembershipType]]:Enum,[[GroupMember|GroupsV2-GroupMember]]&gt; | This property will be populated if the authenticated user is a member of the group. Note that because ofaccount linking, a user can sometimes be part of a clan more than once.  As such, this returns thehighest member type available.
-currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembershipType]]:Enum,[[GroupPotentialMember|GroupsV2-GroupPotentialMember]]&gt; | This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join.Note that because of account linking, a user can sometimes be part of a clan more than once.
+currentUserMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembershipType]]:Enum,[[GroupMember|GroupsV2-GroupMember]]&gt; | This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once. As such, this returns the highest member type available.
+currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembershipType]]:Enum,[[GroupPotentialMember|GroupsV2-GroupPotentialMember]]&gt; | This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join. Note that because of account linking, a user can sometimes be part of a clan more than once.
 
 ## Example
 ```javascript
@@ -100,11 +100,11 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
             // Type: boolean
             "updateCulturePermissionOverride": false,
             // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-            "hostGuidedGamePermissionOverride": 0,
+            "hostGuidedGamePermissionOverride": {},
             // Type: boolean
             "updateBannerPermissionOverride": false,
             // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-            "joinLevel": 0
+            "joinLevel": {}
         },
         // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
         "clanInfo": {
@@ -152,7 +152,8 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
                 // Type: integer:uint32
                 "gonfalonDetailId": 0,
                 // Type: integer:uint32
-                "gonfalonDetailColorId": 0
+                "gonfalonDetailColorId": 0,
+                // Type: [[ClanBanner|GroupsV2-ClanBanner]]
             }
         }
     },
@@ -171,7 +172,7 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
             // Type: string
             "iconPath": "",
             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
+            "membershipType": {},
             // Type: integer:int64
             "membershipId": 0,
             // Type: string
@@ -184,7 +185,7 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
             // Type: string
             "iconPath": "",
             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
+            "membershipType": {},
             // Type: integer:int64
             "membershipId": 0,
             // Type: string
@@ -277,11 +278,11 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
             // Type: boolean
             "updateCulturePermissionOverride": false,
             // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-            "hostGuidedGamePermissionOverride": 0,
+            "hostGuidedGamePermissionOverride": {},
             // Type: boolean
             "updateBannerPermissionOverride": false,
             // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-            "joinLevel": 0
+            "joinLevel": {}
         },
         // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
         "clanInfo": {
@@ -329,7 +330,8 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
                 // Type: integer:uint32
                 "gonfalonDetailId": 0,
                 // Type: integer:uint32
-                "gonfalonDetailColorId": 0
+                "gonfalonDetailColorId": 0,
+                // Type: [[ClanBanner|GroupsV2-ClanBanner]]
             }
         }
     },
@@ -353,7 +355,7 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
                 // Type: string
                 "iconPath": "",
                 // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                "membershipType": 0,
+                "membershipType": {},
                 // Type: integer:int64
                 "membershipId": 0,
                 // Type: string
@@ -366,7 +368,7 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
                 // Type: string
                 "iconPath": "",
                 // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                "membershipType": 0,
+                "membershipType": {},
                 // Type: integer:int64
                 "membershipId": 0,
                 // Type: string
@@ -390,7 +392,7 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
                 // Type: string
                 "iconPath": "",
                 // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                "membershipType": 0,
+                "membershipType": {},
                 // Type: integer:int64
                 "membershipId": 0,
                 // Type: string
@@ -403,7 +405,7 @@ currentUserPotentialMemberMap | Dictionary&lt;[[BungieMembershipType|BungieMembe
                 // Type: string
                 "iconPath": "",
                 // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                "membershipType": 0,
+                "membershipType": {},
                 // Type: integer:int64
                 "membershipId": 0,
                 // Type: string

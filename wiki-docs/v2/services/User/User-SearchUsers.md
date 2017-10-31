@@ -3,8 +3,8 @@
 ## Info
 Returns a list of possible users based on the search string
 
-* **URI:** [[/User/SearchUsers/|https://bungie.net/Platform/User/SearchUsers/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/SearchUsers/|https://www.bungie.net/Platform/User/SearchUsers/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ q | string | No | The search string.
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/SearchUsers/
+GET https://www.bungie.net/Platform/User/SearchUsers/
 
 ### Response
 PlatformErrorCode: 200

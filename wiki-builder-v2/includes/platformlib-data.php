@@ -6,103 +6,1475 @@ define('CLAN_MEMBERSHIP_TYPE', 'clanMembershipType');
 define('CHARACTER_ID', 'characterId');
 define('DEFINITIONS', 'definitions');
 define('GROUP_ID', 'groupId');
+define('ITEM_INSTANCE_ID', 'itemInstanceId');
+define('VENDOR_ID', 'vendorHash');
+
+$servicesParams = array(
+	MEMBERSHIP_TYPE => array(
+		'description' => 'The type of account for which info will be extracted.',
+        'required' => true,
+		'schema' => array(
+			'$ref' => '#/components/schemas/BungieMembershipType'
+		)
+	),
+	MEMBERSHIP_ID => array(
+		'description' => 'The membershipId related to that type.',
+		'required' => true,
+		'schema' => array(
+			'type' => 'integer',
+			'format' => 'int64'
+		)
+	),
+	DESTINY_MEMBERSHIP_ID => array(
+		'description' => 'Destiny membership ID.',
+		'required' => true,
+		'schema' => array(
+			'type' => 'integer',
+			'format' => 'int64'
+		)
+	),
+	DEFINITIONS => array(
+		'description' => 'Include definitions in the response. Use while testing.',
+		'schema' => array(
+			'type' => 'boolean'
+		)
+	),
+	VENDOR_ID => array(
+		'name' => 'vendorHash',
+		'description' => 'A valid vendorHash.',
+		'schema' => array(
+			'type' => 'integer',
+			'format' => 'int64'
+		)
+	)
+);
+
+$servicesComponents = array(
+	'Destiny.DefinitionType' => array(
+		'enum' => array(
+			'0',
+			'1',
+			'2',
+			'3',
+			'4',
+			'5',
+			'6',
+			'7',
+			'8',
+			'9',
+			'10',
+			'11',
+			'12',
+			'13',
+			'14',
+			'15',
+			'16',
+			'17',
+			'18',
+			'19',
+			'20',
+			'21',
+			'22',
+			'23',
+		),
+		'type' => 'integer',
+		'format' => 'int32',
+		'x-enum-values' => array(
+			array('numericValue' => '0', 'identifier' => 'None'),
+			array('numericValue' => '1', 'identifier' => 'Activity'),
+			array('numericValue' => '2', 'identifier' => 'ActivityType'),
+			array('numericValue' => '3', 'identifier' => 'Class'),
+			array('numericValue' => '4', 'identifier' => 'Gender'),
+			array('numericValue' => '5', 'identifier' => 'InventoryBucket'),
+			array('numericValue' => '6', 'identifier' => 'InventoryItem'),
+			array('numericValue' => '7', 'identifier' => 'Progression'),
+			array('numericValue' => '8', 'identifier' => 'Race'),
+			array('numericValue' => '9', 'identifier' => 'Stat'),
+			array('numericValue' => '10', 'identifier' => 'TalentGrid'),
+			array('numericValue' => '11', 'identifier' => 'StatGroup'),
+			array('numericValue' => '12', 'identifier' => 'UnlockFlag'),
+			array('numericValue' => '13', 'identifier' => 'Vendor'),
+			array('numericValue' => '14', 'identifier' => 'Destination'),
+			array('numericValue' => '15', 'identifier' => 'Place'),
+			array('numericValue' => '16', 'identifier' => 'DirectorBook'),
+			array('numericValue' => '17', 'identifier' => 'MaterialRequirement'),
+			array('numericValue' => '18', 'identifier' => 'SandboxPerk'),
+			array('numericValue' => '19', 'identifier' => 'ArtDye'),
+			array('numericValue' => '20', 'identifier' => 'ArtDyeChannel'),
+			array('numericValue' => '21', 'identifier' => 'ActivityBundle'),
+			array('numericValue' => '22', 'identifier' => 'GearAsset'),
+			array('numericValue' => '23', 'identifier' => 'GrimoireCard'),
+		)
+	),
+	'Destiny.SearchDestinyPlayer' => array(
+		'type' => 'array',
+		'items' => array(
+			'$ref' => '#/components/schemas/User.UserInfoCard' // TODO: Make D1 version
+		)
+	),
+	'Destiny.PeriodType' => array(
+		'enum' => array('0', '1', '2', '3', '4'),
+		'type' => 'integer',
+		'format' => 'int32',
+		'x-enum-values' => array(
+			array('numericValue' => '0', 'identifier' => 'None'),
+			array('numericValue' => '1', 'identifier' => 'Daily'),
+			array('numericValue' => '2', 'identifier' => 'Monthly'),
+			array('numericValue' => '3', 'identifier' => 'AllTime'),
+			array('numericValue' => '4', 'identifier' => 'Activity'),
+		)
+	)
+);
 
 // A table to unminify all the endpoints
 $servicesData = array(
+	// Destiny Service
+	'Destiny' => array(
+		'GetPublicAdvisorsV2' => array(
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetAdvisorsForAccount' => array(
+			'description' => '',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetAdvisorsForCharacterV2' => array(
+			'description' => '',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetDestinyManifest' => array(
+			'description' => 'Returns the current version of the Destiny 1 mobile manifest as a json object.',
+			'responses' => array(
+				'200' => array(
+					'$ref' => '#/components/responses/Destiny.Config.DestinyManifest' // TODO: Make D1 version
+				)
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Manifest%2f'
+			)
+		),
+		'GetDestinySingleDefinition' => array(
+			'description' => 'Returns a single definition from the manifest as json object.',
+			'path' => array(
+				array(
+					'name' => 'definitionType',
+					'description' => '',
+					'schema' => array(
+						'$ref' => '#/components/schemas/Destiny.DefinitionType'
+					)
+				),
+				array(
+					'name' => 'definitionId',
+					'description' => '',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'SearchDestinyPlayer' => array(
+			'description' => 'Returns a list of players by username and platform.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'displayName',
+					'description' => 'A valid display name to search for.',
+					'required' => true,
+					'schema' => array(
+						'type' => 'string'
+					)
+				)
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=SearchDestinyPlayer%2f%7bmembershipType%7d%2f%7bdisplayName%7d%2f'
+			)
+		),
+		'GetItemReferenceDetail' => false,
+		'GetAllItemsSummary' => array(
+			'description' => 'Returns all items for a given account.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetAccount' => array(
+			'description' => 'Returns Destiny account information for the supplied membership.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+			'references' => array(
+				'https://www.bungie.net/platform/destiny/help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2f'
+			)
+		),
+		'GetAccountSummary' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetVault' => array(
+			'description' => 'Returns the contents of player\'s Vault.',
+			'path' => array(
+				MEMBERSHIP_TYPE
+			),
+			'query' => array(
+				DEFINITIONS,
+				array(
+					'name' => 'accountId',
+					'description' => 'Destiny membership ID.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+		),
+		'GetVaultSummary' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE
+			),
+			'query' => array(
+				DEFINITIONS,
+				array(
+					'name' => 'accountId',
+					'description' => 'Destiny membership ID.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+		),
+		'GetCharacterSummary' => array(
+			'description' => 'Returns Destiny character information for the given characterId.<br/>To get a more detailed overview, see the private endpoint [[GetDestinyAccountCharacterComplete]].',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Stats%2fActivityHistory%2f%7bmembershipType%7d%2f%7bdestinyMembershipId%7d%2f%7bcharacterId%7d%2f'
+			)
+		),
+		'GetCharacter' => array(
+			'description' => 'Returns Destiny character information with a given characterId. This endpoint is an extended version of [[GetCharacterSummary]].',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetCharacterInventory' => array(
+			'description' => 'Returns the inventory of a Destiny character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetCharacterInventorySummary' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetItemDetail' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID,
+				ITEM_INSTANCE_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetCharacterActivities' => array(
+			'description' => 'Returns activity progress for a given character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2fCharacter%2f%7bcharacterId%7d%2fActivities%2f'
+			)
+		),
+		'GetCharacterProgression' => array(
+			'description' => 'Returns progression information for a given Destiny character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=%7bmembershipType%7d%2fAccount%2f%7bdestinyMembershipId%7d%2fCharacter%2f%7bcharacterId%7d%2fProgression%2f'
+			)
+		),
+		'GetTriumphs' => array(
+			'description' => 'Returns a list of triumph sets for a given account.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetRecordBookCompletionStatus' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'recordBookHash',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetAllVendorsForCurrentCharacter' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetVendorSummariesForCurrentCharacter' => array(
+			'description' => 'Returns a summary of Vendors for a given Destiny character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetVendorForCurrentCharacter' => array(
+			'description' => 'Returns information about a Vendor for a given Destiny character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID,
+				VENDOR_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetVendorItemDetailForCurrentCharacter' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID,
+				VENDOR_ID,
+				array(
+					'name' => 'vendorItemId',
+					'description' => 'A valid vendorItemIndex see [[GetVendorForCurrentCharacter]].',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetPublicAdvisors' => array(
+			'description' => 'Returns information about current daily, weekly and special events.',
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetPublicXurVendor' => array(
+			'description' => 'Returns advisor information about the vendor Xur in Destiny.',
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetPublicVendor' => array(
+			'description' => 'Returns Public information for a given Vendor.',
+			'path' => array(
+				VENDOR_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetAdvisorsForCurrentCharacter' => array(
+			'description' => 'Returns advisor information about a given character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetAdvisorsForCharacter' => array(
+			'description' => 'Returns advisor information about a given character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetSpecialEventAdvisors' => array(
+			'description' => 'Returns a list of currently active events.',
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetDestinyLiveTileContentItems' => array(
+			'description' => 'Returns a list of "tiles" used on the Bungie.net website.'
+		),
+		'GetBondAdvisors' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetPublicVendorWithMetadata' => array(
+			'description' => 'Returns Public information for a given Vendor, with metadata.',
+			'path' => array(
+				VENDOR_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetVendorForCurrentCharacterWithMetadata' => array(
+			'description' => 'Returns information about a Vendor for a given Destiny character with metadata.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID,
+				VENDOR_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'GetVendorItemDetailForCurrentCharacterWithMetadata' => array(
+			'description' => 'Returns an item from a Vendor\'s inventory for a given character with metadata.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				CHARACTER_ID,
+				VENDOR_ID,
+				array(
+					'name' => 'vendorItemId',
+					'description' => 'A valid vendorItemIndex see [[GetVendorForCurrentCharacter]].',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+		),
+		'TransferItem' => array(
+			'description' => 'Moves items to and from a character and the vault.',
+			'post' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'itemReferenceHash',
+					'description' => 'The inventoryItemHash for an item.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'itemId',
+					'description' => 'The instanceId of an equipable item. Should be "0" otherwise.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'stackSize',
+					'description' => 'How many items to transfer. Should be "1" for equipable items.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				),
+				array(
+					'name' => 'characterId',
+					'description' => 'A valid characterId that is associated with the given account.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'transferToVault',
+					'description' => 'Move the item to or from the vault; true or false',
+					'schema' => array(
+						'type' => 'boolean'
+					)
+				)
+			)
+		),
+		'EquipItem' => array(
+			'description' => 'Equips an item from a character\'s inventory. The endpoint will fail if the character is logged in and doing an activity.',
+			'post' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'itemId',
+					'description' => 'The instanceId of an equipable item. Should be "0" otherwise.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'characterId',
+					'description' => 'A valid characterId that is associated with the given account.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			)
+		),
+		'EquipItems' => array(
+			'description' => 'Equips multiple items from a character\'s inventory and returns the updated inventory and character information. The endpoint will fail if the character is logged in and doing an activity.'
+				."\n\n"
+				.'**Note:** This is an [experimental endpoint](https://www.bungie.net/en/Clan/Post/39966/187691777/1) that was accidentally left in. While it should work as intended, it may return [incorrect response data and has a higher bandwidth](https://www.bungie.net/en/Clan/Post/39966/196303703/0/0) than simply making multiple [[EquipItem]] requests.',
+			'post' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'itemIds',
+					'description' => 'An array of item instanceIds to equip.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'description' => 'The instanceId of an equipable item. Should be "0" otherwise.',
+							'type' => 'integer',
+							'format' => 'int64'
+
+						)
+					),
+				),
+				array(
+					'name' => 'characterId',
+					'description' => 'A valid characterId that is associated with the given account.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			)
+		),
+		'SetItemLockState' => array(
+			'description' => 'Changes the lock state on an equipable item.',
+			'post' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'itemId',
+					'description' => 'A valid instanceId of an item to lock/unlock.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'characterId',
+					'description' => 'A valid characterId that is associated with the given account.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'state',
+					'description' => 'The item lock state, true to lock, false to unlock.',
+					'schema' => array(
+						'type' => 'boolean'
+					)
+				)
+			)
+		),
+		'SetQuestTrackedState' => array(
+			'description' => 'Set the track state of a given quest.',
+			'post' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				array(
+					'name' => 'itemId',
+					'description' => 'The unique item hash of the quest item.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'characterId',
+					'description' => 'A valid characterId that is associated with the given account.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				),
+				array(
+					'name' => 'state',
+					'description' => 'true = tracked, false = not-tracked',
+					'schema' => array(
+						'type' => 'boolean'
+					)
+				)
+			)
+		),
+		'GetHistoricalStatsDefinition' => array(
+			'description' => ''
+		),
+		'GetHistoricalStats' => array(
+			'description' => 'Returns historical stat information about a given Destiny character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				array(
+					'name' => 'periodType',
+					'description' => 'Indicates a specific period type to return.',
+					'schema' => array(
+						'$ref' => '#/components/schemas/Destiny.PeriodType'
+					)
+				),
+				array(
+					'name' => 'modes',
+					'description' => 'Game modes to return. Comma separated.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/Destiny.ActivityModeType'
+						)
+					)
+				),
+				array(
+					'name' => 'groups',
+					'description' => 'Group of stats to include, otherwise only general stats are returned. Comma separated.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/Destiny.StatsGroupType'
+						)
+					)
+				),
+				array(
+					'name' => 'monthstart',
+					'description' => 'First month to return when monthly stats are requested. Use the format YYYY-MM.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'monthend',
+					'description' => 'Last month to return when monthly stats are requested. Use the format YYYY-MM.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'daystart',
+					'description' => 'First day to return when daily stats are requested. Use the format YYYY-MM-DD.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'dayend',
+					'description' => 'Last day to return when daily stats are requested. Use the format YYYY-MM-DD.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				)
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Stats%2f%7bmembershipType%7d%2f%7bdestinyMembershipId%7d%2f%7bcharacterId%7d%2f'
+			)
+		),
+		'GetHistoricalStatsForAccount' => array(
+			'description' => 'Gets aggregate historical stats organized around each character for a given account.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			array(
+				'name' => 'groups',
+				'description' => 'Group of stats to include, otherwise only general stats are returned. Comma separated.',
+				'schema' => array(
+					'type' => 'array',
+					'items' => array(
+						'$ref' => '#/components/schemas/Destiny.StatsGroupType'
+					)
+				)
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Stats%2fAccount%2f%7bmembershipType%7d%2f%7bdestinyMembershipId%7d%2f'
+			)
+		),
+		'GetActivityHistory' => array(
+			'description' => 'Returns recent activity history for a given character.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				array(
+					'name' => 'mode',
+					'description' => 'Game mode to return. Required.',
+					'schema' => array(
+						'$ref' => '#/components/schemas/Destiny.ActivityModeType'
+					)
+				),
+				array(
+					'name' => 'count',
+					'description' => 'The number of results to return.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				),
+				array(
+					'name' => 'page',
+					'description' => 'The current page to return. Starts at 1.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				),
+				DEFINITIONS
+			)
+		),
+		'GetUniqueWeaponHistory' => array(
+			'description' => 'Gets details about unique weapon usage, including all exotic weapons.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetLeaderboards' => array(
+			'description' => 'Returns leaderboard stats compared against friends. Note you may need to re-authenticate with PSN/Xbox in order to see full rankings.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				array(
+					'name' => 'modes',
+					'description' => 'Game modes to return. Comma separated.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/Destiny.ActivityModeType'
+						)
+					)
+				),
+				'statid',
+				'maxtop'
+			)
+		),
+		'GetClanLeaderboards' => array(
+			'description' => '',
+			'path' => array(
+				array(
+					'name' => 'clanId',
+					'description' => 'A valid clan ID.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				)
+			),
+			'query' => array(
+				array(
+					'name' => 'modes',
+					'description' => 'Game modes to return. Comma separated.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/Destiny.ActivityModeType'
+						)
+					)
+				),
+			)
+		),
+		'GetLeaderboardsForPsn' => array(
+			'description' => 'Returns leaderboard stats compared against PSN friends. Note, you may need re-authenticate with PSN in order to see full rankings.',
+			'query' => array(
+				array(
+					'name' => 'modes',
+					'description' => 'Game modes to return. Comma separated.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/Destiny.ActivityModeType'
+						)
+					)
+				),
+			)
+		),
+		'GetLeaderboardsForCharacter' => false,
+		'GetPostGameCarnageReport' => array(
+			'description' => 'Gets the available post game carnage report for the activity ID.',
+			'path' => array(
+				array(
+					'name' => 'activityInstanceId',
+					'description' => 'A valid activityInstanceId.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int64'
+					)
+				)
+			),
+			'query' => array(
+				DEFINITIONS
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Stats%2fPostGameCarnageReport%2f%7bactivityId%7d%2f'
+			)
+		),
+		'GetActivityBlob' => false,
+		'GetDestinyAggregateActivityStats' => array(
+			'description' => 'Gets all activities the character has participated in together with aggregate statistics for those activities.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID,
+				CHARACTER_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetMembershipIdByDisplayName' => array(
+			'description' => 'Returns the numerical id of a player based on their display name, zero if not found.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				array(
+					'name' => 'displayName',
+					'description' => 'A valid PSN Id or Gamertag display name.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				)
+			),
+			'query' => array(
+				array(
+					'name' => 'ignorecase',
+					'description' => 'Default is false when not specified. True to cause a caseless search to be used.',
+					'schema' => array(
+						'type' => 'boolean'
+					)
+				)
+			)
+		),
+		'GetExcellenceBadges' => array(
+			'description' => 'Returns Destiny excellence badges for a given account. No longer in use.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS
+			)
+		),
+		'GetMyGrimoire' => array(
+			'description' => 'Returns the Grimoire for the currently signed in account.',
+			'path' => array(
+				MEMBERSHIP_TYPE
+			),
+			'query' => array(
+				DEFINITIONS,
+				array(
+					'name' => 'flavour',
+					'description' => 'Indicates flavour stats should be included with player card data. More testing needed.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'single',
+					'description' => 'Return data for a single cardId.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				)
+			)
+		),
+		'GetGrimoireByMembership' => array(
+			'description' => 'Returns the Grimoire for a given account.',
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				DESTINY_MEMBERSHIP_ID
+			),
+			'query' => array(
+				DEFINITIONS,
+				array(
+					'name' => 'flavour',
+					'description' => 'Indicates flavour stats should be included with player card data. More testing needed.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'single',
+					'description' => 'Return data for a single cardId.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				)
+			),
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2f%7bmembershipType%7d%2f%7bmembershipId%7d%2f'
+			)
+		),
+		'GetGrimoireDefinition' => array(
+			'description' => 'Returns Grimoire definitions. This is the equivalent pulling the [[GrimoireDefinition]] from the [[Manifest]].',
+			'references' => array(
+				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=Vanguard%2fGrimoire%2fDefinition%2f'
+			)
+		),
+		'GetDestinyExplorerItems' => array(
+			'description' => 'Advanced InventoryItem search.',
+			'query' => array(
+				array(
+					'name' => 'count',
+					'description' => 'The number of results to return. Default is 10.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				),
+				array(
+					'name' => 'name',
+					'description' => 'Filter by name.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'order',
+					'description' => 'Order results.',
+					'schema' => array(
+						'$ref' => '#/components/schemas/Destiny.ExplorerOrderBy'
+					)
+				),
+				array(
+					'name' => 'rarity',
+					'description' => 'Filter by item rarity.',
+					'schema' => array(
+						'$ref' => '#/components/schemas/TierType'
+					)
+				),
+				array(
+					'name' => 'damageTypes',
+					'description' => 'Filter by damage type.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/DamageType'
+						)
+					)
+				),
+				DEFINITIONS
+			)
+		),
+		'GetDestinyExplorerTalentNodeSteps' => array(
+			'description' => 'Advanced search for TalentNodes.',
+			'query' => array(
+				array(
+					'name' => 'page',
+					'description' => 'The current page to return. Starts at 1.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				),
+				array(
+					'name' => 'count',
+					'description' => 'The number of results per page. Default is 10.',
+					'schema' => array(
+						'type' => 'integer',
+						'format' => 'int32'
+					)
+				),
+				array(
+					'name' => 'name',
+					'description' => 'Filter by name.',
+					'schema' => array(
+						'type' => 'string'
+					)
+				),
+				array(
+					'name' => 'damageTypes',
+					'description' => 'Filter by damage type.',
+					'schema' => array(
+						'type' => 'array',
+						'items' => array(
+							'$ref' => '#/components/schemas/DamageType'
+						)
+					)
+				),
+				DEFINITIONS
+			)
+		)
+	),
+
 	// JSONP Service
 	'Jsonp' => array(
 		'GetCurrentUser' => array(
 			'path' => array('callback')
 		)
 	),
-	// User Service
-//	'User' => array(
-//		'UpdateUser' => array(
-//			'path' => array('postData'),
-//			'post' => array(
-//				'about',
-//				'adultMode',
-//				'displayName',
-//				'emailAddress',
-//				'emailUsage',
-//				'locale',
-//				'localeInheritDefault',
-//				'profilePicture',
-//				'profileTheme',
-//				'showActivity',
-//				'showFacebookPublic',
-//				'showGamertagPublic',
-//				'showGroupMessaging',
-//				'showPsnPublic',
-//				'uniqueName'
-//			)
-//		),
-//		'GetBungieNetUserById' => array(
-//			'path' => array(MEMBERSHIP_ID)
-//		),
-//		'GetUserAliases' => array(
-//			'path' => array(MEMBERSHIP_ID)
-//		),
-//		'SearchUsers' => array(
-//			'query' => array('query')
-//		)
-//	)
 	// Application Service
 	'Application' => array(
-//		'GetAccessTokensFromCode' => array(
-//
-//		)
+		'GetAccessTokensFromCode' => array(
+			'post' => array(
+				'code'
+			),
+			'references' => array(
+				'https://www.bungie.net/en/Help/Article/45481'
+			)
+		),
+		'GetAccessTokensFromRefreshToken' => array(
+			'post' => array(
+				'refreshToken'
+			),
+			'references' => array(
+				'https://www.bungie.net/en/Help/Article/45481'
+			)
+		),
+		'CreateApplication' => false,
+		'GetApplication' => array(
+			'path' => array(
+				'applicationId'
+			)
+		),
+		'EditApplication' => array(
+			'path' => array(
+				'applicationId'
+			)
+		),
+		'GetApplicationApiKeys' => array(
+			'path' => array(
+				'applicationId'
+			)
+		),
+		'ChangeApiKeyStatus' => false,
+		'CreateApiKey' => false,
+		'GetAuthorizations' => false,
+		'GetAuthorizationForUserAndApplication' => false,
+		'RevokeAuthorization' => false,
+		'ApplicationSearch' => false,
+		'PrivateApplicationSearch' => false,
+		'GetOAuthTokens' => false
+	),
+	// User Service
+	'User' => array(
+		'CreateUser' => false,
+		'UpdateUser' => array(
+			'path' => array('postData'),
+			'post' => array(
+				'about',
+				'adultMode',
+				'displayName',
+				'emailAddress',
+				'emailUsage',
+				'locale',
+				'localeInheritDefault',
+				'profilePicture',
+				'profileTheme',
+				'showActivity',
+				'showFacebookPublic',
+				'showGamertagPublic',
+				'showGroupMessaging',
+				'showPsnPublic',
+				'uniqueName'
+			)
+		),
+		'UpdateDestinyEmblemAvatar' => false,
+		'UpdateUserAdmin' => false,
+		'UpdateNotificationSetting' => false,
+		'EditSuccessMessageFlags' => false,
+		'GetCurrentUser' => false,
+		'GetCountsForCurrentUser' => false,
+		'GetCurrentBungieNetUser' => false,
+		'GetBungieAccount' => array(
+			'path' => array(
+				MEMBERSHIP_ID,
+				MEMBERSHIP_TYPE
+			)
+		),
+		'GetCurrentBungieAccount' => false,
+		'SearchUsersPagedV2' => array(
+			'path' => array(
+				'searchTerm',
+				'page'
+			)
+		),
+		'GetNotificationSettings' => false,
+		'GetCredentialTypesForAccount' => false,
+		'GetAvailableAvatars' => false,
+		'GetAvailableAvatarsAdmin' => false,
+		'RegisterMobileAppPair' => false,
+		'UnregisterMobileAppPair' => false,
+		'UpdateStateInfoForMobileAppPair' => false,
+		'GetMobileAppPairings' => false,
+		'GetMobileAppPairingsUncached' => false,
+		'GetSignOutUrl' => false,
+		'LinkOverride' => false,
+		'GetUserMembershipIds' => false,
+		'SetAcknowledged' => array(
+			'path' => array(
+				'ackId'
+			)
+		),
+		'GetPlatformApiKeysForUser' => false,
+		'RemovePartnership' => false,
+	),
+	// Message Service
+	'Message' => array(
+		'GetConversationByIdV2' => false,
+		'GetConversationWithMemberIdV2' => false,
+		'GetConversationThreadV3' => false,
+		'SaveMessageV3' => false,
+		'SaveMessageV4' => false,
+		'UserIsTyping' => false,
+		'CreateConversation' => false,
+		'CreateConversationV2' => false,
+		'GetConversationsV5' => array(
+			'path' => array(
+				'currentPage'
+			)
+		),
+		'GetGroupConversations' => false,
+		'GetGroupConversationsV2' => false,
+		'GetTotalConversationCount' => false,
+		'GetUnreadConversationCountV4' => false,
+		'GetUnreadGroupConversationCount' => false,
+		'CheckGroupConversationReadState' => false,
+		'LeaveConversation' => false,
+		'ReviewInvitations' => false,
+		'ReviewAllInvitations' => false,
+		'ReviewInvitationDirect' => array(
+			'path' => array(
+				'invitationId',
+				'invitationResponseState'
+			)
+		),
+		'ReviewInvitation' => false,
+		'GetAllianceJoinInvitations' => false,
+		'GetAllianceInvitedToJoinInvitations' => false,
+		'GetInvitationDetails' => false,
+		'UpdateConversationLastViewedTimestamp' => false,
+		'ModerateGroupWall' => false,
+		'SetUserNotifyPreferenceForConversation' => false,
+		'GetConversationsV4' => false,
+		'GetUnreadConversationCountV3' => false,
+		'GetUnreadConversationCountV2' => false,
+		'GetConversationById' => array(
+			'path' => array(
+				'conversationId'
+			)
+		),
+		'GetConversationWithMemberId' => array(
+			'path' => array(
+				'memberId'
+			)
+		),
+		'SaveMessageV2' => false,
+		'GetConversationsV2' => false,
+		'GetConversationsV3' => false,
+		'GetConversationThreadV2' => false
+	),
+	// Notification Service
+	'Notification' => array(
+		'GetRecentNotifications' => false,
+		'GetRecentNotificationCount' => false,
+		'ResetNotification' => false,
+		'GetRealTimeEvents' => false
+	),
+	// Content Service
+	'Content' => array(
+		'GetContentType' => false,
+		'GetContentById' => false,
+		'GetContentByTagAndType' => false,
+		'SearchContentEx' => false,
+		'SearchContentWithText' => false,
+		'SearchContentByTagAndType' => false,
+		'GetHomepageContent' => false,
+		'GetHomepageContentV2' => false,
+		'GetJobs' => false,
+		'GetPublications' => false,
+		'GetNews' => false,
+		'GetDestinyContent' => false,
+		'GetDestinyContentV2' => false,
+		'GetPromoWidget' => false,
+		'GetFeaturedArticle' => false,
+		'GetCareers' => false,
+		'GetCareer' => false,
+		'SearchCareers' => false
+	),
+	// External Social Service
+	'ExternalSocial' => array(
+		'GetAggregatedSocialFeed' => false
+	),
+	// Survey Service
+	'Survey' => array(
+		'GetSurvey' => false
+	),
+	// Forum Service
+	'Forum' => array(
+		'CreatePost' => array(
+			'post' => array(
+				'body',
+				'category',
+				'groupId',
+				'isGroupPrivate',
+				'metadata',
+				'parentPostId',
+				'subTopicOverride',
+				'subject',
+				'urlLinkOrImage',
+			)
+		),
+		'CreateContentComment' => false,
+		'EditPost' => false,
+		'DeletePost' => false,
+		'RatePost' => false,
+		'ModeratePost' => false,
+		'ModerateTag' => false,
+		'ModerateGroupPost' => false,
+		'GetPopularTags' => false,
+		'GetForumTagCountEstimate' => false,
+		'MarkReplyAsAnswer' => false,
+		'UnmarkReplyAsAnswer' => false,
+		'PollVote' => false,
+		'ChangePinState' => false,
+		'ChangeLockState' => false
+	),
+	// Activity Service
+	'Activity' => array(
+		'GetEntitiesFollowedByCurrentUser' => false,
+		'GetGroupsFollowedByCurrentUser' => false,
+		'GetGroupsFollowedByUser' => false,
+		'GetEntitiesFollowedByUser' => false,
+		'GetEntitiesFollowedByCurrentUserV2' => false,
+		'GetEntitiesFollowedByUserV2' => false,
+		'GetGroupsFollowedPagedByCurrentUser' => false,
+		'GetGroupsFollowedPagedByUser' => false,
+		'GetUsersFollowedByCurrentUser' => false,
+		'GetFollowersOfUser' => array(
+			'path' => array(
+				'profileId'
+			)
+		),
+		'FollowUser' => false,
+		'UnfollowUser' => false,
+		'GetLikeAndShareActivityForUser' => false,
+		'GetLikeAndShareActivityForUserV2' => false,
+		'GetForumActivityForUser' => false,
+		'GetForumActivityForUserV2' => false,
+		'GetLikeShareAndForumActivityForUser' => false,
+		'GetApplicationActivityForUser' => false,
+		'GetFollowersOfTag' => false,
+		'FollowTag' => false,
+		'UnfollowTag' => false,
+		'GetFriends' => false,
+		'GetFriendsAllNoPresence' => false,
+		'GetFriendsPaged' => array(
+			'path' => array(
+				MEMBERSHIP_TYPE,
+				'currentPage'
+			)
+		)
+	),
+	// Ignore Service
+	'Ignore' => array(
+		'GetIgnoreStatusForPost' => false,
+		'GetIgnoreStatusForUser' => false,
+		'GetIgnoresForUser' => false,
+		'IgnoreItem' => array(
+			'post' => array(
+				'ignoredItemId',
+				'ignoredItemType',
+				'comment',
+				'reason',
+				'itemContextId',
+				'itemContextType',
+				'ModeratorRequest'
+			)
+		),
+		'UnignoreItem' => false,
+		'MyLastReport' => false,
+		'FlagItem' => false,
+		'GetReportContext' => false
+	),
+	// Game Service
+	'Game' => array(
+		'GetPlayerGamesById' => false,
+		'ReachModelSneakerNet' => false
+	),
+	// Admin Service
+	'Admin' => array(
+		'GetAssignedReports' => false,
+		'ReturnAssignedReports' => false,
+		'ResolveReport' => false,
+		'OverturnReport' => false,
+		'GetDisciplinedReportsForMember' => false,
+		'GetRecentDisciplineAndFlagHistoryForMember' => false,
+		'GetResolvedReports' => false,
+		'GloballyIgnoreItem' => false,
+		'OverrideBanOnUser' => false,
+		'OverrideMsgBanOnUser' => false,
+		'OverrideGroupWallBanOnUser' => false,
+		'OverrideGlobalIgnore' => false,
+		'AdminUserSearch' => false,
+		'GetUserBanState' => false,
+		'GetUserWebClientIpHistory' => false,
+		'GetUserPostHistory' => false,
+		'GetAdminHistory' => false,
+		'BulkEditPost' => false
+	),
+	// Tokens Service
+	'Tokens' => array(
+		'ClaimAndApplyOnToken' => false,
+		'GetCurrentUserOfferHistory' => false,
+		'GetCurrentUserThrottleState' => false,
+		'ApplyOfferToCurrentDestinyMembership' => false,
+		'VerifyAge' => false,
+		'ClaimToken' => false,
+		'ConsumeMarketplacePlatformCodeOffer' => false,
+		'MarketplacePlatformCodeOfferHistory' => false
+	),
+	// Community Content Service
+	'Communitycontent' => array(
+		'GetCommunityContent' => false,
+		'GetApprovalQueue' => false,
+		'SubmitContent' => false,
+		'EditContent' => false,
+		'AlterApprovalState' => false,
+		'GetCommunityLiveStatuses' => array(
+			'path' => array(
+				'partnershipType',
+				'communityStatusSort',
+				'page'
+			)
+		),
+		'GetCommunityLiveStatusesForClanmates' => array(
+			'path' => array(
+				'partnershipType',
+				'communityStatusSort',
+				'page'
+			)
+		),
+		'GetCommunityLiveStatusesForFriends' => array(
+			'path' => array(
+				'partnershipType',
+				'communityStatusSort',
+				'page'
+			)
+		),
+		'GetAdminCommunityLiveStatuses' => false,
+		'GetFeaturedCommunityLiveStatuses' => array(
+			'path' => array(
+				'partnershipType',
+				'communityStatusSort',
+				'page'
+			)
+		),
+		'GetStreamingStatusForMember' => array(
+			'path' => array(
+				'partnershipType',
+				MEMBERSHIP_TYPE,
+				MEMBERSHIP_ID
+			)
+		),
+		'AdminSetCommunityLiveMemberBanStatus' => false,
+		'AdminSetCommunityLiveMemberFeatureStatus' => false
+	),
+	// Core Service
+	'Core' => array(
+		'HelloWorld' => false,
+		'GetAvailableLocales' => false,
+		'GetCommonSettings' => false,
+		'GetEssentialCommonSettings' => false,
+		'GetSystemStatus' => false,
+		'GetGlobalAlerts' => false,
+		'GetBroadcastNotifications' => false
 	)
 );
 
 $api_params_old = array(
-	// JSONP Service
-	//'jsonpService.GetCurrentUser' => array('query' => array('e' => 'callback'), 'post' => array()),
-
-	// User Service
-	'UpdateUser' => array('query' => array('g' => 'postData'), 'post' => array(
-		'about',
-		'adultMode',
-		'displayName',
-		'emailAddress',
-		'emailUsage',
-		'locale',
-		'localeInheritDefault',
-		'profilePicture',
-		'profileTheme',
-		'showActivity',
-		'showFacebookPublic',
-		'showGamertagPublic',
-		'showGroupMessaging',
-		'showPsnPublic',
-		'uniqueName'
-	)),
-
-	//'GetBungieNetUserById' => array('query' => array('n' => MEMBERSHIP_ID), 'post' => array()),
-	//'GetUserAliases' => array('query' => array('i' => MEMBERSHIP_ID), 'post' => array()),
-	//'SearchUsers' => array('query' => array('i' => 'query'), 'post' => array()),
-	'SearchUsersPaged' => array('query' => array('i' => 'searchTerm', 'r' => 'page'), 'post' => array()),
-	'SearchUsersPagedV2' => array('query' => array('i' => 'searchTerm', 'r' => 'page'), 'post' => array()),
-	'GetConversationById' => array('query' => array('e' => 'conversationId'), 'post' => array()),
-	'GetConversationWithMemberId' => array('query' => array('e' => 'memberId'), 'post' => array()),
-	'GetRecentNotifications' => array('query' => array('e' => 'format'), 'post' => array()),
-	'GetBungieAccount' => array('query' => array('n' => MEMBERSHIP_ID, 'i' => MEMBERSHIP_TYPE), 'post' => array()),
-	'SetAcknowledged' => array('query' => array('f' => 'ackId'), 'post' => array()),
-
-	'GetMembershipDataById' => array('query' => array(MEMBERSHIP_ID, MEMBERSHIP_TYPE), 'post' => array()),
-
-	// Message Service
-	'ReviewInvitationDirect' => array('query' => array('f' => 'invitationId', 'e' => 'invitationResponseState'), 'post' => array()),
-	'GetConversationsV5' => array('query' => array('h' => 'currentPage'), 'post' => array()),
-
-	// Notification Service
-
-	// Content Service
-
-	// External Social Service
-
-	// Survey Service
-
 	// Forum Service
 	'CreatePost' => array('query' => array(), 'post' => array(
 		'body',
@@ -328,70 +1700,6 @@ $api_params_old = array(
 	'ClaimToken' => array('query' => array(), 'post' => array('redeemCode')),
 	'ClaimAndApplyOnToken' => array('query' => array('e' => 'tokenType'), 'post' => array('redeemCode')),
 
-	// Destiny Service
-	'GetTriumphs' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
-	'GetDestinyAccountSummary' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
-	'GetDestinySingleDefinition' => array('query' => array('k' => 'definitionType', 'l' => 'definitionId', 'h' => DEFINITIONS), 'post' => array()),
-	'SearchDestinyPlayer' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'displayName'), 'post' => array()),
-	'GetAccount' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetVault' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => DEFINITIONS), 'post' => array()),
-	'GetCharacterSummary' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetCharacterInventory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetItemDetail' => array('query' => array('g' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'i' => CHARACTER_ID, 'f' => 'itemInstanceId', 'h' => DEFINITIONS), 'post' => array()),
-	'GetCharacterActivities' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetCharacterProgression' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetAllVendorsForCurrentCharacter' => array('query' => array('e' => MEMBERSHIP_TYPE, 'g' => CHARACTER_ID, 'f' => DEFINITIONS), 'post' => array()),
-	'GetVendorSummariesForCurrentCharacter' => array('query' => array('e' => MEMBERSHIP_TYPE, 'g' => CHARACTER_ID, 'f' => DEFINITIONS), 'post' => array()),
-	'GetVendorForCurrentCharacter' => array('query' => array('e' => MEMBERSHIP_TYPE, 'g' => CHARACTER_ID, 'h' => 'vendorId', 'f' => DEFINITIONS), 'post' => array()),
-	'GetVendorItemDetailForCurrentCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'h' => CHARACTER_ID, 'i' => 'vendorId', 'e' => 'itemId', 'g' => DEFINITIONS), 'post' => array()),
-	'GetPublicAdvisors' => array('query' => array('h' => DEFINITIONS), 'post' => array()),
-	'GetAdvisorsForCurrentCharacter' => array('query' => array('e' => MEMBERSHIP_TYPE, 'g' => CHARACTER_ID, 'f' => DEFINITIONS), 'post' => array()),
-	'GetSpecialEventAdvisors' => array('query' => array('h' => DEFINITIONS), 'post' => array()),
-	'TransferItem' => array('query' => array('g' => 'postData'), 'post' => array('membershipType', 'itemReferenceHash', 'itemId', 'stackSize', 'characterId', 'transferToVault')),
-
-	'EquipItem' => array('query' => array('g' => 'postData'), 'post' => array('membershipType', 'itemId', 'characterId')),
-	'EquipItems' => array('query' => array('g' => 'postData'), 'post' => array('membershipType', 'characterId', 'itemIds][')),
-	'GetHistoricalStats' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => CHARACTER_ID, 'i' => 'periodType', 'o' => 'modes', 'm' => 'groups', 'h' => 'monthstart', 'k' => 'monthend', 'j' => 'daystart', 'l' => 'dayend'), 'post' => array()),
-	'GetHistoricalStatsForAccount' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => 'groups'), 'post' => array()),
-	'GetActivityHistory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'l' => 'mode', 'j' => 'count', 'm' => 'page', 'g' => DEFINITIONS), 'post' => array()),
-	//'GetUniqueWeaponHistory' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetUniqueWeaponHistory' => array('query' => array('i' => MEMBERSHIP_TYPE, 'g' => DESTINY_MEMBERSHIP_ID, 'k' => CHARACTER_ID, 'h' => DEFINITIONS), 'post' => array()),
-	'GetLeaderboards' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => 'modes'), 'post' => array()),
-	'GetLeaderboardsForPsn' => array('query' => array('f' => 'modes', 'h' => 'code'), 'post' => array()),
-	'GetLeaderboardsForCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => CHARACTER_ID, 'i' => 'modes'), 'post' => array()),
-	'GetPostGameCarnageReport' => array('query' => array('f' => 'activityInstanceId', 'e' => DEFINITIONS), 'post' => array()),
-	'GetActivityBlob' => array('query' => array('e' => 'e'), 'post' => array()),
-	//'GetDestinyAggregateActivityStats' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetDestinyAggregateActivityStats' => array('query' => array('i' => MEMBERSHIP_TYPE, 'g' => DESTINY_MEMBERSHIP_ID, 'k' => CHARACTER_ID, 'h' => DEFINITIONS), 'post' => array()),
-	'GetMembershipIdByDisplayName' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'displayName', 'g' => DEFINITIONS), 'post' => array()),
-	'GetExcellenceBadges' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'g' => DEFINITIONS), 'post' => array()),
-	'GetMyGrimoire' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => DEFINITIONS, 'g' => 'flavour', 'h' => 'single'), 'post' => array()),
-	'GetGrimoireByMembership' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => DESTINY_MEMBERSHIP_ID, 'g' => DEFINITIONS, 'h' => 'flavour', 'i' => 'single'), 'post' => array()),
-	'GetDestinyExplorerItems' => array('query' => array('v' => 'count', 'l' => 'characterClass', 'x' => 'types', 't' => 'subtype', 'z' => 'name', 'w' => 'order', 'o' => 'orderstathash', 'r' => 'direction', 'u' => 'rarity', 's' => 'buckets', 'k' => 'bucketsortypes', 'i' => 'weaponPerformance', 'n' => 'impactEffects', 'h' => 'guardianAttributes', 'm' => 'lightAbilities', 'p' => 'damageTypes', 'j' => 'matchrandomsteps', 'q' => DEFINITIONS), 'post' => array()),
-	'GetDestinyExplorerTalentNodeSteps' => array('query' => array('r' => 'page', 'o' => 'count', 'q' => 'name', 'n' => 'direction', 'i' => 'weaponPerformance', 'k' => 'impactEffects', 'h' => 'guardianAttributes', 'j' => 'lightAbilities', 'l' => 'damageTypes', 'm' => 'definitions'), 'post' => array()),
-
-	'SetItemLockState' => array('query' => array(), 'post' => array('membershipType', 'itemId', 'characterId', 'state')),
-	'SetQuestTrackedState' => array('query' => array(), 'post' => array('membershipType', 'membershipId', 'characterId', 'itemId', 'state')),
-
-	'GetVaultSummary' => array('query' => array('e' => MEMBERSHIP_TYPE), 'post' => array()),
-	'GetCharacterInventorySummary' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID), 'post' => array()),
-	'GetAllItemsSummary' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
-	'GetAccountSummary' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
-
-	'GetPublicVendor' => array('query' => array('i' => 'vendorId'), 'post' => array()),
-	'GetPublicVendorWithMetadata' => array('query' => array('i' => 'vendorId'), 'post' => array()),
-	'GetVendorForCurrentCharacterWithMetadata' => array('query' => array('e' => MEMBERSHIP_TYPE, 'g' => CHARACTER_ID, 'h' => 'vendorId'), 'post' => array()),
-	'GetVendorItemDetailForCurrentCharacterWithMetadata' => array('query' => array('f' => MEMBERSHIP_TYPE, 'h' => CHARACTER_ID, 'i' => 'vendorId', 'e' => 'itemId'), 'post' => array()),
-
-	'GetBondAdvisors' => array('query' => array('h' => MEMBERSHIP_TYPE), 'post' => array()),
-
-	'GetAdvisorsForCharacter' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID), 'post' => array()),
-
-	'GetAdvisorsForCharacterV2' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID, 'h' => CHARACTER_ID), 'post' => array()),
-
-	'GetAdvisorsForAccount' => array('query' => array('f' => MEMBERSHIP_TYPE, 'd' => DESTINY_MEMBERSHIP_ID), 'post' => array()),
-	'GetRecordBookCompletionStatus' => array('query' => array('e' => MEMBERSHIP_TYPE, 'f' => 'recordBookHash'), 'post' => array()),
 
 	// Core Service
 

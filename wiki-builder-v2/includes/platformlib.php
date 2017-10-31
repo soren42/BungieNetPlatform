@@ -1,6 +1,89 @@
 <?php
 require_once('platformlib-data.php');
 
+function parseParameters(&$endpoint) {
+	global $servicesParams;
+	foreach(array('path', 'query', 'post') as $key) {
+		$params = isset($endpoint[$key]) ? $endpoint[$key] : array();
+		foreach($params as $index => $param) {
+			if (is_string($param)) {
+				if (isset($servicesParams[$param])) {
+					$params[$index] = $servicesParams[$param];
+					$params[$index]['name'] = $param;
+				} else {
+					$params[$index] = array(
+						'description' => '',
+						'schema' => (object)array(
+							'type' => 'string'
+						)
+					);
+					if (is_string($param)) $params[$index]['name'] = $param;
+				}
+			}
+			if ($key == 'post') {
+				$params[$index]['required'] = true;
+				continue;
+			}
+			//echo '<pre>Param: '.json_encode($param, JSON_PRETTY_PRINT).'</pre>';
+			$params[$index] = array_merge(array('name' => $param, 'in' => $key), $params[$index]);
+			if ($key == 'path') $params[$index]['required'] = true;
+		}
+		$endpoint[$key] = $params;
+	}
+}
+
+function parseResponses(&$openapi, $endpoint) {
+	//echo '<pre>'.json_encode($endpoint->openapi, JSON_PRETTY_PRINT).'</pre>';
+	foreach(array('get', 'post') as $method) {
+		if (!isset($endpoint->openapi->{$method})) continue;
+		$endpointMethod = $endpoint->openapi->{$method};
+		foreach($endpointMethod->responses as $responseCode => $responseRef) {
+			$response = isset($api_param['responses']) && isset($api_param['responses'][$responseCode]) ?
+				$api_param['responses'][$responseCode] :
+				array('$ref' => '#/components/schemas/'.$endpointMethod->operationId);
+
+			if (isset($openapi->components->responses[$endpointMethod->operationId])) continue;
+
+			//echo '<pre>'.json_encode($response, JSON_PRETTY_PRINT).'</pre>';
+			$openapi->components->responses[$endpointMethod->operationId] = array(
+				'description' => 'Look at the Response property for more information about the nature of this response',
+				'content' => array(
+					'application/json' => array(
+						'schema' => array(
+							'type' => 'object',
+							'properties' => array(
+								'Response' => $response,
+								'ErrorCode' => array(
+									'$ref' => '#/components/schemas/Exceptions.PlatformErrorCodes'
+								),
+								"ThrottleSeconds" => array(
+									"type" => "integer",
+									"format" => "int32"
+								),
+								"ErrorStatus" => array(
+									"type" => "string"
+								),
+								"Message" => array(
+									"type" => "string"
+								),
+								"MessageData" => array(
+									"type" => "object",
+									"additionalProperties" => array(
+										"type" => "string"
+									),
+									"x-dictionary-key" => array(
+										"type" => "string"
+									)
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}
+}
+
 function parseServices($platformlib) {
 	global $servicesData;
 
@@ -34,6 +117,7 @@ function parseServices($platformlib) {
 
 	foreach($serviceMatches as $serviceIndex => $service) {
 		$serviceName = str_replace('Service', '', ucfirst($service[1]));
+		$serviceName = str_replace('Communitycontent', 'CommunityContent', $serviceName);
 		$serviceData = $service[2];
 
 		$services[$serviceName] = array(
@@ -81,7 +165,13 @@ function parseServices($platformlib) {
 			preg_match_all('/\{([^\}]+)\}/', $api_data, $pathParamMatches, PREG_SET_ORDER);
 			//echo '<pre>'.var_export($param_matches, true).'</pre>';
 
-			$pathParamNames = isset($endpointData['path']) ? $endpointData['path'] : array();
+			parseParameters($endpointData);
+
+			//$pathParamNames = isset($endpointData['path']) ? $endpointData['path'] : array();
+			$pathParamNames = array();
+			foreach($endpointData['path'] as $pathParam) {
+				$pathParamNames[] = $pathParam['name'];
+			}
 
 			$keys = array();
 			$pathParams = array();
@@ -96,6 +186,7 @@ function parseServices($platformlib) {
 
 			// Replace minified path parameters with proper names
 			foreach($pathParams as $oldParam => $newParam) {
+				//echo $oldParam.' | '.json_encode($newParam, JSON_PRETTY_PRINT)."\n";
 				$api_data = str_replace('{'.$oldParam.'}', '{'.$newParam.'}', $api_data);
 			}
 
@@ -119,7 +210,7 @@ function parseServices($platformlib) {
 
 			$openapi = (object)array(
 				'summary' => $serviceName.'.'.$endpointName,
-				'description' => isset($api_param['description']) ? $api_param['description'] : ''
+				'description' => isset($endpointData['description']) ? $endpointData['description'] : ''
 			);
 
 			// Get path parameters
@@ -127,14 +218,17 @@ function parseServices($platformlib) {
 
 			preg_match_all('/\{([^\}]+)\}/', $endpoint->endpoint, $pathMatches, PREG_SET_ORDER);
 			if (count($pathMatches) > 0) {
-				foreach($pathMatches as $pathMatch) {
+				foreach($pathMatches as $pathMatchIndex => $pathMatch) {
 					$param = array(
 						'name' => $pathMatch[1],
 						'in' => 'path',
 						'description' => '',
 						'required' => true,
-						'schema' => (object)array()
+						'schema' => (object)array(
+							'type' => 'string'
+						)
 					);
+					if (isset($endpointData['path'][$pathMatchIndex])) $param = $endpointData['path'][$pathMatchIndex];
 					$params[] = (object)$param;
 				}
 				//echo '<pre>'.json_encode($pathMatches, JSON_PRETTY_PRINT).'</pre>';
@@ -142,22 +236,32 @@ function parseServices($platformlib) {
 
 			// Get query parameters
 			$queryParams = $api_data[1] ? explode(',', $api_data[1]) : array();
-			foreach($queryParams as $paramName) {
+			foreach($queryParams as $paramIndex => $paramName) {
 				$param = array(
 					'name' => $paramName,
 					'in' => 'query',
 					'description' => '',
-					'schema' => (object)array()
+					'schema' => (object)array(
+						'type' => 'string'
+					)
 				);
+				if (isset($endpointData['query'][$paramIndex])) $param = $endpointData['query'][$paramIndex];
 				$params[] = (object)$param;
 			}
 
 			// Get post parameters
 			$postParams = isset($endpointData['post']) ? $endpointData['post'] : array();
 
-			$params = array_merge($params, $postParams);
+			//$params = array_merge($params, $postParams);
 
-			$openapi->{$method} = (object)array(
+			$responses = isset($endpointData['responses']) ? $endpointData['responses'] : array();
+			if (!isset($responses['200'])) {
+				$responses['200'] = array(
+					'$ref' => '#/components/responses/'.$serviceName.'.'.$endpointName
+				);
+			}
+
+			$endpointMethod = (object)array(
 				'tags' => array(
 					$serviceName,
 					'Unofficial'
@@ -165,8 +269,36 @@ function parseServices($platformlib) {
 				'description' => $openapi->description,
 				'operationId' => $serviceName.'.'.$endpointName,
 				'parameters' => $params,
-				'responses' => (object)(isset($api_param['responses']) ? $api_param['responses'] : array())
+				'responses' => (object)$responses
 			);
+			if ($method == 'post') {
+				$props = array();
+
+				foreach($postParams as $postParam) {
+					$schema = (object)$postParam['schema'];
+					$schema->description = $postParam['description'];
+					if (isset($postParam->required)) $schema->required = $postParam['required'];
+					if (!isset($postParam['name'])) {
+						echo '<pre>NoPostParamName['.$endpointName.']: '.var_export($postParam, true).'</pre>';
+						continue;
+					}
+					$props[$postParam['name']] = $schema;
+				}
+
+				$endpointMethod->requestBody = array(
+					'content' => array(
+						'application/json' => array(
+							'schema' => array(
+								'type' => 'object',
+								'properties' => $props
+							)
+						)
+					),
+					'required' => true
+				);
+			}
+
+			$openapi->{$method} = $endpointMethod;
 
 			$endpoint->openapi = $openapi;
 

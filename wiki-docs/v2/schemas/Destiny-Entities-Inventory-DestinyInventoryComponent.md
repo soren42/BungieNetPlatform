@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-A list of minimal information for items in an inventory: be it a character's inventory, or a Profile's inventory.(Note that the Vault is a collection of inventory buckets in the Profile's inventory) Inventory Items returned here are in a flat list, but importantly they have a bucketHash property thatindicates the specific inventory bucket that is holding them.  These buckets constitute things like the separatesections of the Vault, the user's inventory slots, etc.  See DestinyInventoryBucketDefinition for more info.
+A list of minimal information for items in an inventory: be it a character's inventory, or a Profile's inventory. (Note that the Vault is a collection of inventory buckets in the Profile's inventory) Inventory Items returned here are in a flat list, but importantly they have a bucketHash property that indicates the specific inventory bucket that is holding them. These buckets constitute things like the separate sections of the Vault, the user's inventory slots, etc. See DestinyInventoryBucketDefinition for more info.
 
 ## Schema
 * **Schema Type:** Class
@@ -10,7 +10,7 @@ A list of minimal information for items in an inventory: be it a character's inv
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-items | [[DestinyItemComponent|Destiny-Entities-Items-DestinyItemComponent]][] | The items in this inventory.  If you care to bucket them, use the item's bucketHash property to groupthem.
+items | [[DestinyItemComponent|Destiny-Entities-Items-DestinyItemComponent]][] | The items in this inventory. If you care to bucket them, use the item's bucketHash property to group them.
 
 ## Example
 ```javascript
@@ -26,17 +26,17 @@ items | [[DestinyItemComponent|Destiny-Entities-Items-DestinyItemComponent]][] |
             // Type: integer:int32
             "quantity": 0,
             // Type: [[ItemBindStatus|Destiny-ItemBindStatus]]:Enum
-            "bindStatus": 0,
+            "bindStatus": {},
             // Type: [[ItemLocation|Destiny-ItemLocation]]:Enum
-            "location": 0,
+            "location": {},
             // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
             "bucketHash": 0,
             // Type: [[TransferStatuses|Destiny-TransferStatuses]]:Enum
-            "transferStatus": 0,
+            "transferStatus": {},
             // Type: boolean
             "lockable": false,
             // Type: [[ItemState|Destiny-ItemState]]:Enum
-            "state": 0
+            "state": {}
         }
     ]
 }

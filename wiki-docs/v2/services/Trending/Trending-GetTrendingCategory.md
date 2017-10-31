@@ -3,8 +3,8 @@
 ## Info
 Returns paginated lists of trending items for a category.
 
-* **URI:** [[/Trending/Categories/{categoryId}/{pageNumber}/|https://bungie.net/Platform/Trending/Categories/{categoryId}/{pageNumber}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Trending/Categories/{categoryId}/{pageNumber}/|https://www.bungie.net/Platform/Trending/Categories/{categoryId}/{pageNumber}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Trending|Endpoints#Trending]]
 * **Permissions:** None
@@ -22,7 +22,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Trending/Categories/{categoryId}/{pageNumber}/
+GET https://www.bungie.net/Platform/Trending/Categories/{categoryId}/{pageNumber}/
 
 ### Response
 PlatformErrorCode: 200
@@ -41,7 +41,7 @@ PlatformErrorCode: 200
                 // Type: string
                 "identifier": "",
                 // Type: [[TrendingEntryType|Trending-TrendingEntryType]]:Enum
-                "entityType": 0,
+                "entityType": {},
                 // Type: string
                 "displayName": "",
                 // Type: string

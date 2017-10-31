@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Allows a user to remove themselves from a recuritment thread fireteam slot. Returns the new state of the fireteam.
+Allows a user to remove themselves from a recruitment thread fireteam slot. Returns the new state of the fireteam.
 
-* **URI:** [[/Forum/Recruit/Leave/{topicId}/|https://bungie.net/Platform/Forum/Recruit/Leave/{topicId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/Recruit/Leave/{topicId}/|https://www.bungie.net/Platform/Forum/Recruit/Leave/{topicId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** WriteGroups, BnetWrite
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Forum/Recruit/Leave/{topicId}/
+POST https://www.bungie.net/Platform/Forum/Recruit/Leave/{topicId}/
 
 ### Response
 PlatformErrorCode: 200

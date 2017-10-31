@@ -3,8 +3,8 @@
 ## Info
 Gets tag suggestions based on partial text entry, matching them with other tags previously used in the forums.
 
-* **URI:** [[/Forum/GetForumTagSuggestions/|https://bungie.net/Platform/Forum/GetForumTagSuggestions/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/GetForumTagSuggestions/|https://www.bungie.net/Platform/Forum/GetForumTagSuggestions/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ partialtag | string | No | The partial tag input to generate suggestions from.
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Forum/GetForumTagSuggestions/
+GET https://www.bungie.net/Platform/Forum/GetForumTagSuggestions/
 
 ### Response
 PlatformErrorCode: 200

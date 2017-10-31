@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Allows a user to slot themselves into a recuritment thread fireteam slot. Returns the new state of the fireteam.
+Allows a user to slot themselves into a recruitment thread fireteam slot. Returns the new state of the fireteam.
 
-* **URI:** [[/Forum/Recruit/Join/{topicId}/|https://bungie.net/Platform/Forum/Recruit/Join/{topicId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/Recruit/Join/{topicId}/|https://www.bungie.net/Platform/Forum/Recruit/Join/{topicId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** WriteGroups, BnetWrite
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Forum/Recruit/Join/{topicId}/
+POST https://www.bungie.net/Platform/Forum/Recruit/Join/{topicId}/
 
 ### Response
 PlatformErrorCode: 200

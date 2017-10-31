@@ -45,7 +45,7 @@ function buildParameterTable($schema, $openapi, $versionPrefix) {
 			isset($schemaObject->name) ? $schemaObject->name : $key,
 			$schemaString,
 			isset($schemaObject->required) && $schemaObject->required ? 'Yes' : 'No',
-			$schemaObject->description
+			isset($schemaObject->description) ? $schemaObject->description : ''
 		));
 	}
 	return $markdown;
@@ -341,7 +341,7 @@ function buildSchemaString($schema) {
 			$result = $mappedDefinition.':'.$result;
 		}
 	}
-	else {
+	else if (json_encode($schema) != '{}') {
 		echo 'UnknownSchemaString: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 	}
 	return $result;
@@ -357,7 +357,7 @@ function buildSchemaStringFromRef($ref) {
 function buildEndpoints($openapi, $version) {
 	global $wikiBuilderInfo, $platformlibDesc;
 
-	$serverUrl = $openapi->servers[0]->url;
+	//$serverUrl = $openapi->servers[0]->url;
 
 	$versionPrefix = 'v'.$version;
 
@@ -394,6 +394,8 @@ function buildEndpoints($openapi, $version) {
 				'[['.$endpointShortName.'|'.$endpointPath.']]',
 				$path
 			));;
+
+			$serverUrl = isset($endpoint->servers) && count($endpoint->servers) > 0 ? $endpoint->servers[0]->url : $openapi->servers[0]->url;
 
 			// Build Endpoint page
 			$endpointPath = WIKIPATH.'/'.$versionPrefix.'/services/'.$serviceName.'/'.$endpointPath.'.md';
@@ -432,6 +434,10 @@ function buildEndpoints($openapi, $version) {
 			$postParams = array();
 
 			foreach($endpointMethod->parameters as $param) {
+				if (!isset($param->in)) {
+					echo '<pre>No ParamIn['.$endpointName.']: '.json_encode($param, JSON_PRETTY_PRINT).'</pre>';
+					continue;
+				}
 				switch($param->in) {
 					case 'path':
 						$pathParams[] = $param;
@@ -759,7 +765,16 @@ function buildComponentSchemaPage($ref, $openapi, $versionPrefix) {
 	updateWikiPage($schemaPath, $schemaMarkdown);
 }
 
-$openapi = json_decode(file_get_contents(CACHEPATH.'/api-master/openapi.json'));
+$openapi = loadOpenApi();
+
+$tags = array();
+foreach($openapi->tags as $tag) {
+	$tags[] = $tag->name;
+}
+
+echo 'Tags: '.json_encode($tags, JSON_PRETTY_PRINT).LN;
+
+//echo '<pre>'.json_encode($openapi->components, JSON_PRETTY_PRINT).'</pre>';
 
 // Build Endpoints
 buildEndpoints($openapi, BUNGIE_API_VERSION);

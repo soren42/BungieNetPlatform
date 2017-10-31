@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Many items can be rendered in 3D.  When you request this block, you will obtainthe custom data needed to render this specific instance of the item.
+Many items can be rendered in 3D. When you request this block, you will obtain the custom data needed to render this specific instance of the item.
 
 ## Schema
 * **Schema Type:** Class

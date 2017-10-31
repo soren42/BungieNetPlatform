@@ -61,7 +61,8 @@ clanBannerData | [[ClanBanner|GroupsV2-ClanBanner]] |
         // Type: integer:uint32
         "gonfalonDetailId": 0,
         // Type: integer:uint32
-        "gonfalonDetailColorId": 0
+        "gonfalonDetailColorId": 0,
+        // Type: [[ClanBanner|GroupsV2-ClanBanner]]
     }
 }
 

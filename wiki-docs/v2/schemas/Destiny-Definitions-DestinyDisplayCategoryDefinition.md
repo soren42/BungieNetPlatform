@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Display Categories are different from &quot;categories&quot; in that these are specifically for visual groupingand display of categories in Vendor UI.  The &quot;categories&quot; structure is for validation of the containeditems, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will beno meaningful relationship between the two.
+Display Categories are different from &quot;categories&quot; in that these are specifically for visual grouping and display of categories in Vendor UI. The &quot;categories&quot; structure is for validation of the contained items, and can be categorized entirely separately from &quot;Display Categories&quot;, there need be and often will be no meaningful relationship between the two.
 
 ## Schema
 * **Schema Type:** Definition

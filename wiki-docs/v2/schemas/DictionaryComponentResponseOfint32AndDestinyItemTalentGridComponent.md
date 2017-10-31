@@ -29,7 +29,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                     // Type: integer:uint32
                     "nodeHash": 0,
                     // Type: [[DestinyTalentNodeState|Destiny-DestinyTalentNodeState]]:Enum
-                    "state": 0,
+                    "state": {},
                     // Type: boolean
                     "isActivated": false,
                     // Type: integer:int32
@@ -55,61 +55,13 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                     // Type: boolean
                     "hidden": false,
                     // Type: [[DestinyTalentNodeStatBlock|Destiny-DestinyTalentNodeStatBlock]]
-                    "nodeStatsBlock": {
-                        // Type: [[DestinyStat|Destiny-DestinyStat]][]
-                        "currentStepStats": [
-                           // Type: [[DestinyStat|Destiny-DestinyStat]]
-                            {
-                                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                                "statHash": 0,
-                                // Type: integer:int32
-                                "value": 0,
-                                // Type: integer:int32
-                                "maximumValue": 0
-                            }
-                        ],
-                        // Type: [[DestinyStat|Destiny-DestinyStat]][]
-                        "nextStepStats": [
-                           // Type: [[DestinyStat|Destiny-DestinyStat]]
-                            {
-                                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                                "statHash": 0,
-                                // Type: integer:int32
-                                "value": 0,
-                                // Type: integer:int32
-                                "maximumValue": 0
-                            }
-                        ]
-                    }
+                    "nodeStatsBlock": {}
                 }
             ],
             // Type: boolean
             "isGridComplete": false,
             // Type: [[DestinyProgression|Destiny-DestinyProgression]]
-            "gridProgression": {
-                // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
-                "progressionHash": 0,
-                // Type: integer:int32
-                "dailyProgress": 0,
-                // Type: integer:int32
-                "dailyLimit": 0,
-                // Type: integer:int32
-                "weeklyProgress": 0,
-                // Type: integer:int32
-                "weeklyLimit": 0,
-                // Type: integer:int32
-                "currentProgress": 0,
-                // Type: integer:int32
-                "level": 0,
-                // Type: integer:int32
-                "levelCap": 0,
-                // Type: integer:int32
-                "stepIndex": 0,
-                // Type: integer:int32
-                "progressToNextLevel": 0,
-                // Type: integer:int32
-                "nextLevelAt": 0
-            }
+            "gridProgression": {}
         }
     },
     // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum

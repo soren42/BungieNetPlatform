@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-These properties are an attempt to categorize talent node steps by certain common properties.  Seethe related enumerations for the type of properties being categorized.
+These properties are an attempt to categorize talent node steps by certain common properties. See the related enumerations for the type of properties being categorized.
 
 ## Schema
 * **Schema Type:** Definition

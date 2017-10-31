@@ -12,7 +12,7 @@ Name | Type | Description
 ---- | ---- | -----------
 guidedMaxLobbySize | integer:int32 | The maximum amount of people that can be in the waiting lobby.
 guidedMinLobbySize | integer:int32 | The minimum amount of people that can be in the waiting lobby.
-guidedDisbandCount | integer:int32 | If -1, the guided group cannot be disbanded.  Otherwise, take the total # of players in the activityand subtract this number: that is the total # of votes needed for the guided group to disband.
+guidedDisbandCount | integer:int32 | If -1, the guided group cannot be disbanded. Otherwise, take the total # of players in the activity and subtract this number: that is the total # of votes needed for the guided group to disband.
 
 ## Example
 ```javascript

@@ -3,8 +3,8 @@
 ## Info
 Returns a list of all available user themes.
 
-* **URI:** [[/User/GetAvailableThemes/|https://bungie.net/Platform/User/GetAvailableThemes/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/GetAvailableThemes/|https://www.bungie.net/Platform/User/GetAvailableThemes/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** None
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/GetAvailableThemes/
+GET https://www.bungie.net/Platform/User/GetAvailableThemes/
 
 ### Response
 PlatformErrorCode: 200

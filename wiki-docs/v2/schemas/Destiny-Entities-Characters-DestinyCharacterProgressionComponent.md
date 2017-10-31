@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-This component returns anything that could be considered &quot;Progression&quot; on a user: datawhere the user is gaining levels, reputation, completions, rewards, etc...
+This component returns anything that could be considered &quot;Progression&quot; on a user: data where the user is gaining levels, reputation, completions, rewards, etc...
 
 ## Schema
 * **Schema Type:** Class
@@ -12,10 +12,10 @@ This component returns anything that could be considered &quot;Progression&quot;
 Name | Type | Description
 ---- | ---- | -----------
 progressions | Dictionary&lt;[[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32,[[DestinyProgression|Destiny-DestinyProgression]]&gt; | A Dictionary of all known progressions for the Character, keyed by the Progression's hash. Not all progressions have user-facing data, but those who do will have that data contained in the DestinyProgressionDefinition.
-factions | Dictionary&lt;[[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32,[[DestinyFactionProgression|Destiny-Progression-DestinyFactionProgression]]&gt; | A dictionary of all known Factions, keyed by the Faction's hash.  It contains data about this character'sstatus with the faction.
-milestones | Dictionary&lt;[[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]:integer:uint32,[[DestinyMilestone|Destiny-Milestones-DestinyMilestone]]&gt; | Milestones are related to the simple progressions shown in the game, but return additional andhopefully helpful information for users about the specifics of the Milestone's status.
-quests | [[DestinyQuestStatus|Destiny-Quests-DestinyQuestStatus]][] | If the user has any active quests, the quests' statuses will be returned here. Note that quests have been largely supplanted by Milestones, but that doesn't mean thatthey won't make a comeback independent of milestones at some point.
-uninstancedItemObjectives | Dictionary&lt;[[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32,[[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][]&gt; | Sometimes, you have items in your inventory that don't have instances, but still haveObjective information.  This provides you that objective information for uninstanceditems. This dictionary is keyed by the item's hash: which you can use to look up thename and description for the overall task(s) implied by the objective.The value is the list of objectives for this item, and their statuses.
+factions | Dictionary&lt;[[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32,[[DestinyFactionProgression|Destiny-Progression-DestinyFactionProgression]]&gt; | A dictionary of all known Factions, keyed by the Faction's hash. It contains data about this character's status with the faction.
+milestones | Dictionary&lt;[[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]:integer:uint32,[[DestinyMilestone|Destiny-Milestones-DestinyMilestone]]&gt; | Milestones are related to the simple progressions shown in the game, but return additional and hopefully helpful information for users about the specifics of the Milestone's status.
+quests | [[DestinyQuestStatus|Destiny-Quests-DestinyQuestStatus]][] | If the user has any active quests, the quests' statuses will be returned here. Note that quests have been largely supplanted by Milestones, but that doesn't mean that they won't make a comeback independent of milestones at some point.
+uninstancedItemObjectives | Dictionary&lt;[[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32,[[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][]&gt; | Sometimes, you have items in your inventory that don't have instances, but still have Objective information. This provides you that objective information for uninstanced items. This dictionary is keyed by the item's hash: which you can use to look up the name and description for the overall task(s) implied by the objective. The value is the list of objectives for this item, and their statuses.
 
 ## Example
 ```javascript
@@ -88,88 +88,15 @@ uninstancedItemObjectives | Dictionary&lt;[[Destiny.Definitions.DestinyInventory
                     // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                     "questItemHash": 0,
                     // Type: [[DestinyQuestStatus|Destiny-Quests-DestinyQuestStatus]]
-                    "status": {
-                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                        "questHash": 0,
-                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                        "stepHash": 0,
-                        // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][]
-                        "stepObjectives": [
-                           // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]]
-                            {
-                                // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
-                                "objectiveHash": 0,
-                                // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32:nullable
-                                "destinationHash": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
-                                "activityHash": 0,
-                                // Type: integer:int32:nullable
-                                "progress": 0,
-                                // Type: boolean
-                                "complete": false
-                            }
-                        ],
-                        // Type: boolean
-                        "tracked": false,
-                        // Type: integer:int64
-                        "itemInstanceId": 0,
-                        // Type: boolean
-                        "completed": false,
-                        // Type: boolean
-                        "redeemed": false,
-                        // Type: boolean
-                        "started": false,
-                        // Type: integer:uint32:nullable
-                        "vendorHash": 0
-                    },
+                    "status": {},
                     // Type: [[DestinyMilestoneActivity|Destiny-Milestones-DestinyMilestoneActivity]]
-                    "activity": {
-                        // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                        "activityHash": 0,
-                        // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32[]
-                        "modifierHashes": [
-                           // Type: integer:uint32
-                            0
-                        ],
-                        // Type: [[DestinyMilestoneActivityVariant|Destiny-Milestones-DestinyMilestoneActivityVariant]][]
-                        "variants": [
-                           // Type: [[DestinyMilestoneActivityVariant|Destiny-Milestones-DestinyMilestoneActivityVariant]]
-                            {
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                                "activityHash": 0,
-                                // Type: [[DestinyMilestoneActivityCompletionStatus|Destiny-Milestones-DestinyMilestoneActivityCompletionStatus]]
-                                "completionStatus": {
-                                    // Type: boolean
-                                    "completed": false,
-                                    // Type: [[DestinyMilestoneActivityPhase|Destiny-Milestones-DestinyMilestoneActivityPhase]][]
-                                    "phases": [
-                                       // Type: [[DestinyMilestoneActivityPhase|Destiny-Milestones-DestinyMilestoneActivityPhase]]
-                                        {
-                                            // Type: boolean
-                                            "complete": false
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
+                    "activity": {},
                     // Type: [[DestinyChallengeStatus|Destiny-Challenges-DestinyChallengeStatus]][]
                     "challenges": [
                        // Type: [[DestinyChallengeStatus|Destiny-Challenges-DestinyChallengeStatus]]
                         {
                             // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]]
-                            "objective": {
-                                // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
-                                "objectiveHash": 0,
-                                // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32:nullable
-                                "destinationHash": 0,
-                                // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
-                                "activityHash": 0,
-                                // Type: integer:int32:nullable
-                                "progress": 0,
-                                // Type: boolean
-                                "complete": false
-                            }
+                            "objective": {}
                         }
                     ]
                 }
@@ -182,6 +109,16 @@ uninstancedItemObjectives | Dictionary&lt;[[Destiny.Definitions.DestinyInventory
             "vendorHashes": [
                // Type: integer:uint32
                 0
+            ],
+            // Type: [[DestinyMilestoneVendor|Destiny-Milestones-DestinyMilestoneVendor]][]
+            "vendors": [
+               // Type: [[DestinyMilestoneVendor|Destiny-Milestones-DestinyMilestoneVendor]]
+                {
+                    // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
+                    "vendorHash": 0,
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32:nullable
+                    "previewItemHash": 0
+                }
             ],
             // Type: [[DestinyMilestoneRewardCategory|Destiny-Milestones-DestinyMilestoneRewardCategory]][]
             "rewards": [

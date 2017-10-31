@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Transfer an item to/from your vault.  You must have a valid Destiny account.  You must also pass BOTH a reference AND an instance ID if it's an instanced item.  itshappening.gif
+Transfer an item to/from your vault. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item. itshappening.gif
 
-* **URI:** [[/Destiny2/Actions/Items/TransferItem/|https://bungie.net/Platform/Destiny2/Actions/Items/TransferItem/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Actions/Items/TransferItem/|https://www.bungie.net/Platform/Destiny2/Actions/Items/TransferItem/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** MoveEquipDestinyItems
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Destiny2/Actions/Items/TransferItem/
+POST https://www.bungie.net/Platform/Destiny2/Actions/Items/TransferItem/
 ```javascript
 {
     // Type: integer:uint32

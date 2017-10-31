@@ -3,8 +3,8 @@
 ## Info
 Allows a recruitment thread owner to kick a join user from the fireteam. Returns the new state of the fireteam.
 
-* **URI:** [[/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/|https://bungie.net/Platform/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/|https://www.bungie.net/Platform/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** WriteGroups, BnetWrite
@@ -22,7 +22,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/
+POST https://www.bungie.net/Platform/Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/
 
 ### Response
 PlatformErrorCode: 200

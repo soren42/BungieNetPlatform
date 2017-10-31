@@ -1,26 +1,27 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gender is a social construct, and as such we have definitions for Genders.  Right now there happensto only be two, but we'll see what the future holds.
+Gender is a social construct, and as such we have definitions for Genders. Right now there happens to only be two, but we'll see what the future holds.
 
 ## Schema
 * **Schema Type:** Manifest Definition
+* **Type:** object
 * **Mobile Manifest:** Genders
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-genderType | [[DestinyGender|Destiny-DestinyGender]]:Enum | This is a quick reference enumeration for all of the currently defined Genders.  We use the enumerationfor quicker lookups in related data, like DestinyClassDefinition.genderedClassNames.
+genderType | [[DestinyGender|Destiny-DestinyGender]]:Enum | This is a quick reference enumeration for all of the currently defined Genders. We use the enumeration for quicker lookups in related data, like DestinyClassDefinition.genderedClassNames.
 displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | 
-hash | integer:uint32 | The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
+hash | integer:uint32 | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
 index | integer:int32 | The index of the entity as it was found in the investment tables.
-redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!
+redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
 
 ## Example
 ```javascript
 {
     // Type: [[DestinyGender|Destiny-DestinyGender]]:Enum
-    "genderType": 0,
+    "genderType": {},
     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
     "displayProperties": {
         // Type: string

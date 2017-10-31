@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Set the Lock State for an instanced item.  You must have a valid Destiny Account.
+Set the Lock State for an instanced item. You must have a valid Destiny Account.
 
-* **URI:** [[/Destiny2/Actions/Items/SetLockState/|https://bungie.net/Platform/Destiny2/Actions/Items/SetLockState/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Actions/Items/SetLockState/|https://www.bungie.net/Platform/Destiny2/Actions/Items/SetLockState/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** MoveEquipDestinyItems
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Destiny2/Actions/Items/SetLockState/
+POST https://www.bungie.net/Platform/Destiny2/Actions/Items/SetLockState/
 ```javascript
 {
     // Type: boolean

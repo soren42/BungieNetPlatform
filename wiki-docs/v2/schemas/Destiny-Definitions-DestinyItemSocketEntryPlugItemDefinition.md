@@ -10,7 +10,7 @@ The definition of a known, reusable plug that can be applied to a socket.
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-plugItemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of a DestinyInventoryItemDefinition representing the plugthat can be inserted.
+plugItemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32 | The hash identifier of a DestinyInventoryItemDefinition representing the plug that can be inserted.
 
 ## Example
 ```javascript

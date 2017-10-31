@@ -3,8 +3,8 @@
 ## Info
 Returns the post specified and its immediate parent of posts that are awaiting approval.
 
-* **URI:** [[/Forum/GetPostAndParentAwaitingApproval/{childPostId}/|https://bungie.net/Platform/Forum/GetPostAndParentAwaitingApproval/{childPostId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/GetPostAndParentAwaitingApproval/{childPostId}/|https://www.bungie.net/Platform/Forum/GetPostAndParentAwaitingApproval/{childPostId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** None
@@ -23,7 +23,7 @@ showbanned | string | No | If this value is not null or empty, banned posts are 
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Forum/GetPostAndParentAwaitingApproval/{childPostId}/
+GET https://www.bungie.net/Platform/Forum/GetPostAndParentAwaitingApproval/{childPostId}/
 
 ### Response
 PlatformErrorCode: 200
@@ -231,11 +231,11 @@ PlatformErrorCode: 200
                         // Type: boolean
                         "updateCulturePermissionOverride": false,
                         // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-                        "hostGuidedGamePermissionOverride": 0,
+                        "hostGuidedGamePermissionOverride": {},
                         // Type: boolean
                         "updateBannerPermissionOverride": false,
                         // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-                        "joinLevel": 0
+                        "joinLevel": {}
                     },
                     // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
                     "clanInfo": {
@@ -302,7 +302,7 @@ PlatformErrorCode: 200
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -315,7 +315,7 @@ PlatformErrorCode: 200
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -408,11 +408,11 @@ PlatformErrorCode: 200
                         // Type: boolean
                         "updateCulturePermissionOverride": false,
                         // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-                        "hostGuidedGamePermissionOverride": 0,
+                        "hostGuidedGamePermissionOverride": {},
                         // Type: boolean
                         "updateBannerPermissionOverride": false,
                         // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-                        "joinLevel": 0
+                        "joinLevel": {}
                     },
                     // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
                     "clanInfo": {
@@ -484,7 +484,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string
@@ -497,7 +497,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string
@@ -521,7 +521,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string
@@ -534,7 +534,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string

@@ -5,6 +5,7 @@ All damage types that are possible in the game are defined here, along with loca
 
 ## Schema
 * **Schema Type:** Manifest Definition
+* **Type:** object
 * **Mobile Manifest:** DamageTypes
 
 ## Properties
@@ -12,32 +13,23 @@ Name | Type | Description
 ---- | ---- | -----------
 displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | The description of the damage type, icon etc...
 transparentIconPath | string | A variant of the icon that is transparent and colorless.
-showIcon | boolean | If TRUE, the game shows this damage type's icon.  Otherwise, it doesn't.  Whether you show it or not is up to you.
-enumValue | [[DamageType|Destiny-DamageType]]:Enum | We have an enumeration for damage types for quick reference.  This is the current definition's damage type enum value.
-hash | integer:uint32 | The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
+showIcon | boolean | If TRUE, the game shows this damage type's icon. Otherwise, it doesn't. Whether you show it or not is up to you.
+enumValue | [[DamageType|Destiny-DamageType]]:Enum | We have an enumeration for damage types for quick reference. This is the current definition's damage type enum value.
+hash | integer:uint32 | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
 index | integer:int32 | The index of the entity as it was found in the investment tables.
-redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!
+redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
 
 ## Example
 ```javascript
 {
     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: string
     "transparentIconPath": "",
     // Type: boolean
     "showIcon": false,
     // Type: [[DamageType|Destiny-DamageType]]:Enum
-    "enumValue": 0,
+    "enumValue": {},
     // Type: integer:uint32
     "hash": 0,
     // Type: integer:int32

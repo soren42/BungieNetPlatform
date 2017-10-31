@@ -28,14 +28,34 @@ if (!defined('API_KEY')) define('API_KEY', '{insert-api-key}');
 
 ini_set('max_execution_time', 300);
 
-header('Content-Type: text/plain');
+//header('Content-Type: text/plain');
+
+$offline = isset($_GET['offline']) ? '&offline' : '';
+
+$actions = array(
+	array('link' => '?manifest'.$offline, 'title' => 'Check Manifest'),
+	array('link' => '?api'.$offline, 'title' => 'Check For API Changes'),
+	array('link' => '?wiki'.$offline, 'title' => 'Build Wiki'),
+	array('link' => '?pages'.$offline, 'title' => 'Build Pages')
+);
+
+echo '<ul>';
+foreach($actions as $action) {
+	echo '<li><a href="'.$action['link'].'">'.$action['title'].'</a> | <a href="'.$action['link'].'&update">Force Update</a></li>';
+}
+echo '</ul>';
+echo '<hr/>';
+
+echo '<pre>';
 
 if (isset($_GET['wiki'])) {
 	include('includes/wiki.php');
 } else if (isset($_GET['pages'])) {
 	include('includes/pages.php');
-} else if (isset($_GET['update'])) {
+} else if (isset($_GET['api'])) {
 	include('includes/update.php');
 } else {
 	include('includes/manifest.php');
 }
+
+echo '</pre>';

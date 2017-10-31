@@ -63,6 +63,7 @@ ValidationMaximumUnicodeCombiningCharacters | 49 |
 ValidationMaximumSequentialCarriageReturns | 50 | 
 PerEndpointRequestThrottleExceeded | 51 | 
 AuthContextCacheAssertion | 52 | 
+ExPlatformStringValidationError | 53 | 
 ObsoleteCredentialType | 89 | 
 UnableToUnPairMobileApp | 90 | 
 UnableToPairMobileApp | 91 | 
@@ -487,7 +488,7 @@ DestinyInvalidMembershipType | 1630 |
 DestinyVersionIncompatibility | 1631 | 
 DestinyItemAlreadyInInventory | 1632 | 
 DestinyBucketNotFound | 1633 | 
-DestinyCharacterNotInTower | 1634 | Note: This is one of those holdovers from Destiny 1.  We didn't change the enum because I am lazy,but in Destiny 2 this would read &quot;DestinyCharacterNotInSocialSpace&quot;
+DestinyCharacterNotInTower | 1634 | Note: This is one of those holdovers from Destiny 1. We didn't change the enum because I am lazy, but in Destiny 2 this would read &quot;DestinyCharacterNotInSocialSpace&quot;
 DestinyCharacterNotLoggedIn | 1635 | 
 DestinyDefinitionsNotLoaded | 1636 | 
 DestinyInventoryFull | 1637 | 

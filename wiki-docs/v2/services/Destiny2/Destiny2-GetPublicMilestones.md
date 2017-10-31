@@ -3,8 +3,8 @@
 ## Info
 Gets public information about currently available Milestones.
 
-* **URI:** [[/Destiny2/Milestones/|https://bungie.net/Platform/Destiny2/Milestones/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Milestones/|https://www.bungie.net/Platform/Destiny2/Milestones/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Milestones/
+GET https://www.bungie.net/Platform/Destiny2/Milestones/
 
 ### Response
 PlatformErrorCode: 200
@@ -37,23 +37,7 @@ PlatformErrorCode: 200
                     // Type: [[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]:integer:uint32
                     "questItemHash": 0,
                     // Type: [[DestinyPublicMilestoneActivity|Destiny-Milestones-DestinyPublicMilestoneActivity]]
-                    "activity": {
-                        // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                        "activityHash": 0,
-                        // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32[]
-                        "modifierHashes": [
-                           // Type: integer:uint32
-                            0
-                        ],
-                        // Type: [[DestinyPublicMilestoneActivityVariant|Destiny-Milestones-DestinyPublicMilestoneActivityVariant]][]
-                        "variants": [
-                           // Type: [[DestinyPublicMilestoneActivityVariant|Destiny-Milestones-DestinyPublicMilestoneActivityVariant]]
-                            {
-                                // Type: integer:uint32
-                                "activityHash": 0
-                            }
-                        ]
-                    },
+                    "activity": {},
                     // Type: [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicMilestoneChallenge]][]
                     "challenges": [
                        // Type: [[DestinyPublicMilestoneChallenge|Destiny-Milestones-DestinyPublicMilestoneChallenge]]
@@ -70,6 +54,16 @@ PlatformErrorCode: 200
             "vendorHashes": [
                // Type: integer:uint32
                 0
+            ],
+            // Type: [[DestinyPublicMilestoneVendor|Destiny-Milestones-DestinyPublicMilestoneVendor]][]
+            "vendors": [
+               // Type: [[DestinyPublicMilestoneVendor|Destiny-Milestones-DestinyPublicMilestoneVendor]]
+                {
+                    // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
+                    "vendorHash": 0,
+                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32:nullable
+                    "previewItemHash": 0
+                }
             ],
             // Type: string:date-time:nullable
             "startDate": "",

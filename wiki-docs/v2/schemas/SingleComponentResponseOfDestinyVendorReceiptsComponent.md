@@ -34,20 +34,13 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                     }
                 ],
                 // Type: [[DestinyItemQuantity|Destiny-DestinyItemQuantity]]
-                "itemReceived": {
-                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                    "itemHash": 0,
-                    // Type: integer:int64:nullable
-                    "itemInstanceId": 0,
-                    // Type: integer:int32
-                    "quantity": 0
-                },
+                "itemReceived": {},
                 // Type: integer:uint32
                 "licenseUnlockHash": 0,
                 // Type: integer:int64
                 "purchasedByCharacterId": 0,
                 // Type: [[DestinyVendorItemRefundPolicy|Destiny-DestinyVendorItemRefundPolicy]]:Enum
-                "refundPolicy": 0,
+                "refundPolicy": {},
                 // Type: integer:int32
                 "sequenceNumber": 0,
                 // Type: integer:int64

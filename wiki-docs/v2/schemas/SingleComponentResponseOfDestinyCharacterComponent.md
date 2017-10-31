@@ -20,7 +20,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         // Type: integer:int64
         "membershipId": 0,
         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-        "membershipType": 0,
+        "membershipType": {},
         // Type: integer:int64
         "characterId": 0,
         // Type: string:date-time
@@ -42,42 +42,21 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         // Type: [[Destiny.Definitions.DestinyClassDefinition|Destiny-Definitions-DestinyClassDefinition]]:integer:uint32
         "classHash": 0,
         // Type: [[DestinyRace|Destiny-DestinyRace]]:Enum
-        "raceType": 0,
+        "raceType": {},
         // Type: [[DestinyClass|Destiny-DestinyClass]]:Enum
-        "classType": 0,
+        "classType": {},
         // Type: [[DestinyGender|Destiny-DestinyGender]]:Enum
-        "genderType": 0,
+        "genderType": {},
         // Type: string
         "emblemPath": "",
         // Type: string
         "emblemBackgroundPath": "",
         // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
         "emblemHash": 0,
+        // Type: [[DestinyColor|Destiny-Misc-DestinyColor]]
+        "emblemColor": {},
         // Type: [[DestinyProgression|Destiny-DestinyProgression]]
-        "levelProgression": {
-            // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
-            "progressionHash": 0,
-            // Type: integer:int32
-            "dailyProgress": 0,
-            // Type: integer:int32
-            "dailyLimit": 0,
-            // Type: integer:int32
-            "weeklyProgress": 0,
-            // Type: integer:int32
-            "weeklyLimit": 0,
-            // Type: integer:int32
-            "currentProgress": 0,
-            // Type: integer:int32
-            "level": 0,
-            // Type: integer:int32
-            "levelCap": 0,
-            // Type: integer:int32
-            "stepIndex": 0,
-            // Type: integer:int32
-            "progressToNextLevel": 0,
-            // Type: integer:int32
-            "nextLevelAt": 0
-        },
+        "levelProgression": {},
         // Type: integer:int32
         "baseCharacterLevel": 0,
         // Type: number:float

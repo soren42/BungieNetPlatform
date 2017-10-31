@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-The character-specific data for a milestone's reward entry.  See DestinyMilestoneDefinition formore information about Reward Entries.
+The character-specific data for a milestone's reward entry. See DestinyMilestoneDefinition for more information about Reward Entries.
 
 ## Schema
 * **Schema Type:** Class
@@ -10,9 +10,9 @@ The character-specific data for a milestone's reward entry.  See DestinyMileston
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-rewardEntryHash | integer:uint32 | The identifier for the reward entry in question.  It is important to look up the relatedDestinyMilestoneRewardEntryDefinition to get the static details about the reward, whichyou can do by looking up the milestone's DestinyMilestoneDefinition and examining theDestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data.
+rewardEntryHash | integer:uint32 | The identifier for the reward entry in question. It is important to look up the related DestinyMilestoneRewardEntryDefinition to get the static details about the reward, which you can do by looking up the milestone's DestinyMilestoneDefinition and examining the DestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data.
 earned | boolean | If TRUE, the player has earned this reward.
-redeemed | boolean | If TRUE, the player has redeemed/picked up/obtained this reward.Feel free to alias this to &quot;gotTheShinyBauble&quot; in your own codebase.
+redeemed | boolean | If TRUE, the player has redeemed/picked up/obtained this reward. Feel free to alias this to &quot;gotTheShinyBauble&quot; in your own codebase.
 
 ## Example
 ```javascript

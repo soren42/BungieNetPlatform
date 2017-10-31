@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Sockets are grouped into categories in the UI.  These define which categoryand which sockets are under that category.
+Sockets are grouped into categories in the UI. These define which category and which sockets are under that category.
 
 ## Schema
 * **Schema Type:** Definition
@@ -10,13 +10,13 @@ Sockets are grouped into categories in the UI.  These define which categoryand w
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-socketCategoryHash | [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]]:Definition:integer:uint32 | The hash for the Socket Category: a quick way to go get the header display information for the category.Use it to look up DestinyItemSocketCategoryDefinition info.
-socketIndexes | integer:int32[] | Use these indexes to look up the sockets in the &quot;sockets.socketEntries&quot; property on the item definition.These are the indexes under the category, in game-rendered order.
+socketCategoryHash | [[Destiny.Definitions.Sockets.DestinySocketCategoryDefinition|Destiny-Definitions-Sockets-DestinySocketCategoryDefinition]]:integer:uint32 | The hash for the Socket Category: a quick way to go get the header display information for the category. Use it to look up DestinySocketCategoryDefinition info.
+socketIndexes | integer:int32[] | Use these indexes to look up the sockets in the &quot;sockets.socketEntries&quot; property on the item definition. These are the indexes under the category, in game-rendered order.
 
 ## Example
 ```javascript
 {
-    // Type: [[DestinyItemSocketCategoryDefinition|Destiny-Definitions-DestinyItemSocketCategoryDefinition]]:Definition:integer:uint32
+    // Type: [[Destiny.Definitions.Sockets.DestinySocketCategoryDefinition|Destiny-Definitions-Sockets-DestinySocketCategoryDefinition]]:integer:uint32
     "socketCategoryHash": 0,
     // Type: integer:int32[]
     "socketIndexes": [

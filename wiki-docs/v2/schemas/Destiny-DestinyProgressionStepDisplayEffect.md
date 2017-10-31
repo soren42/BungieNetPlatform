@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-If progression is earned, this determines whether the progression shows visual effects onthe character or its item - or neither.
+If progression is earned, this determines whether the progression shows visual effects on the character or its item - or neither.
 
 ## Schema
 * **Schema Type:** Enum

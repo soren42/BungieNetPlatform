@@ -128,3 +128,38 @@ function cleanDescription($description) {
 	//$description = str_replace('<br/><br/>', "\r\n\r\n", $description);
 	return $description;
 }
+
+function loadOpenApi() {
+	$openapi = json_decode(file_get_contents(CACHEPATH.'/api-master/openapi.json'));
+
+	$tags = array();
+	foreach($openapi->tags as $tag) {
+		$tags[] = $tag->name;
+	}
+
+	for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
+		$unOpenapi = json_decode(file_get_contents(DATAPATH.'/openapi-d'.$i.'.json'));
+
+		foreach($unOpenapi->tags as $tag) {
+			if (!in_array($tag->name, $tags)) {
+				$openapi->tags[] = $tag;
+				$tags[] = $tag->name;
+			}
+		}
+
+		foreach($unOpenapi->paths as $path => $endpoint) {
+			$endpoint->servers = $unOpenapi->servers;
+			$openapi->paths->{$path} = $endpoint;
+		}
+
+		foreach($unOpenapi->components as $componentType => $components) {
+			foreach($components as $componentId => $component) {
+				if (!isset($openapi->components->{$componentType}->{$componentId})) {
+					//echo '<pre>Override: '.$componentType.'.'.$componentId.'</pre>';
+					$openapi->components->{$componentType}->{$componentId} = $component;
+				}
+			}
+		}
+	}
+	return $openapi;
+}

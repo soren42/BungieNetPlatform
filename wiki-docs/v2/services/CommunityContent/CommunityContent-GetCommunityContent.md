@@ -3,8 +3,8 @@
 ## Info
 Returns community content.
 
-* **URI:** [[/CommunityContent/Get/{sort}/{mediaFilter}/{page}/|https://bungie.net/Platform/CommunityContent/Get/{sort}/{mediaFilter}/{page}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/CommunityContent/Get/{sort}/{mediaFilter}/{page}/|https://www.bungie.net/Platform/CommunityContent/Get/{sort}/{mediaFilter}/{page}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[CommunityContent|Endpoints#CommunityContent]]
 * **Permissions:** None
@@ -23,7 +23,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/CommunityContent/Get/{sort}/{mediaFilter}/{page}/
+GET https://www.bungie.net/Platform/CommunityContent/Get/{sort}/{mediaFilter}/{page}/
 
 ### Response
 PlatformErrorCode: 200
@@ -231,11 +231,11 @@ PlatformErrorCode: 200
                         // Type: boolean
                         "updateCulturePermissionOverride": false,
                         // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-                        "hostGuidedGamePermissionOverride": 0,
+                        "hostGuidedGamePermissionOverride": {},
                         // Type: boolean
                         "updateBannerPermissionOverride": false,
                         // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-                        "joinLevel": 0
+                        "joinLevel": {}
                     },
                     // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
                     "clanInfo": {
@@ -283,7 +283,8 @@ PlatformErrorCode: 200
                             // Type: integer:uint32
                             "gonfalonDetailId": 0,
                             // Type: integer:uint32
-                            "gonfalonDetailColorId": 0
+                            "gonfalonDetailColorId": 0,
+                            // Type: [[ClanBanner|GroupsV2-ClanBanner]]
                         }
                     }
                 },
@@ -302,7 +303,7 @@ PlatformErrorCode: 200
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -315,7 +316,7 @@ PlatformErrorCode: 200
                         // Type: string
                         "iconPath": "",
                         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                        "membershipType": 0,
+                        "membershipType": {},
                         // Type: integer:int64
                         "membershipId": 0,
                         // Type: string
@@ -408,11 +409,11 @@ PlatformErrorCode: 200
                         // Type: boolean
                         "updateCulturePermissionOverride": false,
                         // Type: [[HostGuidedGamesPermissionLevel|GroupsV2-HostGuidedGamesPermissionLevel]]:Enum
-                        "hostGuidedGamePermissionOverride": 0,
+                        "hostGuidedGamePermissionOverride": {},
                         // Type: boolean
                         "updateBannerPermissionOverride": false,
                         // Type: [[RuntimeGroupMemberType|GroupsV2-RuntimeGroupMemberType]]:Enum
-                        "joinLevel": 0
+                        "joinLevel": {}
                     },
                     // Type: [[GroupV2ClanInfoAndInvestment|GroupsV2-GroupV2ClanInfoAndInvestment]]
                     "clanInfo": {
@@ -460,7 +461,8 @@ PlatformErrorCode: 200
                             // Type: integer:uint32
                             "gonfalonDetailId": 0,
                             // Type: integer:uint32
-                            "gonfalonDetailColorId": 0
+                            "gonfalonDetailColorId": 0,
+                            // Type: [[ClanBanner|GroupsV2-ClanBanner]]
                         }
                     }
                 },
@@ -484,7 +486,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string
@@ -497,7 +499,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string
@@ -521,7 +523,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string
@@ -534,7 +536,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "iconPath": "",
                             // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                            "membershipType": 0,
+                            "membershipType": {},
                             // Type: integer:int64
                             "membershipId": 0,
                             // Type: string

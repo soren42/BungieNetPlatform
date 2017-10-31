@@ -1,10 +1,11 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Defines the tier type of an item.  Mostly this provides human readable properties for typeslike Common, Rare, etc... It also provides some base data for infusion that could be useful.
+Defines the tier type of an item. Mostly this provides human readable properties for types like Common, Rare, etc... It also provides some base data for infusion that could be useful.
 
 ## Schema
 * **Schema Type:** Manifest Definition
+* **Type:** object
 * **Mobile Manifest:** ItemTierTypes
 
 ## Properties
@@ -12,9 +13,9 @@ Name | Type | Description
 ---- | ---- | -----------
 displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | 
 infusionProcess | [[DestinyItemTierTypeInfusionBlock|Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock]]:Definition | If this tier defines infusion properties, they will be contained here.
-hash | integer:uint32 | The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
+hash | integer:uint32 | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
 index | integer:int32 | The index of the entity as it was found in the investment tables.
-redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!
+redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
 
 ## Example
 ```javascript
@@ -31,12 +32,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
         "hasIcon": false
     },
     // Type: [[DestinyItemTierTypeInfusionBlock|Destiny-Definitions-Items-DestinyItemTierTypeInfusionBlock]]:Definition
-    "infusionProcess": {
-        // Type: number:float
-        "baseQualityTransferRatio": 0,
-        // Type: integer:int32
-        "minimumQualityIncrement": 0
-    },
+    "infusionProcess": {},
     // Type: integer:uint32
     "hash": 0,
     // Type: integer:int32

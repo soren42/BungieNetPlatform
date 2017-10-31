@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Basic identifying data about the bubble.  Combine with DestinyDestinationBubbleSettingDefinition - seeDestinyDestinationDefinition.bubbleSettings for more information.
+Basic identifying data about the bubble. Combine with DestinyDestinationBubbleSettingDefinition - see DestinyDestinationDefinition.bubbleSettings for more information.
 
 ## Schema
 * **Schema Type:** Definition

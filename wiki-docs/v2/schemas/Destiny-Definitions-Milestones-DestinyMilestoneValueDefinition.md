@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-The definition for information related to a key/value pair that is relevant for a particular Milestone orcomponent within the Milestone. This lets us more flexibly pass up information that's useful to someone,even if it's not necessarily us.
+The definition for information related to a key/value pair that is relevant for a particular Milestone or component within the Milestone. This lets us more flexibly pass up information that's useful to someone, even if it's not necessarily us.
 
 ## Schema
 * **Schema Type:** Definition

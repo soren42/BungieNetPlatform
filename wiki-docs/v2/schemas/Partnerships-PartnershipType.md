@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Representing external partners to which BNet users can link accounts, but thatare not Account System credentials: partnerships that BNet uses exclusively for data.
+Representing external partners to which BNet users can link accounts, but that are not Account System credentials: partnerships that BNet uses exclusively for data.
 
 ## Schema
 * **Schema Type:** Enum

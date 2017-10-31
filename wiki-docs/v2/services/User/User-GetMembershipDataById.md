@@ -3,8 +3,8 @@
 ## Info
 Returns a list of accounts associated with the supplied membership ID and membership type. This will include all linked accounts (even when hidden) if supplied credentials permit it.
 
-* **URI:** [[/User/GetMembershipsById/{membershipId}/{membershipType}/|https://bungie.net/Platform/User/GetMembershipsById/{membershipId}/{membershipType}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/GetMembershipsById/{membershipId}/{membershipType}/|https://www.bungie.net/Platform/User/GetMembershipsById/{membershipId}/{membershipType}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** None
@@ -22,7 +22,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/GetMembershipsById/{membershipId}/{membershipType}/
+GET https://www.bungie.net/Platform/User/GetMembershipsById/{membershipId}/{membershipType}/
 
 ### Response
 PlatformErrorCode: 200
@@ -39,7 +39,7 @@ PlatformErrorCode: 200
                 // Type: string
                 "iconPath": "",
                 // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                "membershipType": 0,
+                "membershipType": {},
                 // Type: integer:int64
                 "membershipId": 0,
                 // Type: string

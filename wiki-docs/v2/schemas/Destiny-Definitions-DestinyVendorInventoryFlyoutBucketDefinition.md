@@ -22,7 +22,7 @@ sortItemsBy | [[DestinyItemSortType|Destiny-DestinyItemSortType]]:Enum | The met
     // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
     "inventoryBucketHash": 0,
     // Type: [[DestinyItemSortType|Destiny-DestinyItemSortType]]:Enum
-    "sortItemsBy": 0
+    "sortItemsBy": {}
 }
 
 ```

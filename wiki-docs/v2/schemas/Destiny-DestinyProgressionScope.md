@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-There are many Progressions in Destiny (think Character Level, or Reputation).These are the various &quot;Scopes&quot; of Progressions, which affect many things:* Where/if they are stored* How they are calculated* Where they can be used in other game logic
+There are many Progressions in Destiny (think Character Level, or Reputation). These are the various &quot;Scopes&quot; of Progressions, which affect many things: * Where/if they are stored * How they are calculated * Where they can be used in other game logic
 
 ## Schema
 * **Schema Type:** Enum

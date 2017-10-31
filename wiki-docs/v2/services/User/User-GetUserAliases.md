@@ -3,8 +3,8 @@
 ## Info
 Loads aliases of a bungienet membership id.
 
-* **URI:** [[/User/GetUserAliases/{id}/|https://bungie.net/Platform/User/GetUserAliases/{id}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/GetUserAliases/{id}/|https://www.bungie.net/Platform/User/GetUserAliases/{id}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/GetUserAliases/{id}/
+GET https://www.bungie.net/Platform/User/GetUserAliases/{id}/
 
 ### Response
 PlatformErrorCode: 200

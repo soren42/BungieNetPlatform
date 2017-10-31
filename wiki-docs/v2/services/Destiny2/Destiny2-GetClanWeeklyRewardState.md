@@ -3,8 +3,8 @@
 ## Info
 Returns information on the weekly clan rewards and if the clan has earned them or not. Note that this will always report rewards as not redeemed.
 
-* **URI:** [[/Destiny2/Clan/{groupId}/WeeklyRewardState/|https://bungie.net/Platform/Destiny2/Clan/{groupId}/WeeklyRewardState/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Clan/{groupId}/WeeklyRewardState/|https://www.bungie.net/Platform/Destiny2/Clan/{groupId}/WeeklyRewardState/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Clan/{groupId}/WeeklyRewardState/
+GET https://www.bungie.net/Platform/Destiny2/Clan/{groupId}/WeeklyRewardState/
 
 ### Response
 PlatformErrorCode: 200
@@ -38,88 +38,15 @@ PlatformErrorCode: 200
                 // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
                 "questItemHash": 0,
                 // Type: [[DestinyQuestStatus|Destiny-Quests-DestinyQuestStatus]]
-                "status": {
-                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                    "questHash": 0,
-                    // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                    "stepHash": 0,
-                    // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]][]
-                    "stepObjectives": [
-                       // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]]
-                        {
-                            // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
-                            "objectiveHash": 0,
-                            // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32:nullable
-                            "destinationHash": 0,
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
-                            "activityHash": 0,
-                            // Type: integer:int32:nullable
-                            "progress": 0,
-                            // Type: boolean
-                            "complete": false
-                        }
-                    ],
-                    // Type: boolean
-                    "tracked": false,
-                    // Type: integer:int64
-                    "itemInstanceId": 0,
-                    // Type: boolean
-                    "completed": false,
-                    // Type: boolean
-                    "redeemed": false,
-                    // Type: boolean
-                    "started": false,
-                    // Type: integer:uint32:nullable
-                    "vendorHash": 0
-                },
+                "status": {},
                 // Type: [[DestinyMilestoneActivity|Destiny-Milestones-DestinyMilestoneActivity]]
-                "activity": {
-                    // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                    "activityHash": 0,
-                    // Type: [[Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition|Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition]]:integer:uint32[]
-                    "modifierHashes": [
-                       // Type: integer:uint32
-                        0
-                    ],
-                    // Type: [[DestinyMilestoneActivityVariant|Destiny-Milestones-DestinyMilestoneActivityVariant]][]
-                    "variants": [
-                       // Type: [[DestinyMilestoneActivityVariant|Destiny-Milestones-DestinyMilestoneActivityVariant]]
-                        {
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-                            "activityHash": 0,
-                            // Type: [[DestinyMilestoneActivityCompletionStatus|Destiny-Milestones-DestinyMilestoneActivityCompletionStatus]]
-                            "completionStatus": {
-                                // Type: boolean
-                                "completed": false,
-                                // Type: [[DestinyMilestoneActivityPhase|Destiny-Milestones-DestinyMilestoneActivityPhase]][]
-                                "phases": [
-                                   // Type: [[DestinyMilestoneActivityPhase|Destiny-Milestones-DestinyMilestoneActivityPhase]]
-                                    {
-                                        // Type: boolean
-                                        "complete": false
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                },
+                "activity": {},
                 // Type: [[DestinyChallengeStatus|Destiny-Challenges-DestinyChallengeStatus]][]
                 "challenges": [
                    // Type: [[DestinyChallengeStatus|Destiny-Challenges-DestinyChallengeStatus]]
                     {
                         // Type: [[DestinyObjectiveProgress|Destiny-Quests-DestinyObjectiveProgress]]
-                        "objective": {
-                            // Type: [[Destiny.Definitions.DestinyObjectiveDefinition|Destiny-Definitions-DestinyObjectiveDefinition]]:integer:uint32
-                            "objectiveHash": 0,
-                            // Type: [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]]:integer:uint32:nullable
-                            "destinationHash": 0,
-                            // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32:nullable
-                            "activityHash": 0,
-                            // Type: integer:int32:nullable
-                            "progress": 0,
-                            // Type: boolean
-                            "complete": false
-                        }
+                        "objective": {}
                     }
                 ]
             }
@@ -132,6 +59,16 @@ PlatformErrorCode: 200
         "vendorHashes": [
            // Type: integer:uint32
             0
+        ],
+        // Type: [[DestinyMilestoneVendor|Destiny-Milestones-DestinyMilestoneVendor]][]
+        "vendors": [
+           // Type: [[DestinyMilestoneVendor|Destiny-Milestones-DestinyMilestoneVendor]]
+            {
+                // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
+                "vendorHash": 0,
+                // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32:nullable
+                "previewItemHash": 0
+            }
         ],
         // Type: [[DestinyMilestoneRewardCategory|Destiny-Milestones-DestinyMilestoneRewardCategory]][]
         "rewards": [

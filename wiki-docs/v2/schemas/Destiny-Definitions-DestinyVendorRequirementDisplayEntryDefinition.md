@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-The localized properties of the requirementsDisplay, allowing information about the requirement oritem being featured to be seen.
+The localized properties of the requirementsDisplay, allowing information about the requirement or item being featured to be seen.
 
 ## Schema
 * **Schema Type:** Definition

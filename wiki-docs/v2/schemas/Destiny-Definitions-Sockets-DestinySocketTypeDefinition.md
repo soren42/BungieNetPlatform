@@ -1,43 +1,32 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-All Sockets have a &quot;Type&quot;: a set of common properties that determine when the socket allowsPlugs to be inserted, what Categories of Plugs can be inserted, and whether the socket iseven visible at all given the current game/character/account state. See DestinyInventoryItemDefinition for more information about Socketed items and Plugs.
+All Sockets have a &quot;Type&quot;: a set of common properties that determine when the socket allows Plugs to be inserted, what Categories of Plugs can be inserted, and whether the socket is even visible at all given the current game/character/account state. See DestinyInventoryItemDefinition for more information about Socketed items and Plugs.
 
 ## Schema
 * **Schema Type:** Manifest Definition
+* **Type:** object
 * **Mobile Manifest:** SocketTypes
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | There are fields for this display data, but they appear to be unpopulated as of now.I am not sure where in the UI these would show if they even were populated, butI will continue to return this data in case it becomes useful.
+displayProperties | [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition | There are fields for this display data, but they appear to be unpopulated as of now. I am not sure where in the UI these would show if they even were populated, but I will continue to return this data in case it becomes useful.
 insertAction | [[DestinyInsertPlugActionDefinition|Destiny-Definitions-Sockets-DestinyInsertPlugActionDefinition]]:Definition | Defines what happens when a plug is inserted into sockets of this type.
-plugWhitelist | [[DestinyPlugWhitelistEntryDefinition|Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition]]:Definition[] | A list of Plug &quot;Categories&quot; that are allowed to be plugged into sockets of this type. These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash,which indicates the plug item's category. If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted.
-socketCategoryHash | integer:uint32 | 
+plugWhitelist | [[DestinyPlugWhitelistEntryDefinition|Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition]]:Definition[] | A list of Plug &quot;Categories&quot; that are allowed to be plugged into sockets of this type. These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item's category. If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted.
+socketCategoryHash | [[Destiny.Definitions.Sockets.DestinySocketCategoryDefinition|Destiny-Definitions-Sockets-DestinySocketCategoryDefinition]]:integer:uint32 | 
 visibility | [[DestinySocketVisibility|Destiny-DestinySocketVisibility]]:Enum | 
-hash | integer:uint32 | The unique identifier for this entity.  Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
+hash | integer:uint32 | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
 index | integer:int32 | The index of the entity as it was found in the investment tables.
-redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet isnot yet allowed to show it.  Sorry!
+redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
 
 ## Example
 ```javascript
 {
     // Type: [[DestinyDisplayPropertiesDefinition|Destiny-Definitions-Common-DestinyDisplayPropertiesDefinition]]:Definition
-    "displayProperties": {
-        // Type: string
-        "description": "",
-        // Type: string
-        "name": "",
-        // Type: string
-        "icon": "",
-        // Type: boolean
-        "hasIcon": false
-    },
+    "displayProperties": {},
     // Type: [[DestinyInsertPlugActionDefinition|Destiny-Definitions-Sockets-DestinyInsertPlugActionDefinition]]:Definition
-    "insertAction": {
-        // Type: integer:int32
-        "actionExecuteSeconds": 0
-    },
+    "insertAction": {},
     // Type: [[DestinyPlugWhitelistEntryDefinition|Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition]]:Definition[]
     "plugWhitelist": [
        // Type: [[DestinyPlugWhitelistEntryDefinition|Destiny-Definitions-Sockets-DestinyPlugWhitelistEntryDefinition]]:Definition
@@ -48,7 +37,7 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             "categoryIdentifier": ""
         }
     ],
-    // Type: integer:uint32
+    // Type: [[Destiny.Definitions.Sockets.DestinySocketCategoryDefinition|Destiny-Definitions-Sockets-DestinySocketCategoryDefinition]]:integer:uint32
     "socketCategoryHash": 0,
     // Type: [[DestinySocketVisibility|Destiny-DestinySocketVisibility]]:Enum
     "visibility": 0,

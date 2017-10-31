@@ -30,7 +30,7 @@ medalTierHash | integer:uint32:nullable | The tier associated with this medal - 
     // Type: string
     "statId": "",
     // Type: [[DestinyStatsGroupType|Destiny-HistoricalStats-Definitions-DestinyStatsGroupType]]:Enum
-    "group": 0,
+    "group": {},
     // Type: [[PeriodType|Destiny-HistoricalStats-Definitions-PeriodType]]:Enum[]
     "periodTypes": [
        // Type: [[PeriodType|Destiny-HistoricalStats-Definitions-PeriodType]]:Enum
@@ -42,13 +42,13 @@ medalTierHash | integer:uint32:nullable | The tier associated with this medal - 
         0
     ],
     // Type: [[DestinyStatsCategoryType|Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType]]:Enum
-    "category": 0,
+    "category": {},
     // Type: string
     "statName": "",
     // Type: string
     "statDescription": "",
     // Type: [[UnitType|Destiny-HistoricalStats-Definitions-UnitType]]:Enum
-    "unitType": 0,
+    "unitType": {},
     // Type: string
     "iconImage": "",
     // Type: integer:int32:nullable

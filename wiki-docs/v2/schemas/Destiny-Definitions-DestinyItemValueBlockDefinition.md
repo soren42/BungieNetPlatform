@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-This defines an item's &quot;Value&quot;.Unfortunately, this appears to be used in different ways depending on the way that the item itselfis used. For items being sold at a Vendor, this is the default &quot;sale price&quot; of the item.  These days, the vendor itselfalmost always sets the price, but it still possible for the price to fall back to this value.For quests, it is a preview of rewards you can gain by completing the quest.For dummy items, if the itemValue refers to an Emblem, it is the emblem that should be shownas the reward. (jeez louise) It will likely be used in a number of other ways in the future, it appears to be a bucket wherethey put arbitrary items and quantities into the item.
+This defines an item's &quot;Value&quot;. Unfortunately, this appears to be used in different ways depending on the way that the item itself is used. For items being sold at a Vendor, this is the default &quot;sale price&quot; of the item. These days, the vendor itself almost always sets the price, but it still possible for the price to fall back to this value. For quests, it is a preview of rewards you can gain by completing the quest. For dummy items, if the itemValue refers to an Emblem, it is the emblem that should be shown as the reward. (jeez louise) It will likely be used in a number of other ways in the future, it appears to be a bucket where they put arbitrary items and quantities into the item.
 
 ## Schema
 * **Schema Type:** Definition

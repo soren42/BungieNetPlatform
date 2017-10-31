@@ -3,8 +3,8 @@
 ## Info
 Gets historical stats definitions.
 
-* **URI:** [[/Destiny2/Stats/Definition/|https://bungie.net/Platform/Destiny2/Stats/Definition/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Stats/Definition/|https://www.bungie.net/Platform/Destiny2/Stats/Definition/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Stats/Definition/
+GET https://www.bungie.net/Platform/Destiny2/Stats/Definition/
 
 ### Response
 PlatformErrorCode: 200
@@ -31,7 +31,7 @@ PlatformErrorCode: 200
             // Type: string
             "statId": "",
             // Type: [[DestinyStatsGroupType|Destiny-HistoricalStats-Definitions-DestinyStatsGroupType]]:Enum
-            "group": 0,
+            "group": {},
             // Type: [[PeriodType|Destiny-HistoricalStats-Definitions-PeriodType]]:Enum[]
             "periodTypes": [
                // Type: [[PeriodType|Destiny-HistoricalStats-Definitions-PeriodType]]:Enum
@@ -43,13 +43,13 @@ PlatformErrorCode: 200
                 0
             ],
             // Type: [[DestinyStatsCategoryType|Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType]]:Enum
-            "category": 0,
+            "category": {},
             // Type: string
             "statName": "",
             // Type: string
             "statDescription": "",
             // Type: [[UnitType|Destiny-HistoricalStats-Definitions-UnitType]]:Enum
-            "unitType": 0,
+            "unitType": {},
             // Type: string
             "iconImage": "",
             // Type: integer:int32:nullable

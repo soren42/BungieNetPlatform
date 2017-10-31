@@ -3,8 +3,8 @@
 ## Info
 Returns the current version of the manifest as a json object.
 
-* **URI:** [[/Destiny2/Manifest/|https://bungie.net/Platform/Destiny2/Manifest/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Manifest/|https://www.bungie.net/Platform/Destiny2/Manifest/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Manifest/
+GET https://www.bungie.net/Platform/Destiny2/Manifest/
 
 ### Response
 PlatformErrorCode: 200

@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Equip an item.  You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
+Equip an item. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
 
-* **URI:** [[/Destiny2/Actions/Items/EquipItem/|https://bungie.net/Platform/Destiny2/Actions/Items/EquipItem/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Actions/Items/EquipItem/|https://www.bungie.net/Platform/Destiny2/Actions/Items/EquipItem/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** MoveEquipDestinyItems
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Destiny2/Actions/Items/EquipItem/
+POST https://www.bungie.net/Platform/Destiny2/Actions/Items/EquipItem/
 ```javascript
 {
     // Type: integer:int64

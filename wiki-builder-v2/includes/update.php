@@ -7,14 +7,16 @@ $expiryTime = 60*60;
 $masterUrl = 'https://github.com/Bungie-net/api/archive/master.zip';
 $masterZipCachePath = CACHEPATH.'/api-master.zip';
 
-if (!file_exists($masterZipCachePath) || time()-filemtime($masterZipCachePath) > $expiryTime || isset($_GET['update'])) {
-	$masterZip = getUrl($masterUrl);
-	file_put_contents($masterZipCachePath, $masterZip);
+if (!isset($_GET['offline'])) {
+	if (!file_exists($masterZipCachePath) || time()-filemtime($masterZipCachePath) > $expiryTime || isset($_GET['update'])) {
+		$masterZip = getUrl($masterUrl);
+		file_put_contents($masterZipCachePath, $masterZip);
 
-	$zip = new ZipArchive();
-	if ($zip->open($masterZipCachePath) === TRUE) {
-		$zip->extractTo(CACHEPATH);
-		$zip->close();
+		$zip = new ZipArchive();
+		if ($zip->open($masterZipCachePath) === TRUE) {
+			$zip->extractTo(CACHEPATH);
+			$zip->close();
+		}
 	}
 }
 
@@ -23,9 +25,11 @@ if (!file_exists($masterZipCachePath) || time()-filemtime($masterZipCachePath) >
 $platformlibCachePath = 'platformlib-d'.BUNGIE_API_VERSION.'.js';
 $platformlibUrl = 'https://www.bungie.net/sharedbundle/platformlib';
 
-if (!file_exists($platformlibCachePath) || time()-filemtime($platformlibCachePath) > $expiryTime || isset($_GET['update'])) {
-	$platformlib = getUrl($platformlibUrl);
-	file_put_contents($platformlibCachePath, $platformlib);
+if (!isset($_GET['offline'])) {
+	if (!file_exists($platformlibCachePath) || time()-filemtime($platformlibCachePath) > $expiryTime || isset($_GET['update'])) {
+		$platformlib = getUrl($platformlibUrl);
+		if ($platformlib) file_put_contents($platformlibCachePath, $platformlib);
+	}
 }
 
 $serviceLookup = array();
@@ -64,6 +68,48 @@ $openapiTemplate = (object)array(
 	'paths' => (object)array()
 );
 
+function checkEndpoint($endpoint, $serviceName) {
+	global $serviceLookup, $servicesData, $openapi;
+
+	//echo '<pre>'.json_encode($endpoint, JSON_PRETTY_PRINT).'</pre>';
+
+	$endpointName = $endpoint->name;
+
+	// Skip officially supported endpoints
+	if (isset($serviceLookup[$serviceName]) && isset($serviceLookup[$serviceName]['endpoints'][$endpointName])) {
+		//echo 'OfficiallySupported: '.$endpoint->openapi->summary.LN;
+		return false;
+	}
+
+	if (isset($openapi->paths->{$endpoint->endpoint})) {
+		echo 'EndpointConflict: '.$endpoint->endpoint.LN;
+		return false;
+	}
+
+	if (!isset($servicesData[$serviceName]) || !isset($servicesData[$serviceName][$endpointName])) {
+		echo 'NewEndpoint: '.str_pad($endpoint->openapi->summary, 60, ' ', STR_PAD_RIGHT).' | '.$endpoint->endpoint.LN;
+	}
+	else if (!$servicesData[$serviceName][$endpointName]) {
+		echo LN.'NeedsData: '.str_pad($endpoint->openapi->summary, 60, ' ', STR_PAD_RIGHT).' | '.$endpoint->endpoint.LN.LN;
+		//echo '<pre>'.json_encode($endpoint, JSON_PRETTY_PRINT).'</pre>';
+	}
+	else {
+		$endpointData = $servicesData[$serviceName][$endpointName];
+//		if (isset($endpointData['path'])) {
+//			foreach($endpointData['path'] as $param) {
+//				if (is_string($param)) {
+//					$param = array(
+//						'name' => $param,
+//						'in' => 'path'
+//					);
+//				}
+//			}
+//		}
+		//echo 'Endpoint: '.str_pad($endpoint->openapi->summary, 60, ' ', STR_PAD_RIGHT).' | '.$endpoint->endpoint.LN;
+	}
+	return $endpoint;
+}
+
 for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 	$platformlibCachePath = 'platformlib-d'.$i.'.js';
 	$platformlib = file_get_contents($platformlibCachePath);
@@ -79,6 +125,11 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 				'url' => 'https://bungie.net/d1/Platform',
 				'description' => 'The final resting place for the first 3 years of Destiny.'
 			);
+			$legacyOpenapi->components = (object)array(
+				'schemas' => array(),
+				'responses' => array()
+			);
+			$legacyOpenapi->components->schemas = $servicesComponents;
 			$legacyOpenapi->tags = array(
 				(object)array('name' => 'Destiny', 'description' => 'destiny')
 			);
@@ -86,34 +137,32 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 			$destinyService = $platformServices['Destiny'];
 			foreach($destinyService['endpoints'] as $endpoint) {
 				//echo '<pre>'.json_encode($endpoint, JSON_PRETTY_PRINT).'</pre>';
-				$legacyOpenapi->paths->{$endpoint->endpoint} = $endpoint->openapi;
+				$endpoint = checkEndpoint($endpoint, 'Destiny');
+				if ($endpoint) $legacyOpenapi->paths->{$endpoint->endpoint} = $endpoint->openapi;
+				parseResponses($legacyOpenapi, $endpoint);
 			}
 
-			file_put_contents(DATAPATH.'/openapi-d1.json', json_encode($legacyOpenapi, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
+			file_put_contents(DATAPATH.'/openapi-d'.$i.'.json', json_encode($legacyOpenapi, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
 			break;
 		default:
-			$unOpenapi = json_decode(json_encode($openapi));
-			$unOpenapi->info = $openapiTemplate->info;
+			$unOpenapi = json_decode(json_encode($openapiTemplate));
 			$unOpenapi->info->title = 'Unofficial Bungie.net API';
-			$unOpenapi->info->description = 'This is an automated extended version of the official Bungie.net APIs with information on undocumented/unsupported stuff.';
+			$unOpenapi->info->description = 'This is an automated extension of the official Bungie.net APIs with information on undocumented/unsupported stuff.';
 			$unOpenapi->info->version = $openapi->info->version;
+			$unOpenapi->servers = $openapi->servers;
+			$unOpenapi->components = (object)array(
+				'schemas' => array(),
+				'responses' => array()
+			);
+			$unOpenapi->components->schemas = $servicesComponents;
 
 			foreach($platformServices as $service) {
 				$serviceName = $service['name'];
 				foreach($service['endpoints'] as $endpoint) {
-					$endpointName = $endpoint->name;
-					// Skip officially supported endpoints
-					if (isset($serviceLookup[$serviceName]) && isset($serviceLookup[$serviceName]['endpoints'][$endpointName])) continue;
+					$endpoint = checkEndpoint($endpoint, $serviceName);
+					if ($endpoint) $unOpenapi->paths->{$endpoint->endpoint} = $endpoint->openapi;
 
-					//echo '<pre>'.json_encode($endpoint, JSON_PRETTY_PRINT).'</pre>';
-					if (!isset($servicesData[$serviceName]) || !isset($servicesData[$serviceName][$endpointName])) {
-						echo '<pre>NeedsData: '.$endpoint->openapi->summary.'</pre>';
-					}
-					if (isset($openapi->paths->{$endpoint->endpoint})) {
-						echo '<pre>EndpointConflict: '.$endpoint->endpoint.'</pre>';
-						continue;
-					}
-					$unOpenapi->paths->{$endpoint->endpoint} = $endpoint->openapi;
+					parseResponses($unOpenapi, $endpoint);
 				}
 
 				if (!isset($serviceLookup[$serviceName])) {
@@ -123,7 +172,7 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 					);
 				}
 			}
-			file_put_contents(DATAPATH.'/openapi.json', json_encode($unOpenapi, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
+			file_put_contents(DATAPATH.'/openapi-d'.$i.'.json', json_encode($unOpenapi, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
 			break;
 	}
 

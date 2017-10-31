@@ -18,22 +18,11 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
     // Type: [[DestinyProfileComponent|Destiny-Entities-Profiles-DestinyProfileComponent]]
     "data": {
         // Type: [[UserInfoCard|User-UserInfoCard]]
-        "userInfo": {
-            // Type: string
-            "supplementalDisplayName": "",
-            // Type: string
-            "iconPath": "",
-            // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
-            // Type: integer:int64
-            "membershipId": 0,
-            // Type: string
-            "displayName": ""
-        },
+        "userInfo": {},
         // Type: string:date-time
         "dateLastPlayed": "",
         // Type: [[DestinyGameVersions|Destiny-DestinyGameVersions]]:Enum
-        "versionsOwned": 0,
+        "versionsOwned": {},
         // Type: integer:int64[]
         "characterIds": [
            // Type: integer:int64

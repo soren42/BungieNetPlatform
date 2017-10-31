@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Represents a status string that could be conditionally displayed about an activity.Note that externally, you can only see the strings themselves.  Internally we combine this informationwith server state to determine which strings should be shown.
+Represents a status string that could be conditionally displayed about an activity. Note that externally, you can only see the strings themselves. Internally we combine this information with server state to determine which strings should be shown.
 
 ## Schema
 * **Schema Type:** Definition

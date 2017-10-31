@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Defines the conditions under which stat modifications will be applied to a Character whileparticipating in an objective.
+Defines the conditions under which stat modifications will be applied to a Character while participating in an objective.
 
 ## Schema
 * **Schema Type:** Definition
@@ -17,14 +17,9 @@ style | [[DestinyObjectiveGrantStyle|Destiny-DestinyObjectiveGrantStyle]]:Enum |
 ```javascript
 {
     // Type: [[DestinyItemInvestmentStatDefinition|Destiny-Definitions-DestinyItemInvestmentStatDefinition]]:Definition
-    "stat": {
-        // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-        "statTypeHash": 0,
-        // Type: integer:int32
-        "value": 0
-    },
+    "stat": {},
     // Type: [[DestinyObjectiveGrantStyle|Destiny-DestinyObjectiveGrantStyle]]:Enum
-    "style": 0
+    "style": {}
 }
 
 ```

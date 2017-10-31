@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Returns trending items for Bungie.net, collapsed into the first page of items per category.  For pagination within a category, call GetTrendingCategory.
+Returns trending items for Bungie.net, collapsed into the first page of items per category. For pagination within a category, call GetTrendingCategory.
 
-* **URI:** [[/Trending/Categories/|https://bungie.net/Platform/Trending/Categories/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Trending/Categories/|https://www.bungie.net/Platform/Trending/Categories/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Trending|Endpoints#Trending]]
 * **Permissions:** None
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Trending/Categories/
+GET https://www.bungie.net/Platform/Trending/Categories/
 
 ### Response
 PlatformErrorCode: 200
@@ -46,7 +46,7 @@ PlatformErrorCode: 200
                             // Type: string
                             "identifier": "",
                             // Type: [[TrendingEntryType|Trending-TrendingEntryType]]:Enum
-                            "entityType": 0,
+                            "entityType": {},
                             // Type: string
                             "displayName": "",
                             // Type: string

@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus.  PREVIEW: This endpoint is still in beta, and may experience rough edges.  The schema is in final form, but there may be bugs that prevent desirable operation.
+Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 
-* **URI:** [[/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/|https://bungie.net/Platform/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/|https://www.bungie.net/Platform/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -27,7 +27,7 @@ statid | string | No | ID of stat to return rather than returning all Leaderboar
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/
+GET https://www.bungie.net/Platform/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/
 
 ### Response
 PlatformErrorCode: 200
@@ -46,72 +46,11 @@ PlatformErrorCode: 200
                         // Type: integer:int32
                         "rank": 0,
                         // Type: [[DestinyPlayer|Destiny-HistoricalStats-DestinyPlayer]]
-                        "player": {
-                            // Type: [[UserInfoCard|User-UserInfoCard]]
-                            "destinyUserInfo": {
-                                // Type: string
-                                "supplementalDisplayName": "",
-                                // Type: string
-                                "iconPath": "",
-                                // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                                "membershipType": 0,
-                                // Type: integer:int64
-                                "membershipId": 0,
-                                // Type: string
-                                "displayName": ""
-                            },
-                            // Type: string
-                            "characterClass": "",
-                            // Type: integer:int32
-                            "characterLevel": 0,
-                            // Type: integer:int32
-                            "lightLevel": 0,
-                            // Type: [[UserInfoCard|User-UserInfoCard]]
-                            "bungieNetUserInfo": {
-                                // Type: string
-                                "supplementalDisplayName": "",
-                                // Type: string
-                                "iconPath": "",
-                                // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                                "membershipType": 0,
-                                // Type: integer:int64
-                                "membershipId": 0,
-                                // Type: string
-                                "displayName": ""
-                            },
-                            // Type: string
-                            "clanName": "",
-                            // Type: string
-                            "clanTag": ""
-                        },
+                        "player": {},
                         // Type: integer:int64
                         "characterId": 0,
                         // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-                        "value": {
-                            // Type: string
-                            "statId": "",
-                            // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "basic": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
-                            // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "pga": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            },
-                            // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                            "weighted": {
-                                // Type: number:double
-                                "value": 0,
-                                // Type: string
-                                "displayValue": ""
-                            }
-                        }
+                        "value": {}
                     }
                 ]
             }

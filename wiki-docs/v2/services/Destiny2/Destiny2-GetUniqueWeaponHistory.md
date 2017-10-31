@@ -1,10 +1,10 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gets details about unique weapon usage, including all exotic weapons.  PREVIEW: This endpoint is still in beta, and may experience rough edges.  The schema is in final form, but there may be bugs that prevent desirable operation.
+Gets details about unique weapon usage, including all exotic weapons. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 
-* **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/|https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/|https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[Destiny2|Endpoints#Destiny2]]
 * **Permissions:** None
@@ -23,7 +23,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/
+GET https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/
 
 ### Response
 PlatformErrorCode: 200
@@ -43,26 +43,13 @@ PlatformErrorCode: 200
                         // Type: string
                         "statId": "",
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "basic": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
+                        "pga": {},
                         // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
+                        "weighted": {},
+                        // Type: integer:int64:nullable
+                        "activityId": 0
                     }
                 }
             }

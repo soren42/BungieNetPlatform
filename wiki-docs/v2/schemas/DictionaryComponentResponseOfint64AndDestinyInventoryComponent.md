@@ -29,17 +29,17 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                     // Type: integer:int32
                     "quantity": 0,
                     // Type: [[ItemBindStatus|Destiny-ItemBindStatus]]:Enum
-                    "bindStatus": 0,
+                    "bindStatus": {},
                     // Type: [[ItemLocation|Destiny-ItemLocation]]:Enum
-                    "location": 0,
+                    "location": {},
                     // Type: [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]]:integer:uint32
                     "bucketHash": 0,
                     // Type: [[TransferStatuses|Destiny-TransferStatuses]]:Enum
-                    "transferStatus": 0,
+                    "transferStatus": {},
                     // Type: boolean
                     "lockable": false,
                     // Type: [[ItemState|Destiny-ItemState]]:Enum
-                    "state": 0
+                    "state": {}
                 }
             ]
         }

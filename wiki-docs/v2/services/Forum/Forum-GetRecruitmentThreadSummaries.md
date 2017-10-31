@@ -3,8 +3,8 @@
 ## Info
 Allows the caller to get a list of to 25 recruitment thread summary information objects.
 
-* **URI:** [[/Forum/Recruit/Summaries/|https://bungie.net/Platform/Forum/Recruit/Summaries/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/Forum/Recruit/Summaries/|https://www.bungie.net/Platform/Forum/Recruit/Summaries/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** POST
 * **Service:** [[Forum|Endpoints#Forum]]
 * **Permissions:** None
@@ -19,7 +19,7 @@ None
 
 ## Example
 ### Request
-POST https://bungie.net/Platform/Forum/Recruit/Summaries/
+POST https://www.bungie.net/Platform/Forum/Recruit/Summaries/
 ```javascript
 [
    // Type: integer:int64

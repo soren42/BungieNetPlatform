@@ -1,10 +1,11 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-The base class for any component-returning object that may need to indicateinformation about the state of the component being returned.
+The base class for any component-returning object that may need to indicate information about the state of the component being returned.
 
 ## Schema
 * **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description

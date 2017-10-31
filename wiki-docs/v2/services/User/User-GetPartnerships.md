@@ -3,8 +3,8 @@
 ## Info
 Returns a user's linked Partnerships.
 
-* **URI:** [[/User/{membershipId}/Partnerships/|https://bungie.net/Platform/User/{membershipId}/Partnerships/]]
-* **Basepath:** https://bungie.net/Platform
+* **URI:** [[/User/{membershipId}/Partnerships/|https://www.bungie.net/Platform/User/{membershipId}/Partnerships/]]
+* **Basepath:** https://www.bungie.net/Platform
 * **Method:** GET
 * **Service:** [[User|Endpoints#User]]
 * **Permissions:** None
@@ -21,7 +21,7 @@ None
 
 ## Example
 ### Request
-GET https://bungie.net/Platform/User/{membershipId}/Partnerships/
+GET https://www.bungie.net/Platform/User/{membershipId}/Partnerships/
 
 ### Response
 PlatformErrorCode: 200

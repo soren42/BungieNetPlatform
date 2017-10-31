@@ -20,12 +20,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
         "vendorHash": 0,
         // Type: [[AckState|User-AckState]]
-        "ackState": {
-            // Type: boolean
-            "needsAck": false,
-            // Type: string
-            "ackId": ""
-        },
+        "ackState": {},
         // Type: string:date-time
         "nextRefreshDate": "",
         // Type: boolean
@@ -33,30 +28,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
         // Type: boolean
         "canPurchase": false,
         // Type: [[DestinyProgression|Destiny-DestinyProgression]]
-        "progression": {
-            // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
-            "progressionHash": 0,
-            // Type: integer:int32
-            "dailyProgress": 0,
-            // Type: integer:int32
-            "dailyLimit": 0,
-            // Type: integer:int32
-            "weeklyProgress": 0,
-            // Type: integer:int32
-            "weeklyLimit": 0,
-            // Type: integer:int32
-            "currentProgress": 0,
-            // Type: integer:int32
-            "level": 0,
-            // Type: integer:int32
-            "levelCap": 0,
-            // Type: integer:int32
-            "stepIndex": 0,
-            // Type: integer:int32
-            "progressToNextLevel": 0,
-            // Type: integer:int32
-            "nextLevelAt": 0
-        }
+        "progression": {}
     },
     // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
     "privacy": 0

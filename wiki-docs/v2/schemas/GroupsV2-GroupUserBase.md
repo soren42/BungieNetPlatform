@@ -4,6 +4,7 @@
 
 ## Schema
 * **Schema Type:** Class
+* **Type:** object
 
 ## Properties
 Name | Type | Description
@@ -25,7 +26,7 @@ joinDate | string:date-time |
         // Type: string
         "iconPath": "",
         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-        "membershipType": 0,
+        "membershipType": {},
         // Type: integer:int64
         "membershipId": 0,
         // Type: string
@@ -38,7 +39,7 @@ joinDate | string:date-time |
         // Type: string
         "iconPath": "",
         // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-        "membershipType": 0,
+        "membershipType": {},
         // Type: integer:int64
         "membershipId": 0,
         // Type: string

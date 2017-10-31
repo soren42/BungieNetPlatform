@@ -31,7 +31,7 @@ categoryId | string |
                 // Type: string
                 "identifier": "",
                 // Type: [[TrendingEntryType|Trending-TrendingEntryType]]:Enum
-                "entityType": 0,
+                "entityType": {},
                 // Type: string
                 "displayName": "",
                 // Type: string

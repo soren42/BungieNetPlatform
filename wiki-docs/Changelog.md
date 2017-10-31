@@ -3,6 +3,15 @@ This page will cover automated updates to the Wiki as well as changes to the [Gi
 
 ***
 
+## October 31, 2017
+The one that got delayed.
+
+Added support for auto-generating unsupported endpoints. Includes Destiny 1 and all other services available in the platformlib file. Pages will have incomplete information (especially response bodies) until I can go through and add all the components into the OpenApi spec.
+Added a changelog section to the frontpage as well as a new Community Apps listing to showcase apps that have been submitted to [this form](https://goo.gl/forms/eKTqppizDA3vhD8E3).
+Fixed some other issues to do with rendering out pages etc.
+
+Note: For the time being, the diff changelog of past updates will be on hiatus until I have a more stable setup in place. A lot of files are getting touched so its hard to check where is actually new and what is  getting flagged unintentionally.
+
 ## August 26, 2017
 The one that became official.
 

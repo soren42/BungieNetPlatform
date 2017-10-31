@@ -17,35 +17,11 @@ value | [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalS
 ```javascript
 {
     // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-    "mode": 0,
+    "mode": {},
     // Type: string
     "statId": "",
     // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-    "value": {
-        // Type: string
-        "statId": "",
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "basic": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "pga": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "weighted": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        }
-    }
+    "value": {}
 }
 
 ```

@@ -13,6 +13,7 @@ statId | string | Unique ID for this stat
 basic | [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]] | Basic stat value.
 pga | [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]] | Per game average for the statistic, if applicable
 weighted | [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]] | Weighted value of the stat if a weight greater than 1 has been assigned.
+activityId | integer:int64:nullable | When a stat represents the best, most, longest, fastest or some other personal best, the actual activity ID where that personal best was established is available on this property.
 
 ## Example
 ```javascript
@@ -20,26 +21,13 @@ weighted | [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHist
     // Type: string
     "statId": "",
     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-    "basic": {
-        // Type: number:double
-        "value": 0,
-        // Type: string
-        "displayValue": ""
-    },
+    "basic": {},
     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-    "pga": {
-        // Type: number:double
-        "value": 0,
-        // Type: string
-        "displayValue": ""
-    },
+    "pga": {},
     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-    "weighted": {
-        // Type: number:double
-        "value": 0,
-        // Type: string
-        "displayValue": ""
-    }
+    "weighted": {},
+    // Type: integer:int64:nullable
+    "activityId": 0
 }
 
 ```

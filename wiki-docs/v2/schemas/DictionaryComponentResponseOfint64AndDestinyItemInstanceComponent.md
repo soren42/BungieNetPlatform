@@ -19,18 +19,11 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
     "data": {
         "0": {
             // Type: [[DamageType|Destiny-DamageType]]:Enum
-            "damageType": 0,
+            "damageType": {},
             // Type: [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]]:integer:uint32:nullable
             "damageTypeHash": 0,
             // Type: [[DestinyStat|Destiny-DestinyStat]]
-            "primaryStat": {
-                // Type: [[Destiny.Definitions.DestinyStatDefinition|Destiny-Definitions-DestinyStatDefinition]]:integer:uint32
-                "statHash": 0,
-                // Type: integer:int32
-                "value": 0,
-                // Type: integer:int32
-                "maximumValue": 0
-            },
+            "primaryStat": {},
             // Type: integer:int32
             "itemLevel": 0,
             // Type: integer:int32
@@ -47,7 +40,7 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                 0
             ],
             // Type: [[EquipFailureReason|Destiny-EquipFailureReason]]:Enum
-            "cannotEquipReason": 0
+            "cannotEquipReason": {}
         }
     },
     // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum

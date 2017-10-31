@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Destinations and Activities may have default Activity Graphs that should be shownwhen you bring up the Director and are playing in either. This contract defines the graph referred to and the gating for when it is relevant.
+Destinations and Activities may have default Activity Graphs that should be shown when you bring up the Director and are playing in either. This contract defines the graph referred to and the gating for when it is relevant.
 
 ## Schema
 * **Schema Type:** Definition
@@ -10,7 +10,7 @@ Destinations and Activities may have default Activity Graphs that should be show
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-activityGraphHash | [[Destiny.Definitions.Director.DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:integer:uint32 | The hash identifier of the DestinyActivityGraphDefinition that should be shown when openingthe director.
+activityGraphHash | [[Destiny.Definitions.Director.DestinyActivityGraphDefinition|Destiny-Definitions-Director-DestinyActivityGraphDefinition]]:integer:uint32 | The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening the director.
 
 ## Example
 ```javascript

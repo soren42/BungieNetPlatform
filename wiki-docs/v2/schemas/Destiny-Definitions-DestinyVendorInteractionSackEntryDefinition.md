@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Compare this sackType to the sack identifier in the DestinyInventoryItemDefinition.vendorSackTypeproperty of items.  If they match, show this sack with this interaction.
+Compare this sackType to the sack identifier in the DestinyInventoryItemDefinition.vendorSackType property of items. If they match, show this sack with this interaction.
 
 ## Schema
 * **Schema Type:** Definition

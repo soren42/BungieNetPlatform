@@ -20,18 +20,7 @@ teams | [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyP
     // Type: string:date-time
     "period": "",
     // Type: [[DestinyHistoricalStatsActivity|Destiny-HistoricalStats-DestinyHistoricalStatsActivity]]
-    "activityDetails": {
-        // Type: [[Destiny.Definitions.DestinyActivityDefinition|Destiny-Definitions-DestinyActivityDefinition]]:integer:uint32
-        "referenceId": 0,
-        // Type: integer:int64
-        "instanceId": 0,
-        // Type: [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum
-        "mode": 0,
-        // Type: [[Destiny.Definitions.DestinyActivityTypeDefinition|Destiny-Definitions-DestinyActivityTypeDefinition]]:integer:uint32
-        "activityTypeHashOverride": 0,
-        // Type: boolean
-        "isPrivate": false
-    },
+    "activityDetails": {},
     // Type: [[DestinyPostGameCarnageReportEntry|Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry]][]
     "entries": [
        // Type: [[DestinyPostGameCarnageReportEntry|Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry]]
@@ -39,70 +28,9 @@ teams | [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyP
             // Type: integer:int32
             "standing": 0,
             // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-            "score": {
-                // Type: string
-                "statId": "",
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "basic": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "pga": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "weighted": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                }
-            },
+            "score": {},
             // Type: [[DestinyPlayer|Destiny-HistoricalStats-DestinyPlayer]]
-            "player": {
-                // Type: [[UserInfoCard|User-UserInfoCard]]
-                "destinyUserInfo": {
-                    // Type: string
-                    "supplementalDisplayName": "",
-                    // Type: string
-                    "iconPath": "",
-                    // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                    "membershipType": 0,
-                    // Type: integer:int64
-                    "membershipId": 0,
-                    // Type: string
-                    "displayName": ""
-                },
-                // Type: string
-                "characterClass": "",
-                // Type: integer:int32
-                "characterLevel": 0,
-                // Type: integer:int32
-                "lightLevel": 0,
-                // Type: [[UserInfoCard|User-UserInfoCard]]
-                "bungieNetUserInfo": {
-                    // Type: string
-                    "supplementalDisplayName": "",
-                    // Type: string
-                    "iconPath": "",
-                    // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-                    "membershipType": 0,
-                    // Type: integer:int64
-                    "membershipId": 0,
-                    // Type: string
-                    "displayName": ""
-                },
-                // Type: string
-                "clanName": "",
-                // Type: string
-                "clanTag": ""
-            },
+            "player": {},
             // Type: integer:int64
             "characterId": 0,
             // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -111,95 +39,17 @@ teams | [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyP
                     // Type: string
                     "statId": "",
                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                    "basic": {
-                        // Type: number:double
-                        "value": 0,
-                        // Type: string
-                        "displayValue": ""
-                    },
+                    "basic": {},
                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                    "pga": {
-                        // Type: number:double
-                        "value": 0,
-                        // Type: string
-                        "displayValue": ""
-                    },
+                    "pga": {},
                     // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                    "weighted": {
-                        // Type: number:double
-                        "value": 0,
-                        // Type: string
-                        "displayValue": ""
-                    }
+                    "weighted": {},
+                    // Type: integer:int64:nullable
+                    "activityId": 0
                 }
             },
             // Type: [[DestinyPostGameCarnageReportExtendedData|Destiny-HistoricalStats-DestinyPostGameCarnageReportExtendedData]]
-            "extended": {
-                // Type: [[DestinyHistoricalWeaponStats|Destiny-HistoricalStats-DestinyHistoricalWeaponStats]][]
-                "weapons": [
-                   // Type: [[DestinyHistoricalWeaponStats|Destiny-HistoricalStats-DestinyHistoricalWeaponStats]]
-                    {
-                        // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                        "referenceId": 0,
-                        // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
-                        "values": {
-                            "{string}": {
-                                // Type: string
-                                "statId": "",
-                                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "basic": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
-                                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "pga": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                },
-                                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                                "weighted": {
-                                    // Type: number:double
-                                    "value": 0,
-                                    // Type: string
-                                    "displayValue": ""
-                                }
-                            }
-                        }
-                    }
-                ],
-                // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
-                "values": {
-                    "{string}": {
-                        // Type: string
-                        "statId": "",
-                        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
-                        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
-                        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
-                    }
-                }
-            }
+            "extended": {}
         }
     ],
     // Type: [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyPostGameCarnageReportTeamEntry]][]
@@ -209,57 +59,9 @@ teams | [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyP
             // Type: integer:int32
             "teamId": 0,
             // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-            "standing": {
-                // Type: string
-                "statId": "",
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "basic": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "pga": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "weighted": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                }
-            },
+            "standing": {},
             // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-            "score": {
-                // Type: string
-                "statId": "",
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "basic": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "pga": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "weighted": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                }
-            },
+            "score": {},
             // Type: string
             "teamName": ""
         }

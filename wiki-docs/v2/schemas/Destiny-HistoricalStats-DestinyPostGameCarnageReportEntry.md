@@ -22,70 +22,9 @@ extended | [[DestinyPostGameCarnageReportExtendedData|Destiny-HistoricalStats-De
     // Type: integer:int32
     "standing": 0,
     // Type: [[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]
-    "score": {
-        // Type: string
-        "statId": "",
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "basic": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "pga": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        },
-        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-        "weighted": {
-            // Type: number:double
-            "value": 0,
-            // Type: string
-            "displayValue": ""
-        }
-    },
+    "score": {},
     // Type: [[DestinyPlayer|Destiny-HistoricalStats-DestinyPlayer]]
-    "player": {
-        // Type: [[UserInfoCard|User-UserInfoCard]]
-        "destinyUserInfo": {
-            // Type: string
-            "supplementalDisplayName": "",
-            // Type: string
-            "iconPath": "",
-            // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
-            // Type: integer:int64
-            "membershipId": 0,
-            // Type: string
-            "displayName": ""
-        },
-        // Type: string
-        "characterClass": "",
-        // Type: integer:int32
-        "characterLevel": 0,
-        // Type: integer:int32
-        "lightLevel": 0,
-        // Type: [[UserInfoCard|User-UserInfoCard]]
-        "bungieNetUserInfo": {
-            // Type: string
-            "supplementalDisplayName": "",
-            // Type: string
-            "iconPath": "",
-            // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
-            "membershipType": 0,
-            // Type: integer:int64
-            "membershipId": 0,
-            // Type: string
-            "displayName": ""
-        },
-        // Type: string
-        "clanName": "",
-        // Type: string
-        "clanTag": ""
-    },
+    "player": {},
     // Type: integer:int64
     "characterId": 0,
     // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
@@ -94,95 +33,17 @@ extended | [[DestinyPostGameCarnageReportExtendedData|Destiny-HistoricalStats-De
             // Type: string
             "statId": "",
             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-            "basic": {
-                // Type: number:double
-                "value": 0,
-                // Type: string
-                "displayValue": ""
-            },
+            "basic": {},
             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-            "pga": {
-                // Type: number:double
-                "value": 0,
-                // Type: string
-                "displayValue": ""
-            },
+            "pga": {},
             // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-            "weighted": {
-                // Type: number:double
-                "value": 0,
-                // Type: string
-                "displayValue": ""
-            }
+            "weighted": {},
+            // Type: integer:int64:nullable
+            "activityId": 0
         }
     },
     // Type: [[DestinyPostGameCarnageReportExtendedData|Destiny-HistoricalStats-DestinyPostGameCarnageReportExtendedData]]
-    "extended": {
-        // Type: [[DestinyHistoricalWeaponStats|Destiny-HistoricalStats-DestinyHistoricalWeaponStats]][]
-        "weapons": [
-           // Type: [[DestinyHistoricalWeaponStats|Destiny-HistoricalStats-DestinyHistoricalWeaponStats]]
-            {
-                // Type: [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]:integer:uint32
-                "referenceId": 0,
-                // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
-                "values": {
-                    "{string}": {
-                        // Type: string
-                        "statId": "",
-                        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "basic": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
-                        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "pga": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        },
-                        // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                        "weighted": {
-                            // Type: number:double
-                            "value": 0,
-                            // Type: string
-                            "displayValue": ""
-                        }
-                    }
-                }
-            }
-        ],
-        // Type: Dictionary&lt;string,[[DestinyHistoricalStatsValue|Destiny-HistoricalStats-DestinyHistoricalStatsValue]]&gt;
-        "values": {
-            "{string}": {
-                // Type: string
-                "statId": "",
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "basic": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "pga": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                },
-                // Type: [[DestinyHistoricalStatsValuePair|Destiny-HistoricalStats-DestinyHistoricalStatsValuePair]]
-                "weighted": {
-                    // Type: number:double
-                    "value": 0,
-                    // Type: string
-                    "displayValue": ""
-                }
-            }
-        }
-    }
+    "extended": {}
 }
 
 ```
