@@ -276,7 +276,7 @@ angular.module('wiki-apps', [])
 				if (app.twitter) links.push('<a href="'+cleanUrl(app.twitter, 'twitter.com')+'" target="_blank"><span class="fa fa-twitter"></span></a>');
 
 				elem.html(
-					'<div class="app-banner"'+(app.banner ? 'style="background-image: url(/images/'+app.banner+');"' : '')+'></div>'
+					'<div class="app-banner"'+(app.banner ? 'style="background-image: url('+rootPath+'/images/'+app.banner+');"' : '')+'></div>'
 					+'<div class="app-tile-name">'+app.name+'</div>'
 					+'<div class="app-links">'+links.join('', links)+'</div>'
 				);
