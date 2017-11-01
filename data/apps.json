@@ -75,5 +75,16 @@
         "credits": [
             "ArkahnX"
         ]
+    },
+    {
+        "name": "Destiny Vault Raider",
+        "id": "11487",
+        "description": "Destiny inventory management website. Step by step instructions to build your own web application.",
+        "banner": "app_destiny_vault_raider.jpg",
+        "website": "https://www.destinyvaultraider.com/",
+        "twitter": "https://twitter.com/Allyn_H_",
+        "credits": [
+            "Allyn Hunt"
+        ]
     }
 ]
