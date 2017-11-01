@@ -5,25 +5,31 @@
         "description": "A tool for viewing Destiny gear assets in 3D.",
         "banner": "app_gear_viewer.png",
         "website": "https://lowlidev.com.au/destiny/gear-viewer",
-        "twitter": "lowlines"
+        "twitter": "lowlines",
+        "credits": [
+            "lowlines"
+        ]
     },
     {
         "name": "CHWT Warmind",
         "id": "3777",
         "description": "A Warmind Application for the ChattWhyte Krew. Contains an events correlation engine (stack bounties on activities and quest lines) and a Discord Bot with a fireteam event scheduler.",
         "website": "https://chattawhyte.org",
-        "hide": true
+        "hide": true,
+        "credits": [
+            "NinerOneThree (Discord)"
+        ]
     },
     {
         "name": "Warmind Network",
         "id": "24910",
         "description": "An Alexa skill for helping players manage their in game inventory and create load outs.",
-        "banner": "app_warmind_network.png",
+        "banner": "app_warmind_network.svg",
         "bannerColor": "#5e5e5f",
         "website": "https://amzn.com/B076FLLNSV",
         "twitter": "https://twitter.com/warmindnetwork",
         "credits": [
-            "dweezil22"
+
         ]
     },
     {
@@ -32,6 +38,42 @@
         "description": "Track weekly loot for you and your clan.",
         "banner": "app_d2_checklist.svg",
         "website": "https://www.d2checklist.com/",
-        "twitter": "DestinyChecklst"
+        "twitter": "DestinyChecklst",
+        "credits": [
+            "dweezil22"
+        ]
+    },
+    {
+        "name": "Guardian Theater",
+        "id": "1086",
+        "description": "Find yourself in the Twitch and Xbox clips other Guardians have recorded.",
+        "banner": "app_guardian_theater.svg",
+        "website": "https://guardian.theater/",
+        "twitter": "guardtheater",
+        "credits": [
+            "Chris Fried"
+        ]
+    },
+    {
+        "name": "Secret Scrubland",
+        "id": "10924",
+        "description": "A calendar heat map of your time spent playing Destiny.",
+        "banner": "app_secret_scrubland.png",
+        "website": "https://chrisfried.github.io/secret-scrublandeux/",
+        "twitter": "guardtheater",
+        "credits": [
+            "Chris Fried"
+        ]
+    },
+    {
+        "name": "Destiny Loot History",
+        "id": "15777",
+        "description": "A companion application for Destiny 2.",
+        "banner": "app_destiny_loot_history.png",
+        "website": "https://destinyloothistory.com",
+        "twitter": "ArkahnX",
+        "credits": [
+            "ArkahnX"
+        ]
     }
 ]
