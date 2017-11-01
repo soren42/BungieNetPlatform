@@ -277,8 +277,11 @@ angular.module('wiki-apps', [])
 				if (app.website) links.push('<a href="'+cleanUrl(app.website)+'" target="_blank"><span class="fa fa-globe"></span></a>');
 				if (app.twitter) links.push('<a href="'+cleanUrl(app.twitter, 'twitter.com')+'" target="_blank"><span class="fa fa-twitter"></span></a>');
 
+				var style = [];
+				if (app.banner) style.push('background-image: url('+rootPath+'/images/'+app.banner+');');
+				if (app.bannerColor) style.push('background-color: '+app.bannerColor+';');
 				elem.html(
-					'<div class="app-banner"'+(app.banner ? 'style="background-image: url('+rootPath+'/images/'+app.banner+');"' : '')+'></div>'
+					'<div class="app-banner"'+(style.length > 0 ? 'style="'+style.join(' ')+'"' : '')+'></div>'
 					+'<div class="app-tile-name">'+app.name+'</div>'
 					+'<div class="app-links">'+links.join('', links)+'</div>'
 				);

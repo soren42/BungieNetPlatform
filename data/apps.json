@@ -19,7 +19,19 @@
         "id": "24910",
         "description": "An Alexa skill for helping players manage their in game inventory and create load outs.",
         "banner": "app_warmind_network.png",
+        "bannerColor": "#5e5e5f",
         "website": "https://amzn.com/B076FLLNSV",
-        "twitter": "https://twitter.com/warmindnetwork"
+        "twitter": "https://twitter.com/warmindnetwork",
+        "credits": [
+            "dweezil22"
+        ]
+    },
+    {
+        "name": "D2Checklist",
+        "id": "24077",
+        "description": "Track weekly loot for you and your clan.",
+        "banner": "app_d2_checklist.svg",
+        "website": "https://www.d2checklist.com/",
+        "twitter": "DestinyChecklst"
     }
 ]

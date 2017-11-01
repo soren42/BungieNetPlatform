@@ -456,7 +456,7 @@ a[name] {
 #wiki-apps .app-tile .app-banner {
   padding-bottom: 60%;
   background: rgba(0, 0, 0, 0.2) center no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
   cursor: pointer;
 }
 #wiki-apps .app-tile .app-tile-name {
