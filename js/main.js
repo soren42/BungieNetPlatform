@@ -255,7 +255,7 @@ angular.module('wiki-apps', [])
 
 
 	})
-	.directive('appEntry', function() {
+	.directive('appEntry', function($location) {
 		return {
 			scope: {
 				app: '=appEntry'
@@ -263,6 +263,8 @@ angular.module('wiki-apps', [])
 			link: function(scope, elem) {
 				var app = scope.app;
 				console.log(app, elem);
+
+				var rootPath = $location.absUrl().split('/docs')[0].replace(/\/+$/, '');
 
 				var links = [];
 
