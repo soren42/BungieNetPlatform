@@ -86,5 +86,40 @@
         "credits": [
             "Allyn Hunt"
         ]
+    },
+    {
+        "name": "Guardian Medals",
+        "id": "",
+        "description": "List of medals earned in the Crucible.",
+        "banner": "app_guardian_medals.png",
+        "website": "http://guardianmedals.com",
+        "credits": [
+            "Jason Silvers"
+        ]
+    },
+    {
+        "name": "Charlemagne",
+        "id": "16263",
+        "description": "The Warmind of Discord, providing event planning, clan ranking,  clan management, and Destiny 2 stats in your Discord.",
+        "banner": "app_charlemagne.svg",
+        "website": "https://warmind.io",
+        "twitter": "charlemagne_bot",
+        "credits": [
+            "Tor_Kallon",
+            "waterpolotrev67"
+        ]
+    },
+    {
+        "name": "Trials Report",
+        "id": "797",
+        "description": "Fireteam lookup for D2 Trials of Osiris",
+        "banner": "app_trials_report.png",
+        "website": "https://destinytrialsreport.com",
+        "twitter": "TrialsReport",
+        "credits": [
+            "Vladimir Fedorov",
+            "Mark Montvai",
+            "Steffan Long"
+        ]
     }
 ]
