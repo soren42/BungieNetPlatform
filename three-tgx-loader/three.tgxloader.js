@@ -181,6 +181,10 @@ THREE.TGXLoader.DefaultAnimationPath = 'destiny_player_animation.js';
 THREE.TGXLoader.Game = 'destiny';
 THREE.TGXLoader.NoCache = false;
 
+// Destiny 2
+THREE.TGXLoader.APIBasepath2 = 'https://www.bungie.net/Platform/Destiny2';
+THREE.TGXLoader.ManifestPath2 = null;
+
 Object.assign(THREE.TGXLoader.prototype, {
 	load: function(options, onLoad, onProgress, onError) {
 		var defaultOptions = {
@@ -189,10 +193,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 			classHash: 0,
 			isFemale: false,
 			apiKey: THREE.TGXLoader.APIKey,
-			apiBasepath: THREE.TGXLoader.APIBasepath,
+			//apiBasepath: THREE.TGXLoader.APIBasepath,
 			basepath: THREE.TGXLoader.Basepath,
 			platform: THREE.TGXLoader.Platform,
-			manifestPath: THREE.TGXLoader.ManifestPath,
+			//manifestPath: THREE.TGXLoader.ManifestPath,
 			loadTextures: true,
 			loadSkeleton: false,
 			loadAnimation: false,
@@ -201,6 +205,18 @@ Object.assign(THREE.TGXLoader.prototype, {
 			noCache: THREE.TGXLoader.NoCache
 		};
 		if (typeof options != 'object') options = {};
+
+		var game = options.game ? options.game : defaultOptions.game;
+		switch(game) {
+			case 'destiny2':
+				defaultOptions.apiBasepath = THREE.TGXLoader.APIBasepath2;
+				defaultOptions.manifestPath = THREE.TGXLoader.ManifestPath2;
+				break;
+			default:
+				defaultOptions.apiBasepath = THREE.TGXLoader.APIBasepath;
+				defaultOptions.manifestPath = THREE.TGXLoader.ManifestPath;
+				break;
+		}
 		for (var key in defaultOptions) {
 			if (options[key] === undefined) options[key] = defaultOptions[key];
 		}
