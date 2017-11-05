@@ -1,7 +1,8 @@
 // Sources
 // https://www.bungie.net/sharedbundle/spasm
 // http://www.gdcvault.com/play/1020412/Building-Customizable-Characters-for-Bungie
-// http://advances.realtimerendering.com/destiny/siggraph2014/bungie_gear_production_siggraph_2014_web_ready.pdf
+// http://advances.realtimerendering.com/destiny/siggraph2014/
+// http://advances.realtimerendering.com/destiny/gdc_2017/
 
 THREE.TGXLoaderUtils = (function() {
 	var scope = {
@@ -177,6 +178,8 @@ THREE.TGXLoader.Basepath = 'https://www.bungie.net';
 THREE.TGXLoader.Platform = 'web';
 THREE.TGXLoader.ManifestPath = null;
 THREE.TGXLoader.DefaultAnimationPath = 'destiny_player_animation.js';
+THREE.TGXLoader.Game = 'destiny';
+THREE.TGXLoader.NoCache = false;
 
 Object.assign(THREE.TGXLoader.prototype, {
 	load: function(options, onLoad, onProgress, onError) {
@@ -193,7 +196,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 			loadTextures: true,
 			loadSkeleton: false,
 			loadAnimation: false,
-			animationPath: THREE.TGXLoader.DefaultAnimationPath
+			animationPath: THREE.TGXLoader.DefaultAnimationPath,
+			game: THREE.TGXLoader.Game,
+			noCache: THREE.TGXLoader.NoCache
 		};
 		if (typeof options != 'object') options = {};
 		for (var key in defaultOptions) {
@@ -289,6 +294,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var isFemale = false;
 		var classHash = 0;
 
+		var noCache = false;
+
 		var loadSkeleton = false;
 		var loadAnimation = false;
 		var loadTextures = true;
@@ -300,7 +307,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var onLoadCallback, onProgressCallback, onErrorCallback;
 
 		var utils = THREE.TGXLoaderUtils;
+		var game = THREE.TGXLoader.Game;
 		var basepath = THREE.TGXLoader.Basepath;
+		var contentpath = basepath+'/common/'+game+'_content';
 		var platform = THREE.TGXLoader.Platform;
 		var animationPath = THREE.TGXLoader.DefaultAnimationPath;
 
@@ -387,7 +396,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 				// Load Gear
 				for (var gearIndex in gearAsset.gear) {
-					var gearUrl = basepath+'/common/destiny_content/geometry/gear/'+gearAsset.gear[gearIndex];
+					var gearUrl = contentpath+'/geometry/gear/'+gearAsset.gear[gearIndex];
 					loadPart(gearUrl, function(gear) {
 						gear = JSON.parse(utils.string(gear));
 						//console.log('LoadGear', gearUrl);
@@ -401,7 +410,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				// Load Bones / Animations
 				if (loadSkeleton && contentLoaded.skeleton == undefined) {
 					contentLoaded.skeleton = null;
-					loadPart(basepath+'/common/destiny_content/animations/destiny_player_skeleton.js', function(skeleton) {
+					loadPart(contentpath+'/animations/destiny_player_skeleton.js', function(skeleton) {
 						skeleton = JSON.parse(skeleton);
 						contentLoaded.skeleton = skeleton;
 						assetLoadCount++;
@@ -409,7 +418,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					}, onProgressCallback, onErrorCallback);
 
 					if (loadAnimation) {
-						loadPart(basepath+'/common/destiny_content/animations/'+animationPath, function(animations) {
+						loadPart(contentpath+'/animations/'+animationPath, function(animations) {
 							animations = JSON.parse(animations);
 							contentLoaded.animations = animations;
 							assetLoadCount++;
@@ -448,14 +457,14 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 		function loadPart(url, onLoad) {
 			var loader = new THREE.BungieNetLoader( this.manager );
-			loader.load(url, null, function (response) {
+			loader.load(url+(noCache ? '?'+new Date().getTime() : ''), null, function (response) {
 				if (response instanceof ArrayBuffer) response = new Uint8Array(response);
 				if (onLoad) onLoad(response);
 			}, onProgressCallback, onErrorCallback);
 		}
 
 		function loadGeometry(geometry, onLoad) {
-			var url = basepath+'/common/destiny_content/geometry/platform/'+THREE.TGXLoader.Platform+'/geometry/'+geometry;
+			var url = contentpath+'/geometry/platform/'+THREE.TGXLoader.Platform+'/geometry/'+geometry;
 			loadTGXBin(url, onLoad, onProgressCallback, onErrorCallback);
 		}
 
@@ -525,7 +534,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 		function loadTexture(texture, isPlated, onLoad) {
 			if (isPlated === undefined) isPlated = false;
-			var url = basepath+'/common/destiny_content/geometry/platform/'+THREE.TGXLoader.Platform+'/'+(isPlated ? 'plated_textures' : 'textures')+'/'+texture;
+			var url = contentpath+'/geometry/platform/'+THREE.TGXLoader.Platform+'/'+(isPlated ? 'plated_textures' : 'textures')+'/'+texture;
 
 			var referenceId = texture.split('.')[0];
 
@@ -617,6 +626,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			materials = [];
 			if (!loadTextures) materials.push(defaultMaterial);
 
+			vertexOffset = 0;
 			for (var gearId in contentLoaded.gear) {
 				var gear = contentLoaded.gear[gearId];
 				parseGear(gear);
@@ -642,7 +652,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 							break;
 						}
 					}
+				} else if (artContentSets) {
+					artContent = artContentSets[0].arrangement;
 				}
+				//console.log('Gear', gearId, artContent);
 				if (artContent) {
 					var gearSet = artContent.gear_set;
 					var regions = gearSet.regions;
@@ -667,10 +680,11 @@ Object.assign(THREE.TGXLoader.prototype, {
 				gearDyes = parseGearDyes(gear);
 			//}
 			//console.log('GeometryHashes', geometryHashes);
-			console.log('GearDyes', gearDyes);
+			//console.log('GearDyes', gearDyes);
 
 
 			// Compress geometry into a single THREE.Geometry
+			if (geometryHashes.length == 0) console.warn('NoGeometry');
 			for (var g=0; g<geometryHashes.length; g++) {
 				var geometryHash = geometryHashes[g];
 				var tgxBin = contentLoaded.geometry[geometryHash];
@@ -681,7 +695,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					continue;
 				}
 
-				console.log('Geometry['+g+']', geometryHash, tgxBin);
+				//console.log('Geometry['+g+']', geometryHash, tgxBin);
 
 				var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
 
@@ -992,7 +1006,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 						geometry.vertices.push(new THREE.Vector3(x, y, z));
 
 						// Set bone weights
-						var blendIndices = vertex.blendindices0 ? vertex.blendindices0 : [0, 255, 255, 255];
+						var boneIndex = position[3];//Math.abs((positionOffset[3] * 32767.0) + 0.01);
+						//var bone = geometry.bones[boneIndex];
+
+						var blendIndices = vertex.blendindices0 ? vertex.blendindices0 : [boneIndex, 255, 255, 255];
 						var blendWeights = vertex.blendweight0 ? vertex.blendweight0: [1, 0, 0, 0];
 
 						var skinIndex = [0, 0, 0, 0];
@@ -1236,6 +1253,11 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var primaryColor = dye.material_properties.primary_color;
 					var secondaryColor = dye.material_properties.secondary_color;
 
+					if (game == 'destiny2') {
+						primaryColor = dye.material_properties.primary_material_params;
+						secondaryColor = dye.material_properties.secondary_material_params;
+					}
+
 					var gearDyeTextures = {
 
 					};
@@ -1255,7 +1277,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					//console.log('DyeTextures', gearDyeTextures);
 
 					// Spasm.GearDye
-					gearDyes.push({
+					var gearDye = {
 						//identifier: dye.identifier, // Doesn't exist?
 						hash: dye.hash,
 						investmentHash: dye.investment_hash,
@@ -1270,8 +1292,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 						primaryDiffuse: gearDyeTextures.primary_diffuse ? gearDyeTextures.primary_diffuse.texture : null,
 						secondaryDiffuse: gearDyeTextures.secondary_diffuse ? gearDyeTextures.secondary_diffuse.texture : null,
 
-						blendMode: dye.blend_mode,
-						isCloth: dye.cloth,
+						//blendMode: dye.blend_mode,
+						//isCloth: dye.cloth,
 
 						// Material Properties
 						primaryColor: new THREE.Color(primaryColor[0], primaryColor[1], primaryColor[2]),
@@ -1282,7 +1304,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 						decalBlendOption: dye.material_properties.decal_blend_option,
 						specularProperties: dye.material_properties.specular_properties,
 						subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
-					});
+					};
+					//console.log(gearDye);
+					gearDyes.push(gearDye);
 				}
 				gearDyeGroups[dyeType] = gearDyes;
 			}
@@ -1577,7 +1601,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 		}
 
 		return function(items, options, onLoad, onProgress, onError) {
+			game = options.game;
 			basepath = options.basepath;
+			contentpath = basepath+'/common/'+game+'_content';
 			platform = options.platform;
 			animationPath = options.animationPath;
 			//itemHash = options.itemHash;
@@ -1586,6 +1612,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			loadSkeleton = options.loadSkeleton;
 			loadAnimation = options.loadAnimation;
 			loadTextures = options.loadTextures;
+			noCache = options.noCache;
 			onLoadCallback = onLoad;
 			onProgressCallback = onProgress;
 			onErrorCallback = onError;
@@ -1604,6 +1631,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 			for (var i=0; i<items.length; i++) {
 				var data = items[i];
+				if (!data.gearAsset) {
+					console.warn('MissingGearAsset['+i+']', data);
+					continue;
+				}
 				loadAssetManifest(data.gearAsset);
 			}
 		}
