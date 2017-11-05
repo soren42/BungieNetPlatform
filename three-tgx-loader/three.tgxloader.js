@@ -253,8 +253,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 			}
 		}
 
-		for (var i=0; i<options.itemHashes.length; i++) {
-			var itemHash = options.itemHashes[i];
+		function gearAsset(itemIndex) {
+			var itemHash = options.itemHashes[itemIndex];
 			if (options.platform == 'mobile') {
 				if (options.manifestPath) { // Load manifest server-side
 					var url = options.manifestPath.replace('$itemHash', itemHash);
@@ -263,7 +263,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 						loadedCount++;
 						try { // Invalid JSON response
 							response = JSON.parse(response);
-							items.push(response);
+							items[itemIndex] = response;
 						} catch(e) {
 							console.error('Invalid JSON', url);
 						}
@@ -281,7 +281,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 						itemsLoaded();
 					}, onProgress, onError);
 				}
-				continue;
+				return;
 			}
 
 			// Web version support
@@ -297,12 +297,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 
 				if (response.ErrorCode == 1) {
-					items.push(response.Response.data);
+					items[itemIndex] = response.Response.data;
 				} else {
 					console.error('Bungie Error Response', response);
 				}
 				itemsLoaded();
 			}, onProgress, onError);
+		}
+
+		for (var i=0; i<options.itemHashes.length; i++) {
+			gearAsset(i);
 		}
 	},
 	parse: (function() {
