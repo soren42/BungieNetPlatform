@@ -480,7 +480,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		}
 
 		function loadGeometry(geometry, onLoad) {
-			var url = contentpath+'/geometry/platform/'+THREE.TGXLoader.Platform+'/geometry/'+geometry;
+			var url = contentpath+'/geometry/platform/'+platform+'/geometry/'+geometry;
 			loadTGXBin(url, onLoad, onProgressCallback, onErrorCallback);
 		}
 
@@ -550,7 +550,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 		function loadTexture(texture, isPlated, onLoad) {
 			if (isPlated === undefined) isPlated = false;
-			var url = contentpath+'/geometry/platform/'+THREE.TGXLoader.Platform+'/'+(isPlated ? 'plated_textures' : 'textures')+'/'+texture;
+			var url = contentpath+'/geometry/platform/'+platform+'/'+(isPlated ? 'plated_textures' : 'textures')+'/'+texture;
 
 			var referenceId = texture.split('.')[0];
 
