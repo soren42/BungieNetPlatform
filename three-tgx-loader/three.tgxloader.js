@@ -309,7 +309,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 			gearAsset(i);
 		}
 	},
-	parse: (function() {
+	//parse: (function() {
+	parse: function(items, options, onLoad, onProgress, onError) {
 		//var itemHash = 0;
 		var isFemale = false;
 		var classHash = 0;
@@ -473,7 +474,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 		// Check for when all content has loaded
 		function checkContentLoaded() {
 			if (assetLoadCount < assetLoadTotal) return;
-			console.log('ContentLoaded', assetLoadCount+'/'+assetLoadTotal);
 			if (contentParsed) return;
 			contentParsed = true;
 			parseContent(contentLoaded);
@@ -656,6 +656,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 				parseGear(gear);
 			}
 
+			if (typeof onLoadCallback !== 'function') {
+				console.warn('NoOnLoadCallback', geometry, materials, animation);
+				return;
+			}
 			onLoadCallback(geometry, materials, animation ? [animation] : []);
 		}
 
@@ -1627,7 +1631,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			return part;
 		}
 
-		return function(items, options, onLoad, onProgress, onError) {
+		//return function(items, options, onLoad, onProgress, onError) {
 			game = options.game;
 			basepath = options.basepath;
 			contentpath = basepath+'/common/'+game+'_content';
@@ -1645,6 +1649,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			onErrorCallback = onError;
 
 			contentLoaded = {
+				items: items,
 				gear: {},
 				geometry: {},
 				textures: {},
@@ -1665,8 +1670,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 				loadAssetManifest(data.gearAsset);
 			}
-		}
-	})()
+		//}
+	//})()
+	}
 });
 
 // This is a copy of THREE.FileLoader with some extra settings applied to the XMLHttpRequest
