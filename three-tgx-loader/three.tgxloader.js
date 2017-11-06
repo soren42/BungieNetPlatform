@@ -1268,7 +1268,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var dye = dyes[i];
 					var dyeTextures = dye.textures;
 					var materialProperties = dye.material_properties;
-					//console.log('GearDye['+dyeType+']['+i+']', dye);
+					console.log('GearDye['+dyeType+']['+i+']', dye);
 
 					var primaryColor = dye.material_properties.primary_color;
 					var secondaryColor = dye.material_properties.secondary_color;
@@ -1316,8 +1316,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 						//isCloth: dye.cloth,
 
 						// Material Properties
-						primaryColor: new THREE.Color(primaryColor[0], primaryColor[1], primaryColor[2]),
-						secondaryColor: new THREE.Color(secondaryColor[0], secondaryColor[1], secondaryColor[2]),
+						primaryColor: primaryColor ? new THREE.Color(primaryColor[0], primaryColor[1], primaryColor[2]) : new THREE.Color(1, 0, 0),
+						secondaryColor: secondaryColor ? new THREE.Color(secondaryColor[0], secondaryColor[1], secondaryColor[2]) : new THREE.Color(0, 1, 0),
 						detailTransform: dye.material_properties.detail_transform,
 						detailNormalContributionStrength: dye.material_properties.detail_normal_contribution_strength,
 						decalAlphaMapTransform: dye.material_properties.decal_alpha_map_transform,
@@ -1648,20 +1648,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 			};
 			assetLoadCount = 0;
 			assetLoadTotal = 0;
-
-			console.log('Parse', {
-				game: game,
-				basepath: basepath,
-				contentpath: contentpath,
-				platform: platform,
-				animationPath: animationPath,
-				//isFemale: isFemale,
-				//classHash: classHash,
-				//loadSkeleton: loadSkeleton,
-				//loadAnimation: loadAnimation,
-				//loadTextures: loadTextures,
-				noCache: noCache
-			});
 
 			for (var i=0; i<items.length; i++) {
 				var data = items[i];
