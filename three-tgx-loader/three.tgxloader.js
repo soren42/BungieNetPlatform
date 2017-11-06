@@ -1649,6 +1649,20 @@ Object.assign(THREE.TGXLoader.prototype, {
 			assetLoadCount = 0;
 			assetLoadTotal = 0;
 
+			console.log('Parse', {
+				game: game,
+				basepath: basepath,
+				contentpath: contentpath,
+				platform: platform,
+				animationPath: animationPath,
+				//isFemale: isFemale,
+				//classHash: classHash,
+				//loadSkeleton: loadSkeleton,
+				//loadAnimation: loadAnimation,
+				//loadTextures: loadTextures,
+				noCache: noCache
+			});
+
 			for (var i=0; i<items.length; i++) {
 				var data = items[i];
 				if (!data.gearAsset) {
