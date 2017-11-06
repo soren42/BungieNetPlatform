@@ -323,6 +323,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var contentLoaded = null;
 		var assetLoadCount = 0;
 		var assetLoadTotal = 0;
+		var contentParsed = false;
 
 		var onLoadCallback, onProgressCallback, onErrorCallback;
 
@@ -472,6 +473,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 		// Check for when all content has loaded
 		function checkContentLoaded() {
 			if (assetLoadCount < assetLoadTotal) return;
+			console.log('ContentLoaded', assetLoadCount+'/'+assetLoadTotal);
+			if (contentParsed) return;
+			contentParsed = true;
 			parseContent(contentLoaded);
 		}
 
@@ -1278,6 +1282,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 						secondaryColor = dye.material_properties.secondary_material_params;
 					}
 
+					if (!primaryColor) console.warn('MissingPrimaryColor['+dyeType+']', dye);
+					if (!secondaryColor) console.warn('MissingSecondaryColor['+dyeType+']', dye);
+
 					var gearDyeTextures = {
 
 					};
@@ -1648,6 +1655,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			};
 			assetLoadCount = 0;
 			assetLoadTotal = 0;
+			contentParsed = false;
 
 			for (var i=0; i<items.length; i++) {
 				var data = items[i];
