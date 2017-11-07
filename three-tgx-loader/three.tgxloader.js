@@ -212,7 +212,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var game = options.game ? options.game : defaultOptions.game;
 		switch(game) {
 			case 'destiny2':
-				defaultOptions.platform = 'mobile'; // Web not supported
 				defaultOptions.apiBasepath = THREE.TGXLoader.APIBasepath2;
 				defaultOptions.manifestPath = THREE.TGXLoader.ManifestPath2;
 				break;
