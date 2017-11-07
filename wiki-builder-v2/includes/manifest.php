@@ -108,4 +108,7 @@ if (isset($_GET['def'])) {
 		echo LN;
 		//break;
 	}
+} else {
+	$result = queryDatabase("SELECT name FROM sqlite_master WHERE type='table'");
+	echo json_encode($result, JSON_PRETTY_PRINT);
 }

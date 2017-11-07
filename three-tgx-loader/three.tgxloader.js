@@ -190,6 +190,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var defaultOptions = {
 			//itemHash: options,
 			itemHashes: [options],
+			shaderHash: 0,
 			classHash: 0,
 			isFemale: false,
 			apiKey: THREE.TGXLoader.APIKey,
@@ -202,13 +203,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 			loadAnimation: false,
 			animationPath: THREE.TGXLoader.DefaultAnimationPath,
 			game: THREE.TGXLoader.Game,
-			noCache: THREE.TGXLoader.NoCache
+			noCache: THREE.TGXLoader.NoCache,
+
+			ignoreLockedDyes: false
 		};
 		if (typeof options != 'object') options = {};
 
 		var game = options.game ? options.game : defaultOptions.game;
 		switch(game) {
 			case 'destiny2':
+				defaultOptions.platform = 'mobile'; // Web not supported
 				defaultOptions.apiBasepath = THREE.TGXLoader.APIBasepath2;
 				defaultOptions.manifestPath = THREE.TGXLoader.ManifestPath2;
 				break;
@@ -239,22 +243,48 @@ Object.assign(THREE.TGXLoader.prototype, {
 			};
 		}
 
-		var url, loader, loadedCount = 0, items = [];
+		var url, loader, loadedCount = 0, loadedTotal = 0, items = [], shaderHashes = [], shaders = {};
 
 		// Mobile manifest support
 		if (options.platform == 'mobile' && !options.manifestPath && !THREE.TGXManifest.isCapable()) {
 			options.platform = 'web';
 		}
 
-		function itemsLoaded() {
-			console.log('LoadedItem', items[items.length-1]);
-			if (loadedCount == options.itemHashes.length) {
-				scope.parse(items, options, onLoad, onProgress, onError);
+		function assetsLoaded() {
+			if (loadedCount == loadedTotal) {
+				for (var i=0; i<items.length; i++) {
+					var item = items[i];
+					item.shaderHash = shaderHashes[i];
+				}
+				scope.parse(items, shaders, options, onLoad, onProgress, onError);
 			}
 		}
 
-		function gearAsset(itemIndex) {
+		function itemAsset(itemIndex) {
 			var itemHash = options.itemHashes[itemIndex];
+
+			gearAsset(itemHash, function(item) {
+				//console.log('LoadedItem['+itemIndex+']', item);
+				items[itemIndex] = item;
+			});
+		}
+
+		function shaderAsset(itemIndex, shaderHash) {
+			shaderHashes[itemIndex] = shaderHash;
+			if (shaderHash == 0 || shaders[shaderHash] != undefined) {
+				loadedCount++;
+				assetsLoaded();
+				return;
+			}
+			shaders[shaderHash] = null;
+			gearAsset(shaderHash, function(shader) {
+				//console.log('LoadedShader['+itemIndex+']', shader);
+				shaders[shaderHash] = shader;
+			});
+		}
+
+		function gearAsset(/*itemIndex*/itemHash, callback) {
+			//var itemHash = options.itemHashes[itemIndex];
 			if (options.platform == 'mobile') {
 				if (options.manifestPath) { // Load manifest server-side
 					var url = options.manifestPath.replace('$itemHash', itemHash);
@@ -263,22 +293,23 @@ Object.assign(THREE.TGXLoader.prototype, {
 						loadedCount++;
 						try { // Invalid JSON response
 							response = JSON.parse(response);
-							items[itemIndex] = response;
+							//items[itemIndex] = response;
+							callback(response);
 						} catch(e) {
 							console.error('Invalid JSON', url);
 						}
-						itemsLoaded();
+						assetsLoaded();
 					}, onProgress, onError);
-
 				} else { // Load manifest locally
 					var manifest = THREE.TGXLoader.Manifest;
 					if (!THREE.TGXLoader.Manifest) {
 						THREE.TGXLoader.Manifest = manifest = new THREE.TGXManifest(this.manager, options);
 					}
 					manifest.getAsset(itemHash, function(data) {
-						items.push(data);
+						//items.push(data);
 						loadedCount++;
-						itemsLoaded();
+						callback(data);
+						assetsLoaded();
 					}, onProgress, onError);
 				}
 				return;
@@ -297,20 +328,25 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 
 				if (response.ErrorCode == 1) {
-					items[itemIndex] = response.Response.data;
+					//items[itemIndex] = response.Response.data;
+					callback(response.Response.data);
 				} else {
 					console.error('Bungie Error Response', response);
 				}
-				itemsLoaded();
+				assetsLoaded();
 			}, onProgress, onError);
 		}
 
+		loadedTotal = options.itemHashes.length*2;
 		for (var i=0; i<options.itemHashes.length; i++) {
-			gearAsset(i);
+			itemAsset(i);
+			var shaderHash = options.shaderHashes && i < options.shaderHashes.length ? options.shaderHashes[i] : options.shaderHash;
+			//console.log('Item['+i+']', options.itemHashes[i], 'Shader', shaderHash);
+			shaderAsset(i, shaderHash);
 		}
 	},
 	//parse: (function() {
-	parse: function(items, options, onLoad, onProgress, onError) {
+	parse: function(items, shaders, options, onLoad, onProgress, onError) {
 		//var itemHash = 0;
 		var isFemale = false;
 		var classHash = 0;
@@ -338,6 +374,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 		var hasBones = false;
 		var defaultMaterial, geometry, materials;
 		var vertexOffset = 0;
+
+		var ignoreLockedDyes = false;
 
 		// Spasm.TGXAssetLoader.prototype.onLoadAssetManifest
 		function loadAssetManifest(gearAsset) {
@@ -368,7 +406,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 						//}
 						filteredRegionIndexSets.push(regionIndexSet[0]);
 					}
-				} else { // Use gender-specific set (ie armor)
+				} else if (content.female_index_set && content.male_index_set) { // Use gender-specific set (ie armor)
 					//console.log('GenderedIndexSet', content.female_index_set, content.male_index_set);
 					filteredRegionIndexSets.push(isFemale ? content.female_index_set : content.male_index_set);
 				}
@@ -381,9 +419,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 				for (var filteredRegionIndex in filteredRegionIndexSets) {
 					var filteredRegionIndexSet = filteredRegionIndexSets[filteredRegionIndex];
 					var index, i;
-					for (i=0; i<filteredRegionIndexSet.geometry.length; i++) {
-						index = filteredRegionIndexSet.geometry[i];
-						geometryIndexes[index] = index;
+					if (filteredRegionIndexSet == undefined) {
+						console.warn('MissingFilterRegionIndexSet', filteredRegionIndex, filteredRegionIndexSets);
+						continue;
+					}
+					// Shaders don't have geometry
+					if (filteredRegionIndexSet.geometry) {
+						for (i=0; i<filteredRegionIndexSet.geometry.length; i++) {
+							index = filteredRegionIndexSet.geometry[i];
+							geometryIndexes[index] = index;
+						}
 					}
 					for (i=0; i<filteredRegionIndexSet.textures.length; i++) {
 						index = filteredRegionIndexSet.textures[i];
@@ -476,6 +521,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			if (assetLoadCount < assetLoadTotal) return;
 			if (contentParsed) return;
 			contentParsed = true;
+
 			parseContent(contentLoaded);
 		}
 
@@ -651,10 +697,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 			if (!loadTextures) materials.push(defaultMaterial);
 
 			vertexOffset = 0;
-			for (var gearId in contentLoaded.gear) {
-				var gear = contentLoaded.gear[gearId];
-				parseGear(gear);
+			for (var i=0; i<contentLoaded.items.length; i++) {
+				var item = contentLoaded.items[i];
+				var itemGear = contentLoaded.gear[item.requestedId];
+				var shaderGear = item.shaderHash ? contentLoaded.gear[item.shaderHash] : null;
+				parseGear(itemGear, shaderGear);
 			}
+			//for (var gearId in contentLoaded.gear) {
+			//	var gear = contentLoaded.gear[gearId];
+			//	parseGear(gear);
+			//}
 
 			if (typeof onLoadCallback !== 'function') {
 				console.warn('NoOnLoadCallback', geometry, materials, animation);
@@ -663,7 +715,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			onLoadCallback(geometry, materials, animation ? [animation] : []);
 		}
 
-		function parseGear(gear) {
+		function parseGear(gear, shaderGear) {
 			// Figure out which geometry should be loaded ie class, gender
 			var geometryHashes = [];
 			var gearDyes = null;
@@ -680,7 +732,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 							break;
 						}
 					}
-				} else if (artContentSets) {
+				} else if (artContentSets && artContentSets.length > 0) {
 					artContent = artContentSets[0].arrangement;
 				}
 				//console.log('Gear', gearId, artContent);
@@ -705,7 +757,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					}
 				}
 
-				gearDyes = parseGearDyes(gear);
+				gearDyes = parseGearDyes(gear, shaderGear);
 			//}
 			//console.log('GeometryHashes', geometryHashes);
 			//console.log('GearDyes', gearDyes);
@@ -943,7 +995,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 									if (paramKey) materialParams[paramKey] = dye[dyeKey];
 								}
 							} else {
-								console.warn('MissingGearDye['+part.gearDyeSlot+']', contentLoaded);
+								console.warn('MissingGearDye['+part.gearDyeSlot+']', gearDyes);
 							}
 
 							// Check for vertex colors
@@ -1260,7 +1312,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 		}
 
 		// Spasm.TGXAssetLoader.prototype.getGearDyes
-		function parseGearDyes(gear) {
+		function getGearDyes(gear) {
 			var dyeGroups = {
 				customDyes: gear.custom_dyes || [],
 				defaultDyes: gear.default_dyes || [],
@@ -1276,14 +1328,14 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var dye = dyes[i];
 					var dyeTextures = dye.textures;
 					var materialProperties = dye.material_properties;
-					console.log('GearDye['+dyeType+']['+i+']', dye);
+					//console.log('GearDye['+dyeType+']['+i+']', dye);
 
 					var primaryColor = dye.material_properties.primary_color;
 					var secondaryColor = dye.material_properties.secondary_color;
 
 					if (game == 'destiny2') {
-						primaryColor = dye.material_properties.primary_material_params;
-						secondaryColor = dye.material_properties.secondary_material_params;
+						primaryColor = dye.material_properties.primary_albedo_tint;//.primary_material_params;
+						secondaryColor = dye.material_properties.secondary_albedo_tint;//.secondary_material_params;
 					}
 
 					if (!primaryColor) console.warn('MissingPrimaryColor['+dyeType+']', dye);
@@ -1329,29 +1381,48 @@ Object.assign(THREE.TGXLoader.prototype, {
 						// Material Properties
 						primaryColor: primaryColor ? new THREE.Color(primaryColor[0], primaryColor[1], primaryColor[2]) : new THREE.Color(1, 0, 0),
 						secondaryColor: secondaryColor ? new THREE.Color(secondaryColor[0], secondaryColor[1], secondaryColor[2]) : new THREE.Color(0, 1, 0),
-						detailTransform: dye.material_properties.detail_transform,
-						detailNormalContributionStrength: dye.material_properties.detail_normal_contribution_strength,
-						decalAlphaMapTransform: dye.material_properties.decal_alpha_map_transform,
-						decalBlendOption: dye.material_properties.decal_blend_option,
-						specularProperties: dye.material_properties.specular_properties,
-						subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
+						//detailTransform: dye.material_properties.detail_transform,
+						//detailNormalContributionStrength: dye.material_properties.detail_normal_contribution_strength,
+						//decalAlphaMapTransform: dye.material_properties.decal_alpha_map_transform,
+						//decalBlendOption: dye.material_properties.decal_blend_option,
+						//specularProperties: dye.material_properties.specular_properties,
+						//subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
 					};
 					//console.log(gearDye);
 					gearDyes.push(gearDye);
 				}
 				gearDyeGroups[dyeType] = gearDyes;
 			}
+			return gearDyeGroups;
+		}
+		function parseGearDyes(gear, shaderGear) {
+
+			var gearDyeGroups = getGearDyes(gear);
+			var shaderDyeGroups = shaderGear ? getGearDyes(shaderGear) : gearDyeGroups;
 
 			//console.log('GearDyes', gearDyeGroups);
+			//console.log('ShaderGearDyes', shaderDyeGroups);
 
 			// Spasm.GearRenderable.prototype.getResolvedDyeList
 			var resolvedDyes = [];
 			var dyeTypeOrder = ['defaultDyes', 'customDyes', 'lockedDyes'];
 			for (var i=0; i<dyeTypeOrder.length; i++) {
 				var dyeType = dyeTypeOrder[i];
-				var dyes = gearDyeGroups[dyeType];
+				var dyes = [];
+				switch(dyeType) {
+					case 'defaultDyes':
+						dyes = gearDyeGroups[dyeType];
+						break;
+					case 'customDyes':
+						dyes = shaderDyeGroups[dyeType];
+						break;
+					case 'lockedDyes':
+						dyes = gearDyeGroups[dyeType];
+						break;
+				}
 				for (var j=0; j<dyes.length; j++) {
 					var dye = dyes[j];
+					if (dyeType == 'lockedDyes' && ignoreLockedDyes && resolvedDyes[dye.slotTypeIndex]) continue;
 					resolvedDyes[dye.slotTypeIndex] = dye;
 				}
 			}
@@ -1648,6 +1719,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 			onProgressCallback = onProgress;
 			onErrorCallback = onError;
 
+			ignoreLockedDyes = options.ignoreLockedDyes;
+
 			contentLoaded = {
 				items: items,
 				gear: {},
@@ -1663,12 +1736,15 @@ Object.assign(THREE.TGXLoader.prototype, {
 			contentParsed = false;
 
 			for (var i=0; i<items.length; i++) {
-				var data = items[i];
-				if (!data.gearAsset) {
-					console.warn('MissingGearAsset['+i+']', data);
+				var item = items[i];
+				var shader = item.shaderHash ? shaders[item.shaderHash] : null;
+				//console.log('ParseGearAsset['+i+']', item, shader);
+				if (!item.gearAsset) {
+					console.warn('MissingGearAsset['+i+']', item);
 					continue;
 				}
-				loadAssetManifest(data.gearAsset);
+				loadAssetManifest(item.gearAsset);
+				if (shader) loadAssetManifest(shader.gearAsset);
 			}
 		//}
 	//})()
