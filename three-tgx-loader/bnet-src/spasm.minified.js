@@ -2423,7 +2423,7 @@ Spasm.ItemPreview.prototype.setItemReferenceIdsWithMutedItems = function(n, t, i
     Spasm.assertValid(u);
     Spasm.assertFunction(f);
     this.itemReferenceIds = n;
-    this.primaryWeaponItemDefinition = t;
+    this.assetManifests = t;
     this.shaderItemDefinition = i;
     this.mutedItemReferenceIds = r;
     this.assetManifests = u;
@@ -2646,6 +2646,7 @@ Spasm.Path.stripTrailingSlash = function(n) {
 Spasm.Path.combine = function(n, t) {
     Spasm.assertPath(n);
     Spasm.assertPath(t);
+    t = t.replace(Spasm.Content.BaseURL, ''); // Absolute URL fix
     return Spasm.Path.stripTrailingSlash(n) + "/" + Spasm.Path.stripLeadingSlash(t)
 };
 Spasm.Path.addVersionQuery = function(n) {
@@ -2939,6 +2940,7 @@ Spasm.TextureLoader = function(n, t) {
     i = document.createElement("img");
     this.image = i;
     r = this;
+    i.crossOrigin = "anonymous";
     i.onload = function() {
         r.onImageLoad()
     };
@@ -2946,6 +2948,19 @@ Spasm.TextureLoader = function(n, t) {
         r.onImageError()
     };
     i.src = n
+    //var request = new XMLHttpRequest();
+    //request.open('GET', n, true);
+    //request.addEventListener('load', function (event) {
+    //    console.log(event);
+    //}, false);
+    //request.addEventListener( 'error', function ( event ) {
+    //    Bnet.error(n, event);
+    //}, false );
+    //request.responseType = 'blob';
+    //request.setRequestHeader("X-API-Key", bungieNetPlatform.apiKeyphotoId);
+    ////request.withCredentials = true;
+    //request.overrideMimeType = 'text/plain';
+    //request.send( null );
 };
 Spasm.TextureLoader.prototype = {
     constructor: Spasm.TextureLoader,
@@ -4087,6 +4102,8 @@ Spasm.ShaderProgram = function(n, t, i) {
     this.handles = {};
     this.hasHandles = !1;
     this.link()
+	
+	console.log('ShaderProgram', t, i);
 };
 Spasm.ShaderProgram.prototype = {
     constructor: Spasm.ShaderProgram

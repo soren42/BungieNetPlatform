@@ -24,6 +24,7 @@ Spasm.ShaderProgram = function(gl, vertexShader, fragmentShader)
 
 	// defer getHandles() until it is necessary
 	// this.getHandles();
+	console.log('ShaderProgram', vertexShader, fragmentShader);
 };
 
 Spasm.ShaderProgram.prototype =
@@ -266,6 +267,7 @@ Spasm.ShaderProgram.prototype.setUniformData = function(uniformData)
 	if (handle)
 	{
 		var gl = this.gl;
+		console.log('setUniformData['+uniformValueType+']', handle, data);
 		switch (uniformValueType)
 		{
 			case "mat2":

@@ -13658,12 +13658,25 @@ var RequestWithCode = function(n, t) {
 		};
 		t.getHeaders = function() {
 			var n = t.getCSRFHeader();
-			return n["X-API-Key"] = "10E792629C2A47E19356B8A79EEFA640", n
+			return n["X-API-Key"] = t.apiKey, n
 		};
 		t.buildUrl = function(n, i, r) {
 			var f = t.platformSettings.platformUrl + n,
 				u = "?lc=" + t.platformSettings.currentLocale + "&fmt=true&lcin=" + t.platformSettings.locInherit;
-			return typeof i != "undefined" && i !== "" && (u += "&" + i), typeof r != "undefined" && r != null && (u += r), f + u
+			f = f.replace('/Platform/Destiny/', t.destinyPlatform);
+
+			typeof i != "undefined" && i !== "" && (u += "&" + i), typeof r != "undefined" && r != null && (u += r);
+			var url = f + u;
+
+			if (t.urlFilters) {
+				for (var i=0; i<t.urlFilters.length; i++) {
+					var urlFilter = t.urlFilters[i];
+					url = url.replace(urlFilter.search, urlFilter.replace);
+				}
+
+			}
+
+			return url;
 		};
 		t.addParam = function(n, t, i) {
 			return typeof i != "undefined" && i !== null && (n.length > 0 && (n += "&"), n += t + "=" + encodeURIComponent(i)), n

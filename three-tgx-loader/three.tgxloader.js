@@ -191,6 +191,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			//itemHash: options,
 			itemHashes: [options],
 			shaderHash: 0,
+			ornamentHash: 0,
 			classHash: 0,
 			isFemale: false,
 			apiKey: THREE.TGXLoader.APIKey,
@@ -259,9 +260,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			}
 		}
 
-		function itemAsset(itemIndex) {
-			var itemHash = options.itemHashes[itemIndex];
-
+		function itemAsset(itemIndex, itemHash) {
 			gearAsset(itemHash, function(item) {
 				//console.log('LoadedItem['+itemIndex+']', item);
 				items[itemIndex] = item;
@@ -337,10 +336,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 		}
 
 		loadedTotal = options.itemHashes.length*2;
+
+		// Only load the single ornamentHash when there is only one item
+		var defaultOrnamentHash = options.itemHashes.length == 1 ? options.ornamentHash : 0;
+
 		for (var i=0; i<options.itemHashes.length; i++) {
-			itemAsset(i);
+			var itemHash = options.itemHashes[i];
+			var ornamentHash = options.ornamentHashes && i<options.ornamentHashes.length ? options.ornamentHashes[i] : defaultOrnamentHash;
 			var shaderHash = options.shaderHashes && i < options.shaderHashes.length ? options.shaderHashes[i] : options.shaderHash;
 			//console.log('Item['+i+']', options.itemHashes[i], 'Shader', shaderHash);
+			itemAsset(i, ornamentHash ? ornamentHash : itemHash);
 			shaderAsset(i, shaderHash);
 		}
 	},
@@ -395,15 +400,19 @@ Object.assign(THREE.TGXLoader.prototype, {
 					for (var setIndex in content.region_index_sets) {
 						var regionIndexSet = content.region_index_sets[setIndex];
 						//console.log('RegionIndexSet', setIndex, regionIndexSet);
+						// regionKeysToNotLoad
 						//switch(parseInt(setIndex)) {
-						//	case 2:
-						//	case 6:
-						//	case 21:
+						//	case 2: // hud
+						//	case 6: // ammo
+						//	case 21: // reticle
 						//	//default:
 						//		filteredRegionIndexSets.push(regionIndexSet[0]);
 						//		break;
 						//}
-						filteredRegionIndexSets.push(regionIndexSet[0]);
+						//filteredRegionIndexSets.push(regionIndexSet[0]);
+						for (var j=0; j<regionIndexSet.length; j++) {
+							filteredRegionIndexSets.push(regionIndexSet[j]);
+						}
 					}
 				} else if (content.female_index_set && content.male_index_set) { // Use gender-specific set (ie armor)
 					//console.log('GenderedIndexSet', content.female_index_set, content.male_index_set);
@@ -438,6 +447,9 @@ Object.assign(THREE.TGXLoader.prototype, {
 							index = filteredRegionIndexSet.plate_regions[i];
 							platedTextureIndexes[index] = index;
 						}
+					}
+					if (filteredRegionIndexSet.shaders) {
+						console.warn('AssetHasShaders['+i+']', filteredRegionIndexSet.shaders);
 					}
 				}
 
@@ -499,6 +511,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				for (var textureIndex in textureIndexes) {
 					var texture = content.textures[textureIndex];
 					loadTexture(texture, false, function() {
+
 						assetLoadCount++;
 						checkContentLoaded();
 					});
@@ -716,51 +729,49 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 		function parseGear(gear, shaderGear) {
 			// Figure out which geometry should be loaded ie class, gender
-			var geometryHashes = [];
-			var gearDyes = null;
-			//for (var gearId in contentLoaded.gear) {
-			//	var gear = contentLoaded.gear[gearId];
-				var artContent = gear.art_content;
-				var artContentSets = gear.art_content_sets;
-				if (artContentSets && artContentSets.length > 1) {
-					//console.log('Requires Arrangement', artContentSets);
-					for (var r=0; r<artContentSets.length; r++) {
-						var artContentSet = artContentSets[r];
-						if (artContentSet.classHash == classHash) {
-							artContent = artContentSet.arrangement;
-							break;
-						}
+			var geometryHashes = [], gearDyes;
+			var artContent = gear.art_content;
+			var artContentSets = gear.art_content_sets;
+			if (artContentSets && artContentSets.length > 1) {
+				//console.log('Requires Arrangement', artContentSets);
+				for (var r=0; r<artContentSets.length; r++) {
+					var artContentSet = artContentSets[r];
+					if (artContentSet.classHash == classHash) {
+						artContent = artContentSet.arrangement;
+						break;
 					}
-				} else if (artContentSets && artContentSets.length > 0) {
-					artContent = artContentSets[0].arrangement;
 				}
-				//console.log('Gear', gearId, artContent);
-				if (artContent) {
-					var gearSet = artContent.gear_set;
-					var regions = gearSet.regions;
-					if (regions.length > 0) {
-						for (var u=0; u<regions.length; u++) {
-							var region = regions[u];
-							if (region.pattern_list.length > 0) {
-								var pattern = region.pattern_list[0]; // Always 1?
-								for (var h=0; h<pattern.geometry_hashes.length; h++) {
-									geometryHashes.push(pattern.geometry_hashes[h]);
-								}
+			} else if (artContentSets && artContentSets.length > 0) {
+				artContent = artContentSets[0].arrangement;
+			}
+			//console.log('Gear', gearId, artContent);
+			if (artContent) {
+				var gearSet = artContent.gear_set;
+				var regions = gearSet.regions;
+				if (regions.length > 0) {
+					for (var u=0; u<regions.length; u++) {
+						var region = regions[u];
+						if (region.pattern_list.length > 0) {
+							var pattern = region.pattern_list[0]; // Always 1?
+							for (var h=0; h<pattern.geometry_hashes.length; h++) {
+								geometryHashes.push(pattern.geometry_hashes[h]);
 							}
 						}
-					} else {
-						var overrideArtArrangement = isFemale ? gearSet.female_override_art_arrangement : gearSet.base_art_arrangement;
-						for (var o=0; o<overrideArtArrangement.geometry_hashes.length; o++) {
-							geometryHashes.push(overrideArtArrangement.geometry_hashes[o]);
-						}
+					}
+				} else {
+					var overrideArtArrangement = isFemale ? gearSet.female_override_art_arrangement : gearSet.base_art_arrangement;
+					for (var o=0; o<overrideArtArrangement.geometry_hashes.length; o++) {
+						geometryHashes.push(overrideArtArrangement.geometry_hashes[o]);
 					}
 				}
+			}
 
-				gearDyes = parseGearDyes(gear, shaderGear);
-			//}
+			gearDyes = parseGearDyes(gear, shaderGear);
 			//console.log('GeometryHashes', geometryHashes);
 			//console.log('GearDyes', gearDyes);
 
+			//
+			var geometryTextures = parseTextures(geometryHashes);
 
 			// Compress geometry into a single THREE.Geometry
 			if (geometryHashes.length == 0) console.warn('NoGeometry');
@@ -769,6 +780,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				var tgxBin = contentLoaded.geometry[geometryHash];
 
 				//if (g != 0) continue;
+				//if (g != 5) continue;
 				if (tgxBin == undefined) {
 					console.warn('MissingGeometry['+g+']', geometryHash);
 					continue;
@@ -776,7 +788,23 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 				//console.log('Geometry['+g+']', geometryHash, tgxBin);
 
-				var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
+				//var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
+
+				parseGeometry(geometryHash, geometryTextures, gearDyes);
+			}
+
+			//geometry.mergeVertices();
+			//geometry.computeVertexNormals();
+		}
+
+		function parseTextures(geometryHashes) {
+			var canvas, ctx;
+			var canvasPlates = {};
+			var geometryTextures = [];
+
+			for (var g=0; g<geometryHashes.length; g++) {
+				var geometryHash = geometryHashes[g];
+				var tgxBin = contentLoaded.geometry[geometryHash];
 
 				var metadata = tgxBin.metadata;
 				var texturePlates = metadata.texture_plates;
@@ -784,32 +812,70 @@ Object.assign(THREE.TGXLoader.prototype, {
 				//console.log('Metadata['+g+']', metadata);
 
 				// Spasm.TGXAssetLoader.prototype.getGearRenderableModel
-				var geometryTextures = {};
-				//console.log('TexturePlates', texturePlates, contentLoaded);
+				//console.log('TexturePlates['+g+']', texturePlates);
 				if (texturePlates.length == 1) {
 					var texturePlate = texturePlates[0];
 					var texturePlateSet = texturePlate.plate_set;
 
 					// Stitch together plate sets
 					// Web versions are pre-stitched
+
 					for (var texturePlateId in texturePlateSet) {
 						var texturePlate = texturePlateSet[texturePlateId];
-						var textureData = contentLoaded.platedTextures[texturePlate.reference_id];
-						if (!textureData) {
-							var canvas = document.createElement('canvas');
-							canvas.width = texturePlate.plate_size[0];
-							canvas.height = texturePlate.plate_size[1];
-							var ctx = canvas.getContext('2d');
+						var texturePlateRef = texturePlateId+'_'+texturePlate.plate_index;
+
+						// Web version uses pre-plated textures
+						var platedTexture = contentLoaded.platedTextures[texturePlate.reference_id];
+						var scale = 1;
+
+						if (platedTexture) {
+							scale = platedTexture.texture.image.width/texturePlate.plate_size[0];
+						}
+
+						if (texturePlate.texture_placements.length == 0) {
+							console.warn('SkippedEmptyTexturePlate['+texturePlateId+'_'+texturePlate.plate_index+']');
+							continue;
+						}
+
+						var canvasPlate = canvasPlates[texturePlateRef];
+						if (!canvasPlate) {
+							//console.log('NewTexturePlacementCanvas['+texturePlateRef+']');
+							canvas = document.createElement('canvas');
+							canvas.width = texturePlate.plate_size[0]*scale;
+							canvas.height = texturePlate.plate_size[1]*scale;
+							ctx = canvas.getContext('2d');
 
 							ctx.fillStyle = '#000000';
 							ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-							//console.log('BuildTexturePlate['+texturePlateId+']', texturePlate.plate_index, texturePlate.plate_size, texturePlate.reference_id);
-							for (var p=0; p<texturePlate.texture_placements.length; p++) {
-								var placement = texturePlate.texture_placements[p];
-								var placementTexture = contentLoaded.textures[placement.texture_tag_name];
-								//console.log('TexturePlacement['+p+']', placement, "\n", placementTexture);
+							ctx.fillStyle = '#FFFFFF';
+							canvasPlate = {
+								plateId: texturePlateId,
+								canvas: canvas,
+								hashes: []
+							};
+							canvasPlates[texturePlateRef] = canvasPlate;
+						}
+						canvas = canvasPlate.canvas;
+						ctx = canvas.getContext('2d');
+						if (canvasPlate.hashes.indexOf(geometryHash) == -1) canvasPlate.hashes.push(geometryHash);
 
+						for (var p=0; p<texturePlate.texture_placements.length; p++) {
+							var placement = texturePlate.texture_placements[p];
+							var placementTexture = contentLoaded.textures[placement.texture_tag_name];
+							//VertexColorsent);
+
+							// Fill draw area with white in case there are textures with an alpha channel
+							ctx.fillRect(placement.position_x*scale, placement.position_y*scale, placement.texture_size_x*scale, placement.texture_size_y*scale);
+
+							if (platedTexture) {
+								ctx.drawImage(platedTexture.texture.image,
+									placement.position_x*scale, placement.position_y*scale,
+									placement.texture_size_x*scale, placement.texture_size_y*scale,
+									placement.position_x*scale, placement.position_y*scale,
+									placement.texture_size_x*scale, placement.texture_size_y*scale
+								);
+							} else {
 								// Should be fixed, but add these checks in case
 								if (!placementTexture) {
 									console.warn('MissingPlacementTexture', placement.texture_tag_name, contentLoaded.textures);
@@ -821,15 +887,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 								}
 								ctx.drawImage(placementTexture.texture.image, placement.position_x, placement.position_y, placement.texture_size_x, placement.texture_size_y);
 							}
-
-							var dataUrl = canvas.toDataURL('image/png');
-
-							loadDataTexture(dataUrl, texturePlate.reference_id);
-							textureData = contentLoaded.platedTextures[texturePlate.reference_id];
-						} else {
-							//console.log('HasTexture', texture);
 						}
-						geometryTextures[texturePlateId] = textureData.texture;
 					}
 				}
 				else if (texturePlates.length > 1) {
@@ -839,7 +897,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					// This geometry uses static textures
 					// Spasm assumes all parts share the same shader, which generally works but has the potential for
 					// cross contaminating textures in other parts
-					//console.log(texturePlates, metadata.render_model.render_meshes);
+					console.warn('StaticTexturePlates', texturePlates);
 					//if (metadata.render_model.render_meshes.length > 0) {
 					//	var renderMesh = metadata.render_model.render_meshes[0];
 					//	var stagePartList = renderMesh.stage_part_list;
@@ -864,256 +922,280 @@ Object.assign(THREE.TGXLoader.prototype, {
 					//	}
 					//}
 				}
+			}
 
-				//console.log('RenderMeshes', renderMeshes);
-				for (var m=0; m<renderMeshes.length; m++) {
-					var renderMesh = renderMeshes[m];
-					var indexBuffer = renderMesh.indexBuffer;
-					var vertexBuffer = renderMesh.vertexBuffer;
-					var positionOffset = renderMesh.positionOffset;
-					var positionScale = renderMesh.positionScale;
-					var texcoord0ScaleOffset = renderMesh.texcoord0ScaleOffset;
-					var texcoordOffset = renderMesh.texcoordOffset;
-					var texcoordScale = renderMesh.texcoordScale;
-					var parts = renderMesh.parts;
-
-					//if (m != 1) continue;
-
-					if (parts.length == 0) {
-						console.log('Skipped RenderMesh['+m+']: No parts');
-						continue;
-					} // Skip meshes with no parts
-
-					//console.log('RenderMesh['+m+']', renderMesh);
-
-					// Spasm.Renderable.prototype.render
-					var partCount = -1;
-					for (var p=0; p<parts.length; p++) {
-						var part = parts[p];
-
-						// Skip any lods not matchin "_lod_category_01" ?
-						if (part.lodCategory.name.indexOf('0') == -1) {
-							//console.log('SkippedPart['+p+']', part.lodCategory.name, part);
-							continue;
-						}
-
-						partCount++;
-
-						//if (partCount != 1) continue;
-
-						//console.log('RenderMeshPart['+p+'|'+partCount+']', part);
-
-						// Load Material
-						if (loadTextures) {
-							var dye = gearDyes[part.gearDyeSlot];
-
-							var textures = {
-								diffuse: null,
-								normal: null,
-								gearstack: null,
-							};
-							for (var textureId in geometryTextures) {
-								textures[textureId] = geometryTextures[textureId];
-							}
-
-							// Part has a shader and possibly static textures
-							if (part.shader) {
-								//console.warn('PartShader', part.shader);
-								if (part.staticTextures) {
-									for (var s=0; s<part.staticTextures.length; s++) {
-										var staticTextureId = part.staticTextures[s];
-										var staticTexture = contentLoaded.textures[staticTextureId];
-										//console.log(staticTextureId, staticTexture);
-										if (!staticTexture) continue;
-										switch(part.shader+''+s) {
-											// 7n standard shader
-											case '70':
-												textures.diffuse = staticTexture.texture; break;
-											case '71':
-												textures.dyeDiffuse = staticTexture.texture; break;
-											case '72':
-												textures.normal = staticTexture.texture; break;
-											case '73':
-												textures.dyeNormal = staticTexture.texture; break;
-											case '74':
-												textures.gearstack = staticTexture.texture; break;
-											// 9n cubemap?
-										}
-									}
-								}
-							}
-
-							//console.log('RenderMeshPartDye['+part.gearDyeSlot+']', dye);
-							//console.log('RenderMeshPartTextures', textures);
-							//var material = new THREE.MeshPhongMaterial({
-							var materialParams = {
-								side: THREE.DoubleSide,
-								overdraw: true,
-								skinning: hasBones,
-								map: textures.diffuse,
-								normalMap: textures.normal,
-								gearstackMap: textures.gearstack,
-
-								// Dye Properties
-								usePrimaryColor: part.usePrimaryColor,
-
-								//isCloth: dye.isCloth,
-								//blendMode: dye.blendMode,
-								//primaryColor: dye.primaryColor,
-								//secondaryColor: dye.secondaryColor,
-								//detailTransform: dye.detailTransform,
-								//detailNormalContributionStrength: dye.detailNormalContributionStrength,
-								//decalAlphaMapTransform: dye.decalAlphaMapTransform,
-								//decalBlendOption: dye.decalBlendOption,
-								//specularProperties: dye.specularProperties,
-								//subsurfaceScatteringStrength: dye.subsurfaceScatteringStrength,
-								//
-								//dyeDiffuse: dye.diffuse,//dyeDiffuse,
-								//dyeNormal: dye.normal,//dyeNormal,
-								//dyeDecal: dye.decal,//dyeDecal
-								//dyePrimaryDiffuse: dye.primaryDiffuse,
-								//dyeSecondaryDiffuse: dye.secondaryDiffuse
-							};
-
-							if (dye) {
-								for (var dyeKey in dye) {
-									var paramKey = dyeKey;
-									switch(dyeKey) {
-										case 'hash':
-										case 'investmentHash':
-										case 'slotTypeIndex':
-										case 'variant':
-											paramKey = '';
-											break;
-										case 'diffuse': paramKey = 'dyeDiffuse'; break;
-										case 'normal': paramKey = 'dyeNormal'; break;
-										case 'decal': paramKey = 'dyeDecal'; break;
-										case 'primaryDiffuse': paramKey = 'dyePrimaryDiffuse'; break;
-										case 'secondaryDiffuse': paramKey = 'dyeSecondaryDiffuse'; break;
-									}
-									if (paramKey) materialParams[paramKey] = dye[dyeKey];
-								}
-							} else {
-								console.warn('MissingGearDye['+part.gearDyeSlot+']', gearDyes);
-							}
-
-							// Check for vertex colors
-							if (vertexBuffer.length > 0 && vertexBuffer[0].color0 !== undefined) {
-								console.warn('VertexColors');
-							//	materialParams.vertexColors = THREE.VertexColors;
-							}
-
-							var material = new THREE.TGXMaterial(materialParams);
-							materials.push(material);
-						}
-
-						var materialIndex = materials.length > 0 ? materials.length-1 : 0;
-
-						// Load Vertex Stream
-						var increment = 3;
-						var start = part.indexStart;
-						var count = part.indexCount;
-
-						// PrimitiveType, 3=TRIANGLES, 5=TRIANGLE_STRIP
-						// https://stackoverflow.com/questions/3485034/convert-triangle-strips-to-triangles
-
-						if (part.primitiveType === 5) {
-							increment = 1;
-							count -= 2;
-						}
-
-						for (var i=0; i<count; i+= increment) {
-							var faceVertexNormals = [];
-							var faceVertexUvs = [];
-							var faceVertex = [];
-
-							var faceColors = [];
-
-							var detailVertexUvs = [];
-
-							var faceIndex = start+i;
-
-							var tri = part.primitiveType === 3 || i & 1 ? [0, 1, 2] : [2, 1, 0];
-
-							for (var j=0; j<3; j++) {
-								var index = indexBuffer[faceIndex+tri[j]];
-								var vertex = vertexBuffer[index];
-								var normal = vertex.normal0;
-								var uv = vertex.texcoord0;
-								var color = vertex.color0;
-
-								var detailUv = vertex.texcoord2;
-								if (!detailUv) detailUv = [0, 0];
-
-								faceVertex.push(index+vertexOffset);
-								faceVertexNormals.push(new THREE.Vector3(normal[0], normal[1], normal[2]));
-
-								var uvu = uv[0]*texcoordScale[0]+texcoordOffset[0];
-								var uvv = uv[1]*texcoordScale[1]+texcoordOffset[1];
-								faceVertexUvs.push(new THREE.Vector2(uvu, uvv));
-
-								if (color) faceColors.push(new THREE.Color(color[0], color[1], color[2]));
-
-								//if (i==0 && j==0) {
-								//	console.log('Vertex['+i+','+j+']', vertex);
-								//}
-
-								detailVertexUvs.push(new THREE.Vector2(uvu*detailUv[0], uvv*detailUv[1]));
-							}
-							var face = new THREE.Face3(faceVertex[0], faceVertex[1], faceVertex[2], faceVertexNormals);
-							face.materialIndex = materialIndex;
-							if (faceColors.length > 0) face.vertexColors = faceColors;
-							geometry.faces.push(face);
-							geometry.faceVertexUvs[0].push(faceVertexUvs);
-
-							if (geometry.faceVertexUvs.length < 2) geometry.faceVertexUvs.push([]);
-							geometry.faceVertexUvs[1].push(detailVertexUvs);
-						}
+			for (var canvasPlateId in canvasPlates) {
+				var canvasPlate = canvasPlates[canvasPlateId];
+				var dataUrl = canvasPlate.canvas.toDataURL('image/png');
+				loadDataTexture(dataUrl, canvasPlateId);
+				for (var i=0; i<canvasPlate.hashes.length; i++) {
+					var geometryHash = canvasPlate.hashes[i];
+					if (geometryTextures[geometryHash] == undefined) {
+						geometryTextures[geometryHash] = {};
 					}
-
-					for (var v=0; v<vertexBuffer.length; v++) {
-						var vertex = vertexBuffer[v];
-						var position = vertex.position0;
-						var x = position[0];//*positionScale[0]+positionOffset[0];
-						var y = position[1];//*positionScale[1]+positionOffset[1];
-						var z = position[2];//*positionScale[2]+positionOffset[2];
-						if (platform == 'web') { // Ignored on mobile?
-							x = x*positionScale[0]+positionOffset[0];
-							y = y*positionScale[1]+positionOffset[1];
-							z = z*positionScale[2]+positionOffset[2];
-						}
-						geometry.vertices.push(new THREE.Vector3(x, y, z));
-
-						// Set bone weights
-						var boneIndex = position[3];//Math.abs((positionOffset[3] * 32767.0) + 0.01);
-						//var bone = geometry.bones[boneIndex];
-
-						var blendIndices = vertex.blendindices0 ? vertex.blendindices0 : [boneIndex, 255, 255, 255];
-						var blendWeights = vertex.blendweight0 ? vertex.blendweight0: [1, 0, 0, 0];
-
-						var skinIndex = [0, 0, 0, 0];
-						var skinWeight = [0, 0, 0, 0];
-
-						var totalWeights = 0;
-						for (var w=0; w<blendIndices.length; w++) {
-							if (blendIndices[w] == 255) break;
-							skinIndex[w] = blendIndices[w];
-							skinWeight[w] = blendWeights[w];
-							totalWeights += blendWeights[w]*255;
-						}
-						if (totalWeights != 255) console.error('MissingBoneWeight', 255-totalWeights, i, j);
-
-						geometry.skinIndices.push(new THREE.Vector4().fromArray(skinIndex));
-						geometry.skinWeights.push(new THREE.Vector4().fromArray(skinWeight));
-						//geometry.skinIndices[index+vertexOffset].fromArray(skinIndex);
-						//geometry.skinWeights[index+vertexOffset].fromArray(skinWeight);
+					if (geometryTextures[geometryHash][canvasPlate.plateId] != undefined) {
+						console.warn('Overriding['+geometryHash+':'+canvasPlate.plateId+']');
 					}
-					vertexOffset += vertexBuffer.length;
+					geometryTextures[geometryHash][canvasPlate.plateId] = contentLoaded.platedTextures[canvasPlateId].texture;
 				}
 			}
 
-			//geometry.mergeVertices();
-			//geometry.computeVertexNormals();
+			return geometryTextures;
+		}
+
+		function parseGeometry(geometryHash, geometryTextures, gearDyes) {
+			var tgxBin = contentLoaded.geometry[geometryHash];
+			var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
+			//console.log('RenderMeshes', renderMeshes);
+			for (var m=0; m<renderMeshes.length; m++) {
+				var renderMesh = renderMeshes[m];
+				var indexBuffer = renderMesh.indexBuffer;
+				var vertexBuffer = renderMesh.vertexBuffer;
+				var positionOffset = renderMesh.positionOffset;
+				var positionScale = renderMesh.positionScale;
+				var texcoord0ScaleOffset = renderMesh.texcoord0ScaleOffset;
+				var texcoordOffset = renderMesh.texcoordOffset;
+				var texcoordScale = renderMesh.texcoordScale;
+				var parts = renderMesh.parts;
+
+				//if (m != 0) continue;
+				//if (m != 1) continue;
+
+				if (parts.length == 0) {
+					console.log('Skipped RenderMesh['+m+']: No parts');
+					continue;
+				} // Skip meshes with no parts
+
+				//console.log('RenderMesh['+m+']', renderMesh);
+
+				// Spasm.Renderable.prototype.render
+				var partCount = -1;
+				for (var p=0; p<parts.length; p++) {
+					var part = parts[p];
+
+					// Skip any lods not matchin "_lod_category_01" ?
+					if (part.lodCategory.name.indexOf('0') == -1) {
+						//console.log('SkippedPart['+p+']', part.lodCategory.name, part);
+						continue;
+					}
+
+					partCount++;
+
+					//if (partCount != 1) continue;
+
+					//console.log('RenderMeshPart['+p+'|'+partCount+']', part);
+
+					// Load Material
+					if (loadTextures) {
+						var dye = gearDyes[part.gearDyeSlot];
+
+						//console.log('RenderMeshPartDye['+p+'|'+partCount+']', dye);
+
+						var textures = {
+							diffuse: null,
+							normal: null,
+							gearstack: null,
+						};
+						for (var textureId in geometryTextures[geometryHash]) {
+							textures[textureId] = geometryTextures[geometryHash][textureId];
+						}
+
+						// Part has a shader and possibly static textures
+						if (part.shader) {
+							//console.warn('PartShader', part.shader);
+							if (part.staticTextures) {
+								for (var s=0; s<part.staticTextures.length; s++) {
+									var staticTextureId = part.staticTextures[s];
+									var staticTexture = contentLoaded.textures[staticTextureId];
+									//console.log(staticTextureId, staticTexture);
+									if (!staticTexture) continue;
+									switch(part.shader+''+s) {
+										// 7n standard shader
+										case '70':
+											textures.diffuse = staticTexture.texture; break;
+										case '71':
+											textures.dyeDiffuse = staticTexture.texture; break;
+										case '72':
+											textures.normal = staticTexture.texture; break;
+										case '73':
+											textures.dyeNormal = staticTexture.texture; break;
+										case '74':
+											textures.gearstack = staticTexture.texture; break;
+										// 9n cubemap?
+									}
+								}
+							}
+						}
+
+						//console.log('RenderMeshPartDye['+part.gearDyeSlot+']', dye);
+						//console.log('RenderMeshPartTextures', textures);
+						//var material = new THREE.MeshPhongMaterial({
+						var materialParams = {
+							side: THREE.DoubleSide,
+							overdraw: true,
+							skinning: hasBones,
+							map: textures.diffuse,
+							normalMap: textures.normal,
+							gearstackMap: textures.gearstack,
+
+							// Dye Properties
+							usePrimaryColor: part.usePrimaryColor,
+
+							//isCloth: dye.isCloth,
+							//blendMode: dye.blendMode,
+							//primaryColor: dye.primaryColor,
+							//secondaryColor: dye.secondaryColor,
+							//detailTransform: dye.detailTransform,
+							//detailNormalContributionStrength: dye.detailNormalContributionStrength,
+							//decalAlphaMapTransform: dye.decalAlphaMapTransform,
+							//decalBlendOption: dye.decalBlendOption,
+							//specularProperties: dye.specularProperties,
+							//subsurfaceScatteringStrength: dye.subsurfaceScatteringStrength,
+							//
+							//dyeDiffuse: dye.diffuse,//dyeDiffuse,
+							//dyeNormal: dye.normal,//dyeNormal,
+							//dyeDecal: dye.decal,//dyeDecal
+							//dyePrimaryDiffuse: dye.primaryDiffuse,
+							//dyeSecondaryDiffuse: dye.secondaryDiffuse
+						};
+
+						if (dye) {
+							for (var dyeKey in dye) {
+								var paramKey = dyeKey;
+								switch(dyeKey) {
+									case 'hash':
+									case 'investmentHash':
+									case 'slotTypeIndex':
+									case 'variant':
+										paramKey = '';
+										break;
+									case 'diffuse': paramKey = 'dyeDiffuse'; break;
+									case 'normal': paramKey = 'dyeNormal'; break;
+									case 'decal': paramKey = 'dyeDecal'; break;
+									case 'primaryDiffuse': paramKey = 'dyePrimaryDiffuse'; break;
+									case 'secondaryDiffuse': paramKey = 'dyeSecondaryDiffuse'; break;
+								}
+								if (paramKey) materialParams[paramKey] = dye[dyeKey];
+							}
+						} else {
+							console.warn('MissingGearDye['+part.gearDyeSlot+']', gearDyes);
+						}
+
+						// Check for vertex colors
+						if (vertexBuffer.length > 0 && vertexBuffer[0].color0 !== undefined) {
+							console.warn('VertexColors', vertexBuffer[0].color0);
+							materialParams.vertexColors = THREE.VertexColors;
+						}
+
+						var material = new THREE.TGXMaterial(materialParams);
+						materials.push(material);
+					}
+
+					var materialIndex = materials.length > 0 ? materials.length-1 : 0;
+
+					// Load Vertex Stream
+					var increment = 3;
+					var start = part.indexStart;
+					var count = part.indexCount;
+
+					// PrimitiveType, 3=TRIANGLES, 5=TRIANGLE_STRIP
+					// https://stackoverflow.com/questions/3485034/convert-triangle-strips-to-triangles
+
+					if (part.primitiveType === 5) {
+						increment = 1;
+						count -= 2;
+					}
+
+					for (var i=0; i<count; i+= increment) {
+						var faceVertexNormals = [];
+						var faceVertexUvs = [];
+						var faceVertex = [];
+
+						var faceColors = [];
+
+						var detailVertexUvs = [];
+
+						var faceIndex = start+i;
+
+						var tri = part.primitiveType === 3 || i & 1 ? [0, 1, 2] : [2, 1, 0];
+
+						for (var j=0; j<3; j++) {
+							var index = indexBuffer[faceIndex+tri[j]];
+							var vertex = vertexBuffer[index];
+							var normal = vertex.normal0;
+							var uv = vertex.texcoord0;
+							var color = vertex.color0;
+
+							var detailUv = vertex.texcoord2;
+							if (!detailUv) detailUv = [0, 0];
+
+							faceVertex.push(index+vertexOffset);
+							faceVertexNormals.push(new THREE.Vector3(normal[0], normal[1], normal[2]));
+
+							var uvu = uv[0]*texcoordScale[0]+texcoordOffset[0];
+							var uvv = uv[1]*texcoordScale[1]+texcoordOffset[1];
+							faceVertexUvs.push(new THREE.Vector2(uvu, uvv));
+
+							if (color) {
+								faceColors.push(new THREE.Color(color[0], color[1], color[2]));
+							}
+
+							//if (i==0 && j==0) {
+							//	console.log('Vertex['+i+','+j+']', vertex);
+							//}
+
+							detailVertexUvs.push(new THREE.Vector2(uvu*detailUv[0], uvv*detailUv[1]));
+						}
+						var face = new THREE.Face3(faceVertex[0], faceVertex[1], faceVertex[2], faceVertexNormals);
+						face.materialIndex = materialIndex;
+						if (faceColors.length > 0) face.vertexColors = faceColors;
+						geometry.faces.push(face);
+						geometry.faceVertexUvs[0].push(faceVertexUvs);
+
+						if (geometry.faceVertexUvs.length < 2) geometry.faceVertexUvs.push([]);
+						geometry.faceVertexUvs[1].push(detailVertexUvs);
+					}
+				}
+
+				for (var v=0; v<vertexBuffer.length; v++) {
+					var vertex = vertexBuffer[v];
+					var position = vertex.position0;
+					var x = position[0];//*positionScale[0]+positionOffset[0];
+					var y = position[1];//*positionScale[1]+positionOffset[1];
+					var z = position[2];//*positionScale[2]+positionOffset[2];
+					if (platform == 'web') { // Ignored on mobile?
+						x = x*positionScale[0]+positionOffset[0];
+						y = y*positionScale[1]+positionOffset[1];
+						z = z*positionScale[2]+positionOffset[2];
+					}
+					geometry.vertices.push(new THREE.Vector3(x, y, z));
+
+					// Set bone weights
+					var boneIndex = position[3];//Math.abs((positionOffset[3] * 32767.0) + 0.01);
+					//var bone = geometry.bones[boneIndex];
+
+					var blendIndices = vertex.blendindices0 ? vertex.blendindices0 : [boneIndex, 255, 255, 255];
+					var blendWeights = vertex.blendweight0 ? vertex.blendweight0: [1, 0, 0, 0];
+
+					var skinIndex = [0, 0, 0, 0];
+					var skinWeight = [0, 0, 0, 0];
+
+					var totalWeights = 0;
+					for (var w=0; w<blendIndices.length; w++) {
+						if (blendIndices[w] == 255) break;
+						skinIndex[w] = blendIndices[w];
+						skinWeight[w] = blendWeights[w];
+						totalWeights += blendWeights[w]*255;
+					}
+					if (totalWeights != 255) console.error('MissingBoneWeight', 255-totalWeights, i, j);
+
+					geometry.skinIndices.push(new THREE.Vector4().fromArray(skinIndex));
+					geometry.skinWeights.push(new THREE.Vector4().fromArray(skinWeight));
+					//geometry.skinIndices[index+vertexOffset].fromArray(skinIndex);
+					//geometry.skinWeights[index+vertexOffset].fromArray(skinWeight);
+				}
+				vertexOffset += vertexBuffer.length;
+			}
 		}
 
 		// Spasm.Skeleton.prototype.onLoadSkeletonSuccess
@@ -1340,9 +1422,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					if (!primaryColor) console.warn('MissingPrimaryColor['+dyeType+']', dye);
 					if (!secondaryColor) console.warn('MissingSecondaryColor['+dyeType+']', dye);
 
-					var gearDyeTextures = {
-
-					};
+					var gearDyeTextures = {};
 
 					for (var dyeTextureId in dyeTextures) {
 						var dyeTexture = dyeTextures[dyeTextureId];
@@ -1387,6 +1467,11 @@ Object.assign(THREE.TGXLoader.prototype, {
 						//specularProperties: dye.material_properties.specular_properties,
 						//subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
 					};
+
+					if (game == 'destiny2') {
+						gearDye.detailDiffuseTransform = dye.material_properties.detail_diffuse_transform;
+						gearDye.detailNormalTransform = dye.material_properties.detail_normal_transform;
+					}
 					//console.log(gearDye);
 					gearDyes.push(gearDye);
 				}
@@ -1426,7 +1511,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 			}
 
-			//console.log('ResolvedGearDyes', resolvedDyes);
+			console.log('ResolvedGearDyes', resolvedDyes);
 
 			return resolvedDyes;
 		}
@@ -2019,12 +2104,16 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		this.usePrimaryColor = true;
 		this.primaryColor = new THREE.Color(0x000000);
 		this.secondaryColor = new THREE.Color(0x000000);
-		this.detailTransform = new THREE.Vector4(0, 0, 0, 0);
-		this.detailNormalContributionStrength = new THREE.Vector4(0, 0, 0, 0);
-		this.decalAlphaMapTransform = new THREE.Vector4(0, 0, 0, 0);
-		this.decalBlendOption = 0;
-		this.specularProperties = new THREE.Vector4(0, 0, 0, 0);
-		this.subsurfaceScatteringStrength = new THREE.Vector4(0, 0, 0, 0);
+
+		this.detailDiffuseTransform = new THREE.Vector4(1, 1, 0, 0);
+		this.detailNormalTransform = new THREE.Vector4(1, 1, 0, 0);
+
+		//this.detailTransform = new THREE.Vector4(0, 0, 0, 0);
+		//this.detailNormalContributionStrength = new THREE.Vector4(0, 0, 0, 0);
+		//this.decalAlphaMapTransform = new THREE.Vector4(0, 0, 0, 0);
+		//this.decalBlendOption = 0;
+		//this.specularProperties = new THREE.Vector4(0, 0, 0, 0);
+		//this.subsurfaceScatteringStrength = new THREE.Vector4(0, 0, 0, 0);
 
 		this.setValues(params);
 		this.extensions.derivatives = true;
@@ -2045,17 +2134,23 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		if (source.dyePrimaryDiffuse !== undefined) this.dyePrimaryDiffuse = source.dyePrimaryDiffuse;
 		if (source.dyeSecondaryDiffuse !== undefined) this.dyeSecondaryDiffuse = source.dyeSecondaryDiffuse;
 
+		if (source.vertexColors !== undefined) this.vertexColors = source.vertexColors;
+
 		if (source.isCloth !== undefined) this.isCloth = source.isCloth;
 		if (source.blendMode !== undefined) this.blendMode = source.blendMode;
 		if (source.usePrimaryColor !== undefined) this.usePrimaryColor = source.usePrimaryColor;
 		if (source.primaryColor !== undefined) this.primaryColor = source.primaryColor;
 		if (source.secondaryColor !== undefined) this.secondaryColor = source.secondaryColor;
-		if (source.detailTransform !== undefined) this.detailTransform = source.detailTransform;
-		if (source.detailNormalContributionStrength !== undefined) this.detailNormalContributionStrength = source.detailNormalContributionStrength;
-		if (source.decalAlphaMapTransform !== undefined) this.decalAlphaMapTransform = source.decalAlphaMapTransform;
-		if (source.decalBlendOption !== undefined) this.decalBlendOption = source.decalBlendOption;
-		if (source.specularProperties !== undefined) this.specularProperties = source.specularProperties;
-		if (source.subsurfaceScatteringStrength !== undefined) this.subsurfaceScatteringStrength = source.subsurfaceScatteringStrength;
+
+		if (source.detailDiffuseTransform !== undefined) this.detailDiffuseTransform = source.detailDiffuseTransform;
+		if (source.detailNormalTransform !== undefined) this.detailNormalTransform = source.detailNormalTransform;
+
+		//if (source.detailTransform !== undefined) this.detailTransform = source.detailTransform;
+		//if (source.detailNormalContributionStrength !== undefined) this.detailNormalContributionStrength = source.detailNormalContributionStrength;
+		//if (source.decalAlphaMapTransform !== undefined) this.decalAlphaMapTransform = source.decalAlphaMapTransform;
+		//if (source.decalBlendOption !== undefined) this.decalBlendOption = source.decalBlendOption;
+		//if (source.specularProperties !== undefined) this.specularProperties = source.specularProperties;
+		//if (source.subsurfaceScatteringStrength !== undefined) this.subsurfaceScatteringStrength = source.subsurfaceScatteringStrength;
 
 		this.update();
 		return this;
@@ -2065,6 +2160,9 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		var vertexShader = this.vertexShader;
 		var fragmentShader = this.fragmentShader;
 		var defines = {};
+
+		//console.log('MaterialUpdate', this);
+
 		if (this.skinning) {
 			defines['USE_SKINNING'] = '';
 		}
@@ -2081,6 +2179,12 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 			uniforms.gearstackMap = {value: this.gearstackMap};
 		}
 
+		if (this.vertexColors) {
+			defines['USE_COLOR'] = '';
+
+			//vertexShader = this.insertAfter()
+		}
+
 		uniforms.blendMode = {value: this.blendMode};
 		if (this.isCloth) {
 			defines['USE_CLOTH_DYE'] = '';
@@ -2088,12 +2192,16 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		uniforms.usePrimaryColor = {value: this.usePrimaryColor};
 		uniforms.primaryColor = {value: this.primaryColor};
 		uniforms.secondaryColor = {value: this.secondaryColor};
-		uniforms.detailTransform = {value: this.detailTransform};
-		uniforms.detailNormalContributionStrength = {value: this.detailNormalContributionStrength};
-		uniforms.decalAlphaMapTransform = {value: this.decalAlphaMapTransform};
-		uniforms.decalBlendOption = {value: this.decalBlendOption};
-		uniforms.specularProperties = {value: this.specularProperties};
-		uniforms.subsurfaceScatteringStrength = {value: this.subsurfaceScatteringStrength};
+
+		uniforms.detailDiffuseTransform = {value: this.detailDiffuseTransform};
+		uniforms.detailNormalTransform = {value: this.detailNormalTransform};
+
+		//uniforms.detailTransform = {value: this.detailTransform};
+		//uniforms.detailNormalContributionStrength = {value: this.detailNormalContributionStrength};
+		//uniforms.decalAlphaMapTransform = {value: this.decalAlphaMapTransform};
+		//uniforms.decalBlendOption = {value: this.decalBlendOption};
+		//uniforms.specularProperties = {value: this.specularProperties};
+		//uniforms.subsurfaceScatteringStrength = {value: this.subsurfaceScatteringStrength};
 
 		defines['USE_DYE'] = '';
 
@@ -2110,12 +2218,15 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		//	uniforms.dyeDecal = {value: this.dyeDecal};
 		//}
 
+		//console.log('MaterialParams', this);
+
 		if (vertexShader.indexOf('USE_DYE') == -1) {
 			var uv2ParsVertex = [
 				"#ifdef USE_DYE",
 				"attribute vec2 uv2;",
 				"varying vec2 vUv2;",
-				"uniform vec4 detailTransform;",
+				"uniform vec4 detailDiffuseTransform;",
+				"uniform vec4 detailNormalTransform;",
 				"#endif"
 			];
 
@@ -2123,7 +2234,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 
 			var uv2Vertex = [
 				"#ifdef USE_DYE",
-				"vUv2 = (uv2 * detailTransform.xy) + detailTransform.zw;",
+				"vUv2 = (uv2 * detailDiffuseTransform.xy) + detailDiffuseTransform.zw;",
 				// vertexShader.push("v_texcoord2 = ((texcoord * a_texcoord2) * u_detail_transform.xy) + u_detail_transform.zw;"),
 				"#endif"
 			];
@@ -2176,11 +2287,12 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 						"vec4 color_dye_diffuse_texture = texture2D(dyeDiffuse, vUv2);",
 						"float dye_alpha = color_dye_diffuse_texture.w;",
 						"float dye_color_normalize = (1.0 - dye_alpha) * 0.5;",
-						"vec4 color_dye_diffuse = pow(vec4(color_dye_diffuse_texture.x * dye_alpha + dye_color_normalize, "
+						"vec4 color_dye_diffuse = pow(vec4("
+							+"color_dye_diffuse_texture.x * dye_alpha + dye_color_normalize, "
 							+"color_dye_diffuse_texture.y * dye_alpha + dye_color_normalize, "
 							+"color_dye_diffuse_texture.z * dye_alpha + dye_color_normalize, 1.0), "
 							+"vec4(gamma_correction_power));",
-						"diffuseColor = blend_overlay(color_dye_diffuse, diffuseColor);",
+						//"diffuseColor = blend_overlay(color_dye_diffuse, diffuseColor);",
 					"#endif",
 
 					// Gearstack Textures
@@ -2189,13 +2301,26 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 
 						"vec4 mutedColor = vec4(0.3, 0.3, 0.3, 1.0);",
 
+						// Vertex Colors
+						//"vec4 changeColor = vec4(1.0, 1.0, 1.0, 1.0);",
+						//"#ifdef USE_COLOR",
+						//	"changeColor = vec4(vColor.xyz, 1.0);",
+						//"#endif",
+
 						"vec4 dyeColor = usePrimaryColor ? vec4(primaryColor, 1.0) : vec4(secondaryColor, 1.0);",
+						//"diffuseColor = blend_overlay(dyeColor, diffuseColor);",
+						//"vec4 blendColorUncorrected = mix(diffuseColor, blend_overlay(diffuseColor, changeColor), gearstackColor.r);",
 						"vec4 blendColorUncorrected = mix(diffuseColor, blend_overlay(diffuseColor, dyeColor), gearstackColor.r);",
 						"diffuseColor = blendColorUncorrected;",
 						//"vec3 blendColor = pow(blendColorUncorrected.xyz, vec3(gamma_correction_power_inverse));",
 						//"diffuseColor = vec4(blendColor, 1.0);",
 
 					"#endif",
+
+					//"#ifdef USE_COLOR",
+					//	//"diffuseColor = vec4(vColor.xyz, 1.0);",
+					//	"diffuseColor = mix(diffuseColor, blend_overlay(diffuseColor, vec4(vColor.xyz, 1.0)), gearstackColor.r);",
+					//"#endif",
 
 					"diffuseColor = vec4(pow(diffuseColor.xyz, vec3(gamma_correction_power_inverse)), 1.0);",
 				"#endif"

@@ -111,4 +111,6 @@ if (isset($_GET['def'])) {
 } else {
 	$result = queryDatabase("SELECT name FROM sqlite_master WHERE type='table'");
 	echo json_encode($result, JSON_PRETTY_PRINT);
+
+	echo '<pre>'.json_encode($manifest, JSON_PRETTY_PRINT).'</pre>';
 }

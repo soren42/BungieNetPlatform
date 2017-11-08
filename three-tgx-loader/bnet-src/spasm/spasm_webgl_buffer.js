@@ -29,6 +29,8 @@ Spasm.Buffer.prototype.bindBuffer = function()
     var gl = this.gl;
     var bufferType = this.bufferType;
     var bufferHandle = this.bufferHandle;
+	
+	console.log('glBuffer', bufferType, bufferHandle);
 
     gl.bindBuffer(bufferType, bufferHandle);
 };

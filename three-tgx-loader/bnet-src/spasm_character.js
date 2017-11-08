@@ -33,7 +33,7 @@
 	{
 		var self = this;
 
-		var contentPath = "/";
+		var contentPath = "https://www.bungie.net/";//"/";
 
 		this._itemPreview = new Spasm.ItemPreview(this._canvas, contentPath);
 		if (this._animation)
@@ -45,6 +45,7 @@
 
 		if (!canRender)
 		{
+			console.warn('Cannot Render Character', this._itemPreview);
 			return;
 		}
 
@@ -55,6 +56,7 @@
 		true, // GetAccountDefinitions
 		function (response)
 		{
+			console.log('GetAccountSummary', response);
 			if (response)
 			{
 				self.destinyAccount = response;
@@ -269,6 +271,9 @@
 						});
 				}
 			}
+		}
+		else {
+			console.warn('Character Not Found', this._characterId, characters);
 		}
 	};
 
