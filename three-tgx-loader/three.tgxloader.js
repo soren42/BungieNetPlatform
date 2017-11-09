@@ -400,16 +400,18 @@ Object.assign(THREE.TGXLoader.prototype, {
 					for (var setIndex in content.region_index_sets) {
 						var regionIndexSet = content.region_index_sets[setIndex];
 						//console.log('RegionIndexSet', setIndex, regionIndexSet);
+						var skipSet = false;
 						// regionKeysToNotLoad
 						//switch(parseInt(setIndex)) {
-						//	case 2: // hud
+						//	//case 2: // hud
 						//	case 6: // ammo
 						//	case 21: // reticle
-						//	//default:
-						//		filteredRegionIndexSets.push(regionIndexSet[0]);
+						//		skipSet = true;
+						//		break;
+						//	default:
 						//		break;
 						//}
-						//filteredRegionIndexSets.push(regionIndexSet[0]);
+						if (skipSet) continue;
 						for (var j=0; j<regionIndexSet.length; j++) {
 							filteredRegionIndexSets.push(regionIndexSet[j]);
 						}
@@ -621,7 +623,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 			var referenceId = texture.split('.')[0];
 
 			if (texture.indexOf('.bin') != -1) { // Mobile texture
-				//assetLoadTotal++;
 				loadTGXBin(url, function(tgxBin) {
 					//console.log('MobileTexture', tgxBin);
 					contentLoaded.mobileTextures[referenceId] = {
@@ -634,10 +635,17 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var total = tgxBin.files.length;
 					for (var i=0; i<tgxBin.files.length; i++) {
 						var textureFile = tgxBin.files[i];
+						if (contentLoaded['textures'][textureFile.name] !== undefined) {
+							console.warn('CachedTexture', textureFile);
+							count++;
+							if (count == total && onLoad) onLoad(contentLoaded.mobileTextures[referenceId]);
+							continue;
+						}
 						var textureData = loadMobileTexture(textureFile, function() {
 							count++;
 							if (count == total && onLoad) onLoad(contentLoaded.mobileTextures[referenceId]);
 						});
+						textureData.name = textureFile.name;
 						textureData.flipY = false;
 						textureData.minFilter = THREE.LinearMipMapLinearFilter;
 						textureData.magFilter = THREE.NearestFilter;
@@ -650,16 +658,23 @@ Object.assign(THREE.TGXLoader.prototype, {
 					}
 				});
 			} else {
-				//assetLoadTotal++;
+				var contentId = isPlated ? 'platedTextures' : 'textures';
+				if (contentLoaded[contentId][referenceId] !== undefined) {
+					console.warn('CachedTexture', contentId+'_'+referenceId);
+					if (onLoad) onLoad(contentLoaded[contentId][referenceId]);
+					return;
+				}
+
 				var loader = new THREE.TextureLoader(this.manager);
 				var textureData = loader.load(url, function(texture) {
 					if (onLoad) onLoad(texture);
 				}, onProgressCallback, onErrorCallback);
+				textureData.name = referenceId;
 				textureData.flipY = false;
 				textureData.minFilter = THREE.LinearMipMapLinearFilter;
 				textureData.magFilter = THREE.NearestFilter;
 
-				contentLoaded[isPlated ? 'platedTextures' : 'textures'][referenceId] = {
+				contentLoaded[contentId][referenceId] = {
 					url: url,
 					referenceId: referenceId,
 					texture: textureData
@@ -806,6 +821,11 @@ Object.assign(THREE.TGXLoader.prototype, {
 				var geometryHash = geometryHashes[g];
 				var tgxBin = contentLoaded.geometry[geometryHash];
 
+				if (!tgxBin) {
+					console.warn('MissingTGXBinGeometry['+g+']', geometryHash);
+					continue;
+				}
+
 				var metadata = tgxBin.metadata;
 				var texturePlates = metadata.texture_plates;
 
@@ -943,6 +963,35 @@ Object.assign(THREE.TGXLoader.prototype, {
 			return geometryTextures;
 		}
 
+		function checkRenderPart(part) {
+			var shouldRender = false;
+
+			// Skip any lods not matchin "_lod_category_01" ?
+			switch(part.lodCategory.name) {
+				case '_lod_category_0': // Main Geometry
+				case '_lod_category_01': // Grip/Stock
+				case '_lod_category_012': // Stickers
+					shouldRender = true;
+					break;
+				case '_lod_category_0123': // Internal Geometry? (ie Vex Mythoclast
+				case '_lod_category_23': // Grip/Stock/Scope
+					break;
+				case '_lod_category_1': // Low poly geometries
+				case '_lod_category_2':
+				case '_lod_category_3':
+					break;
+				default:
+					console.warn('SkippedPart', part.lodCategory.name, part);
+					break;
+			}
+			//if (part.lodCategory.name.indexOf('0') == -1) {
+			//	console.warn('SkippedPart['+p+']', part.lodCategory.name, part);
+			//	continue;
+			//}
+
+			return shouldRender;
+		}
+
 		function parseGeometry(geometryHash, geometryTextures, gearDyes) {
 			var tgxBin = contentLoaded.geometry[geometryHash];
 			var renderMeshes = parseTGXAsset(tgxBin, geometryHash);
@@ -973,23 +1022,16 @@ Object.assign(THREE.TGXLoader.prototype, {
 				for (var p=0; p<parts.length; p++) {
 					var part = parts[p];
 
-					// Skip any lods not matchin "_lod_category_01" ?
-					if (part.lodCategory.name.indexOf('0') == -1) {
-						//console.log('SkippedPart['+p+']', part.lodCategory.name, part);
-						continue;
-					}
-
+					if (!checkRenderPart(part)) continue;
 					partCount++;
 
-					//if (partCount != 1) continue;
-
-					//console.log('RenderMeshPart['+p+'|'+partCount+']', part);
+					//console.log('RenderMeshPart['+m+':'+p+'|'+partCount+']', part);
 
 					// Load Material
 					if (loadTextures) {
 						var dye = gearDyes[part.gearDyeSlot];
 
-						//console.log('RenderMeshPartDye['+p+'|'+partCount+']', dye);
+						//console.log('RenderMeshPartDye['+m+':'+partCount+':'+part.gearDyeSlot+']', dye);
 
 						var textures = {
 							diffuse: null,
@@ -1002,7 +1044,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 						// Part has a shader and possibly static textures
 						if (part.shader) {
-							//console.warn('PartShader', part.shader);
 							if (part.staticTextures) {
 								for (var s=0; s<part.staticTextures.length; s++) {
 									var staticTextureId = part.staticTextures[s];
@@ -1022,14 +1063,17 @@ Object.assign(THREE.TGXLoader.prototype, {
 										case '74':
 											textures.gearstack = staticTexture.texture; break;
 										// 9n cubemap?
+										default:
+											console.warn('UnknownPartShader', part.shader);
+											break;
 									}
 								}
+							} else {
+								console.warn('PartShaderWithNoTextures', part);
 							}
 						}
 
-						//console.log('RenderMeshPartDye['+part.gearDyeSlot+']', dye);
 						//console.log('RenderMeshPartTextures', textures);
-						//var material = new THREE.MeshPhongMaterial({
 						var materialParams = {
 							side: THREE.DoubleSide,
 							overdraw: true,
@@ -1040,23 +1084,6 @@ Object.assign(THREE.TGXLoader.prototype, {
 
 							// Dye Properties
 							usePrimaryColor: part.usePrimaryColor,
-
-							//isCloth: dye.isCloth,
-							//blendMode: dye.blendMode,
-							//primaryColor: dye.primaryColor,
-							//secondaryColor: dye.secondaryColor,
-							//detailTransform: dye.detailTransform,
-							//detailNormalContributionStrength: dye.detailNormalContributionStrength,
-							//decalAlphaMapTransform: dye.decalAlphaMapTransform,
-							//decalBlendOption: dye.decalBlendOption,
-							//specularProperties: dye.specularProperties,
-							//subsurfaceScatteringStrength: dye.subsurfaceScatteringStrength,
-							//
-							//dyeDiffuse: dye.diffuse,//dyeDiffuse,
-							//dyeNormal: dye.normal,//dyeNormal,
-							//dyeDecal: dye.decal,//dyeDecal
-							//dyePrimaryDiffuse: dye.primaryDiffuse,
-							//dyeSecondaryDiffuse: dye.secondaryDiffuse
 						};
 
 						if (dye) {
@@ -1072,8 +1099,15 @@ Object.assign(THREE.TGXLoader.prototype, {
 									case 'diffuse': paramKey = 'dyeDiffuse'; break;
 									case 'normal': paramKey = 'dyeNormal'; break;
 									case 'decal': paramKey = 'dyeDecal'; break;
+
+									//case 'primaryColor': paramKey = 'dyePrimaryColor'; break;
 									case 'primaryDiffuse': paramKey = 'dyePrimaryDiffuse'; break;
+									//case 'secondaryColor': paramKey = 'dyeSecondaryColor'; break;
 									case 'secondaryDiffuse': paramKey = 'dyeSecondaryDiffuse'; break;
+
+									//case 'detailDiffuseTransform': paramKey ='dyeDetailDiffuseTransform'; break;
+									//case 'detailNormalTransform': paramKey ='dyeDetailNormalTransform'; break;
+
 								}
 								if (paramKey) materialParams[paramKey] = dye[dyeKey];
 							}
@@ -1730,6 +1764,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 			var usePrimaryColor = true;
 			var useInvestmentDecal = false;
 
+			//console.log('StagePart', stagePart);
+
 			switch(stagePart.gear_dye_change_color_index) {
 				case 0:
 					gearDyeSlot = 0;
@@ -1760,28 +1796,62 @@ Object.assign(THREE.TGXLoader.prototype, {
 					gearDyeSlot = 3;
 					useInvestmentDecal = true;
 					break;
+				default:
+					console.warn('UnknownDyeChangeColorIndex['+stagePart.gear_dye_change_color_index+']', stagePart);
+					break;
 			}
 
 			var part = {
-				externalIdentifier: stagePart.external_identifier,
-				changeColorIndex: stagePart.gear_dye_change_color_index,
-				primitiveType: stagePart.primitive_type,
-				lodCategory: stagePart.lod_category,
+				//externalIdentifier: stagePart.external_identifier,
+				//changeColorIndex: stagePart.gear_dye_change_color_index,
+				//primitiveType: stagePart.primitive_type,
+				//lodCategory: stagePart.lod_category,
 				gearDyeSlot: gearDyeSlot,
 				usePrimaryColor: usePrimaryColor,
 				useInvestmentDecal: useInvestmentDecal,
-				indexMin: stagePart.index_min,
-				indexMax: stagePart.index_max,
-				indexStart: stagePart.start_index,
-				indexCount: stagePart.index_count
+				staticTextures: []
+				//indexMin: stagePart.index_min,
+				//indexMax: stagePart.index_max,
+				//indexStart: stagePart.start_index,
+				//indexCount: stagePart.index_count
 			};
 
-			if (stagePart.shader) {
-				var shader = stagePart.shader;
-				//console.log('StagePartShader', shader);
-				part.shader = shader.type;
-				part.staticTextures = shader.static_textures ? shader.static_textures : [];
+			for (var key in stagePart) {
+				var partKey = key;
+				var value = stagePart[key];
+				switch(key) {
+					//case 'external_identifier': partKey = 'externalIdentifier'; break;
+					case 'gear_dye_change_color_index': partKey = 'changeColorIndex'; break;
+					//case 'primitive_type': partKey = 'primitiveType'; break;
+					//case 'lod_category': partKey = 'lodCategory'; break;
+
+					//case 'index_min': partKey = 'indexMin'; break;
+					//case 'index_max': partKey = 'indexMax'; break;
+					case 'start_index': partKey = 'indexStart'; break;
+					//case 'index_count': partKey = 'indexCount'; break;
+
+					//case 'shader': break;
+
+					//case 'static_textures': partKey = 'staticTextures'; break;
+
+					default:
+						var keyWords = key.split('_');
+						var partKey = '';
+						for (var i=0; i<keyWords.length; i++) {
+							var keyWord = keyWords[i];
+							partKey += i == 0 ? keyWord : keyWord.slice(0, 1).toUpperCase()+keyWord.slice(1);
+						}
+						break;
+				}
+				part[partKey] = value;
 			}
+
+			//if (stagePart.shader) {
+			//	var shader = stagePart.shader;
+			//	//console.log('StagePartShader', shader);
+			//	part.shader = shader.type;
+			//	part.staticTextures = shader.static_textures ? shader.static_textures : [];
+			//}
 
 			return part;
 		}
@@ -2096,8 +2166,10 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		this.dyeDecal = null;
 		this.dyePrimaryDiffuse = null;
 		this.dyeSecondaryDiffuse = null;
+		//this.dyeDetailDiffuseTransform = new THREE.Vector4(1, 1, 0, 0);
+		//this.dyeDetailNormalTransform = new THREE.Vector4(1, 1, 0, 0);
 
-		//console.log('MaterialParams', params);
+		//if (Object.keys(params).length > 0) console.log('MaterialParams', params);
 
 		this.isCloth = false;
 		this.blendMode = 0;
@@ -2217,6 +2289,14 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		//	defines['USE_DYEDECAL'] = '';
 		//	uniforms.dyeDecal = {value: this.dyeDecal};
 		//}
+		if (this.dyePrimaryDiffuse) {
+			defines['USE_PRIMARY_DIFFUSE'] = '';
+			uniforms.dyePrimaryDiffuse = {value: this.dyePrimaryDiffuse};
+		}
+		if (this.dyeSecondaryDiffuse) {
+			defines['USE_SECONDARY_DIFFUSE'] = '';
+			uniforms.dyeSecondaryDiffuse = {value: this.dyeSecondaryDiffuse};
+		}
 
 		//console.log('MaterialParams', this);
 
@@ -2247,6 +2327,14 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 				"uniform sampler2D gearstackMap;",
 				"uniform sampler2D dyeDiffuse;",
 				"uniform sampler2D dyeNormal;",
+
+				"#ifdef USE_PRIMARY_DIFFUSE",
+				"uniform sampler2D dyePrimaryDiffuse;",
+				"#endif",
+
+				"#ifdef USE_SECONDARY_DIFFUSE",
+				"uniform sampler2D dyeSecondaryDiffuse;",
+				"#endif",
 
 				"varying vec2 vUv2;",
 
@@ -2285,6 +2373,15 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 					// TODO is this working?
 					"#ifdef USE_DYEDIFFUSE",
 						"vec4 color_dye_diffuse_texture = texture2D(dyeDiffuse, vUv2);",
+
+						"#ifdef USE_PRIMARY_DIFFUSE",
+						//"color_dye_diffuse_texture = texture2D(dyePrimaryDiffuse, vUv2);",
+						"#endif",
+
+						"#ifdef USE_SECONDARY_DIFFUSE",
+						//"color_dye_diffuse_texture = texture2D(dyeSecondaryDiffuse, vUv2);",
+						"#endif",
+
 						"float dye_alpha = color_dye_diffuse_texture.w;",
 						"float dye_color_normalize = (1.0 - dye_alpha) * 0.5;",
 						"vec4 color_dye_diffuse = pow(vec4("
@@ -2293,6 +2390,10 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 							+"color_dye_diffuse_texture.z * dye_alpha + dye_color_normalize, 1.0), "
 							+"vec4(gamma_correction_power));",
 						//"diffuseColor = blend_overlay(color_dye_diffuse, diffuseColor);",
+
+						//"vec4 color_dye_normal = texture2D(dyeNormal, vUv2);",
+						//"color_dye_normal = color_dye_normal * 2.0 - 1.0;",
+						//"normal = normal + color_dye_normal.xy;",
 					"#endif",
 
 					// Gearstack Textures
