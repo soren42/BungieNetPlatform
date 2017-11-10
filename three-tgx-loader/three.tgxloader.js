@@ -868,8 +868,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 						}
 
 						if (texturePlate.texture_placements.length == 0) {
-							console.warn('SkippedEmptyTexturePlate['+texturePlateId+'_'+texturePlate.plate_index+']');
-							continue;
+							//console.warn('SkippedEmptyTexturePlate['+texturePlateId+'_'+texturePlate.plate_index+']');
+							//continue;
 						}
 
 						var canvasPlate = canvasPlates[texturePlateRef];
@@ -986,9 +986,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 				case '_lod_category_0': // Main Geometry
 				case '_lod_category_01': // Grip/Stock
 				case '_lod_category_012': // Stickers
+				case '_lod_category_0123': // Internal Geometry? (ie Vex Mythoclast
 					shouldRender = true;
 					break;
-				case '_lod_category_0123': // Internal Geometry? (ie Vex Mythoclast
+
 				case '_lod_category_23': // Grip/Stock/Scope
 					break;
 				case '_lod_category_1': // Low poly geometries
