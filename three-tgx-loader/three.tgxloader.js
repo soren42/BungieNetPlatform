@@ -462,6 +462,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 				if (loadTextures) {
 					assetLoadTotal += Object.keys(textureIndexes).length;
 					assetLoadTotal += Object.keys(platedTextureIndexes).length;
+					assetLoadTotal++; // Envmap
 				}
 
 				// Load Geometry
@@ -508,6 +509,20 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}
 
 				if (!loadTextures) continue;
+
+				// EnvMap
+				var canvas = document.createElement('canvas');
+				canvas.width = 512;
+				canvas.height = 512;
+				var ctx = canvas.getContext('2d');
+				ctx.fillStyle = '#000000';
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+				var envMap = canvas.toDataURL('image/png');
+				loadDataTexture(envMap, 'env_0', function() {
+					assetLoadCount++;
+					checkContentLoaded();
+				});
 
 				// Load Textures
 				for (var textureIndex in textureIndexes) {
@@ -608,7 +623,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 			}, onProgressCallback, onErrorCallback);
 			textureData.flipY = false;
 			textureData.minFilter = THREE.LinearMipMapLinearFilter;
-			textureData.magFilter = THREE.NearestFilter;
+			//textureData.magFilter = THREE.NearestFilter;
 
 			contentLoaded['platedTextures'][referenceId] = {
 				referenceId: referenceId,
@@ -647,8 +662,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 						});
 						textureData.name = textureFile.name;
 						textureData.flipY = false;
-						textureData.minFilter = THREE.LinearMipMapLinearFilter;
-						textureData.magFilter = THREE.NearestFilter;
+						textureData.minFilter = THREE.LinearFilter;
+						textureData.magFilter = THREE.LinearFilter;
 						contentLoaded['textures'][textureFile.name] = {
 							url: url,
 							mobileReferenceId: referenceId,
@@ -671,8 +686,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 				}, onProgressCallback, onErrorCallback);
 				textureData.name = referenceId;
 				textureData.flipY = false;
-				textureData.minFilter = THREE.LinearMipMapLinearFilter;
-				textureData.magFilter = THREE.NearestFilter;
+				textureData.minFilter = THREE.LinearFilter;
+				textureData.magFilter = THREE.LinearFilter;
 
 				contentLoaded[contentId][referenceId] = {
 					url: url,
@@ -1037,7 +1052,10 @@ Object.assign(THREE.TGXLoader.prototype, {
 							diffuse: null,
 							normal: null,
 							gearstack: null,
+							env: null,
 						};
+						textures.env = contentLoaded.platedTextures.env_0.texture;
+
 						for (var textureId in geometryTextures[geometryHash]) {
 							textures[textureId] = geometryTextures[geometryHash][textureId];
 						}
@@ -1081,6 +1099,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 							map: textures.diffuse,
 							normalMap: textures.normal,
 							gearstackMap: textures.gearstack,
+							envMap: textures.env,
 
 							// Dye Properties
 							usePrimaryColor: part.usePrimaryColor,
@@ -1122,6 +1141,8 @@ Object.assign(THREE.TGXLoader.prototype, {
 						}
 
 						var material = new THREE.TGXMaterial(materialParams);
+						//var material = new THREE.MeshPhongMaterial(materialParams);
+						//var material = new THREE.MeshStandardMaterial(materialParams);
 						materials.push(material);
 					}
 
@@ -1171,6 +1192,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 							faceVertexUvs.push(new THREE.Vector2(uvu, uvv));
 
 							if (color) {
+								//console.log('Color['+m+':'+p+':'+i+':'+j+']', color);
 								faceColors.push(new THREE.Color(color[0], color[1], color[2]));
 							}
 
@@ -1196,13 +1218,13 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var position = vertex.position0;
 					var x = position[0];//*positionScale[0]+positionOffset[0];
 					var y = position[1];//*positionScale[1]+positionOffset[1];
-					var z = position[2];//*positionScale[2]+positionOffset[2];
+					var z = position[2];//*positionScale[2]+positionOffset[2]; // Apply negative scale to fix lighting
 					if (platform == 'web') { // Ignored on mobile?
 						x = x*positionScale[0]+positionOffset[0];
 						y = y*positionScale[1]+positionOffset[1];
 						z = z*positionScale[2]+positionOffset[2];
 					}
-					geometry.vertices.push(new THREE.Vector3(x, y, z));
+					geometry.vertices.push(new THREE.Vector3(-x, y, -z));
 
 					// Set bone weights
 					var boneIndex = position[3];//Math.abs((positionOffset[3] * 32767.0) + 0.01);
@@ -1443,18 +1465,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 					var dye = dyes[i];
 					var dyeTextures = dye.textures;
 					var materialProperties = dye.material_properties;
-					//console.log('GearDye['+dyeType+']['+i+']', dye);
-
-					var primaryColor = dye.material_properties.primary_color;
-					var secondaryColor = dye.material_properties.secondary_color;
-
-					if (game == 'destiny2') {
-						primaryColor = dye.material_properties.primary_albedo_tint;//.primary_material_params;
-						secondaryColor = dye.material_properties.secondary_albedo_tint;//.secondary_material_params;
-					}
-
-					if (!primaryColor) console.warn('MissingPrimaryColor['+dyeType+']', dye);
-					if (!secondaryColor) console.warn('MissingSecondaryColor['+dyeType+']', dye);
+					console.log('GearDye['+dyeType+']['+i+']', dye);
 
 					var gearDyeTextures = {};
 
@@ -1485,15 +1496,15 @@ Object.assign(THREE.TGXLoader.prototype, {
 						decal: gearDyeTextures.decal ? gearDyeTextures.decal.texture : null,
 
 						// Not used?
+						//primaryColor: 0x000000,
 						primaryDiffuse: gearDyeTextures.primary_diffuse ? gearDyeTextures.primary_diffuse.texture : null,
+						//secondaryColor: 0x000000,
 						secondaryDiffuse: gearDyeTextures.secondary_diffuse ? gearDyeTextures.secondary_diffuse.texture : null,
 
 						//blendMode: dye.blend_mode,
 						//isCloth: dye.cloth,
 
 						// Material Properties
-						primaryColor: primaryColor ? new THREE.Color(primaryColor[0], primaryColor[1], primaryColor[2]) : new THREE.Color(1, 0, 0),
-						secondaryColor: secondaryColor ? new THREE.Color(secondaryColor[0], secondaryColor[1], secondaryColor[2]) : new THREE.Color(0, 1, 0),
 						//detailTransform: dye.material_properties.detail_transform,
 						//detailNormalContributionStrength: dye.material_properties.detail_normal_contribution_strength,
 						//decalAlphaMapTransform: dye.material_properties.decal_alpha_map_transform,
@@ -1502,10 +1513,27 @@ Object.assign(THREE.TGXLoader.prototype, {
 						//subsurfaceScatteringStrength: dye.material_properties.subsurface_scattering_strength
 					};
 
-					if (game == 'destiny2') {
-						gearDye.detailDiffuseTransform = dye.material_properties.detail_diffuse_transform;
-						gearDye.detailNormalTransform = dye.material_properties.detail_normal_transform;
+					switch(game) {
+						case 'destiny':
+							gearDye.primaryColor = new THREE.Color().fromArray(dye.material_properties.primary_color);
+							gearDye.secondaryColor = new THREE.Color().fromArray(dye.material_properties.secondary_color);
+							gearDye.shininess = dye.material_properties.subsurface_scattering_strength[0];
+							break;
+						case 'destiny2':
+							gearDye.primaryColor = new THREE.Color().fromArray(dye.material_properties.primary_albedo_tint);//.primary_material_params;
+							gearDye.secondaryColor = new THREE.Color().fromArray(dye.material_properties.secondary_albedo_tint);//.secondary_material_params;
+							gearDye.wornColor = new THREE.Color().fromArray(dye.material_properties.worn_albedo_tint);
+
+							var emissive = dye.material_properties.emissive_tint_color_and_intensity_bias;
+							//gearDye.emissive = new THREE.Color(emissive[0], emissive[0], emissive[0]);
+							//gearDye.emissive = new THREE.Color().fromArray(new THREE.Vector3().fromArray(dye.material_properties.emissive_tint_color_and_intensity_bias));
+							gearDye.shininess = dye.material_properties.subsurface_scattering_strength_and_emissive[0];
+
+							gearDye.detailDiffuseTransform = dye.material_properties.detail_diffuse_transform;
+							gearDye.detailNormalTransform = dye.material_properties.detail_normal_transform;
+							break;
 					}
+
 					//console.log(gearDye);
 					gearDyes.push(gearDye);
 				}
@@ -2159,6 +2187,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 
 		this.map = null;
 		this.normalMap = null;
+		this.envMap = null;
 		this.gearstackMap = null;
 
 		this.dyeDiffuse = null;
@@ -2169,6 +2198,12 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		//this.dyeDetailDiffuseTransform = new THREE.Vector4(1, 1, 0, 0);
 		//this.dyeDetailNormalTransform = new THREE.Vector4(1, 1, 0, 0);
 
+		this.emissive = new THREE.Color(0x000000);
+		this.specular = new THREE.Color(0x111111);
+		this.shininess = 100;
+
+		//this.side = THREE.DoubleSide;
+
 		//if (Object.keys(params).length > 0) console.log('MaterialParams', params);
 
 		this.isCloth = false;
@@ -2176,6 +2211,8 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		this.usePrimaryColor = true;
 		this.primaryColor = new THREE.Color(0x000000);
 		this.secondaryColor = new THREE.Color(0x000000);
+
+		this.wornColor = new THREE.Color(0x222222);
 
 		this.detailDiffuseTransform = new THREE.Vector4(1, 1, 0, 0);
 		this.detailNormalTransform = new THREE.Vector4(1, 1, 0, 0);
@@ -2198,6 +2235,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		THREE.ShaderMaterial.prototype.copy.call( this, source );
 		if (source.map !== undefined) this.map = source.map;
 		if (source.normalMap !== undefined) this.normalMap = source.normalMap;
+		if (source.envMap !== undefined) this.envMap = source.envMap;
 		if (source.gearstackMap !== undefined) this.gearstackMap = source.gearstackMap;
 
 		if (source.dyeDiffuse !== undefined) this.dyeDiffuse = source.dyeDiffuse;
@@ -2206,6 +2244,10 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		if (source.dyePrimaryDiffuse !== undefined) this.dyePrimaryDiffuse = source.dyePrimaryDiffuse;
 		if (source.dyeSecondaryDiffuse !== undefined) this.dyeSecondaryDiffuse = source.dyeSecondaryDiffuse;
 
+		if (source.emissive !== undefined) this.emissive = source.emissive;
+		if (source.specular !== undefined) this.specular = source.specular;
+		if (source.shininess !== undefined) this.shininess = source.shininess;
+
 		if (source.vertexColors !== undefined) this.vertexColors = source.vertexColors;
 
 		if (source.isCloth !== undefined) this.isCloth = source.isCloth;
@@ -2213,6 +2255,8 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		if (source.usePrimaryColor !== undefined) this.usePrimaryColor = source.usePrimaryColor;
 		if (source.primaryColor !== undefined) this.primaryColor = source.primaryColor;
 		if (source.secondaryColor !== undefined) this.secondaryColor = source.secondaryColor;
+
+		if (source.wornColor !== undefined) this.wornColor = source.wornColor;
 
 		if (source.detailDiffuseTransform !== undefined) this.detailDiffuseTransform = source.detailDiffuseTransform;
 		if (source.detailNormalTransform !== undefined) this.detailNormalTransform = source.detailNormalTransform;
@@ -2246,9 +2290,15 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 			defines['USE_NORMALMAP'] = '';
 			uniforms.normalMap = {value: this.normalMap};
 		}
+		if (this.envMap) {
+			defines['USE_ENVMAP'] = '';
+			uniforms.envMap = {value: this.envMap};
+		}
 		if (this.gearstackMap) {
 			defines['USE_GEARSTACKMAP'] = '';
 			uniforms.gearstackMap = {value: this.gearstackMap};
+			//defines['USE_SPECULARMAP'] = '';
+			//uniforms.specularMap = uniforms.gearstackMap;
 		}
 
 		if (this.vertexColors) {
@@ -2264,6 +2314,11 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 		uniforms.usePrimaryColor = {value: this.usePrimaryColor};
 		uniforms.primaryColor = {value: this.primaryColor};
 		uniforms.secondaryColor = {value: this.secondaryColor};
+		uniforms.wornColor = {value: this.wornColor};
+
+		uniforms.emissive = {value: this.emissive};
+		uniforms.specular = {value: this.specular};
+		uniforms.shininess = {value: this.shininess};
 
 		uniforms.detailDiffuseTransform = {value: this.detailDiffuseTransform};
 		uniforms.detailNormalTransform = {value: this.detailNormalTransform};
@@ -2343,12 +2398,31 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 				"uniform vec3 primaryColor;",
 				"uniform vec3 secondaryColor;",
 
+				"uniform vec3 wornColor;",
+
 				//"#define saturate(value) clamp(value, 0.0, 1.0)",
 				"const float gamma_correction_power = 2.2;",
 				"const float gamma_correction_power_inverse = 1.0/2.2;",
 				"vec4 blend_overlay(vec4 back, vec4 front)",
 				"{",
 					"return front * saturate(back * 4.0) + saturate(back - 0.25);",
+				"}",
+				"vec4 blend_multiply(vec4 back, vec4 front) {",
+					"return back * front;",
+				"}",
+				"vec4 blend_screen(vec4 back, vec4 front) {",
+					"vec4 back_screen = vec4(1.0 - back.x, 1.0 - back.y, 1.0 - back.z, 1.0);",
+					"vec4 front_screen = vec4(1.0 - front.x, 1.0 - front.y, 1.0 - front.z, 1.0);",
+					"vec4 screen = back_screen * front_screen;",
+					"return vec4(1.0 - screen.x, 1.0 - screen.y, 1.0 - screen.z, 1.0);",
+				"}",
+				"vec4 blend_hard_light(vec4 back, vec4 front) {",
+					"return vec4(",
+					"front.x < 0.5 ? (2.0 * back.x * front.x) : (1.0 - 2.0 * (1.0 - back.x) * (1.0 - front.x)),",
+					"front.y < 0.5 ? (2.0 * back.y * front.y) : (1.0 - 2.0 * (1.0 - back.y) * (1.0 - front.y)),",
+					"front.z < 0.5 ? (2.0 * back.z * front.z) : (1.0 - 2.0 * (1.0 - back.z) * (1.0 - front.z)),",
+					"1.0",
+					");",
 				"}",
 				"#endif"
 			];
@@ -2408,6 +2482,7 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 						//	"changeColor = vec4(vColor.xyz, 1.0);",
 						//"#endif",
 
+
 						"vec4 dyeColor = usePrimaryColor ? vec4(primaryColor, 1.0) : vec4(secondaryColor, 1.0);",
 						//"diffuseColor = blend_overlay(dyeColor, diffuseColor);",
 						//"vec4 blendColorUncorrected = mix(diffuseColor, blend_overlay(diffuseColor, changeColor), gearstackColor.r);",
@@ -2416,17 +2491,42 @@ Object.assign(THREE.BungieNetLoader.prototype, {
 						//"vec3 blendColor = pow(blendColorUncorrected.xyz, vec3(gamma_correction_power_inverse));",
 						//"diffuseColor = vec4(blendColor, 1.0);",
 
+						// Worn Color
+						"vec4 detailColor = vec4(1.0, 0.0, 0.0, 1.0);",
+						"vec4 blendDetail = mix(diffuseColor, blend_overlay(diffuseColor, detailColor), gearstackColor.b);",
+						//"diffuseColor = blendDetail;",
+
+						//"vec4 decalColor = vec4(1.0, 0.0, 1.0, 1.0);",
+						//"vec4 blendDecal = mix(diffuseColor, blend_multiply(diffuseColor, decalColor), gearstackColor.b);",
+						//"diffuseColor = blendDecal;",
+
 					"#endif",
-
-					//"#ifdef USE_COLOR",
-					//	//"diffuseColor = vec4(vColor.xyz, 1.0);",
-					//	"diffuseColor = mix(diffuseColor, blend_overlay(diffuseColor, vec4(vColor.xyz, 1.0)), gearstackColor.r);",
-					//"#endif",
-
 					"diffuseColor = vec4(pow(diffuseColor.xyz, vec3(gamma_correction_power_inverse)), 1.0);",
 				"#endif"
 			];
 			fragmentShader = this.insertAfter('#include <map_fragment>', fragmentShader, gearstackFragment);
+
+			// Doesn't appear to be a standard color, possibly flags?
+			var colorFragment = [
+				"#ifdef USE_COLOR",
+					"vec3 vtxColor = vColor;",
+					//"diffuseColor = mix(diffuseColor, blend_overlay(diffuseColor, vec4(primaryColor, 1.0)), vColor.r);",
+				"#endif"
+			];
+			fragmentShader = this.replace('#include <color_fragment>', fragmentShader, colorFragment);
+
+			var specularFragment = [
+				"specularStrength = 1.0;",
+				"#ifdef USE_DYE",
+					"#ifdef USE_GEARSTACKMAP",
+						"vec4 gearstackSpecular = texture2D(gearstackMap, vUv);",
+						"specularStrength = gearstackSpecular.g * 0.4;",
+						//"specularStrength = 1.0;",
+					"#endif",
+				"#endif"
+			];
+
+			fragmentShader = this.insertAfter('#include <specularmap_fragment>', fragmentShader, specularFragment);
 
 			// Spasm.GearShader
 			// Since most of the rendering is handled by Three.js, only some of this shader code is needed
