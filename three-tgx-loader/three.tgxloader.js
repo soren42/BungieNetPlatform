@@ -1185,7 +1185,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 							if (!detailUv) detailUv = [0, 0];
 
 							faceVertex.push(index+vertexOffset);
-							faceVertexNormals.push(new THREE.Vector3(normal[0], normal[1], normal[2]));
+							faceVertexNormals.push(new THREE.Vector3(-normal[0], -normal[1], -normal[2]));
 
 							var uvu = uv[0]*texcoordScale[0]+texcoordOffset[0];
 							var uvv = uv[1]*texcoordScale[1]+texcoordOffset[1];
@@ -1224,7 +1224,7 @@ Object.assign(THREE.TGXLoader.prototype, {
 						y = y*positionScale[1]+positionOffset[1];
 						z = z*positionScale[2]+positionOffset[2];
 					}
-					geometry.vertices.push(new THREE.Vector3(-x, y, -z));
+					geometry.vertices.push(new THREE.Vector3(x, y, z));
 
 					// Set bone weights
 					var boneIndex = position[3];//Math.abs((positionOffset[3] * 32767.0) + 0.01);
