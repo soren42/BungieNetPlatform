@@ -1,5 +1,5 @@
 ## API Key
-Sign in to bungie.net and visit the [API registration portal](https://www.bungie.net/en/User/API). If you haven't already verified the [email address associated](https://www.bungie.net/en/Profile/Settings#context=settings&tab=notificationsAndEmail) with your bungie.net account, now is the time to do so. Make sure to check your spam or junk mail folder if the email verification link doesn't appear.
+Sign in to bungie.net and visit the [API registration portal](https://www.bungie.net/en/Application). If you haven't already verified the [email address associated](https://www.bungie.net/en/Profile/Settings#context=settings&tab=notificationsAndEmail) with your bungie.net account, now is the time to do so. Make sure to check your spam or junk mail folder if the email verification link doesn't appear.
 
 ## Query the Platform
 To fetch data from the platform, it's as simple as sending a HTTP request to it along with your API key and making use of the response, which is [JSON-encoded](http://json.org/).
