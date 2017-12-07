@@ -11,6 +11,7 @@ Mostly for historical purposes, we segregate Faction progressions from other pro
 Name | Type | Description
 ---- | ---- | -----------
 factionHash | [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32 | The hash identifier of the Faction related to this progression. Use it to look up the DestinyFactionDefinition for more rendering info.
+factionVendorIndex | integer:int32 | The index of the Faction vendor that is currently available. Will be set to -1 if no vendors are available.
 progressionHash | [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32 | The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data.
 dailyProgress | integer:int32 | The amount of progress earned today for this progression.
 dailyLimit | integer:int32 | If this progression has a daily limit, this is that limit.
@@ -28,6 +29,8 @@ nextLevelAt | integer:int32 | The total amount of progression (i.e. &quot;Experi
 {
     // Type: [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32
     "factionHash": 0,
+    // Type: integer:int32
+    "factionVendorIndex": 0,
     // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
     "progressionHash": 0,
     // Type: integer:int32

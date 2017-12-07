@@ -80,7 +80,7 @@ function checkSchemaType(&$schema) {
 
 $schemaCache = array();
 
-function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=0) {
+function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=0, $ancestors=array()) {
 	global $schemaCache;
 
 	$result = null;
@@ -92,6 +92,15 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 	if (isset($schema->{'$ref'})) {
 		$ref = $schema->{'$ref'};
 		$refPath = explode('/', $ref);
+
+		if (in_array($ref, $ancestors)) {
+			echo 'AncestorReference: '.$ref.LN;
+			return '{}';
+			//exit();
+		}
+
+		$ancestors[] = $ref;
+
 		if (!isset($openapi->components->{$refPath[2]}->{$refPath[3]})) {
 			echo 'MissingReference: '.$ref.LN;
 		} else if (isset($schemaCache[$ref])) {
@@ -99,7 +108,7 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 		} else {
 			$component = $openapi->components->{$refPath[2]}->{$refPath[3]};
 			//echo $indent.'[$ref:'.$ref.']: '.json_encode($component, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
-			$result = buildSchema($component, $openapi, $versionPrefix, false, $depth+1);
+			$result = buildSchema($component, $openapi, $versionPrefix, false, $depth+1, $ancestors);
 			//buildSchemeComments($result, $component, $openapi, $versionPrefix);
 
 			$schemaCache[$ref] = $result;
@@ -114,9 +123,9 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 			switch($contentType) {
 				case 'application/json':
 					//echo $indent.'[$content:'.$contentType.']: '.json_encode($content, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
-					$result = buildSchema($content->schema, $openapi, $versionPrefix, $comments, $depth+1);
+					$result = buildSchema($content->schema, $openapi, $versionPrefix, $comments, $depth+1, $ancestors);
 					$resultComments = array();
-					buildSchemaComments($resultComments, $content->schema);
+					buildSchemaComments($resultComments, $content->schema, $ancestors);
 					$resultType = gettype($result);
 					switch($resultType) {
 						case 'object':
@@ -158,8 +167,8 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 				if (isset($schema->properties)) {
 					foreach($schema->properties as $propertyName => $property) {
 						//echo $indent.'[$property:'.$propertyName.']: '.json_encode($property, JSON_UNESCAPED_SLASHES).LN;
-						$propertyResult = buildSchema($property, $openapi, $versionPrefix, $comments, $depth+1);
-						buildSchemaComments($result, $property);
+						$propertyResult = buildSchema($property, $openapi, $versionPrefix, $comments, $depth+1, $ancestors);
+						buildSchemaComments($result, $property, $ancestors);
 						$result->{$propertyName} = $propertyResult;
 					}
 				}
@@ -167,8 +176,8 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 					//echo json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 				}
 				if (isset($schema->{'x-dictionary-key'})) {
-					$dictionaryKey = buildSchema($schema->{'x-dictionary-key'}, $openapi, $versionPrefix, $comments, $depth+1);
-					$dictionaryValue = buildSchema($schema->additionalProperties, $openapi, $versionPrefix, $comments, $depth+1);
+					$dictionaryKey = buildSchema($schema->{'x-dictionary-key'}, $openapi, $versionPrefix, $comments, $depth+1, $ancestors);
+					$dictionaryValue = buildSchema($schema->additionalProperties, $openapi, $versionPrefix, $comments, $depth+1, $ancestors);
 
 					if ($dictionaryKey === '') $dictionaryKey = '{string}';
 
@@ -184,8 +193,8 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 				break;
 			case 'array':
 				$result = array();
-				buildSchemaComments($result, $schema->items);
-				$result[] = buildSchema($schema->items, $openapi, $versionPrefix, $comments, $depth+1);
+				buildSchemaComments($result, $schema->items, $ancestors);
+				$result[] = buildSchema($schema->items, $openapi, $versionPrefix, $comments, $depth+1, $ancestors);
 				break;
 			default:
 				echo 'UnknownSchemaType: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
@@ -200,7 +209,7 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 				echo 'MultipleAllOfs: '.json_encode($schema->allOf, JSON_UNESCAPED_SLASHES).LN;
 				break;
 			}
-			$result = buildSchema($of, $openapi, $versionPrefix, $comments, $depth+1);
+			$result = buildSchema($of, $openapi, $versionPrefix, $comments, $depth+1, $ancestors);
 		}
 
 	}
@@ -215,9 +224,9 @@ function buildSchema($schema, $openapi, $versionPrefix, $comments=false, $depth=
 	return $result;
 }
 
-function buildSchemaComments(&$result, $schema) {
+function buildSchemaComments(&$result, $schema, $ancestors) {
 	$schemaStrings = array(
-		'// Type: '.buildSchemaString($schema)
+		'// Type: '.buildSchemaString($schema, 0, $ancestors)
 	);
 	if (isset($schema->description)) {
 //		foreach(explode("\r\n", $schema->description) as $line) {
@@ -251,7 +260,7 @@ function buildSchemaComments(&$result, $schema) {
 	//$result = array_merge(array('//'.buildSchemaString($schema)), $result);
 }
 
-function buildSchemaString($schema) {
+function buildSchemaString($schema, $depth=0, $ancestors=array()) {
 	global $openapi;
 
 	$result = '';
@@ -259,11 +268,18 @@ function buildSchemaString($schema) {
 	// Check for missing "type" property
 	checkSchemaType($schema);
 
+	//echo '<pre>Schema: '.$depth.' | '.json_encode($schema).'</pre>';
+
+//	if ($depth >= 3) {
+//		echo '<pre>Too many levels: '.json_encode($schema, JSON_PRETTY_PRINT).'</pre>';
+//		return $result;
+//	}
+
 	if (isset($schema->content)) {
 		foreach($schema->content as $contentType => $content) {
 			switch($contentType) {
 				case 'application/json':
-					$result = buildSchemaString($content->schema);
+					$result = buildSchemaString($content->schema, $depth+1, $ancestors);
 					break;
 				default:
 					echo 'UnknownContentType: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
@@ -278,6 +294,7 @@ function buildSchemaString($schema) {
 		$refName = @end($refPath);
 		$shortName = getSchemaReferenceShortName($ref);
 		$result = '['.$ref.']';
+
 		if (isset($openapi->components->{$refPath[2]}->{$refName})) {
 			$schema = $openapi->components->{$refPath[2]}->{$refName};
 			$refFilepath = preg_replace(SCHEMA_URL_REGEX, '-', $refName);
@@ -299,7 +316,7 @@ function buildSchemaString($schema) {
 	else if (isset($schema->allOf)) {
 		$result = array();
 		foreach($schema->allOf as $of) {
-			$result[] = buildSchemaString($of);
+			$result[] = buildSchemaString($of, $depth+1, $ancestors);
 		}
 		$result = implode(', ', $result);
 	}
@@ -308,14 +325,14 @@ function buildSchemaString($schema) {
 			case 'object':
 				$result = $schema->type;
 				if (isset($schema->{'x-dictionary-key'})) {
-					$dictionaryKey = buildSchemaString($schema->{'x-dictionary-key'});
+					$dictionaryKey = buildSchemaString($schema->{'x-dictionary-key'}, $depth+1, $ancestors);
 					if (isset($schema->{'x-mapped-definition'})) {
-						$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'});
+						$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'}, $depth+1, $ancestors);
 						$dictionaryKey = $mappedDefinition.':'.$dictionaryKey;
 					}
 					$result = 'Dictionary&lt;'
 						.$dictionaryKey.','
-						.buildSchemaString($schema->additionalProperties).'&gt;'
+						.buildSchemaString($schema->additionalProperties, $depth+1, $ancestors).'&gt;'
 					;
 				}
 				break;
@@ -327,14 +344,14 @@ function buildSchemaString($schema) {
 				if (isset($schema->nullable)) $result .= ':nullable';
 				break;
 			case 'array':
-				$result = buildSchemaString($schema->items).'[]';
+				$result = buildSchemaString($schema->items, $depth+1, $ancestors).'[]';
 				break;
 			default:
 				echo 'UnknownSchemaType: '.json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 				break;
 		}
 		if ($schema->type != 'object' && isset($schema->{'x-mapped-definition'})) {
-			$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'});
+			$mappedDefinition = buildSchemaString($schema->{'x-mapped-definition'}, $depth+1, $ancestors);
 			//echo json_encode($schema, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 			//echo $mappedDefinition.LN;
 			//echo $result.LN;
@@ -347,11 +364,11 @@ function buildSchemaString($schema) {
 	return $result;
 }
 
-function buildSchemaStringFromRef($ref) {
+function buildSchemaStringFromRef($ref, $depth=0) {
 	$schema = (object)array(
 		'$ref' => $ref
 	);
-	return buildSchemaString($schema);
+	return buildSchemaString($schema, $depth+1, array($ref));
 }
 
 function buildEndpoints($openapi, $version) {

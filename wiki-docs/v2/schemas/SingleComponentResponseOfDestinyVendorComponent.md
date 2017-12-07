@@ -19,8 +19,6 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
     "data": {
         // Type: [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]:integer:uint32
         "vendorHash": 0,
-        // Type: [[AckState|User-AckState]]
-        "ackState": {},
         // Type: string:date-time
         "nextRefreshDate": "",
         // Type: boolean

@@ -23,6 +23,7 @@ Boolean | 9 | True or false
 WeaponType | 10 | The stat is actually a weapon type.
 Standing | 11 | Indicates victory, defeat, or something in between.
 Milliseconds | 12 | Number of milliseconds some event spanned. For example, race time, or lap time.
+CompletionReason | 13 | The value is a enumeration of the Completion Reason type.
 
 ## References
 1. https://bungie-net.github.io/multi/schema_Destiny-HistoricalStats-Definitions-UnitType.html#schema_Destiny-HistoricalStats-Definitions-UnitType

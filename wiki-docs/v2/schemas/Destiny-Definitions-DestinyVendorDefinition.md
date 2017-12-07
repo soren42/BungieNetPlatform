@@ -39,6 +39,7 @@ inventoryFlyouts | [[DestinyVendorInventoryFlyoutDefinition|Destiny-Definitions-
 itemList | [[DestinyVendorItemDefinition|Destiny-Definitions-DestinyVendorItemDefinition]]:Definition[] | If the vendor sells items (or merely has a list of items to show like the &quot;Sack&quot; vendors do), this is the list of those items that the vendor can sell. From this list, only a subset will be available from the vendor at any given time, selected randomly and reset on the vendor's refresh interval. Note that a vendor can sell the same item multiple ways: for instance, nothing stops a vendor from selling you some specific weapon but using two different currencies, or the same weapon at multiple &quot;item levels&quot;.
 services | [[DestinyVendorServiceDefinition|Destiny-Definitions-DestinyVendorServiceDefinition]]:Definition[] | BNet doesn't use this data yet, but it appears to be an optional list of flavor text about services that the Vendor can provide.
 acceptedItems | [[DestinyVendorAcceptedItemDefinition|Destiny-Definitions-DestinyVendorAcceptedItemDefinition]]:Definition[] | If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster vendors), this defines the list of source-&gt;destination buckets for transferring.
+returnWithVendorRequest | boolean | As many of you know, Vendor data has historically been pretty brutal on the BNet servers. In an effort to reduce this workload, only Vendors with this flag set will be returned on Vendor requests. This allows us to filter out Vendors that don't dynamic data that's particularly useful: things like &quot;Preview/Sack&quot; vendors, for example, that you can usually suss out the details for using just the definitions themselves.
 hash | integer:uint32 | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally. When entities refer to each other in Destiny content, it is this hash that they are referring to.
 index | integer:int32 | The index of the entity as it was found in the investment tables.
 redacted | boolean | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
@@ -173,7 +174,12 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             // Type: string
             "displayTitle": "",
             // Type: [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]]:Definition
-            "overlay": {}
+            "overlay": {},
+            // Type: integer:int32[]
+            "vendorItemIndexes": [
+               // Type: integer:int32
+                0
+            ]
         }
     ],
     // Type: [[DestinyVendorCategoryEntryDefinition|Destiny-Definitions-DestinyVendorCategoryEntryDefinition]]:Definition[]
@@ -201,7 +207,12 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             // Type: string
             "displayTitle": "",
             // Type: [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]]:Definition
-            "overlay": {}
+            "overlay": {},
+            // Type: integer:int32[]
+            "vendorItemIndexes": [
+               // Type: integer:int32
+                0
+            ]
         }
     ],
     // Type: [[DestinyDisplayCategoryDefinition|Destiny-Definitions-DestinyDisplayCategoryDefinition]]:Definition[]
@@ -351,7 +362,13 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             // Type: [[DestinyGatingScope|Destiny-DestinyGatingScope]]:Enum
             "visibilityScope": {},
             // Type: [[DestinyGatingScope|Destiny-DestinyGatingScope]]:Enum
-            "purchasableScope": {}
+            "purchasableScope": {},
+            // Type: [[BungieMembershipType|BungieMembershipType]]:Enum
+            "exclusivity": {},
+            // Type: boolean:nullable
+            "isOffer": false,
+            // Type: boolean:nullable
+            "isCrm": false
         }
     ],
     // Type: [[DestinyVendorServiceDefinition|Destiny-Definitions-DestinyVendorServiceDefinition]]:Definition[]
@@ -372,6 +389,8 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             "destinationInventoryBucketHash": 0
         }
     ],
+    // Type: boolean
+    "returnWithVendorRequest": false,
     // Type: integer:uint32
     "hash": 0,
     // Type: integer:int32

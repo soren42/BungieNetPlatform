@@ -27,6 +27,7 @@ if (file_exists('../api-key.php')) include('../api-key.php');
 if (!defined('API_KEY')) define('API_KEY', '{insert-api-key}');
 
 ini_set('max_execution_time', 300);
+//ini_set('memory_limit', '512M');
 
 //header('Content-Type: text/plain');
 

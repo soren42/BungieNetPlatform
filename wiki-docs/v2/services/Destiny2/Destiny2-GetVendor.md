@@ -41,7 +41,7 @@ PlatformErrorCode: 200
         // Type: [[DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]]
         "sales": {},
         // Type: [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]]
-        "items": {}
+        "itemComponents": {}
     },
     // Type: [[PlatformErrorCodes|Exceptions-PlatformErrorCodes]]:Enum
     "ErrorCode": 0,

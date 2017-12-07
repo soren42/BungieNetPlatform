@@ -1,22 +1,23 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
+The collection of all items currently being sold by a specific Vendor and visible to the given character for which the request was made.
 
 ## Schema
-* **Schema Type:** Generic Class
+* **Schema Type:** Class
 * **Type:** object
+* **Component Type Dependency:** VendorSales
 
 ## Properties
 Name | Type | Description
 ---- | ---- | -----------
-data | Dictionary&lt;integer:int32,[[DestinyVendorSaleItemComponent|Destiny-Entities-Vendors-DestinyVendorSaleItemComponent]]&gt; | 
-privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum | 
+saleItems | Dictionary&lt;integer:int32,[[DestinyVendorSaleItemComponent|Destiny-Entities-Vendors-DestinyVendorSaleItemComponent]]&gt; | The items being sold by this vendor, keyed by the vendorItemIndex of the item being sold. (because showing sale items depends on the ordering dictated by the categories being shown - see DestinyVendorCategoryComponent - this is a dictionary for quick lookup capability.)
 
 ## Example
 ```javascript
 {
     // Type: Dictionary&lt;integer:int32,[[DestinyVendorSaleItemComponent|Destiny-Entities-Vendors-DestinyVendorSaleItemComponent]]&gt;
-    "data": {
+    "saleItems": {
         "0": {
             // Type: integer:int32
             "vendorItemIndex": 0,
@@ -59,12 +60,10 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                 0
             ]
         }
-    },
-    // Type: [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum
-    "privacy": 0
+    }
 }
 
 ```
 
 ## References
-1. https://bungie-net.github.io/multi/schema_DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent.html#schema_DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent
+1. https://bungie-net.github.io/multi/schema_Destiny-Components-Vendors-DestinyVendorSaleItemSetComponent.html#schema_Destiny-Components-Vendors-DestinyVendorSaleItemSetComponent

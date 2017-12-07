@@ -30,9 +30,9 @@ ItemSockets | 305 | Items can have sockets, where plugs can be inserted. Asking 
 ItemTalentGrids | 306 | Items can have talent grids, though that matters a lot less frequently than it used to. Asking for this component will return all relevant info about activated Nodes and Steps on this talent grid, like the good ol' days.
 ItemCommonData | 307 | Items that *aren't* instanced still have important information you need to know: how much of it you have, the itemHash so you can look up their DestinyInventoryItemDefinition, whether they're locked, etc... Both instanced and non-instanced items will have these properties. You will get this automatically with Inventory components - you only need to pass this when calling GetItem on a specific item.
 ItemPlugStates | 308 | Items that are &quot;Plugs&quot; can be inserted into sockets. This returns statuses about those plugs and why they can/can't be inserted. I hear you giggling, there's nothing funny about inserting plugs. Get your head out of the gutter and pay attention!
-Vendors | 400 | 
-VendorCategories | 401 | 
-VendorSales | 402 | 
+Vendors | 400 | When obtaining vendor information, this will return summary information about the Vendor or Vendors being returned.
+VendorCategories | 401 | When obtaining vendor information, this will return information about the categories of items provided by the Vendor.
+VendorSales | 402 | When obtaining vendor information, this will return the information about items being sold by the Vendor.
 Kiosks | 500 | Asking for this component will return you the account's Kiosk statuses: that is, what items have been filled out/acquired. But only if you are the currently authenticated user or the user has elected to allow anonymous viewing of its progression info.
 
 ## References

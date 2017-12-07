@@ -16,6 +16,7 @@ lightLevel | integer:int32 | Light Level of the character if available. Zero if 
 bungieNetUserInfo | [[UserInfoCard|User-UserInfoCard]] | Details about the player as they are known on BungieNet. This will be undefined if the player has marked their credential private, or does not have a BungieNet account.
 clanName | string | Current clan name for the player. This value may be null or an empty string if the user does not have a clan.
 clanTag | string | Current clan tag for the player. This value may be null or an empty string if the user does not have a clan.
+emblemHash | integer:uint32 | If we know the emblem's hash, this can be used to look up the player's emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it).
 
 ## Example
 ```javascript
@@ -33,7 +34,9 @@ clanTag | string | Current clan tag for the player. This value may be null or an
     // Type: string
     "clanName": "",
     // Type: string
-    "clanTag": ""
+    "clanTag": "",
+    // Type: integer:uint32
+    "emblemHash": 0
 }
 
 ```

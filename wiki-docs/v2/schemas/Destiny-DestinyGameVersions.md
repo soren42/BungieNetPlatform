@@ -13,6 +13,7 @@ Identifier | Value | Description
 ---------- | ----- | -----------
 None | 0 | 
 Destiny2 | 1 | 
+DLC1 | 2 | 
 
 ## References
 1. https://bungie-net.github.io/multi/schema_Destiny-DestinyGameVersions.html#schema_Destiny-DestinyGameVersions

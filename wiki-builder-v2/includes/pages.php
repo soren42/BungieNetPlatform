@@ -206,13 +206,19 @@ function buildPage($page) {
 		foreach(explode("\n## ", $changelog) as $entryIndex => $entry) {
 			if ($entryIndex == 0) continue;
 			if ($entryIndex > 1) $entry = implode("\n", array_slice(explode("\n", $entry), 0, 2));
-			$changes[] = '### '.str_replace('## ', '### ', $entry);
+			$change = '### '.str_replace('## ', '### ', $entry);
+			$lines = explode("\n", $change);
+			if (count($lines) > 20) {
+				$lines = array_slice($lines, 0, 20);
+				$change = implode("\n", $lines).LN.LN.'[truncated]';
+			}
+			$changes[] = $change;
 			//echo '<pre>['.$entry.']</pre>';
 			//if (count($changes) == 5) break;
 			if (count($changes) == 1) break;
 		}
 
-		$changes [] = LN.'<hr/>'.LN.'Read the [[full changelong|Changelog]].';
+		$changes [] = LN.'<hr/>'.LN.'Read the [[full changelog|Changelog]].';
 
 		$content .= '</div>'
 			.'<div class="inner">'

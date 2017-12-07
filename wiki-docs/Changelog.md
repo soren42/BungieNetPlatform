@@ -1,7 +1,95 @@
 ## About
 This page will cover automated updates to the Wiki as well as changes to the [GitHub Pages frontend](http://destinydevs.github.io/BungieNetPlatform).
 
-***
+## December 7, 2017
+The one after the long break.
+
+Stats:
+* API Version: 2.0.1 > 2.1.0
+* Schemas: 445 > 454
+* Definitions: 104 > 105
+* Endpoints:
+ * Destiny2: 29 > 31
+
+Schemas (added):
+* [[Destiny.Components.Vendors.DestinyVendorSaleItemSetComponent|Destiny-Components-Vendors-DestinyVendorSaleItemSetComponent]]
+* [[Destiny.Definitions.DestinyFactionVendorDefinition|Destiny-Definitions-DestinyFactionVendorDefinition]]
+* [[Destiny.Definitions.Reporting.DestinyReportReasonCategoryDefinition|Destiny-Definitions-Reporting-DestinyReportReasonCategoryDefinition]]
+* [[Destiny.Definitions.Reporting.DestinyReportReasonDefinition|Destiny-Definitions-Reporting-DestinyReportReasonDefinition]]
+* [[Destiny.Reporting.Requests.DestinyReportOffensePgcrRequest|Destiny-Reporting-Requests-DestinyReportOffensePgcrRequest]]
+* [[Destiny.Requests.Actions.DestinyPostmasterTransferRequest|Destiny-Requests-Actions-DestinyPostmasterTransferRequest]]
+* [[Destiny.Responses.DestinyVendorsResponse|Destiny-Responses-DestinyVendorsResponse]]
+* [[DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent]]
+* [[DictionaryComponentResponseOfuint32AndDestinyVendorComponent]]
+* [[DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent]]
+
+Schemas (changed):
+* [[Destiny.Definitions.DestinyFactionDefinition||Destiny-Definitions-DestinyFactionDefinition]]
+ * Removed: backgroundImagePath | string
+ * Removed: rewardVendorPreviewCategoryHashes | integer:int32[]
+ * Added: vendors | [[Destiny.Definitions.DestinyFactionVendorDefinition|Destiny-Definitions-DestinyFactionVendorDefinition]][] | List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.
+* [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]]
+ * Added: doesPostmasterPullHaveSideEffects | boolean | The boolean will indicate to us (and you!) whether something *could* happen when you transfer this item from the Postmaster that might be considered a &quot;destructive&quot; action. It is not feasible currently to tell you (or ourelves!) in a consistent way whether this *will* actually cause a destructive action, so we are playing it safe: if it has the potential to do so, we will not allow it to be transferred from the Postmaster by default. You will need to check for this flag before transferring an item from the Postmaster, or else you'll end up receiving an error.
+* [[Destiny.Definitions.DestinyItemSackBlockDefinition|Destiny-Definitions-DestinyItemSackBlockDefinition]]
+ * Added: openOnAcquire | boolean |
+* [[Destiny.Definitions.DestinyVendorCategoryEntryDefinition|Destiny-Definitions-DestinyVendorCategoryEntryDefinition]]
+ * Added: vendorItemIndexes | integer:int32[] A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.
+* [[Destiny.Definitions.DestinyVendorDefinition|Destiny-Definitions-DestinyVendorDefinition]]
+ * Added: returnWithVendorRequest | boolean | As many of you know, Vendor data has historically been pretty brutal on the BNet servers. In an effort to reduce this workload, only Vendors with this flag set will be returned on Vendor requests. This allows us to filter out Vendors that don't dynamic data that's particularly useful: things like &quot;Preview/Sack&quot; vendors, for example, that you can usually suss out the details for using just the definitions themselves.
+* [[Destiny.Definitions.DestinyVendorItemDefinition|Destiny-Definitions-DestinyVendorItemDefinition]]
+ * Added: exclusivity | [[BungieMembershipType|BungieMembershipType]]:Enum | If this item can only be purchased by a given platform, this indicates the platform to which it is restricted.
+ * Added: isOffer | boolean:nullable | If this sale can only be performed as the result of an offer check, this is true.
+ * Added: isCrm | boolean:nullable | If this sale can only be performed as the result of receiving a CRM offer, this is true.
+* [[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]]
+ * Added: explorePrioritizesActivityImage | boolean | If TRUE, &quot;Explore Destiny&quot; (the front page of BNet and the companion app) prioritize using the activity image over any overriding Quest or Milestone image provided. This unfortunate hack is brought to you by Trials of The Nine.
+* [[Destiny.DestinyGameVersions|Destiny-DestinyGameVersions]]
+ * Added: DLC1 | 2 |
+* [[Destiny.Entities.Vendors.DestinyVendorComponent|Destiny-Entities-Vendors-DestinyVendorComponent]]
+ * Removed: ackState | [[AckState|User-AckState]] | Long ago, we thought it would be a good idea to have special UI that showed whether or not you've seen a Vendor's inventory after cycling. For now, we don't have that UI anymore. This property still exists for historical purposes. Don't worry about it.
+* [[Destiny.Entities.Vendors.DestinyVendorSaleItemComponent|Destiny-Entities-Vendors-DestinyVendorSaleItemComponent]]
+ * Added: quantity | integer:int32 | How much of the item you'll be getting.
+* [[Destiny.HistoricalStats.Definitions.DestinyHistoricalStatsDefinition|Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition]]
+ * Added: statNameAbbr | string | Display name abbreviated
+* [[Destiny.HistoricalStats.Definitions.UnitType|Destiny-HistoricalStats-Definitions-UnitType]]
+ * Added: CompletionReason | 13 | The value is a enumeration of the Completion Reason type.
+* [[Destiny.HistoricalStats.DestinyPlayer|Destiny-HistoricalStats-DestinyPlayer]]
+ * Added: emblemHash | integer:uint32 | If we know the emblem's hash, this can be used to look up the player's emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it).
+* [[Destiny.Milestones.DestinyMilestoneActivity|Destiny-Milestones-DestinyMilestoneActivity]]
+ * Added: activityModeHash | [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.
+ * Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.
+* [[Destiny.Milestones.DestinyMilestoneActivityVariant|Destiny-Milestones-DestinyMilestoneActivityVariant]]
+ * Added: activityModeHash | [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.
+ * Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.
+* [[Destiny.Milestones.DestinyPublicMilestoneActivity|Destiny-Milestones-DestinyPublicMilestoneActivity]]
+ * Added: activityModeHash | [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.
+ * Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.
+* [[Destiny.Milestones.DestinyPublicMilestoneActivityVariant|Destiny-Milestones-DestinyPublicMilestoneActivityVariant]]
+ * Added: activityModeHash | [[Destiny.Definitions.DestinyActivityModeDefinition|Destiny-Definitions-DestinyActivityModeDefinition]]:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.
+ * Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.
+* [[Destiny.Progression.DestinyFactionProgression|Destiny-Progression-DestinyFactionProgression]]
+ * Added: factionVendorIndex | integer:int32 | The index of the Faction vendor that is currently available. Will be set to -1 if no vendors are available.
+* [[Destiny.Responses.DestinyVendorResponse|Destiny-Responses-DestinyVendorResponse]]
+ * Renamed: items > itemComponents | [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]] | Item components, keyed by the vendorItemIndex of the active sale items. COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
+* [[Exceptions.PlatformErrorCodes|Exceptions-PlatformErrorCodes]]
+ * Added: DestinyItemNotTransferrableHasSideEffects | 1673 |
+ * Added: ReportOffenderNotInPgcr | 2700 |
+ * Added: ReportRequestorNotInPgcr | 2701 |
+ * Added: ReportSubmissionFailed | 2702 |
+* [[Trending.TrendingEntry|Trending-TrendingEntry]]
+ * Added: items | [[TrendingEntry|Trending-TrendingEntry]][] | If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header.
+* [[Trending.TrendingEntryType|Trending-TrendingEntryType]]
+ * Added: Container | 10 |
+ * Added: Release | 11 |
+
+Services/Endpoints (added):
+* [[Destiny2.PullFromPostmaster|Destiny2-PullFromPostmaster]]
+* [[Destiny2.ReportOffensivePostGameCarnageReportPlayer|Destiny2-ReportOffensivePostGameCarnageReportPlayer]]
+
+Services/Endpoints (changed):
+* [[Content.SearchContentWithText|Content-Content-SearchContentWithText]]
+ * Added: source | string | No |
+
+
 
 ## October 31, 2017
 The one that got delayed.

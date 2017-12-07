@@ -114,7 +114,7 @@ POST | [[IndividualGroupInvite|GroupV2-IndividualGroupInvite]] | /GroupV2/{group
 POST | [[IndividualGroupInviteCancel|GroupV2-IndividualGroupInviteCancel]] | /GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/
 
 
-## <a name="Destiny2"></a>Destiny2 (29 Endpoints)
+## <a name="Destiny2"></a>Destiny2 (31 Endpoints)
 Method | Name | Endpoint
 ------ | ---- | --------
 GET | [[GetDestinyManifest|Destiny2-GetDestinyManifest]] | /Destiny2/Manifest/
@@ -127,12 +127,14 @@ GET | [[GetItem|Destiny2-GetItem]] | /Destiny2/{membershipType}/Profile/{destiny
 GET | [[GetVendors|Destiny2-GetVendors]] | /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/
 GET | [[GetVendor|Destiny2-GetVendor]] | /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/
 POST | [[TransferItem|Destiny2-TransferItem]] | /Destiny2/Actions/Items/TransferItem/
+POST | [[PullFromPostmaster|Destiny2-PullFromPostmaster]] | /Destiny2/Actions/Items/PullFromPostmaster/
 POST | [[EquipItem|Destiny2-EquipItem]] | /Destiny2/Actions/Items/EquipItem/
 POST | [[EquipItems|Destiny2-EquipItems]] | /Destiny2/Actions/Items/EquipItems/
 POST | [[SetItemLockState|Destiny2-SetItemLockState]] | /Destiny2/Actions/Items/SetLockState/
 POST | [[InsertSocketPlug|Destiny2-InsertSocketPlug]] | /Destiny2/Actions/Items/InsertSocketPlug/
 POST | [[ActivateTalentNode|Destiny2-ActivateTalentNode]] | /Destiny2/Actions/Items/ActivateTalentNode/
 GET | [[GetPostGameCarnageReport|Destiny2-GetPostGameCarnageReport]] | /Destiny2/Stats/PostGameCarnageReport/{activityId}/
+POST | [[ReportOffensivePostGameCarnageReportPlayer|Destiny2-ReportOffensivePostGameCarnageReportPlayer]] | /Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/
 GET | [[GetHistoricalStatsDefinition|Destiny2-GetHistoricalStatsDefinition]] | /Destiny2/Stats/Definition/
 GET | [[GetClanLeaderboards|Destiny2-GetClanLeaderboards]] | /Destiny2/Stats/Leaderboards/Clans/{groupId}/
 GET | [[GetClanAggregateStats|Destiny2-GetClanAggregateStats]] | /Destiny2/Stats/AggregateClanStats/{groupId}/

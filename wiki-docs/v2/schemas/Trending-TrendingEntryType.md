@@ -21,6 +21,8 @@ Stream | 6 |
 Update | 7 | 
 Link | 8 | 
 ForumTag | 9 | 
+Container | 10 | 
+Release | 11 | 
 
 ## References
 1. https://bungie-net.github.io/multi/schema_Trending-TrendingEntryType.html#schema_Trending-TrendingEntryType

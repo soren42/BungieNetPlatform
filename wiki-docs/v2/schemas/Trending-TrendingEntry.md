@@ -23,6 +23,7 @@ link | string |
 webmVideo | string | If this is populated, the entry has a related WebM video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo
 mp4Video | string | If this is populated, the entry has a related MP4 video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo
 featureImage | string | If isFeatured, this image will be populated with whatever the featured image is. Note that this will likely be a very large image, so don't use it all the time.
+items | [[TrendingEntry|Trending-TrendingEntry]][] | If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header.
 
 ## Example
 ```javascript
@@ -52,7 +53,44 @@ featureImage | string | If isFeatured, this image will be populated with whateve
     // Type: string
     "mp4Video": "",
     // Type: string
-    "featureImage": ""
+    "featureImage": "",
+    // Type: [[TrendingEntry|Trending-TrendingEntry]][]
+    "items": [
+       // Type: [[TrendingEntry|Trending-TrendingEntry]]
+        {
+            // Type: number:double
+            "weight": 0,
+            // Type: boolean
+            "isFeatured": false,
+            // Type: string
+            "identifier": "",
+            // Type: [[TrendingEntryType|Trending-TrendingEntryType]]:Enum
+            "entityType": {},
+            // Type: string
+            "displayName": "",
+            // Type: string
+            "tagline": "",
+            // Type: string
+            "image": "",
+            // Type: string:date-time:nullable
+            "startDate": "",
+            // Type: string:date-time:nullable
+            "endDate": "",
+            // Type: string
+            "link": "",
+            // Type: string
+            "webmVideo": "",
+            // Type: string
+            "mp4Video": "",
+            // Type: string
+            "featureImage": "",
+            // Type: [[TrendingEntry|Trending-TrendingEntry]][]
+            "items": [
+               // Type: [[TrendingEntry|Trending-TrendingEntry]]
+                "{}"
+            ]
+        }
+    ]
 }
 
 ```

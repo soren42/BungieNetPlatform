@@ -527,6 +527,7 @@ DestinyLegacyPlatformInUse | 1669 |
 DestinyLegacyPlatformInaccessible | 1670 | 
 DestinyCannotPerformActionAtThisLocation | 1671 | 
 DestinyThrottledByGameServer | 1672 | 
+DestinyItemNotTransferrableHasSideEffects | 1673 | 
 FbInvalidRequest | 1800 | 
 FbRedirectMismatch | 1801 | 
 FbAccessDenied | 1802 | 
@@ -625,6 +626,9 @@ TwitchAccountNotFound | 2501 |
 TwitchCouldNotLoadDestinyInfo | 2502 | 
 TrendingCategoryNotFound | 2600 | 
 TrendingEntryTypeNotSupported | 2601 | 
+ReportOffenderNotInPgcr | 2700 | 
+ReportRequestorNotInPgcr | 2701 | 
+ReportSubmissionFailed | 2702 | 
 
 ## References
 1. https://bungie-net.github.io/multi/schema_Exceptions-PlatformErrorCodes.html#schema_Exceptions-PlatformErrorCodes

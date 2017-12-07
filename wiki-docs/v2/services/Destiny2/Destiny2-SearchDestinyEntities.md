@@ -15,7 +15,7 @@ Gets a page list of Destiny items.
 Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
 searchTerm | string | Yes | The string to use when searching for Destiny entities.
-type | string | Yes | The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.
+type | string | Yes | The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'.
 
 ### Query String Parameters
 Name | Schema | Required | Description

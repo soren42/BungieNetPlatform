@@ -14,8 +14,8 @@ Gets groups recommended for you based on the groups to whom those you follow bel
 ### Path Parameters
 Name | Schema | Required | Description
 ---- | ------ | -------- | -----------
-createDateRange | [[GroupDateRange|GroupsV2-GroupDateRange]]:Enum | Yes | The date range of activity of groups for which we should search. Is that proper grammar I don't know
-groupType | [[GroupType|GroupsV2-GroupType]]:Enum | Yes | The type of group to get.
+createDateRange | [[GroupDateRange|GroupsV2-GroupDateRange]]:Enum | Yes | Requested range in which to pull recommended groups
+groupType | [[GroupType|GroupsV2-GroupType]]:Enum | Yes | Type of groups requested
 
 ### Query String Parameters
 None

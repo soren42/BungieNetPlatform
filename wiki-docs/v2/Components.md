@@ -10,7 +10,7 @@ Name | Type | Description
 ---- | ---- | -----------
 [[apiKey|SecuritySchemas#apiKey]] | apiKey | Every request requires an API key.  To get an API key, register a new application at https://www.bungie.net/en/Application.
 [[oauth2|SecuritySchemas#oauth2]] | oauth2 | For requests that require Authentication, you will need to have your users authenticate via our OAuth mechanisms.  See https://github.com/Bungie-net/api/wiki/OAuth-Documentation for more details.
-## <a name="Schemas"></a>Schemas (445)
+## <a name="Schemas"></a>Schemas (454)
 ## <a name="Schemas-ManifestDefinition"></a>Manifest Definition Schemas
 Name | Description
 ---- | -----------
@@ -22,6 +22,7 @@ Name | Description
 [[Destiny.Definitions.DestinyDamageTypeDefinition|Destiny-Definitions-DestinyDamageTypeDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.DestinyDestinationDefinition|Destiny-Definitions-DestinyDestinationDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.DestinyFactionVendorDefinition|Destiny-Definitions-DestinyFactionVendorDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.DestinyGenderDefinition|Destiny-Definitions-DestinyGenderDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.DestinyInventoryBucketDefinition|Destiny-Definitions-DestinyInventoryBucketDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-Definitions-DestinyInventoryItemDefinition]] | Scope: <i></i><br/>
@@ -43,6 +44,7 @@ Name | Description
 [[Destiny.Definitions.Lore.DestinyLoreDefinition|Destiny-Definitions-Lore-DestinyLoreDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.Milestones.DestinyMilestoneDefinition|Destiny-Definitions-Milestones-DestinyMilestoneDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition|Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition]] | Scope: <i></i><br/>
+[[Destiny.Definitions.Reporting.DestinyReportReasonCategoryDefinition|Destiny-Definitions-Reporting-DestinyReportReasonCategoryDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.Sockets.DestinySocketCategoryDefinition|Destiny-Definitions-Sockets-DestinySocketCategoryDefinition]] | Scope: <i></i><br/>
 [[Destiny.Definitions.Sockets.DestinySocketTypeDefinition|Destiny-Definitions-Sockets-DestinySocketTypeDefinition]] | Scope: <i></i><br/>
 [[Destiny.HistoricalStats.Definitions.DestinyHistoricalStatsDefinition|Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition]] | Scope: <i></i><br/>
@@ -132,6 +134,7 @@ Name | Manifest | Description
 [[DestinyProgressionMappingDefinition|Destiny-Definitions-DestinyProgressionMappingDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Aggregations of multiple progressions. (truncated)
 [[DestinyProgressionRewardDefinition|Destiny-Definitions-DestinyProgressionRewardDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Inventory Items can reward progression when actions are performed on them. A common example of this in Destiny 1 was Bounties, which would reward Experience on your Character and the like when you completed the bounty. (truncated)
 [[DestinyProgressionStepDefinition|Destiny-Definitions-DestinyProgressionStepDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>This defines a single Step in a progression (which roughly equates to a level. See DestinyProgressionDefinition for caveats).
+[[DestinyReportReasonDefinition|Destiny-Definitions-Reporting-DestinyReportReasonDefinition]] |  | Scope: <i>Destiny.Definitions.Reporting</i><br/>A specific reason for being banned. Only accessible under the related category (DestinyReportReasonCategoryDefinition) under which it is shown. Note that this means that report reasons' reasonHash are not globally unique: and indeed, entries like &quot;Other&quot; are defined under most categories for example.
 [[DestinyStatDisplayDefinition|Destiny-Definitions-DestinyStatDisplayDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Describes the way that an Item Stat (see DestinyStatDefinition) is transformed using the DestinyStatGroupDefinition related to that item. See both of the aforementioned definitions for more information about the stages of stat transformation. (truncated)
 [[DestinyStatOverrideDefinition|Destiny-Definitions-DestinyStatOverrideDefinition]] |  | Scope: <i>Destiny.Definitions</i><br/>Stat Groups (DestinyStatGroupDefinition) has the ability to override the localized text associated with stats that are to be shown on the items with which they are associated. (truncated)
 [[DestinyTalentExclusiveGroup|Destiny-Definitions-DestinyTalentExclusiveGroup]] |  | Scope: <i>Destiny.Definitions</i><br/>As of Destiny 2, nodes can exist as part of &quot;Exclusive Groups&quot;. These differ from exclusive sets in that, within the group, many nodes can be activated. But the act of activating any node in the group will cause &quot;opposing&quot; nodes (nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.
@@ -247,7 +250,6 @@ Name | Description
 ## <a name="Schemas-Class"></a>Class Schemas
 Name | Description
 ---- | -----------
-[[AckState|User-AckState]] | Scope: <i>User</i><br/>
 [[ClanBanner|GroupsV2-ClanBanner]] | Scope: <i>GroupsV2</i><br/>
 [[CommentSummary|Content-CommentSummary]] | Scope: <i>Content</i><br/>
 [[CommunityLiveStatus|Community-CommunityLiveStatus]] | Scope: <i>Community</i><br/>
@@ -327,6 +329,7 @@ Name | Description
 [[DestinyPostGameCarnageReportEntry|Destiny-HistoricalStats-DestinyPostGameCarnageReportEntry]] | Scope: <i>Destiny.HistoricalStats</i><br/>
 [[DestinyPostGameCarnageReportExtendedData|Destiny-HistoricalStats-DestinyPostGameCarnageReportExtendedData]] | Scope: <i>Destiny.HistoricalStats</i><br/>
 [[DestinyPostGameCarnageReportTeamEntry|Destiny-HistoricalStats-DestinyPostGameCarnageReportTeamEntry]] | Scope: <i>Destiny.HistoricalStats</i><br/>
+[[DestinyPostmasterTransferRequest|Destiny-Requests-Actions-DestinyPostmasterTransferRequest]] | Scope: <i>Destiny.Requests.Actions</i><br/>
 [[DestinyProfileComponent|Destiny-Entities-Profiles-DestinyProfileComponent]] | Scope: <i>Destiny.Entities.Profiles</i><br/>
 [[DestinyProfileResponse|Destiny-Responses-DestinyProfileResponse]] | Scope: <i>Destiny.Responses</i><br/>
 [[DestinyProgression|Destiny-DestinyProgression]] | Scope: <i>Destiny</i><br/>
@@ -349,6 +352,8 @@ Name | Description
 [[DestinyVendorReceiptsComponent|Destiny-Entities-Profiles-DestinyVendorReceiptsComponent]] | Scope: <i>Destiny.Entities.Profiles</i><br/>
 [[DestinyVendorResponse|Destiny-Responses-DestinyVendorResponse]] | Scope: <i>Destiny.Responses</i><br/>
 [[DestinyVendorSaleItemComponent|Destiny-Entities-Vendors-DestinyVendorSaleItemComponent]] | Scope: <i>Destiny.Entities.Vendors</i><br/>
+[[DestinyVendorSaleItemSetComponent|Destiny-Components-Vendors-DestinyVendorSaleItemSetComponent]] | Scope: <i>Destiny.Components.Vendors</i><br/>
+[[DestinyVendorsResponse|Destiny-Responses-DestinyVendorsResponse]] | Scope: <i>Destiny.Responses</i><br/>
 [[DyeReference|Destiny-DyeReference]] | Scope: <i>Destiny</i><br/>
 [[EntityActionResult|Entities-EntityActionResult]] | Scope: <i>Entities</i><br/>
 [[ForumRecruitmentDetail|Forum-ForumRecruitmentDetail]] | Scope: <i>Forum</i><br/>
@@ -427,6 +432,7 @@ Name | Description
 ## <a name="Schemas-GenericClass"></a>Generic Class Schemas
 Name | Description
 ---- | -----------
+[[Destiny.Reporting.Requests.DestinyReportOffensePgcrRequest|Destiny-Reporting-Requests-DestinyReportOffensePgcrRequest]] | Scope: <i></i><br/>
 [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]] | Scope: <i></i><br/>
 [[DestinyItemComponentSetOfint64|DestinyItemComponentSetOfint64]] | Scope: <i></i><br/>
 [[DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent|DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent]] | Scope: <i></i><br/>
@@ -451,6 +457,9 @@ Name | Description
 [[DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent|DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent]] | Scope: <i></i><br/>
 [[DictionaryComponentResponseOfint64AndDestinyKiosksComponent|DictionaryComponentResponseOfint64AndDestinyKiosksComponent]] | Scope: <i></i><br/>
 [[DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent|DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent|DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfuint32AndDestinyVendorComponent|DictionaryComponentResponseOfuint32AndDestinyVendorComponent]] | Scope: <i></i><br/>
+[[DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent|DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent]] | Scope: <i></i><br/>
 [[SearchResultOfCommunityLiveStatus|SearchResultOfCommunityLiveStatus]] | Scope: <i></i><br/>
 [[SearchResultOfDestinyEntitySearchResultItem|SearchResultOfDestinyEntitySearchResultItem]] | Scope: <i></i><br/>
 [[SearchResultOfGroupBan|SearchResultOfGroupBan]] | Scope: <i></i><br/>

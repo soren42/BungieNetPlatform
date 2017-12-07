@@ -45,6 +45,7 @@ summaryItemHash | [[Destiny.Definitions.DestinyInventoryItemDefinition|Destiny-D
 animations | [[DestinyAnimationReference|Destiny-Definitions-Animations-DestinyAnimationReference]]:Definition[] | If any animations were extracted from game content for this item, these will be the definitions of those animations.
 allowActions | boolean | BNet may forbid the execution of actions on this item via the API. If that is occurring, allowActions will be set to false.
 links | [[HyperlinkReference|Links-HyperlinkReference]][] | If we added any help or informational URLs about this item, these will be those links.
+doesPostmasterPullHaveSideEffects | boolean | The boolean will indicate to us (and you!) whether something *could* happen when you transfer this item from the Postmaster that might be considered a &quot;destructive&quot; action. It is not feasible currently to tell you (or ourelves!) in a consistent way whether this *will* actually cause a destructive action, so we are playing it safe: if it has the potential to do so, we will not allow it to be transferred from the Postmaster by default. You will need to check for this flag before transferring an item from the Postmaster, or else you'll end up receiving an error.
 nonTransferrable | boolean | The intrinsic transferability of an item. I hate that this boolean is negative - but there's a reason. Just because an item is intrinsically transferrable doesn't mean that it can be transferred, and we don't want to imply that this is the only source of that transferability.
 itemCategoryHashes | [[Destiny.Definitions.DestinyItemCategoryDefinition|Destiny-Definitions-DestinyItemCategoryDefinition]]:integer:uint32[] | BNet attempts to make a more formal definition of item &quot;Categories&quot;, as defined by DestinyItemCategoryDefinition. This is a list of all Categories that we were able to algorithmically determine that this item is a member of. (for instance, that it's a &quot;Weapon&quot;, that it's an &quot;Auto Rifle&quot;, etc...) The algorithm for these is, unfortunately, volatile. If you believe you see a miscategorized item, please let us know on the Bungie API forums.
 specialItemType | [[SpecialItemType|Destiny-SpecialItemType]]:Enum | In Destiny 1, we identified some items as having particular categories that we'd like to know about for various internal logic purposes. These are defined in SpecialItemType, and while these days the itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience.
@@ -174,6 +175,8 @@ redacted | boolean | If this is true, then there is an entity with this identifi
             "url": ""
         }
     ],
+    // Type: boolean
+    "doesPostmasterPullHaveSideEffects": false,
     // Type: boolean
     "nonTransferrable": false,
     // Type: [[Destiny.Definitions.DestinyItemCategoryDefinition|Destiny-Definitions-DestinyItemCategoryDefinition]]:integer:uint32[]

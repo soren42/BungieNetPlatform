@@ -47,6 +47,8 @@ PlatformErrorCode: 200
             // Type: string
             "statName": "",
             // Type: string
+            "statNameAbbr": "",
+            // Type: string
             "statDescription": "",
             // Type: [[UnitType|Destiny-HistoricalStats-Definitions-UnitType]]:Enum
             "unitType": {},

@@ -99,7 +99,8 @@ $manifest = getManifest();
 //echo json_encode($tables, JSON_PRETTY_PRINT).LN;
 
 if (isset($_GET['def'])) {
-	$defs = queryDatabase('SELECT * FROM '.$_GET['def'].(isset($_GET['hash']) ? ' WHERE id='.$_GET['hash'].' OR id='.sprintf('%u', $_GET['hash']) : ''));
+	//$col.'='.$hash.' OR '.$col.'='.($hash-4294967296)
+	$defs = queryDatabase('SELECT * FROM '.$_GET['def'].(isset($_GET['hash']) ? ' WHERE id='.($_GET['hash']-4294967296).' OR id='.sprintf('%u', $_GET['hash']) : ''));
 	foreach($defs as $def) {
 		echo json_encode($def, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES).LN;
 //		echo '['.$def->hash.'] '.$def->displayProperties->name;

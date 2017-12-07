@@ -49,7 +49,12 @@ categoryId | string |
                 // Type: string
                 "mp4Video": "",
                 // Type: string
-                "featureImage": ""
+                "featureImage": "",
+                // Type: [[TrendingEntry|Trending-TrendingEntry]][]
+                "items": [
+                   // Type: [[TrendingEntry|Trending-TrendingEntry]]
+                    "{}"
+                ]
             }
         ],
         // Type: integer:int32

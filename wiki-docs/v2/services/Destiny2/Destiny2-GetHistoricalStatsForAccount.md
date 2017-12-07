@@ -1,7 +1,7 @@
 <span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span>
 
 ## Info
-Gets aggregate historical stats organized around each character for a given account. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
+Gets aggregate historical stats organized around each character for a given account.
 
 * **URI:** [[/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/|https://www.bungie.net/Platform/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/]]
 * **Basepath:** https://www.bungie.net/Platform

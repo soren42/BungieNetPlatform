@@ -21,6 +21,7 @@ buyStringOverride | string | The localized string for making purchases from this
 disabledDescription | string | If the category is disabled, this is the localized description to show.
 displayTitle | string | The localized title of the category.
 overlay | [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]]:Definition | If this category has an overlay prompt that should appear, this contains the details of that prompt.
+vendorItemIndexes | integer:int32[] | A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.
 
 ## Example
 ```javascript
@@ -46,7 +47,12 @@ overlay | [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVe
     // Type: string
     "displayTitle": "",
     // Type: [[DestinyVendorCategoryOverlayDefinition|Destiny-Definitions-DestinyVendorCategoryOverlayDefinition]]:Definition
-    "overlay": {}
+    "overlay": {},
+    // Type: integer:int32[]
+    "vendorItemIndexes": [
+       // Type: integer:int32
+        0
+    ]
 }
 
 ```

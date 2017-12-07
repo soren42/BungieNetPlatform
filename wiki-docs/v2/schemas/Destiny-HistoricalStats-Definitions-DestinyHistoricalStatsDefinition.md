@@ -16,6 +16,7 @@ periodTypes | [[PeriodType|Destiny-HistoricalStats-Definitions-PeriodType]]:Enum
 modes | [[DestinyActivityModeType|Destiny-HistoricalStats-Definitions-DestinyActivityModeType]]:Enum[] | Game modes where this statistic can be reported.
 category | [[DestinyStatsCategoryType|Destiny-HistoricalStats-Definitions-DestinyStatsCategoryType]]:Enum | Category for the stat.
 statName | string | Display name
+statNameAbbr | string | Display name abbreviated
 statDescription | string | Description of a stat if applicable.
 unitType | [[UnitType|Destiny-HistoricalStats-Definitions-UnitType]]:Enum | Unit, if any, for the statistic
 iconImage | string | Optional URI to an icon for the statistic
@@ -45,6 +46,8 @@ medalTierHash | integer:uint32:nullable | The tier associated with this medal - 
     "category": {},
     // Type: string
     "statName": "",
+    // Type: string
+    "statNameAbbr": "",
     // Type: string
     "statDescription": "",
     // Type: [[UnitType|Destiny-HistoricalStats-Definitions-UnitType]]:Enum

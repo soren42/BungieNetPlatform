@@ -13,7 +13,7 @@ Name | Type | Description
 vendor | [[SingleComponentResponseOfDestinyVendorComponent|SingleComponentResponseOfDestinyVendorComponent]] | The base properties of the vendor. COMPONENT TYPE: Vendors
 categories | [[SingleComponentResponseOfDestinyVendorCategoriesComponent|SingleComponentResponseOfDestinyVendorCategoriesComponent]] | Categories that the vendor has available, and references to the sales therein. COMPONENT TYPE: VendorCategories
 sales | [[DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]] | Sales, keyed by the vendorItemIndex of the item being sold. COMPONENT TYPE: VendorSales
-items | [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]] | Item components, keyed by the vendorItemIndex of the active sale items. COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
+itemComponents | [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]] | Item components, keyed by the vendorItemIndex of the active sale items. COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
 
 ## Example
 ```javascript
@@ -25,7 +25,7 @@ items | [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]] | Item
     // Type: [[DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent|DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent]]
     "sales": {},
     // Type: [[DestinyItemComponentSetOfint32|DestinyItemComponentSetOfint32]]
-    "items": {}
+    "itemComponents": {}
 }
 
 ```

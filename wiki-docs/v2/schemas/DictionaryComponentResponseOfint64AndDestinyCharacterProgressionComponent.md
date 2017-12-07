@@ -50,6 +50,8 @@ privacy | [[ComponentPrivacySetting|Components-ComponentPrivacySetting]]:Enum |
                 "0": {
                     // Type: [[Destiny.Definitions.DestinyFactionDefinition|Destiny-Definitions-DestinyFactionDefinition]]:integer:uint32
                     "factionHash": 0,
+                    // Type: integer:int32
+                    "factionVendorIndex": 0,
                     // Type: [[Destiny.Definitions.DestinyProgressionDefinition|Destiny-Definitions-DestinyProgressionDefinition]]:integer:uint32
                     "progressionHash": 0,
                     // Type: integer:int32

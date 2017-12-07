@@ -14,6 +14,7 @@ detailAction | string | A description of what will happen when you open the sack
 openAction | string | The localized name of the action being performed when you open the sack.
 selectItemCount | integer:int32 | 
 vendorSackType | string | 
+openOnAcquire | boolean | 
 
 ## Example
 ```javascript
@@ -25,7 +26,9 @@ vendorSackType | string |
     // Type: integer:int32
     "selectItemCount": 0,
     // Type: string
-    "vendorSackType": ""
+    "vendorSackType": "",
+    // Type: boolean
+    "openOnAcquire": false
 }
 
 ```
