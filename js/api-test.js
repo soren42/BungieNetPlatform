@@ -441,6 +441,7 @@ angular.module('api-test', [])
 					var param = params[k].split('=');
 					var paramKey = param[0];
 					var paramValue = decodeURIComponent(param[1]);
+					paramValue = paramValue.replace(';', ',');
 					//if (paramValue.replace(/[0-9]+/g, '') == '' && paramValue.length <= 8 && !isNaN(parseInt(paramValue))) {
 					//	paramValue = parseInt(paramValue);
 					//}
@@ -670,7 +671,7 @@ angular.module('api-test', [])
 				var paramsShare = [];
 				for (var paramKey in paramsData) {
 					if (paramsData[paramKey] && paramsData[paramKey] != '') {
-						paramsShare.push(paramKey + '=' + encodeURIComponent(paramsData[paramKey]));
+						paramsShare.push(paramKey + '=' + encodeURIComponent(paramsData[paramKey].replace(',', ';')));
 					}
 				}
 				shareLink += paramsShare.join(',');

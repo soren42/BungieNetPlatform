@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509537311">
 </head>
 
 <body>
@@ -120,7 +120,7 @@
 <tr>
 <td>currencies</td>
 <td><a href="../../docs/schemas/Destiny-DestinyItemQuantity">DestinyItemQuantity</a>[]</td>
-<td>This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item. Use this instead of trying to piece together the price separately.</td>
+<td>This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item. Use this instead of trying to piece together the price separately. JUST KIDDING HA this never got populated, who's the idiot now? Hint: Me. Now they'll actually be populated [amola, 2017-11-12]</td>
 </tr>
 <tr>
 <td>refundPolicy</td>
@@ -187,6 +187,21 @@
 <td><a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum</td>
 <td>Similar to visibilityScope, it represents the most restrictive scope that determines whether the item can be purchased. It will at least be as restrictive as visibilityScope, but could be more restrictive if the item has additional purchase requirements beyond whether it is merely visible or not. See DestinyGatingScope's documentation for more information.</td>
 </tr>
+<tr>
+<td>exclusivity</td>
+<td><a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum</td>
+<td>If this item can only be purchased by a given platform, this indicates the platform to which it is restricted.</td>
+</tr>
+<tr>
+<td>isOffer</td>
+<td>boolean:nullable</td>
+<td>If this sale can only be performed as the result of an offer check, this is true.</td>
+</tr>
+<tr>
+<td>isCrm</td>
+<td>boolean:nullable</td>
+<td>If this sale can only be performed as the result of receiving a CRM offer, this is true.</td>
+</tr>
 </tbody>
 </table>
 <h2>Example</h2>
@@ -245,7 +260,13 @@
     // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum
     "visibilityScope": {},
     // Type: <a href="../../docs/schemas/Destiny-DestinyGatingScope">DestinyGatingScope</a>:Enum
-    "purchasableScope": {}
+    "purchasableScope": {},
+    // Type: <a href="../../docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum
+    "exclusivity": {},
+    // Type: boolean:nullable
+    "isOffer": false,
+    // Type: boolean:nullable
+    "isCrm": false
 }
 </code></pre>
 <h2>References</h2>
@@ -268,6 +289,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1509424173"></script>
+<script src="../../js/main.js?1509508850"></script>
 </body>
 </html>

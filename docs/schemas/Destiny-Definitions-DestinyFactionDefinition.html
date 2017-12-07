@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509537311">
 </head>
 
 <body>
@@ -109,11 +109,6 @@
 <td>The hash identifier for the DestinyProgressionDefinition that indicates the character's relationship with this faction in terms of experience and levels.</td>
 </tr>
 <tr>
-<td>backgroundImagePath</td>
-<td>string</td>
-<td>The relative path to the background image, for use in a banner.</td>
-</tr>
-<tr>
 <td>tokenValues</td>
 <td>Dictionary&lt;integer:uint32,integer:uint32&gt;</td>
 <td>The faction token item hashes, and their respective progression values.</td>
@@ -129,9 +124,9 @@
 <td>The faction reward vendor hash, used for faction engram previews.</td>
 </tr>
 <tr>
-<td>rewardVendorPreviewCategoryHashes</td>
-<td>integer:uint32[]</td>
-<td>For the faction reward vendor, the category hashes to be shown as reward previews.</td>
+<td>vendors</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyFactionVendorDefinition">Destiny.Definitions.DestinyFactionVendorDefinition</a>[]</td>
+<td>List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.</td>
 </tr>
 <tr>
 <td>hash</td>
@@ -165,8 +160,6 @@
     },
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyProgressionDefinition">Destiny.Definitions.DestinyProgressionDefinition</a>:integer:uint32
     "progressionHash": 0,
-    // Type: string
-    "backgroundImagePath": "",
     // Type: Dictionary&lt;integer:uint32,integer:uint32&gt;
     "tokenValues": {
         "0": 0
@@ -175,10 +168,17 @@
     "rewardItemHash": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
     "rewardVendorHash": 0,
-    // Type: integer:uint32[]
-    "rewardVendorPreviewCategoryHashes": [
-       // Type: integer:uint32
-        0
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionVendorDefinition">Destiny.Definitions.DestinyFactionVendorDefinition</a>[]
+    "vendors": [
+       // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyFactionVendorDefinition">Destiny.Definitions.DestinyFactionVendorDefinition</a>
+        {
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>:integer:uint32
+            "vendorHash": 0,
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32
+            "destinationHash": 0,
+            // Type: string
+            "backgroundImagePath": ""
+        }
     ],
     // Type: integer:uint32
     "hash": 0,
@@ -208,6 +208,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1509424173"></script>
+<script src="../../js/main.js?1509508850"></script>
 </body>
 </html>

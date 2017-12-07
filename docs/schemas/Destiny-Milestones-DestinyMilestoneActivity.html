@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509537311">
 </head>
 
 <body>
@@ -103,6 +103,16 @@
 <td>The hash of an arbitrarily chosen variant of this activity. We'll go ahead and call that the &quot;canonical&quot; activity, because if you're using this value you should only use it for properties that are common across the variants: things like the name of the activity, it's location, etc... Use this hash to look up the DestinyActivityDefinition of this activity for rendering data.</td>
 </tr>
 <tr>
+<td>activityModeHash</td>
+<td><a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable</td>
+<td>The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.</td>
+</tr>
+<tr>
+<td>activityModeType</td>
+<td>integer:int32:nullable</td>
+<td>The enumeration equivalent of the most specific Activity Mode under which this activity is played.</td>
+</tr>
+<tr>
 <td>modifierHashes</td>
 <td><a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]</td>
 <td>If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data. Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all <em>possible</em> modifiers for the activity, not the active ones. Use only the active ones to match what's really live.</td>
@@ -118,6 +128,10 @@
 <pre><code class="javascript">{
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
     "activityHash": 0,
+    // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable
+    "activityModeHash": 0,
+    // Type: integer:int32:nullable
+    "activityModeType": 0,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-ActivityModifiers-DestinyActivityModifierDefinition">Destiny.Definitions.ActivityModifiers.DestinyActivityModifierDefinition</a>:integer:uint32[]
     "modifierHashes": [
        // Type: integer:uint32
@@ -130,7 +144,11 @@
             // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32
             "activityHash": 0,
             // Type: <a href="../../docs/schemas/Destiny-Milestones-DestinyMilestoneActivityCompletionStatus">DestinyMilestoneActivityCompletionStatus</a>
-            "completionStatus": {}
+            "completionStatus": {},
+            // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable
+            "activityModeHash": 0,
+            // Type: integer:int32:nullable
+            "activityModeType": 0
         }
     ]
 }
@@ -155,6 +173,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1509424173"></script>
+<script src="../../js/main.js?1509508850"></script>
 </body>
 </html>

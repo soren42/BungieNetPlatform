@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1509424091">
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css?1509537311">
 </head>
 
 <body>
@@ -121,7 +121,7 @@
 </tr>
 </tbody>
 </table>
-<h2><a name="Schemas"></a>Schemas (445)</h2>
+<h2><a name="Schemas"></a>Schemas (454)</h2>
 <h2><a name="Schemas-ManifestDefinition"></a>Manifest Definition Schemas</h2>
 <table class="table table-bordered parameters">
 <thead>
@@ -161,6 +161,10 @@
 </tr>
 <tr>
 <td><a href="../docs/schemas/Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a></td>
+<td>Scope: <i></i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-DestinyFactionVendorDefinition">Destiny.Definitions.DestinyFactionVendorDefinition</a></td>
 <td>Scope: <i></i><br/></td>
 </tr>
 <tr>
@@ -245,6 +249,10 @@
 </tr>
 <tr>
 <td><a href="../docs/schemas/Destiny-Definitions-Progression-DestinyProgressionLevelRequirementDefinition">Destiny.Definitions.Progression.DestinyProgressionLevelRequirementDefinition</a></td>
+<td>Scope: <i></i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Reporting-DestinyReportReasonCategoryDefinition">Destiny.Definitions.Reporting.DestinyReportReasonCategoryDefinition</a></td>
 <td>Scope: <i></i><br/></td>
 </tr>
 <tr>
@@ -680,6 +688,11 @@
 <td><a href="../docs/schemas/Destiny-Definitions-DestinyProgressionStepDefinition">DestinyProgressionStepDefinition</a></td>
 <td></td>
 <td>Scope: <i>Destiny.Definitions</i><br/>This defines a single Step in a progression (which roughly equates to a level. See DestinyProgressionDefinition for caveats).</td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Definitions-Reporting-DestinyReportReasonDefinition">DestinyReportReasonDefinition</a></td>
+<td></td>
+<td>Scope: <i>Destiny.Definitions.Reporting</i><br/>A specific reason for being banned. Only accessible under the related category (DestinyReportReasonCategoryDefinition) under which it is shown. Note that this means that report reasons' reasonHash are not globally unique: and indeed, entries like &quot;Other&quot; are defined under most categories for example.</td>
 </tr>
 <tr>
 <td><a href="../docs/schemas/Destiny-Definitions-DestinyStatDisplayDefinition">DestinyStatDisplayDefinition</a></td>
@@ -1154,10 +1167,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../docs/schemas/User-AckState">AckState</a></td>
-<td>Scope: <i>User</i><br/></td>
-</tr>
-<tr>
 <td><a href="../docs/schemas/GroupsV2-ClanBanner">ClanBanner</a></td>
 <td>Scope: <i>GroupsV2</i><br/></td>
 </tr>
@@ -1474,6 +1483,10 @@
 <td>Scope: <i>Destiny.HistoricalStats</i><br/></td>
 </tr>
 <tr>
+<td><a href="../docs/schemas/Destiny-Requests-Actions-DestinyPostmasterTransferRequest">DestinyPostmasterTransferRequest</a></td>
+<td>Scope: <i>Destiny.Requests.Actions</i><br/></td>
+</tr>
+<tr>
 <td><a href="../docs/schemas/Destiny-Entities-Profiles-DestinyProfileComponent">DestinyProfileComponent</a></td>
 <td>Scope: <i>Destiny.Entities.Profiles</i><br/></td>
 </tr>
@@ -1560,6 +1573,14 @@
 <tr>
 <td><a href="../docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">DestinyVendorSaleItemComponent</a></td>
 <td>Scope: <i>Destiny.Entities.Vendors</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Components-Vendors-DestinyVendorSaleItemSetComponent">DestinyVendorSaleItemSetComponent</a></td>
+<td>Scope: <i>Destiny.Components.Vendors</i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/Destiny-Responses-DestinyVendorsResponse">DestinyVendorsResponse</a></td>
+<td>Scope: <i>Destiny.Responses</i><br/></td>
 </tr>
 <tr>
 <td><a href="../docs/schemas/Destiny-DyeReference">DyeReference</a></td>
@@ -1864,6 +1885,10 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../docs/schemas/Destiny-Reporting-Requests-DestinyReportOffensePgcrRequest">Destiny.Reporting.Requests.DestinyReportOffensePgcrRequest</a></td>
+<td>Scope: <i></i><br/></td>
+</tr>
+<tr>
 <td><a href="../docs/schemas/DestinyItemComponentSetOfint32">DestinyItemComponentSetOfint32</a></td>
 <td>Scope: <i></i><br/></td>
 </tr>
@@ -1957,6 +1982,18 @@
 </tr>
 <tr>
 <td><a href="../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent">DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent</a></td>
+<td>Scope: <i></i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent">DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent</a></td>
+<td>Scope: <i></i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorComponent">DictionaryComponentResponseOfuint32AndDestinyVendorComponent</a></td>
+<td>Scope: <i></i><br/></td>
+</tr>
+<tr>
+<td><a href="../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent">DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent</a></td>
 <td>Scope: <i></i><br/></td>
 </tr>
 <tr>
@@ -2089,6 +2126,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../js/main.js?1509424173"></script>
+<script src="../js/main.js?1509508850"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509424091">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../css/stylesheet.css?1509537311">
 </head>
 
 <body>
@@ -269,6 +269,11 @@
 <td>If we added any help or informational URLs about this item, these will be those links.</td>
 </tr>
 <tr>
+<td>doesPostmasterPullHaveSideEffects</td>
+<td>boolean</td>
+<td>The boolean will indicate to us (and you!) whether something <em>could</em> happen when you transfer this item from the Postmaster that might be considered a &quot;destructive&quot; action. It is not feasible currently to tell you (or ourelves!) in a consistent way whether this <em>will</em> actually cause a destructive action, so we are playing it safe: if it has the potential to do so, we will not allow it to be transferred from the Postmaster by default. You will need to check for this flag before transferring an item from the Postmaster, or else you'll end up receiving an error.</td>
+</tr>
+<tr>
 <td>nonTransferrable</td>
 <td>boolean</td>
 <td>The intrinsic transferability of an item. I hate that this boolean is negative - but there's a reason. Just because an item is intrinsically transferrable doesn't mean that it can be transferred, and we don't want to imply that this is the only source of that transferability.</td>
@@ -454,6 +459,8 @@
         }
     ],
     // Type: boolean
+    "doesPostmasterPullHaveSideEffects": false,
+    // Type: boolean
     "nonTransferrable": false,
     // Type: <a href="../../docs/schemas/Destiny-Definitions-DestinyItemCategoryDefinition">Destiny.Definitions.DestinyItemCategoryDefinition</a>:integer:uint32[]
     "itemCategoryHashes": [
@@ -512,6 +519,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../js/main.js?1509424173"></script>
+<script src="../../js/main.js?1509508850"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@
 
 	<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1509424091">
+	<link rel="stylesheet" type="text/css" media="screen" href="../../../css/stylesheet.css?1509537311">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/v2/services/Destiny2/Destiny2-GetVendors.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p><span class="wiki-builder">This page was generated with Wiki Builder. Do not change the format!</span></p>
 <h2>Info</h2>
-<p>Get currently available vendors. PREVIEW: This service is not yet active, but we are returning the planned schema of the endpoint for review, comment, and preparation for its eventual implementation.</p>
+<p>Get currently available vendors from the list of vendors that can possibly have rotating inventory. Note that this does not include things like preview vendors and vendors-as-kiosks, neither of whom have rotating/dynamic inventories. Use their definitions as-is for those. PREVIEW: This service is not yet active, but we are returning the planned schema of the endpoint for review, comment, and preparation for its eventual implementation.</p>
 <ul>
 <li><strong>URI:</strong> <a href="https://www.bungie.net/Platform/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/">/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/</a></li>
 <li><strong>Basepath:</strong> <a href="https://www.bungie.net/Platform">https://www.bungie.net/Platform</a></li>
@@ -147,20 +147,244 @@
 <h3>Response</h3>
 <p>PlatformErrorCode: 200</p>
 <pre><code class="javascript">{
-    // Type: <a href="../../../docs/schemas/Destiny-Responses-DestinyVendorResponse">DestinyVendorResponse</a>[]
-    "Response": [
-       // Type: <a href="../../../docs/schemas/Destiny-Responses-DestinyVendorResponse">DestinyVendorResponse</a>
-        {
-            // Type: <a href="../../../docs/schemas/SingleComponentResponseOfDestinyVendorComponent">SingleComponentResponseOfDestinyVendorComponent</a>
-            "vendor": {},
-            // Type: <a href="../../../docs/schemas/SingleComponentResponseOfDestinyVendorCategoriesComponent">SingleComponentResponseOfDestinyVendorCategoriesComponent</a>
-            "categories": {},
-            // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent">DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent</a>
-            "sales": {},
-            // Type: <a href="../../../docs/schemas/DestinyItemComponentSetOfint32">DestinyItemComponentSetOfint32</a>
-            "items": {}
+    // Type: <a href="../../../docs/schemas/Destiny-Responses-DestinyVendorsResponse">DestinyVendorsResponse</a>
+    "Response": {
+        // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorComponent">DictionaryComponentResponseOfuint32AndDestinyVendorComponent</a>
+        "vendors": {},
+        // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent">DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent</a>
+        "categories": {},
+        // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent">DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent</a>
+        "sales": {},
+        // Type: Dictionary&lt;integer:uint32,<a href="../../../docs/schemas/DestinyItemComponentSetOfint32">DestinyItemComponentSetOfint32</a>&gt;
+        "itemComponents": {
+            "0": {
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent">DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent</a>
+                "instances": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemInstanceComponent">DestinyItemInstanceComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: <a href="../../../docs/schemas/Destiny-DamageType">DamageType</a>:Enum
+                            "damageType": {},
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyDamageTypeDefinition">Destiny.Definitions.DestinyDamageTypeDefinition</a>:integer:uint32:nullable
+                            "damageTypeHash": 0,
+                            // Type: <a href="../../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>
+                            "primaryStat": {},
+                            // Type: integer:int32
+                            "itemLevel": 0,
+                            // Type: integer:int32
+                            "quality": 0,
+                            // Type: boolean
+                            "isEquipped": false,
+                            // Type: boolean
+                            "canEquip": false,
+                            // Type: integer:int32
+                            "equipRequiredLevel": 0,
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyUnlockDefinition">Destiny.Definitions.DestinyUnlockDefinition</a>:integer:uint32[]
+                            "unlockHashesRequiredToEquip": [
+                               // Type: integer:uint32
+                                0
+                            ],
+                            // Type: <a href="../../../docs/schemas/Destiny-EquipFailureReason">EquipFailureReason</a>:Enum
+                            "cannotEquipReason": {}
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent">DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent</a>
+                "objectives": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemObjectivesComponent">DestinyItemObjectivesComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>[]
+                            "objectives": [
+                               // Type: <a href="../../../docs/schemas/Destiny-Quests-DestinyObjectiveProgress">DestinyObjectiveProgress</a>
+                                {
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyObjectiveDefinition">Destiny.Definitions.DestinyObjectiveDefinition</a>:integer:uint32
+                                    "objectiveHash": 0,
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyDestinationDefinition">Destiny.Definitions.DestinyDestinationDefinition</a>:integer:uint32:nullable
+                                    "destinationHash": 0,
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyActivityDefinition">Destiny.Definitions.DestinyActivityDefinition</a>:integer:uint32:nullable
+                                    "activityHash": 0,
+                                    // Type: integer:int32:nullable
+                                    "progress": 0,
+                                    // Type: boolean
+                                    "complete": false
+                                }
+                            ]
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemPerksComponent">DictionaryComponentResponseOfint32AndDestinyItemPerksComponent</a>
+                "perks": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemPerksComponent">DestinyItemPerksComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: <a href="../../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>[]
+                            "perks": [
+                               // Type: <a href="../../../docs/schemas/Destiny-Perks-DestinyPerkReference">DestinyPerkReference</a>
+                                {
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinySandboxPerkDefinition">Destiny.Definitions.DestinySandboxPerkDefinition</a>:integer:uint32
+                                    "perkHash": 0,
+                                    // Type: string
+                                    "iconPath": "",
+                                    // Type: boolean
+                                    "isActive": false,
+                                    // Type: boolean
+                                    "visible": false
+                                }
+                            ]
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemRenderComponent">DictionaryComponentResponseOfint32AndDestinyItemRenderComponent</a>
+                "renderData": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemRenderComponent">DestinyItemRenderComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: boolean
+                            "useCustomDyes": false,
+                            // Type: Dictionary&lt;integer:int32,integer:int32&gt;
+                            "artRegions": {
+                                "0": 0
+                            }
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemStatsComponent">DictionaryComponentResponseOfint32AndDestinyItemStatsComponent</a>
+                "stats": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemStatsComponent">DestinyItemStatsComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: Dictionary&lt;<a href="../../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32,<a href="../../../docs/schemas/Destiny-DestinyStat">DestinyStat</a>&gt;
+                            "stats": {
+                                "0": {
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyStatDefinition">Destiny.Definitions.DestinyStatDefinition</a>:integer:uint32
+                                    "statHash": 0,
+                                    // Type: integer:int32
+                                    "value": 0,
+                                    // Type: integer:int32
+                                    "maximumValue": 0
+                                }
+                            }
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent">DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent</a>
+                "sockets": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketsComponent">DestinyItemSocketsComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: <a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>[]
+                            "sockets": [
+                               // Type: <a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemSocketState">DestinyItemSocketState</a>
+                                {
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32:nullable
+                                    "plugHash": 0,
+                                    // Type: boolean
+                                    "isEnabled": false,
+                                    // Type: integer:int32[]
+                                    "enableFailIndexes": [
+                                       // Type: integer:int32
+                                        0
+                                    ],
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32[]
+                                    "reusablePlugHashes": [
+                                       // Type: integer:uint32
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent">DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent</a>
+                "talentGrids": {
+                    // Type: Dictionary&lt;integer:int32,<a href="../../../docs/schemas/Destiny-Entities-Items-DestinyItemTalentGridComponent">DestinyItemTalentGridComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyTalentGridDefinition">Destiny.Definitions.DestinyTalentGridDefinition</a>:integer:uint32
+                            "talentGridHash": 0,
+                            // Type: <a href="../../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>[]
+                            "nodes": [
+                               // Type: <a href="../../../docs/schemas/Destiny-DestinyTalentNode">DestinyTalentNode</a>
+                                {
+                                    // Type: integer:int32
+                                    "nodeIndex": 0,
+                                    // Type: integer:uint32
+                                    "nodeHash": 0,
+                                    // Type: <a href="../../../docs/schemas/Destiny-DestinyTalentNodeState">DestinyTalentNodeState</a>:Enum
+                                    "state": {},
+                                    // Type: boolean
+                                    "isActivated": false,
+                                    // Type: integer:int32
+                                    "stepIndex": 0,
+                                    // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>:Definition[]
+                                    "materialsToUpgrade": [
+                                       // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyMaterialRequirement">DestinyMaterialRequirement</a>:Definition
+                                        {
+                                            // Type: <a href="../../../docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>:integer:uint32
+                                            "itemHash": 0,
+                                            // Type: boolean
+                                            "deleteOnAction": false,
+                                            // Type: integer:int32
+                                            "count": 0,
+                                            // Type: boolean
+                                            "omitFromRequirements": false
+                                        }
+                                    ],
+                                    // Type: integer:int32
+                                    "activationGridLevel": 0,
+                                    // Type: number:float
+                                    "progressPercent": 0,
+                                    // Type: boolean
+                                    "hidden": false,
+                                    // Type: <a href="../../../docs/schemas/Destiny-DestinyTalentNodeStatBlock">DestinyTalentNodeStatBlock</a>
+                                    "nodeStatsBlock": {}
+                                }
+                            ],
+                            // Type: boolean
+                            "isGridComplete": false,
+                            // Type: <a href="../../../docs/schemas/Destiny-DestinyProgression">DestinyProgression</a>
+                            "gridProgression": {}
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                },
+                // Type: <a href="../../../docs/schemas/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent">DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent</a>
+                "plugStates": {
+                    // Type: Dictionary&lt;integer:uint32,<a href="../../../docs/schemas/Destiny-Components-Items-DestinyItemPlugComponent">DestinyItemPlugComponent</a>&gt;
+                    "data": {
+                        "0": {
+                            // Type: integer:int32[]
+                            "insertFailIndexes": [
+                               // Type: integer:int32
+                                0
+                            ],
+                            // Type: integer:int32[]
+                            "enableFailIndexes": [
+                               // Type: integer:int32
+                                0
+                            ]
+                        }
+                    },
+                    // Type: <a href="../../../docs/schemas/Components-ComponentPrivacySetting">ComponentPrivacySetting</a>:Enum
+                    "privacy": 0
+                }
+            }
         }
-    ],
+    },
     // Type: <a href="../../../docs/schemas/Exceptions-PlatformErrorCodes">PlatformErrorCodes</a>:Enum
     "ErrorCode": 0,
     // Type: integer:int32
@@ -196,6 +420,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script src="../../../js/main.js?1509424173"></script>
+<script src="../../../js/main.js?1509508850"></script>
 </body>
 </html>
