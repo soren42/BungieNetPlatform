@@ -79,12 +79,146 @@
 <!-- MAIN CONTENT -->
 <div id="content">
 	<div class="container">
-		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/Home.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p>Welcome to the BungieNetPlatform wiki!</p></div><div class="inner"><h2>Changelog</h2><h3>October 31, 2017</h3>
-<p>The one that got delayed.</p>
-<p>Added support for auto-generating unsupported endpoints. Includes Destiny 1 and all other services available in the platformlib file. Pages will have incomplete information (especially response bodies) until I can go through and add all the components into the OpenApi spec.
-Added a changelog section to the frontpage as well as a new Community Apps listing to showcase apps that have been submitted to <a href="https://goo.gl/forms/eKTqppizDA3vhD8E3">this form</a>.
-Fixed some other issues to do with rendering out pages etc.</p>
-<p>Note: For the time being, the diff changelog of past updates will be on hiatus until I have a more stable setup in place. A lot of files are getting touched so its hard to check where is actually new and what is  getting flagged unintentionally.</p>
+		<div class="inner"><a href="https://github.com/DestinyDevs/BungieNetPlatform/tree/master/wiki-docs/Home.md" target="_blank" class="edit-link"><i class="fa fa-code"></i> Source</a><p>Welcome to the BungieNetPlatform wiki!</p></div><div class="inner"><h2>Changelog</h2><h3>December 7, 2017</h3>
+<p>The one after the long break.</p>
+<p>Stats:</p>
+<ul>
+<li>API Version: 2.0.1 &gt; 2.1.0</li>
+<li>Schemas: 445 &gt; 454</li>
+<li>Definitions: 104 &gt; 105</li>
+<li>Endpoints:
+<ul>
+<li>Destiny2: 29 &gt; 31</li>
+</ul></li>
+</ul>
+<p>Schemas (added):</p>
+<ul>
+<li><a href="docs/schemas/Destiny-Components-Vendors-DestinyVendorSaleItemSetComponent">Destiny.Components.Vendors.DestinyVendorSaleItemSetComponent</a></li>
+<li><a href="docs/schemas/Destiny-Definitions-DestinyFactionVendorDefinition">Destiny.Definitions.DestinyFactionVendorDefinition</a></li>
+<li><a href="docs/schemas/Destiny-Definitions-Reporting-DestinyReportReasonCategoryDefinition">Destiny.Definitions.Reporting.DestinyReportReasonCategoryDefinition</a></li>
+<li><a href="docs/schemas/Destiny-Definitions-Reporting-DestinyReportReasonDefinition">Destiny.Definitions.Reporting.DestinyReportReasonDefinition</a></li>
+<li><a href="docs/schemas/Destiny-Reporting-Requests-DestinyReportOffensePgcrRequest">Destiny.Reporting.Requests.DestinyReportOffensePgcrRequest</a></li>
+<li><a href="docs/schemas/Destiny-Requests-Actions-DestinyPostmasterTransferRequest">Destiny.Requests.Actions.DestinyPostmasterTransferRequest</a></li>
+<li><a href="docs/schemas/Destiny-Responses-DestinyVendorsResponse">Destiny.Responses.DestinyVendorsResponse</a></li>
+<li><a href="docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent">DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent</a></li>
+<li><a href="docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorComponent">DictionaryComponentResponseOfuint32AndDestinyVendorComponent</a></li>
+<li><a href="docs/schemas/DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent">DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent</a></li>
+</ul>
+<p>Schemas (changed):</p>
+<ul>
+<li><a href="|Destiny-Definitions-DestinyFactionDefinition">Destiny.Definitions.DestinyFactionDefinition</a>
+<ul>
+<li>Removed: backgroundImagePath | string</li>
+<li>Removed: rewardVendorPreviewCategoryHashes | integer:int32[]</li>
+<li>Added: vendors | <a href="docs/schemas/Destiny-Definitions-DestinyFactionVendorDefinition">Destiny.Definitions.DestinyFactionVendorDefinition</a>[] | List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Definitions-DestinyInventoryItemDefinition">Destiny.Definitions.DestinyInventoryItemDefinition</a>
+<ul>
+<li>Added: doesPostmasterPullHaveSideEffects | boolean | The boolean will indicate to us (and you!) whether something <em>could</em> happen when you transfer this item from the Postmaster that might be considered a &quot;destructive&quot; action. It is not feasible currently to tell you (or ourelves!) in a consistent way whether this <em>will</em> actually cause a destructive action, so we are playing it safe: if it has the potential to do so, we will not allow it to be transferred from the Postmaster by default. You will need to check for this flag before transferring an item from the Postmaster, or else you'll end up receiving an error.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Definitions-DestinyItemSackBlockDefinition">Destiny.Definitions.DestinyItemSackBlockDefinition</a>
+<ul>
+<li>Added: openOnAcquire | boolean |</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Definitions-DestinyVendorCategoryEntryDefinition">Destiny.Definitions.DestinyVendorCategoryEntryDefinition</a>
+<ul>
+<li>Added: vendorItemIndexes | integer:int32[] A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Definitions-DestinyVendorDefinition">Destiny.Definitions.DestinyVendorDefinition</a>
+<ul>
+<li>Added: returnWithVendorRequest | boolean | As many of you know, Vendor data has historically been pretty brutal on the BNet servers. In an effort to reduce this workload, only Vendors with this flag set will be returned on Vendor requests. This allows us to filter out Vendors that don't dynamic data that's particularly useful: things like &quot;Preview/Sack&quot; vendors, for example, that you can usually suss out the details for using just the definitions themselves.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Definitions-DestinyVendorItemDefinition">Destiny.Definitions.DestinyVendorItemDefinition</a>
+<ul>
+<li>Added: exclusivity | <a href="docs/schemas/BungieMembershipType">BungieMembershipType</a>:Enum | If this item can only be purchased by a given platform, this indicates the platform to which it is restricted.</li>
+<li>Added: isOffer | boolean:nullable | If this sale can only be performed as the result of an offer check, this is true.</li>
+<li>Added: isCrm | boolean:nullable | If this sale can only be performed as the result of receiving a CRM offer, this is true.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Definitions-Milestones-DestinyMilestoneDefinition">Destiny.Definitions.Milestones.DestinyMilestoneDefinition</a>
+<ul>
+<li>Added: explorePrioritizesActivityImage | boolean | If TRUE, &quot;Explore Destiny&quot; (the front page of BNet and the companion app) prioritize using the activity image over any overriding Quest or Milestone image provided. This unfortunate hack is brought to you by Trials of The Nine.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-DestinyGameVersions">Destiny.DestinyGameVersions</a>
+<ul>
+<li>Added: DLC1 | 2 |</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Entities-Vendors-DestinyVendorComponent">Destiny.Entities.Vendors.DestinyVendorComponent</a>
+<ul>
+<li>Removed: ackState | <a href="docs/schemas/User-AckState">AckState</a> | Long ago, we thought it would be a good idea to have special UI that showed whether or not you've seen a Vendor's inventory after cycling. For now, we don't have that UI anymore. This property still exists for historical purposes. Don't worry about it.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Entities-Vendors-DestinyVendorSaleItemComponent">Destiny.Entities.Vendors.DestinyVendorSaleItemComponent</a>
+<ul>
+<li>Added: quantity | integer:int32 | How much of the item you'll be getting.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-HistoricalStats-Definitions-DestinyHistoricalStatsDefinition">Destiny.HistoricalStats.Definitions.DestinyHistoricalStatsDefinition</a>
+<ul>
+<li>Added: statNameAbbr | string | Display name abbreviated</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-HistoricalStats-Definitions-UnitType">Destiny.HistoricalStats.Definitions.UnitType</a>
+<ul>
+<li>Added: CompletionReason | 13 | The value is a enumeration of the Completion Reason type.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-HistoricalStats-DestinyPlayer">Destiny.HistoricalStats.DestinyPlayer</a>
+<ul>
+<li>Added: emblemHash | integer:uint32 | If we know the emblem's hash, this can be used to look up the player's emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it).</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Milestones-DestinyMilestoneActivity">Destiny.Milestones.DestinyMilestoneActivity</a>
+<ul>
+<li>Added: activityModeHash | <a href="docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.</li>
+<li>Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Milestones-DestinyMilestoneActivityVariant">Destiny.Milestones.DestinyMilestoneActivityVariant</a>
+<ul>
+<li>Added: activityModeHash | <a href="docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.</li>
+<li>Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivity">Destiny.Milestones.DestinyPublicMilestoneActivity</a>
+<ul>
+<li>Added: activityModeHash | <a href="docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.</li>
+<li>Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Milestones-DestinyPublicMilestoneActivityVariant">Destiny.Milestones.DestinyPublicMilestoneActivityVariant</a>
+<ul>
+<li>Added: activityModeHash | <a href="docs/schemas/Destiny-Definitions-DestinyActivityModeDefinition">Destiny.Definitions.DestinyActivityModeDefinition</a>:integer:uint32:nullable | The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it's not clear what mode the PVP map is being played under. If it's a playlist, this will be less specific: but hopefully useful in some way.</li>
+<li>Added: activityModeType | integer:int32:nullable | The enumeration equivalent of the most specific Activity Mode under which this activity is played.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Progression-DestinyFactionProgression">Destiny.Progression.DestinyFactionProgression</a>
+<ul>
+<li>Added: factionVendorIndex | integer:int32 | The index of the Faction vendor that is currently available. Will be set to -1 if no vendors are available.</li>
+</ul></li>
+<li><a href="docs/schemas/Destiny-Responses-DestinyVendorResponse">Destiny.Responses.DestinyVendorResponse</a>
+<ul>
+<li>Renamed: items &gt; itemComponents | <a href="docs/schemas/DestinyItemComponentSetOfint32">DestinyItemComponentSetOfint32</a> | Item components, keyed by the vendorItemIndex of the active sale items. COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]</li>
+</ul></li>
+<li><a href="docs/schemas/Exceptions-PlatformErrorCodes">Exceptions.PlatformErrorCodes</a>
+<ul>
+<li>Added: DestinyItemNotTransferrableHasSideEffects | 1673 |</li>
+<li>Added: ReportOffenderNotInPgcr | 2700 |</li>
+<li>Added: ReportRequestorNotInPgcr | 2701 |</li>
+<li>Added: ReportSubmissionFailed | 2702 |</li>
+</ul></li>
+<li><a href="docs/schemas/Trending-TrendingEntry">Trending.TrendingEntry</a>
+<ul>
+<li>Added: items | <a href="docs/schemas/Trending-TrendingEntry">TrendingEntry</a>[] | If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header.</li>
+</ul></li>
+<li><a href="docs/schemas/Trending-TrendingEntryType">Trending.TrendingEntryType</a>
+<ul>
+<li>Added: Container | 10 |</li>
+<li>Added: Release | 11 |</li>
+</ul></li>
+</ul>
+<p>Services/Endpoints (added):</p>
+<ul>
+<li><a href="docs/services/Destiny2/Destiny2-PullFromPostmaster">Destiny2.PullFromPostmaster</a></li>
+<li><a href="docs/services/Destiny2/Destiny2-ReportOffensivePostGameCarnageReportPlayer">Destiny2.ReportOffensivePostGameCarnageReportPlayer</a></li>
+</ul>
+<p>Services/Endpoints (changed):</p>
+<ul>
+<li><a href="Content-Content-SearchContentWithText">Content.SearchContentWithText</a>
+<ul>
+<li>Added: source | string | No |</li>
+</ul></li>
+</ul>
 <hr/>
 <p>Read the <a href="docs/Changelog">full changelong</a>.</p></div><div class="inner"><h2>Community Apps</h2><p>Cool apps built by the talented Destiny community!</p><div id="wiki-apps" ng-controller="AppSearchCtrl"><div class="app-actions"><a href="https://goo.gl/forms/eKTqppizDA3vhD8E3" target="_blank" class="btn btn-primary">Submit An App</a></div><div class="app-tile" ng-repeat="app in apps track by $index" app-entry="app"></div></div></div>
 		</div>
