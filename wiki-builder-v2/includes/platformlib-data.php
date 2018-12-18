@@ -256,6 +256,13 @@ $servicesData = array(
 					)
 				)
 			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'ReadDestinyInventoryAndVault'
+                    )
+                )
+            )
 		),
 		'GetVaultSummary' => array(
 			'path' => array(
@@ -272,6 +279,13 @@ $servicesData = array(
 					)
 				)
 			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'ReadDestinyInventoryAndVault'
+                    )
+                )
+            )
 		),
 		'GetCharacterSummary' => array(
 			'description' => 'Returns Destiny character information for the given characterId.<br/>To get a more detailed overview, see the private endpoint [[GetDestinyAccountCharacterComplete]].',
@@ -572,7 +586,14 @@ $servicesData = array(
 						'type' => 'boolean'
 					)
 				)
-			)
+			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'MoveEquipDestinyItems'
+                    )
+                )
+            )
 		),
 		'EquipItem' => array(
 			'description' => 'Equips an item from a character\'s inventory. The endpoint will fail if the character is logged in and doing an activity.',
@@ -594,7 +615,14 @@ $servicesData = array(
 						'format' => 'int64'
 					)
 				)
-			)
+			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'MoveEquipDestinyItems'
+                    )
+                )
+            )
 		),
 		'EquipItems' => array(
 			'description' => 'Equips multiple items from a character\'s inventory and returns the updated inventory and character information. The endpoint will fail if the character is logged in and doing an activity.'
@@ -623,7 +651,14 @@ $servicesData = array(
 						'format' => 'int64'
 					)
 				)
-			)
+			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'MoveEquipDestinyItems'
+                    )
+                )
+            )
 		),
 		'SetItemLockState' => array(
 			'description' => 'Changes the lock state on an equipable item.',
@@ -652,7 +687,14 @@ $servicesData = array(
 						'type' => 'boolean'
 					)
 				)
-			)
+			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'MoveEquipDestinyItems'
+                    )
+                )
+            )
 		),
 		'SetQuestTrackedState' => array(
 			'description' => 'Set the track state of a given quest.',
@@ -682,7 +724,14 @@ $servicesData = array(
 						'type' => 'boolean'
 					)
 				)
-			)
+			),
+            'security' => array(
+                array(
+                    'oauth2' => array(
+                        'MoveEquipDestinyItems'
+                    )
+                )
+            )
 		),
 		'GetHistoricalStatsDefinition' => array(
 			'description' => ''

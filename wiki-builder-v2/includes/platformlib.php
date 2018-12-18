@@ -208,10 +208,16 @@ function parseServices($platformlib) {
 				'endpoint' => $api_data[0]
 			);
 
-			$openapi = (object)array(
+			$openapi = array(
 				'summary' => $serviceName.'.'.$endpointName,
 				'description' => isset($endpointData['description']) ? $endpointData['description'] : ''
 			);
+
+			if (isset($endpointData['security'])) {
+                $openapi['security'] = $endpointData['security'];
+            }
+
+			$openapi = (object)$openapi;
 
 			// Get path parameters
 			$params = array();

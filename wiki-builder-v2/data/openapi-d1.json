@@ -495,7 +495,14 @@
                         "schema": {
                             "type": "integer",
                             "format": "int64"
-                        }
+                        },
+                        "security": [
+                            {
+                                "oauth2": [
+                                    "ReadDestinyInventoryAndVault"
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "responses": {
@@ -540,7 +547,14 @@
                         "schema": {
                             "type": "integer",
                             "format": "int64"
-                        }
+                        },
+                        "security": [
+                            {
+                                "oauth2": [
+                                    "ReadDestinyInventoryAndVault"
+                                ]
+                            }
+                        ]
                     }
                 ],
                 "responses": {
