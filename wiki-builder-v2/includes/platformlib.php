@@ -208,16 +208,10 @@ function parseServices($platformlib) {
 				'endpoint' => $api_data[0]
 			);
 
-			$openapi = array(
+			$openapi = (object)array(
 				'summary' => $serviceName.'.'.$endpointName,
 				'description' => isset($endpointData['description']) ? $endpointData['description'] : ''
 			);
-
-			if (isset($endpointData['security'])) {
-                $openapi['security'] = $endpointData['security'];
-            }
-
-			$openapi = (object)$openapi;
 
 			// Get path parameters
 			$params = array();
@@ -267,7 +261,7 @@ function parseServices($platformlib) {
 				);
 			}
 
-			$endpointMethod = (object)array(
+			$endpointMethod = array(
 				'tags' => array(
 					$serviceName,
 					'Unofficial'
@@ -277,7 +271,12 @@ function parseServices($platformlib) {
 				'parameters' => $params,
 				'responses' => (object)$responses
 			);
-			if ($method == 'post') {
+            if (isset($endpointData['security'])) {
+                $endpointMethod['security'] = $endpointData['security'];
+            }
+            $endpointMethod = (object)$endpointMethod;
+
+            if ($method == 'post') {
 				$props = array();
 
 				foreach($postParams as $postParam) {

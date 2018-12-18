@@ -463,13 +463,6 @@
         "/Destiny/{membershipType}/MyAccount/Vault/": {
             "summary": "Destiny.GetVault",
             "description": "Returns the contents of player's Vault.",
-            "security": [
-                {
-                    "oauth2": [
-                        "ReadDestinyInventoryAndVault"
-                    ]
-                }
-            ],
             "get": {
                 "tags": [
                     "Destiny",
@@ -509,19 +502,19 @@
                     "200": {
                         "$ref": "#/components/responses/Destiny.GetVault"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "ReadDestinyInventoryAndVault"
+                        ]
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/MyAccount/Vault/Summary/": {
             "summary": "Destiny.GetVaultSummary",
             "description": "",
-            "security": [
-                {
-                    "oauth2": [
-                        "ReadDestinyInventoryAndVault"
-                    ]
-                }
-            ],
             "get": {
                 "tags": [
                     "Destiny",
@@ -561,7 +554,14 @@
                     "200": {
                         "$ref": "#/components/responses/Destiny.GetVaultSummary"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "oauth2": [
+                            "ReadDestinyInventoryAndVault"
+                        ]
+                    }
+                ]
             }
         },
         "/Destiny/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/": {
@@ -1691,13 +1691,6 @@
         "/Destiny/TransferItem/": {
             "summary": "Destiny.TransferItem",
             "description": "Moves items to and from a character and the vault.",
-            "security": [
-                {
-                    "oauth2": [
-                        "MoveEquipDestinyItems"
-                    ]
-                }
-            ],
             "post": {
                 "tags": [
                     "Destiny",
@@ -1711,6 +1704,13 @@
                         "$ref": "#/components/responses/Destiny.TransferItem"
                     }
                 },
+                "security": [
+                    {
+                        "oauth2": [
+                            "MoveEquipDestinyItems"
+                        ]
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1756,13 +1756,6 @@
         "/Destiny/EquipItem/": {
             "summary": "Destiny.EquipItem",
             "description": "Equips an item from a character's inventory. The endpoint will fail if the character is logged in and doing an activity.",
-            "security": [
-                {
-                    "oauth2": [
-                        "MoveEquipDestinyItems"
-                    ]
-                }
-            ],
             "post": {
                 "tags": [
                     "Destiny",
@@ -1776,6 +1769,13 @@
                         "$ref": "#/components/responses/Destiny.EquipItem"
                     }
                 },
+                "security": [
+                    {
+                        "oauth2": [
+                            "MoveEquipDestinyItems"
+                        ]
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1807,13 +1807,6 @@
         "/Destiny/EquipItems/": {
             "summary": "Destiny.EquipItems",
             "description": "Equips multiple items from a character's inventory and returns the updated inventory and character information. The endpoint will fail if the character is logged in and doing an activity.\n\n**Note:** This is an [experimental endpoint](https://www.bungie.net/en/Clan/Post/39966/187691777/1) that was accidentally left in. While it should work as intended, it may return [incorrect response data and has a higher bandwidth](https://www.bungie.net/en/Clan/Post/39966/196303703/0/0) than simply making multiple [[EquipItem]] requests.",
-            "security": [
-                {
-                    "oauth2": [
-                        "MoveEquipDestinyItems"
-                    ]
-                }
-            ],
             "post": {
                 "tags": [
                     "Destiny",
@@ -1827,6 +1820,13 @@
                         "$ref": "#/components/responses/Destiny.EquipItems"
                     }
                 },
+                "security": [
+                    {
+                        "oauth2": [
+                            "MoveEquipDestinyItems"
+                        ]
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1862,13 +1862,6 @@
         "/Destiny/SetLockState/": {
             "summary": "Destiny.SetItemLockState",
             "description": "Changes the lock state on an equipable item.",
-            "security": [
-                {
-                    "oauth2": [
-                        "MoveEquipDestinyItems"
-                    ]
-                }
-            ],
             "post": {
                 "tags": [
                     "Destiny",
@@ -1882,6 +1875,13 @@
                         "$ref": "#/components/responses/Destiny.SetItemLockState"
                     }
                 },
+                "security": [
+                    {
+                        "oauth2": [
+                            "MoveEquipDestinyItems"
+                        ]
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1917,13 +1917,6 @@
         "/Destiny/SetQuestTrackedState/": {
             "summary": "Destiny.SetQuestTrackedState",
             "description": "Set the track state of a given quest.",
-            "security": [
-                {
-                    "oauth2": [
-                        "MoveEquipDestinyItems"
-                    ]
-                }
-            ],
             "post": {
                 "tags": [
                     "Destiny",
@@ -1937,6 +1930,13 @@
                         "$ref": "#/components/responses/Destiny.SetQuestTrackedState"
                     }
                 },
+                "security": [
+                    {
+                        "oauth2": [
+                            "MoveEquipDestinyItems"
+                        ]
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "application/json": {
