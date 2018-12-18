@@ -127,7 +127,9 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 			);
 			$legacyOpenapi->components = (object)array(
 				'schemas' => array(),
-				'responses' => array()
+				'responses' => array(),
+                'headers' => $openapi->components->headers,
+                'securitySchemes' => $openapi->components->securitySchemes
 			);
 			$legacyOpenapi->components->schemas = $servicesComponents;
 			$legacyOpenapi->tags = array(
@@ -152,7 +154,9 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 			$unOpenapi->servers = $openapi->servers;
 			$unOpenapi->components = (object)array(
 				'schemas' => array(),
-				'responses' => array()
+				'responses' => array(),
+                'headers' => $openapi->components->headers,
+                'securitySchemes' => $openapi->components->securitySchemes
 			);
 			$unOpenapi->components->schemas = $servicesComponents;
 
@@ -175,8 +179,4 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 			file_put_contents(DATAPATH.'/openapi-d'.$i.'.json', json_encode($unOpenapi, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
 			break;
 	}
-
-	//echo '<pre>Platformlib-D'.$i.'</pre>';
-
-	//echo '<pre>'.json_encode($services, JSON_PRETTY_PRINT).'</pre>';
 }

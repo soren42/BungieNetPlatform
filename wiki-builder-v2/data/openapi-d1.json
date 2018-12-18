@@ -5471,6 +5471,49 @@
                     }
                 }
             }
+        },
+        "headers": {
+            "X-API-Key": {
+                "description": "When you have registered an Application at https://www.bungie.net/en/Application, you will receive an API key.  You should pass it in via this header with every request.",
+                "required": true,
+                "allowEmptyValue": false,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        "securitySchemes": {
+            "apiKey": {
+                "type": "apiKey",
+                "description": "Every request requires an API key.  To get an API key, register a new application at https://www.bungie.net/en/Application.",
+                "name": "X-API-Key",
+                "in": "header"
+            },
+            "oauth2": {
+                "type": "oauth2",
+                "description": "For requests that require Authentication, you will need to have your users authenticate via our OAuth mechanisms.  See https://github.com/Bungie-net/api/wiki/OAuth-Documentation for more details.",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://www.bungie.net/en/OAuth/Authorize",
+                        "tokenUrl": "https://www.bungie.net/Platform/App/OAuth/token/",
+                        "refreshUrl": "https://www.bungie.net/Platform/App/OAuth/token/",
+                        "scopes": {
+                            "ReadBasicUserProfile": "Read basic user profile information such as the user's handle, avatar icon, etc.",
+                            "ReadGroups": "Read Group/Clan Forums, Wall, and Members for groups and clans that the \r\nuser has joined.",
+                            "WriteGroups": "Write Group/Clan Forums, Wall, and Members for groups and clans that the \r\nuser has joined.",
+                            "AdminGroups": "Administer Group/Clan Forums, Wall, and Members for groups and clans that the \r\nuser is a founder or an administrator.",
+                            "BnetWrite": "Create new groups, clans, and forum posts.",
+                            "MoveEquipDestinyItems": "Move or equip Destiny items",
+                            "ReadDestinyInventoryAndVault": "Read Destiny 1 Inventory and Vault contents.\r\nFor Destiny 2, this scope is needed to read anything regarded as private. This is the only scope a\r\nDestiny 2 app needs for read operations against Destiny 2 data such as inventory, vault, currency,\r\nvendors, milestones, progression, etc.",
+                            "ReadUserData": "Read user data such as who they are web notifications, \r\nclan/group memberships, recent activity, muted users.",
+                            "EditUserData": "Edit user data such as preferred language, status, motto, avatar selection and theme.",
+                            "ReadDestinyVendorsAndAdvisors": "Access vendor and advisor data specific to a user. OBSOLETE. This scope is only used on the Destiny 1 API.",
+                            "ReadAndApplyTokens": "Read offer history and claim and apply tokens for the user.",
+                            "AdvancedWriteActions": "Can perform actions that will result in a prompt to the user via the Destiny app."
+                        }
+                    }
+                }
+            }
         }
     },
     "tags": [
