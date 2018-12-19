@@ -33,26 +33,30 @@ function parseParameters(&$endpoint) {
 }
 
 function parseResponses(&$openapi, $endpoint) {
-	//echo '<pre>'.json_encode($endpoint->openapi, JSON_PRETTY_PRINT).'</pre>';
-	foreach(array('get', 'post') as $method) {
+    foreach(array('get', 'post') as $method) {
 		if (!isset($endpoint->openapi->{$method})) continue;
 		$endpointMethod = $endpoint->openapi->{$method};
-		foreach($endpointMethod->responses as $responseCode => $responseRef) {
-			$response = isset($api_param['responses']) && isset($api_param['responses'][$responseCode]) ?
-				$api_param['responses'][$responseCode] :
-				array('$ref' => '#/components/schemas/'.$endpointMethod->operationId);
+		foreach($endpointMethod->responses as $responseCode => $response) {
+		    if (isset($response['$ref'])) {
+                $refClass = substr($response['$ref'], strrpos($response['$ref'], '/') + 1);
+            } else {
+                $refClass = $endpointMethod->operationId;
+            }
 
-			if (isset($openapi->components->responses[$endpointMethod->operationId])) continue;
+			if (isset($openapi->components->responses[$refClass])) continue;
 
 			//echo '<pre>'.json_encode($response, JSON_PRETTY_PRINT).'</pre>';
-			$openapi->components->responses[$endpointMethod->operationId] = array(
+			$openapi->components->responses[$refClass] = array(
 				'description' => 'Look at the Response property for more information about the nature of this response',
 				'content' => array(
 					'application/json' => array(
 						'schema' => array(
 							'type' => 'object',
 							'properties' => array(
-								'Response' => $response,
+								'Response' => array(
+                                    'type' => 'object',
+                                    'additionalProperties' => true,
+                                ),
 								'ErrorCode' => array(
 									'$ref' => '#/components/schemas/Exceptions.PlatformErrorCodes'
 								),

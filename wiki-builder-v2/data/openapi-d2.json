@@ -8469,7 +8469,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Jsonp.GetCurrentUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8506,7 +8507,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetAccessTokensFromCode"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8543,7 +8545,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetAccessTokensFromRefreshToken"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8580,7 +8583,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.CreateApplication"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8617,7 +8621,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetApplication"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8654,7 +8659,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.EditApplication"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8691,7 +8697,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetApplicationApiKeys"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8728,7 +8735,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.ChangeApiKeyStatus"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8765,7 +8773,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.CreateApiKey"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8802,7 +8811,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetApplicationApiUsage"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8839,7 +8849,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetAuthorizations"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8876,7 +8887,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetAuthorizationForUserAndApplication"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8913,7 +8925,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.RevokeAuthorization"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8950,7 +8963,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.ApplicationSearch"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -8987,7 +9001,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.PrivateApplicationSearch"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9024,7 +9039,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Application.GetOAuthTokens"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9061,7 +9077,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetCurrentUserAuthContextState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9098,7 +9115,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.CreateUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9135,7 +9153,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.CreateEmailUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9172,7 +9191,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.UpdateUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9209,7 +9229,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.UpdateDestinyEmblemAvatar"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9246,7 +9267,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.UpdateUserAdmin"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9283,7 +9305,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.UpdateNotificationSetting"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9320,7 +9343,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.EditSuccessMessageFlags"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9357,7 +9381,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetCurrentUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9394,7 +9419,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetCountsForCurrentUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9431,7 +9457,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetCurrentBungieNetUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9468,7 +9495,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetForumUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9505,7 +9533,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.SearchUsersPagedV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9542,7 +9571,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetNotificationSettings"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9579,7 +9609,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetCredentialTypesForAccount"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9616,7 +9647,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetAvailableAvatars"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9653,7 +9685,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetAvailableAvatarsAdmin"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9690,7 +9723,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.RegisterMobileAppPair"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9727,7 +9761,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.UnregisterMobileAppPair"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9764,7 +9799,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.UpdateStateInfoForMobileAppPair"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9801,7 +9837,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetMobileAppPairingsUncached"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9838,7 +9875,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.LinkOverride"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9875,7 +9913,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.GetUserMembershipIds"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9912,7 +9951,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.SetAcknowledged"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9949,7 +9989,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/User.RemovePartnership"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -9986,7 +10027,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationByIdV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10023,7 +10065,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationWithMemberIdV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10060,7 +10103,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationThreadV3"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10097,7 +10141,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.SaveMessageV3"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10134,7 +10179,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.SaveMessageV4"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10171,7 +10217,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.UserIsTyping"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10208,7 +10255,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.CreateConversation"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10245,7 +10293,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.CreateConversationV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10282,7 +10331,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationsV5"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10319,7 +10369,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetGroupConversations"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10356,7 +10407,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetGroupConversationsV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10393,7 +10445,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetTotalConversationCount"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10430,7 +10483,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetUnreadConversationCountV4"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10467,7 +10521,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetUnreadGroupConversationCount"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10504,7 +10559,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.CheckGroupConversationReadState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10541,7 +10597,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.LeaveConversation"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10578,7 +10635,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.ReviewInvitations"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10615,7 +10673,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.ReviewAllInvitations"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10652,7 +10711,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.ReviewInvitationDirect"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10689,7 +10749,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.ReviewInvitation"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10726,7 +10787,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetAllianceJoinInvitations"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10763,7 +10825,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetAllianceInvitedToJoinInvitations"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10800,7 +10863,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetInvitationDetails"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10837,7 +10901,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.UpdateConversationLastViewedTimestamp"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10874,7 +10939,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.ModerateGroupWall"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10911,7 +10977,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.SetUserNotifyPreferenceForConversation"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10948,7 +11015,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetUnreadConversationCountV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -10985,7 +11053,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationById"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11022,7 +11091,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationWithMemberId"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11059,7 +11129,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.SaveMessageV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11096,7 +11167,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationsV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11133,7 +11205,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationsV3"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11170,7 +11243,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Message.GetConversationThreadV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11207,7 +11281,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Notification.GetRecentNotifications"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11244,7 +11319,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Notification.GetRecentNotificationCount"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11281,7 +11357,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Notification.ResetNotification"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11318,7 +11395,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Notification.GetRealTimeEvents"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11355,7 +11433,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.SearchContentEx"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11392,7 +11471,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetHomepageContentV3"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11429,7 +11509,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetPublications"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11466,7 +11547,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetNews"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11503,7 +11585,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetDestinyContent"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11540,7 +11623,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetDestinyContentV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11577,7 +11661,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetPromoWidget"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11614,7 +11699,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetFeaturedArticle"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11651,7 +11737,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetPinnedArticles"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11688,7 +11775,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetCareers"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11725,7 +11813,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.GetCareer"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11762,7 +11851,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Content.SearchCareers"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11799,7 +11889,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/ExternalSocial.GetAggregatedSocialFeed"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11836,7 +11927,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/ExternalSocial.GetPentathlonScores"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11873,7 +11965,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.VerifyCreatePostAvailability"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11910,7 +12003,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.CreatePost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11947,7 +12041,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.CreateContentComment"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -11984,7 +12079,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.EditPost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12021,7 +12117,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.DeletePost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12058,7 +12155,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.RatePost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12095,7 +12193,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.ModeratePost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12132,7 +12231,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.ModerateTag"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12169,7 +12269,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.ModerateGroupPost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12206,7 +12307,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.GetPopularTags"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12243,7 +12345,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.GetForumTagCountEstimate"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12280,7 +12383,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.MarkReplyAsAnswer"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12317,7 +12421,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.UnmarkReplyAsAnswer"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12354,7 +12459,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.PollVote"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12391,7 +12497,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.ChangePinState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12428,7 +12535,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Forum.ChangeLockState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12465,7 +12573,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetEntitiesFollowedByCurrentUserV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12502,7 +12611,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetEntitiesFollowedByUserV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12539,7 +12649,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetUsersFollowedByCurrentUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12576,7 +12687,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetFollowersOfUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12613,7 +12725,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.FollowUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12650,7 +12763,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.UnfollowUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12687,7 +12801,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetLikeAndShareActivityForUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12724,7 +12839,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetLikeAndShareActivityForUserV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12761,7 +12877,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetForumActivityForUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12798,7 +12915,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetForumActivityForUserV2"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12835,7 +12953,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetLikeShareAndForumActivityForUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12872,7 +12991,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetApplicationActivityForUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12909,7 +13029,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetDestinyItemActivities"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12946,7 +13067,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetFollowersOfTag"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -12983,7 +13105,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.FollowTag"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13020,7 +13143,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.UnfollowTag"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13057,7 +13181,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetFriends"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13094,7 +13219,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetFriendsAllNoPresence"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13131,7 +13257,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Activity.GetFriendsPaged"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13168,7 +13295,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.GetIgnoreStatusForPost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13205,7 +13333,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.GetIgnoreStatusForUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13242,7 +13371,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.GetIgnoresForUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13279,7 +13409,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.IgnoreItem"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13316,7 +13447,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.UnignoreItem"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13353,7 +13485,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.MyLastReport"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13390,7 +13523,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.FlagItem"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13427,7 +13561,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Ignore.GetReportContext"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13464,7 +13599,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Game.GetPlayerGamesById"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13501,7 +13637,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Game.ReachModelSneakerNet"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13538,7 +13675,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetAssignedReports"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13575,7 +13713,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.ReturnAssignedReports"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13612,7 +13751,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.ResolveReport"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13649,7 +13789,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.OverturnReport"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13686,7 +13827,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetDisciplinedReportsForMember"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13723,7 +13865,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetRecentDisciplineAndFlagHistoryForMember"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13760,7 +13903,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetResolvedReports"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13797,7 +13941,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GloballyIgnoreItem"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13834,7 +13979,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.OverrideBanOnUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13871,7 +14017,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.OverrideMsgBanOnUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13908,7 +14055,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.OverrideGroupWallBanOnUser"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13945,7 +14093,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.OverrideGlobalIgnore"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -13982,7 +14131,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.AdminUserSearch"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14019,7 +14169,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetUserBanState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14056,7 +14207,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetUserWebClientIpHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14093,7 +14245,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetUserPostHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14130,7 +14283,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetPostRevisionHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14167,7 +14321,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetAdminHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14204,7 +14359,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.BulkEditPost"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14241,7 +14397,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Admin.GetTokenDetails"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14278,7 +14435,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.ClaimAndApplyOnToken"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14315,7 +14473,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.GetCurrentUserOfferHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14352,7 +14511,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.GetCurrentUserThrottleState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14389,7 +14549,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.ApplyOfferToCurrentDestinyMembership"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14426,7 +14587,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.VerifyAge"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14463,7 +14625,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.ClaimToken"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14500,7 +14663,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.ConsumeMarketplacePlatformCodeOffer"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14537,7 +14701,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.MarketplacePlatformCodeOfferHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14574,7 +14739,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.EververseChangePurchaseHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14611,7 +14777,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.EververseVendorPurchaseHistory"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14648,7 +14815,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.EververseSilverBalance"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14685,7 +14853,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.EververseCashoutInfo"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14722,7 +14891,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.EmailBungieReward"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14759,7 +14929,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.RAFGenerateReferralCode"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14796,7 +14967,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.RAFClaimAsNewPlayer"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14833,7 +15005,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.RAFGetVeteranBondDetails"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14870,7 +15043,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.RAFGetNewPlayerBondDetails"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14907,7 +15081,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.BreakBond"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14944,7 +15119,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.GetRAFEligibility"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -14981,7 +15157,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.UpdateNewPlayerBondState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15018,7 +15195,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.GetVeteranRewardStatus"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15055,7 +15233,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.GetRAFQuestProgress"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15092,7 +15271,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Tokens.ApplyVeteranRewards"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15129,7 +15309,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.GetApprovalQueue"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15166,7 +15347,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.SubmitContent"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15203,7 +15385,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.EditContent"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15240,7 +15423,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.AlterApprovalState"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15277,7 +15461,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.GetAdminCommunityLiveStatuses"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15314,7 +15499,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.AdminSetCommunityLiveMemberBanStatus"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15351,7 +15537,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/CommunityContent.AdminSetCommunityLiveMemberFeatureStatus"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15388,7 +15575,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.CreateClanFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15425,7 +15613,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.EditClanFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15462,7 +15651,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.CloseFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15499,7 +15689,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.ReopenFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15536,7 +15727,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.JoinClanFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15573,7 +15765,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.JoinClanFireteamAsAlternate"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15610,7 +15803,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.LeaveClanFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15647,7 +15841,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.KickFromClanFireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15684,7 +15879,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.InviteToDestiny2Fireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15721,7 +15917,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Fireteam.IndividualInviteToDestiny2Fireteam"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15758,7 +15955,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Explore.GetExploreSections"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15795,7 +15993,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Companionpermission.GetPermission"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15832,7 +16031,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Companionpermission.GetGroupPermission"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15869,7 +16069,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Companionpermission.GetFireteamPermission"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15906,7 +16107,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.HelloWorld"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15943,7 +16145,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetVersion"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -15980,7 +16183,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetAvailableLocales"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -16017,7 +16221,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetCommonSettings"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -16054,7 +16259,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetEssentialCommonSettings"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -16091,7 +16297,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetSystemStatus"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -16128,7 +16335,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetGlobalAlerts"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
@@ -16165,7 +16373,8 @@
                             "type": "object",
                             "properties": {
                                 "Response": {
-                                    "$ref": "#/components/schemas/Core.GetBroadcastNotifications"
+                                    "type": "object",
+                                    "additionalProperties": true
                                 },
                                 "ErrorCode": {
                                     "$ref": "#/components/schemas/Exceptions.PlatformErrorCodes"
