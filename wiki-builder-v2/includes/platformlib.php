@@ -9,7 +9,6 @@ function parseParameters(&$endpoint) {
 			if (is_string($param)) {
 				if (isset($servicesParams[$param])) {
 					$params[$index] = $servicesParams[$param];
-					$params[$index]['name'] = $param;
 				} else {
 					$params[$index] = array(
 						'description' => '',
@@ -17,14 +16,14 @@ function parseParameters(&$endpoint) {
 							'type' => 'string'
 						)
 					);
-					if (is_string($param)) $params[$index]['name'] = $param;
 				}
+                $params[$index]['name'] = $param;
 			}
 			if ($key == 'post') {
 				$params[$index]['required'] = true;
 				continue;
 			}
-			//echo '<pre>Param: '.json_encode($param, JSON_PRETTY_PRINT).'</pre>';
+
 			$params[$index] = array_merge(array('name' => $param, 'in' => $key), $params[$index]);
 			if ($key == 'path') $params[$index]['required'] = true;
 		}
@@ -32,60 +31,137 @@ function parseParameters(&$endpoint) {
 	}
 }
 
-function parseResponses(&$openapi, $endpoint) {
+function parseResponses($newOpenApi, $endpoint) {
+    global $openapi;
+
     foreach(array('get', 'post') as $method) {
 		if (!isset($endpoint->openapi->{$method})) continue;
 		$endpointMethod = $endpoint->openapi->{$method};
-		foreach($endpointMethod->responses as $responseCode => $response) {
+		foreach ($endpointMethod->responses as $responseCode => $response) {
 		    if (isset($response['$ref'])) {
                 $refClass = substr($response['$ref'], strrpos($response['$ref'], '/') + 1);
             } else {
                 $refClass = $endpointMethod->operationId;
             }
 
-			if (isset($openapi->components->responses[$refClass])) continue;
+			if (isset($newOpenApi->components->responses[$refClass])) {
+			    continue;
+            } elseif (isset($openapi->components->responses->{$refClass})) {
+                $response = $openapi->components->responses->{$refClass};
+            } else {
+                $response = array(
+                    'description' => 'Look at the Response property for more information about the nature of this response',
+                    'content' => array(
+                        'application/json' => array(
+                            'schema' => array(
+                                'type' => 'object',
+                                'properties' => array(
+                                    'Response' => array(
+                                        'type' => 'object',
+                                        'additionalProperties' => true,
+                                    ),
+                                    'ErrorCode' => array(
+                                        '$ref' => '#/components/schemas/Exceptions.PlatformErrorCodes'
+                                    ),
+                                    "ThrottleSeconds" => array(
+                                        "type" => "integer",
+                                        "format" => "int32"
+                                    ),
+                                    "ErrorStatus" => array(
+                                        "type" => "string"
+                                    ),
+                                    "Message" => array(
+                                        "type" => "string"
+                                    ),
+                                    "MessageData" => array(
+                                        "type" => "object",
+                                        "additionalProperties" => array(
+                                            "type" => "string"
+                                        ),
+                                        "x-dictionary-key" => array(
+                                            "type" => "string"
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                );
+            }
 
-			//echo '<pre>'.json_encode($response, JSON_PRETTY_PRINT).'</pre>';
-			$openapi->components->responses[$refClass] = array(
-				'description' => 'Look at the Response property for more information about the nature of this response',
-				'content' => array(
-					'application/json' => array(
-						'schema' => array(
-							'type' => 'object',
-							'properties' => array(
-								'Response' => array(
-                                    'type' => 'object',
-                                    'additionalProperties' => true,
-                                ),
-								'ErrorCode' => array(
-									'$ref' => '#/components/schemas/Exceptions.PlatformErrorCodes'
-								),
-								"ThrottleSeconds" => array(
-									"type" => "integer",
-									"format" => "int32"
-								),
-								"ErrorStatus" => array(
-									"type" => "string"
-								),
-								"Message" => array(
-									"type" => "string"
-								),
-								"MessageData" => array(
-									"type" => "object",
-									"additionalProperties" => array(
-										"type" => "string"
-									),
-									"x-dictionary-key" => array(
-										"type" => "string"
-									)
-								)
-							)
-						)
-					)
-				)
-			);
-		}
+            $newOpenApi->components->responses[$refClass] = $response;
+        }
 	}
+
+    // Find all $refs in $newOpenApi
+    $refs = findRefsRecursively($newOpenApi);
+
+    foreach ($refs as $ref) {
+        $parts = explode('/', trim($ref, '#/'));
+
+        // See if this ref is set in $openapi, and set it in $newOpenApi if it is not set in ther eyet.
+        $value = getDeepValue($parts, $openapi);
+        if (null !== $value && null === getDeepValue($parts, $newOpenApi)) {
+            setDeepValue($parts, $value, $newOpenApi);
+        }
+    }
+
+    return $newOpenApi;
+}
+
+function findRefsRecursively($data) {
+    $refs = [];
+    foreach ($data as $key => $value) {
+        if ('$ref' === $key) {
+            $refs[] = $value;
+        } elseif (is_array($value) || is_object($value)) {
+            $refs = array_merge($refs, findRefsRecursively($value));
+        }
+    }
+
+    return $refs;
+}
+
+function getDeepValue(array $path, $data) {
+    if (! $path) {
+        return null;
+    }
+
+    do {
+        $step = current($path);
+        if (is_object($data) && isset($data->{$step})) {
+            $data = $data->{$step};
+        } elseif (is_array($data) && isset($data[$step])) {
+            $data = $data[$step];
+        } else {
+            return null;
+        }
+    } while (next($path));
+
+    return $data;
+}
+
+function setDeepValue(array $path, $value, &$data) {
+    if (! $path) {
+        return null;
+    }
+
+    do {
+        $step = current($path);
+        if (is_object($data)) {
+            if (! isset($data->{$step})) {
+                $data->{$step} = new stdClass();
+            }
+            $data = &$data->{$step};
+        } elseif (is_array($data)) {
+            if (isset($data[$step])) {
+                $data[$step] = [];
+            }
+            $data = &$data[$step];
+        }
+    } while (next($path));
+
+    $data = $value;
 }
 
 function parseServices($platformlib) {
