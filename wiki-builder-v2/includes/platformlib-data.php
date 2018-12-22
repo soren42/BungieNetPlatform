@@ -203,6 +203,11 @@ $servicesData = array(
 					)
 				)
 			),
+            'responses' => array(
+                '200' => array(
+                    '$ref' => '#/components/responses/IEnumerableOfUserInfoCard' // TODO: Make D1 version
+                )
+            ),
 			'references' => array(
 				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=SearchDestinyPlayer%2f%7bmembershipType%7d%2f%7bdisplayName%7d%2f'
 			)
@@ -311,6 +316,11 @@ $servicesData = array(
 			'query' => array(
 				DEFINITIONS
 			),
+            'responses' => array(
+                '200' => array(
+                    '$ref' => '#/components/responses/Destiny.Responses.DestinyCharacterResponse'
+                )
+            )
 		),
 		'GetCharacterInventory' => array(
 			'description' => 'Returns the inventory of a Destiny character.',
@@ -587,6 +597,11 @@ $servicesData = array(
 					)
 				)
 			),
+            'responses' => array(
+                '200' => array(
+                    '$ref' => '#/components/responses/int32'
+                )
+            ),
             'security' => array(
                 array(
                     'oauth2' => array(
@@ -616,6 +631,11 @@ $servicesData = array(
 					)
 				)
 			),
+            'responses' => array(
+                '200' => array(
+                    '$ref' => '#/components/responses/int32'
+                )
+            ),
             'security' => array(
                 array(
                     'oauth2' => array(
@@ -652,6 +672,11 @@ $servicesData = array(
 					)
 				)
 			),
+            'responses' => array(
+                '200' => array(
+                    '$ref' => '#/components/responses/Destiny.DestinyEquipItemResults'
+                )
+            ),
             'security' => array(
                 array(
                     'oauth2' => array(

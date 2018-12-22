@@ -93,20 +93,32 @@ function parseResponses($newOpenApi, $endpoint) {
         }
 	}
 
-    // Find all $refs in $newOpenApi
-    $refs = findRefsRecursively($newOpenApi);
-
-    foreach ($refs as $ref) {
-        $parts = explode('/', trim($ref, '#/'));
-
-        // See if this ref is set in $openapi, and set it in $newOpenApi if it is not set in ther eyet.
-        $value = getDeepValue($parts, $openapi);
-        if (null !== $value && null === getDeepValue($parts, $newOpenApi)) {
-            setDeepValue($parts, $value, $newOpenApi);
-        }
-    }
+    injectMissingRefsRecursively($newOpenApi);
 
     return $newOpenApi;
+}
+
+function injectMissingRefsRecursively(&$newOpenApi, $searchContext = null)
+{
+    global $openapi;
+
+    if (null === $searchContext) {
+        $searchContext = $newOpenApi;
+    }
+
+    // Find all $refs in $newOpenApi
+    $refs = findRefsRecursively($searchContext);
+
+    foreach ($refs as $ref) {
+        $path = explode('/', trim($ref, '#/'));
+
+        // See if this ref is set in $openapi, and set it in $newOpenApi if it is not set in ther eyet.
+        $value = getDeepValue($path, $openapi);
+        if (null !== $value && null === getDeepValue($path, $newOpenApi)) {
+            setDeepValue($path, $value, $newOpenApi);
+            injectMissingRefsRecursively($newOpenApi, $value);
+        }
+    }
 }
 
 function findRefsRecursively($data) {
