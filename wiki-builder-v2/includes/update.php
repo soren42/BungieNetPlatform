@@ -128,8 +128,8 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 			$legacyOpenapi->components = (object)array(
 				'schemas' => array(),
 				'responses' => array(),
-                'headers' => $openapi->components->headers,
-                'securitySchemes' => $openapi->components->securitySchemes
+				'headers' => $openapi->components->headers,
+				'securitySchemes' => $openapi->components->securitySchemes
 			);
 			$legacyOpenapi->components->schemas = $servicesComponents;
 			$legacyOpenapi->tags = array(
@@ -141,7 +141,7 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 				//echo '<pre>'.json_encode($endpoint, JSON_PRETTY_PRINT).'</pre>';
 				$endpoint = checkEndpoint($endpoint, 'Destiny');
 				if ($endpoint) $legacyOpenapi->paths->{$endpoint->endpoint} = $endpoint->openapi;
-                $legacyOpenapi = parseResponses($legacyOpenapi, $endpoint);
+				$legacyOpenapi = parseResponses($legacyOpenapi, $endpoint);
 			}
 
 			file_put_contents(DATAPATH.'/openapi-d'.$i.'.json', json_encode($legacyOpenapi, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
@@ -155,8 +155,8 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 			$unOpenapi->components = (object)array(
 				'schemas' => array(),
 				'responses' => array(),
-                'headers' => $openapi->components->headers,
-                'securitySchemes' => $openapi->components->securitySchemes
+				'headers' => $openapi->components->headers,
+				'securitySchemes' => $openapi->components->securitySchemes
 			);
 			$unOpenapi->components->schemas = $servicesComponents;
 
@@ -166,7 +166,7 @@ for ($i=1; $i<=BUNGIE_API_VERSION; $i++) {
 					$endpoint = checkEndpoint($endpoint, $serviceName);
 					if ($endpoint) $unOpenapi->paths->{$endpoint->endpoint} = $endpoint->openapi;
 
-                    $unOpenapi = parseResponses($unOpenapi, $endpoint);
+					$unOpenapi = parseResponses($unOpenapi, $endpoint);
 				}
 
 				if (!isset($serviceLookup[$serviceName])) {
