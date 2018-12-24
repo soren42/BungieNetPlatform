@@ -12,7 +12,7 @@ define('VENDOR_ID', 'vendorHash');
 $servicesParams = array(
 	MEMBERSHIP_TYPE => array(
 		'description' => 'The type of account for which info will be extracted.',
-        'required' => true,
+		'required' => true,
 		'schema' => array(
 			'$ref' => '#/components/schemas/BungieMembershipType'
 		)
@@ -203,6 +203,11 @@ $servicesData = array(
 					)
 				)
 			),
+			'responses' => array(
+				'200' => array(
+					'$ref' => '#/components/responses/IEnumerableOfUserInfoCard' // TODO: Make D1 version
+				)
+			),
 			'references' => array(
 				'http://www.bungie.net/platform/Destiny/Help/HelpDetail/GET?uri=SearchDestinyPlayer%2f%7bmembershipType%7d%2f%7bdisplayName%7d%2f'
 			)
@@ -256,6 +261,13 @@ $servicesData = array(
 					)
 				)
 			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'ReadDestinyInventoryAndVault'
+					)
+				)
+			)
 		),
 		'GetVaultSummary' => array(
 			'path' => array(
@@ -272,6 +284,13 @@ $servicesData = array(
 					)
 				)
 			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'ReadDestinyInventoryAndVault'
+					)
+				)
+			)
 		),
 		'GetCharacterSummary' => array(
 			'description' => 'Returns Destiny character information for the given characterId.<br/>To get a more detailed overview, see the private endpoint [[GetDestinyAccountCharacterComplete]].',
@@ -297,6 +316,11 @@ $servicesData = array(
 			'query' => array(
 				DEFINITIONS
 			),
+			'responses' => array(
+				'200' => array(
+					'$ref' => '#/components/responses/Destiny.Responses.DestinyCharacterResponse'
+				)
+			)
 		),
 		'GetCharacterInventory' => array(
 			'description' => 'Returns the inventory of a Destiny character.',
@@ -572,6 +596,18 @@ $servicesData = array(
 						'type' => 'boolean'
 					)
 				)
+			),
+			'responses' => array(
+				'200' => array(
+					'$ref' => '#/components/responses/int32'
+				)
+			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'MoveEquipDestinyItems'
+					)
+				)
 			)
 		),
 		'EquipItem' => array(
@@ -592,6 +628,18 @@ $servicesData = array(
 					'schema' => array(
 						'type' => 'integer',
 						'format' => 'int64'
+					)
+				)
+			),
+			'responses' => array(
+				'200' => array(
+					'$ref' => '#/components/responses/int32'
+				)
+			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'MoveEquipDestinyItems'
 					)
 				)
 			)
@@ -623,6 +671,18 @@ $servicesData = array(
 						'format' => 'int64'
 					)
 				)
+			),
+			'responses' => array(
+				'200' => array(
+					'$ref' => '#/components/responses/Destiny.DestinyEquipItemResults'
+				)
+			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'MoveEquipDestinyItems'
+					)
+				)
 			)
 		),
 		'SetItemLockState' => array(
@@ -650,6 +710,13 @@ $servicesData = array(
 					'description' => 'The item lock state, true to lock, false to unlock.',
 					'schema' => array(
 						'type' => 'boolean'
+					)
+				)
+			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'MoveEquipDestinyItems'
 					)
 				)
 			)
@@ -680,6 +747,13 @@ $servicesData = array(
 					'description' => 'true = tracked, false = not-tracked',
 					'schema' => array(
 						'type' => 'boolean'
+					)
+				)
+			),
+			'security' => array(
+				array(
+					'oauth2' => array(
+						'MoveEquipDestinyItems'
 					)
 				)
 			)
